@@ -1,187 +1,93 @@
-# NETS-AI
+# Synthetic Urban Intelligence  
+## Validating Commercial Geographies via AI Agents
 
-## 1. Project Purpose
+**Honors Thesis Project**
+
+**Principal Investigator:**  
+Congyuan (Student), Boulder, CO
+
+**Advisors:**  
+- Prof. Jessica Finlay (Supervisor)  
+- Prof. Michael Esposito (University of Minnesota)  
+- Prof. Stephen Becker (Applied Mathematics)
+
+---
+
+## 1. Project Goal
 
 ### Academic Goal
 
-Reveal methodological challenges inherent in using the NETS database and explore whether AI can serve as a viable alternative data source.
+This project investigates the structural and methodological problems of the  
+**National Establishment Time-Series (NETS)** database and evaluates whether  
+AI-generated business data can serve as a viable alternative or supplement.
 
 ### Technical Goal
 
-Evaluate whether AI models (e.g., GPT, Gemini) can automatically and accurately generate research-ready business datasets that resemble NETS in structure.
+To examine whether AI tools (e.g., GPT, Gemini) can automatically generate  
+business establishment data that **structurally resembles NETS**, while being  
+more transparent and reproducible.
+
+### Tech Stack
+
+- **Language:** Python  
+- **AI Tools:** LangChain, OpenAI API  
+- **Mapping & Spatial Tools:** Spatial SQL, PostGIS, GeoPandas  
 
 ---
 
-## 2. Core Methodology: From Manual Testing to a Reproducible Agent
+## 2. Methodology: From "Chatting" to "Coding"
 
-**Core Issue:** "Deep Research"-style usage within ChatGPT/Gemini interfaces is **not sufficiently reproducible for scientific research.**
+### The Problem
 
-Therefore, our core technical direction shifts toward:
+Using web-based tools such as ChatGPT or Gemini directly is **not suitable for  
+scientific research**, primarily due to:
 
-> **Building a custom AI Agent via API (instead of using UI-based workflows).**
+- Lack of reproducibility  
+- Non-deterministic outputs  
+- Opaque reasoning processes  
 
-This Agent will attempt to replicate "Deep Research" behavior.
+### Our Solution
 
-### — Agent Workflow
+Instead of using AI via web interfaces, we design and implement a  
+**reproducible AI Agent through code**.
 
-1. **Context Injection**
-   Load all Markdown files from `docs/` (in progress) as background knowledge and system instructions.
-
-2. **Tool Registration**
-   Register external APIs the Agent is allowed to use (e.g., Google Search API, Yelp API, Google Maps API).
-
-3. **Prompt Execution**
-   The Agent executes optimized prompts from `docs/PROMPT_GUIDE.md`.
-
-4. **Structured Output**
-   Output structured data according to `docs/agent/PIPELINE_SPEC.md` (expected CSV).
+This agent conducts data generation tasks automatically and consistently.
 
 ---
 
-## 3. Repository Structure — The Agent’s "Brain"
+### How the Agent Works
 
-This repository is not only code; it also functions as the **knowledge base** that the Agent loads prior to execution.
+#### 1. Read Files (Context)
 
-```plaintext
-/
-├── README.md
-└── docs/
-    ├── PROMPT_GUIDE.md
-    ├── QUESTION_CODING_SCHEME.md
-    ├── DATA_COLLECTION_PROTOCOL.md
-    └── agent/
-        ├── PIPELINE_SPEC.md
-        └── TOOLS_REGISTRY.md
-```
+The agent reads all files in the `docs/` or `context/` directory to understand  
+project goals, constraints, and data schemas.
 
-### `README.md`
+#### 2. Use Tools
 
-Project overview, objectives, and core methodology.
+The agent can invoke external tools, including:
 
-### `docs/PROMPT_GUIDE.md`
+- Google Search  
+- Google Maps API  
+- Yelp API  
 
-Stores optimized prompts (v2.0, v3.0, ...).
-→ Iteratively updated based on AI clarifying-question analysis from Sprint 1.
+to retrieve real-world business information.
 
-### `docs/QUESTION_CODING_SCHEME.md`
+#### 3. Ask Questions (Prompt)
 
-Records and buckets all clarifying questions raised by AI during v1 prompt testing.
-→ Helps identify ambiguous regions in the prompt → enables prompt refinement.
+The agent follows structured instructions defined in:
 
-### `docs/DATA_COLLECTION_PROTOCOL.md`
+- `context/prompt_guide.md`
 
-SOP for manual execution in Sprint 1.
+to ensure consistent reasoning behavior.
 
-### `docs/agent/PIPELINE_SPEC.md`
+#### 4. Save Data
 
-### `code/` (The Cortex)
+Generated outputs are saved as:
 
-Contains the execution logic (`main.py`) that orchestrates the workflow.
-
-### `skills/` (The Limbs):
-
-Python modules for external tools (Google Maps API, Yelp API). Replaces the manual "Deep Research" browsing.
-
-### `context/` (The Memory):
-
-Contains the "World View" for the AI: NETS definitions, NAICS coding schemes, and refined prompts from Sprint 2.
-
-🚧 **(TBD)**
-Defines the technical execution pipeline of the Agent, e.g.:
-
-1. Parse query → call tools
-2. Extract information
-3. Validate fields
-4. Output CSV
-
-### `docs/agent/TOOLS_REGISTRY.md`
-
-🚧 **(TBD)**
-Defines external tools available to the Agent, including:
-
-* API documentation
-* Returnable fields
-* Cost
-* Pros / cons
-* Include? (Y/N)
+- CSV files (Excel-compatible)  
+- Structured according to NETS-like schemas  
 
 ---
 
-## 4. Project Sprints
+## 3. Repository Structure — The "Brain" of the Agent
 
-### ✅ Sprint 1 — Agent Implementation
-
-*Currently in progress*
-
-**Goal**
-Build and test a runnable API-driven Agent.
-
-**Tasks (Mike & Congyuan)**
-
-* Write scripts to call OpenAI/Gemini APIs
-* Implement Context Injection from `docs/`
-* (Optional) Implement external tool registration (e.g., Yelp)
-
----
-
-### ✅ Sprint 2 — Prompt Optimization & Context Expansion
-
-**Goal**
-Produce the first improved prompt.
-
-**Tasks (Congyuan, Yue, Mallory)**
-
-* Run v1.0 prompt (`PROMPT_GUIDE.md`)
-* Record all AI clarifying questions
-* Bucket and consolidate into `QUESTION_CODING_SCHEME.md`
-* Analyze patterns → detect ambiguous prompt zones
-* Draft v2.0 prompt (pre-answering mandatory questions)
-
----
-
-### ✅ Sprint 3 — Data Generation & Analysis
-
-**Goal**
-Use the completed Agent to generate business datasets.
-
-**Tasks**
-
-* Generate data for target business categories
-* Time coverage: **2005, 2015, 202#**
-* Classification dimensions:
-
-  * Dim 1: Information accessibility
-  * Dim 2: Organization type (public/private/non-profit, etc.)
-
----
-
-### ✅ Sprint 4 — NETS Comparison & Visualization
-
-**Goal**
-Answer: **To what extent can AI replace NETS?**
-
-**Tasks**
-
-* Compare AI-sourced data with NETS (Hackathon data)
-* Key metrics:
-
-  * Accuracy
-  * Coverage
-  * Classification Consistency
-* Visualization via ArcGIS Pro
-
----
-
-## 5. Paper Abstract (Draft)
-
-**Objective**
-Reveal methodological challenges in NETS-based research and evaluate whether AI can serve as a potential alternative solution.
-
-**Methods**
-Test a reproducible AI Agent and frame analysis within literature context.
-
-**Key Findings**
-AI capability is limited; its failure (especially with historical/time-series data) highlights blind spots in NETS.
-
-**Keywords**
-NETS • AI-generated Database • Prompt Engineering • Reproducibility • AI Agent
