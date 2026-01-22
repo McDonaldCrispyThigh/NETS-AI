@@ -74,6 +74,18 @@ SOP for manual execution in Sprint 1.
 
 ### `docs/agent/PIPELINE_SPEC.md`
 
+### `code/` (The Cortex)
+
+Contains the execution logic (`main.py`) that orchestrates the workflow.
+
+### `skills/` (The Limbs):
+
+Python modules for external tools (Google Maps API, Yelp API). Replaces the manual "Deep Research" browsing.
+
+### `context/` (The Memory):
+
+Contains the "World View" for the AI: NETS definitions, NAICS coding schemes, and refined prompts from Sprint 2.
+
 🚧 **(TBD)**
 Defines the technical execution pipeline of the Agent, e.g.:
 
