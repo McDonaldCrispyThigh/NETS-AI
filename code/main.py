@@ -6,105 +6,213 @@ from datetime import datetime
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Make sure Python can find the 'skills' folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from skills.google_maps import GoogleMapsAgent
 
-def main():
-    # 1. Start the program
-    load_dotenv()
-    print(">>> Starting the AI Agent (Review Mode)...")
+# ==========================================
+# 1. ZIP CODE STRATEGY (To break the 60 limit)
+# ==========================================
+# Minneapolis Zip Codes (You can add more)
+TARGET_ZIP_CODES = [
+    "55401", "55402", "55403", "55404", "55405", 
+    "55406", "55407", "55408", "55409", "55410", 
+    "55411", "55412", "55413", "55414", "55415",
+    "55454", "55455"
+]
 
-    # Check if we have the OpenAI Key
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("Error: OPENAI_API_KEY is missing in .env file")
+# ==========================================
+# 2. FIXED CSV STRUCTURE
+# ==========================================
+FINAL_COLUMNS = [
+    "Company", "Calculated_NAICS", "Target_NAICS", "Is_Target_Match", "Confidence", 
+    "Match_Reasoning", "Business_Status", "Review_Count", "Has_Reviews",
+    "Latitude", "Longitude", "Street_Address", "City", "State", "Zip_Code",
+    "Operating_Hours", "Hard_Attributes", "Price_Level", "Business_Website", 
+    "Employees_Estimated", "Year_Established", "Last_Review_Date"
+]
+
+# ==========================================
+# 3. FULL CONFIGURATION
+# ==========================================
+CATEGORY_CONFIG = {
+    # --- 1. Libraries ---
+    "library": {
+        "search_term": "Public Library",
+        "target_naics": "519120",
+        "sic_code": "8231",
+        "definition": "Facility that lends books and provides quiet study areas. Key signs: 'Librarian', 'Checkout', 'Computers'. Non-commercial."
+    },
+    # --- 2. Parks ---
+    "park": {
+        "search_term": "Park",
+        "target_naics": "712190", 
+        "sic_code": "7999",
+        "definition": "Designated outdoor area for nature and recreation. Key signs: 'Trail', 'Playground', 'Grass'. Distinct from 'Mobile Home Park' (Residential)."
+    },
+    # --- 3. Coffee Shops ---
+    "coffee": {
+        "search_term": "Coffee Shop",
+        "target_naics": "722515",
+        "sic_code": "5812",
+        # Logic: Morning Hours + Breakfast > Alcohol
+        "definition": "Focuses on coffee/tea and light food. Key signs: Opens early (6-8 AM), serves breakfast. If it opens early, it is a Coffee Shop even if it has beer."
+    },
+    # --- 4. Gyms ---
+    "gym": {
+        "search_term": "Gym",
+        "target_naics": "713940",
+        "sic_code": "7991",
+        "definition": "Facility for physical exercise. Key signs: 'Weights', 'Treadmills', 'Membership', 'Classes'. Distinct from 'Playground equipment store'."
+    },
+    # --- 5. Grocery Stores ---
+    "grocery": {
+        "search_term": "Grocery Store",
+        "target_naics": "445110",
+        "sic_code": "5411",
+        "definition": "Retail store primarily selling fresh food, produce, and meats. Distinct from 'Convenience Store' (Gas stations) or 'Liquor Store'."
+    },
+    # --- 6. Civic & Social Orgs ---
+    "civic": {
+        "search_term": "Community Center",
+        "target_naics": "813410",
+        "sic_code": "8641",
+        "definition": "Non-profit facility for social interaction and community support. Key signs: 'Volunteers', 'Community Events', 'Hall Rental'."
+    },
+    # --- 7. Religious Orgs ---
+    "religion": {
+        "search_term": "Place of Worship",
+        "target_naics": "813110",
+        "sic_code": "8661",
+        "definition": "Facility for religious services. Key signs: 'Service', 'Prayer', 'Worship', 'Church/Mosque/Synagogue'."
+    }
+}
+
+CURRENT_TASK = "coffee"  
+TARGET_CITY_NAME = "Minneapolis" # Just the name, we append zip
+
+# ==========================================
+# 4. MAIN PROGRAM
+# ==========================================
+def main():
+    load_dotenv()
+    print(f">>> Starting Scientific Data Collection: [{CURRENT_TASK}] using ZIP CODES...")
+
+    if CURRENT_TASK not in CATEGORY_CONFIG:
+        print(f"Error: Task '{CURRENT_TASK}' not found.")
         return
     
-    # Connect to OpenAI and Google Maps
+    config = CATEGORY_CONFIG[CURRENT_TASK]
+    api_key = os.getenv("OPENAI_API_KEY")
     client = OpenAI(api_key=api_key)
     maps_agent = GoogleMapsAgent()
     
-    # 2. Set the search target
-    target_city = "Minneapolis, MN"
-    target_category = "Coffee Shop"
-    query = f"{target_category} in {target_city}"
+    # --- STEP 1: MASSIVE SEARCH (Loop through Zips) ---
+    all_raw_places = {} # Use dict to remove duplicates automatically (Key = place_id)
     
-    print(f">>> Step 1: Searching Google Maps for '{query}'...")
+    print(f">>> Strategy: Scanning {len(TARGET_ZIP_CODES)} Zip Codes to bypass Google limits.")
     
-    # Get the list of places from Google Maps
-    raw_results = maps_agent.search_places(query)
-    print(f">>> Found {len(raw_results)} places. Now checking reviews...")
+    for zip_code in TARGET_ZIP_CODES:
+        query = f"{config['search_term']} in {TARGET_CITY_NAME} {zip_code}"
+        print(f"\n--- Searching Zip: {zip_code} ---")
+        
+        # search_places now handles the 3-page limit per query robustly
+        results = maps_agent.search_places(query)
+        
+        print(f"    Found {len(results)} places in {zip_code}.")
+        
+        # Add to dictionary (De-duplication)
+        for place in results:
+            pid = place['place_id']
+            if pid not in all_raw_places:
+                place['_source_zip'] = zip_code # Track where we found it
+                all_raw_places[pid] = place
+
+    unique_places = list(all_raw_places.values())
+    print(f"\n>>> TOTAL UNIQUE PLACES FOUND: {len(unique_places)}")
+    print(">>> Starting AI Analysis & Fact Extraction...")
     
     processed_data = []
-    
-    # 3. Process each place one by one
-    # We only check the first 5 places to save money during tests
-    for place in raw_results[:5]: 
-        details = maps_agent.get_place_details(place['place_id'])
+    today_str = datetime.now().strftime('%Y-%m-%d')
+
+    # --- STEP 2: PROCESS EACH UNIQUE PLACE ---
+    for i, place in enumerate(unique_places): 
+        try:
+            # Progress bar
+            print(f"[{i+1}/{len(unique_places)}] Fetching details for: {place.get('name')}")
+            details = maps_agent.get_place_details(place['place_id'])
+        except Exception:
+            continue
+
         name = details.get('name')
         
-        print(f"    -> Checking: {name}...")
-
-        # --- A. Get the reviews ---
-        reviews_list = details.get('reviews', [])
-        reviews_text = ""
-        last_review_date = "Unknown"
+        # Facts extraction
+        geometry = details.get('geometry', {}).get('location', {})
+        lat = geometry.get('lat', None)
+        lng = geometry.get('lng', None)
         
+        # Extract Zip from address if possible, or use source zip
+        addr = details.get('formatted_address', '')
+        
+        attrs_list = []
+        if details.get('serves_breakfast'): attrs_list.append("Breakfast")
+        if details.get('serves_lunch'): attrs_list.append("Lunch")
+        if details.get('serves_dinner'): attrs_list.append("Dinner")
+        if details.get('serves_beer'): attrs_list.append("Beer")
+        if details.get('serves_wine'): attrs_list.append("Wine")
+        attr_str = ", ".join(attrs_list) if attrs_list else "None"
+
+        opening_hours_data = details.get('opening_hours', {}).get('weekday_text', [])
+        operating_hours = "; ".join(opening_hours_data) if opening_hours_data else "Unknown"
+        price_level = details.get('price_level', 'N/A')
+
+        reviews_list = details.get('reviews', [])
+        review_count = len(reviews_list)
+        reviews_text = ""
+        last_review_date = "N/A"
+        has_reviews = False
+
         if reviews_list:
-            # 1. Find the date of the newest review
+            has_reviews = True
             timestamps = [r.get('time', 0) for r in reviews_list]
             if timestamps:
-                latest_ts = max(timestamps)
-                # Convert the time to a readable format (YYYY-MM-DD)
-                last_review_date = datetime.fromtimestamp(latest_ts).strftime('%Y-%m-%d')
-            
-            # 2. Combine reviews into one text for the AI
-            # We only use the first 3 reviews to keep it short
+                last_review_date = datetime.fromtimestamp(max(timestamps)).strftime('%Y-%m-%d')
             texts = [f"- {r.get('text')[:200]}..." for r in reviews_list[:3] if r.get('text')]
             reviews_text = "\n".join(texts)
         else:
-            reviews_text = "No reviews available."
+            reviews_text = "NO REVIEWS. Judge based on Name, Hours, and Attributes only."
 
-        # --- B. Create the instructions for the AI ---
-        system_instruction = """
-        You are a data assistant for a university thesis.
+        # AI Prompt
+        system_instruction = f"""
+        You are a data researcher. Today is {today_str}.
+        TASK: Decide the NAICS code for '{name}'.
+        Target: {config['search_term']} (NAICS {config['target_naics']}).
+        Definition: {config['definition']}
         
-        YOUR TASK: Use the customer reviews to answer two questions:
-        1. **Is the business still open?** (Check the date of the last review).
-        2. **What kind of business is it?** (Check what people are eating or drinking).
-           - If they talk about "latte" or "coffee", it is a Coffee Shop (722515).
-           - If they talk about "bread", it might be a Bakery (311811).
-           - If they talk about "cocktails", it might be a Bar (722410).
+        LOGIC (Use FACTS):
+        1. **Hours**: Opens 6-8 AM -> Likely Coffee/Bakery. Opens 4 PM -> Likely Bar.
+        2. **Attributes**: Breakfast -> Coffee. Dinner+Beer+No Breakfast -> Bar.
+        3. **Reviews**: Confirm "Vibe".
         """
 
         user_prompt = f"""
-        Business Info:
-        - Name: {name}
-        - Address: {details.get('formatted_address')}
-        - Google Types: {", ".join(details.get('types', []))}
+        Name: {name}
+        FACTS: Hours: {operating_hours} | Attrs: {attr_str} | Price: {price_level}
+        REVIEWS: {reviews_text}
         
-        REVIEW EVIDENCE:
-        Date of Last Review: {last_review_date}
-        What people said:
-        {reviews_text}
-        
-        Please fill in this JSON:
+        Return JSON:
         {{
-            "NAICS": "The 6-digit NAICS code (based on reviews)",
-            "SIC": "The 4-digit SIC code",
-            "BusinessStatus": "Active or Inactive (Is the last review recent?)",
-            "YearEstablished": "Year (integer) or null",
-            "Employees": "Estimated number of employees (integer) or null",
-            "Reasoning": "One simple sentence explaining why you chose this NAICS code"
+            "Calculated_NAICS": "6-digit code",
+            "Employees": "Integer or null",
+            "Year_Established": "Integer or null",
+            "Status": "Active/Inactive",
+            "Confidence": "High/Low",
+            "Reasoning": "Brief explanation."
         }}
         """
 
         try:
-            # Ask the AI
             response = client.chat.completions.create(
-                model="gpt-4o",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": system_instruction},
                     {"role": "user", "content": user_prompt}
@@ -112,41 +220,51 @@ def main():
                 temperature=0.0
             )
             
-            # Read the AI's answer
-            ai_content = response.choices[0].message.content
-            # Clean the answer
-            ai_content = ai_content.replace("```json", "").replace("```", "").strip()
-            ai_data = json.loads(ai_content)
+            ai_data = json.loads(response.choices[0].message.content.replace("```json", "").replace("```", "").strip())
             
-            # Save the data
             row = {
                 "Company": name,
-                "City": "Minneapolis",
-                "Last_Review_Date": last_review_date,
-                "AI_Predicted_Status": ai_data.get("BusinessStatus"),
-                "NAICS": ai_data.get("NAICS"),
-                "Reasoning": ai_data.get("Reasoning"),
-                "Employees": ai_data.get("Employees")
+                "Calculated_NAICS": ai_data.get("Calculated_NAICS"),
+                "Target_NAICS": config['target_naics'],
+                "Is_Target_Match": (ai_data.get("Calculated_NAICS") == config['target_naics']),
+                "Confidence": ai_data.get("Confidence"),
+                "Match_Reasoning": ai_data.get("Reasoning"),
+                "Business_Status": ai_data.get("Status"),
+                "Review_Count": review_count,
+                "Has_Reviews": "Yes" if has_reviews else "No",
+                "Latitude": lat,   
+                "Longitude": lng,  
+                "Street_Address": addr,
+                "City": TARGET_CITY_NAME,
+                "State": "MN",
+                "Zip_Code": place.get('_source_zip'),
+                "Operating_Hours": operating_hours,
+                "Hard_Attributes": attr_str,
+                "Price_Level": price_level,
+                "Business_Website": details.get('website'),
+                "Employees_Estimated": ai_data.get("Employees"),
+                "Year_Established": ai_data.get("Year_Established"),
+                "Last_Review_Date": last_review_date
             }
             processed_data.append(row)
             
         except Exception as e:
-            print(f"    [Error] Could not process {name}: {e}")
+            print(f"    [Error] {e}")
 
-    # 4. Save the results to a file
+    # --- SAVE ---
     if processed_data:
-        # Create the 'data' folder if it does not exist
-        os.makedirs(os.path.join(os.path.dirname(__file__), '../data'), exist_ok=True)
-        output_path = os.path.join(os.path.dirname(__file__), '../data/Minneapolis_Coffee_Reviews.csv')
+        # Get current time like "20231027_1530"
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # Add timestamp to filename so it never conflicts with open Excel files
+        filename = f"Minneapolis_{CURRENT_TASK}_{timestamp}.csv"
+        output_path = os.path.join(os.path.dirname(__file__), f'../data/{filename}')
         
         df = pd.DataFrame(processed_data)
-        df.to_csv(output_path, index=False)
+        df = df.reindex(columns=FINAL_COLUMNS)
         
-        print(f">>> Success! The data is saved in {output_path}")
-        # Show a preview of the reasoning
-        print(df[['Company', 'Last_Review_Date', 'Reasoning']].head())
-    else:
-        print(">>> No data found.")
+        df.to_csv(output_path, index=False)
+        print(f">>> Success! Saved to {filename}")
+        print(f">>> Total Unique Records: {len(df)}")
 
 if __name__ == "__main__":
     main()
