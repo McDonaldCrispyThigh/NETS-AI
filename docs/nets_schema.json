@@ -1,1 +1,30 @@
 
+{
+  "fields": [
+    {
+      "name": "Company",
+      "description": "Business Name",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "description": "Street Address",
+      "type": "string"
+    },
+    {
+      "name": "City",
+      "description": "City Name",
+      "type": "string"
+    },
+    {
+      "name": "Tags",
+      "description": "Business Categories",
+      "type": "string"
+    },
+    {
+      "name": "PlaceID",
+      "description": "Google Place ID",
+      "type": "string"
+    }
+  ]
+}
