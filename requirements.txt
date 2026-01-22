@@ -3,3 +3,4 @@ googlemaps
 python-dotenv
 pandas
 requests
+openpyxl
