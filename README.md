@@ -30,8 +30,8 @@ more transparent and reproducible.
 ### Tech Stack
 
 - **Language:** Python  
-- **AI Tools:** LangChain, OpenAI API  
-- **Mapping & Spatial Tools:** Spatial SQL, PostGIS, GeoPandas  
+- **AI Tools:** OpenAI API  
+- **Mapping & Spatial Tools:** Spatial SQL
 
 ---
 
