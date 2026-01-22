@@ -105,7 +105,6 @@ Generated outputs are saved as:
 │   ├── nets_schema.json    # NETS-style data schema
 │   └── methodology.md      # Research design & notes
 └── data/                   # Generated outputs
-    └── synthetic_business.csv
 ```
 
 
