@@ -122,13 +122,6 @@ Core Python scripts controlling the AI agent using LangChain.
 
 Wrappers for external APIs such as Google Maps and Yelp.
 
-#### `context/` (The Memory)
-
-Background knowledge and constraints for the agent, including:
-
-- NETS database structure  
-- NAICS classifications  
-- Prompt rules  
 
 ---
 
