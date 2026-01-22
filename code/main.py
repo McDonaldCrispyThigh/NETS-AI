@@ -1,41 +1,40 @@
-
 import os
 import sys
 import json
 import pandas as pd
 from dotenv import load_dotenv
 
-# 确保能引用到 skills 文件夹
+# Make sure we can find the 'skills' folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from skills.google_maps import GoogleMapsAgent
 
 def main():
-    # 1. 初始化
+    # 1. Start the system
     load_dotenv()
-    print(">>> Initializing Synthetic Urban Intelligence Agent...")
+    print(">>> Starting the AI Agent...")
 
     maps_agent = GoogleMapsAgent()
 
-    # 2. 设定任务 (这里暂时写死，后面我们会从 Prompt 读入)
+    # 2. Set the task (Now it is fixed here, later we will use Prompts)
     target_city = "Boulder, CO"
     target_category = "Coffee Shop"
     query = f"{target_category} in {target_city}"
 
-    print(f">>> Agent is searching for: {query}")
+    print(f">>> The Agent is looking for: {query}")
 
-    # 3. 执行工具调用 (Skills)
-    # 注意：如果你没有配置 API Key，这里会返回空列表
+    # 3. Use the tools (Skills)
+    # Note: If you do not have the API Key in .env, you will get nothing
     raw_results = maps_agent.search_places(query)
-    print(f">>> Found {len(raw_results)} candidates.")
+    print(f">>> Found {len(raw_results)} places.")
 
-    # 4. 数据处理 (简单的 ETL)
+    # 4. Process the data
     processed_data = []
     for place in raw_results:
-        # 模拟获取详情
+        # Get more details for this place
         details = maps_agent.get_place_details(place['place_id'])
 
-        # 映射到简单的 NETS 结构
+        # Make the data look like the NETS database
         row = {
             "Company": details.get('name'),
             "Address": details.get('formatted_address'),
@@ -45,9 +44,9 @@ def main():
         }
         processed_data.append(row)
 
-    # 5. 输出结果
+    # 5. Save the result
     if processed_data:
-        # 确保 data 目录存在
+        # Make sure the 'data' folder exists
         os.makedirs(os.path.join(os.path.dirname(__file__), '../data'), exist_ok=True)
         output_path = os.path.join(os.path.dirname(__file__), '../data/synthetic_business.csv')
 
@@ -56,7 +55,7 @@ def main():
         print(f">>> Success! Data saved to {output_path}")
         print(df.head())
     else:
-        print(">>> No data found (Did you add your API Key to .env?).")
+        print(">>> No data found (Did you put your API Key in .env?).")
 
 if __name__ == "__main__":
     main()
