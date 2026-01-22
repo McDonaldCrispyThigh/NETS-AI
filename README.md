@@ -8,8 +8,8 @@ Congyuan (Student), Boulder, CO
 
 **Advisors:**  
 - Prof. Jessica Finlay (Supervisor)  
-- Prof. Michael Esposito (University of Minnesota)  
-- Prof. Stephen Becker (Applied Mathematics)
+- Prof. Michael Esposito (University of Minnesota)
+- Yue Sun (Postdoc in CU Boulder)
 
 ---
 
