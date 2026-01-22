@@ -93,16 +93,19 @@ Generated outputs are saved as:
 
 /
 ├── README.md
-├── code/ # Main Python logic
-│ ├── main.py # Entry point
-│ └── agent_workflow.py # Agent reasoning workflow
-├── skills/ # External tools (APIs)
-│ ├── google_maps.py # Google Maps integration
-│ └── yelp_api.py # Yelp API integration
-├── context/ # Agent memory & rules
-│ ├── prompt_guide.md # Prompt engineering guide
-│ └── nets_schema.json # NETS-style data schema
-└── docs/ # Project documents
+├── code/                    # Main Python logic (the Agent brain)
+│   ├── main.py               # Entry point
+│   └── agent_workflow.py     # Agent reasoning workflow
+├── skills/                  # External tools (APIs)
+│   ├── google_maps.py        # Google Maps integration
+│   └── yelp_api.py           # Yelp API integration
+├── docs/                    # Project knowledge & instructions
+│   ├── PROMPT_GUIDE.md       # Prompt engineering rules
+│   ├── nets_schema.json      # NETS-style data schema
+│   └── methodology.md        # Research design & notes
+└── data/                    # Generated outputs
+    └── synthetic_business.csv
+
 
 
 ### Folder Descriptions
