@@ -1,29 +1,28 @@
-
 {
   "fields": [
     {
       "name": "Company",
-      "description": "Business Name",
+      "description": "Name of the business",
       "type": "string"
     },
     {
       "name": "Address",
-      "description": "Street Address",
+      "description": "Full street address",
       "type": "string"
     },
     {
       "name": "City",
-      "description": "City Name",
+      "description": "City name",
       "type": "string"
     },
     {
       "name": "Tags",
-      "description": "Business Categories",
+      "description": "Category of the business (e.g., Restaurant)",
       "type": "string"
     },
     {
       "name": "PlaceID",
-      "description": "Google Place ID",
+      "description": "Google Maps ID code",
       "type": "string"
     }
   ]
