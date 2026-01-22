@@ -1,29 +1,29 @@
-
 import googlemaps
 import os
 from dotenv import load_dotenv
 
-# 加载 .env 里的 API Key
+# Load the API Key from the .env file
 load_dotenv()
 API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 class GoogleMapsAgent:
     def __init__(self):
+        # Check if the key exists
         if not API_KEY:
-            print("⚠️ Warning: GOOGLE_MAPS_API_KEY not found in .env")
+            print("Warning: GOOGLE_MAPS_API_KEY is missing in .env")
             self.client = None
         else:
             self.client = googlemaps.Client(key=API_KEY)
 
     def search_places(self, query, location=None):
         """
-        模拟在 Google Maps 上搜索。
+        Search for a place on Google Maps.
         """
         if not self.client:
             return []
-
+        
         try:
-            # Places API Text Search
+            # Use the Places API to search
             results = self.client.places(query=query)
             if results['status'] == 'OK':
                 return results['results']
@@ -35,20 +35,24 @@ class GoogleMapsAgent:
 
     def get_place_details(self, place_id):
         """
-        获取某个地点的详细信息
+        Get details about a specific place (like address, phone, type).
         """
         if not self.client:
             return {}
 
         try:
-            # 获取具体字段：名字, 格式化地址, 电话, 类型, 永久关闭状态
-            result = self.client.place(place_id=place_id, fields=['name', 'formatted_address', 'formatted_phone_number', 'types', 'permanently_closed'])
+            # FIX: Changed 'types' to 'type' in the fields list
+            # The API is strict: request 'type' (singular), get back 'types' (plural)
+            result = self.client.place(
+                place_id=place_id, 
+                fields=['name', 'formatted_address', 'formatted_phone_number', 'type', 'permanently_closed', 'reviews']
+            )
             return result.get('result', {})
         except Exception as e:
             print(f"Error getting details: {e}")
             return {}
 
-# 测试代码 (只有直接运行此文件时才会执行)
+# Test code
 if __name__ == "__main__":
     agent = GoogleMapsAgent()
     print(agent.search_places("Coffee shops in Boulder, CO"))
