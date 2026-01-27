@@ -6,23 +6,58 @@
       "type": "string"
     },
     {
+      "name": "NAICS",
+      "description": "NAICS code (North American Industry Classification System)",
+      "type": "string"
+    },
+    {
+      "name": "SIC",
+      "description": "SIC code (Standard Industrial Classification)",
+      "type": "string"
+    },
+    {
+      "name": "Employees",
+      "description": "Number of employees (Must be real data from public sources, NO estimations)",
+      "type": "integer"
+    },
+    {
+      "name": "Latitude",
+      "description": "GPS Latitude (WGS84)",
+      "type": "float"
+    },
+    {
+      "name": "Longitude",
+      "description": "GPS Longitude (WGS84)",
+      "type": "float"
+    },
+    {
       "name": "Address",
       "description": "Full street address",
       "type": "string"
     },
     {
-      "name": "City",
-      "description": "City name",
+      "name": "Website",
+      "description": "Business website URL (if available)",
       "type": "string"
     },
     {
-      "name": "Tags",
-      "description": "Category of the business (e.g., Restaurant)",
+      "name": "LegalStatus",
+      "description": "Legal status (e.g., LLC, Corporation, Sole Proprietorship)",
       "type": "string"
     },
     {
-      "name": "PlaceID",
-      "description": "Google Maps ID code",
+      "name": "YearEstablished",
+      "description": "The year the business started (Must verify with a source link)",
+      "type": "integer"
+    },
+    {
+      "name": "OperatingHours",
+      "description": "Weekly operating hours",
+      "type": "string"
+    },
+    {
+      "name": "Notes",
+      "description": "Key features or extra notes about the business",
       "type": "string"
     }
   ]
