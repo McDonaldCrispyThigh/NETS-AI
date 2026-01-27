@@ -30,8 +30,8 @@ more transparent and reproducible.
 ### Tech Stack
 
 - **Language:** Python  
-- **AI Tools:** LangChain, OpenAI API  
-- **Mapping & Spatial Tools:** Spatial SQL, PostGIS, GeoPandas  
+- **AI Tools:** OpenAI API  
+- **Mapping & Spatial Tools:** Spatial SQL
 
 ---
 
@@ -105,7 +105,6 @@ Generated outputs are saved as:
 │   ├── nets_schema.json    # NETS-style data schema
 │   └── methodology.md      # Research design & notes
 └── data/                   # Generated outputs
-    └── synthetic_business.csv
 ```
 
 
@@ -123,13 +122,6 @@ Core Python scripts controlling the AI agent using LangChain.
 
 Wrappers for external APIs such as Google Maps and Yelp.
 
-#### `context/` (The Memory)
-
-Background knowledge and constraints for the agent, including:
-
-- NETS database structure  
-- NAICS classifications  
-- Prompt rules  
 
 ---
 
