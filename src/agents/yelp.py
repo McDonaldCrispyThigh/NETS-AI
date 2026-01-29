@@ -15,9 +15,18 @@ class YelpAgent:
             self.headers = {'Authorization': f'Bearer {API_KEY}'}
         self.base_url = "https://api.yelp.com/v3/businesses"
 
-    def search_businesses(self, term, location):
+    def search_businesses(self, term, location=None, latitude=None, longitude=None, limit=50, offset=0, radius=2000):
         """
         Search Yelp for businesses.
+        
+        Args:
+            term (str): Search term
+            location (str): Location text (optional)
+            latitude (float): Latitude (optional)
+            longitude (float): Longitude (optional)
+            limit (int): Max results per call (<=50)
+            offset (int): Pagination offset
+            radius (int): Search radius in meters (<=40000)
         """
         if not self.headers:
             return []
@@ -25,9 +34,15 @@ class YelpAgent:
         url = f"{self.base_url}/search"
         params = {
             'term': term,
-            'location': location,
-            'limit': 5  # Limit to 5 to save quota
+            'limit': min(limit, 50),
+            'offset': offset,
+            'radius': min(radius, 40000)
         }
+        if location:
+            params['location'] = location
+        if latitude and longitude:
+            params['latitude'] = latitude
+            params['longitude'] = longitude
 
         try:
             response = requests.get(url, headers=self.headers, params=params)
@@ -57,6 +72,23 @@ class YelpAgent:
         except Exception as e:
             print(f"Error getting details: {e}")
             return {}
+
+    def get_reviews(self, yelp_id):
+        """
+        Get Yelp reviews (Yelp API returns up to 3 reviews).
+        """
+        if not self.headers:
+            return []
+
+        url = f"{self.base_url}/{yelp_id}/reviews"
+        try:
+            response = requests.get(url, headers=self.headers)
+            if response.status_code == 200:
+                return response.json().get('reviews', [])
+            return []
+        except Exception as e:
+            print(f"Error getting reviews: {e}")
+            return []
 
 # Test
 if __name__ == "__main__":
