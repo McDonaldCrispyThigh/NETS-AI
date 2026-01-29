@@ -25,8 +25,8 @@ class GoogleMapsAgent:
         all_results = []
         next_token = None
         
-        # We try to fetch up to 3 pages (Google's Limit per query)
-        for page_num in range(3): 
+        # We try to fetch up to 5 pages (Google's Limit per query)
+        for page_num in range(5): 
             try:
                 response = None
                 
@@ -34,7 +34,7 @@ class GoogleMapsAgent:
                 # If we have a token, we must wait until it is valid.
                 if next_token:
                     attempts = 0
-                    while attempts < 3:
+                    while attempts < 5:
                         print(f"    ... Fetching Page {page_num + 1} (Attempt {attempts+1})...")
                         time.sleep(2 + attempts) # Wait 2s, then 3s, then 4s...
                         try:
