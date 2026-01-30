@@ -39,11 +39,23 @@ class GPTAnalyzer:
                 - operating_hours: Opening hours text
                 - website_status: 200, 404, or None
                 - google_rating: Star rating
+                - full_reviews: List of all review dicts (optional)
                 
         Returns:
             Dict with classification results
         """
         today = datetime.now().strftime('%Y-%m-%d')
+        
+        # Extract recent review text from full_reviews if available
+        recent_reviews_text = business_data.get('review_snippets', 'None')
+        full_reviews = business_data.get('full_reviews', [])
+        if full_reviews:
+            # Get last 20 reviews for context
+            recent_20 = full_reviews[-20:] if len(full_reviews) > 20 else full_reviews
+            recent_reviews_text = "\n".join([
+                f"[{r.get('review_datetime_utc', 'N/A')[:10]}] {r.get('review_rating')}★: {(r.get('review_text') or '')[:200]}"
+                for r in recent_20
+            ])
         
         system_prompt = f"""You are a business analyst. Today is {today}.
 Your task is to determine if a business is currently ACTIVE or INACTIVE (closed/defunct).
@@ -68,8 +80,8 @@ Last Review: {business_data.get('last_review_date', 'Never')}
 Hours: {business_data.get('operating_hours', 'Not listed')}
 Website Status: {business_data.get('website_status', 'Unknown')}
 Rating: {business_data.get('google_rating', 'N/A')}
-Recent Review Snippets:
-{business_data.get('review_snippets', 'None')}
+Recent Reviews:
+{recent_reviews_text}
 
 Return JSON:
 {{
@@ -108,31 +120,54 @@ Return JSON:
     
     def estimate_employment(self, business_data: Dict) -> Dict:
         """
-        Estimate number of employees based on available signals
+        Estimate number of employees based on available signals including review analysis
         
         Args:
-            business_data: Dict with business characteristics
+            business_data: Dict with business characteristics + full_reviews
             
         Returns:
             Employment estimate with confidence
         """
+        # Extract staff mentions from full reviews if available
+        staff_mentions = business_data.get('staff_mentions', 'None')
+        full_reviews = business_data.get('full_reviews', [])
+        if full_reviews:
+            # Sample reviews mentioning staff
+            staff_related = []
+            keywords = ['staff', 'employee', 'worker', 'bartender', 'waiter', 'barista', 'trainer', 'manager']
+            for r in full_reviews:
+                text = (r.get('review_text') or '').lower()
+                if any(kw in text for kw in keywords):
+                    staff_related.append(f"[{r.get('review_rating')}★] {text[:150]}")
+                    if len(staff_related) >= 10:
+                        break
+            if staff_related:
+                staff_mentions = "\n".join(staff_related)
+        
         system_prompt = """You are an employment analyst.
-Estimate the number of employees based on business characteristics.
+Estimate the number of employees based on business characteristics and review content.
 
 Guidelines:
 - Coffee shop: 3-8 employees typically
 - Gym: 10-30 employees typically
 - Library: 5-20 employees typically
-- Consider: size mentions, review mentions of staff, operating hours
+- Consider: size mentions, review mentions of staff, operating hours, review density
+- Review density (reviews/month) correlates with customer volume and staffing needs
 
 Provide a range (min-max) and best estimate."""
 
+        reviews_per_month = business_data.get('reviews_per_month', 0)
+        total_reviews = business_data.get('total_reviews_collected', business_data.get('review_count', 0))
+        
         user_prompt = f"""Business: {business_data.get('name')}
 Type: {business_data.get('category', 'Unknown')}
 Price Level: {business_data.get('price_level', 'Unknown')}
 Operating Hours: {business_data.get('operating_hours', 'Unknown')}
+Total Reviews: {total_reviews}
+Reviews/Month: {reviews_per_month}
 Size Indicators: {business_data.get('size_indicators', 'None')}
-Review Mentions: {business_data.get('staff_mentions', 'None')}
+Staff Mentions in Reviews:
+{staff_mentions}
 
 Return JSON:
 {{

@@ -99,6 +99,36 @@ EMPLOYEE_AREA_COEFFICIENTS = {
     "religion": 1 / 60.0
 }
 
+# Service categories for review/popular-times based staffing
+SERVICE_CATEGORIES = {
+    "coffee", "gym", "grocery", "civic", "religion", "library", "park"
+}
+
+# Baseline review velocity (avg reviews/month by category)
+REVIEW_VELOCITY_BASELINES = {
+    "coffee": 20.0,
+    "gym": 8.0,
+    "grocery": 12.0,
+    "civic": 3.0,
+    "religion": 2.0,
+    "library": 4.0,
+    "park": 2.0
+}
+
+# Max customers/hour when popular_times_peak is an index (0-100)
+POPULAR_TIMES_MAX_CUSTOMERS_PER_HOUR = {
+    "coffee": 120.0,
+    "gym": 80.0,
+    "grocery": 200.0,
+    "civic": 60.0,
+    "religion": 150.0,
+    "library": 70.0,
+    "park": 100.0
+}
+
+# Staffing rule: 50 customers/hour requires 4 staff
+POPULAR_TIMES_CUSTOMERS_PER_EMPLOYEE = 12.5
+
 # Model settings
 AI_MODEL = "gpt-4o-mini"
 AI_TEMPERATURE = 0.0

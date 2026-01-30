@@ -129,38 +129,54 @@ class GoogleMapsAgent:
             lat += lat_step
         return points
 
-    def search_places_grid(self, keyword, center_lat, center_lng, radius_m=800, spacing_m=800):
+    def search_places_grid(self, keyword, center_lat, center_lng, radius_m=2000, spacing_m=500):
         """
-        Grid-based search using Places Nearby to avoid 60-result cap.
+        Adaptive grid-based search that subdivides cells until each has <60 results.
+        
+        This ensures complete coverage of the ZIP code area by:
+        1. Dividing the area into initial grid cells
+        2. Searching each cell
+        3. Recursively subdividing cells with ≥60 results
+        4. Deduplicating across all cells
 
         Args:
             keyword (str): Search keyword (e.g., "coffee shop")
             center_lat (float): Center latitude
             center_lng (float): Center longitude
-            radius_m (int): Nearby search radius
-            spacing_m (int): Grid spacing between query points
+            radius_m (int): Initial search area radius (default 2000m)
+            spacing_m (int): Initial cell size (default 500m)
 
         Returns:
-            list: Deduplicated place results
+            list: Deduplicated place results with complete coverage
         """
         if not self.client:
             return []
 
         all_results = {}
-        grid_points = self.generate_grid_points(center_lat, center_lng, radius_m, spacing_m)
-
-        for idx, (lat, lng) in enumerate(grid_points, 1):
+        
+        def search_cell(cell_center_lat, cell_center_lng, cell_radius_m, depth=0):
+            """
+            Recursively search a cell, subdividing if it returns ≥60 results.
+            
+            Args:
+                cell_center_lat: Cell center latitude
+                cell_center_lng: Cell center longitude
+                cell_radius_m: Cell search radius
+                depth: Recursion depth (max 3 to prevent infinite subdivision)
+            """
+            # Search this cell with pagination to get all results
+            cell_results = []
             next_token = None
-            for page_num in range(3):
+            
+            for page_num in range(3):  # Max 3 pages = up to 60 results per cell
                 try:
-                    response = None
                     if next_token:
                         attempts = 0
                         while attempts < 5:
                             time.sleep(2 + attempts)
                             response = self.client.places_nearby(
-                                location=(lat, lng),
-                                radius=radius_m,
+                                location=(cell_center_lat, cell_center_lng),
+                                radius=cell_radius_m,
                                 keyword=keyword,
                                 page_token=next_token
                             )
@@ -169,18 +185,14 @@ class GoogleMapsAgent:
                             attempts += 1
                     else:
                         response = self.client.places_nearby(
-                            location=(lat, lng),
-                            radius=radius_m,
+                            location=(cell_center_lat, cell_center_lng),
+                            radius=cell_radius_m,
                             keyword=keyword
                         )
 
                     if response and response.get('status') == 'OK':
                         results = response.get('results', [])
-                        for place in results:
-                            pid = place.get('place_id')
-                            if pid:
-                                all_results[pid] = place
-
+                        cell_results.extend(results)
                         next_token = response.get('next_page_token')
                         if not next_token:
                             break
@@ -188,7 +200,40 @@ class GoogleMapsAgent:
                         break
                 except Exception:
                     break
-
+            
+            # If cell has ≥55 results and we haven't reached max depth, subdivide
+            # (Use 55 as threshold to be safe, since Google may return slightly different counts)
+            if len(cell_results) >= 55 and depth < 3:
+                print(f"      Cell ({cell_center_lat:.4f},{cell_center_lng:.4f}) has {len(cell_results)} results, subdividing...")
+                
+                # Calculate offsets for 4 quadrants (NE, NW, SE, SW)
+                lat_offset = (cell_radius_m / 2) / 111320.0  # ~111km per degree latitude
+                lng_offset = (cell_radius_m / 2) / (111320.0 * math.cos(math.radians(cell_center_lat)))
+                
+                quadrants = [
+                    (cell_center_lat + lat_offset, cell_center_lng + lng_offset),  # NE
+                    (cell_center_lat + lat_offset, cell_center_lng - lng_offset),  # NW
+                    (cell_center_lat - lat_offset, cell_center_lng + lng_offset),  # SE
+                    (cell_center_lat - lat_offset, cell_center_lng - lng_offset),  # SW
+                ]
+                
+                # Recursively search each quadrant with half the radius
+                for quad_lat, quad_lng in quadrants:
+                    search_cell(quad_lat, quad_lng, cell_radius_m // 2, depth + 1)
+            else:
+                # Add results to global collection (deduplicated by place_id)
+                for place in cell_results:
+                    pid = place.get('place_id')
+                    if pid:
+                        all_results[pid] = place
+        
+        # Generate initial grid covering the search area
+        grid_points = self.generate_grid_points(center_lat, center_lng, radius_m, spacing_m)
+        
+        print(f"   Searching {len(grid_points)} initial grid cells...")
+        for idx, (lat, lng) in enumerate(grid_points, 1):
+            search_cell(lat, lng, spacing_m, depth=0)
+        
         return list(all_results.values())
 
     def get_place_details(self, place_id):

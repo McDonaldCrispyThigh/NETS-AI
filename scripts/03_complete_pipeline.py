@@ -17,9 +17,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from src.config import *
 from src.agents.google_maps_agent import GoogleMapsAgent
+from src.agents.outscraper_agent import OutscraperAgent
+from src.agents.linkedin_scraper_improved import LinkedInScraper
 from src.agents.wayback_agent import WaybackAgent
 from src.agents.gpt_analyzer import GPTAnalyzer
-from src.agents.yelp import YelpAgent
 from src.data.sos_loader import SOSLoader
 from src.data.external_signals import ExternalSignalsLoader
 from src.models.employee_estimator import EmployeeEstimator
@@ -63,27 +64,7 @@ def haversine_km(lat1, lon1, lat2, lon2):
 
 
 def find_best_yelp_match(yelp_results, name, latitude, longitude):
-    """Find best Yelp match by name similarity and distance."""
-    if not yelp_results:
-        return None
-    target = normalize_name(name)
-    best = None
-    best_score = 0
-    for item in yelp_results:
-        y_name = normalize_name(item.get('name'))
-        if not y_name:
-            continue
-        name_score = 1.0 if y_name == target else 0.0
-        dist_km = None
-        coords = item.get('coordinates', {})
-        if coords and latitude and longitude:
-            dist_km = haversine_km(latitude, longitude, coords.get('latitude'), coords.get('longitude'))
-        dist_score = 1.0 if dist_km is not None and dist_km <= 0.5 else 0.0
-        score = name_score * 0.7 + dist_score * 0.3
-        if score > best_score:
-            best = item
-            best_score = score
-    return best
+    return None
 
 
 def collect_business_data(place_id: str, maps_agent: GoogleMapsAgent) -> dict:
@@ -110,11 +91,47 @@ def collect_business_data(place_id: str, maps_agent: GoogleMapsAgent) -> dict:
     data['google_reviews_total'] = details.get('user_ratings_total', 0)
     data['price_level'] = details.get('price_level')
     
-    # Reviews
+    # Reviews - Basic from Google Maps API (limited to 5)
     reviews = details.get('reviews', [])
     data['google_reviews_returned'] = len(reviews)
     
-    if reviews:
+    # Try to get full review timeseries from Outscraper if available
+    reviews_timeseries = []
+    if hasattr(maps_agent, 'get_place_reviews_timeseries'):
+        try:
+            reviews_timeseries = maps_agent.get_place_reviews_timeseries(
+                place_id=place_id,
+                language='en',
+                reviews_limit=0  # Unlimited
+            )
+            if reviews_timeseries:
+                stats = maps_agent.extract_review_statistics(reviews_timeseries)
+                data['oldest_review_date'] = stats['oldest_review_date']
+                data['last_review_date'] = stats['latest_review_date']
+                data['total_reviews_collected'] = stats['total_reviews']
+                data['reviews_per_month'] = stats['reviews_per_month']
+                
+                # Save full review timeseries to separate JSON file
+                import json
+                reviews_dir = Path(__file__).parent.parent / "data" / "reviews"
+                reviews_dir.mkdir(parents=True, exist_ok=True)
+                review_file = reviews_dir / f"{place_id}_reviews.json"
+                with open(review_file, 'w', encoding='utf-8') as f:
+                    json.dump({
+                        'place_id': place_id,
+                        'name': data.get('name'),
+                        'collection_date': datetime.now().isoformat(),
+                        'reviews': reviews_timeseries,
+                        'statistics': stats
+                    }, f, ensure_ascii=False, indent=2)
+                
+                data['review_file'] = str(review_file)
+                logger.info(f"  Saved {len(reviews_timeseries)} reviews to {review_file.name}")
+        except Exception as e:
+            print(f"  Warning: Could not fetch review timeseries: {e}")
+    
+    # Fallback to basic reviews if timeseries not available
+    if not reviews_timeseries and reviews:
         timestamps = [r.get('time', 0) for r in reviews if r.get('time')]
         if timestamps:
             data['last_review_date'] = datetime.fromtimestamp(max(timestamps)).strftime('%Y-%m-%d')
@@ -124,7 +141,7 @@ def collect_business_data(place_id: str, maps_agent: GoogleMapsAgent) -> dict:
         data['review_snippets'] = " ... ".join([
             r.get('text', '')[:100] for r in reviews[:5] if r.get('text')
         ])
-    else:
+    elif not reviews_timeseries:
         data['last_review_date'] = None
         data['oldest_review_date'] = None
         data['review_snippets'] = ''
@@ -190,21 +207,38 @@ def enhance_with_wayback(business_data: dict, wayback_agent: WaybackAgent) -> di
 
 
 def enhance_with_gpt(business_data: dict, gpt_analyzer: GPTAnalyzer, config: dict) -> dict:
-    """Add GPT-4o-mini analysis"""
+    """Add GPT-4o-mini analysis with full review context"""
     logger.info(f"  Running GPT analysis...")
     
-    # Classify business status
-    status_result = gpt_analyzer.classify_business_status(business_data)
+    # Load full review timeseries if available
+    full_reviews = []
+    review_file = business_data.get('review_file')
+    if review_file and Path(review_file).exists():
+        try:
+            import json
+            with open(review_file, 'r', encoding='utf-8') as f:
+                review_data = json.load(f)
+                full_reviews = review_data.get('reviews', [])
+            logger.info(f"  Loaded {len(full_reviews)} reviews for analysis")
+        except Exception as e:
+            logger.warning(f"  Could not load reviews: {e}")
+    
+    # Prepare enriched data with all reviews
+    enriched_data = {
+        **business_data,
+        'category': config.get('search_term'),
+        'full_reviews': full_reviews  # Pass all reviews to GPT
+    }
+    
+    # Classify business status (using all reviews)
+    status_result = gpt_analyzer.classify_business_status(enriched_data)
     business_data['ai_status'] = status_result.get('status')
     business_data['ai_status_confidence'] = status_result.get('confidence')
     business_data['ai_status_reasoning'] = status_result.get('reasoning')
     business_data['ai_risk_factors'] = ", ".join(status_result.get('risk_factors', []))
     
-    # Estimate employment
-    employment_result = gpt_analyzer.estimate_employment({
-        **business_data,
-        'category': config.get('search_term')
-    })
+    # Estimate employment (using review density + content analysis)
+    employment_result = gpt_analyzer.estimate_employment(enriched_data)
     business_data['ai_employees_min'] = employment_result.get('min_employees')
     business_data['ai_employees_max'] = employment_result.get('max_employees')
     business_data['ai_employees_estimate'] = employment_result.get('best_estimate')
@@ -227,14 +261,7 @@ def enhance_with_gpt(business_data: dict, gpt_analyzer: GPTAnalyzer, config: dic
 def calculate_overall_confidence(business_data: dict) -> str:
     """Calculate overall data confidence score"""
     last_review_date = business_data.get('last_review_date')
-    yelp_last_review = business_data.get('yelp_last_review_date')
-    if yelp_last_review and (not last_review_date or yelp_last_review > last_review_date):
-        last_review_date = yelp_last_review
-
-    review_count_total = max(
-        business_data.get('google_reviews_total', 0) or 0,
-        business_data.get('yelp_review_count', 0) or 0
-    )
+    review_count_total = business_data.get('google_reviews_total', 0) or 0
     indicators = {
         'has_recent_reviews': is_recent_activity(last_review_date or '', 180),
         'review_count': review_count_total,
@@ -301,11 +328,19 @@ def main():
     logger.info(f"AI-BDD Pipeline: {args.task} in {args.city}")
     logger.info(f"Target NAICS: {config['target_naics']}")
     
-    # Initialize agents
-    maps_agent = GoogleMapsAgent()
+    # Initialize agents - try Outscraper first, fallback to Google Maps
+    outscraper_agent = OutscraperAgent()
+    if outscraper_agent.client:
+        maps_agent = outscraper_agent
+        logger.info("Using Outscraper (enhanced data + cost savings)")
+    else:
+        maps_agent = GoogleMapsAgent()
+        logger.info("Using standard Google Maps API")
+    
     wayback_agent = WaybackAgent() if not args.skip_wayback else None
     gpt_analyzer = GPTAnalyzer(model=AI_MODEL, temperature=AI_TEMPERATURE) if not args.skip_gpt else None
-    yelp_agent = YelpAgent()
+    yelp_agent = None
+    linkedin_scraper = LinkedInScraper() if os.getenv("LINKEDIN_EMAIL") else None
 
     # Optional external data
     sos_loader = SOSLoader(args.sos_registry)
@@ -374,49 +409,7 @@ def main():
                 business_data['website_status_code'] = None
                 business_data['website_accessible'] = False
 
-            # Yelp enrichment (API-based)
-            yelp_match = None
-            if yelp_agent and business_data.get('latitude') and business_data.get('longitude'):
-                yelp_results = yelp_agent.search_businesses(
-                    term=business_data.get('name'),
-                    latitude=business_data.get('latitude'),
-                    longitude=business_data.get('longitude'),
-                    limit=50,
-                    radius=2000
-                )
-                yelp_match = find_best_yelp_match(
-                    yelp_results,
-                    business_data.get('name'),
-                    business_data.get('latitude'),
-                    business_data.get('longitude')
-                )
-
-            if yelp_match:
-                yelp_id = yelp_match.get('id')
-                business_data['yelp_id'] = yelp_id
-                business_data['yelp_rating'] = yelp_match.get('rating')
-                business_data['yelp_review_count'] = yelp_match.get('review_count')
-                business_data['yelp_url'] = yelp_match.get('url')
-                business_data['yelp_categories'] = ", ".join([c.get('title') for c in yelp_match.get('categories', [])])
-
-                yelp_reviews = yelp_agent.get_reviews(yelp_id) if yelp_id else []
-                if yelp_reviews:
-                    business_data['yelp_review_snippets'] = " ... ".join([
-                        r.get('text', '')[:100] for r in yelp_reviews if r.get('text')
-                    ])
-                    yelp_dates = [r.get('time_created') for r in yelp_reviews if r.get('time_created')]
-                    business_data['yelp_last_review_date'] = max(yelp_dates) if yelp_dates else None
-                else:
-                    business_data['yelp_review_snippets'] = ''
-                    business_data['yelp_last_review_date'] = None
-            else:
-                business_data['yelp_id'] = None
-                business_data['yelp_rating'] = None
-                business_data['yelp_review_count'] = None
-                business_data['yelp_url'] = None
-                business_data['yelp_categories'] = None
-                business_data['yelp_review_snippets'] = ''
-                business_data['yelp_last_review_date'] = None
+            # Yelp enrichment removed per requirement
 
             # Review velocity estimation
             business_data['reviews_per_month'] = calculate_review_velocity(
@@ -438,26 +431,26 @@ def main():
                 business_data.get('name', ''),
                 business_data.get('address', '')
             ) if external_signals else None
+            
+            # LinkedIn validation for all businesses
+            if linkedin_scraper:
+                try:
+                    linkedin_data = linkedin_scraper.search_company(business_data['name'])
+                    if linkedin_data:
+                        ext_record = ext_record or {}
+                        ext_record['linkedin_employee_count'] = linkedin_data.get('employee_count')
+                        ext_record['linkedin_company_size'] = linkedin_data.get('company_size')
+                        ext_record['linkedin_industry'] = linkedin_data.get('industry')
+                        logger.info(f"  LinkedIn: {linkedin_data.get('employee_count')} employees")
+                except Exception as e:
+                    logger.warning(f"  LinkedIn search failed: {e}")
             if ext_record:
                 business_data.update(ext_record)
 
-            # Employee estimation (multi-signal)
-            estimator = EmployeeEstimator(args.task)
-            combined = estimator.combine_estimates({
-                'linkedin_employee_count': business_data.get('linkedin_employee_count'),
-                'job_postings_12m': business_data.get('job_postings_12m'),
-                'building_area_m2': business_data.get('building_area_m2'),
-                'popular_times_peak': business_data.get('popular_times_peak'),
-                'sos_partner_count': business_data.get('sos_partner_count'),
-                'reviews_per_month': business_data.get('reviews_per_month')
-            })
-            business_data['employee_estimate'] = combined.get('employee_estimate')
-            business_data['employee_estimate_min'] = combined.get('employee_estimate_min')
-            business_data['employee_estimate_max'] = combined.get('employee_estimate_max')
-            business_data['employee_estimate_methods'] = ", ".join(combined.get('employee_estimate_methods', []))
+            # Employee estimation is computed after collection (needs review velocity average)
             
             # Wayback validation
-            if wayback_agent and business_data.get('website'):
+            if wayback_agent:
                 business_data = enhance_with_wayback(business_data, wayback_agent)
             
             # GPT analysis
@@ -474,16 +467,56 @@ def main():
         except Exception as e:
             logger.error(f"  Error: {str(e)[:100]}")
             continue
+
+    # Employee estimation (multi-signal) using review density baseline
+    if processed_data:
+        reviews_per_month_values = [
+            d.get('reviews_per_month') for d in processed_data
+            if d.get('reviews_per_month') is not None
+        ]
+        reviews_per_month_avg = (
+            sum(reviews_per_month_values) / len(reviews_per_month_values)
+            if reviews_per_month_values else None
+        )
+
+        estimator = EmployeeEstimator(args.task)
+        for business_data in processed_data:
+            combined = estimator.combine_estimates({
+                'linkedin_employee_count': business_data.get('linkedin_employee_count'),
+                'job_postings_12m': business_data.get('job_postings_12m'),
+                'building_area_m2': business_data.get('building_area_m2'),
+                'popular_times_peak': business_data.get('popular_times_peak'),
+                'sos_partner_count': business_data.get('sos_partner_count'),
+                'reviews_per_month': business_data.get('reviews_per_month'),
+                'reviews_per_month_avg': reviews_per_month_avg
+            })
+            business_data['employee_estimate'] = combined.get('employee_estimate')
+            business_data['employee_estimate_min'] = combined.get('employee_estimate_min')
+            business_data['employee_estimate_max'] = combined.get('employee_estimate_max')
+            business_data['employee_estimate_methods'] = ", ".join(combined.get('employee_estimate_methods', []))
     
     # ========== STEP 3: SAVE ==========
     if not processed_data:
         logger.error("\nNo data collected!")
         return 1
     
+    # Clean up LinkedIn scraper
+    if linkedin_scraper:
+        try:
+            linkedin_scraper.close()
+        except:
+            pass
+    
     logger.info(f"\nStep 3: Saving results...")
     
     # Create DataFrame
     df = pd.DataFrame(processed_data)
+
+    # Column aliases for schema/documentation compatibility
+    if 'google_reviews_total' in df.columns and 'user_ratings_total' not in df.columns:
+        df['user_ratings_total'] = df['google_reviews_total']
+    if 'google_reviews_returned' in df.columns and 'review_count' not in df.columns:
+        df['review_count'] = df['google_reviews_returned']
     
     # Save to CSV
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -498,11 +531,14 @@ def main():
     logger.info(f"COMPLETE!")
     logger.info(f"="*60)
     logger.info(f"   Total businesses: {len(df)}")
-    logger.info(f"   Active (AI): {df['ai_status'].value_counts().get('Active', 0)}")
-    logger.info(f"   Inactive (AI): {df['ai_status'].value_counts().get('Inactive', 0)}")
-    logger.info(f"   High confidence: {(df['overall_confidence'] == 'High').sum()}")
+    if 'ai_status' in df.columns:
+        logger.info(f"   Active (AI): {df['ai_status'].value_counts().get('Active', 0)}")
+        logger.info(f"   Inactive (AI): {df['ai_status'].value_counts().get('Inactive', 0)}")
+    if 'overall_confidence' in df.columns:
+        logger.info(f"   High confidence: {(df['overall_confidence'] == 'High').sum()}")
     logger.info(f"   With website: {df['website'].notna().sum()}")
-    logger.info(f"   Wayback verified: {(df['wayback_snapshot_count'] > 0).sum()}")
+    if 'wayback_snapshot_count' in df.columns:
+        logger.info(f"   Wayback verified: {(df['wayback_snapshot_count'] > 0).sum()}")
     logger.info(f"\nOutput: {output_file}")
     logger.info(f"="*60)
     
