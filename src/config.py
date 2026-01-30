@@ -1,134 +1,186 @@
 """
-AI-BDD Configuration Module
-Centralized configuration for all data collection tasks
+NETS Business Data Enhancement System - Configuration Module
+Focus: Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 446110)
+Geographic Area: Minneapolis, MN (Census Tract boundaries)
 """
 
 # ==========================================
-# MINNEAPOLIS ZIP CODES
+# MINNEAPOLIS GEOGRAPHIC BOUNDARIES
 # ==========================================
+# Census Tract filtering for Minneapolis proper
+MINNEAPOLIS_CENSUS_TRACTS = [
+    # Core downtown/north Minneapolis
+    "27053" + tract for tract in [
+        "010100", "010201", "010202", "010300", "010400",
+        "020000", "020100", "020200", "020300", "020400",
+        "030000", "030100", "030200", "030300", "030400",
+        "040000", "040100", "040200", "040300", "040400"
+    ]
+]
+
+# Alternative: Direct ZIP codes with Minneapolis/St. Paul coverage
 TARGET_ZIP_CODES = [
-    "55401", "55402", "55403", "55404", "55405", 
-    "55406", "55407", "55408", "55409", "55410", 
-    "55411", "55412", "55413", "55414", "55415",
-    "55454", "55455"
+    "55401", "55402", "55403", "55404", "55405",
+    "55406", "55407", "55408", "55409", "55410",
+    "55411", "55412", "55413", "55414", "55415"
 ]
 
 # ==========================================
-# BUSINESS CATEGORIES CONFIGURATION
+# TARGET INDUSTRIES (NAICS CODES)
 # ==========================================
-CATEGORY_CONFIG = {
-    "library": {
-        "search_term": "Public Library",
-        "target_naics": "519120",
-        "sic_code": "8231",
-        "definition": "Facility that lends books and provides quiet study areas. Key signs: 'Librarian', 'Checkout', 'Computers'. Non-commercial."
+INDUSTRY_CONFIG = {
+    "quick_service_restaurant": {
+        "naics_code": "722513",
+        "naics_title": "Limited-Service Restaurants",
+        "search_term": "Quick Service Restaurant",
+        "description": "Establishments primarily engaged in preparing and serving food and beverages for immediate consumption without table service. Includes fast food, quick casual, counter service.",
+        "examples": "McDonald's, Subway, Chipotle, Taco Bell, Panda Express, Panera, Starbucks (food service)",
+        "typical_hours": "6:00 AM - 11:00 PM",
+        "peak_hours": "11:30 AM - 1:30 PM (lunch), 5:00 PM - 7:00 PM (dinner)"
     },
-    "park": {
-        "search_term": "Park",
-        "target_naics": "712190", 
-        "sic_code": "7999",
-        "definition": "Designated outdoor area for nature and recreation. Key signs: 'Trail', 'Playground', 'Grass'. Distinct from 'Mobile Home Park' (Residential)."
-    },
-    "coffee": {
-        "search_term": "Coffee Shop",
-        "target_naics": "722515",
-        "sic_code": "5812",
-        "definition": "Focuses on coffee/tea and light food. Key signs: Opens early (6-8 AM), serves breakfast. If it opens early, it is a Coffee Shop even if it has beer."
-    },
-    "gym": {
-        "search_term": "Gym",
-        "target_naics": "713940",
-        "sic_code": "7991",
-        "definition": "Facility for physical exercise. Key signs: 'Weights', 'Treadmills', 'Membership', 'Classes'. Distinct from 'Playground equipment store'."
-    },
-    "grocery": {
-        "search_term": "Grocery Store",
-        "target_naics": "445110",
-        "sic_code": "5411",
-        "definition": "Retail store primarily selling fresh food, produce, and meats. Distinct from 'Convenience Store' (Gas stations) or 'Liquor Store'."
-    },
-    "civic": {
-        "search_term": "Community Center",
-        "target_naics": "813410",
-        "sic_code": "8641",
-        "definition": "Non-profit facility for social interaction and community support. Key signs: 'Volunteers', 'Community Events', 'Hall Rental'."
-    },
-    "religion": {
-        "search_term": "Place of Worship",
-        "target_naics": "813110",
-        "sic_code": "8661",
-        "definition": "Facility for religious services. Key signs: 'Service', 'Prayer', 'Worship', 'Church/Mosque/Synagogue'."
+    "pharmacy": {
+        "naics_code": "446110",
+        "naics_title": "Pharmacies",
+        "search_term": "Pharmacy",
+        "description": "Establishments primarily engaged in retailing prescription drugs and proprietary medicines. Usually includes front store merchandise.",
+        "examples": "CVS Pharmacy, Walgreens, Target Pharmacy, Costco Pharmacy, Independent pharmacies",
+        "typical_hours": "8:00 AM - 9:00 PM",
+        "peak_hours": "9:00 AM - 12:00 PM, 1:00 PM - 3:00 PM"
     }
 }
 
 # ==========================================
-# OUTPUT COLUMNS
+# EMPLOYEE ESTIMATION COEFFICIENTS
 # ==========================================
-FINAL_COLUMNS = [
-    "Company", "Calculated_NAICS", "Target_NAICS", "Is_Target_Match", "Confidence", 
-    "Match_Reasoning", "Business_Status", "Review_Count", "Has_Reviews",
-    "Latitude", "Longitude", "Street_Address", "City", "State", "Zip_Code",
-    "Operating_Hours", "Hard_Attributes", "Price_Level", "Business_Website", 
-    "Employees_Estimated", "Year_Established", "Last_Review_Date"
+# Industry-specific baselines (employees per unit metric)
+EMPLOYEE_ESTIMATION_BASELINES = {
+    "722513": {  # Quick Service Restaurants
+        "employees_per_sqm": 0.025,      # 1 employee per 40 sqm (~430 sqft)
+        "avg_reviews_per_month": 15.0,
+        "avg_employees": 12,
+        "avg_store_size_sqm": 500,
+        "hiring_intensity_high": 0.8,    # 80% of businesses in growth phase
+        "min_employees": 4,
+        "max_employees": 50
+    },
+    "446110": {  # Pharmacies
+        "employees_per_sqm": 0.020,      # 1 employee per 50 sqm (~540 sqft)
+        "avg_reviews_per_month": 8.0,
+        "avg_employees": 10,
+        "avg_store_size_sqm": 600,
+        "hiring_intensity_high": 0.5,    # 50% of pharmacies in growth phase
+        "min_employees": 3,
+        "max_employees": 35
+    }
+}
+
+# ==========================================
+# FEATURE ENGINEERING PARAMETERS
+# ==========================================
+# Review decay analysis (months)
+REVIEW_DECAY_WINDOW = {
+    "recent": 3,          # Recent reviews (0-3 months)
+    "historical": 12,     # Historical baseline (6-12 months)
+    "min_review_count": 3  # Require minimum reviews for decay calculation
+}
+
+# Geographic matching thresholds
+GEOGRAPHIC_MATCH = {
+    "haversine_threshold_m": 50,        # Maximum distance for name+address match
+    "coordinate_cluster_radius_m": 20   # Cluster nearby coordinates
+}
+
+# Job posting activity (for survival detection)
+JOB_POSTING_WINDOW = {
+    "recent_months": 6,
+    "historical_months": 24,
+    "posting_activity_threshold": 2     # Min postings to indicate hiring
+}
+
+# Street view features
+STREET_VIEW = {
+    "facade_analysis_enabled": True,
+    "edge_detection_threshold": 50,     # OpenCV Canny threshold
+    "min_facade_width_m": 3,
+    "max_facade_width_m": 15
+}
+
+# ==========================================
+# OUTPUT SPECIFICATION (PARQUET)
+# ==========================================
+PARQUET_OUTPUT_SCHEMA = [
+    # Original NETS columns (preserved)
+    "duns_id",
+    "company_name",
+    "street_address",
+    "city",
+    "state",
+    "zip_code",
+    "phone",
+    "website",
+    "latitude",
+    "longitude",
+    "naics_code",
+    
+    # Geographic enrichment
+    "census_tract",
+    "census_block_group",
+    "coordinate_source",  # 'original_nets', 'geocoded', 'clustered'
+    "geocode_quality",    # 'high', 'medium', 'low'
+    
+    # Employee estimation
+    "employees_optimized",
+    "employees_ci_lower",
+    "employees_ci_upper",
+    "employees_estimation_method",  # 'linkedin', 'review_intensity', 'building_area'
+    "employees_confidence",         # 'high', 'medium', 'low'
+    "employee_data_sources",        # JSON list of contributing sources
+    
+    # Business survival indicators
+    "is_active_prob",               # 0.0-1.0 probability
+    "is_active_confidence",         # 'high', 'medium', 'low'
+    "last_review_date",
+    "days_since_last_review",
+    "review_decay_rate",
+    "hiring_activity_recent",
+    "street_view_visible",
+    
+    # Data quality metrics
+    "data_quality_score",           # 0-100 composite
+    "data_completeness",            # Percentage of fields populated
+    "signal_count",                 # Number of data sources used
+    
+    # Metadata
+    "collection_date",
+    "data_sources_used",            # JSON: ['outscraper', 'linkedin', 'osm', etc.]
+    "notes"
 ]
 
 # ==========================================
-# APPLICATION DEFAULTS
+# APPLICATION CONFIGURATION
 # ==========================================
-TARGET_CITY_NAME = "Minneapolis"
-DEFAULT_STATE = "MN"
-DEFAULT_TASK = "coffee"
-DEFAULT_OUTPUT_DIR = "../data"
+TARGET_CITY = "Minneapolis"
+TARGET_STATE = "Minnesota"
+DEFAULT_STATE_CODE = "MN"
+DEFAULT_OUTPUT_DIR = "data/processed"
+DEFAULT_PARQUET_OUTPUT = "data/processed/nets_ai_minneapolis.parquet"
 
-# Optional external data sources
-SOS_REGISTRY_PATH = "data/external/mn_sos_registry.csv"
-EXTERNAL_SIGNALS_PATH = "data/external/external_signals.csv"
+# Data source priorities
+DATA_SOURCE_PRIORITY = [
+    "nets_database",
+    "outscraper_reviews",
+    "linkedin_headcount",
+    "indeed_postings",
+    "openstreetmap",
+    "google_street_view"
+]
 
-# Grid search defaults for Google Maps (meters)
-GRID_SEARCH_RADIUS_M = 800
-GRID_SEARCH_SPACING_M = 800
+# Error handling and logging
+LOG_LEVEL = "INFO"
+VALIDATION_ON_EXPORT = True
+BACKUP_PARQUET = True
 
-# Employee estimation coefficients (employees per square meter)
-EMPLOYEE_AREA_COEFFICIENTS = {
-    "coffee": 1 / 18.0,
-    "gym": 1 / 35.0,
-    "library": 1 / 45.0,
-    "park": 1 / 500.0,
-    "grocery": 1 / 25.0,
-    "civic": 1 / 40.0,
-    "religion": 1 / 60.0
-}
-
-# Service categories for review/popular-times based staffing
-SERVICE_CATEGORIES = {
-    "coffee", "gym", "grocery", "civic", "religion", "library", "park"
-}
-
-# Baseline review velocity (avg reviews/month by category)
-REVIEW_VELOCITY_BASELINES = {
-    "coffee": 20.0,
-    "gym": 8.0,
-    "grocery": 12.0,
-    "civic": 3.0,
-    "religion": 2.0,
-    "library": 4.0,
-    "park": 2.0
-}
-
-# Max customers/hour when popular_times_peak is an index (0-100)
-POPULAR_TIMES_MAX_CUSTOMERS_PER_HOUR = {
-    "coffee": 120.0,
-    "gym": 80.0,
-    "grocery": 200.0,
-    "civic": 60.0,
-    "religion": 150.0,
-    "library": 70.0,
-    "park": 100.0
-}
-
-# Staffing rule: 50 customers/hour requires 4 staff
-POPULAR_TIMES_CUSTOMERS_PER_EMPLOYEE = 12.5
-
-# Model settings
-AI_MODEL = "gpt-4o-mini"
-AI_TEMPERATURE = 0.0
+# Performance settings
+BATCH_SIZE_DASK = 100  # Use Dask for >1000 records
+GEOCODING_TIMEOUT_SEC = 10
+API_RATE_LIMIT_DELAY_SEC = 1

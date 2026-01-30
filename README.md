@@ -1,11 +1,12 @@
-# AI-Business Dynamics Database (AI-BDD)
-## Recovering Lost Volatility in Commercial Geography Data with AI-Powered Multi-Source Integration
+# NETS Business Data Enhancement System
+## Employee Estimation and Survival Detection for Quick Service Restaurants and Pharmacies in Minneapolis
 
-**Principal Investigator**: Congyuan (East China Normal University, Department of Geography)  
-**Advisors**: Prof. Jessica Finlay (University of Colorado Boulder), Prof. Michael Esposito (University of Minnesota)  
-**Target Journal**: *Environment and Planning B: Urban Analytics and City Science* (SSCI Q1)  
-**Target Submission**: Summer 2026  
-**Pilot Study**: Minneapolis, MN (Coffee Shops & Gyms)
+**Project Goal**: Develop an end-to-end pipeline to optimize the NETS business database by integrating multi-source data for employee count estimation and business survival probability prediction.
+
+**Geographic Scope**: Minneapolis, Minnesota (Census Tract boundaries)  
+**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies)  
+**Target Sample Size**: 500-1000 establishments (MVP scale)  
+**Timeline**: Phase 1 Complete - January 2026
 
 ---
 
@@ -37,103 +38,121 @@ python scripts/03_complete_pipeline.py --task coffee --limit 50
 
 ---
 
-## Executive Summary
+## Core Objectives
 
-The **NETS database imputation problem** (Crane & Decker 2019):
-- **67% of micro-business employment data is interpolated**, not observed
-- **Closure detection lag: 24+ months** (vs. reality: 3-6 months)  
-- **Artificial smoothing masks genuine business volatility**
-- **2011 spurious entry spikes** due to data vendor changes
+### 1. Employee Count Estimation with Confidence Intervals
+Estimate employee counts using multi-signal integration with quantified uncertainty:
+- **Data Sources**: LinkedIn company profiles + job posting databases + Google review velocity + street view business metrics
+- **Methods**: XGBoost regression + Bayesian hierarchical modeling + bootstrap confidence intervals
+- **Output**: Point estimates with 95% confidence intervals at monthly granularity
+- **Validation**: Cross-check with LinkedIn public headcount data where available
 
-**AI-BDD Solution**: Reconstruct real business dynamics using AI-powered integration of public digital footprints:
+### 2. Business Survival Detection
+Identify operational status and detect closures earlier than NETS data updates (typical 24-month lag):
+- **Data Sources**: Google review recency + review decay rate + job posting activity + street view imagery
+- **Methods**: Random forest classification + decay curve analysis + computer vision door detection
+- **Output**: Survival probability score (0-1) with confidence level (high/medium/low)
+- **Validation**: Historical Wayback Machine snapshots + manual sampling of 100 businesses
 
-| NETS Limitation | AI-BDD Innovation | Primary Data Source |
-|----------------|-------------------|-------------------|
-| **1. Interpolation** | Review density + Popular Times staffing model | Outscraper (unlimited Google Maps reviews) |
-| **2. Zombie Establishment Lag** | Latest review timestamp + GPT content analysis | Review timeseries (oldest→latest) |
-| **3. 2011 Spurious Entry Spikes** | Wayback Machine first snapshot validation | Internet Archive CDX API |
-| **4. Implicit Rounding/Smoothing** | Cross-validation via review density confidence intervals | Industry baseline comparison |
-
-**Key Advantages**:
-- **Speed**: Detect closures in 3–6 months using review decay signals
-- **Cost**: <$5,000 vs. NETS' $50,000+/year license
-- **Reproducibility**: Full pipeline code + open data sources
-- **Transparency**: LLM reasoning exposed, not black-box interpolation
-
-**Validation Strategy (Minneapolis Pilot)**:
-- **Consistency test**: Jaccard similarity ≥0.95 across 3 consecutive runs
-- **External validation**: Compare vs. Minnesota SOS registry + OpenStreetMap
-- **Review completeness**: Unlimited reviews (not 5-review API limit)
+### 3. Optimized Output Database
+Generate cleaned, enriched Parquet database suitable for urban planning and economic analysis:
+- **Format**: Apache Parquet (columnar, compressed, versioned)
+- **Records**: Original NETS fields + optimized employee estimates + confidence intervals + survival probability
+- **Geographic Accuracy**: Address parsing (usaddress library) + coordinate clustering + haversine distance validation
+- **Quality Assurance**: All fields validated before export
 
 ---
 
-## Research Objectives
+## Pipeline Architecture
 
-### Primary Objective
-Develop and validate an **AI-powered business dynamics database** that addresses four critical NETS limitations using public digital footprints, with Minneapolis retail/service sectors as pilot validation.
+```
+Data Ingestion Layer
+├─ NETS Database (establishments.csv)
+├─ Outscraper Google Reviews (1000 query/month limit)
+├─ LinkedIn Company Profiles (Selenium scraping + compliance)
+├─ Indeed Job Postings (historical trends)
+├─ OpenStreetMap Building Footprints (density analysis)
+└─ Google Street View (facade width measurement via OpenCV)
 
-### Specific Aims
+Data Cleaning and Standardization
+├─ Address parsing (usaddress library, handle variations)
+├─ Coordinate normalization (EPSG:4326 WGS84)
+├─ Name matching (fuzzy string matching, threshold < 50m haversine)
+├─ Deduplication (multikey: address + name + coordinates)
+└─ Temporal alignment (monthly period aggregation)
 
-**1. Interpolation Artifact Mitigation**
-- **Problem**: 67% of NETS employment data is interpolated using linear/ARIMA methods
-- **Solution**: Review density + Popular Times → employee estimation with confidence intervals
-- **Validation**: Compare AI-BDD estimates vs. LinkedIn + job postings for businesses with known headcount
+Feature Engineering
+├─ Review-based features:
+│  ├─ review_count_3m: review count in recent 3 months
+│  ├─ review_count_6_12m: review count in 6-12 months prior
+│  ├─ review_decay_rate: (count_3m / count_6_12m) - measures business decline
+│  └─ days_since_last_review: recency indicator
+├─ Job posting features:
+│  ├─ posting_count_6m: recent 6-month job postings
+│  ├─ posting_peak_historical: maximum postings in any 6-month period
+│  └─ hiring_activity_ratio: recent / historical
+├─ Street view features:
+│  ├─ facade_width_m: measured via edge detection (OpenCV)
+│  ├─ visible_signage: boolean presence
+│  └─ window_lighting: activity proxy
+└─ OSM features:
+   ├─ building_area_sqm: from OSM footprints
+   └─ district_density: nearby establishments per sq km
 
-**2. Zombie Establishment Detection**
-- **Problem**: NETS closure detection lags 24+ months
-- **Solution**: Latest review timestamp + GPT sentiment analysis of closure mentions
-- **Validation**: Precision/recall vs. "Permanently Closed" label in Google Maps
+Model Development
+├─ Employee Count Regression:
+│  ├─ Features: review velocity + hiring activity + building area + OSM density
+│  ├─ Model: XGBoost (boosting with categorical features)
+│  ├─ Hierarchical Prior: PyMC Bayesian layers by NAICS code
+│  └─ Uncertainty: bootstrap resampling for 95% confidence intervals
+├─ Survival Classification:
+│  ├─ Target labels: Active/Inactive (Wayback + manual validation)
+│  ├─ Features: review decay + posting activity + latest_review_age
+│  ├─ Model: Random Forest (interpretable split importance)
+│  └─ Output: probability score (0-1) + confidence (high/medium/low)
+└─ Signal Fusion:
+   └─ Hard signals (LinkedIn): highest priority if available
+   └─ Soft signals: review data + CV metrics, weighted by recency
 
-**3. 2011 Spurious Entry Validation**
-- **Problem**: NETS shows artificial spike due to data vendor changes
-- **Solution**: Wayback Machine first snapshot → verify establishment date ≠ data artifact
-- **Validation**: False positive rate for "old marked as new" cases
-
-**4. Implicit Rounding/Smoothing Elimination**
-- **Problem**: NETS exhibits suspiciously smooth employment trajectories
-- **Solution**: Cross-validation via review density confidence intervals (industry baseline comparison)
-- **Validation**: Gini coefficient of employment volatility (AI-BDD vs. NETS)
-
-### Paper Contribution
-- **Methodological**: First open-source alternative to proprietary longitudinal business databases
-- **Empirical**: Quantify NETS imputation magnitude in Minneapolis (2018-2024)
-- **Policy**: Provide urban planners with real-time closure signals for equitable development
+Output Generation
+├─ Parquet Database:
+│  ├─ Original NETS columns (preserved)
+│  ├─ employees_optimized: point estimate
+│  ├─ employees_ci_lower/upper: 95% confidence bounds
+│  ├─ is_active_prob: survival probability (0-1)
+│  ├─ confidence_level: high/medium/low categorical
+│  ├─ data_quality_score: 0-100 composite
+│  └─ last_updated: timestamp
+└─ Streamlit Dashboard:
+   ├─ Folium heat maps (by census tract)
+   ├─ Temporal series (Altair): employee trends by NAICS
+   ├─ Anomaly detection: outlier establishments
+   └─ Export tools: filtered CSV download
+```
 
 ---
 
-## Core Innovation: Adaptive Grid Search + Full Review Timeseries
+## Key Data Pipelines
 
-### 1. Complete Geographic Coverage
-**Problem**: Google Maps Places API returns max 60 results per query  
-**Solution**: Recursive grid subdivision until each cell <55 results
-- ZIP code divided into 3×3 initial grid
-- Cells with ≥55 results automatically subdivided into 4 quadrants
-- Max depth: 3 levels (prevents infinite recursion)
-- Result: 100% coverage with deduplication by `place_id`
+### Data Priority Hierarchy
+1. **NETS Database** (primary): Baseline establishment records
+2. **Outscraper Google Reviews** (1000 queries/month limit): Review velocity + recency signals
+3. **LinkedIn Company Profiles**: Employee counts (hard signal, highest credibility)
+4. **Indeed Job Postings**: Hiring activity indicators
+5. **OpenStreetMap**: Building footprint area + density metrics
+6. **Google Street View**: Facade measurement + storefront visibility
 
-### 2. Unlimited Review Collection
-**Problem**: Google Maps API returns only 5 reviews per place  
-**Solution**: Outscraper `google_maps_reviews()` with `reviews_limit=0`
-- Stored separately in `data/reviews/[place_id]_reviews.json`
-- Enables time-series analysis: oldest→latest review
-- GPT analyzes **all reviews** (not just 5 snippets) for:
-  - Closure detection ("permanently closed" mentions)
-  - Employee estimation (staff mentions + review density)
-  - NAICS verification (menu/service description evolution)
+### Data Cleaning Standards
+- **Address Standardization**: usaddress parsing with fuzzy matching for coordinate alignment
+- **Geographic Validation**: Haversine distance <50m for name+address matching
+- **Temporal Alignment**: Monthly period aggregation (pd.to_period('M'))
+- **Deduplication**: Multi-key matching (address + name + coordinates)
+- **EPSG:4326**: All coordinates in WGS84 (required for geopandas)
 
-### 3. Service-Category Specific Staffing
-**Problem**: LinkedIn rarely has data for small service businesses  
-**Solution**: Review density + Popular Times model
-- Baseline: Average reviews/month per category (coffee: 20, gym: 8, etc.)
-- Intensity ratio: Individual vs. category average
-- Popular Times: Peak visitor index → employees (12.5 customers/staff)
-- Only for service categories (coffee, gym, grocery, civic, religion, library, park)
-
-### 4. Historical Validation Layer
-**Problem**: Cannot distinguish genuine 2011 openings from data artifacts  
-**Solution**: Wayback Machine first snapshot cross-check
-- If NETS says "opened 2011" but Wayback shows 2008 snapshot → flag as artifact
-- Handles "old marked as new" cases via LLM entity resolution
+### Uncertainty Quantification
+- **Employee Count**: 95% confidence intervals via bootstrap resampling
+- **Survival Probability**: Model prediction probability with categorical confidence
+- **Data Quality Score**: Composite metric (0-100) based on signal completeness
 
 ---
 
