@@ -461,10 +461,6 @@ else:
 
 1. **Crane, L. D., & Decker, R. A. (2019).** *Business Dynamics in the National Establishment Time Series (NETS)*. Federal Reserve Working Paper. [Link](https://www.federalreserve.gov/econres/feds/files/2019034pap.pdf)
 
-2. **Finlay, J., et al. (2022).** *The Business Dynamics Statistics (BDS): A Case Study in Data Quality*. Journal of Economic Perspectives.
-
-3. **Esposito, M., & Finlay, J. (2020).** *Measuring Small Business Dynamics with Big Data*. Regional Science and Urban Economics.
-
 ---
 
 ## Contributing
@@ -481,6 +477,6 @@ MIT License - see LICENSE file for details
 ---
 
 **Documentation Version**: Jan 29, 2026  
-**Maintainer**: Congyuan (ECNU)  
+**Maintainer**: Congyuan (CU Boulder)  
 **Contact**: [Your Email/GitHub Issues]
 

@@ -280,7 +280,7 @@ Examples:
     
     # ========== STEP 3: SAVE PHASE ==========
     if not processed_data:
-        print("\n❌ No data to save!")
+        print("\nNo data to save!")
         return 1
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -293,7 +293,7 @@ Examples:
     df = df.reindex(columns=FINAL_COLUMNS)
     df.to_csv(output_path, index=False)
     
-    print(f"\n✅ Complete!")
+    print(f"\nComplete!")
     print(f"   Records: {len(df)}")
     print(f"   Matched: {df['Is_Target_Match'].sum()}")
     print(f"   File: {output_path}")

@@ -45,9 +45,9 @@ def check_imports():
     for module_name, package_name in required_packages.items():
         try:
             __import__(module_name)
-            print(f"  {GREEN}✓{RESET} {package_name}")
+            print(f"  {GREEN}OK{RESET} {package_name}")
         except ImportError:
-            print(f"  {RED}✗{RESET} {package_name}")
+            print(f"  {RED}FAIL{RESET} {package_name}")
             missing.append(package_name)
     
     if missing:
@@ -78,9 +78,9 @@ def check_env():
         if value and value != f"your_{var.lower()}":
             # Mask key value
             masked = value[:8] + "..." + value[-4:] if len(value) > 12 else "***"
-            print(f"  {GREEN}✓{RESET} {var}: {masked}")
+            print(f"  {GREEN}OK{RESET} {var}: {masked}")
         else:
-            print(f"  {RED}✗{RESET} {var}: Not configured")
+            print(f"  {RED}FAIL{RESET} {var}: Not configured")
             missing.append(description)
     
     if missing:
@@ -129,18 +129,18 @@ def check_project_structure():
     for dir_path in required_dirs:
         path = Path(dir_path)
         if path.exists():
-            print(f"  {GREEN}✓{RESET} {dir_path}/")
+            print(f"  {GREEN}OK{RESET} {dir_path}/")
         else:
-            print(f"  {RED}✗{RESET} {dir_path}/")
+            print(f"  {RED}FAIL{RESET} {dir_path}/")
             missing_dirs.append(dir_path)
     
     missing_files = []
     for file_path in required_files:
         path = Path(file_path)
         if path.exists():
-            print(f"  {GREEN}✓{RESET} {file_path}")
+            print(f"  {GREEN}OK{RESET} {file_path}")
         else:
-            print(f"  {RED}✗{RESET} {file_path}")
+            print(f"  {RED}FAIL{RESET} {file_path}")
             missing_files.append(file_path)
     
     if missing_dirs or missing_files:
@@ -167,30 +167,30 @@ def test_agents():
         from src.utils.logger import setup_logger
         from src.utils.helpers import calculate_confidence_score
         
-        print(f"  {GREEN}✓{RESET} GoogleMapsAgent imported")
-        print(f"  {GREEN}✓{RESET} WaybackAgent imported")
-        print(f"  {GREEN}✓{RESET} GPTAnalyzer imported")
-        print(f"  {GREEN}✓{RESET} Logger imported")
-        print(f"  {GREEN}✓{RESET} Helpers imported")
+        print(f"  {GREEN}OK{RESET} GoogleMapsAgent imported")
+        print(f"  {GREEN}OK{RESET} WaybackAgent imported")
+        print(f"  {GREEN}OK{RESET} GPTAnalyzer imported")
+        print(f"  {GREEN}OK{RESET} Logger imported")
+        print(f"  {GREEN}OK{RESET} Helpers imported")
         
         # Test instantiation
         import os
         if os.getenv('GOOGLE_MAPS_API_KEY'):
             maps = GoogleMapsAgent()
-            print(f"  {GREEN}✓{RESET} GoogleMapsAgent initialized")
+            print(f"  {GREEN}OK{RESET} GoogleMapsAgent initialized")
         
         wayback = WaybackAgent()
-        print(f"  {GREEN}✓{RESET} WaybackAgent initialized")
+        print(f"  {GREEN}OK{RESET} WaybackAgent initialized")
         
         if os.getenv('OPENAI_API_KEY'):
             gpt = GPTAnalyzer()
-            print(f"  {GREEN}✓{RESET} GPTAnalyzer initialized")
+            print(f"  {GREEN}OK{RESET} GPTAnalyzer initialized")
         
         print(f"\n{GREEN}All agents working!{RESET}")
         return True
         
     except Exception as e:
-        print(f"  {RED}✗{RESET} Error: {str(e)}")
+        print(f"  {RED}FAIL{RESET} Error: {str(e)}")
         import traceback
         traceback.print_exc()
         return False
@@ -209,15 +209,15 @@ def test_wayback_sample():
         
         result = wayback.get_first_snapshot(test_url)
         if result:
-            print(f"  {GREEN}✓{RESET} First snapshot: {result['date'].year}")
-            print(f"  {GREEN}✓{RESET} Wayback API working!")
+            print(f"  {GREEN}OK{RESET} First snapshot: {result['date'].year}")
+            print(f"  {GREEN}OK{RESET} Wayback API working!")
             return True
         else:
-            print(f"  {YELLOW}⚠{RESET}  No snapshots found (API might be slow)")
+            print(f"  {YELLOW}WARN{RESET}  No snapshots found (API might be slow)")
             return True
             
     except Exception as e:
-        print(f"  {RED}✗{RESET} Error: {str(e)}")
+        print(f"  {RED}FAIL{RESET} Error: {str(e)}")
         return False
 
 def main():
@@ -240,7 +240,7 @@ def main():
     total = len(results)
     
     for name, status in results.items():
-        icon = f"{GREEN}✓{RESET}" if status else f"{RED}✗{RESET}"
+        icon = f"{GREEN}OK{RESET}" if status else f"{RED}FAIL{RESET}"
         print(f"  {icon} {name.title()}")
     
     print(f"\n{CYAN}{'─'*60}{RESET}")

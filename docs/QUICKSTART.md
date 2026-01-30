@@ -137,7 +137,7 @@ Iterate through 9 Minneapolis ZIP codes × search term
 → Grid-based nearby search (optional) → Deduplicate results → Generate unique place_id list
 ```
 
-Note: Google Places API returns a limited review sample. The pipeline preserves total review counts from Google (`google_reviews_total`) and enriches review signals with Yelp Fusion API when available.
+Note: Google Places API returns a limited review sample. The pipeline preserves total review counts from Google (`google_reviews_total`).
 
 ### Step 2: Data Collection and Analysis
 For each location:
