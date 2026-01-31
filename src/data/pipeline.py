@@ -5,6 +5,7 @@ End-to-end data processing: load NETS -> enrich with multi-source data -> output
 
 import pandas as pd
 import geopandas as gpd
+import numpy as np
 from pathlib import Path
 from datetime import datetime
 import logging

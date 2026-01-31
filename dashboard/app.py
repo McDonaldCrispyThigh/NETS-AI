@@ -294,12 +294,43 @@ def show_data_table(df: pd.DataFrame):
     )
 
 
+def show_about():
+    """Show about and instructions"""
+    with st.expander("About this Dashboard", expanded=False):
+        st.markdown("""
+        ## NETS Business Data Enhancement System
+        
+        This dashboard provides an interactive view of the enhanced NETS business database for Minneapolis,
+        focusing on Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 446110).
+        
+        ### Key Features:
+        - **Employee Estimation**: Multi-signal Bayesian ensemble combining LinkedIn, reviews, building area, and job postings
+        - **Survival Detection**: 4-signal scoring for business operational status and closure probability
+        - **Confidence Intervals**: 95% confidence bounds on all estimates
+        - **Data Quality Scoring**: 0-100 metric based on data completeness, diversity, and estimate confidence
+        - **Geographic Visualization**: Heatmaps and interactive maps of Minneapolis
+        
+        ### How to Use:
+        1. **Filter Data**: Use sidebar filters to focus on specific industries, business status, or employee ranges
+        2. **Explore Maps**: View geographic distribution of establishments and their attributes
+        3. **Analyze Distributions**: See patterns in employee counts and survival probabilities
+        4. **Download Results**: Export filtered data as CSV for further analysis
+        
+        ### Data Sources:
+        - NETS establishment database (company name, location, industry)
+        - LinkedIn company profiles (employee counts - optional)
+        - Business reviews (review velocity, recency)
+        - Job postings (hiring intensity - optional)
+        - OpenStreetMap (building information - optional)
+        """)
+
+
 def main():
     """Main Streamlit app"""
-    st.title("NETS Minneapolis Business Data Dashboard")
+    st.title("🏢 NETS Minneapolis Business Data Dashboard")
     st.markdown("""
-    Interactive exploration of optimized NETS business database for Minneapolis.
-    Combines employee count estimation with business survival detection.
+    Enhanced NETS database with AI-driven employee estimation and business survival detection.
+    Data for Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 446110).
     """)
     
     # Load data
@@ -318,6 +349,9 @@ def main():
     
     # Statistics
     show_statistics(filtered_df)
+    
+    # Show about/instructions
+    show_about()
     
     # Tabs for different views
     tab1, tab2, tab3, tab4, tab5 = st.tabs([

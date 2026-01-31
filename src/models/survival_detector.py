@@ -117,11 +117,19 @@ class SurvivalDetector:
         Returns:
             Tuple of (days_since_review, is_recent_bool)
         """
-        if not last_review_date:
+        # Handle None and NaN cases
+        if last_review_date is None or (isinstance(last_review_date, float) and np.isnan(last_review_date)):
+            return None, False
+        
+        if isinstance(last_review_date, str) and last_review_date.lower() in ['nan', 'none', '']:
             return None, False
         
         try:
-            review_date = pd.to_datetime(last_review_date).date()
+            review_date = pd.to_datetime(last_review_date)
+            if pd.isna(review_date):
+                return None, False
+            
+            review_date = review_date.date()
             today = datetime.now().date()
             days_since = (today - review_date).days
             
@@ -129,7 +137,7 @@ class SurvivalDetector:
             
             return days_since, is_recent
         except Exception as e:
-            self.logger.warning(f"Error parsing review date {last_review_date}: {e}")
+            self.logger.debug(f"Error parsing review date {last_review_date}: {e}")
             return None, False
     
     def evaluate_job_posting_activity(
