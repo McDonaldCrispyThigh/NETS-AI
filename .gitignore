@@ -28,6 +28,8 @@ env/
 
 # Environment Variables
 .env
+.linkedin_session.json
+*_session.json
 
 # Data Files (raw data is large)
 data/raw/**
@@ -61,6 +63,6 @@ structure.html
 
 # Copilot context files (not for repository)
 .copilot/
-.github/copilot-instructions.md
+.github/
 chat-*.txt
 *Prompt*.txt
