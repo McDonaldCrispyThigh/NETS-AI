@@ -61,8 +61,10 @@ logs/
 *.bak
 structure.html
 
-# Copilot context files (not for repository)
+# Development configuration
 .copilot/
 .github/
+
+# Session and temporary files
 chat-*.txt
 *Prompt*.txt
