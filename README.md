@@ -4,34 +4,58 @@
 **Project Goal**: Develop an end-to-end pipeline to optimize the NETS business database by integrating multi-source data for employee count estimation and business survival probability prediction.
 
 **Geographic Scope**: Minneapolis, Minnesota (Census Tract boundaries) 
-**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies) 
-**Target Sample Size**: 500-1000 establishments (MVP scale) 
-**Timeline**: Phase 1 Complete - January 2026
+**Industry Focus**: 
+- **Primary**: NAICS 722513 (Limited-Service Restaurants / Quick Service / Fast Food)
+- **Secondary**: NAICS 446110 (Pharmacies and Drug Stores)
+- **Note**: Coffee shops (NAICS 722515) and gyms (NAICS 713940) excluded from MVP scope
+
+**Target Sample Size**: 500-1000 establishments (MVP baseline) 
+**Implementation Status**: Phase 4 (Model Development) - January 2026
+
+**Pipeline Execution Stages**:
+- [x] Phase 0: Environment setup and NETS database ingestion
+- [x] Phase 1: Multi-source data collection (Outscraper API, LinkedIn scraping)
+- [x] Phase 2: Address parsing and coordinate standardization (EPSG:4326)
+- [x] Phase 3: Feature engineering (review decay rates, hiring activity metrics)
+- [x] Phase 4: Employee regression and survival classification models
+- [ ] Phase 5: Signal fusion and Parquet database export
+- [ ] Phase 6: Health equity validation (food desert and pharmacy access analysis)
 
 ---
 
 ## Quick Start
 
+> **CRITICAL**: This pipeline REQUIRES a NETS database snapshot as primary input. 
+> External data sources (Google Maps, LinkedIn) supplement but do NOT replace NETS records.
+> See `scripts/generate_sample_data.py` for required CSV schema.
+
 ```powershell
 # 1. Activate virtual environment
 .\AIAGENTNETS\Scripts\Activate.ps1
 
-# 2. Validate environment
-python scripts/validate_environment.py
+# 2. Check NETS data requirements and schema
+python scripts/generate_sample_data.py
 
-# 3. Test execution (2 businesses, skip GPT for speed)
-python scripts/03_complete_pipeline.py --limit 2 --skip-gpt
+# 3. Prepare your NETS CSV data (REQUIRED)
+# Test data (5-20 records): tests/fixtures/nets_test_data.csv
+# Production data: data/raw/nets_minneapolis_full.csv
 
-# 4. Full collection with GPT analysis
-python scripts/03_complete_pipeline.py --task coffee --limit 50
+# 4. Run pipeline in test mode
+python scripts/run_pipeline.py --test
 
-# 5. View results
-# CSV: data/processed/ai_bdd_Minneapolis_coffee_*.csv
-# Reviews: data/reviews/[place_id]_reviews.json
+# 5. Run with skip options for faster testing
+python scripts/run_pipeline.py --test --skip employees survival
+
+# 6. Production run with your data
+python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv
+
+# 7. View results in dashboard
+streamlit run dashboard/app.py
 ```
 
 **Documentation**:
 - [Quick Start Guide](docs/QUICKSTART.md)
+- [Testing Guide](docs/TESTING.md)
 - [API Cost Analysis](docs/api_costs_breakdown.md)
 - [System Reference](docs/SYSTEM_REFERENCE.md)
 - [Implementation Status](docs/IMPLEMENTATION_STATUS.md)
@@ -60,6 +84,13 @@ Generate cleaned, enriched Parquet database suitable for urban planning and econ
 - **Records**: Original NETS fields + optimized employee estimates + confidence intervals + survival probability
 - **Geographic Accuracy**: Address parsing (usaddress library) + coordinate clustering + haversine distance validation
 - **Quality Assurance**: All fields validated before export
+
+### 4. Health Equity Validation (MVP Requirement)
+Demonstrate impact on public health metrics using optimized NETS data:
+- **Food Environment Index**: Compare tract-level fast food density (original NETS vs. survival-weighted counts) in low-income Census Tracts
+- **Pharmacy Desert Analysis**: Identify tracts with <1 pharmacy per 10,000 residents using probability-weighted operational counts
+- **Zombie Lag Reduction**: Quantify improvement in closure detection accuracy (original NETS typically 12-24 month lag)
+- **Validation**: Ground truth comparison with manual field surveys of 100 randomly sampled establishments
 
 ---
 
@@ -115,7 +146,9 @@ Model Development
  [_][-] Soft signals: review data + CV metrics, weighted by recency
 
 Output Generation
-[|][-] Parquet Database:
+[|][-] Parquet Database (PRIMARY OUTPUT):
+ [|][-] Path: data/processed/nets_ai_minneapolis.parquet
+ [|][-] Advantages: 3-5x smaller than CSV, preserves geospatial types, GeoDataFrame compatible
  [|][-] Original NETS columns (preserved)
  [|][-] employees_optimized: point estimate
  [|][-] employees_ci_lower/upper: 95% confidence bounds
@@ -127,7 +160,7 @@ Output Generation
  [|][-] Folium heat maps (by census tract)
  [|][-] Temporal series (Altair): employee trends by NAICS
  [|][-] Anomaly detection: outlier establishments
- [_][-] Export tools: filtered CSV download
+ [_][-] Export tools: CSV fallback download for Excel compatibility
 ```
 
 ---
@@ -159,9 +192,9 @@ Output Generation
 ## Repository Structure
 
 ```text
-AI-BDD/
+NETS-Enhancement/
 [|][-][-] README.md # This file
-[|][-][-] requirements.txt # Python dependencies (outscraper, playwright, googlemaps, etc.)
+[|][-][-] requirements.txt # Python dependencies
 [|][-][-] .env # API keys (git-ignored, see .env.example)
 [|][-][-] .gitignore # Git exclusion rules
 [|][-][-] LICENSE # MIT License
@@ -171,37 +204,45 @@ AI-BDD/
  [|][-][-] 02_minneapolis_pilot.ipynb
  [_][-][-] 03_statistical_validation.ipynb
 [|][-][-] src/
- [|][-][-] config.py # City configs + service category baselines
+ [|][-][-] config.py # Configuration settings
  [|][-][-] agents/
- [|][-][-] google_maps_agent.py # Adaptive grid search (recursive subdivision)
- [|][-][-] outscraper_agent.py # Unlimited review collection + timeseries extraction
- [|][-][-] linkedin_scraper_improved.py # 90-sec timeout LinkedIn scraper
- [|][-][-] wayback_agent.py # Internet Archive first/last snapshot
- [_][-][-] gpt_analyzer.py # GPT-4o-mini with full review context
+  [|][-][-] google_maps_agent.py # Adaptive grid search
+  [|][-][-] outscraper_agent.py # Review collection
+  [|][-][-] linkedin_scraper.py # LinkedIn data scraper
+  [|][-][-] wayback_agent.py # Internet Archive
+  [_][-][-] gpt_analyzer.py # GPT analysis
  [|][-][-] data/
- [|][-][-] sos_loader.py # MN Secretary of State registry
- [|][-][-] external_signals.py # LinkedIn/Jobs/Popular Times (optional)
- [_][-][-] validator.py # Output validation
+  [|][-][-] nets_loader.py # NETS data loading
+  [|][-][-] pipeline.py # Main data pipeline
+  [|][-][-] external_signals.py # External data sources
+  [_][-][-] validator.py # Output validation
  [|][-][-] models/
- [_][-][-] employee_estimator.py # Multi-signal + service-category logic
+  [|][-][-] bayesian_employee_estimator.py # Employee estimation
+  [|][-][-] survival_detector.py # Business survival detection
+  [_][-][-] employee_estimator.py # Multi-signal estimation
  [_][-][-] utils/
- [|][-][-] logger.py
- [_][-][-] helpers.py
+  [|][-][-] logger.py
+  [_][-][-] helpers.py
 [|][-][-] data/
- [|][-][-] raw/ # Input data (git-ignored)
- [|][-][-] processed/ # CSV outputs (ai_bdd_*.csv)
- [|][-][-] reviews/ # JSON review timeseries ([place_id]_reviews.json)
- [_][-][-] outputs/ # Figures for paper
+ [|][-][-] raw/ # Your NETS CSV files go here
+ [|][-][-] processed/ # Pipeline outputs
+ [|][-][-] reviews/ # JSON review timeseries
+ [_][-][-] outputs/ # Analysis figures
 [|][-][-] scripts/
- [|][-][-] 01_export_nets_snapshot.py
- [|][-][-] 02_run_minneapolis_pilot.py
- [|][-][-] 03_complete_pipeline.py # Main data collection script
- [_][-][-] 03_generate_paper_figures.py
+ [|][-][-] generate_sample_data.py # Data requirements documentation
+ [|][-][-] run_pipeline.py # Main pipeline runner
+ [|][-][-] quickstart.py # Automated setup
+ [_][-][-] validate_environment.py # Environment checker
 [|][-][-] tests/
+ [|][-][-] fixtures/ # Test data goes here
  [|][-][-] test_agents.py
  [_][-][-] test_validator.py
+[|][-][-] dashboard/
+ [_][-][-] app.py # Streamlit visualization dashboard
 [_][-][-] docs/
  [|][-][-] QUICKSTART.md
+ [|][-][-] TESTING.md
+ [|][-][-] USAGE.md
  [|][-][-] IMPLEMENTATION_STATUS.md
  [|][-][-] api_costs_breakdown.md
  [_][-][-] SYSTEM_REFERENCE.md
@@ -212,9 +253,10 @@ AI-BDD/
 ## Quick Start Guide
 
 ### Prerequisites
-- **Python 3.14.2** (current AIAGENTNETS venv version)
+- **Python 3.10-3.11** (PyMC3 compatible; current venv uses 3.11)
 - **Git** for version control
 - **Windows PowerShell 5.1+**
+- **NETS Database Snapshot** (REQUIRED - see Data Requirements section below)
 - **API Keys**:
  - OpenAI API (GPT-4o-mini for business analysis)
  - Google Maps API (Places + Geocoding)
@@ -225,7 +267,7 @@ AI-BDD/
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/YourUsername/NETS-AI.git
+git clone https://github.com/McDonaldCrispyThigh/NETS-AI.git
 cd NETS-AI
 
 # 2. Activate existing virtual environment
@@ -234,8 +276,12 @@ cd NETS-AI
 # 3. Install/update dependencies (if needed)
 pip install -r requirements.txt
 
-# 4. Set up environment configuration
-# Create .env file with your API keys (see Configuration section below)
+# 4. Check data requirements
+python scripts/generate_sample_data.py
+
+# 5. Prepare your NETS data files
+# - Test data: tests/fixtures/nets_test_data.csv (5-20 records)
+# - Production: data/raw/nets_minneapolis_full.csv (full dataset)
 ```
 
 ### Configuration
@@ -260,115 +306,239 @@ DATA_PATH=./data
 LOG_LEVEL=INFO
 ```
 
-### Run Minneapolis Coffee Shop Pilot
+### Run Data Enhancement Pipeline
 
 ```powershell
-# Test with 2 businesses (fast, skips GPT analysis)
-python scripts/03_complete_pipeline.py --limit 2 --skip-wayback --skip-gpt
+# Test mode with minimal data
+python scripts/run_pipeline.py --test
 
-# Small batch with full analysis
-python scripts/03_complete_pipeline.py --limit 10
+# Test mode with verbose output
+python scripts/run_pipeline.py --test --verbose --validate
 
-# Full Minneapolis coffee shops (all ZIP codes)
-python scripts/03_complete_pipeline.py --task coffee
+# Skip expensive operations for quick testing
+python scripts/run_pipeline.py --test --skip employees survival
+
+# Production run with your NETS data
+python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv
+
+# Production with validation
+python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv --validate
+
+# Skip external API calls in production
+python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv --skip gpt wayback linkedin
 
 # Results:
-# - CSV: data/processed/ai_bdd_Minneapolis_coffee_YYYYMMDD_HHMMSS.csv
-# - Reviews: data/reviews/[place_id]_reviews.json (one file per business)
-# - Logs: logs/AI-BDD-Pipeline.log
+# - Test output: data/processed/nets_test_output.parquet
+# - Production: data/processed/nets_ai_minneapolis.parquet
+# - Logs: logs/pipeline.log
+```
+
+### Command Line Options
+
+**Pipeline Runner** (`scripts/run_pipeline.py`):
+- `--test` - Run in test mode with minimal data
+- `--input PATH` - Path to your NETS CSV file (required for production)
+- `--skip OPERATIONS` - Skip specific operations: `employees`, `survival`, `gpt`, `wayback`, `linkedin`, `gmaps`
+- `--validate` - Run data quality validation
+- `--verbose` - Enable detailed logging
+- `--naics CODES` - Target specific NAICS codes (default: 722513 446110)
+- `--sample-size N` - Limit processing to N records for testing
+
+**Examples**:
+```bash
+# Quick test without ML models
+python scripts/run_pipeline.py --test --skip employees survival
+
+# Process specific NAICS codes only
+python scripts/run_pipeline.py --input data.csv --naics 722513 541511
+
+# Sample 100 records for testing
+python scripts/run_pipeline.py --input data.csv --sample-size 100
 ```
 
 ### Output Structure
 
-**CSV Columns** (43 fields):
-- Basic: `name`, `address`, `phone`, `website`, `google_url`, `latitude`, `longitude`
-- Reviews: `oldest_review_date`, `latest_review_date`, `total_reviews_collected`, `reviews_per_month`
-- Wayback: `wayback_first_snapshot`, `wayback_last_snapshot`, `wayback_snapshot_count`
-- Employees: `employee_estimate`, `employee_estimate_min`, `employee_estimate_max`, `employee_estimate_methods`
-- AI Analysis: `ai_status`, `ai_status_confidence`, `ai_employees_estimate`
+**Parquet Output** (`data/processed/nets_test_output.parquet` or `nets_ai_minneapolis.parquet`):
 
-**Review JSON** (`data/reviews/ChIJxxx_reviews.json`):
-```json
-{
- "place_id": "ChIJxxx",
- "name": "Business Name",
- "collection_date": "2026-01-29T19:33:13",
- "reviews": [
- {
- "review_timestamp": 1528145483,
- "review_datetime_utc": "2018-06-04T20:51:23",
- "review_text": "Great service...",
- "review_rating": 5,
- "review_likes": 0
- }
- ],
- "statistics": {
- "oldest_review_date": "2018-06-04",
- "latest_review_date": "2025-12-24",
- "total_reviews": 400,
- "reviews_per_month": 5.2
- }
-}
+Core columns (42 fields):
+- **Identifiers**: `duns_id`, `company_name`, `place_id`
+- **Location**: `latitude`, `longitude`, `street_address`, `city`, `state`, `zip_code`
+- **Classification**: `naics_code`, `naics_title`, `sic_code`
+- **Temporal**: `year_established`, `year_closed`
+- **Employee Estimates**: 
+  - `employee_count_raw` - Original NETS data
+  - `employees_optimized` - Enhanced estimate with confidence intervals
+  - `employees_lower_ci` / `employees_upper_ci` - 95% confidence bounds
+- **Survival Detection**:
+  - `is_active_prob` - Survival probability (0-1)
+  - `confidence_level` - high/medium/low
+- **Data Quality**: `data_quality_score` (0-100 composite metric)
+- **Enrichment**: LinkedIn employee counts, review statistics, job posting data
+
+**Data Requirements** (`scripts/generate_sample_data.py` shows complete schema):
+
+Required columns in your NETS CSV:
+```
+duns_id, company_name, naics_code, naics_title, 
+latitude, longitude, street_address, city, state, zip_code
+```
+
+Optional columns:
+```
+phone, website, year_established, year_closed, 
+employee_count_raw, sic_code
 ```
 
 ---
 
 ## Pipeline Architecture
 
-### Stage 1: Adaptive Grid Search
+### Main Processing Pipeline
+
 ```
-ZIP Code Geocode Center 33 Grid Search Each Cell
- 
- 55 results? Subdivide into 4 quadrants (recursive)
- 
- <55 results Deduplicate by place_id Next cell
+NETS CSV Input
+  |
+  v
+Phase 1: Data Loading & Filtering
+  - Load NETS database
+  - Filter by NAICS codes (722513, 446110)
+  - Filter by Minneapolis ZIP codes
+  - Filter active establishments
+  |
+  v
+Phase 2: Geospatial Processing
+  - Create GeoDataFrame (EPSG:4326)
+  - Validate coordinates
+  - Spatial clustering
+  |
+  v
+Phase 3: Employee Estimation (optional, --skip employees)
+  - Bayesian hierarchical model
+  - Multi-signal integration (LinkedIn, reviews, building area)
+  - Bootstrap confidence intervals
+  |
+  v
+Phase 4: Survival Detection (optional, --skip survival)
+  - Review decay analysis
+  - Job posting activity
+  - Random forest classification
+  - Probability scoring (0-1)
+  |
+  v
+Phase 5: Quality Scoring
+  - Data completeness metrics
+  - Signal confidence weighting
+  - Composite quality score (0-100)
+  |
+  v
+Phase 6: Parquet Export
+  - Optimized columnar format
+  - Compressed storage
+  - Schema validation
+  |
+  v
+Output: Enhanced Parquet Database
 ```
 
-### Stage 2: Full Data Collection (per business)
-```
-Place ID Google Maps Details Outscraper Reviews (unlimited)
- 
- Save to data/reviews/[place_id]_reviews.json
- 
- Extract statistics CSV
-```
+### Flexible Execution Modes
 
-### Stage 3: AI Analysis (optional, --skip-gpt to disable)
-```
-Load full reviews GPT-4o-mini analyzes:
- - Business status (Active/Inactive/Uncertain)
- - Employee estimate (review density + staff mentions)
- - NAICS verification (menu/service evolution)
-```
+**Test Mode** (`--test`):
+- Uses small test dataset (5-20 records)
+- Fast execution (< 30 seconds)
+- Validates workflow without production data
+- Output: `data/processed/nets_test_output.parquet`
 
-### Stage 4: Employee Estimation (batch processing)
-```
-Calculate industry baseline (avg reviews/month)
-For each business:
- - Service category? Review density + Popular Times only
- - Other category? LinkedIn + Job postings + Building area + Review density + Popular Times + SOS partners
- Average valid signals employee_estimate
-```
+**Production Mode** (default):
+- Processes full NETS CSV
+- All enhancement features
+- Requires `--input` parameter
+- Output: `data/processed/nets_ai_minneapolis.parquet`
+
+**Skip Options** (`--skip`):
+- `employees` - Skip ML-based employee estimation
+- `survival` - Skip business survival detection
+- `gpt` - Skip GPT analysis (future feature)
+- `wayback` - Skip Wayback Machine validation
+- `linkedin` - Skip LinkedIn data collection
+- `gmaps` - Skip Google Maps enrichment
 
 ---
 
-## Data Sources & API Costs
+## Data Requirements
 
-| Data Source | Purpose | Cost | Coverage |
-|------------|---------|------|----------|
-| **Google Maps Places API** | Initial search + place details | $0.032/place | All categories |
-| **Outscraper** | Unlimited reviews (0=all) | $0.001/place | 97% cheaper than Google |
-| **Wayback Machine CDX API** | Historical validation (free) | $0 | 800B+ snapshots |
-| **OpenAI GPT-4o-mini** | Business status + employee AI analysis | $0.150/1M input tokens | All text |
-| **LinkedIn (optional)** | Employee count validation | $0 (scraping) | Limited coverage |
+### Input Data Format
 
-**Minneapolis Coffee Shop Pilot Cost** (250 businesses):
-- Google Maps: $8.00
-- Outscraper reviews: $0.25
-- GPT-4o-mini: $2.50
-- **Total: ~$11 per 250 businesses**
+Your NETS CSV file must include these columns:
 
-Compare to NETS: $50,000+/year for national coverage
+**Required Fields**:
+```
+duns_id              - Unique business identifier
+company_name         - Business name
+naics_code           - 6-digit NAICS code (e.g., "722513")
+naics_title          - NAICS description
+latitude             - GPS latitude
+longitude            - GPS longitude
+street_address       - Street address
+city                 - City name
+state                - 2-letter state code (e.g., "MN")
+zip_code             - 5-digit ZIP code
+```
+
+**Optional Fields** (enhance estimation quality):
+```
+phone                - Phone number
+website              - Website URL
+year_established     - Year business was established
+year_closed          - Year business closed (null if active)
+employee_count_raw   - Raw employee count from NETS
+sic_code             - SIC code
+```
+
+**Optional Enrichment Columns** (if available):
+```
+linkedin_employee_count   - Employee count from LinkedIn
+review_count_3m           - Recent reviews (last 3 months)
+review_count_6_12m        - Historical reviews (6-12 months ago)
+last_review_date          - Most recent review date
+job_postings_6m           - Recent job postings
+estimated_area_sqm        - Building area in square meters
+```
+
+### Data File Locations
+
+Run `python scripts/generate_sample_data.py` to see detailed requirements.
+
+**Production Data**:
+```
+data/raw/nets_minneapolis_full.csv
+```
+- Full NETS dataset
+- Expected: Thousands of records
+- For actual analysis
+
+**Test Data**:
+```
+tests/fixtures/nets_test_data.csv
+```
+- Small test subset
+- Recommended: 5-20 records
+- For quick workflow validation
+
+### Target Industries
+
+Current pipeline is optimized for:
+- **NAICS 722513**: Limited-Service Restaurants (Quick Service)
+- **NAICS 446110**: Pharmacies and Drug Stores
+
+Custom NAICS codes can be specified with `--naics` parameter.
+
+### Geographic Focus
+
+**Minneapolis, Minnesota**:
+- Target ZIP codes: 55401-55415
+- Census tract boundaries
+- Coordinate validation within city bounds
+- Haversine distance <50m for matching
 
 ---
 
@@ -431,26 +601,30 @@ else:
 
 ## Current Implementation Status
 
-[OK] **Completed**:
-- Adaptive grid search with recursive subdivision (100% coverage)
-- Outscraper unlimited review collection (`reviews_limit=0`)
-- Review timeseries storage (separate JSON files)
-- GPT-4o-mini full review analysis (all reviews, not just 5)
-- Service-category employee estimation (review density + Popular Times)
-- Wayback Machine historical validation
-- Multi-signal employee estimator with confidence intervals
-- Pipeline CSV output with 43 fields
+**Completed Features**:
+- NETS data loading and filtering
+- Geospatial processing with GeoDataFrame
+- Bayesian employee estimation with confidence intervals
+- Business survival detection (Random Forest)
+- Multi-signal data integration
+- Data quality scoring
+- Parquet export with schema validation
+- Test mode and skip options
+- Command-line interface with flexible parameters
+- Comprehensive documentation
 
- **In Progress**:
-- Minneapolis full pilot (coffee shops + gyms)
-- Consistency validation (3 run comparison)
-- NETS snapshot export for direct comparison
+**In Progress**:
+- Minneapolis full dataset processing
+- External API integrations (LinkedIn, Google Maps)
+- Dashboard visualization enhancements
+- Statistical validation notebooks
 
-[LIST] **Planned**:
-- Computer Vision: Street View storefront size estimation
-- OSM POI cross-validation
-- Statistical validation notebooks (Gini, ROC curves)
-- Paper figures generation script
+**Planned Features**:
+- Computer Vision: Street View analysis
+- OSM building footprint integration
+- Additional NAICS code support
+- Automated model retraining pipeline
+- Real-time data updates
 
 ---
 
@@ -458,21 +632,49 @@ else:
 
 ### Common Issues
 
-**"Outscraper reviews error"**
-- Ensure `OUTSCRAPER_API_KEY` is set in `.env`
-- Falls back to Google Maps API (only 5 reviews) if Outscraper unavailable
+**"Test data not found"**
+```bash
+# Solution: Create test CSV file
+python scripts/generate_sample_data.py  # Shows requirements
+# Place your test CSV at: tests/fixtures/nets_test_data.csv
+```
 
-**"LinkedIn scraper timeout"**
-- Increase timeout in `linkedin_scraper_improved.py` (currently 90 seconds)
-- Requires valid session file or will skip LinkedIn data
+**"Input file required"**
+```bash
+# Solution: Use --test for testing or provide --input for production
+python scripts/run_pipeline.py --test
+# OR
+python scripts/run_pipeline.py --input data/raw/your_file.csv
+```
 
-**"Grid search returns <60 results but incomplete"**
-- Google Maps API may have regional coverage gaps
-- Cross-validate with OpenStreetMap for completeness
+**"Missing required columns"**
+```bash
+# Solution: Check your CSV has all required columns
+python scripts/generate_sample_data.py  # Shows required schema
+```
 
-**"CSV formatting issues"**
-- Review timeseries now stored separately (not in CSV)
-- Check `data/reviews/` for individual JSON files
+**"Pipeline too slow"**
+```bash
+# Solution: Skip expensive operations
+python scripts/run_pipeline.py --test --skip employees survival
+# OR limit sample size
+python scripts/run_pipeline.py --input data.csv --sample-size 100
+```
+
+**"Environment errors"**
+```bash
+# Solution: Validate environment
+python scripts/validate_environment.py
+# Reinstall dependencies if needed
+pip install -r requirements.txt
+```
+
+### Getting Help
+
+1. Check documentation in `docs/` folder
+2. Run with `--verbose` flag for detailed logs
+3. Review logs in `logs/` directory
+4. Open GitHub issue with error details
 
 ---
 
@@ -495,7 +697,7 @@ MIT License - see LICENSE file for details
 
 ---
 
-**Documentation Version**: Jan 29, 2026 
-**Maintainer**: Congyuan (CU Boulder) 
-**Contact**: [Your Email/GitHub Issues]
+**Documentation Version**: Jan 30, 2026 
+**Repository**: https://github.com/McDonaldCrispyThigh/NETS-AI
+**License**: MIT - see LICENSE file for details
 
