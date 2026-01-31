@@ -1,0 +1,6 @@
+duns_id,company_name,naics_code,naics_title,latitude,longitude,street_address,city,state,zip_code,year_established,year_closed,emp_here
+100000001,Test McDonalds Downtown,722513,Limited-Service Restaurants,44.9778,-93.2650,100 Nicollet Mall,Minneapolis,MN,55401,2005,,15
+100000002,Test Walgreens Uptown,446110,Pharmacies and Drug Stores,44.9480,-93.2980,3001 Hennepin Ave,Minneapolis,MN,55408,2010,,8
+100000003,Test Subway University,722513,Limited-Service Restaurants,44.9745,-93.2323,421 Washington Ave SE,Minneapolis,MN,55414,2012,,6
+100000004,Test CVS Pharmacy Downtown,446110,Pharmacies and Drug Stores,44.9765,-93.2700,801 Marquette Ave,Minneapolis,MN,55402,2008,,12
+100000005,Test Chipotle North Loop,722513,Limited-Service Restaurants,44.9850,-93.2720,212 N Washington Ave,Minneapolis,MN,55401,2015,,10

@@ -1,5 +1,5 @@
 """
-Logging configuration for AI-BDD
+Logging configuration for NETS Enhancement System
 """
 
 import logging
@@ -8,7 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-def setup_logger(name: str = "AI-BDD", level: str = None, log_file: bool = True) -> logging.Logger:
+def setup_logger(name: str = "NETS-Enhancement", level: str = None, log_file: bool = True) -> logging.Logger:
     """
     Setup centralized logger
     

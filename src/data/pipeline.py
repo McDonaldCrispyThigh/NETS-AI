@@ -337,7 +337,7 @@ class NETSDataPipeline:
         
         # Add export metadata
         output_df['data_export_date'] = datetime.now().isoformat()
-        output_df['data_export_source'] = 'NETS AI Enhancement Pipeline v1.0'
+        output_df['data_export_source'] = 'NETS Enhancement Pipeline v1.0'
         
         self.logger.info(f"Parquet output prepared: {len(output_df)} records, {len(output_df.columns)} columns")
         return output_df
