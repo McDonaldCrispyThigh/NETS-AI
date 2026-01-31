@@ -17,7 +17,7 @@ This document provides a detailed cost comparison between AI-BDD and the NETS da
 
 **Places Text Search**
 - Unit cost: $0.032 per query
-- Typical use: 9 ZIP codes × 1 category = 9 queries
+- Typical use: 9 ZIP codes 1 category = 9 queries
 - Cost per category: $0.288
 
 **Place Details**
@@ -64,7 +64,7 @@ This document provides a detailed cost comparison between AI-BDD and the NETS da
 - Estimated places: ~690
 - Total: ~$15
 
-### 10 Cities × 7 Categories
+### 10 Cities 7 Categories
 - Estimated places: ~6,900
 - Total: ~$150 per collection cycle
 
@@ -83,16 +83,16 @@ This document provides a detailed cost comparison between AI-BDD and the NETS da
 ## Cost Optimization Strategies
 
 1. **Stage execution**
-   - Run Google Maps only
-   - Add Wayback validation
-   - Run GPT analysis only for high-value records
+ - Run Google Maps only
+ - Add Wayback validation
+ - Run GPT analysis only for high-value records
 
 2. **Limit processing**
-   - Use `--limit` for testing
-   - Target specific ZIP codes
+ - Use `--limit` for testing
+ - Target specific ZIP codes
 
 3. **Batch scheduling**
-   - Monthly or quarterly runs to balance cost and timeliness
+ - Monthly or quarterly runs to balance cost and timeliness
 
 ## References
 - Crane & Decker (2019): NETS imputation and closure lag critique

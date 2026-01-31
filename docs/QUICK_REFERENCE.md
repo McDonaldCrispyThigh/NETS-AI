@@ -14,26 +14,26 @@ Essential commands and workflow for data processing pipeline
 ## Directory Structure
 ```
 NETS-AI/
-├── src/
-│   ├── config.py                    # Configuration + baselines
-│   ├── data/
-│   │   ├── nets_loader.py          # Load + filter NETS data
-│   │   └── pipeline.py              # Main orchestration
-│   ├── models/
-│   │   ├── bayesian_employee_estimator.py  # Employee modeling
-│   │   └── survival_detector.py    # Survival prediction
-│   └── utils/
-│       └── logger.py                # Logging utilities
-├── data/
-│   ├── raw/                         # Input NETS CSV
-│   ├── external/                    # LinkedIn, Outscraper, Indeed, OSM
-│   └── processed/                   # Output Parquet files
-├── dashboard/
-│   └── app.py                       # Streamlit dashboard
-├── docs/
-│   ├── ARCHITECTURE.md              # Complete system design
-│   └── QUICKSTART.md                # Getting started guide
-└── requirements.txt                 # Python dependencies
+[|][-][-] src/
+ [|][-][-] config.py # Configuration + baselines
+ [|][-][-] data/
+ [|][-][-] nets_loader.py # Load + filter NETS data
+ [_][-][-] pipeline.py # Main orchestration
+ [|][-][-] models/
+ [|][-][-] bayesian_employee_estimator.py # Employee modeling
+ [_][-][-] survival_detector.py # Survival prediction
+ [_][-][-] utils/
+ [_][-][-] logger.py # Logging utilities
+[|][-][-] data/
+ [|][-][-] raw/ # Input NETS CSV
+ [|][-][-] external/ # LinkedIn, Outscraper, Indeed, OSM
+ [_][-][-] processed/ # Output Parquet files
+[|][-][-] dashboard/
+ [_][-][-] app.py # Streamlit dashboard
+[|][-][-] docs/
+ [|][-][-] ARCHITECTURE.md # Complete system design
+ [_][-][-] QUICKSTART.md # Getting started guide
+[_][-][-] requirements.txt # Python dependencies
 ```
 
 ## Installation (First Time)
@@ -56,19 +56,19 @@ Place the following files in `data/raw/` or `data/external/`:
 
 ```
 data/raw/
-├── nets_minneapolis.csv           # NETS establishment data (required)
-                                   # Expected columns: duns_id, company_name, 
-                                   # latitude, longitude, naics_code, zip_code
+[|][-][-] nets_minneapolis.csv # NETS establishment data (required)
+ # Expected columns: duns_id, company_name, 
+ # latitude, longitude, naics_code, zip_code
 
 data/external/
-├── linkedin_headcount.csv          # LinkedIn employee counts (optional)
-│   Columns: duns_id, linkedin_headcount, linkedin_url
-├── outscraper_reviews.csv          # Google reviews timeseries (optional)
-│   Columns: duns_id, review_count_3m, review_count_6_12m, last_review_date
-├── indeed_postings.csv             # Job posting activity (optional)
-│   Columns: duns_id, job_postings_6m, job_postings_peak
-└── osm_building_footprints.csv    # Building areas (optional)
-    Columns: latitude, longitude, building_area_sqm
+[|][-][-] linkedin_headcount.csv # LinkedIn employee counts (optional)
+ Columns: duns_id, linkedin_headcount, linkedin_url
+[|][-][-] outscraper_reviews.csv # Google reviews timeseries (optional)
+ Columns: duns_id, review_count_3m, review_count_6_12m, last_review_date
+[|][-][-] indeed_postings.csv # Job posting activity (optional)
+ Columns: duns_id, job_postings_6m, job_postings_peak
+[_][-][-] osm_building_footprints.csv # Building areas (optional)
+ Columns: latitude, longitude, building_area_sqm
 ```
 
 ### Step 2: Validate NETS Input
@@ -92,16 +92,16 @@ print(validator.check_coordinates(df))
 from src.data.pipeline import NETSDataPipeline
 
 pipeline = NETSDataPipeline(
-    nets_csv_path='data/raw/nets_minneapolis.csv',
-    output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
+ nets_csv_path='data/raw/nets_minneapolis.csv',
+ output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
 )
 
 # Run with all optional data sources
 output_file = pipeline.run(
-    linkedin_data='data/external/linkedin_headcount.csv',
-    outscraper_data='data/external/outscraper_reviews.csv',
-    job_postings_data='data/external/indeed_postings.csv',
-    validate=True
+ linkedin_data='data/external/linkedin_headcount.csv',
+ outscraper_data='data/external/outscraper_reviews.csv',
+ job_postings_data='data/external/indeed_postings.csv',
+ validate=True
 )
 
 print(f"Output file: {output_file}")
@@ -127,7 +127,7 @@ gdf = pipeline.create_geodataframe()
 
 # Enrich with external data
 pipeline.enrich_with_external_sources(
-    linkedin_data_path='data/external/linkedin_headcount.csv'
+ linkedin_data_path='data/external/linkedin_headcount.csv'
 )
 
 # Run models
@@ -154,14 +154,14 @@ streamlit run dashboard/app.py
 Edit `src/config.py`:
 ```python
 INDUSTRY_CONFIG = {
-    "quick_service_restaurant": {
-        "naics_code": "722513",
-        ...
-    },
-    "pharmacy": {
-        "naics_code": "446110",
-        ...
-    }
+ "quick_service_restaurant": {
+ "naics_code": "722513",
+ ...
+ },
+ "pharmacy": {
+ "naics_code": "446110",
+ ...
+ }
 }
 ```
 
@@ -169,14 +169,14 @@ INDUSTRY_CONFIG = {
 Edit `src/config.py`:
 ```python
 EMPLOYEE_ESTIMATION_BASELINES = {
-    "722513": {  # Quick Service Restaurants
-        "employees_per_sqm": 0.025,
-        "avg_employees": 12,
-        "avg_store_size_sqm": 500,
-        "min_employees": 4,
-        "max_employees": 50
-    },
-    ...
+ "722513": { # Quick Service Restaurants
+ "employees_per_sqm": 0.025,
+ "avg_employees": 12,
+ "avg_store_size_sqm": 500,
+ "min_employees": 4,
+ "max_employees": 50
+ },
+ ...
 }
 ```
 
@@ -184,14 +184,14 @@ EMPLOYEE_ESTIMATION_BASELINES = {
 Edit `src/config.py`:
 ```python
 REVIEW_DECAY_WINDOW = {
-    "recent": 3,          # Recent period (months)
-    "historical": 12,     # Historical baseline (months)
-    "min_review_count": 3  # Minimum for decay calculation
+ "recent": 3, # Recent period (months)
+ "historical": 12, # Historical baseline (months)
+ "min_review_count": 3 # Minimum for decay calculation
 }
 
 GEOGRAPHIC_MATCH = {
-    "haversine_threshold_m": 50,     # Match distance threshold
-    "coordinate_cluster_radius_m": 20 # Clustering radius
+ "haversine_threshold_m": 50, # Match distance threshold
+ "coordinate_cluster_radius_m": 20 # Clustering radius
 }
 ```
 
@@ -295,9 +295,9 @@ python -c "from src.data.pipeline import NETSDataPipeline; NETSDataPipeline('dat
 ```python
 import time
 for i in range(1000):
-    if i % 100 == 0:
-        time.sleep(30)  # 30-second delay every 100 records
-    # Process record
+ if i % 100 == 0:
+ time.sleep(30) # 30-second delay every 100 records
+ # Process record
 ```
 
 ### Issue: Memory Error with Large Datasets
@@ -305,8 +305,8 @@ for i in range(1000):
 ```python
 BATCH_SIZE = 100
 for i in range(0, len(df), BATCH_SIZE):
-    batch = df.iloc[i:i+BATCH_SIZE]
-    # Process batch
+ batch = df.iloc[i:i+BATCH_SIZE]
+ # Process batch
 ```
 
 ## Key Metrics to Track
@@ -341,24 +341,24 @@ print(f"Mean quality: {df['data_quality_score'].mean():.0f}/100")
 ## Next Steps
 
 1. **Collect External Data Sources**
-   - Request LinkedIn company data export
-   - Set up Outscraper API account
-   - Download Indeed historical job postings
-   - Get OSM building footprints for Minneapolis
+ - Request LinkedIn company data export
+ - Set up Outscraper API account
+ - Download Indeed historical job postings
+ - Get OSM building footprints for Minneapolis
 
 2. **Validate Results**
-   - Compare estimates vs. LinkedIn (where available)
-   - Manual verification of 100 random businesses
-   - Calculate error metrics (MAE, RMSE)
+ - Compare estimates vs. LinkedIn (where available)
+ - Manual verification of 100 random businesses
+ - Calculate error metrics (MAE, RMSE)
 
 3. **Production Deployment**
-   - Set up cloud storage (S3/GCS)
-   - Schedule daily/weekly updates
-   - Configure monitoring and alerts
-   - Document data lineage and versioning
+ - Set up cloud storage (S3/GCS)
+ - Schedule daily/weekly updates
+ - Configure monitoring and alerts
+ - Document data lineage and versioning
 
 4. **Extend Capabilities**
-   - Add time-series tracking
-   - Implement forecasting models
-   - Create neighborhood-level aggregations
-   - Develop equity impact analysis
+ - Add time-series tracking
+ - Implement forecasting models
+ - Create neighborhood-level aggregations
+ - Develop equity impact analysis

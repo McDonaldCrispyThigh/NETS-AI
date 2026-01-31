@@ -5,7 +5,7 @@
 ### 1. Install Python Dependencies
 ```powershell
 cd d:\NETS-AI
-.\AIAGENTNETS\Scripts\Activate.ps1  # Activate virtual environment
+.\AIAGENTNETS\Scripts\Activate.ps1 # Activate virtual environment
 pip install -r requirements.txt
 ```
 
@@ -27,13 +27,13 @@ Expected output:
 ```
 Available Business Categories:
 ------------------------------------------------------------
-  coffee       -> coffee shops              NAICS: 722515
-  gym          -> gyms                      NAICS: 713940
-  library      -> libraries                 NAICS: 519120
-  park         -> parks                     NAICS: 712190
-  grocery      -> grocery stores            NAICS: 445110
-  civic        -> civic organizations       NAICS: 813410
-  religion     -> religious organizations   NAICS: 813110
+ coffee -> coffee shops NAICS: 722515
+ gym -> gyms NAICS: 713940
+ library -> libraries NAICS: 519120
+ park -> parks NAICS: 712190
+ grocery -> grocery stores NAICS: 445110
+ civic -> civic organizations NAICS: 813410
+ religion -> religious organizations NAICS: 813110
 ```
 
 ### Execute Complete Analysis
@@ -113,13 +113,13 @@ data/processed/ai_bdd_Minneapolis_coffee_20250102_143022.csv
 ### Per 1,000 Locations
 ```
 Google Maps API:
-  - Places Search:  $32.00 (0.032 per search)
-  - Place Details:  $17.00 (0.017 per request)
-  
+ - Places Search: $32.00 (0.032 per search)
+ - Place Details: $17.00 (0.017 per request)
+ 
 OpenAI GPT-4o-mini:
-  - 3 calls/location: $3.00 (0.150 per 1M tokens)
-  
-Wayback Machine:    $0.00 (free public service)
+ - 3 calls/location: $3.00 (0.150 per 1M tokens)
+ 
+Wayback Machine: $0.00 (free public service)
 
 Total: approximately $52 per 1,000 locations
 ```
@@ -133,8 +133,8 @@ Total: approximately $52 per 1,000 locations
 
 ### Step 1: Google Maps Search
 ```
-Iterate through 9 Minneapolis ZIP codes × search term
-→ Grid-based nearby search (optional) → Deduplicate results → Generate unique place_id list
+Iterate through 9 Minneapolis ZIP codes search term
+ Grid-based nearby search (optional) Deduplicate results Generate unique place_id list
 ```
 
 Note: Google Places API returns a limited review sample. The pipeline preserves total review counts from Google (`google_reviews_total`).
@@ -145,9 +145,9 @@ For each location:
 2. **Website Verification**: Check HTTP status code and accessibility
 3. **Wayback Validation**: Retrieve first/last snapshots, total archive count
 4. **GPT Analysis**: 
-   - Classify business status (Active/Inactive)
-   - Estimate employee count
-   - Verify NAICS code
+ - Classify business status (Active/Inactive)
+ - Estimate employee count
+ - Verify NAICS code
 
 ### Step 3: Export and Reporting
 - Generate CSV file
@@ -168,16 +168,16 @@ For each location:
 ### Confidence Scoring Rules
 ```python
 indicators = {
-    'has_recent_reviews': Reviews within last 180 days,
-    'review_count': More than 10 reviews,
-    'website_accessible': HTTP 200 status,
-    'has_hours': Operating hours available,
-    'wayback_verified': Snapshot count > 0
+ 'has_recent_reviews': Reviews within last 180 days,
+ 'review_count': More than 10 reviews,
+ 'website_accessible': HTTP 200 status,
+ 'has_hours': Operating hours available,
+ 'wayback_verified': Snapshot count > 0
 }
 
-- 5 indicators met → High confidence
-- 3-4 indicators met → Medium confidence  
-- <3 indicators met → Low confidence
+- 5 indicators met High confidence
+- 3-4 indicators met Medium confidence 
+- <3 indicators met Low confidence
 ```
 
 ## Troubleshooting
@@ -219,8 +219,8 @@ Estimated API cost: $156.00
 ### Batch Processing All Categories
 ```powershell
 foreach ($task in @("coffee", "gym", "library", "grocery")) {
-    python scripts/03_complete_pipeline.py --task $task
-    Write-Host "Completed: $task"
+ python scripts/03_complete_pipeline.py --task $task
+ Write-Host "Completed: $task"
 }
 ```
 

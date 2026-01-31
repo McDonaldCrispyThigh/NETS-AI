@@ -3,9 +3,9 @@
 
 **Project Goal**: Develop an end-to-end pipeline to optimize the NETS business database by integrating multi-source data for employee count estimation and business survival probability prediction.
 
-**Geographic Scope**: Minneapolis, Minnesota (Census Tract boundaries)  
-**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies)  
-**Target Sample Size**: 500-1000 establishments (MVP scale)  
+**Geographic Scope**: Minneapolis, Minnesota (Census Tract boundaries) 
+**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies) 
+**Target Sample Size**: 500-1000 establishments (MVP scale) 
 **Timeline**: Phase 1 Complete - January 2026
 
 ---
@@ -67,67 +67,67 @@ Generate cleaned, enriched Parquet database suitable for urban planning and econ
 
 ```
 Data Ingestion Layer
-├─ NETS Database (establishments.csv)
-├─ Outscraper Google Reviews (1000 query/month limit)
-├─ LinkedIn Company Profiles (Selenium scraping + compliance)
-├─ Indeed Job Postings (historical trends)
-├─ OpenStreetMap Building Footprints (density analysis)
-└─ Google Street View (facade width measurement via OpenCV)
+[|][-] NETS Database (establishments.csv)
+[|][-] Outscraper Google Reviews (1000 query/month limit)
+[|][-] LinkedIn Company Profiles (Selenium scraping + compliance)
+[|][-] Indeed Job Postings (historical trends)
+[|][-] OpenStreetMap Building Footprints (density analysis)
+[_][-] Google Street View (facade width measurement via OpenCV)
 
 Data Cleaning and Standardization
-├─ Address parsing (usaddress library, handle variations)
-├─ Coordinate normalization (EPSG:4326 WGS84)
-├─ Name matching (fuzzy string matching, threshold < 50m haversine)
-├─ Deduplication (multikey: address + name + coordinates)
-└─ Temporal alignment (monthly period aggregation)
+[|][-] Address parsing (usaddress library, handle variations)
+[|][-] Coordinate normalization (EPSG:4326 WGS84)
+[|][-] Name matching (fuzzy string matching, threshold < 50m haversine)
+[|][-] Deduplication (multikey: address + name + coordinates)
+[_][-] Temporal alignment (monthly period aggregation)
 
 Feature Engineering
-├─ Review-based features:
-│  ├─ review_count_3m: review count in recent 3 months
-│  ├─ review_count_6_12m: review count in 6-12 months prior
-│  ├─ review_decay_rate: (count_3m / count_6_12m) - measures business decline
-│  └─ days_since_last_review: recency indicator
-├─ Job posting features:
-│  ├─ posting_count_6m: recent 6-month job postings
-│  ├─ posting_peak_historical: maximum postings in any 6-month period
-│  └─ hiring_activity_ratio: recent / historical
-├─ Street view features:
-│  ├─ facade_width_m: measured via edge detection (OpenCV)
-│  ├─ visible_signage: boolean presence
-│  └─ window_lighting: activity proxy
-└─ OSM features:
-   ├─ building_area_sqm: from OSM footprints
-   └─ district_density: nearby establishments per sq km
+[|][-] Review-based features:
+ [|][-] review_count_3m: review count in recent 3 months
+ [|][-] review_count_6_12m: review count in 6-12 months prior
+ [|][-] review_decay_rate: (count_3m / count_6_12m) - measures business decline
+ [_][-] days_since_last_review: recency indicator
+[|][-] Job posting features:
+ [|][-] posting_count_6m: recent 6-month job postings
+ [|][-] posting_peak_historical: maximum postings in any 6-month period
+ [_][-] hiring_activity_ratio: recent / historical
+[|][-] Street view features:
+ [|][-] facade_width_m: measured via edge detection (OpenCV)
+ [|][-] visible_signage: boolean presence
+ [_][-] window_lighting: activity proxy
+[_][-] OSM features:
+ [|][-] building_area_sqm: from OSM footprints
+ [_][-] district_density: nearby establishments per sq km
 
 Model Development
-├─ Employee Count Regression:
-│  ├─ Features: review velocity + hiring activity + building area + OSM density
-│  ├─ Model: XGBoost (boosting with categorical features)
-│  ├─ Hierarchical Prior: PyMC Bayesian layers by NAICS code
-│  └─ Uncertainty: bootstrap resampling for 95% confidence intervals
-├─ Survival Classification:
-│  ├─ Target labels: Active/Inactive (Wayback + manual validation)
-│  ├─ Features: review decay + posting activity + latest_review_age
-│  ├─ Model: Random Forest (interpretable split importance)
-│  └─ Output: probability score (0-1) + confidence (high/medium/low)
-└─ Signal Fusion:
-   └─ Hard signals (LinkedIn): highest priority if available
-   └─ Soft signals: review data + CV metrics, weighted by recency
+[|][-] Employee Count Regression:
+ [|][-] Features: review velocity + hiring activity + building area + OSM density
+ [|][-] Model: XGBoost (boosting with categorical features)
+ [|][-] Hierarchical Prior: PyMC Bayesian layers by NAICS code
+ [_][-] Uncertainty: bootstrap resampling for 95% confidence intervals
+[|][-] Survival Classification:
+ [|][-] Target labels: Active/Inactive (Wayback + manual validation)
+ [|][-] Features: review decay + posting activity + latest_review_age
+ [|][-] Model: Random Forest (interpretable split importance)
+ [_][-] Output: probability score (0-1) + confidence (high/medium/low)
+[_][-] Signal Fusion:
+ [_][-] Hard signals (LinkedIn): highest priority if available
+ [_][-] Soft signals: review data + CV metrics, weighted by recency
 
 Output Generation
-├─ Parquet Database:
-│  ├─ Original NETS columns (preserved)
-│  ├─ employees_optimized: point estimate
-│  ├─ employees_ci_lower/upper: 95% confidence bounds
-│  ├─ is_active_prob: survival probability (0-1)
-│  ├─ confidence_level: high/medium/low categorical
-│  ├─ data_quality_score: 0-100 composite
-│  └─ last_updated: timestamp
-└─ Streamlit Dashboard:
-   ├─ Folium heat maps (by census tract)
-   ├─ Temporal series (Altair): employee trends by NAICS
-   ├─ Anomaly detection: outlier establishments
-   └─ Export tools: filtered CSV download
+[|][-] Parquet Database:
+ [|][-] Original NETS columns (preserved)
+ [|][-] employees_optimized: point estimate
+ [|][-] employees_ci_lower/upper: 95% confidence bounds
+ [|][-] is_active_prob: survival probability (0-1)
+ [|][-] confidence_level: high/medium/low categorical
+ [|][-] data_quality_score: 0-100 composite
+ [_][-] last_updated: timestamp
+[_][-] Streamlit Dashboard:
+ [|][-] Folium heat maps (by census tract)
+ [|][-] Temporal series (Altair): employee trends by NAICS
+ [|][-] Anomaly detection: outlier establishments
+ [_][-] Export tools: filtered CSV download
 ```
 
 ---
@@ -160,51 +160,51 @@ Output Generation
 
 ```text
 AI-BDD/
-├── README.md                    # This file
-├── requirements.txt             # Python dependencies (outscraper, playwright, googlemaps, etc.)
-├── .env                         # API keys (git-ignored, see .env.example)
-├── .gitignore                   # Git exclusion rules
-├── LICENSE                      # MIT License
-├── AIAGENTNETS/                 # Virtual environment (Python 3.14.2)
-├── notebooks/
-│   ├── 01_crane_decker_replication.ipynb
-│   ├── 02_minneapolis_pilot.ipynb
-│   └── 03_statistical_validation.ipynb
-├── src/
-│   ├── config.py                # City configs + service category baselines
-│   ├── agents/
-│   │   ├── google_maps_agent.py         # Adaptive grid search (recursive subdivision)
-│   │   ├── outscraper_agent.py          # Unlimited review collection + timeseries extraction
-│   │   ├── linkedin_scraper_improved.py # 90-sec timeout LinkedIn scraper
-│   │   ├── wayback_agent.py             # Internet Archive first/last snapshot
-│   │   └── gpt_analyzer.py              # GPT-4o-mini with full review context
-│   ├── data/
-│   │   ├── sos_loader.py                # MN Secretary of State registry
-│   │   ├── external_signals.py          # LinkedIn/Jobs/Popular Times (optional)
-│   │   └── validator.py                 # Output validation
-│   ├── models/
-│   │   └── employee_estimator.py        # Multi-signal + service-category logic
-│   └── utils/
-│       ├── logger.py
-│       └── helpers.py
-├── data/
-│   ├── raw/                              # Input data (git-ignored)
-│   ├── processed/                        # CSV outputs (ai_bdd_*.csv)
-│   ├── reviews/                          # JSON review timeseries ([place_id]_reviews.json)
-│   └── outputs/                          # Figures for paper
-├── scripts/
-│   ├── 01_export_nets_snapshot.py
-│   ├── 02_run_minneapolis_pilot.py
-│   ├── 03_complete_pipeline.py          # Main data collection script
-│   └── 03_generate_paper_figures.py
-├── tests/
-│   ├── test_agents.py
-│   └── test_validator.py
-└── docs/
-    ├── QUICKSTART.md
-    ├── IMPLEMENTATION_STATUS.md
-    ├── api_costs_breakdown.md
-    └── SYSTEM_REFERENCE.md
+[|][-][-] README.md # This file
+[|][-][-] requirements.txt # Python dependencies (outscraper, playwright, googlemaps, etc.)
+[|][-][-] .env # API keys (git-ignored, see .env.example)
+[|][-][-] .gitignore # Git exclusion rules
+[|][-][-] LICENSE # MIT License
+[|][-][-] AIAGENTNETS/ # Virtual environment (Python 3.14.2)
+[|][-][-] notebooks/
+ [|][-][-] 01_crane_decker_replication.ipynb
+ [|][-][-] 02_minneapolis_pilot.ipynb
+ [_][-][-] 03_statistical_validation.ipynb
+[|][-][-] src/
+ [|][-][-] config.py # City configs + service category baselines
+ [|][-][-] agents/
+ [|][-][-] google_maps_agent.py # Adaptive grid search (recursive subdivision)
+ [|][-][-] outscraper_agent.py # Unlimited review collection + timeseries extraction
+ [|][-][-] linkedin_scraper_improved.py # 90-sec timeout LinkedIn scraper
+ [|][-][-] wayback_agent.py # Internet Archive first/last snapshot
+ [_][-][-] gpt_analyzer.py # GPT-4o-mini with full review context
+ [|][-][-] data/
+ [|][-][-] sos_loader.py # MN Secretary of State registry
+ [|][-][-] external_signals.py # LinkedIn/Jobs/Popular Times (optional)
+ [_][-][-] validator.py # Output validation
+ [|][-][-] models/
+ [_][-][-] employee_estimator.py # Multi-signal + service-category logic
+ [_][-][-] utils/
+ [|][-][-] logger.py
+ [_][-][-] helpers.py
+[|][-][-] data/
+ [|][-][-] raw/ # Input data (git-ignored)
+ [|][-][-] processed/ # CSV outputs (ai_bdd_*.csv)
+ [|][-][-] reviews/ # JSON review timeseries ([place_id]_reviews.json)
+ [_][-][-] outputs/ # Figures for paper
+[|][-][-] scripts/
+ [|][-][-] 01_export_nets_snapshot.py
+ [|][-][-] 02_run_minneapolis_pilot.py
+ [|][-][-] 03_complete_pipeline.py # Main data collection script
+ [_][-][-] 03_generate_paper_figures.py
+[|][-][-] tests/
+ [|][-][-] test_agents.py
+ [_][-][-] test_validator.py
+[_][-][-] docs/
+ [|][-][-] QUICKSTART.md
+ [|][-][-] IMPLEMENTATION_STATUS.md
+ [|][-][-] api_costs_breakdown.md
+ [_][-][-] SYSTEM_REFERENCE.md
 ```
 
 ---
@@ -216,10 +216,10 @@ AI-BDD/
 - **Git** for version control
 - **Windows PowerShell 5.1+**
 - **API Keys**:
-  - OpenAI API (GPT-4o-mini for business analysis)
-  - Google Maps API (Places + Geocoding)
-  - Outscraper API (unlimited review collection, optional but recommended)
-  - LinkedIn credentials (optional, for employee validation)
+ - OpenAI API (GPT-4o-mini for business analysis)
+ - Google Maps API (Places + Geocoding)
+ - Outscraper API (unlimited review collection, optional but recommended)
+ - LinkedIn credentials (optional, for employee validation)
 
 ### Installation (3 minutes)
 
@@ -244,16 +244,16 @@ Create `.env` file in project root:
 
 ```env
 # === REQUIRED API Keys ===
-OPENAI_API_KEY=sk-proj-...              # GPT-4o-mini for business analysis
-GOOGLE_MAPS_API_KEY=AIza...             # Google Maps Places API
+OPENAI_API_KEY=sk-proj-... # GPT-4o-mini for business analysis
+GOOGLE_MAPS_API_KEY=AIza... # Google Maps Places API
 
 # === RECOMMENDED (for unlimited reviews) ===
-OUTSCRAPER_API_KEY=your_outscraper_key  # 97% cheaper than Google Maps API
-                                        # Get free trial: https://outscraper.com/
+OUTSCRAPER_API_KEY=your_outscraper_key # 97% cheaper than Google Maps API
+ # Get free trial: https://outscraper.com/
 
 # === OPTIONAL (for employee validation) ===
-LINKEDIN_EMAIL=your@email.com           # LinkedIn scraper (90-sec timeout)
-LINKEDIN_PASSWORD=your_password         # Requires saved session file
+LINKEDIN_EMAIL=your@email.com # LinkedIn scraper (90-sec timeout)
+LINKEDIN_PASSWORD=your_password # Requires saved session file
 
 # === Project Settings ===
 DATA_PATH=./data
@@ -290,24 +290,24 @@ python scripts/03_complete_pipeline.py --task coffee
 **Review JSON** (`data/reviews/ChIJxxx_reviews.json`):
 ```json
 {
-  "place_id": "ChIJxxx",
-  "name": "Business Name",
-  "collection_date": "2026-01-29T19:33:13",
-  "reviews": [
-    {
-      "review_timestamp": 1528145483,
-      "review_datetime_utc": "2018-06-04T20:51:23",
-      "review_text": "Great service...",
-      "review_rating": 5,
-      "review_likes": 0
-    }
-  ],
-  "statistics": {
-    "oldest_review_date": "2018-06-04",
-    "latest_review_date": "2025-12-24",
-    "total_reviews": 400,
-    "reviews_per_month": 5.2
-  }
+ "place_id": "ChIJxxx",
+ "name": "Business Name",
+ "collection_date": "2026-01-29T19:33:13",
+ "reviews": [
+ {
+ "review_timestamp": 1528145483,
+ "review_datetime_utc": "2018-06-04T20:51:23",
+ "review_text": "Great service...",
+ "review_rating": 5,
+ "review_likes": 0
+ }
+ ],
+ "statistics": {
+ "oldest_review_date": "2018-06-04",
+ "latest_review_date": "2025-12-24",
+ "total_reviews": 400,
+ "reviews_per_month": 5.2
+ }
 }
 ```
 
@@ -317,37 +317,37 @@ python scripts/03_complete_pipeline.py --task coffee
 
 ### Stage 1: Adaptive Grid Search
 ```
-ZIP Code → Geocode Center → 3×3 Grid → Search Each Cell
-                                          ↓
-                                  ≥55 results? → Subdivide into 4 quadrants (recursive)
-                                          ↓
-                                  <55 results → Deduplicate by place_id → Next cell
+ZIP Code Geocode Center 33 Grid Search Each Cell
+ 
+ 55 results? Subdivide into 4 quadrants (recursive)
+ 
+ <55 results Deduplicate by place_id Next cell
 ```
 
 ### Stage 2: Full Data Collection (per business)
 ```
-Place ID → Google Maps Details → Outscraper Reviews (unlimited)
-                                          ↓
-                                  Save to data/reviews/[place_id]_reviews.json
-                                          ↓
-                                  Extract statistics → CSV
+Place ID Google Maps Details Outscraper Reviews (unlimited)
+ 
+ Save to data/reviews/[place_id]_reviews.json
+ 
+ Extract statistics CSV
 ```
 
 ### Stage 3: AI Analysis (optional, --skip-gpt to disable)
 ```
-Load full reviews → GPT-4o-mini analyzes:
-  - Business status (Active/Inactive/Uncertain)
-  - Employee estimate (review density + staff mentions)
-  - NAICS verification (menu/service evolution)
+Load full reviews GPT-4o-mini analyzes:
+ - Business status (Active/Inactive/Uncertain)
+ - Employee estimate (review density + staff mentions)
+ - NAICS verification (menu/service evolution)
 ```
 
 ### Stage 4: Employee Estimation (batch processing)
 ```
 Calculate industry baseline (avg reviews/month)
 For each business:
-  - Service category? → Review density + Popular Times only
-  - Other category? → LinkedIn + Job postings + Building area + Review density + Popular Times + SOS partners
-  → Average valid signals → employee_estimate
+ - Service category? Review density + Popular Times only
+ - Other category? LinkedIn + Job postings + Building area + Review density + Popular Times + SOS partners
+ Average valid signals employee_estimate
 ```
 
 ---
@@ -375,9 +375,9 @@ Compare to NETS: $50,000+/year for national coverage
 ## Validation Strategy
 
 ### 1. Consistency Test (Reproducibility)
-- Run pipeline 3× on same ZIP code
-- Calculate Jaccard similarity: `|A∩B|/|A∪B|` for place_id sets
-- **Target**: ≥0.95 similarity (current: 0.96-0.98 depending on timing)
+- Run pipeline 3 on same ZIP code
+- Calculate Jaccard similarity: `|AB|/|AB|` for place_id sets
+- **Target**: 0.95 similarity (current: 0.96-0.98 depending on timing)
 
 ### 2. External Validation
 - **MN SOS Registry**: Cross-check active businesses (incorporation date)
@@ -387,7 +387,7 @@ Compare to NETS: $50,000+/year for national coverage
 ### 3. NETS Comparison
 - **Interpolation**: Compare AI-BDD employee volatility (Gini) vs. NETS smoothness
 - **Zombie Lag**: Closure detection time (AI-BDD: 3-6mo vs. NETS: 24+mo)
-- **2011 Spikes**: Wayback validation of "opened 2011" → flag artifacts
+- **2011 Spikes**: Wayback validation of "opened 2011" flag artifacts
 - **Implicit Rounding**: Review density confidence intervals vs. NETS point estimates
 
 ---
@@ -397,41 +397,41 @@ Compare to NETS: $50,000+/year for national coverage
 ### Adaptive Grid Search Logic
 ```python
 def search_cell(lat, lng, radius_m, depth=0):
-    results = places_nearby(lat, lng, radius_m)
-    
-    if len(results) >= 55 and depth < 3:
-        # Subdivide into 4 quadrants (NE, NW, SE, SW)
-        for quadrant in [(+offset, +offset), (+offset, -offset), 
-                         (-offset, +offset), (-offset, -offset)]:
-            search_cell(lat+quadrant[0], lng+quadrant[1], radius_m//2, depth+1)
-    else:
-        # Deduplicate and add to results
-        for place in results:
-            all_places[place['place_id']] = place
+ results = places_nearby(lat, lng, radius_m)
+ 
+ if len(results) >= 55 and depth < 3:
+ # Subdivide into 4 quadrants (NE, NW, SE, SW)
+ for quadrant in [(+offset, +offset), (+offset, -offset), 
+ (-offset, +offset), (-offset, -offset)]:
+ search_cell(lat+quadrant[0], lng+quadrant[1], radius_m//2, depth+1)
+ else:
+ # Deduplicate and add to results
+ for place in results:
+ all_places[place['place_id']] = place
 ```
 
 ### Service Category Employee Estimation
 ```python
 if category in SERVICE_CATEGORIES:
-    # Use only review density + popular times
-    review_intensity = reviews_per_month / industry_baseline
-    employees_from_reviews = baseline_staff * review_intensity
-    
-    peak_customers = popular_times_peak * max_customers_per_hour
-    employees_from_flow = peak_customers / 12.5  # 12.5 customers/staff
-    
-    estimate = avg(employees_from_reviews, employees_from_flow)
+ # Use only review density + popular times
+ review_intensity = reviews_per_month / industry_baseline
+ employees_from_reviews = baseline_staff * review_intensity
+ 
+ peak_customers = popular_times_peak * max_customers_per_hour
+ employees_from_flow = peak_customers / 12.5 # 12.5 customers/staff
+ 
+ estimate = avg(employees_from_reviews, employees_from_flow)
 else:
-    # Use full multi-signal model
-    estimate = avg(linkedin, job_postings, building_area, 
-                   review_density, popular_times, sos_partners)
+ # Use full multi-signal model
+ estimate = avg(linkedin, job_postings, building_area, 
+ review_density, popular_times, sos_partners)
 ```
 
 ---
 
 ## Current Implementation Status
 
-✅ **Completed**:
+[OK] **Completed**:
 - Adaptive grid search with recursive subdivision (100% coverage)
 - Outscraper unlimited review collection (`reviews_limit=0`)
 - Review timeseries storage (separate JSON files)
@@ -441,12 +441,12 @@ else:
 - Multi-signal employee estimator with confidence intervals
 - Pipeline CSV output with 43 fields
 
-🚧 **In Progress**:
+ **In Progress**:
 - Minneapolis full pilot (coffee shops + gyms)
-- Consistency validation (3× run comparison)
+- Consistency validation (3 run comparison)
 - NETS snapshot export for direct comparison
 
-📋 **Planned**:
+[LIST] **Planned**:
 - Computer Vision: Street View storefront size estimation
 - OSM POI cross-validation
 - Statistical validation notebooks (Gini, ROC curves)
@@ -495,7 +495,7 @@ MIT License - see LICENSE file for details
 
 ---
 
-**Documentation Version**: Jan 29, 2026  
-**Maintainer**: Congyuan (CU Boulder)  
+**Documentation Version**: Jan 29, 2026 
+**Maintainer**: Congyuan (CU Boulder) 
 **Contact**: [Your Email/GitHub Issues]
 

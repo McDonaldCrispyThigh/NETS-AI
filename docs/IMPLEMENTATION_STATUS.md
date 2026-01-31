@@ -28,17 +28,17 @@ This file provides a concise implementation snapshot. For full technical details
 ## Required User Actions
 
 1. Configure `.env` in project root:
-   - `OPENAI_API_KEY=...`
-   - `GOOGLE_MAPS_API_KEY=...`
+ - `OPENAI_API_KEY=...`
+ - `GOOGLE_MAPS_API_KEY=...`
 
 2. Install dependencies:
-   - `pip install -r requirements.txt`
+ - `pip install -r requirements.txt`
 
 3. Validate environment:
-   - `python scripts/validate_environment.py`
+ - `python scripts/validate_environment.py`
 
 4. Test run:
-   - `python scripts/03_complete_pipeline.py --task coffee --limit 10`
+ - `python scripts/03_complete_pipeline.py --task coffee --limit 10`
 
 ## Optional Enhancements
 

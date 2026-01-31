@@ -2,7 +2,7 @@
 
 Complete guide for using the NETS-AI system to process and analyze Minneapolis business data.
 
-## 📋 Quick Start
+## [LIST] Quick Start
 
 ### 1. Generate Sample Data (Testing)
 
@@ -27,13 +27,13 @@ python scripts/run_pipeline.py --input data/raw/nets_minneapolis_sample.csv --va
 
 # With custom output path
 python scripts/run_pipeline.py \
-  --input data/raw/nets_minneapolis_sample.csv \
-  --output data/processed/my_output.parquet
+ --input data/raw/nets_minneapolis_sample.csv \
+ --output data/processed/my_output.parquet
 
 # Limited to N records (useful for testing)
 python scripts/run_pipeline.py \
-  --input data/raw/nets_minneapolis_sample.csv \
-  --sample-size 50
+ --input data/raw/nets_minneapolis_sample.csv \
+ --sample-size 50
 ```
 
 Output: `data/processed/nets_ai_minneapolis.parquet` (Parquet columnar format)
@@ -47,7 +47,7 @@ streamlit run dashboard/app.py
 # Open browser to http://localhost:8501
 ```
 
-## 📊 Full Pipeline Usage
+## [STATS] Full Pipeline Usage
 
 ### Complete Workflow
 
@@ -57,9 +57,9 @@ python scripts/generate_sample_data.py
 
 # 2. Run enhancement pipeline with all features
 python scripts/run_pipeline.py \
-  --input data/raw/nets_minneapolis_sample.csv \
-  --validate \
-  --verbose
+ --input data/raw/nets_minneapolis_sample.csv \
+ --validate \
+ --verbose
 
 # 3. Launch dashboard for exploration
 streamlit run dashboard/app.py
@@ -81,33 +81,33 @@ Key options:
 - `--sample-size`: Limit to N records for testing
 - `--dashboard`: Auto-launch Streamlit dashboard after pipeline completes
 
-## 📁 Data Format
+## [FILES] Data Format
 
 ### Input CSV Requirements
 
 Minimum required columns for input NETS data:
 
 ```
-duns_id              (string) - Unique D-U-N-S identifier
-company_name         (string) - Business name
-naics_code           (string) - 6-digit NAICS code
-latitude             (float)  - WGS84 latitude
-longitude            (float)  - WGS84 longitude
-zip_code             (string) - ZIP code
-state                (string) - State abbreviation
+duns_id (string) - Unique D-U-N-S identifier
+company_name (string) - Business name
+naics_code (string) - 6-digit NAICS code
+latitude (float) - WGS84 latitude
+longitude (float) - WGS84 longitude
+zip_code (string) - ZIP code
+state (string) - State abbreviation
 ```
 
 Optional enrichment columns (improves estimates):
 
 ```
-employee_count_raw       (int)    - Raw employee count from NETS
-linkedin_employee_count  (int)    - LinkedIn company profile headcount
-review_count_3m          (int)    - Reviews in past 3 months
-review_count_6_12m       (int)    - Reviews 6-12 months ago
-last_review_date         (string) - ISO date (YYYY-MM-DD)
-job_postings_6m          (int)    - Job postings in past 6 months
-job_postings_peak        (int)    - Peak monthly job postings
-estimated_area_sqm       (float)  - Building area in square meters
+employee_count_raw (int) - Raw employee count from NETS
+linkedin_employee_count (int) - LinkedIn company profile headcount
+review_count_3m (int) - Reviews in past 3 months
+review_count_6_12m (int) - Reviews 6-12 months ago
+last_review_date (string) - ISO date (YYYY-MM-DD)
+job_postings_6m (int) - Job postings in past 6 months
+job_postings_peak (int) - Peak monthly job postings
+estimated_area_sqm (float) - Building area in square meters
 ```
 
 ### Output Parquet Schema
@@ -142,7 +142,7 @@ Exported Parquet file contains 42+ columns:
 - `processing_timestamp` - When record was enhanced
 - `enrichment_source_priority` - Data source ranking
 
-## 🔍 Dashboard Features
+## Dashboard Features
 
 ### Interactive Visualizations
 
@@ -180,7 +180,7 @@ In the left sidebar:
 - **Employee Count**: Range slider
 - **Confidence Level**: Filter by estimate confidence (high/medium/low)
 
-## 🎯 Target Industries
+## [GOAL] Target Industries
 
 ### NAICS 722513 - Limited-Service Restaurants (Quick Service)
 
@@ -208,31 +208,31 @@ In the left sidebar:
 - Focus: Minneapolis ZIP codes 55401-55415
 - Activity signals: operating hours, script processing
 
-## 🧮 Estimation Methods
+## Estimation Methods
 
 ### Employee Estimation (Multi-Signal Ensemble)
 
 Four-signal weighted combination:
 
 1. **LinkedIn Signal (50% weight)**
-   - Source: LinkedIn company profiles
-   - Method: Direct headcount extraction
-   - Confidence: Highest (when available)
+ - Source: LinkedIn company profiles
+ - Method: Direct headcount extraction
+ - Confidence: Highest (when available)
 
 2. **Review Velocity Signal (30% weight)**
-   - Source: Google/Yelp/etc review counts
-   - Method: Review intensity ratio (3m vs 6-12m)
-   - Interpretation: More reviews = likely larger operation
+ - Source: Google/Yelp/etc review counts
+ - Method: Review intensity ratio (3m vs 6-12m)
+ - Interpretation: More reviews = likely larger operation
 
 3. **Building Area Signal (15% weight)**
-   - Source: OpenStreetMap or provided estimates
-   - Method: Area × industry-specific employees-per-sqm
-   - Example: 500 sqm × 0.025 emp/sqm = 12.5 employees
+ - Source: OpenStreetMap or provided estimates
+ - Method: Area industry-specific employees-per-sqm
+ - Example: 500 sqm 0.025 emp/sqm = 12.5 employees
 
 4. **Job Postings Signal (5% weight)**
-   - Source: Indeed, LinkedIn jobs
-   - Method: Recent job posting activity
-   - Interpretation: Active hiring = growing business
+ - Source: Indeed, LinkedIn jobs
+ - Method: Recent job posting activity
+ - Interpretation: Active hiring = growing business
 
 **Fallback:**
 - When signals unavailable: Industry baseline (12 for QSR, 10 for pharmacy)
@@ -244,30 +244,30 @@ Four-signal weighted combination:
 Weighted probability of business being operational:
 
 1. **Review Recency (35% weight)**
-   - <30 days: Strong positive
-   - 30-90 days: Neutral
-   - 90-180 days: Caution
-   - 180+ days: Strong negative
+ - <30 days: Strong positive
+ - 30-90 days: Neutral
+ - 90-180 days: Caution
+ - 180+ days: Strong negative
 
 2. **Review Decay Rate (30% weight)**
-   - Ratio of 3-month to 6-12-month reviews
-   - >1.0: Growing activity
-   - 0.3-1.0: Stable
-   - <0.3: Declining (closure risk)
+ - Ratio of 3-month to 6-12-month reviews
+ - >1.0: Growing activity
+ - 0.3-1.0: Stable
+ - <0.3: Declining (closure risk)
 
 3. **Job Posting Activity (20% weight)**
-   - Recent posting activity indicates growth
-   - Peak hiring periods signal expansion
-   - No postings suggests stability or decline
+ - Recent posting activity indicates growth
+ - Peak hiring periods signal expansion
+ - No postings suggests stability or decline
 
 4. **Street View Indicators (15% weight)**
-   - Facade condition and signage visibility
-   - Lighting and entrance condition
-   - Visual confirmation of operations
+ - Facade condition and signage visibility
+ - Lighting and entrance condition
+ - Visual confirmation of operations
 
 **Output:** `is_active_prob` (0-1 probability) + confidence level
 
-## 📈 Data Quality Scoring
+## [GROWTH] Data Quality Scoring
 
 Composite 0-100 metric combining:
 
@@ -282,7 +282,7 @@ Interpretation:
 - 40-60: Fair data, provisional estimates
 - <40: Limited data, use with caution
 
-## ⚙️ Configuration
+## [CONFIG] Configuration
 
 Edit `src/config.py` to customize:
 
@@ -290,7 +290,7 @@ Edit `src/config.py` to customize:
 
 ```python
 TARGET_ZIP_CODES = [
-    "55401", "55402", ... "55415"  # Minneapolis only
+ "55401", "55402", ... "55415" # Minneapolis only
 ]
 
 # Or use census tracts instead:
@@ -301,18 +301,18 @@ MINNEAPOLIS_CENSUS_TRACTS = [...]
 
 ```python
 EMPLOYEE_ESTIMATION_BASELINES = {
-    "722513": {  # QSR
-        "avg_employees": 12,
-        "employees_per_sqm": 0.025,
-        "min_employees": 4,
-        "max_employees": 50
-    },
-    "446110": {  # Pharmacy
-        "avg_employees": 10,
-        "employees_per_sqm": 0.020,
-        "min_employees": 3,
-        "max_employees": 35
-    }
+ "722513": { # QSR
+ "avg_employees": 12,
+ "employees_per_sqm": 0.025,
+ "min_employees": 4,
+ "max_employees": 50
+ },
+ "446110": { # Pharmacy
+ "avg_employees": 10,
+ "employees_per_sqm": 0.020,
+ "min_employees": 3,
+ "max_employees": 35
+ }
 }
 ```
 
@@ -320,12 +320,12 @@ EMPLOYEE_ESTIMATION_BASELINES = {
 
 ```python
 PARQUET_OUTPUT_SCHEMA = {
-    # Customize which columns to include
-    # Adjust column order and types
+ # Customize which columns to include
+ # Adjust column order and types
 }
 ```
 
-## 🔧 Troubleshooting
+## [TOOLS] Troubleshooting
 
 ### Pipeline fails with "Input file not found"
 
@@ -366,21 +366,21 @@ Solutions:
 - Reduce ZIP code filter in config.py
 - Disable validation with `--validate` flag
 
-## 🚀 Performance Tips
+## [LAUNCH] Performance Tips
 
 ### For Large Datasets
 
 ```bash
 # Test with sample first
 python scripts/run_pipeline.py \
-  --input data/raw/nets_full.csv \
-  --sample-size 1000 \
-  --verbose
+ --input data/raw/nets_full.csv \
+ --sample-size 1000 \
+ --verbose
 
 # Then run full pipeline
 python scripts/run_pipeline.py \
-  --input data/raw/nets_full.csv \
-  --validate
+ --input data/raw/nets_full.csv \
+ --validate
 ```
 
 ### For Real-Time Dashboard
@@ -393,7 +393,7 @@ python scripts/run_pipeline.py --input data/raw/nets.csv
 streamlit run dashboard/app.py
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 See [docs/DOCUMENTATION_INDEX.md](docs/DOCUMENTATION_INDEX.md) for complete API reference:
 
@@ -402,16 +402,16 @@ See [docs/DOCUMENTATION_INDEX.md](docs/DOCUMENTATION_INDEX.md) for complete API 
 - `SurvivalDetector` - Closure risk detection
 - `NETSDataPipeline` - End-to-end orchestration
 
-## 🎓 Examples
+## [LEARN] Examples
 
 ### Example 1: Process Real NETS Data
 
 ```bash
 # Assuming you have nets_minneapolis.csv from NETS provider
 python scripts/run_pipeline.py \
-  --input data/raw/nets_minneapolis.csv \
-  --validate \
-  --verbose
+ --input data/raw/nets_minneapolis.csv \
+ --validate \
+ --verbose
 
 streamlit run dashboard/app.py
 ```
@@ -421,13 +421,13 @@ streamlit run dashboard/app.py
 ```bash
 # Pharmacies only
 python scripts/run_pipeline.py \
-  --input data/raw/nets.csv \
-  --naics 446110
+ --input data/raw/nets.csv \
+ --naics 446110
 
 # Multiple codes
 python scripts/run_pipeline.py \
-  --input data/raw/nets.csv \
-  --naics 722513 446110 722515
+ --input data/raw/nets.csv \
+ --naics 722513 446110 722515
 ```
 
 ### Example 3: Custom Processing Pipeline
@@ -437,9 +437,9 @@ from src.data.pipeline import NETSDataPipeline
 
 # Initialize with your data
 pipeline = NETSDataPipeline(
-    nets_csv_path='data/raw/nets.csv',
-    output_parquet_path='data/processed/custom_output.parquet',
-    target_naics_codes=['722513', '446110']
+ nets_csv_path='data/raw/nets.csv',
+ output_parquet_path='data/processed/custom_output.parquet',
+ target_naics_codes=['722513', '446110']
 )
 
 # Load and filter
@@ -456,7 +456,7 @@ df_output = pipeline.prepare_parquet_output()
 pipeline.export_parquet(df_output)
 ```
 
-## 📞 Support
+## [SUPPORT] Support
 
 For issues or questions:
 
@@ -465,6 +465,6 @@ For issues or questions:
 3. Check logs in `logs/` directory for error details
 4. Verify requirements with `python verify_setup.py`
 
-## 📝 Version History
+## [DOCS] Version History
 
 - **v1.0** (Jan 2026): Initial release with QSR and Pharmacy focus, Minneapolis geographic scope, multi-signal estimation

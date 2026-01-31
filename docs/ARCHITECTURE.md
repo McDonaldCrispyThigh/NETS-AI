@@ -20,11 +20,11 @@ Minneapolis: Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 4461
 
 ## System Overview
 
-**Project Name**: NETS Business Data Enhancement System  
-**Geographic Focus**: Minneapolis, Minnesota (Census Tract boundaries)  
-**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies)  
-**Target Sample**: 500-1,000 establishments (MVP scale)  
-**Output Format**: Apache Parquet database + Streamlit dashboard  
+**Project Name**: NETS Business Data Enhancement System 
+**Geographic Focus**: Minneapolis, Minnesota (Census Tract boundaries) 
+**Industry Focus**: NAICS 722513 (Quick Service Restaurants) and NAICS 446110 (Pharmacies) 
+**Target Sample**: 500-1,000 establishments (MVP scale) 
+**Output Format**: Apache Parquet database + Streamlit dashboard 
 
 **Core Innovation**: Multi-source data fusion to:
 1. Estimate employee counts with quantified uncertainty (95% confidence intervals)
@@ -59,81 +59,81 @@ Minneapolis: Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 4461
 ## Pipeline Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DATA INGESTION LAYER                         │
-├─────────────────────────────────────────────────────────────────┤
-│ NETS CSV  Google Maps   LinkedIn   Indeed   OpenStreetMap  Street View │
-│ (baseline) (reviews)    (employees) (jobs)   (building area) (CV) │
-└──────────────┬──────────────────────────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────────────────────────┐
-│               DATA CLEANING & STANDARDIZATION                   │
-├──────────────────────────────────────────────────────────────────┤
-│ • Address parsing (usaddress)                                   │
-│ • Coordinate normalization (EPSG:4326 WGS84)                    │
-│ • Fuzzy name matching (fuzzywuzzy, threshold <50m haversine)   │
-│ • Temporal alignment (monthly periods)                          │
-│ • Deduplication (multi-key: address + name + coordinates)     │
-└──────────────┬──────────────────────────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────────────────────────┐
-│                  FEATURE ENGINEERING LAYER                      │
-├──────────────────────────────────────────────────────────────────┤
-│ Review Features:                                                │
-│  • review_decay_rate = (count_3m/3) / (count_6_12m/6)         │
-│  • days_since_last_review (recency indicator)                  │
-│  • review_sentiment_positive (if available)                    │
-│                                                                 │
-│ Job Posting Features:                                          │
-│  • hiring_activity_ratio = recent_6m / historical_peak        │
-│  • posting_count_changes (trend)                               │
-│                                                                 │
-│ Building Features:                                             │
-│  • building_area_sqm (from OSM footprints)                    │
-│  • facade_width_m (OpenCV edge detection)                      │
-│  • district_density (nearby establishments/sq km)              │
-└──────────────┬──────────────────────────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────────────────────────┐
-│                 MODELING & PREDICTION LAYER                     │
-├──────────────────────────────────────────────────────────────────┤
-│ Module 1: Employee Estimator (Bayesian)                        │
-│  • Inputs: LinkedIn headcount, review velocity, building area  │
-│  • Method: Multi-signal ensemble + XGBoost regression          │
-│  • Outputs: point_estimate + ci_lower + ci_upper (95% CI)     │
-│  • Hierarchical priors by NAICS code                           │
-│                                                                 │
-│ Module 2: Survival Detector (Random Forest)                    │
-│  • Inputs: review decay, recency, job activity, street view   │
-│  • Method: Signal fusion with weighted scoring                 │
-│  • Outputs: is_active_prob (0-1) + confidence_level            │
-│  • Risk/protective factor identification                       │
-└──────────────┬──────────────────────────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────────────────────────┐
-│             QUALITY ASSESSMENT & SCORING LAYER                  │
-├──────────────────────────────────────────────────────────────────┤
-│ Composite Quality Score (0-100):                               │
-│  • Field completeness (20%): non-null ratio                    │
-│  • Source diversity (20%): count of contributing sources       │
-│  • Signal confidence (30%): average model confidence           │
-│  • Estimate certainty (30%): inverse of CI width               │
-└──────────────┬──────────────────────────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────────────────────────┐
-│               OUTPUT & VISUALIZATION LAYER                      │
-├──────────────────────────────────────────────────────────────────┤
-│ Parquet Database:                                              │
-│  • Format: Apache Parquet (columnar, compressed)               │
-│  • Columns: NETS baseline + optimizations + confidence bounds  │
-│  • Partitioning: optional by NAICS code, zip code              │
-│                                                                 │
-│ Streamlit Dashboard:                                           │
-│  • Maps: Folium heatmaps (employees, survival probability)    │
-│  • Charts: Altair time series, distributions                  │
-│  • Tables: Searchable/filterable establishment records         │
-│  • Export: CSV download for selected records                   │
-└──────────────────────────────────────────────────────────────────┘
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ DATA INGESTION LAYER 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ NETS CSV Google Maps LinkedIn Indeed OpenStreetMap Street View 
+ (baseline) (reviews) (employees) (jobs) (building area) (CV) 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ 
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ DATA CLEANING & STANDARDIZATION 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ Address parsing (usaddress) 
+ Coordinate normalization (EPSG:4326 WGS84) 
+ Fuzzy name matching (fuzzywuzzy, threshold <50m haversine) 
+ Temporal alignment (monthly periods) 
+ Deduplication (multi-key: address + name + coordinates) 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ 
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ FEATURE ENGINEERING LAYER 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ Review Features: 
+ review_decay_rate = (count_3m/3) / (count_6_12m/6) 
+ days_since_last_review (recency indicator) 
+ review_sentiment_positive (if available) 
+ 
+ Job Posting Features: 
+ hiring_activity_ratio = recent_6m / historical_peak 
+ posting_count_changes (trend) 
+ 
+ Building Features: 
+ building_area_sqm (from OSM footprints) 
+ facade_width_m (OpenCV edge detection) 
+ district_density (nearby establishments/sq km) 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ 
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ MODELING & PREDICTION LAYER 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ Module 1: Employee Estimator (Bayesian) 
+ Inputs: LinkedIn headcount, review velocity, building area 
+ Method: Multi-signal ensemble + XGBoost regression 
+ Outputs: point_estimate + ci_lower + ci_upper (95% CI) 
+ Hierarchical priors by NAICS code 
+ 
+ Module 2: Survival Detector (Random Forest) 
+ Inputs: review decay, recency, job activity, street view 
+ Method: Signal fusion with weighted scoring 
+ Outputs: is_active_prob (0-1) + confidence_level 
+ Risk/protective factor identification 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ 
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ QUALITY ASSESSMENT & SCORING LAYER 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ Composite Quality Score (0-100): 
+ Field completeness (20%): non-null ratio 
+ Source diversity (20%): count of contributing sources 
+ Signal confidence (30%): average model confidence 
+ Estimate certainty (30%): inverse of CI width 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ 
+[-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ OUTPUT & VISUALIZATION LAYER 
+[|][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
+ Parquet Database: 
+ Format: Apache Parquet (columnar, compressed) 
+ Columns: NETS baseline + optimizations + confidence bounds 
+ Partitioning: optional by NAICS code, zip code 
+ 
+ Streamlit Dashboard: 
+ Maps: Folium heatmaps (employees, survival probability) 
+ Charts: Altair time series, distributions 
+ Tables: Searchable/filterable establishment records 
+ Export: CSV download for selected records 
+[_][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-][-]
 ```
 
 ---
@@ -143,37 +143,37 @@ Minneapolis: Quick Service Restaurants (NAICS 722513) and Pharmacies (NAICS 4461
 ### Phase 1: Data Loading (src/data/nets_loader.py)
 ```
 NETS CSV
-   │
-   ├─ Filter by state (MN)
-   ├─ Filter by NAICS (722513, 446110)
-   ├─ Filter by ZIP codes (Minneapolis)
-   ├─ Filter by establishment year (2015+, optional)
-   │
-   └─ Output: Pandas DataFrame (N records)
+ 
+ [|][-] Filter by state (MN)
+ [|][-] Filter by NAICS (722513, 446110)
+ [|][-] Filter by ZIP codes (Minneapolis)
+ [|][-] Filter by establishment year (2015+, optional)
+ 
+ [_][-] Output: Pandas DataFrame (N records)
 ```
 
 ### Phase 2: External Data Integration (src/data/pipeline.py:enrich_with_external_sources)
 ```
-LinkedIn Data → match by DUNS_ID or company name
-Outscraper Reviews → match by place_id + name
-Job Postings → match by location + NAICS
-OSM Building Footprints → spatial join by lat/lon
-Street View → query Google API by coordinates
+LinkedIn Data match by DUNS_ID or company name
+Outscraper Reviews match by place_id + name
+Job Postings match by location + NAICS
+OSM Building Footprints spatial join by lat/lon
+Street View query Google API by coordinates
 
 Merge strategy:
-   • Primary key: DUNS_ID (if available)
-   • Secondary key: fuzzy match (company_name + address)
-   • Spatial fallback: haversine distance <50m
+ Primary key: DUNS_ID (if available)
+ Secondary key: fuzzy match (company_name + address)
+ Spatial fallback: haversine distance <50m
 ```
 
 ### Phase 3: Feature Engineering
 ```
 For each establishment:
-   1. Extract review signals (if Outscraper data available)
-   2. Calculate decay rate: (reviews_3m / 3) / (reviews_6_12m / 6)
-   3. Extract job posting trends
-   4. Retrieve building area from OSM
-   5. Query street view for visual indicators
+ 1. Extract review signals (if Outscraper data available)
+ 2. Calculate decay rate: (reviews_3m / 3) / (reviews_6_12m / 6)
+ 3. Extract job posting trends
+ 4. Retrieve building area from OSM
+ 5. Query street view for visual indicators
 
 Result: Feature matrix ready for modeling
 ```
@@ -181,53 +181,53 @@ Result: Feature matrix ready for modeling
 ### Phase 4: Employee Estimation (src/models/bayesian_employee_estimator.py)
 ```
 For each establishment:
-   1. Check LinkedIn data (highest credibility)
-      └─ If available: use directly + 10% CI margin
-   
-   2. Otherwise: ensemble of lower-priority signals
-      ├─ Review velocity: baseline * (recent_monthly / avg_monthly)
-      ├─ Building area: area_sqm * employees_per_sqm
-      ├─ Job postings: baseline * hiring_intensity_multiplier
-      └─ Combine with weights: LinkedIn(50%) > Reviews(30%) > Area(15%) > Jobs(5%)
-   
-   3. Apply NAICS-specific constraints
-      └─ Clamp between min_employees and max_employees
-   
-   4. Calculate confidence interval
-      └─ Bootstrap resampling or PyMC posterior distribution
+ 1. Check LinkedIn data (highest credibility)
+ [_][-] If available: use directly + 10% CI margin
+ 
+ 2. Otherwise: ensemble of lower-priority signals
+ [|][-] Review velocity: baseline * (recent_monthly / avg_monthly)
+ [|][-] Building area: area_sqm * employees_per_sqm
+ [|][-] Job postings: baseline * hiring_intensity_multiplier
+ [_][-] Combine with weights: LinkedIn(50%) > Reviews(30%) > Area(15%) > Jobs(5%)
+ 
+ 3. Apply NAICS-specific constraints
+ [_][-] Clamp between min_employees and max_employees
+ 
+ 4. Calculate confidence interval
+ [_][-] Bootstrap resampling or PyMC posterior distribution
 ```
 
 ### Phase 5: Survival Detection (src/models/survival_detector.py)
 ```
 For each establishment:
-   1. Evaluate review recency
-      ├─ <30 days: strong positive signal (score=1.0)
-      ├─ 30-180 days: declining activity (score=0.4)
-      └─ 180+ days: likely inactive (score=0.1)
-   
-   2. Calculate review decay rate
-      └─ Trend of falling/stable/growing reviews
-   
-   3. Assess job posting activity
-      └─ Active hiring = operational signal
-   
-   4. Street view analysis
-      └─ Facade/signage visibility + lighting (evening hours)
-   
-   5. Weighted signal fusion
-      └─ review_recency(35%) + decay(30%) + jobs(20%) + street_view(15%)
-   
-   6. Output: is_active_prob (0-1) + risk/protective factors
+ 1. Evaluate review recency
+ [|][-] <30 days: strong positive signal (score=1.0)
+ [|][-] 30-180 days: declining activity (score=0.4)
+ [_][-] 180+ days: likely inactive (score=0.1)
+ 
+ 2. Calculate review decay rate
+ [_][-] Trend of falling/stable/growing reviews
+ 
+ 3. Assess job posting activity
+ [_][-] Active hiring = operational signal
+ 
+ 4. Street view analysis
+ [_][-] Facade/signage visibility + lighting (evening hours)
+ 
+ 5. Weighted signal fusion
+ [_][-] review_recency(35%) + decay(30%) + jobs(20%) + street_view(15%)
+ 
+ 6. Output: is_active_prob (0-1) + risk/protective factors
 ```
 
 ### Phase 6: Quality Scoring & Export
 ```
 For each record:
-   1. Calculate composite quality score (0-100)
-   2. Prepare columns per PARQUET_OUTPUT_SCHEMA
-   3. Add metadata (export date, source system)
-   4. Write to Parquet format
-   5. Create summary statistics
+ 1. Calculate composite quality score (0-100)
+ 2. Prepare columns per PARQUET_OUTPUT_SCHEMA
+ 3. Add metadata (export date, source system)
+ 4. Write to Parquet format
+ 5. Create summary statistics
 ```
 
 ---
@@ -243,13 +243,13 @@ For each record:
 
 **Key Methods**:
 ```python
-loader.load_raw()                           # Load CSV
-loader.filter_by_state('MN')                # State filter
-loader.filter_by_naics_codes(['722513'])    # Industry filter
-loader.filter_by_zip_codes(['55401', ...])  # Geographic filter
-loader.filter_active_only(year_threshold=2015)  # Active establishments
-loader.get_geopandas_gdf()                  # Convert to spatial format
-loader.get_pipeline_ready(naics_codes, zip_codes)  # Complete workflow
+loader.load_raw() # Load CSV
+loader.filter_by_state('MN') # State filter
+loader.filter_by_naics_codes(['722513']) # Industry filter
+loader.filter_by_zip_codes(['55401', ...]) # Geographic filter
+loader.filter_active_only(year_threshold=2015) # Active establishments
+loader.get_geopandas_gdf() # Convert to spatial format
+loader.get_pipeline_ready(naics_codes, zip_codes) # Complete workflow
 ```
 
 ### 2. bayesian_employee_estimator.py
@@ -267,21 +267,21 @@ estimator.estimate_from_building_area(area_sqm, naics)
 estimator.estimate_from_job_postings(postings_6m, postings_peak, naics)
 estimator.ensemble_estimate(estimates, weights)
 estimator.estimate(record, linkedin_headcount, review_count_3m, ...)
-estimator.process_batch(df, naics_code)    # Batch processing
+estimator.process_batch(df, naics_code) # Batch processing
 ```
 
 **Output Example**:
 ```python
 EmployeeEstimate(
-    duns_id='123456789',
-    company_name='McDonald\'s (123 Main St)',
-    point_estimate=18.5,
-    ci_lower=15.2,
-    ci_upper=22.1,
-    confidence_level='high',
-    estimation_method='xgboost',
-    primary_signal='linkedin',
-    signals_used=['linkedin', 'review_velocity', 'building_area']
+ duns_id='123456789',
+ company_name='McDonald\'s (123 Main St)',
+ point_estimate=18.5,
+ ci_lower=15.2,
+ ci_upper=22.1,
+ confidence_level='high',
+ estimation_method='xgboost',
+ primary_signal='linkedin',
+ signals_used=['linkedin', 'review_velocity', 'building_area']
 )
 ```
 
@@ -306,17 +306,17 @@ detector.process_batch(df)
 **Output Example**:
 ```python
 SurvivalEstimate(
-    duns_id='123456789',
-    company_name='McDonald\'s (123 Main St)',
-    is_active_prob=0.87,
-    confidence_level='high',
-    last_review_date='2025-01-15',
-    days_since_last_review=14,
-    review_decay_rate=1.05,
-    risk_factors=[''],
-    protective_factors=['Recent review (14 days ago)', 'Active hiring'],
-    primary_indicator='review_recency',
-    signals_used=['review_recency', 'review_decay', 'job_postings']
+ duns_id='123456789',
+ company_name='McDonald\'s (123 Main St)',
+ is_active_prob=0.87,
+ confidence_level='high',
+ last_review_date='2025-01-15',
+ days_since_last_review=14,
+ review_decay_rate=1.05,
+ risk_factors=[''],
+ protective_factors=['Recent review (14 days ago)', 'Active hiring'],
+ primary_indicator='review_recency',
+ signals_used=['review_recency', 'review_decay', 'job_postings']
 )
 ```
 
@@ -328,14 +328,14 @@ SurvivalEstimate(
 **Execution Workflow**:
 ```python
 pipeline = NETSDataPipeline(
-    nets_csv_path='data/raw/nets_minneapolis.csv',
-    output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
+ nets_csv_path='data/raw/nets_minneapolis.csv',
+ output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
 )
 
 output_file = pipeline.run(
-    linkedin_data='data/external/linkedin.csv',
-    outscraper_data='data/external/outscraper_reviews.csv',
-    job_postings_data='data/external/indeed_postings.csv'
+ linkedin_data='data/external/linkedin.csv',
+ outscraper_data='data/external/outscraper_reviews.csv',
+ job_postings_data='data/external/indeed_postings.csv'
 )
 ```
 
@@ -397,27 +397,27 @@ output_file = pipeline.run(
 **Example Row**:
 ```python
 {
-    'duns_id': '123456789',
-    'company_name': 'McDonald\'s - Downtown',
-    'street_address': '123 Main Street',
-    'city': 'Minneapolis',
-    'state': 'MN',
-    'zip_code': '55401',
-    'latitude': 44.9780,
-    'longitude': -93.2650,
-    'naics_code': '722513',
-    'employees_optimized': 18.5,
-    'employees_ci_lower': 15.2,
-    'employees_ci_upper': 22.1,
-    'employees_confidence': 'high',
-    'is_active_prob': 0.87,
-    'is_active_confidence': 'high',
-    'last_review_date': '2025-01-15',
-    'days_since_last_review': 14,
-    'review_decay_rate': 1.05,
-    'data_quality_score': 87,
-    'data_sources_used': '["nets", "linkedin", "outscraper", "indeed"]',
-    'data_export_date': '2025-01-29T15:30:00Z'
+ 'duns_id': '123456789',
+ 'company_name': 'McDonald\'s - Downtown',
+ 'street_address': '123 Main Street',
+ 'city': 'Minneapolis',
+ 'state': 'MN',
+ 'zip_code': '55401',
+ 'latitude': 44.9780,
+ 'longitude': -93.2650,
+ 'naics_code': '722513',
+ 'employees_optimized': 18.5,
+ 'employees_ci_lower': 15.2,
+ 'employees_ci_upper': 22.1,
+ 'employees_confidence': 'high',
+ 'is_active_prob': 0.87,
+ 'is_active_confidence': 'high',
+ 'last_review_date': '2025-01-15',
+ 'days_since_last_review': 14,
+ 'review_decay_rate': 1.05,
+ 'data_quality_score': 87,
+ 'data_sources_used': '["nets", "linkedin", "outscraper", "indeed"]',
+ 'data_export_date': '2025-01-29T15:30:00Z'
 }
 ```
 
@@ -506,25 +506,25 @@ streamlit run dashboard/app.py
 ## Next Steps
 
 1. **Integrate External Data Sources**
-   - LinkedIn: Develop secure company profile scraper
-   - Outscraper: Set up API account for unlimited reviews
-   - Indeed: Job posting historical data pipeline
-   - OSM: Download building footprints for Minneapolis
+ - LinkedIn: Develop secure company profile scraper
+ - Outscraper: Set up API account for unlimited reviews
+ - Indeed: Job posting historical data pipeline
+ - OSM: Download building footprints for Minneapolis
 
 2. **Calibration & Validation**
-   - Compare estimates vs. LinkedIn public data (if available)
-   - Manual verification of 100 random establishments
-   - Wayback Machine validation of establishment dates
-   - Survival detection comparison vs. Google Maps "Permanently Closed" labels
+ - Compare estimates vs. LinkedIn public data (if available)
+ - Manual verification of 100 random establishments
+ - Wayback Machine validation of establishment dates
+ - Survival detection comparison vs. Google Maps "Permanently Closed" labels
 
 3. **Production Deployment**
-   - Cloud infrastructure (AWS S3 for data storage)
-   - Scheduled daily/weekly updates
-   - Error alerting and monitoring
-   - Cost optimization (API budgets)
+ - Cloud infrastructure (AWS S3 for data storage)
+ - Scheduled daily/weekly updates
+ - Error alerting and monitoring
+ - Cost optimization (API budgets)
 
 4. **Extended Capabilities**
-   - Monthly time-series tracking (historical archive)
-   - Network analysis (supply chain dependencies)
-   - Real estate integration (lease expiration indicators)
-   - Equity impact analysis (underserved neighborhood mapping)
+ - Monthly time-series tracking (historical archive)
+ - Network analysis (supply chain dependencies)
+ - Real estate integration (lease expiration indicators)
+ - Equity impact analysis (underserved neighborhood mapping)

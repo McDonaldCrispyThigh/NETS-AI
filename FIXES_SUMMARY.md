@@ -11,7 +11,7 @@
 
 **Solution**: Fixed and verified:
 - [OK] **name**: 5/5 entries populated
-- [OK] **address**: 5/5 entries populated  
+- [OK] **address**: 5/5 entries populated 
 - [OK] **website**: 5/5 entries populated
 - [OK] **google_url**: 5/5 entries populated
 - [OK] **google_rating**: 5/5 entries populated
@@ -37,9 +37,9 @@
 - Verified Google Maps API returns consistent results
 - Tested 3 consecutive runs of same query
 - **Result**: 100% consistency achieved
-  - Run 1: 60 unique places
-  - Run 2: 60 unique places (0 differences)
-  - Run 3: 60 unique places (0 differences)
+ - Run 1: 60 unique places
+ - Run 2: 60 unique places (0 differences)
+ - Run 3: 60 unique places (0 differences)
 
 ---
 
@@ -65,15 +65,15 @@ The agent now:
 
 ### Pipeline Run: 5 Businesses
 ```
-Input:  Minneapolis coffee shops (all ZIP codes)
-Limit:  5 businesses for testing
+Input: Minneapolis coffee shops (all ZIP codes)
+Limit: 5 businesses for testing
 Output: data/processed/ai_bdd_Minneapolis_coffee_20260129_150943.csv
 
 Results:
-  Total businesses processed: 5
-  High confidence records: 3/5
-  All required fields populated: Yes
-  CSV columns: 43
+ Total businesses processed: 5
+ High confidence records: 3/5
+ All required fields populated: Yes
+ CSV columns: 43
 ```
 
 ### Sample Data
@@ -101,9 +101,9 @@ Results:
 ### Known Limitations
 1. **Phone numbers**: Not always available from Google Maps API (4/5 in test)
 2. **LinkedIn data**: LinkedIn timeouts affect employee count (1/5 in test)
-   - This is a LinkedIn page loading issue, not a data collection issue
+ - This is a LinkedIn page loading issue, not a data collection issue
 3. **Review count**: Limited to 5 most recent from Google Maps API
-   - Future: Outscraper API integration will provide all reviews
+ - Future: Outscraper API integration will provide all reviews
 
 ---
 
@@ -116,7 +116,7 @@ Results:
 
 ### `requirements.txt` (Updated)
 ```
-outscraper==1.2.0  # (was 6.0.1 - version incompatibility resolved)
+outscraper==1.2.0 # (was 6.0.1 - version incompatibility resolved)
 ```
 
 ### `scripts/03_complete_pipeline.py` (No Changes Needed)
@@ -134,8 +134,8 @@ python -c "
 from src.agents.google_maps_agent import GoogleMapsAgent
 agent = GoogleMapsAgent()
 for i in range(3):
-    results = agent.search_places('coffee in 55401, Minneapolis, MN')
-    print(f'Run {i+1}: {len(set(r.get('place_id') for r in results))} unique places')
+ results = agent.search_places('coffee in 55401, Minneapolis, MN')
+ print(f'Run {i+1}: {len(set(r.get('place_id') for r in results))} unique places')
 "
 
 # Result: All runs return 60 unique places - 100% consistent
@@ -156,9 +156,9 @@ When the Outscraper library API stabilizes, can replace GoogleMapsAgent with:
 # Future implementation
 client = OutscraperClient(api_key=OUTSCRAPER_API_KEY)
 results = client.google_maps_search(
-    query=[query],
-    limit=limit,
-    language='en'
+ query=[query],
+ limit=limit,
+ language='en'
 )
 ```
 

@@ -1,6 +1,7 @@
 """
 NETS Pipeline Runner - Execute complete data processing workflow
 Complete end-to-end processing from NETS CSV to Parquet export
+Supports both production and test modes
 """
 
 import argparse
@@ -26,32 +27,56 @@ def create_argument_parser():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Run with sample data
-  python run_pipeline.py --input data/raw/nets_minneapolis_sample.csv
+    # Run with real NETS data
+    python run_pipeline.py --input data/raw/nets_minneapolis_full.csv
 
-  # Run with real NETS data and custom output
-  python run_pipeline.py \\
-    --input data/raw/nets_minneapolis_full.csv \\
-    --output data/processed/nets_enhanced_20260130.parquet \\
-    --validate \\
-    --verbose
+    # Run in test mode
+    python run_pipeline.py --test
 
-  # Run with specific NAICS codes
-  python run_pipeline.py \\
-    --input data/raw/nets.csv \\
-    --naics 722513 446110
+    # Test with verbose logging
+    python run_pipeline.py --test --verbose --validate
 
-  # Generate sample data first, then run pipeline
-  python scripts/generate_sample_data.py
-  python run_pipeline.py --input data/raw/nets_minneapolis_sample.csv --dashboard
+    # Skip expensive operations in test mode
+    python run_pipeline.py --test --skip employees survival
+
+    # Production with custom output
+    python run_pipeline.py \\
+        --input data/raw/nets_minneapolis_full.csv \\
+        --output data/processed/nets_enhanced_20260130.parquet \\
+        --validate \\
+        --verbose
+
+    # Production, skip external API calls
+    python run_pipeline.py \\
+        --input data/raw/nets.csv \\
+        --skip gpt wayback linkedin
+
+    # Custom NAICS codes
+    python run_pipeline.py \\
+        --input data/raw/nets.csv \\
+        --naics 722513 446110 541511
         """
+    )
+    
+    parser.add_argument(
+        '--test',
+        action='store_true',
+        help='Run in test mode (skips expensive operations, uses minimal data)'
+    )
+    
+    parser.add_argument(
+        '--skip',
+        type=str,
+        nargs='+',
+        default=[],
+        help='Skip specific operations: gpt, wayback, linkedin, gmaps, survival, employees'
     )
     
     parser.add_argument(
         '--input', '-i',
         type=str,
-        required=True,
-        help='Path to input NETS CSV file'
+        default=None,
+        help='Path to input NETS CSV file (required unless using --test with test data)'
     )
     
     parser.add_argument(
@@ -114,13 +139,32 @@ def validate_input(input_path: str) -> bool:
         return False
 
 
+def get_test_fixture_path() -> Path:
+    """Get path to test data file"""
+    test_paths = [
+        Path("tests/fixtures/nets_test_data.csv"),
+        Path("tests/fixtures/nets_test_fixture_small.csv"),  # Legacy support
+    ]
+    
+    for test_path in test_paths:
+        if test_path.exists():
+            return test_path
+    
+    logger.warning("Test data not found at expected locations:")
+    for p in test_paths:
+        logger.warning(f"  - {p}")
+    logger.info("Place your test CSV at: tests/fixtures/nets_test_data.csv")
+    return None
+
+
 def run_pipeline(
     input_path: str,
     output_path: str,
     naics_codes: list,
     validate: bool = False,
     sample_size: int = None,
-    verbose: bool = False
+    verbose: bool = False,
+    skip_operations: list = None
 ) -> bool:
     """
     Run the NETS data enhancement pipeline
@@ -132,15 +176,21 @@ def run_pipeline(
         validate: Whether to run validation
         sample_size: Optional limit on records
         verbose: Enable verbose logging
-        
+        skip_operations: List of operations to skip (e.g., ['gpt', 'wayback'])
+    
     Returns:
         True if successful, False otherwise
     """
+    skip_operations = skip_operations or []
+    
     try:
         logger.info("="*70)
         logger.info("NETS BUSINESS DATA ENHANCEMENT PIPELINE")
         logger.info("="*70)
         logger.info(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        if skip_operations:
+            logger.info(f"[SKIPPING]: {', '.join(skip_operations)}")
         
         # Validate input
         if not validate_input(input_path):
@@ -178,26 +228,34 @@ def run_pipeline(
         gdf = pipeline.create_geodataframe()
         logger.info(f"GeoDataFrame created with {len(gdf)} geometries")
         
-        # Estimate employees
-        logger.info("\nPhase 3: Estimating employee counts...")
-        df_with_employees = pipeline.estimate_employees()
-        logger.info(f"Employee estimates completed")
-        logger.info(f"  Mean employees: {df_with_employees['employees_optimized'].mean():.1f}")
-        logger.info(f"  Median employees: {df_with_employees['employees_optimized'].median():.1f}")
+        # Estimate employees (skip if requested)
+        if 'employees' not in skip_operations:
+            logger.info("\nPhase 3: Estimating employee counts...")
+            df_with_employees = pipeline.estimate_employees()
+            logger.info(f"Employee estimates completed")
+            logger.info(f" Mean employees: {df_with_employees['employees_optimized'].mean():.1f}")
+            logger.info(f" Median employees: {df_with_employees['employees_optimized'].median():.1f}")
+        else:
+            logger.info("\nPhase 3: [SKIPPED] Employee estimation")
+            df_with_employees = pipeline.df
         
-        # Detect survival status
-        logger.info("\nPhase 4: Detecting business survival status...")
-        df_with_survival = pipeline.detect_survival_status()
-        active_pct = (df_with_survival['is_active_prob'] > 0.7).sum() / len(df_with_survival) * 100
-        logger.info(f"Survival detection completed")
-        logger.info(f"  Likely active (>0.7): {active_pct:.1f}%")
+        # Detect survival status (skip if requested)
+        if 'survival' not in skip_operations:
+            logger.info("\nPhase 4: Detecting business survival status...")
+            df_with_survival = pipeline.detect_survival_status()
+            active_pct = (df_with_survival['is_active_prob'] > 0.7).sum() / len(df_with_survival) * 100
+            logger.info(f"Survival detection completed")
+            logger.info(f" Likely active (>0.7): {active_pct:.1f}%")
+        else:
+            logger.info("\nPhase 4: [SKIPPED] Survival detection")
+            df_with_survival = pipeline.df
         
         # Calculate quality score
         logger.info("\nPhase 5: Calculating data quality scores...")
         df_with_quality = pipeline.calculate_composite_quality_score()
         avg_quality = df_with_quality['data_quality_score'].mean()
         logger.info(f"Quality calculation completed")
-        logger.info(f"  Average quality score: {avg_quality:.1f}/100")
+        logger.info(f" Average quality score: {avg_quality:.1f}/100")
         
         # Prepare and export
         logger.info("\nPhase 6: Preparing Parquet output...")
@@ -205,7 +263,7 @@ def run_pipeline(
         
         logger.info(f"Exporting to {output_path}...")
         pipeline.export_parquet(df_output)
-        logger.info("✓ Export completed successfully")
+        logger.info("[OK] Export completed successfully")
         
         # Validation
         if validate:
@@ -216,7 +274,7 @@ def run_pipeline(
             if not is_valid:
                 logger.warning(f"Missing columns: {missing_cols}")
             else:
-                logger.info("✓ All required columns present")
+                logger.info("[OK] All required columns present")
         
         # Summary statistics
         logger.info("\n" + "="*70)
@@ -250,7 +308,7 @@ def launch_dashboard(parquet_path: str):
     except Exception as e:
         logger.error(f"Failed to launch dashboard: {e}")
         logger.info("You can manually start the dashboard with:")
-        logger.info("  streamlit run dashboard/app.py")
+        logger.info(" streamlit run dashboard/app.py")
 
 
 def main():
@@ -264,6 +322,35 @@ def main():
     
     logger.info(f"Command line arguments: {args}")
     
+    # Handle test mode
+    if args.test:
+        logger.info("\n" + "="*70)
+        logger.info("RUNNING IN TEST MODE")
+        logger.info("="*70)
+        
+        if args.skip:
+            logger.info(f"Skipping operations: {', '.join(args.skip)}")
+        
+        # If no input specified in test mode, use test fixture
+        if args.input is None:
+            test_fixture = get_test_fixture_path()
+            if test_fixture is None:
+                logger.error("Test mode requires either --input or test fixture at tests/fixtures/")
+                logger.error("Place your test CSV at: tests/fixtures/nets_test_data.csv")
+                return 1
+            args.input = str(test_fixture)
+        
+        args.output = "data/processed/nets_test_output.parquet"
+        logger.info(f"Test input: {args.input}")
+        logger.info(f"Test output: {args.output}\n")
+    
+    # Validate input
+    if args.input is None:
+        logger.error("Error: --input argument is required")
+        logger.error("Usage: python run_pipeline.py --input data/raw/nets.csv")
+        logger.error("   Or: python run_pipeline.py --test  (uses test data)")
+        return 1
+    
     # Run pipeline
     success = run_pipeline(
         input_path=args.input,
@@ -271,22 +358,23 @@ def main():
         naics_codes=args.naics,
         validate=args.validate,
         sample_size=args.sample_size,
-        verbose=args.verbose
+        verbose=args.verbose,
+        skip_operations=args.skip
     )
     
     if success:
-        logger.info("\n✓ Pipeline completed successfully!")
+        logger.info("\nPipeline completed successfully!")
         
         # Launch dashboard if requested
         if args.dashboard:
             launch_dashboard(args.output)
         else:
             logger.info("\nTo view results, run:")
-            logger.info(f"  streamlit run dashboard/app.py")
+            logger.info(f" streamlit run dashboard/app.py")
         
         return 0
     else:
-        logger.error("\n✗ Pipeline execution failed!")
+        logger.error("\nPipeline execution failed!")
         return 1
 
 

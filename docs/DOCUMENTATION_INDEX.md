@@ -30,8 +30,8 @@ Complete reference guide to all project documentation
 ## Document Descriptions
 
 ### README.md
-**Purpose**: Project overview and quick reference  
-**Audience**: All users  
+**Purpose**: Project overview and quick reference 
+**Audience**: All users 
 **Contains**:
 - Project vision and objectives
 - Pipeline architecture overview
@@ -45,8 +45,8 @@ Complete reference guide to all project documentation
 ---
 
 ### PROJECT_REALIGNMENT_SUMMARY.md
-**Purpose**: Changelog and high-level overview of modifications  
-**Audience**: Project stakeholders, developers  
+**Purpose**: Changelog and high-level overview of modifications 
+**Audience**: Project stakeholders, developers 
 **Contains**:
 - What changed from previous version
 - New features summary
@@ -60,17 +60,17 @@ Complete reference guide to all project documentation
 ---
 
 ### docs/ARCHITECTURE.md (CORE DOCUMENTATION)
-**Purpose**: Complete system architecture and design specifications  
-**Audience**: Developers, technical stakeholders  
+**Purpose**: Complete system architecture and design specifications 
+**Audience**: Developers, technical stakeholders 
 **Contains**:
 - System overview and scope definition
 - Complete pipeline architecture with diagrams
 - Data flow walkthrough (6 phases)
 - Module specifications:
-  - nets_loader.py
-  - bayesian_employee_estimator.py
-  - survival_detector.py
-  - pipeline.py
+ - nets_loader.py
+ - bayesian_employee_estimator.py
+ - survival_detector.py
+ - pipeline.py
 - Output schema (Parquet columns + example records)
 - Compliance and quality standards
 - Quick start guide
@@ -80,8 +80,8 @@ Complete reference guide to all project documentation
 ---
 
 ### docs/QUICK_REFERENCE.md (DAILY WORKFLOW)
-**Purpose**: Essential commands and daily operations guide  
-**Audience**: Data engineers, analysts  
+**Purpose**: Essential commands and daily operations guide 
+**Audience**: Data engineers, analysts 
 **Contains**:
 - Directory structure
 - Installation instructions
@@ -99,8 +99,8 @@ Complete reference guide to all project documentation
 ---
 
 ### src/config.py (CONFIGURATION)
-**Purpose**: Centralized configuration and baselines  
-**Audience**: Developers, analysts  
+**Purpose**: Centralized configuration and baselines 
+**Audience**: Developers, analysts 
 **Contains**:
 - Geographic boundaries (Minneapolis ZIP codes)
 - Industry configuration (NAICS 722513, 446110)
@@ -119,20 +119,20 @@ Complete reference guide to all project documentation
 ---
 
 ### src/data/nets_loader.py (DATA LOADING)
-**Purpose**: Load, filter, and validate NETS establishment data  
+**Purpose**: Load, filter, and validate NETS establishment data 
 **Key Classes**:
 - `NETSLoader`: Main data loading and filtering
 - `NETSValidator`: Data quality verification
 
 **Key Methods**:
 ```python
-loader.load_raw()                    # Load CSV
-loader.filter_by_state('MN')         # Filter by state
-loader.filter_by_naics_codes(['722513'])  # Filter by industry
-loader.filter_by_zip_codes([...])    # Filter by geography
-loader.filter_active_only(2015)      # Filter to likely active
-loader.get_geopandas_gdf()           # Convert to spatial format
-loader.get_pipeline_ready(...)       # Complete workflow
+loader.load_raw() # Load CSV
+loader.filter_by_state('MN') # Filter by state
+loader.filter_by_naics_codes(['722513']) # Filter by industry
+loader.filter_by_zip_codes([...]) # Filter by geography
+loader.filter_active_only(2015) # Filter to likely active
+loader.get_geopandas_gdf() # Convert to spatial format
+loader.get_pipeline_ready(...) # Complete workflow
 ```
 
 **Usage Example**:
@@ -141,9 +141,9 @@ from src.data.nets_loader import NETSLoader
 
 loader = NETSLoader('data/raw/nets_minneapolis.csv')
 df = loader.get_pipeline_ready(
-    naics_codes=['722513', '446110'],
-    zip_codes=['55401', '55402', ...],
-    filter_active=True
+ naics_codes=['722513', '446110'],
+ zip_codes=['55401', '55402', ...],
+ filter_active=True
 )
 print(f"Ready for pipeline: {len(df)} records")
 ```
@@ -151,7 +151,7 @@ print(f"Ready for pipeline: {len(df)} records")
 ---
 
 ### src/models/bayesian_employee_estimator.py (EMPLOYEE ESTIMATION)
-**Purpose**: Estimate employee counts with confidence intervals  
+**Purpose**: Estimate employee counts with confidence intervals 
 **Key Class**:
 - `EmployeeEstimator`: Multi-signal ensemble estimator
 - `EmployeeEstimate`: Result dataclass
@@ -170,12 +170,12 @@ from src.config import EMPLOYEE_ESTIMATION_BASELINES
 estimator = EmployeeEstimator(EMPLOYEE_ESTIMATION_BASELINES)
 
 estimate = estimator.estimate(
-    record={'duns_id': '123', 'company_name': 'McDonald\'s'},
-    naics_code='722513',
-    linkedin_headcount=18,
-    review_count_3m=45,
-    review_count_6_12m=80,
-    building_area_sqm=500
+ record={'duns_id': '123', 'company_name': 'McDonald\'s'},
+ naics_code='722513',
+ linkedin_headcount=18,
+ review_count_3m=45,
+ review_count_6_12m=80,
+ building_area_sqm=500
 )
 
 print(f"Estimated employees: {estimate.point_estimate} ({estimate.ci_lower}-{estimate.ci_upper})")
@@ -185,7 +185,7 @@ print(f"Confidence: {estimate.confidence_level}")
 ---
 
 ### src/models/survival_detector.py (SURVIVAL DETECTION)
-**Purpose**: Detect business operational status and closure probability  
+**Purpose**: Detect business operational status and closure probability 
 **Key Class**:
 - `SurvivalDetector`: Multi-signal survival scorer
 - `SurvivalEstimate`: Result dataclass
@@ -203,12 +203,12 @@ from src.models.survival_detector import SurvivalDetector
 detector = SurvivalDetector()
 
 estimate = detector.estimate(
-    record={'duns_id': '123', 'company_name': 'McDonald\'s'},
-    last_review_date='2025-01-15',
-    review_count_3m=45,
-    review_count_6_12m=80,
-    job_postings_6m=3,
-    job_postings_peak=5
+ record={'duns_id': '123', 'company_name': 'McDonald\'s'},
+ last_review_date='2025-01-15',
+ review_count_3m=45,
+ review_count_6_12m=80,
+ job_postings_6m=3,
+ job_postings_peak=5
 )
 
 print(f"Survival probability: {estimate.is_active_prob:.2f}")
@@ -219,7 +219,7 @@ print(f"Risk factors: {estimate.risk_factors}")
 ---
 
 ### src/data/pipeline.py (ORCHESTRATION)
-**Purpose**: End-to-end pipeline orchestration  
+**Purpose**: End-to-end pipeline orchestration 
 **Key Class**:
 - `NETSDataPipeline`: Main pipeline controller
 
@@ -237,14 +237,14 @@ print(f"Risk factors: {estimate.risk_factors}")
 from src.data.pipeline import NETSDataPipeline
 
 pipeline = NETSDataPipeline(
-    nets_csv_path='data/raw/nets_minneapolis.csv',
-    output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
+ nets_csv_path='data/raw/nets_minneapolis.csv',
+ output_parquet_path='data/processed/nets_ai_minneapolis.parquet'
 )
 
 output_file = pipeline.run(
-    linkedin_data='data/external/linkedin_headcount.csv',
-    outscraper_data='data/external/outscraper_reviews.csv',
-    job_postings_data='data/external/indeed_postings.csv'
+ linkedin_data='data/external/linkedin_headcount.csv',
+ outscraper_data='data/external/outscraper_reviews.csv',
+ job_postings_data='data/external/indeed_postings.csv'
 )
 
 print(f"Output: {output_file}")
@@ -253,7 +253,7 @@ print(f"Output: {output_file}")
 ---
 
 ### dashboard/app.py (VISUALIZATION)
-**Purpose**: Interactive Streamlit dashboard  
+**Purpose**: Interactive Streamlit dashboard 
 **Features**:
 - 5 tabs: Maps, Employees, Survival, Quality, Details
 - Folium heatmaps (employees and survival probability)
@@ -368,7 +368,7 @@ All code includes comprehensive docstrings, type hints, and inline comments.
 
 ## Document Version
 
-**Created**: January 29, 2025  
-**Project**: NETS Business Data Enhancement System  
-**Version**: 1.0  
+**Created**: January 29, 2025 
+**Project**: NETS Business Data Enhancement System 
+**Version**: 1.0 
 **Status**: Production Ready

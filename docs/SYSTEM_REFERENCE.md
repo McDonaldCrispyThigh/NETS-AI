@@ -32,56 +32,56 @@
 
 ```python
 def __init__(self):
-    """
-    Initialize Google Maps client
-    
-    Input: None (reads GOOGLE_MAPS_API_KEY from environment)
-    Output: GoogleMapsAgent instance
-    
-    Raises: Warning if API key missing
-    """
+ """
+ Initialize Google Maps client
+ 
+ Input: None (reads GOOGLE_MAPS_API_KEY from environment)
+ Output: GoogleMapsAgent instance
+ 
+ Raises: Warning if API key missing
+ """
 
 def search_places(self, query: str) -> list:
-    """
-    Search for places with automatic pagination
-    
-    Input:
-        query (str): Search query (e.g., "coffee shops in Minneapolis 55401")
-        
-    Output:
-        list: Array of place objects, each containing:
-            - place_id (str): Unique identifier
-            - name (str): Business name
-            - formatted_address (str): Full address
-            - geometry (dict): {location: {lat: float, lng: float}}
-            
-    Implementation:
-        - Handles up to 5 pages (60 results per query)
-        - Automatic retry with exponential backoff for pagination tokens
-        - 2-5 second delays between page requests
-    """
+ """
+ Search for places with automatic pagination
+ 
+ Input:
+ query (str): Search query (e.g., "coffee shops in Minneapolis 55401")
+ 
+ Output:
+ list: Array of place objects, each containing:
+ - place_id (str): Unique identifier
+ - name (str): Business name
+ - formatted_address (str): Full address
+ - geometry (dict): {location: {lat: float, lng: float}}
+ 
+ Implementation:
+ - Handles up to 5 pages (60 results per query)
+ - Automatic retry with exponential backoff for pagination tokens
+ - 2-5 second delays between page requests
+ """
 
 def get_place_details(self, place_id: str) -> dict:
-    """
-    Retrieve comprehensive place details
-    
-    Input:
-        place_id (str): Google Maps place identifier
-        
-    Output:
-        dict: Detailed place information including:
-            - name, formatted_address, formatted_phone_number
-            - website, url (Google Maps link)
-            - rating (float), user_ratings_total (int)
-            - reviews (list): Array of review objects with:
-                * author_name, rating, text, time (UNIX timestamp)
-            - opening_hours (dict): weekday_text, open_now
-            - geometry.location: {lat, lng}
-            - types (list): Place type classifications
-            - serves_* (bool): Service attributes
-            
-    Fields Parameter: Requests extensive field list to maximize data retrieval
-    """
+ """
+ Retrieve comprehensive place details
+ 
+ Input:
+ place_id (str): Google Maps place identifier
+ 
+ Output:
+ dict: Detailed place information including:
+ - name, formatted_address, formatted_phone_number
+ - website, url (Google Maps link)
+ - rating (float), user_ratings_total (int)
+ - reviews (list): Array of review objects with:
+ * author_name, rating, text, time (UNIX timestamp)
+ - opening_hours (dict): weekday_text, open_now
+ - geometry.location: {lat, lng}
+ - types (list): Place type classifications
+ - serves_* (bool): Service attributes
+ 
+ Fields Parameter: Requests extensive field list to maximize data retrieval
+ """
 ```
 
 **Cost**: $0.032 per search, $0.017 per details request
@@ -97,100 +97,100 @@ def get_place_details(self, place_id: str) -> dict:
 
 ```python
 def __init__(self, user_agent: str = "AI-BDD-Research/1.0"):
-    """
-    Initialize Wayback Machine API client
-    
-    Input:
-        user_agent (str): Custom user agent for API requests
-        
-    Output: WaybackAgent instance
-    
-    Configuration: Sets 15-second timeout, 1-second delay between requests
-    """
+ """
+ Initialize Wayback Machine API client
+ 
+ Input:
+ user_agent (str): Custom user agent for API requests
+ 
+ Output: WaybackAgent instance
+ 
+ Configuration: Sets 15-second timeout, 1-second delay between requests
+ """
 
 def get_first_snapshot(self, url: str) -> dict:
-    """
-    Retrieve earliest archived snapshot of a website
-    
-    Input:
-        url (str): Website URL to query
-        
-    Output:
-        dict or None:
-            - date (datetime): Snapshot date
-            - url (str): Archive.org snapshot URL
-            - timestamp (str): CDX timestamp format (YYYYMMDDHHmmss)
-            - year (int): Extracted year
-            
-    Returns None if: No snapshots exist or API error
-    
-    Application: Validate claimed establishment year
-    """
+ """
+ Retrieve earliest archived snapshot of a website
+ 
+ Input:
+ url (str): Website URL to query
+ 
+ Output:
+ dict or None:
+ - date (datetime): Snapshot date
+ - url (str): Archive.org snapshot URL
+ - timestamp (str): CDX timestamp format (YYYYMMDDHHmmss)
+ - year (int): Extracted year
+ 
+ Returns None if: No snapshots exist or API error
+ 
+ Application: Validate claimed establishment year
+ """
 
 def get_last_snapshot(self, url: str) -> dict:
-    """
-    Retrieve most recent archived snapshot
-    
-    Input:
-        url (str): Website URL
-        
-    Output:
-        dict or None: Same structure as get_first_snapshot()
-        
-    Application: Detect website abandonment, estimate closure timing
-    """
+ """
+ Retrieve most recent archived snapshot
+ 
+ Input:
+ url (str): Website URL
+ 
+ Output:
+ dict or None: Same structure as get_first_snapshot()
+ 
+ Application: Detect website abandonment, estimate closure timing
+ """
 
 def validate_establishment_year(self, url: str, claimed_year: int) -> dict:
-    """
-    Cross-validate claimed founding year with web archive
-    
-    Input:
-        url (str): Business website
-        claimed_year (int): Year business claims to have been established
-        
-    Output:
-        dict:
-            - is_validated (bool): True if first snapshot ≤ claimed_year
-            - first_snapshot_year (int or None): Actual year of first archive
-            - year_difference (int): claimed_year - first_snapshot_year
-            - confidence (str): "High", "Medium", "Low", or "No Data"
-            
-    Confidence Rules:
-        - High: |difference| ≤ 1 year
-        - Medium: 1 < |difference| ≤ 3 years
-        - Low: |difference| > 3 years
-    """
+ """
+ Cross-validate claimed founding year with web archive
+ 
+ Input:
+ url (str): Business website
+ claimed_year (int): Year business claims to have been established
+ 
+ Output:
+ dict:
+ - is_validated (bool): True if first snapshot claimed_year
+ - first_snapshot_year (int or None): Actual year of first archive
+ - year_difference (int): claimed_year - first_snapshot_year
+ - confidence (str): "High", "Medium", "Low", or "No Data"
+ 
+ Confidence Rules:
+ - High: |difference| 1 year
+ - Medium: 1 < |difference| 3 years
+ - Low: |difference| > 3 years
+ """
 
 def check_business_active(self, url: str, cutoff_date: datetime) -> dict:
-    """
-    Determine if business was active after specified date
-    
-    Input:
-        url (str): Business website
-        cutoff_date (datetime): Reference date for activity check
-        
-    Output:
-        dict:
-            - is_active (bool): True if last snapshot after cutoff
-            - last_snapshot_date (datetime or None)
-            - days_since_cutoff (int): Days between cutoff and last snapshot
-            - confidence (str): Based on recency
-            
-    Application: Closure detection (e.g., active after 2020-01-01?)
-    """
+ """
+ Determine if business was active after specified date
+ 
+ Input:
+ url (str): Business website
+ cutoff_date (datetime): Reference date for activity check
+ 
+ Output:
+ dict:
+ - is_active (bool): True if last snapshot after cutoff
+ - last_snapshot_date (datetime or None)
+ - days_since_cutoff (int): Days between cutoff and last snapshot
+ - confidence (str): Based on recency
+ 
+ Application: Closure detection (e.g., active after 2020-01-01?)
+ """
 
 def get_snapshot_count(self, url: str) -> int:
-    """
-    Count total archived snapshots for URL
-    
-    Input:
-        url (str): Website URL
-        
-    Output:
-        int: Number of snapshots (0 if none or error)
-        
-    Application: Website activity indicator (high count = established presence)
-    """
+ """
+ Count total archived snapshots for URL
+ 
+ Input:
+ url (str): Website URL
+ 
+ Output:
+ int: Number of snapshots (0 if none or error)
+ 
+ Application: Website activity indicator (high count = established presence)
+ """
 ```
 
 **Cost**: Free (Internet Archive public service)
@@ -206,122 +206,122 @@ def get_snapshot_count(self, url: str) -> int:
 
 ```python
 def __init__(self, model: str = "gpt-4o-mini"):
-    """
-    Initialize OpenAI client
-    
-    Input:
-        model (str): Model identifier (default: gpt-4o-mini)
-        
-    Output: GPTAnalyzer instance
-    
-    Raises: Warning if OPENAI_API_KEY missing
-    
-    Model Specs:
-        - Input: $0.150 per 1M tokens
-        - Output: $0.600 per 1M tokens
-        - Context: 128k tokens
-    """
+ """
+ Initialize OpenAI client
+ 
+ Input:
+ model (str): Model identifier (default: gpt-4o-mini)
+ 
+ Output: GPTAnalyzer instance
+ 
+ Raises: Warning if OPENAI_API_KEY missing
+ 
+ Model Specs:
+ - Input: $0.150 per 1M tokens
+ - Output: $0.600 per 1M tokens
+ - Context: 128k tokens
+ """
 
 def classify_business_status(self, business_data: dict) -> dict:
-    """
-    Classify business operational status
-    
-    Input:
-        business_data (dict): Aggregated business information
-            Required fields:
-                - name, address
-                - google_rating, user_ratings_total, review_count
-                - last_review_date, oldest_review_date
-                - operating_hours, is_open_now
-                - website, website_accessible
-                - wayback_last_snapshot, wayback_snapshot_count
-                
-    Output:
-        dict:
-            - status (str): "Active", "Inactive", or "Uncertain"
-            - confidence (float): 0.0 to 1.0
-            - reasoning (str): Explanation of classification
-            - risk_factors (list): Identified warning signs
-            
-    Prompt Strategy:
-        - Structured JSON output
-        - Evidence-based reasoning
-        - Considers review recency, website status, Wayback activity
-        
-    Classification Criteria:
-        - Active: Recent reviews (<6 months), accessible website, high rating
-        - Inactive: No recent reviews (>12 months), dead website, low Wayback activity
-        - Uncertain: Mixed signals, insufficient data
-    """
+ """
+ Classify business operational status
+ 
+ Input:
+ business_data (dict): Aggregated business information
+ Required fields:
+ - name, address
+ - google_rating, user_ratings_total, review_count
+ - last_review_date, oldest_review_date
+ - operating_hours, is_open_now
+ - website, website_accessible
+ - wayback_last_snapshot, wayback_snapshot_count
+ 
+ Output:
+ dict:
+ - status (str): "Active", "Inactive", or "Uncertain"
+ - confidence (float): 0.0 to 1.0
+ - reasoning (str): Explanation of classification
+ - risk_factors (list): Identified warning signs
+ 
+ Prompt Strategy:
+ - Structured JSON output
+ - Evidence-based reasoning
+ - Considers review recency, website status, Wayback activity
+ 
+ Classification Criteria:
+ - Active: Recent reviews (<6 months), accessible website, high rating
+ - Inactive: No recent reviews (>12 months), dead website, low Wayback activity
+ - Uncertain: Mixed signals, insufficient data
+ """
 
 def estimate_employment(self, business_data: dict) -> dict:
-    """
-    Estimate employee count from observable signals
-    
-    Input:
-        business_data (dict): Business information including:
-            - name, category (e.g., "coffee shop")
-            - google_rating, review_count
-            - attributes (e.g., "Takeout, Delivery, Dine-in")
-            - operating_hours
-            
-    Output:
-        dict:
-            - min_employees (int): Lower bound estimate
-            - max_employees (int): Upper bound estimate
-            - best_estimate (int): Most likely value
-            - confidence (float): 0.0 to 1.0
-            - reasoning (str): Basis for estimate
-            
-    Estimation Factors:
-        - Business category typical staffing (coffee shop: 3-8, gym: 5-20)
-        - Service offerings (dine-in requires more staff than takeout)
-        - Operating hours (7-day operation suggests larger staff)
-        - Review volume (high traffic implies more employees)
-    """
+ """
+ Estimate employee count from observable signals
+ 
+ Input:
+ business_data (dict): Business information including:
+ - name, category (e.g., "coffee shop")
+ - google_rating, review_count
+ - attributes (e.g., "Takeout, Delivery, Dine-in")
+ - operating_hours
+ 
+ Output:
+ dict:
+ - min_employees (int): Lower bound estimate
+ - max_employees (int): Upper bound estimate
+ - best_estimate (int): Most likely value
+ - confidence (float): 0.0 to 1.0
+ - reasoning (str): Basis for estimate
+ 
+ Estimation Factors:
+ - Business category typical staffing (coffee shop: 3-8, gym: 5-20)
+ - Service offerings (dine-in requires more staff than takeout)
+ - Operating hours (7-day operation suggests larger staff)
+ - Review volume (high traffic implies more employees)
+ """
 
 def verify_naics_classification(self, business_data: dict, 
-                                target_naics: str, definition: str) -> dict:
-    """
-    Verify NAICS code appropriateness
-    
-    Input:
-        business_data (dict): Business information
-            - name, google_types (e.g., ["cafe", "restaurant"])
-            - attributes, review_snippets
-        target_naics (str): Expected NAICS code (e.g., "722515")
-        definition (str): NAICS definition text
-        
-    Output:
-        dict:
-            - is_match (bool): True if business matches target NAICS
-            - actual_naics_suggestion (str): Recommended NAICS if mismatch
-            - confidence (float): 0.0 to 1.0
-            - reasoning (str): Explanation
-            
-    Example:
-        Input: Business labeled "cafe", target NAICS 722515 (snack/coffee shops)
-        Output: {is_match: True, confidence: 0.95, reasoning: "..."}
-        
-        Input: Business labeled "full-service restaurant", target NAICS 722515
-        Output: {is_match: False, actual_naics_suggestion: "722511", ...}
-    """
+ target_naics: str, definition: str) -> dict:
+ """
+ Verify NAICS code appropriateness
+ 
+ Input:
+ business_data (dict): Business information
+ - name, google_types (e.g., ["cafe", "restaurant"])
+ - attributes, review_snippets
+ target_naics (str): Expected NAICS code (e.g., "722515")
+ definition (str): NAICS definition text
+ 
+ Output:
+ dict:
+ - is_match (bool): True if business matches target NAICS
+ - actual_naics_suggestion (str): Recommended NAICS if mismatch
+ - confidence (float): 0.0 to 1.0
+ - reasoning (str): Explanation
+ 
+ Example:
+ Input: Business labeled "cafe", target NAICS 722515 (snack/coffee shops)
+ Output: {is_match: True, confidence: 0.95, reasoning: "..."}
+ 
+ Input: Business labeled "full-service restaurant", target NAICS 722515
+ Output: {is_match: False, actual_naics_suggestion: "722511", ...}
+ """
 
 def analyze_business_comprehensive(self, business_data: dict, 
-                                  target_naics: str, definition: str) -> dict:
-    """
-    Execute all three analyses in single call
-    
-    Input: Combined parameters from above functions
-    
-    Output:
-        dict: Merged results from:
-            - classify_business_status()
-            - estimate_employment()
-            - verify_naics_classification()
-            
-    Note: More cost-effective than three separate API calls when all analyses needed
-    """
+ target_naics: str, definition: str) -> dict:
+ """
+ Execute all three analyses in single call
+ 
+ Input: Combined parameters from above functions
+ 
+ Output:
+ dict: Merged results from:
+ - classify_business_status()
+ - estimate_employment()
+ - verify_naics_classification()
+ 
+ Note: More cost-effective than three separate API calls when all analyses needed
+ """
 ```
 
 **Cost**: ~$0.0005 per business (3 API calls)
@@ -337,25 +337,25 @@ def analyze_business_comprehensive(self, business_data: dict,
 
 ```python
 def setup_logger(name: str, log_level: int = logging.INFO) -> logging.Logger:
-    """
-    Create configured logger instance
-    
-    Input:
-        name (str): Logger identifier
-        log_level (int): Logging level (default: INFO)
-        
-    Output:
-        logging.Logger: Configured logger with:
-            - File handler: logs/{name}_{timestamp}.log
-            - Console handler: stdout
-            - Format: [YYYY-MM-DD HH:MM:SS] LEVEL: message
-            
-    File Location: Automatically creates logs/ directory
-    
-    Usage:
-        logger = setup_logger("AI-BDD-Pipeline")
-        logger.info("Processing started")
-    """
+ """
+ Create configured logger instance
+ 
+ Input:
+ name (str): Logger identifier
+ log_level (int): Logging level (default: INFO)
+ 
+ Output:
+ logging.Logger: Configured logger with:
+ - File handler: logs/{name}_{timestamp}.log
+ - Console handler: stdout
+ - Format: [YYYY-MM-DD HH:MM:SS] LEVEL: message
+ 
+ File Location: Automatically creates logs/ directory
+ 
+ Usage:
+ logger = setup_logger("AI-BDD-Pipeline")
+ logger.info("Processing started")
+ """
 ```
 
 ---
@@ -367,104 +367,104 @@ def setup_logger(name: str, log_level: int = logging.INFO) -> logging.Logger:
 
 ```python
 def check_website_status(url: str, timeout: int = 10) -> dict:
-    """
-    Verify website accessibility
-    
-    Input:
-        url (str): Website URL
-        timeout (int): Request timeout in seconds
-        
-    Output:
-        dict:
-            - status_code (int or None): HTTP status (200, 404, etc.)
-            - accessible (bool): True if status_code == 200
-            - error (str or None): Error message if request failed
-            
-    Implementation: Uses requests library with SSL verification
-    """
+ """
+ Verify website accessibility
+ 
+ Input:
+ url (str): Website URL
+ timeout (int): Request timeout in seconds
+ 
+ Output:
+ dict:
+ - status_code (int or None): HTTP status (200, 404, etc.)
+ - accessible (bool): True if status_code == 200
+ - error (str or None): Error message if request failed
+ 
+ Implementation: Uses requests library with SSL verification
+ """
 
 def parse_review_date(date_str: str) -> datetime:
-    """
-    Convert Google review timestamp to datetime
-    
-    Input:
-        date_str (str): Date string (various formats)
-        
-    Output:
-        datetime or None: Parsed date
-        
-    Supports: ISO format, UNIX timestamps, common date formats
-    """
+ """
+ Convert Google review timestamp to datetime
+ 
+ Input:
+ date_str (str): Date string (various formats)
+ 
+ Output:
+ datetime or None: Parsed date
+ 
+ Supports: ISO format, UNIX timestamps, common date formats
+ """
 
 def is_recent_activity(last_date: str, days_threshold: int = 180) -> bool:
-    """
-    Determine if activity is recent
-    
-    Input:
-        last_date (str): Date string (YYYY-MM-DD)
-        days_threshold (int): Recency cutoff (default: 180 days)
-        
-    Output:
-        bool: True if activity within threshold
-        
-    Application: Identify businesses with recent customer engagement
-    """
+ """
+ Determine if activity is recent
+ 
+ Input:
+ last_date (str): Date string (YYYY-MM-DD)
+ days_threshold (int): Recency cutoff (default: 180 days)
+ 
+ Output:
+ bool: True if activity within threshold
+ 
+ Application: Identify businesses with recent customer engagement
+ """
 
 def calculate_confidence_score(indicators: dict) -> str:
-    """
-    Compute overall data confidence level
-    
-    Input:
-        indicators (dict): Binary indicators
-            - has_recent_reviews (bool)
-            - review_count (int) 
-            - website_accessible (bool)
-            - has_hours (bool)
-            - wayback_verified (bool)
-            
-    Output:
-        str: "High", "Medium", or "Low"
-        
-    Scoring:
-        High: All 5 indicators TRUE, OR review_count > 10 AND 4 indicators TRUE
-        Medium: 3-4 indicators TRUE
-        Low: <3 indicators TRUE
-    """
+ """
+ Compute overall data confidence level
+ 
+ Input:
+ indicators (dict): Binary indicators
+ - has_recent_reviews (bool)
+ - review_count (int) 
+ - website_accessible (bool)
+ - has_hours (bool)
+ - wayback_verified (bool)
+ 
+ Output:
+ str: "High", "Medium", or "Low"
+ 
+ Scoring:
+ High: All 5 indicators TRUE, OR review_count > 10 AND 4 indicators TRUE
+ Medium: 3-4 indicators TRUE
+ Low: <3 indicators TRUE
+ """
 
 def calculate_api_cost(num_places: int, gpt_calls_per_place: int = 3) -> dict:
-    """
-    Estimate total API costs
-    
-    Input:
-        num_places (int): Number of businesses to process
-        gpt_calls_per_place (int): GPT API calls per business
-        
-    Output:
-        dict:
-            - google_search_cost (float)
-            - google_details_cost (float)
-            - gpt_cost (float)
-            - total_cost (float)
-            - formatted_total (str): e.g., "$52.00"
-            
-    Assumptions:
-        - Google Search: $0.032 per query
-        - Google Details: $0.017 per request
-        - GPT: $0.0005 per business (800 tokens avg)
-    """
+ """
+ Estimate total API costs
+ 
+ Input:
+ num_places (int): Number of businesses to process
+ gpt_calls_per_place (int): GPT API calls per business
+ 
+ Output:
+ dict:
+ - google_search_cost (float)
+ - google_details_cost (float)
+ - gpt_cost (float)
+ - total_cost (float)
+ - formatted_total (str): e.g., "$52.00"
+ 
+ Assumptions:
+ - Google Search: $0.032 per query
+ - Google Details: $0.017 per request
+ - GPT: $0.0005 per business (800 tokens avg)
+ """
 
 def normalize_url(url: str) -> str:
-    """
-    Standardize URL format
-    
-    Input:
-        url (str): Raw URL
-        
-    Output:
-        str: Normalized URL (lowercase, strip trailing slash)
-        
-    Application: Consistent Wayback Machine queries
-    """
+ """
+ Standardize URL format
+ 
+ Input:
+ url (str): Raw URL
+ 
+ Output:
+ str: Normalized URL (lowercase, strip trailing slash)
+ 
+ Application: Consistent Wayback Machine queries
+ """
 ```
 
 ---
@@ -481,31 +481,31 @@ TARGET_CITY_NAME = "Minneapolis"
 TARGET_STATE = "MN"
 
 TARGET_ZIP_CODES = [
-    "55401", "55402", "55403", "55404", "55405", 
-    "55406", "55407", "55408", "55417"
+ "55401", "55402", "55403", "55404", "55405", 
+ "55406", "55407", "55408", "55417"
 ]
 
 CATEGORY_CONFIG = {
-    "coffee": {
-        "search_term": "coffee shops",
-        "target_naics": "722515",
-        "definition": "Establishments primarily engaged in preparing and serving specialty snacks and nonalcoholic beverages...",
-        "examples": "coffee shops, espresso bars, cafes"
-    },
-    "gym": {...},
-    "library": {...},
-    # ... 7 categories total
+ "coffee": {
+ "search_term": "coffee shops",
+ "target_naics": "722515",
+ "definition": "Establishments primarily engaged in preparing and serving specialty snacks and nonalcoholic beverages...",
+ "examples": "coffee shops, espresso bars, cafes"
+ },
+ "gym": {...},
+ "library": {...},
+ # ... 7 categories total
 }
 
 DEFAULT_TASK = "coffee"
 
 FINAL_COLUMNS = [
-    "name", "place_id", "address", "phone", "website",
-    "latitude", "longitude", 
-    "google_rating", "user_ratings_total", "review_count",
-    "wayback_first_snapshot", "wayback_snapshot_count",
-    "ai_status", "ai_status_confidence", "ai_employees_estimate",
-    # ... 40+ columns total
+ "name", "place_id", "address", "phone", "website",
+ "latitude", "longitude", 
+ "google_rating", "user_ratings_total", "review_count",
+ "wayback_first_snapshot", "wayback_snapshot_count",
+ "ai_status", "ai_status_confidence", "ai_employees_estimate",
+ # ... 40+ columns total
 ]
 ```
 
@@ -522,93 +522,93 @@ FINAL_COLUMNS = [
 
 ```python
 def main():
-    """
-    Complete execution pipeline
-    
-    Command-line Arguments:
-        --task <category>: Business category (default: coffee)
-        --city <name>: Target city (default: Minneapolis)
-        --list: Display available categories
-        --limit <n>: Process only first n businesses
-        --skip-wayback: Bypass Wayback validation
-        --skip-gpt: Bypass GPT analysis
-        
-    Execution Steps:
-        1. Parse arguments and validate configuration
-        2. Initialize agents (GoogleMaps, Wayback, GPT)
-        3. Search Google Maps across all ZIP codes
-        4. Deduplicate results by place_id
-        5. For each business:
-            a. collect_business_data() - Google Maps details
-            b. enhance_with_wayback() - Historical validation
-            c. enhance_with_gpt() - AI analysis
-            d. calculate_overall_confidence() - Data quality score
-        6. Export to CSV with timestamp
-        7. Generate statistical summary
-        
-    Output:
-        CSV file: data/processed/ai_bdd_{city}_{category}_{timestamp}.csv
-        Log file: logs/ai-bdd-pipeline_{timestamp}.log
-        
-    Exit Codes:
-        0: Success
-        1: Configuration error or no data collected
-    """
+ """
+ Complete execution pipeline
+ 
+ Command-line Arguments:
+ --task <category>: Business category (default: coffee)
+ --city <name>: Target city (default: Minneapolis)
+ --list: Display available categories
+ --limit <n>: Process only first n businesses
+ --skip-wayback: Bypass Wayback validation
+ --skip-gpt: Bypass GPT analysis
+ 
+ Execution Steps:
+ 1. Parse arguments and validate configuration
+ 2. Initialize agents (GoogleMaps, Wayback, GPT)
+ 3. Search Google Maps across all ZIP codes
+ 4. Deduplicate results by place_id
+ 5. For each business:
+ a. collect_business_data() - Google Maps details
+ b. enhance_with_wayback() - Historical validation
+ c. enhance_with_gpt() - AI analysis
+ d. calculate_overall_confidence() - Data quality score
+ 6. Export to CSV with timestamp
+ 7. Generate statistical summary
+ 
+ Output:
+ CSV file: data/processed/ai_bdd_{city}_{category}_{timestamp}.csv
+ Log file: logs/ai-bdd-pipeline_{timestamp}.log
+ 
+ Exit Codes:
+ 0: Success
+ 1: Configuration error or no data collected
+ """
 
 def collect_business_data(place_id: str, maps_agent: GoogleMapsAgent) -> dict:
-    """
-    Extract comprehensive Google Maps data
-    
-    Input:
-        place_id (str): Google Maps identifier
-        maps_agent (GoogleMapsAgent): Initialized agent
-        
-    Output:
-        dict: 25+ fields including location, rating, reviews, hours, attributes
-        
-    Processing:
-        - Parse review timestamps to extract date range
-        - Concatenate review snippets (first 100 chars each, max 5 reviews)
-        - Extract service attributes (breakfast, delivery, etc.)
-        - Format hours as semicolon-separated list
-    """
+ """
+ Extract comprehensive Google Maps data
+ 
+ Input:
+ place_id (str): Google Maps identifier
+ maps_agent (GoogleMapsAgent): Initialized agent
+ 
+ Output:
+ dict: 25+ fields including location, rating, reviews, hours, attributes
+ 
+ Processing:
+ - Parse review timestamps to extract date range
+ - Concatenate review snippets (first 100 chars each, max 5 reviews)
+ - Extract service attributes (breakfast, delivery, etc.)
+ - Format hours as semicolon-separated list
+ """
 
 def enhance_with_wayback(business_data: dict, wayback_agent: WaybackAgent) -> dict:
-    """
-    Augment data with Wayback Machine fields
-    
-    Input:
-        business_data (dict): Existing business data
-        wayback_agent (WaybackAgent): Initialized agent
-        
-    Output:
-        dict: business_data updated with:
-            - wayback_first_snapshot, wayback_first_year
-            - wayback_last_snapshot, wayback_last_year
-            - wayback_snapshot_count
-            
-    Skips: Businesses without website field
-    """
+ """
+ Augment data with Wayback Machine fields
+ 
+ Input:
+ business_data (dict): Existing business data
+ wayback_agent (WaybackAgent): Initialized agent
+ 
+ Output:
+ dict: business_data updated with:
+ - wayback_first_snapshot, wayback_first_year
+ - wayback_last_snapshot, wayback_last_year
+ - wayback_snapshot_count
+ 
+ Skips: Businesses without website field
+ """
 
 def enhance_with_gpt(business_data: dict, gpt_analyzer: GPTAnalyzer, 
-                     config: dict) -> dict:
-    """
-    Add GPT analysis fields
-    
-    Input:
-        business_data (dict): Existing data
-        gpt_analyzer (GPTAnalyzer): Initialized analyzer
-        config (dict): Category configuration from CATEGORY_CONFIG
-        
-    Output:
-        dict: business_data updated with 10+ AI-generated fields
-        
-    Processing:
-        - Calls classify_business_status()
-        - Calls estimate_employment()
-        - Calls verify_naics_classification()
-        - Merges results into business_data dict
-    """
+ config: dict) -> dict:
+ """
+ Add GPT analysis fields
+ 
+ Input:
+ business_data (dict): Existing data
+ gpt_analyzer (GPTAnalyzer): Initialized analyzer
+ config (dict): Category configuration from CATEGORY_CONFIG
+ 
+ Output:
+ dict: business_data updated with 10+ AI-generated fields
+ 
+ Processing:
+ - Calls classify_business_status()
+ - Calls estimate_employment()
+ - Calls verify_naics_classification()
+ - Merges results into business_data dict
+ """
 ```
 
 **Execution Time**: ~2 hours for 690 businesses (all 7 categories)
@@ -622,67 +622,67 @@ def enhance_with_gpt(business_data: dict, gpt_analyzer: GPTAnalyzer,
 
 ```python
 def check_imports() -> bool:
-    """
-    Verify all required packages installed
-    
-    Output:
-        bool: True if all packages available
-        
-    Tests: pandas, numpy, openai, googlemaps, waybackpy, requests, 
-           beautifulsoup4, lxml, python-dotenv, pydantic, httpx, tqdm, openpyxl
-    """
+ """
+ Verify all required packages installed
+ 
+ Output:
+ bool: True if all packages available
+ 
+ Tests: pandas, numpy, openai, googlemaps, waybackpy, requests, 
+ beautifulsoup4, lxml, python-dotenv, pydantic, httpx, tqdm, openpyxl
+ """
 
 def check_env() -> bool:
-    """
-    Verify API keys configured
-    
-    Output:
-        bool: True if OPENAI_API_KEY and GOOGLE_MAPS_API_KEY present
-        
-    Display: Masked key values (first 8 + last 4 characters)
-    """
+ """
+ Verify API keys configured
+ 
+ Output:
+ bool: True if OPENAI_API_KEY and GOOGLE_MAPS_API_KEY present
+ 
+ Display: Masked key values (first 8 + last 4 characters)
+ """
 
 def check_project_structure() -> bool:
-    """
-    Verify directory structure and critical files
-    
-    Output:
-        bool: True if all required directories and files exist
-        
-    Checks:
-        Directories: src/agents, src/data, scripts, data/processed, logs, notebooks, tests, docs
-        Files: src/config.py, all agent files, scripts/03_complete_pipeline.py, requirements.txt
-    """
+ """
+ Verify directory structure and critical files
+ 
+ Output:
+ bool: True if all required directories and files exist
+ 
+ Checks:
+ Directories: src/agents, src/data, scripts, data/processed, logs, notebooks, tests, docs
+ Files: src/config.py, all agent files, scripts/03_complete_pipeline.py, requirements.txt
+ """
 
 def test_agents() -> bool:
-    """
-    Test agent instantiation
-    
-    Output:
-        bool: True if all agents can be imported and initialized
-        
-    Tests: GoogleMapsAgent, WaybackAgent, GPTAnalyzer, Logger, Helpers
-    """
+ """
+ Test agent instantiation
+ 
+ Output:
+ bool: True if all agents can be imported and initialized
+ 
+ Tests: GoogleMapsAgent, WaybackAgent, GPTAnalyzer, Logger, Helpers
+ """
 
 def test_wayback_sample() -> bool:
-    """
-    Test Wayback Machine API connectivity
-    
-    Output:
-        bool: True if can retrieve snapshots for python.org
-        
-    Purpose: Verify Internet Archive API accessible
-    """
+ """
+ Test Wayback Machine API connectivity
+ 
+ Output:
+ bool: True if can retrieve snapshots for python.org
+ 
+ Purpose: Verify Internet Archive API accessible
+ """
 
 def main() -> int:
-    """
-    Execute all validation checks
-    
-    Output:
-        int: Exit code (0 = all passed, 1 = failures detected)
-        
-    Display: Color-coded test results with summary statistics
-    """
+ """
+ Execute all validation checks
+ 
+ Output:
+ int: Exit code (0 = all passed, 1 = failures detected)
+ 
+ Display: Color-coded test results with summary statistics
+ """
 ```
 
 **Usage**: Run before first pipeline execution
@@ -721,44 +721,44 @@ python scripts/validate_environment.py
 
 ```
 1. Environment Setup
-   ├─ Activate virtual environment
-   ├─ Verify dependencies (validate_environment.py)
-   └─ Check API keys in .env
+ [|][-] Activate virtual environment
+ [|][-] Verify dependencies (validate_environment.py)
+ [_][-] Check API keys in .env
 
 2. Data Collection (03_complete_pipeline.py)
-   ├─ Step 1: Google Maps Search
-   │   ├─ Query: "{category} in {city} {zip_code}"
-   │   ├─ Iterate: 9 ZIP codes
-   │   ├─ Paginate: Up to 60 results per ZIP
-   │   └─ Deduplicate: Unique place_id set
-   │
-   ├─ Step 2: For Each Business
-   │   ├─ Google Maps Details (0.017 USD)
-   │   ├─ Website Status Check (free)
-   │   ├─ Wayback Validation (free)
-   │   │   ├─ First snapshot → Establishment validation
-   │   │   ├─ Last snapshot → Closure detection
-   │   │   └─ Snapshot count → Activity indicator
-   │   └─ GPT Analysis (0.0005 USD)
-   │       ├─ Status classification
-   │       ├─ Employment estimation
-   │       └─ NAICS verification
-   │
-   └─ Step 3: Export
-       ├─ CSV: data/processed/ai_bdd_*.csv
-       ├─ Log: logs/ai-bdd-pipeline_*.log
-       └─ Summary statistics to console
+ [|][-] Step 1: Google Maps Search
+ [|][-] Query: "{category} in {city} {zip_code}"
+ [|][-] Iterate: 9 ZIP codes
+ [|][-] Paginate: Up to 60 results per ZIP
+ [_][-] Deduplicate: Unique place_id set
+ 
+ [|][-] Step 2: For Each Business
+ [|][-] Google Maps Details (0.017 USD)
+ [|][-] Website Status Check (free)
+ [|][-] Wayback Validation (free)
+ [|][-] First snapshot Establishment validation
+ [|][-] Last snapshot Closure detection
+ [_][-] Snapshot count Activity indicator
+ [_][-] GPT Analysis (0.0005 USD)
+ [|][-] Status classification
+ [|][-] Employment estimation
+ [_][-] NAICS verification
+ 
+ [_][-] Step 3: Export
+ [|][-] CSV: data/processed/ai_bdd_*.csv
+ [|][-] Log: logs/ai-bdd-pipeline_*.log
+ [_][-] Summary statistics to console
 
 3. Data Validation
-   ├─ Confidence scoring (helpers.calculate_confidence_score)
-   ├─ Field completeness checks
-   └─ Outlier detection (optional)
+ [|][-] Confidence scoring (helpers.calculate_confidence_score)
+ [|][-] Field completeness checks
+ [_][-] Outlier detection (optional)
 
 4. Analysis (Jupyter Notebooks)
-   ├─ Load CSV with pandas
-   ├─ Descriptive statistics
-   ├─ Visualizations (folium maps, matplotlib charts)
-   └─ Export figures for publication
+ [|][-] Load CSV with pandas
+ [|][-] Descriptive statistics
+ [|][-] Visualizations (folium maps, matplotlib charts)
+ [_][-] Export figures for publication
 ```
 
 ---
@@ -768,7 +768,7 @@ python scripts/validate_environment.py
 ### Immediate Actions
 
 #### 1. Environment Configuration (Required)
-**Location**: Project root directory  
+**Location**: Project root directory 
 **Action**: Create `.env` file
 
 ```bash
@@ -788,7 +788,7 @@ python scripts/validate_environment.py
 ---
 
 #### 2. Dependency Installation (Required)
-**Location**: Project root directory  
+**Location**: Project root directory 
 **Action**:
 
 ```powershell
@@ -807,7 +807,7 @@ pip install -r requirements.txt
 ---
 
 #### 3. Test Execution (Recommended)
-**Location**: Project root directory  
+**Location**: Project root directory 
 **Action**:
 
 ```powershell
@@ -818,24 +818,24 @@ python scripts/03_complete_pipeline.py --task coffee --limit 10
 **Expected Output**:
 ```
 Step 1: Searching Google Maps...
-   Zip 55401: 15 places
-   ...
+ Zip 55401: 15 places
+ ...
 Found 10 unique places
 
 Estimated API cost: $0.20
 
 Step 2: Collecting detailed data...
 [1/10] Starbucks
-  Checking Wayback for: https://www.starbucks.com
-  Running GPT analysis...
-  Complete (Confidence: High)
+ Checking Wayback for: https://www.starbucks.com
+ Running GPT analysis...
+ Complete (Confidence: High)
 ...
 
 COMPLETE!
-   Total businesses: 10
-   Active (AI): 9
-   High confidence: 8
-   
+ Total businesses: 10
+ Active (AI): 9
+ High confidence: 8
+ 
 Output: data/processed/ai_bdd_Minneapolis_coffee_20260129_*.csv
 ```
 
@@ -844,32 +844,32 @@ Output: data/processed/ai_bdd_Minneapolis_coffee_20260129_*.csv
 ### Short-Term Development Tasks
 
 #### 4. Data Validation Module (Optional)
-**Location**: `src/data/validator.py`  
+**Location**: `src/data/validator.py` 
 **Purpose**: CSV output quality assurance
 
 **Implementation**:
 ```python
 class DataValidator:
-    def validate_csv_output(self, df: pd.DataFrame) -> dict:
-        """
-        Input: pandas DataFrame from pipeline output
-        Output: dict with validation results
-            - missing_critical_fields (list)
-            - outlier_count (int)
-            - duplicate_count (int)
-            - confidence_distribution (dict)
-        """
-        
-    def compare_with_nets(self, ai_df: pd.DataFrame, 
-                         nets_df: pd.DataFrame) -> dict:
-        """
-        Input: AI-BDD DataFrame, NETS DataFrame
-        Output: dict with comparison metrics
-            - overlap_rate (float)
-            - closure_detection_lead_time (int days)
-            - employment_mae (float)
-            - false_positive_rate (float)
-        """
+ def validate_csv_output(self, df: pd.DataFrame) -> dict:
+ """
+ Input: pandas DataFrame from pipeline output
+ Output: dict with validation results
+ - missing_critical_fields (list)
+ - outlier_count (int)
+ - duplicate_count (int)
+ - confidence_distribution (dict)
+ """
+ 
+ def compare_with_nets(self, ai_df: pd.DataFrame, 
+ nets_df: pd.DataFrame) -> dict:
+ """
+ Input: AI-BDD DataFrame, NETS DataFrame
+ Output: dict with comparison metrics
+ - overlap_rate (float)
+ - closure_detection_lead_time (int days)
+ - employment_mae (float)
+ - false_positive_rate (float)
+ """
 ```
 
 **Usage**:
@@ -884,28 +884,28 @@ validation_report = validator.validate_csv_output(df)
 ---
 
 #### 5. Secretary of State Integration (Optional)
-**Location**: `src/data/sos_loader.py`  
+**Location**: `src/data/sos_loader.py` 
 **Purpose**: Cross-reference with state business registrations
 
 **Implementation**:
 ```python
 class SOSLoader:
-    def query_business_entity(self, business_name: str, 
-                             state: str = "MN") -> dict:
-        """
-        Input:
-            business_name (str): Business legal name
-            state (str): State abbreviation
-            
-        Output:
-            dict:
-                - entity_id (str)
-                - registration_date (str)
-                - status (str): "Active", "Dissolved", etc.
-                - registered_agent (str)
-                
-        Source: State Secretary of State website (web scraping or API if available)
-        """
+ def query_business_entity(self, business_name: str, 
+ state: str = "MN") -> dict:
+ """
+ Input:
+ business_name (str): Business legal name
+ state (str): State abbreviation
+ 
+ Output:
+ dict:
+ - entity_id (str)
+ - registration_date (str)
+ - status (str): "Active", "Dissolved", etc.
+ - registered_agent (str)
+ 
+ Source: State Secretary of State website (web scraping or API if available)
+ """
 ```
 
 **Data Source**: Minnesota SOS Business Search
@@ -914,7 +914,7 @@ https://mblsportal.sos.state.mn.us/Business/Search
 ---
 
 #### 6. Jupyter Notebook Templates (Recommended)
-**Location**: `notebooks/`  
+**Location**: `notebooks/` 
 **Purpose**: Interactive data exploration and visualization
 
 **Templates to Create**:
@@ -945,12 +945,12 @@ m = folium.Map(location=[44.9778, -93.2650], zoom_start=12)
 
 # Add markers
 for idx, row in df.iterrows():
-    color = 'green' if row['ai_status'] == 'Active' else 'red'
-    folium.Marker(
-        location=[row['latitude'], row['longitude']],
-        popup=row['name'],
-        icon=folium.Icon(color=color)
-    ).add_to(m)
+ color = 'green' if row['ai_status'] == 'Active' else 'red'
+ folium.Marker(
+ location=[row['latitude'], row['longitude']],
+ popup=row['name'],
+ icon=folium.Icon(color=color)
+ ).add_to(m)
 
 m.save('output/business_map.html')
 ```
@@ -962,7 +962,7 @@ import matplotlib.pyplot as plt
 
 # Active rate by ZIP code
 active_by_zip = df.groupby('source_zip')['ai_status'].apply(
-    lambda x: (x == 'Active').sum() / len(x)
+ lambda x: (x == 'Active').sum() / len(x)
 )
 
 # Visualization
@@ -972,7 +972,7 @@ active_by_zip.plot(kind='bar', title='Active Rate by ZIP Code')
 ---
 
 #### 7. Unit Testing (Optional)
-**Location**: `tests/`  
+**Location**: `tests/` 
 **Purpose**: Ensure code reliability
 
 **Test Files to Create**:
@@ -984,29 +984,29 @@ from src.agents.wayback_agent import WaybackAgent
 from src.agents.gpt_analyzer import GPTAnalyzer
 
 def test_wayback_first_snapshot():
-    agent = WaybackAgent()
-    result = agent.get_first_snapshot("https://www.python.org")
-    
-    assert result is not None
-    assert 'year' in result
-    assert result['year'] < 2026
-    assert result['year'] > 1990
+ agent = WaybackAgent()
+ result = agent.get_first_snapshot("https://www.python.org")
+ 
+ assert result is not None
+ assert 'year' in result
+ assert result['year'] < 2026
+ assert result['year'] > 1990
 
 def test_gpt_status_classification():
-    analyzer = GPTAnalyzer()
-    test_data = {
-        'name': 'Test Coffee Shop',
-        'google_rating': 4.5,
-        'review_count': 120,
-        'last_review_date': '2026-01-15',
-        'is_open_now': True
-    }
-    
-    result = analyzer.classify_business_status(test_data)
-    
-    assert 'status' in result
-    assert result['status'] in ['Active', 'Inactive', 'Uncertain']
-    assert 0 <= result['confidence'] <= 1
+ analyzer = GPTAnalyzer()
+ test_data = {
+ 'name': 'Test Coffee Shop',
+ 'google_rating': 4.5,
+ 'review_count': 120,
+ 'last_review_date': '2026-01-15',
+ 'is_open_now': True
+ }
+ 
+ result = analyzer.classify_business_status(test_data)
+ 
+ assert 'status' in result
+ assert result['status'] in ['Active', 'Inactive', 'Uncertain']
+ assert 0 <= result['confidence'] <= 1
 ```
 
 **Run Tests**:
@@ -1019,46 +1019,46 @@ pytest tests/ -v
 ### Medium-Term Research Tasks
 
 #### 8. Yelp API Integration (Optional)
-**Location**: `src/agents/yelp_agent.py`  
+**Location**: `src/agents/yelp_agent.py` 
 **Purpose**: Add third data source for triangulation
 
 **Implementation**:
 ```python
 class YelpAgent:
-    def __init__(self, api_key: str):
-        """
-        Input: Yelp Fusion API key
-        Output: YelpAgent instance
-        
-        API: https://www.yelp.com/developers
-        Cost: Free tier (5000 requests/day)
-        """
-        
-    def search_businesses(self, term: str, location: str) -> list:
-        """
-        Input:
-            term (str): Search term (e.g., "coffee")
-            location (str): Location (e.g., "Minneapolis, MN")
-            
-        Output:
-            list: Business objects with:
-                - id, name, rating, review_count
-                - coordinates (lat, lng)
-                - categories, price
-                
-        Pagination: Handle up to 1000 results (20 per page)
-        """
-        
-    def get_business_details(self, business_id: str) -> dict:
-        """
-        Input: Yelp business ID
-        Output: Detailed business information
-        
-        Additional Fields:
-            - hours, transactions (delivery, pickup)
-            - photos
-            - reviews (3 most recent)
-        """
+ def __init__(self, api_key: str):
+ """
+ Input: Yelp Fusion API key
+ Output: YelpAgent instance
+ 
+ API: https://www.yelp.com/developers
+ Cost: Free tier (5000 requests/day)
+ """
+ 
+ def search_businesses(self, term: str, location: str) -> list:
+ """
+ Input:
+ term (str): Search term (e.g., "coffee")
+ location (str): Location (e.g., "Minneapolis, MN")
+ 
+ Output:
+ list: Business objects with:
+ - id, name, rating, review_count
+ - coordinates (lat, lng)
+ - categories, price
+ 
+ Pagination: Handle up to 1000 results (20 per page)
+ """
+ 
+ def get_business_details(self, business_id: str) -> dict:
+ """
+ Input: Yelp business ID
+ Output: Detailed business information
+ 
+ Additional Fields:
+ - hours, transactions (delivery, pickup)
+ - photos
+ - reviews (3 most recent)
+ """
 ```
 
 **Integration**:
@@ -1069,7 +1069,7 @@ class YelpAgent:
 ---
 
 #### 9. Automated Scheduling (Recommended)
-**Location**: `.github/workflows/` or Windows Task Scheduler  
+**Location**: `.github/workflows/` or Windows Task Scheduler 
 **Purpose**: Periodic data collection for longitudinal analysis
 
 **GitHub Actions Workflow** (`.github/workflows/monthly_collection.yml`):
@@ -1077,49 +1077,49 @@ class YelpAgent:
 name: Monthly Data Collection
 
 on:
-  schedule:
-    - cron: '0 0 1 * *'  # First day of each month
+ schedule:
+ - cron: '0 0 1 * *' # First day of each month
 
 jobs:
-  collect:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Run pipeline
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-        run: python scripts/03_complete_pipeline.py --task coffee
-      - name: Upload results
-        uses: actions/upload-artifact@v3
-        with:
-          name: monthly-data
-          path: data/processed/
+ collect:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
+ - name: Set up Python
+ uses: actions/setup-python@v4
+ with:
+ python-version: '3.10'
+ - name: Install dependencies
+ run: pip install -r requirements.txt
+ - name: Run pipeline
+ env:
+ OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+ GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+ run: python scripts/03_complete_pipeline.py --task coffee
+ - name: Upload results
+ uses: actions/upload-artifact@v3
+ with:
+ name: monthly-data
+ path: data/processed/
 ```
 
 **Windows Task Scheduler**:
 ```powershell
 # Create scheduled task
 $action = New-ScheduledTaskAction -Execute 'python' `
-    -Argument 'scripts/03_complete_pipeline.py --task coffee' `
-    -WorkingDirectory 'D:\NETS-AI'
+ -Argument 'scripts/03_complete_pipeline.py --task coffee' `
+ -WorkingDirectory 'D:\NETS-AI'
 
 $trigger = New-ScheduledTaskTrigger -Monthly -At 2am -DaysOfMonth 1
 
 Register-ScheduledTask -TaskName "AI-BDD-Monthly" `
-    -Action $action -Trigger $trigger
+ -Action $action -Trigger $trigger
 ```
 
 ---
 
 #### 10. Statistical Modeling (Advanced)
-**Location**: `src/models/pgbdm.py`  
+**Location**: `src/models/pgbdm.py` 
 **Purpose**: Probabilistic Generative Business Dynamics Model
 
 **Objectives**:
@@ -1130,49 +1130,49 @@ Register-ScheduledTask -TaskName "AI-BDD-Monthly" `
 **Implementation Sketch**:
 ```python
 class PGBDM:
-    """
-    Probabilistic Generative Business Dynamics Model
-    
-    Input:
-        historical_data (pd.DataFrame): Time series of business observations
-        
-    Methods:
-        fit(): Estimate model parameters using MLE or MCMC
-        predict_closure_risk(): P(closure | observed_signals)
-        simulate_dynamics(): Generate synthetic business population
-        
-    Model Structure:
-        - Entry: Poisson process with ZIP-code specific rates
-        - Exit: Survival analysis (Cox proportional hazards)
-        - Employment: Zero-inflated negative binomial
-        
-    References:
-        - Crane & Decker (2019) for NETS critique
-        - Haltiwanger et al. (2013) for establishment dynamics
-    """
-    
-    def fit(self, df: pd.DataFrame, method: str = 'mle'):
-        """
-        Input:
-            df (pd.DataFrame): Panel data with columns:
-                - business_id, year, status, employees
-            method (str): 'mle' or 'mcmc'
-            
-        Output:
-            self: Fitted model with .params attribute
-        """
-        
-    def predict_closure_risk(self, business_data: dict) -> float:
-        """
-        Input: Single business observation
-        Output: float (0 to 1) probability of closure in next 6 months
-        
-        Features:
-            - Review velocity decline
-            - Rating deterioration
-            - Website inactivity
-            - Wayback snapshot gap
-        """
+ """
+ Probabilistic Generative Business Dynamics Model
+ 
+ Input:
+ historical_data (pd.DataFrame): Time series of business observations
+ 
+ Methods:
+ fit(): Estimate model parameters using MLE or MCMC
+ predict_closure_risk(): P(closure | observed_signals)
+ simulate_dynamics(): Generate synthetic business population
+ 
+ Model Structure:
+ - Entry: Poisson process with ZIP-code specific rates
+ - Exit: Survival analysis (Cox proportional hazards)
+ - Employment: Zero-inflated negative binomial
+ 
+ References:
+ - Crane & Decker (2019) for NETS critique
+ - Haltiwanger et al. (2013) for establishment dynamics
+ """
+ 
+ def fit(self, df: pd.DataFrame, method: str = 'mle'):
+ """
+ Input:
+ df (pd.DataFrame): Panel data with columns:
+ - business_id, year, status, employees
+ method (str): 'mle' or 'mcmc'
+ 
+ Output:
+ self: Fitted model with .params attribute
+ """
+ 
+ def predict_closure_risk(self, business_data: dict) -> float:
+ """
+ Input: Single business observation
+ Output: float (0 to 1) probability of closure in next 6 months
+ 
+ Features:
+ - Review velocity decline
+ - Rating deterioration
+ - Website inactivity
+ - Wayback snapshot gap
+ """
 ```
 
 **Usage**:
@@ -1201,7 +1201,7 @@ print(f"Closure probability: {risk:.2%}")
 ### Long-Term Publication Tasks
 
 #### 11. Paper Preparation
-**Location**: `docs/paper/`  
+**Location**: `docs/paper/` 
 **Target**: *Environment and Planning B: Urban Analytics and City Science*
 
 **Required Sections**:
@@ -1221,7 +1221,7 @@ print(f"Closure probability: {risk:.2%}")
 ---
 
 #### 12. Reproducibility Package
-**Location**: Root directory  
+**Location**: Root directory 
 **Files to Include**:
 
 - `REPLICATION_GUIDE.md`: Step-by-step instructions
@@ -1252,40 +1252,40 @@ print(f"Closure probability: {risk:.2%}")
 
 ```
 1. Setup (30 min)
-   → Obtain API keys
-   → Install dependencies
-   → Validate environment
+ Obtain API keys
+ Install dependencies
+ Validate environment
 
 2. Test Run (10 min, $0.20)
-   → Execute with --limit 10
-   → Verify CSV output
-   → Review logs
+ Execute with --limit 10
+ Verify CSV output
+ Review logs
 
 3. Full Analysis (2 hours, $15)
-   → Run all 7 categories
-   → Export 690 businesses
-   → Generate summary stats
+ Run all 7 categories
+ Export 690 businesses
+ Generate summary stats
 
 4. Data Analysis (ongoing)
-   → Create Jupyter notebooks
-   → Visualize results
-   → Statistical testing
+ Create Jupyter notebooks
+ Visualize results
+ Statistical testing
 
 5. Publication (3-6 months)
-   → Draft manuscript
-   → Peer review
-   → Revisions
+ Draft manuscript
+ Peer review
+ Revisions
 ```
 
 ### Key Deliverables
 
-**Code**: Fully documented Python pipeline  
-**Data**: CSV files with 40+ fields per business  
-**Documentation**: Technical reference (this file)  
-**Paper**: Academic manuscript for EPB journal  
+**Code**: Fully documented Python pipeline 
+**Data**: CSV files with 40+ fields per business 
+**Documentation**: Technical reference (this file) 
+**Paper**: Academic manuscript for EPB journal 
 **Replication Package**: GitHub repository with sample data
 
 ---
 
-**Current Status**: Core implementation complete, ready for test execution  
+**Current Status**: Core implementation complete, ready for test execution 
 **Next Action**: Configure `.env` file and run `validate_environment.py`

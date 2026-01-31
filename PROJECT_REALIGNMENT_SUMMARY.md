@@ -13,7 +13,7 @@ Your project has been successfully realigned from a general "AI-BDD" system (cov
 ## What Changed
 
 ### 1. Project Scope and Focus
-**Before**: Broad multi-category pilot (7 business types across Minneapolis)  
+**Before**: Broad multi-category pilot (7 business types across Minneapolis) 
 **After**: Focused MVP on NAICS 722513 (Quick Service Restaurants) + NAICS 446110 (Pharmacies)
 
 **Impact**: 
@@ -84,10 +84,10 @@ Your project has been successfully realigned from a general "AI-BDD" system (cov
 **[NEW] src/models/bayesian_employee_estimator.py** (450+ lines)
 - `EmployeeEstimator` class for multi-signal ensemble
 - Four estimation methods:
-  1. LinkedIn headcount (highest credibility, 50% weight)
-  2. Google review velocity (30% weight)
-  3. Building area from OSM (15% weight)
-  4. Job posting activity (5% weight)
+ 1. LinkedIn headcount (highest credibility, 50% weight)
+ 2. Google review velocity (30% weight)
+ 3. Building area from OSM (15% weight)
+ 4. Job posting activity (5% weight)
 - Weighted ensemble combination
 - Confidence interval calculation (bootstrap)
 - Batch processing support
@@ -96,10 +96,10 @@ Your project has been successfully realigned from a general "AI-BDD" system (cov
 **[NEW] src/models/survival_detector.py** (500+ lines)
 - `SurvivalDetector` class for operational status prediction
 - Four signal evaluation methods:
-  1. Review recency (35% weight)
-  2. Review decay rate trend (30% weight)
-  3. Job posting activity (20% weight)
-  4. Street view visual indicators (15% weight)
+ 1. Review recency (35% weight)
+ 2. Review decay rate trend (30% weight)
+ 3. Job posting activity (20% weight)
+ 4. Street view visual indicators (15% weight)
 - Risk/protective factor identification
 - Confidence level determination
 - Batch processing support
@@ -111,11 +111,11 @@ Your project has been successfully realigned from a general "AI-BDD" system (cov
 - Data loading and caching
 - Sidebar filters (NAICS, business status, employee range, confidence)
 - Five tabs:
-  1. Maps: Folium heatmaps (employees, survival probability)
-  2. Employee Distribution: Altair histograms by industry
-  3. Survival Status: Probability distribution analysis
-  4. Data Quality: Score distribution and metrics
-  5. Details: Filterable data table with CSV export
+ 1. Maps: Folium heatmaps (employees, survival probability)
+ 2. Employee Distribution: Altair histograms by industry
+ 3. Survival Status: Probability distribution analysis
+ 4. Data Quality: Score distribution and metrics
+ 5. Details: Filterable data table with CSV export
 - Summary statistics metrics
 - CSV download functionality
 
@@ -137,28 +137,28 @@ Your project has been successfully realigned from a general "AI-BDD" system (cov
 
 ### From: Coffee Shop Analysis
 ```
-Google Maps API → GPT Analysis → CSV Export
+Google Maps API GPT Analysis CSV Export
 (5 reviews per business)
 ```
 
 ### To: Industry-Specific Enhancement
 ```
 NETS Database
-  ↓
+ 
 Filter by NAICS (722513, 446110) + ZIP codes
-  ↓
+ 
 Enrich with External Sources (LinkedIn, Outscraper, Indeed, OSM)
-  ↓
+ 
 Feature Engineering (review decay, hiring activity, building area)
-  ↓
+ 
 Employee Estimation (Bayesian ensemble + XGBoost)
-  ↓
+ 
 Survival Detection (Random Forest + decay analysis)
-  ↓
+ 
 Quality Scoring (composite 0-100 metric)
-  ↓
+ 
 Parquet Database Export (versioned, compressed)
-  ↓
+ 
 Streamlit Dashboard (interactive exploration)
 ```
 
@@ -199,23 +199,23 @@ Streamlit Dashboard (interactive exploration)
 
 ```
 Input Data Sources:
-  ├─ NETS CSV (baseline: duns_id, name, address, coordinates, NAICS)
-  ├─ LinkedIn (employee headcount - highest credibility)
-  ├─ Outscraper Google Reviews (review velocity, recency)
-  ├─ Indeed Job Postings (hiring activity trends)
-  ├─ OpenStreetMap (building footprints for area)
-  └─ Google Street View (facade visibility)
+ [|][-] NETS CSV (baseline: duns_id, name, address, coordinates, NAICS)
+ [|][-] LinkedIn (employee headcount - highest credibility)
+ [|][-] Outscraper Google Reviews (review velocity, recency)
+ [|][-] Indeed Job Postings (hiring activity trends)
+ [|][-] OpenStreetMap (building footprints for area)
+ [_][-] Google Street View (facade visibility)
 
 Processing Pipeline:
-  1. Load NETS → 2. Filter (NAICS + ZIP) → 3. Deduplicate
-  4. Enrich (external sources) → 5. Feature engineer
-  6. Estimate employees (ensemble) → 7. Detect survival (signals)
-  8. Quality score → 9. Export Parquet
+ 1. Load NETS 2. Filter (NAICS + ZIP) 3. Deduplicate
+ 4. Enrich (external sources) 5. Feature engineer
+ 6. Estimate employees (ensemble) 7. Detect survival (signals)
+ 8. Quality score 9. Export Parquet
 
 Output:
-  ├─ Parquet Database (primary: data/processed/nets_ai_minneapolis.parquet)
-  ├─ Streamlit Dashboard (interactive: streamlit run dashboard/app.py)
-  └─ Logs (detailed: logs/ directory with timestamps)
+ [|][-] Parquet Database (primary: data/processed/nets_ai_minneapolis.parquet)
+ [|][-] Streamlit Dashboard (interactive: streamlit run dashboard/app.py)
+ [_][-] Logs (detailed: logs/ directory with timestamps)
 ```
 
 ---
@@ -288,39 +288,39 @@ streamlit run dashboard/app.py
 ## Next Steps Recommended
 
 1. **Collect External Data**
-   - LinkedIn company profiles (via official API or licensed data)
-   - Outscraper reviews (1000 query/month limit)
-   - Indeed job postings (historical data)
-   - OSM building footprints (free download)
+ - LinkedIn company profiles (via official API or licensed data)
+ - Outscraper reviews (1000 query/month limit)
+ - Indeed job postings (historical data)
+ - OSM building footprints (free download)
 
 2. **Validate Estimates**
-   - Compare vs. LinkedIn public headcount data
-   - Manual verification of 100 random businesses
-   - Calculate MAE and RMSE metrics
+ - Compare vs. LinkedIn public headcount data
+ - Manual verification of 100 random businesses
+ - Calculate MAE and RMSE metrics
 
 3. **Deploy to Production**
-   - Cloud storage (AWS S3 or Google Cloud Storage)
-   - Scheduled daily/weekly updates
-   - Monitoring and alerting
-   - Cost tracking for API usage
+ - Cloud storage (AWS S3 or Google Cloud Storage)
+ - Scheduled daily/weekly updates
+ - Monitoring and alerting
+ - Cost tracking for API usage
 
 4. **Extend Capabilities**
-   - Time-series tracking (monthly updates)
-   - Forecasting models (employee trends)
-   - Neighborhood aggregations
-   - Equity impact analysis
+ - Time-series tracking (monthly updates)
+ - Forecasting models (employee trends)
+ - Neighborhood aggregations
+ - Equity impact analysis
 
 ---
 
 ## Technical Stack Summary
 
-**Language**: Python 3.10+  
-**Data**: Pandas, GeoPandas (spatial operations)  
-**ML**: XGBoost, scikit-learn, PyMC (Bayesian)  
-**Visualization**: Streamlit, Folium (maps), Altair (charts)  
-**APIs**: Google Maps, LinkedIn, Outscraper, Indeed  
-**Output**: Apache Parquet (columnar, compressed)  
-**Testing**: Pytest, error logging  
+**Language**: Python 3.10+ 
+**Data**: Pandas, GeoPandas (spatial operations) 
+**ML**: XGBoost, scikit-learn, PyMC (Bayesian) 
+**Visualization**: Streamlit, Folium (maps), Altair (charts) 
+**APIs**: Google Maps, LinkedIn, Outscraper, Indeed 
+**Output**: Apache Parquet (columnar, compressed) 
+**Testing**: Pytest, error logging 
 
 ---
 

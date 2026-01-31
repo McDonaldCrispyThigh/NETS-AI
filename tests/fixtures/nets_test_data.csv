@@ -1,0 +1,9 @@
+duns_id,company_name,naics_code,naics_title,latitude,longitude,zip_code,street_address,city,state,phone,website,year_established,year_closed,employee_count_raw,sic_code,linkedin_employee_count,review_count_3m,review_count_6_12m,last_review_date,job_postings_6m,job_postings_peak,estimated_area_sqm,street_view_active,signage_visible
+1000000,Starbucks,722513,Limited-Service Restaurants,44.92582732092642,-93.24266299015724,55412,6732 Main St,Minneapolis,MN,(450)-342-2844,,2016,,43.0,5812,,5,14,2025-11-27,2,1,545,True,False
+1000001,Chick-fil-A,722513,Limited-Service Restaurants,44.99316574617098,-93.20465727484432,55411,324 Main St,Minneapolis,MN,(679)-997-1064,,2020,,39.0,5812,,5,14,2025-11-25,2,2,475,False,True
+1000002,Starbucks,722513,Limited-Service Restaurants,44.97497903434446,-93.3148873518251,55412,6725 Main St,Minneapolis,MN,(897)-982-6952,,2020,,7.0,5812,6.0,5,14,2025-12-05,2,1,549,True,False
+1000003,In-N-Out Burger,722513,Limited-Service Restaurants,45.0134876485037,-93.31414999599345,55407,8173 Main St,Minneapolis,MN,(989)-204-7525,,2021,,,5812,,5,14,2026-01-18,2,3,414,False,True
+1000004,Burger King,722513,Limited-Service Restaurants,44.90867021637452,-93.2132760278904,55401,8628 Main St,Minneapolis,MN,(231)-632-7178,,2003,,,5812,,5,14,2025-11-15,2,3,406,True,True
+1000005,Target Pharmacy,446110,Pharmacies,44.92928931400516,-93.219728027669,55414,7408 Medical Ave,Minneapolis,MN,(737)-380-6682,,2011,,,5912,,5,14,2025-12-03,2,1,583,True,True
+1000006,Rite Aid,446110,Pharmacies,45.001947702968025,-93.30694698783836,55413,9793 Medical Ave,Minneapolis,MN,(201)-728-6642,,2011,2024.0,3.0,5912,,5,14,,2,2,633,True,True
+1000007,Safeway Pharmacy,446110,Pharmacies,44.940025256190246,-93.24477282882182,55408,4663 Medical Ave,Minneapolis,MN,(871)-650-1168,,2008,,5.0,5912,7.0,5,14,2026-01-05,2,2,513,True,True
