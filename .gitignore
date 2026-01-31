@@ -47,6 +47,7 @@ data/outputs/**
 *.swp
 *.swo
 *~
+*.code-workspace
 
 # OS
 .DS_Store
@@ -59,12 +60,5 @@ logs/
 # Temporary files
 *.tmp
 *.bak
+*.draft
 structure.html
-
-# Development configuration
-.copilot/
-.github/
-
-# Session and temporary files
-chat-*.txt
-*Prompt*.txt
