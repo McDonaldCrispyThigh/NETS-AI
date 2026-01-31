@@ -1,337 +1,290 @@
+#!/usr/bin/env python3
 """
-NETS Data Path Reference - NO SAMPLE DATA GENERATION
-This file documents where to place your real NETS CSV files for pipeline processing
+NETS Data Path Reference and Schema Documentation
+==================================================
+This file documents the required data paths and CSV schema for the NETS
+Enhancement pipeline. NO SAMPLE DATA GENERATION - paths only.
+
+Usage:
+    python scripts/generate_sample_data.py
+
+This will print:
+    - Required input file paths
+    - Required CSV column schema
+    - Optional enrichment columns
+    - Data file status check
 """
 
 from pathlib import Path
-import logging
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+import sys
 
 
 # =============================================================================
-# REAL DATA FILE PATHS - Place Your NETS CSV Files Here
+# DATA PATH CONFIGURATION
 # =============================================================================
 
-# Production NETS data path
-NETS_PRODUCTION_PATH = Path("data/raw/nets_minneapolis_full.csv")
+# Project root (relative to this script)
+PROJECT_ROOT = Path(__file__).parent.parent
 
-# Test data path (smaller subset for testing)
-NETS_TEST_PATH = Path("tests/fixtures/nets_test_data.csv")
+# Input data paths
+DATA_RAW_DIR = PROJECT_ROOT / "data" / "raw"
+DATA_PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
+DATA_OUTPUTS_DIR = PROJECT_ROOT / "data" / "outputs"
+TEST_FIXTURES_DIR = PROJECT_ROOT / "tests" / "fixtures"
+
+# Expected input files (user must provide)
+NETS_INPUT_PATH = DATA_RAW_DIR / "nets_minneapolis.csv"
+NETS_FULL_PATH = DATA_RAW_DIR / "nets_minneapolis_full.csv"
+TEST_FIXTURE_PATH = TEST_FIXTURES_DIR / "nets_test_data.csv"
+
+# Census tract boundaries (optional, for spatial join)
+CENSUS_TRACTS_PATH = DATA_RAW_DIR / "census_tracts_2020.shp"
 
 
 # =============================================================================
-# REQUIRED CSV SCHEMA FOR NETS DATA
+# REQUIRED CSV SCHEMA
 # =============================================================================
 
 REQUIRED_COLUMNS = {
-    # Core identifiers
-    'duns_id': 'str - Unique DUNS business identifier',
-    'company_name': 'str - Business name',
+    # Core Identifiers (REQUIRED)
+    "duns_id": "str - Unique DUNS business identifier (primary key)",
+    "company_name": "str - Business/establishment name",
     
-    # Industry classification
-    'naics_code': 'str - 6-digit NAICS code (e.g., "722513" for QSR)',
-    'naics_title': 'str - NAICS description',
-    'sic_code': 'str - SIC code (optional)',
+    # Industry Classification (REQUIRED)
+    "naics_code": "str - 6-digit NAICS code. Must be '722513' or '446110'",
     
-    # Location information
-    'latitude': 'float - GPS latitude (e.g., 44.9778)',
-    'longitude': 'float - GPS longitude (e.g., -93.2650)',
-    'street_address': 'str - Street address',
-    'city': 'str - City name',
-    'state': 'str - 2-letter state code (e.g., "MN")',
-    'zip_code': 'str - 5-digit ZIP code',
+    # Location - Coordinates (REQUIRED)
+    "latitude": "float - WGS84 latitude (EPSG:4326). Example: 44.9778",
+    "longitude": "float - WGS84 longitude (EPSG:4326). Example: -93.2650",
     
-    # Contact information
-    'phone': 'str - Phone number (optional)',
-    'website': 'str - Website URL (optional)',
-    
-    # Temporal data
-    'year_established': 'int - Year business established (optional)',
-    'year_closed': 'int - Year business closed, null if active (optional)',
-    
-    # Employee data
-    'employee_count_raw': 'int - Raw employee count from NETS (optional)',
+    # Location - Address (REQUIRED)
+    "street_address": "str - Street address",
+    "city": "str - City name (e.g., 'Minneapolis')",
+    "state": "str - 2-letter state code (e.g., 'MN')",
+    "zip_code": "str - 5-digit ZIP code",
+}
+
+OPTIONAL_NETS_COLUMNS = {
+    # Additional NETS fields (recommended but not required)
+    "naics_title": "str - NAICS description text",
+    "sic_code": "str - Legacy SIC classification code",
+    "phone": "str - Business phone number",
+    "website": "str - Business website URL",
+    "year_established": "int - Year business was established",
+    "year_closed": "int - Year business closed (null if still active)",
+    "employee_count_raw": "int - Raw employee count from NETS",
+    "emp_here": "int - NETS employment at this location",
+    "emp_total": "int - NETS total employment (HQ + branches)",
+    "sales": "float - Annual sales figure",
+    "company_id": "str - Alternative unique identifier",
+    "year": "int - NETS snapshot year",
 }
 
 OPTIONAL_ENRICHMENT_COLUMNS = {
-    # External enrichment data (if available)
-    'linkedin_employee_count': 'int - Employee count from LinkedIn',
-    'review_count_3m': 'int - Recent review count (last 3 months)',
-    'review_count_6_12m': 'int - Historical review count (6-12 months ago)',
-    'last_review_date': 'str - Date of last review (YYYY-MM-DD)',
-    'job_postings_6m': 'int - Job postings in last 6 months',
-    'job_postings_peak': 'int - Peak job posting count',
-    'estimated_area_sqm': 'float - Building area in square meters',
-    'street_view_active': 'bool - Street view indicators available',
-    'signage_visible': 'bool - Business signage visible in imagery',
+    # External signal columns (added by pipeline if APIs enabled)
+    "linkedin_employee_count": "int - Employee count from LinkedIn profile",
+    "review_count_3m": "int - Review count in last 3 months",
+    "review_count_6_12m": "int - Review count 6-12 months ago",
+    "last_review_date": "str - Date of most recent review (YYYY-MM-DD)",
+    "job_postings_6m": "int - Job postings in last 6 months",
+    "google_place_id": "str - Google Maps Place ID",
+    "wayback_latest_snapshot": "str - Latest Wayback Machine snapshot date",
+    "estimated_area_sqm": "float - Building footprint area in square meters",
 }
 
 
-def print_data_requirements():
-    """Print required data schema and file paths"""
-    print("=" * 80)
-    print("NETS DATA FILE REQUIREMENTS")
-    print("=" * 80)
-    
-    print("\n[PRODUCTION DATA PATH]")
-    print(f"  Location: {NETS_PRODUCTION_PATH}")
-    print(f"  Purpose: Full dataset for real processing")
-    print(f"  Expected size: Thousands of records")
-    
-    print("\n[TEST DATA PATH]")
-    print(f"  Location: {NETS_TEST_PATH}")
-    print(f"  Purpose: Small subset for testing (5-20 records recommended)")
-    print(f"  Expected size: < 50 KB")
-    
-    print("\n[REQUIRED COLUMNS]")
-    for col, desc in REQUIRED_COLUMNS.items():
-        print(f"  - {col:25s} : {desc}")
-    
-    print("\n[OPTIONAL ENRICHMENT COLUMNS]")
-    for col, desc in OPTIONAL_ENRICHMENT_COLUMNS.items():
-        print(f"  - {col:25s} : {desc}")
-    
-    print("\n[TARGET NAICS CODES]")
-    print("  - 722513 : Limited-Service Restaurants (Quick Service Restaurants)")
-    print("  - 446110 : Pharmacies")
-    
-    print("\n[MINNEAPOLIS ZIP CODES] (for geographic filtering)")
-    zips = ["55401", "55402", "55403", "55404", "55405", "55406", "55407", 
-            "55408", "55409", "55410", "55411", "55412", "55413", "55414", "55415"]
-    print(f"  {', '.join(zips)}")
-    
-    print("\n" + "=" * 80)
-    print("USAGE INSTRUCTIONS")
-    print("=" * 80)
-    
-    print("\n[FOR TESTING]")
-    print("  1. Create a small CSV file at:")
-    print(f"     {NETS_TEST_PATH}")
-    print("  2. Include 5-20 sample records with required columns")
-    print("  3. Run: python scripts/run_pipeline.py --test")
-    
-    print("\n[FOR PRODUCTION]")
-    print("  1. Place your full NETS CSV file at:")
-    print(f"     {NETS_PRODUCTION_PATH}")
-    print("  2. Ensure all required columns are present")
-    print("  3. Run: python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv")
-    
-    print("\n[ALTERNATIVE INPUT]")
-    print("  You can also specify any CSV path:")
-    print("  python scripts/run_pipeline.py --input /path/to/your/nets_data.csv")
-    
-    print("\n" + "=" * 80)
+# =============================================================================
+# OUTPUT SCHEMA (Generated by Pipeline)
+# =============================================================================
+
+OUTPUT_COLUMNS = {
+    # All input columns preserved, plus:
+    "census_tract_id": "str - 11-digit FIPS tract code (computed via spatial join)",
+    "employees_optimized": "float - Bayesian posterior mean estimate",
+    "employees_lower_ci": "float - 95% CI lower bound (2.5th percentile)",
+    "employees_upper_ci": "float - 95% CI upper bound (97.5th percentile)",
+    "employees_confidence": "str - Categorical: 'high', 'medium', or 'low'",
+    "is_active_prob": "float - Operational probability (0.0 to 1.0)",
+    "is_active_confidence": "float - Prediction confidence score",
+    "data_quality_score": "int - 0-100 quality score based on completeness",
+    "last_updated": "datetime - Pipeline execution timestamp",
+    "pipeline_version": "str - Semantic version (e.g., '0.4.2')",
+}
 
 
-def check_data_files():
-    """Check if data files exist"""
-    print("\n[DATA FILE STATUS]")
-    
-    if NETS_PRODUCTION_PATH.exists():
-        size_mb = NETS_PRODUCTION_PATH.stat().st_size / 1024 / 1024
-        print(f"  [OK] Production data found: {NETS_PRODUCTION_PATH} ({size_mb:.2f} MB)")
-    else:
-        print(f"  [!] Production data NOT found: {NETS_PRODUCTION_PATH}")
-        print(f"      Place your NETS CSV file here when ready")
-    
-    if NETS_TEST_PATH.exists():
-        size_kb = NETS_TEST_PATH.stat().st_size / 1024
-        print(f"  [OK] Test data found: {NETS_TEST_PATH} ({size_kb:.2f} KB)")
-    else:
-        print(f"  [!] Test data NOT found: {NETS_TEST_PATH}")
-        print(f"      Create a small test CSV here for testing")
-    
-    print()
+# =============================================================================
+# GEOGRAPHIC REFERENCE (Minneapolis)
+# =============================================================================
 
-
-if __name__ == "__main__":
-    print_data_requirements()
-    check_data_files()
-
-
-# Minneapolis geographic bounds (approximate)
 MINNEAPOLIS_BOUNDS = {
- 'lat_min': 44.8899,
- 'lat_max': 45.0428,
- 'lon_min': -93.3223,
- 'lon_max': -93.1833
+    "lat_min": 44.8899,
+    "lat_max": 45.0428,
+    "lon_min": -93.3223,
+    "lon_max": -93.1833,
 }
 
-TARGET_ZIP_CODES = [
- "55401", "55402", "55403", "55404", "55405",
- "55406", "55407", "55408", "55409", "55410",
- "55411", "55412", "55413", "55414", "55415"
+MINNEAPOLIS_ZIP_CODES = [
+    "55401", "55402", "55403", "55404", "55405",
+    "55406", "55407", "55408", "55409", "55410",
+    "55411", "55412", "55413", "55414", "55415",
 ]
 
-QSR_NAMES = [
- "McDonald's", "Subway", "Chipotle Mexican Grill", "Taco Bell", "Panera Bread",
- "Starbucks", "Arby's", "Chick-fil-A", "Popeyes", "In-N-Out Burger",
- "Five Guys", "Shake Shack", "Burger King", "Wendy's", "Panda Express"
-]
-
-PHARMACY_NAMES = [
- "CVS Pharmacy", "Walgreens", "Target Pharmacy", "Costco Pharmacy",
- "Rite Aid", "Duane Reade", "Kroger Pharmacy", "Safeway Pharmacy"
-]
-
-def generate_test_fixture_data(num_qsr: int = 5, num_pharmacy: int = 3) -> pd.DataFrame:
-    """
-    Generate minimal test fixture data for unit testing
-    
-    Args:
-        num_qsr: Number of quick service restaurants (default: 5 for testing)
-        num_pharmacy: Number of pharmacies (default: 3 for testing)
-    
-    Returns:
-        DataFrame with NETS-like structure
-    """
-    logger.info(f"Generating test fixture data: {num_qsr} QSR + {num_pharmacy} Pharmacies")
-    
-    records = []
-    duns_counter = 1000000
-    
-    # Quick Service Restaurants (NAICS 722513)
-    for i in range(num_qsr):
-        lat = np.random.uniform(MINNEAPOLIS_BOUNDS['lat_min'], MINNEAPOLIS_BOUNDS['lat_max'])
-        lon = np.random.uniform(MINNEAPOLIS_BOUNDS['lon_min'], MINNEAPOLIS_BOUNDS['lon_max'])
-        
-        zip_code = np.random.choice(TARGET_ZIP_CODES)
-        
-        records.append({
-            'duns_id': str(duns_counter + i),
-            'company_name': np.random.choice(QSR_NAMES),
-            'naics_code': '722513',
-            'naics_title': 'Limited-Service Restaurants',
-            'latitude': lat,
-            'longitude': lon,
-            'zip_code': zip_code,
-            'street_address': f"{np.random.randint(1, 10000)} Main St",
-            'city': 'Minneapolis',
-            'state': 'MN',
-            'phone': f"({np.random.randint(200, 999)})-{np.random.randint(200, 999)}-{np.random.randint(1000, 9999)}",
-            'website': None,
-            'year_established': np.random.randint(2000, 2023),
-            'year_closed': None if np.random.random() > 0.1 else np.random.randint(2020, 2026),
-            'employee_count_raw': np.random.randint(4, 50) if np.random.random() > 0.3 else None,
-            'sic_code': '5812'
-        })
-    
-    # Pharmacies (NAICS 446110)
-    for i in range(num_pharmacy):
-        lat = np.random.uniform(MINNEAPOLIS_BOUNDS['lat_min'], MINNEAPOLIS_BOUNDS['lat_max'])
-        lon = np.random.uniform(MINNEAPOLIS_BOUNDS['lon_min'], MINNEAPOLIS_BOUNDS['lon_max'])
-        
-        zip_code = np.random.choice(TARGET_ZIP_CODES)
-        
-        records.append({
-            'duns_id': str(duns_counter + num_qsr + i),
-            'company_name': np.random.choice(PHARMACY_NAMES),
-            'naics_code': '446110',
-            'naics_title': 'Pharmacies',
-            'latitude': lat,
-            'longitude': lon,
-            'zip_code': zip_code,
-            'street_address': f"{np.random.randint(1, 10000)} Medical Ave",
-            'city': 'Minneapolis',
-            'state': 'MN',
-            'phone': f"({np.random.randint(200, 999)})-{np.random.randint(200, 999)}-{np.random.randint(1000, 9999)}",
-            'website': None,
-            'year_established': np.random.randint(1995, 2023),
-            'year_closed': None if np.random.random() > 0.08 else np.random.randint(2021, 2026),
-            'employee_count_raw': np.random.randint(3, 35) if np.random.random() > 0.4 else None,
-            'sic_code': '5912'
-        })
-    
-    df = pd.DataFrame(records)
-    logger.info(f"Generated {len(df)} total records")
-    return df
+TARGET_NAICS_CODES = {
+    "722513": "Limited-Service Restaurants (Quick Service Restaurants)",
+    "446110": "Pharmacies and Drug Stores",
+}
 
 
-def generate_enrichment_data(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Add optional enrichment columns to simulate external data
-    
-    Args:
-        df: Base NETS data
-    
-    Returns:
-        DataFrame with enriched columns
-    """
-    logger.info("Adding enrichment features...")
-    
-    # LinkedIn employee counts (some missing)
-    df['linkedin_employee_count'] = df.apply(
-        lambda x: np.random.randint(max(1, x['employee_count_raw'] - 3), x['employee_count_raw'] + 5)
-        if pd.notna(x['employee_count_raw']) and np.random.random() > 0.5
-        else None,
-        axis=1
-    )
-    
-    # Review data
-    base_date = datetime.now()
-    df['review_count_3m'] = np.random.randint(0, 15)
-    df['review_count_6_12m'] = df['review_count_3m'] + np.random.randint(0, 20)
-    df['last_review_date'] = df.apply(
-        lambda x: (base_date - timedelta(days=np.random.randint(1, 90))).strftime('%Y-%m-%d')
-        if np.random.random() > 0.15
-        else None,
-        axis=1
-    )
-    
-    # Job postings
-    df['job_postings_6m'] = np.random.randint(0, 5)
-    df['job_postings_peak'] = df['job_postings_6m'].apply(
-        lambda x: max(1, x + np.random.randint(-1, 2))
-    )
-    
-    # Building area
-    df['estimated_area_sqm'] = df['naics_code'].apply(
-        lambda x: np.random.randint(400, 600) if x == '722513' else np.random.randint(500, 700)
-    )
-    
-    # Street view indicators
-    df['street_view_active'] = np.random.choice([True, False], size=len(df), p=[0.7, 0.3])
-    df['signage_visible'] = np.random.choice([True, False], size=len(df), p=[0.8, 0.2])
-    
-    logger.info("Enrichment features added successfully")
-    return df
+# =============================================================================
+# MAIN: Print Documentation and Check Status
+# =============================================================================
+
+def print_separator(title: str = "") -> None:
+    """Print formatted section separator"""
+    print("\n" + "=" * 80)
+    if title:
+        print(f"  {title}")
+        print("=" * 80)
 
 
-def main():
-    """Main function to generate test fixture data"""
-    # Create test fixtures directory if it doesn't exist
-    test_dir = Path("tests/fixtures")
-    test_dir.mkdir(parents=True, exist_ok=True)
+def print_path_status(path: Path, description: str) -> bool:
+    """Check and print file/directory status"""
+    exists = path.exists()
+    status = "[OK]" if exists else "[--]"
+    size_info = ""
+    if exists and path.is_file():
+        size_kb = path.stat().st_size / 1024
+        if size_kb > 1024:
+            size_info = f" ({size_kb/1024:.1f} MB)"
+        else:
+            size_info = f" ({size_kb:.1f} KB)"
+    print(f"  {status} {path.relative_to(PROJECT_ROOT)}{size_info}")
+    print(f"       {description}")
+    return exists
+
+
+def print_columns(columns: dict, indent: int = 2) -> None:
+    """Print column schema with descriptions"""
+    prefix = " " * indent
+    for col, desc in columns.items():
+        print(f"{prefix}- {col:30s}: {desc}")
+
+
+def main() -> int:
+    """Main entry point - print documentation and check data status"""
     
-    # Generate data
-    df = generate_test_fixture_data(num_qsr=5, num_pharmacy=3)
-    df = generate_enrichment_data(df)
+    print_separator("NETS ENHANCEMENT PIPELINE - DATA PATH REFERENCE")
+    print("\n  This script documents required data paths and CSV schema.")
+    print("  NO DATA GENERATION - you must provide your own NETS CSV files.")
     
-    # Save to fixtures directory
-    output_path = test_dir / "nets_test_fixture_small.csv"
-    df.to_csv(output_path, index=False)
-    logger.info(f"Test fixture saved to {output_path}")
+    # ==========================================================================
+    # Section 1: Directory Structure
+    # ==========================================================================
+    print_separator("DIRECTORY STRUCTURE")
     
-    # Print summary
-    print("\n" + "="*70)
-    print("TEST FIXTURE GENERATION SUMMARY")
-    print("="*70)
-    print(f"Total Records: {len(df)}")
-    print(f"\nBy Industry:")
-    print(df['naics_code'].value_counts())
-    print(f"\nBy ZIP Code (sample):")
-    print(df['zip_code'].value_counts().head(5))
-    print(f"\nData Completeness:")
-    print(f" Employee counts: {(df['employee_count_raw'].notna().sum() / len(df) * 100):.1f}%")
-    print(f" LinkedIn data: {(df['linkedin_employee_count'].notna().sum() / len(df) * 100):.1f}%")
-    print(f" Review data: {(df['last_review_date'].notna().sum() / len(df) * 100):.1f}%")
-    print(f" Active businesses: {((df['year_closed'].isna()).sum() / len(df) * 100):.1f}%")
-    print("="*70 + "\n")
+    print("\n  Required directory layout:")
+    print("""
+    NETS-AI/
+    +-- data/
+    |   +-- raw/                    <- Place your NETS CSV files here
+    |   |   +-- nets_minneapolis.csv
+    |   |   +-- census_tracts_2020.shp (optional)
+    |   +-- processed/              <- Pipeline outputs (Parquet)
+    |   +-- outputs/                <- Validation reports, figures
+    +-- tests/
+        +-- fixtures/               <- Small test CSV (5-20 records)
+            +-- nets_test_data.csv
+    """)
     
-    return df
+    # ==========================================================================
+    # Section 2: Required Input Files
+    # ==========================================================================
+    print_separator("REQUIRED INPUT FILES")
+    
+    print("\n  Production data (full NETS snapshot):")
+    print_path_status(NETS_INPUT_PATH, "Primary input file for Minneapolis pilot")
+    print_path_status(NETS_FULL_PATH, "Alternative: full dataset path")
+    
+    print("\n  Test fixtures (small subset for development):")
+    print_path_status(TEST_FIXTURE_PATH, "5-20 records for --test mode")
+    
+    print("\n  Optional geographic data:")
+    print_path_status(CENSUS_TRACTS_PATH, "Census tract boundaries for spatial join")
+    
+    # ==========================================================================
+    # Section 3: Required CSV Schema
+    # ==========================================================================
+    print_separator("REQUIRED CSV COLUMNS (8 mandatory)")
+    print_columns(REQUIRED_COLUMNS)
+    
+    print_separator("OPTIONAL NETS COLUMNS (recommended)")
+    print_columns(OPTIONAL_NETS_COLUMNS)
+    
+    print_separator("ENRICHMENT COLUMNS (added by pipeline)")
+    print_columns(OPTIONAL_ENRICHMENT_COLUMNS)
+    
+    # ==========================================================================
+    # Section 4: Output Schema
+    # ==========================================================================
+    print_separator("OUTPUT COLUMNS (generated by pipeline)")
+    print_columns(OUTPUT_COLUMNS)
+    
+    print("\n  Output format: Apache Parquet")
+    print(f"  Output path:   {DATA_PROCESSED_DIR.relative_to(PROJECT_ROOT)}/nets_enhanced_<city>_<timestamp>.parquet")
+    
+    # ==========================================================================
+    # Section 5: NAICS Codes
+    # ==========================================================================
+    print_separator("TARGET NAICS CODES")
+    for code, desc in TARGET_NAICS_CODES.items():
+        print(f"  - {code}: {desc}")
+    
+    # ==========================================================================
+    # Section 6: Geographic Reference
+    # ==========================================================================
+    print_separator("MINNEAPOLIS GEOGRAPHIC REFERENCE")
+    print(f"\n  Bounding Box (EPSG:4326):")
+    print(f"    Latitude:  {MINNEAPOLIS_BOUNDS['lat_min']:.4f} to {MINNEAPOLIS_BOUNDS['lat_max']:.4f}")
+    print(f"    Longitude: {MINNEAPOLIS_BOUNDS['lon_min']:.4f} to {MINNEAPOLIS_BOUNDS['lon_max']:.4f}")
+    print(f"\n  Target ZIP Codes:")
+    print(f"    {', '.join(MINNEAPOLIS_ZIP_CODES)}")
+    
+    # ==========================================================================
+    # Section 7: Usage Instructions
+    # ==========================================================================
+    print_separator("USAGE INSTRUCTIONS")
+    
+    print("""
+    1. PREPARE YOUR DATA:
+       - Export NETS snapshot to CSV with required columns
+       - Filter to NAICS codes 722513 and 446110
+       - Ensure coordinates are in WGS84 (EPSG:4326)
+    
+    2. PLACE FILES:
+       - Production: data/raw/nets_minneapolis.csv
+       - Testing:    tests/fixtures/nets_test_data.csv (5-20 records)
+    
+    3. RUN PIPELINE:
+       # Test mode (uses fixtures, no API calls)
+       python scripts/run_pipeline.py --test
+       
+       # Production mode
+       python scripts/run_pipeline.py --input data/raw/nets_minneapolis.csv
+       
+       # Skip optional components
+       python scripts/run_pipeline.py --input data/raw/nets_minneapolis.csv --skip linkedin wayback
+    
+    4. CHECK OUTPUT:
+       - Parquet: data/processed/nets_enhanced_Minneapolis_<timestamp>.parquet
+       - Dashboard: streamlit run dashboard/app.py
+    """)
+    
+    print_separator()
+    print("  Data path documentation complete.")
+    print("  Provide your NETS CSV files and run the pipeline.\n")
+    
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

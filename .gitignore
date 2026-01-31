@@ -58,3 +58,9 @@ logs/
 *.tmp
 *.bak
 structure.html
+
+# Copilot context files (not for repository)
+.copilot/
+.github/copilot-instructions.md
+chat-*.txt
+*Prompt*.txt

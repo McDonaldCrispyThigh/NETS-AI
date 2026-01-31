@@ -130,21 +130,22 @@ NETS-AI/
 │   └── utils/
 │       ├── logger.py              # Centralized logging
 │       └── helpers.py             # Shared utilities
-├── data/                          # Data storage (gitignored)
-│   ├── raw/                       # NETS snapshots (user-provided)
-│   ├── processed/                 # Parquet outputs
-│   └── outputs/                   # Analysis artifacts
+├── data/                          # Data storage (gitignored, user-provided)
+│   ├── README.md                  # Data path and schema documentation
+│   ├── raw/                       # INPUT: NETS snapshots (user provides)
+│   ├── processed/                 # OUTPUT: Parquet files (pipeline generates)
+│   └── outputs/                   # OUTPUT: Analysis artifacts
 ├── scripts/                       # Command-line tools
 │   ├── 01_export_nets_snapshot.py
 │   ├── 02_run_minneapolis_pilot.py
 │   ├── 03_complete_pipeline.py
-│   ├── generate_sample_data.py    # Schema documentation tool
+│   ├── generate_sample_data.py    # Data path and schema documentation
 │   ├── run_pipeline.py            # Main entry (--test --skip --city)
 │   └── validate_environment.py    # Dependency checker
 ├── tests/                         # Testing framework
 │   ├── __init__.py
-│   ├── fixtures/                  # Test data (5-20 records)
-│   │   └── nets_test_data.csv
+│   ├── fixtures/                  # INPUT: Test CSV (user provides, 5-20 records)
+│   │   └── nets_test_data.csv     # For --test mode
 │   ├── test_agents.py
 │   └── test_validator.py
 ├── dashboard/
@@ -320,64 +321,105 @@ cp .env.example .env
 
 ### 3. Data Preparation
 
-**CRITICAL**: NETS snapshot must be in `data/raw/` directory
+**CRITICAL**: You must provide your own NETS database snapshot. This repository contains no sample data.
 
 ```bash
-# View required CSV schema and column specifications
+# View required data paths and CSV schema documentation
 python scripts/generate_sample_data.py
 
-# Required columns (15 mandatory):
-# - company_name (string): Establishment name
-# - address (string): Street address
-# - city (string): City name
-# - state (string): Two-letter state code
-# - zipcode (string): 5-digit ZIP code
-# - latitude (float): WGS84 latitude (EPSG:4326)
-# - longitude (float): WGS84 longitude (EPSG:4326)
-# - naics_code (string): Must be "722513" or "446110"
-# - employees_baseline (integer): NETS-reported employee count
-# - company_id (string): Unique identifier
-# - year (integer): Snapshot year
-# - sales (float): Annual sales (optional, used for validation)
-# - emp_here (integer): NETS employment at this location
-# - emp_total (integer): NETS total employment (HQ + branches)
-# - sic_code (string): Legacy SIC classification
-
-# Verify data file exists and has correct columns
-ls data/raw/
-# Expected: nets_minneapolis_full.csv or similar NETS snapshot
+# This script prints:
+# - Required input file locations
+# - Mandatory CSV column schema (8 columns)
+# - Optional NETS columns (recommended)
+# - Output file format and location
 ```
+
+**Directory Structure** (data files gitignored):
+
+```text
+data/
++-- raw/                        <- YOUR INPUT: Place NETS CSV files here
+|   +-- nets_minneapolis.csv    <- Primary input (you provide)
+|   +-- census_tracts_2020.shp  <- Optional: Census tract boundaries
++-- processed/                  <- OUTPUT: Pipeline generates Parquet here
++-- outputs/                    <- OUTPUT: Validation reports, figures
+
+tests/
++-- fixtures/                   <- YOUR INPUT: Small test CSV (5-20 records)
+    +-- nets_test_data.csv      <- For --test mode development
+```
+
+**Required CSV Columns** (8 mandatory):
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `duns_id` | string | Unique DUNS business identifier |
+| `company_name` | string | Establishment name |
+| `naics_code` | string | Must be "722513" or "446110" |
+| `latitude` | float | WGS84 latitude (EPSG:4326) |
+| `longitude` | float | WGS84 longitude (EPSG:4326) |
+| `street_address` | string | Street address |
+| `city` | string | City name (e.g., "Minneapolis") |
+| `state` | string | 2-letter state code (e.g., "MN") |
+| `zip_code` | string | 5-digit ZIP code |
+
+**Recommended Optional Columns**:
+- `employee_count_raw`: NETS-reported employee count
+- `year_established`: Year business was established
+- `year_closed`: Year closed (null if active)
+- `sic_code`: Legacy SIC classification
+
+See [data/README.md](data/README.md) for complete schema documentation.
 
 ### 4. Pipeline Execution
 
+**Two Modes Available**:
+
 ```bash
-# TEST MODE: Run with fixtures (5-20 synthetic records, no API calls)
-python scripts/run_pipeline.py --test
+# ============================================================
+# TEST MODE (recommended for first run)
+# ============================================================
+# Uses small fixture data, skips expensive API calls
+python main.py --test
 
-# Expected output:
-# Phase 1: Loading NETS data... [4 records]
-# Phase 2: Creating geospatial structure... [OK]
-# Phase 3: Employee estimation... [Bayesian MCMC sampling]
-# Phase 4: Operational status detection... [Random Forest]
-# Phase 5: Data quality scoring... [completeness 85%, diversity 60%]
-# Phase 6: Parquet export... [data/processed/nets_enhanced_test.parquet]
+# Test with verbose logging
+python main.py --test --verbose
 
-# PRODUCTION MODE: Full Minneapolis dataset
-python scripts/run_pipeline.py --input data/raw/nets_minneapolis_full.csv --city Minneapolis
+# Test specific operations only
+python main.py --test --skip employees survival
 
-# SKIP EXPENSIVE OPERATIONS: For rapid development iteration
-python scripts/run_pipeline.py --test --skip linkedin wayback gpt
+# ============================================================
+# PRODUCTION MODE (requires NETS CSV input)
+# ============================================================
+# Full pipeline with real data
+python main.py --input data/raw/nets_minneapolis.csv
 
-# Available skip options:
-# - employees: Skip Bayesian employee estimation (use NETS baseline only)
-# - survival: Skip Random Forest operational status detection
-# - gpt: Skip LLM-based entity resolution
-# - wayback: Skip Internet Archive historical verification
-# - linkedin: Skip LinkedIn profile employee extraction
-# - gmaps: Skip Google Maps place verification
+# With city specification
+python main.py --input data/raw/nets.csv --city Minneapolis
 
-# Output location:
-# data/processed/nets_enhanced_{city}_{timestamp}.parquet
+# Skip expensive external API calls
+python main.py --input data/raw/nets.csv --skip linkedin wayback gpt
+
+# Full pipeline with validation
+python main.py --input data/raw/nets.csv --validate --verbose
+```
+
+**Available --skip Options**:
+
+| Option | Description | Cost Savings |
+|--------|-------------|--------------|
+| `linkedin` | Skip LinkedIn employee scraping | High |
+| `wayback` | Skip Wayback Machine verification | Low (free API) |
+| `gpt` | Skip LLM entity resolution | Medium |
+| `gmaps` | Skip Google Maps verification | Medium |
+| `outscraper` | Skip Outscraper review collection | High |
+| `yelp` | Skip Yelp review collection | Low |
+| `employees` | Skip Bayesian employee estimation | Low (compute only) |
+| `survival` | Skip survival status detection | Low (compute only) |
+
+**Output Location**:
+```text
+data/processed/nets_enhanced_{city}_{timestamp}.parquet
 ```
 
 ### 5. Visualization and Exploration
@@ -385,6 +427,9 @@ python scripts/run_pipeline.py --test --skip linkedin wayback gpt
 ```bash
 # Launch interactive Streamlit dashboard
 streamlit run dashboard/app.py
+
+# Or launch after pipeline completion
+python main.py --input data/raw/nets.csv --dashboard
 
 # Dashboard opens at: http://localhost:8501
 

@@ -1,0 +1,3 @@
+# This directory is for test fixture data
+# Place your nets_test_data.csv file here (5-20 records)
+# See scripts/generate_sample_data.py for required schema

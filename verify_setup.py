@@ -22,11 +22,11 @@ print("=" * 80)
 
 core_libs = ['pandas', 'numpy', 'requests', 'dotenv']
 for lib in core_libs:
- try:
- __import__(lib if lib != 'dotenv' else 'python_dotenv'.replace('python_', ''))
- print(f" OK - {lib}")
- except ImportError:
- print(f" FAIL - {lib} (missing)")
+	try:
+		__import__(lib if lib != 'dotenv' else 'python_dotenv'.replace('python_', ''))
+		print(f" OK - {lib}")
+	except ImportError:
+		print(f" FAIL - {lib} (missing)")
 
 # Test 2: API Integration
 print("\n" + "=" * 80)
@@ -35,11 +35,11 @@ print("=" * 80)
 
 api_libs = ['openai', 'googlemaps', 'waybackpy', 'bs4', 'pydantic']
 for lib in api_libs:
- try:
- __import__(lib)
- print(f" OK - {lib}")
- except ImportError:
- print(f" FAIL - {lib} (missing)")
+	try:
+		__import__(lib)
+		print(f" OK - {lib}")
+	except ImportError:
+		print(f" FAIL - {lib} (missing)")
 
 # Test 3: New ML/Geospatial Libraries
 print("\n" + "=" * 80)
@@ -48,14 +48,14 @@ print("=" * 80)
 
 ml_libs = ['geopandas', 'shapely', 'sklearn', 'xgboost']
 for lib in ml_libs:
- try:
- if lib == 'sklearn':
- import sklearn
- else:
- __import__(lib)
- print(f" OK - {lib}")
- except ImportError:
- print(f" FAIL - {lib} (NEEDS INSTALL)")
+	try:
+		if lib == 'sklearn':
+			import sklearn
+		else:
+			__import__(lib)
+		print(f" OK - {lib}")
+	except ImportError:
+		print(f" FAIL - {lib} (NEEDS INSTALL)")
 
 # Test 4: Visualization Libraries
 print("\n" + "=" * 80)
@@ -64,11 +64,11 @@ print("=" * 80)
 
 viz_libs = ['streamlit', 'folium', 'altair']
 for lib in viz_libs:
- try:
- __import__(lib)
- print(f" OK - {lib}")
- except ImportError:
- print(f" FAIL - {lib} (NEEDS INSTALL)")
+	try:
+		__import__(lib)
+		print(f" OK - {lib}")
+	except ImportError:
+		print(f" FAIL - {lib} (NEEDS INSTALL)")
 
 # Test 5: Custom Modules
 print("\n" + "=" * 80)
@@ -86,13 +86,13 @@ custom_modules = [
 ]
 
 for module_name, description in custom_modules:
- try:
- __import__(module_name)
- print(f" OK - {description}")
- except ImportError as e:
- print(f" FAIL - {description}: {str(e)[:50]}")
- except Exception as e:
- print(f" ERROR - {description}: {str(e)[:50]}")
+	try:
+		__import__(module_name)
+		print(f" OK - {description}")
+	except ImportError as e:
+		print(f" FAIL - {description}: {str(e)[:50]}")
+	except Exception as e:
+		print(f" ERROR - {description}: {str(e)[:50]}")
 
 # Test 6: Documentation
 print("\n" + "=" * 80)
