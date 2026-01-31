@@ -4,94 +4,53 @@ This document describes how to deploy the NETS Enhancement System to additional 
 
 ## Architecture Overview
 
-The system uses a modular city configuration approach:
+The system uses **dynamic boundary fetching** - all geographic data is retrieved from external APIs at runtime:
 
 ```
 src/config/cities/
-    __init__.py           # Config registry
+    __init__.py           # Config exports
+    dynamic_config.py     # CityConfig class with dynamic fetching
     city_context.py       # Runtime context manager
-    minneapolis_mn.py     # Minneapolis configuration
-    denver_co.py          # Denver configuration (template)
+
+src/geospatial/
+    boundary_fetcher.py   # OpenStreetMap/Census API integration
+    boundary_validator.py # Coordinate validation
+    distance_calculator.py# Haversine distance
+
+data/boundaries/          # Local cache for downloaded boundaries
+    minneapolis_mn.json
+    denver_co.json
 ```
+
+## Key Principle: No Hardcoded Geography
+
+All geographic data is fetched dynamically:
+
+| Data Type | Source | Cached |
+|-----------|--------|--------|
+| City boundaries | OpenStreetMap Nominatim | Yes |
+| ZIP codes | US Census ZCTA | Yes |
+| Polygon geometry | Census TIGERweb | Yes |
 
 ## Adding a New City
 
-### Step 1: Create City Configuration File
+### Step 1: Simply Use the City Key
 
-Create `src/config/cities/{city}_{state}.py`:
+No configuration file needed. Just run with the city key:
 
-```python
-"""
-Configuration for {City Name}, {State}
-"""
-
-from typing import Dict, Any
-
-{CITY}_CONFIG: Dict[str, Any] = {
-    "city_name": "{City Name}",
-    "state": "{ST}",
-    "timezone": "America/{Timezone}",
-    
-    # Geographic bounds (EPSG:4326)
-    "bounds": {
-        "min_lon": -XX.XXXX,
-        "max_lon": -XX.XXXX,
-        "min_lat": XX.XXXX,
-        "max_lat": XX.XXXX,
-    },
-    
-    # Valid ZIP codes for the city
-    "zip_codes": [
-        "XXXXX", "XXXXX", ...
-    ],
-    
-    # Target NAICS codes
-    "naics_codes": {
-        "722513": "Limited-Service Restaurants",
-        "446110": "Pharmacies",
-    },
-    
-    # Industry baselines for employee estimation
-    "employee_baselines": {
-        "722513": {
-            "median": 12,
-            "mean": 15.0,
-            "std": 8.0,
-            "min_typical": 3,
-            "max_typical": 50,
-        },
-        "446110": {
-            "median": 8,
-            "mean": 10.0,
-            "std": 6.0,
-            "min_typical": 2,
-            "max_typical": 35,
-        },
-    },
-    
-    # Data sources configuration
-    "data_sources": {
-        "sos_url": "https://...",  # Secretary of State business lookup
-        "sos_enabled": True,
-    },
-}
+```bash
+python main.py --input data/raw/portland_or_nets.csv --city portland_or
 ```
 
-### Step 2: Register the Configuration
+The system will automatically:
+1. Parse "portland_or" into city="Portland", state="OR"
+2. Fetch boundaries from OpenStreetMap Nominatim API
+3. Fetch ZIP codes from Census ZCTA API
+4. Cache results in `data/boundaries/portland_or.json`
 
-Edit `src/config/cities/__init__.py`:
+### Step 2: (Optional) Custom Configuration
 
-```python
-from .{city}_{state} import {CITY}_CONFIG
-
-CITY_CONFIGS = {
-    "minneapolis_mn": MINNEAPOLIS_CONFIG,
-    "denver_co": DENVER_CONFIG,
-    "{city}_{state}": {CITY}_CONFIG,  # Add new city
-}
-```
-
-### Step 3: Prepare NETS Data
+For custom NAICS codes or baselines, create a config programmatically:
 
 1. Export NETS snapshot for the target city:
    - Filter by city name and state

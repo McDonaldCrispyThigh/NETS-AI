@@ -1,19 +1,25 @@
 """
 Multi-city configuration module.
-Each city has its own configuration file with geographic bounds, NAICS targets, and baselines.
+All geographic data (bounds, ZIP codes) fetched dynamically from external APIs.
+No hardcoded geographic constants.
 """
 
-from .minneapolis_mn import MINNEAPOLIS_CONFIG
-from .denver_co import DENVER_CONFIG
+from .dynamic_config import (
+    CityConfig,
+    create_city_config,
+    get_city_config,
+    register_city_config,
+    list_available_cities,
+    DEFAULT_NAICS,
+    DEFAULT_BASELINES,
+)
 
-CITY_CONFIGS = {
-    "minneapolis": MINNEAPOLIS_CONFIG,
-    "denver": DENVER_CONFIG,
-}
-
-def get_city_config(city_name: str) -> dict:
-    """Get configuration for a specific city."""
-    city_key = city_name.lower().replace(" ", "_")
-    if city_key not in CITY_CONFIGS:
-        raise ValueError(f"Unknown city: {city_name}. Available: {list(CITY_CONFIGS.keys())}")
-    return CITY_CONFIGS[city_key]
+__all__ = [
+    "CityConfig",
+    "create_city_config",
+    "get_city_config",
+    "register_city_config",
+    "list_available_cities",
+    "DEFAULT_NAICS",
+    "DEFAULT_BASELINES",
+]

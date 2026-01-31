@@ -28,6 +28,9 @@ env/
 
 # Environment Variables
 .env
+
+# Cached Data
+data/boundaries/
 .linkedin_session.json
 *_session.json
 
