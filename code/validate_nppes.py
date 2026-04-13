@@ -206,11 +206,15 @@ def _fuzzy(a: str, b: str) -> float:
 def match_records(ai_df: pd.DataFrame, nppes_df: pd.DataFrame,
                   threshold: float = 0.75) -> pd.DataFrame:
     """
-    For each AI record, find the highest-scoring NPPES record.
+    Greedy 1-to-1 matching: each NPPES record is claimed by at most one AI record.
 
-    Same-ZIP matches use the raw score. Cross-ZIP matches are penalized 15%
-    to prefer geographically consistent pairs while still catching edge cases
-    where a pharmacy straddles ZIP boundaries.
+    Algorithm:
+    1. Score every (AI, NPPES) pair; apply 15% cross-ZIP penalty.
+    2. Sort all candidate pairs by score descending.
+    3. Greedily assign: take the best pair, mark both sides used, repeat.
+
+    This prevents one pharmacy chain (e.g. CVS) from absorbing all NPPES matches
+    and inflating True Positives beyond the total NPPES count.
     """
     ai_df = ai_df.copy()
     ai_df["NPPES_Match_Name"]  = None
@@ -219,28 +223,33 @@ def match_records(ai_df: pd.DataFrame, nppes_df: pd.DataFrame,
     ai_df["NPPES_Match_ZIP"]   = None
     ai_df["Is_NPPES_Match"]    = False
 
+    # Build all candidate pairs above threshold
+    candidates: list[tuple[float, int, int]] = []   # (score, ai_idx, nppes_idx)
     for i, row in ai_df.iterrows():
-        best_score = 0.0
-        best_idx   = None
-
         ai_zip = str(row.get("Zip_Code", ""))[:5]
-
         for j, nrec in nppes_df.iterrows():
             score = _fuzzy(str(row["Company"]), str(nrec["Name"]))
             if ai_zip and nrec["ZIP"] and ai_zip != nrec["ZIP"]:
-                score *= 0.85   # cross-ZIP penalty
+                score *= 0.85
+            if score >= threshold:
+                candidates.append((score, i, j))
 
-            if score > best_score:
-                best_score = score
-                best_idx   = j
+    candidates.sort(key=lambda x: x[0], reverse=True)
 
-        if best_score >= threshold and best_idx is not None:
-            nrec = nppes_df.loc[best_idx]
-            ai_df.at[i, "NPPES_Match_Name"]  = nrec["Name"]
-            ai_df.at[i, "NPPES_Match_NPI"]   = nrec["NPI"]
-            ai_df.at[i, "NPPES_Match_Score"] = round(best_score, 3)
-            ai_df.at[i, "NPPES_Match_ZIP"]   = nrec["ZIP"]
-            ai_df.at[i, "Is_NPPES_Match"]    = True
+    used_ai:    set[int] = set()
+    used_nppes: set[int] = set()
+
+    for score, ai_idx, nppes_idx in candidates:
+        if ai_idx in used_ai or nppes_idx in used_nppes:
+            continue
+        nrec = nppes_df.loc[nppes_idx]
+        ai_df.at[ai_idx, "NPPES_Match_Name"]  = nrec["Name"]
+        ai_df.at[ai_idx, "NPPES_Match_NPI"]   = nrec["NPI"]
+        ai_df.at[ai_idx, "NPPES_Match_Score"] = round(score, 3)
+        ai_df.at[ai_idx, "NPPES_Match_ZIP"]   = nrec["ZIP"]
+        ai_df.at[ai_idx, "Is_NPPES_Match"]    = True
+        used_ai.add(ai_idx)
+        used_nppes.add(nppes_idx)
 
     return ai_df
 

@@ -17,10 +17,13 @@ Usage (programmatic):
 
 import json
 import os
+import re
 import sys
 from datetime import datetime
 
 import pandas as pd
+
+_ZIP_RE = re.compile(r",\s+[A-Z]{2}\s+(\d{5})")
 
 # Ensure project root is on sys.path so skills/ is importable
 _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -225,7 +228,8 @@ class NETSAgentWorkflow:
             "Street_Address":      addr,
             "City":                self.city,
             "State":               "MN",
-            "Zip_Code":            place.get("_source_zip"),
+            "Zip_Code":            (_ZIP_RE.search(addr).group(1)
+                                    if _ZIP_RE.search(addr) else place.get("_source_zip")),
             "Operating_Hours":     operating_hours,
             "Hard_Attributes":     attr_str,
             "Price_Level":         price_level,
@@ -254,5 +258,5 @@ class NETSAgentWorkflow:
         df = pd.DataFrame(data).reindex(columns=FINAL_COLUMNS)
         df.to_csv(path, index=False)
 
-        print(f">>> Saved {len(df)} records → {filename}")
+        print(f">>> Saved {len(df)} records -> {filename}")
         return os.path.abspath(path)
