@@ -33,6 +33,9 @@ desktop.ini
 
 # Data outputs (large files, generated)
 data/*.csv
+data/*.zip
+data/*.txt
+data/figures/
 !data/.gitkeep
 
 # Jupyter
