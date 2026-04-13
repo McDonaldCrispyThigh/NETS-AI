@@ -17,9 +17,21 @@ Usage (programmatic):
 
 import json
 import os
+import sys
 from datetime import datetime
 
 import pandas as pd
+
+# Ensure project root is on sys.path so skills/ is importable
+_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+
+try:
+    from skills.wayback_agent import get_snapshot_info as _wayback
+    _WAYBACK_OK = True
+except ImportError:
+    _WAYBACK_OK = False
 
 FINAL_COLUMNS = [
     "Company", "Calculated_NAICS", "Target_NAICS", "Is_Target_Match", "Confidence",
@@ -27,6 +39,7 @@ FINAL_COLUMNS = [
     "Latitude", "Longitude", "Street_Address", "City", "State", "Zip_Code",
     "Operating_Hours", "Hard_Attributes", "Price_Level", "Business_Website",
     "Employees_Estimated", "Year_Established", "Last_Review_Date",
+    "Wayback_Earliest_Year", "Wayback_Latest_Year", "Wayback_Snapshot_Count",
 ]
 
 
@@ -189,6 +202,14 @@ class NETSAgentWorkflow:
             print(f"    [AI Error] {e}")
             return None
 
+        website = details.get("website")
+        wayback = (
+            _wayback(website)
+            if _WAYBACK_OK and website
+            else {"Wayback_Earliest_Year": None, "Wayback_Latest_Year": None,
+                  "Wayback_Snapshot_Count": 0}
+        )
+
         return {
             "Company":             name,
             "Calculated_NAICS":    ai.get("Calculated_NAICS"),
@@ -208,10 +229,13 @@ class NETSAgentWorkflow:
             "Operating_Hours":     operating_hours,
             "Hard_Attributes":     attr_str,
             "Price_Level":         price_level,
-            "Business_Website":    details.get("website"),
+            "Business_Website":    website,
             "Employees_Estimated": ai.get("Employees"),
             "Year_Established":    ai.get("Year_Established"),
             "Last_Review_Date":    last_review_date,
+            "Wayback_Earliest_Year":  wayback["Wayback_Earliest_Year"],
+            "Wayback_Latest_Year":    wayback["Wayback_Latest_Year"],
+            "Wayback_Snapshot_Count": wayback["Wayback_Snapshot_Count"],
         }
 
     # ------------------------------------------------------------------

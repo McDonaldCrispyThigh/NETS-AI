@@ -24,7 +24,7 @@ import argparse
 import json
 import time
 from difflib import SequenceMatcher
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
@@ -94,8 +94,8 @@ def fetch_nppes_pharmacies(state: str, city: str = None,
     return unique
 
 
-def _fetch_all_pages(base_params: dict) -> list[dict]:
-    """Paginate through NPPES results using the skip parameter."""
+def _fetch_all_pages(base_params: dict, max_retries: int = 3) -> list[dict]:
+    """Paginate through NPPES results using the skip parameter, with retry."""
     all_results: list[dict] = []
     skip = 0
 
@@ -103,14 +103,31 @@ def _fetch_all_pages(base_params: dict) -> list[dict]:
         params = {**base_params, "skip": skip}
         url = NPPES_API + "?" + urlencode(params)
 
-        try:
-            with urlopen(url, timeout=15) as resp:
-                data = json.loads(resp.read())
-        except URLError as e:
-            print(f"\n    [NPPES network error] {e}")
-            break
-        except json.JSONDecodeError as e:
-            print(f"\n    [NPPES parse error] {e}")
+        data = None
+        for attempt in range(max_retries):
+            try:
+                with urlopen(url, timeout=15) as resp:
+                    data = json.loads(resp.read())
+                break
+            except HTTPError as e:
+                if e.code == 429:
+                    wait = 2 ** attempt
+                    print(f"\n    [NPPES rate limit] retrying in {wait}s ...")
+                    time.sleep(wait)
+                else:
+                    print(f"\n    [NPPES HTTP {e.code}] {e.reason}")
+                    return all_results
+            except URLError as e:
+                if attempt < max_retries - 1:
+                    time.sleep(1)
+                else:
+                    print(f"\n    [NPPES network error] {e}")
+                    return all_results
+            except json.JSONDecodeError as e:
+                print(f"\n    [NPPES parse error] {e}")
+                return all_results
+
+        if data is None:
             break
 
         results = data.get("results", [])
@@ -178,7 +195,8 @@ def _normalize(name: str) -> str:
     """Lowercase, strip punctuation, remove generic pharmacy words."""
     s = name.lower().translate(_PUNCT_TABLE)
     tokens = [w for w in s.split() if w not in _DROP_WORDS]
-    return " ".join(tokens)
+    result = " ".join(tokens)
+    return result if result else name.lower()  # fallback if all tokens dropped
 
 
 def _fuzzy(a: str, b: str) -> float:
