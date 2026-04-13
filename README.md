@@ -1,15 +1,10 @@
-# Synthetic Urban Intelligence  
+# Synthetic Urban Intelligence
 ## Validating Commercial Geographies via AI Agents
 
 **Honors Thesis Project**
 
-**Principal Investigator:**  
-Congyuan (Student), Boulder, CO
-
-**Advisors:**  
-- Prof. Jessica Finlay (Supervisor)  
-- Prof. Michael Esposito (University of Minnesota)
-- Yue Sun (Postdoc in CU Boulder)
+**Principal Investigator:** Congyuan Zheng, University of Colorado Boulder  
+**Advisors:** Prof. Jessica Finlay (CU Boulder) · Prof. Michael Esposito (U of Minnesota) · Yue Sun (Postdoc, CU Boulder)
 
 ---
 
@@ -17,168 +12,126 @@ Congyuan (Student), Boulder, CO
 
 ### Academic Goal
 
-This project investigates the structural and methodological problems of the  
-**National Establishment Time-Series (NETS)** database and evaluates whether  
-AI-generated business data can serve as a viable alternative or supplement.
+Investigate the structural and methodological problems of the **National Establishment Time-Series (NETS)** database and evaluate whether AI-generated business data can serve as a viable alternative or supplement.
 
 ### Technical Goal
 
-To examine whether AI tools (e.g., GPT, Gemini) can automatically generate  
-business establishment data that **structurally resembles NETS**, while being  
-more transparent and reproducible.
-
-### Tech Stack
-
-- **Language:** Python  
-- **AI Tools:** OpenAI API  
-- **Mapping & Spatial Tools:** Spatial SQL
+Build a reproducible AI Agent that collects real-world business data via public APIs, classifies it using GPT-4o-mini, and outputs NETS-compatible structured datasets.
 
 ---
 
-## 2. Methodology: From "Chatting" to "Coding"
+## 2. Quick Start
 
-### The Problem
+```bash
+# 1. Clone and set up environment
+git clone https://github.com/McDonaldCrispyThigh/NETS-AI.git
+cd NETS-AI
+python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
 
-Using web-based tools such as ChatGPT or Gemini directly is **not suitable for  
-scientific research**, primarily due to:
+# 2. Add API keys
+cp .env.example .env   # then fill in your keys
 
-- Lack of reproducibility  
-- Non-deterministic outputs  
-- Opaque reasoning processes  
-
-### Our Solution
-
-Instead of using AI via web interfaces, we design and implement a  
-**reproducible AI Agent through code**.
-
-This agent conducts data generation tasks automatically and consistently.
-
----
-
-### How the Agent Works
-
-#### 1. Read Files (Context)
-
-The agent reads all files in the `docs/` or `context/` directory to understand  
-project goals, constraints, and data schemas.
-
-#### 2. Use Tools
-
-The agent can invoke external tools, including:
-
-- Google Search  
-- Google Maps API  
-- Yelp API  
-
-to retrieve real-world business information.
-
-#### 3. Ask Questions (Prompt)
-
-The agent follows structured instructions defined in:
-
-- `context/prompt_guide.md`
-
-to ensure consistent reasoning behavior.
-
-#### 4. Save Data
-
-Generated outputs are saved as:
-
-- CSV files (Excel-compatible)  
-- Structured according to NETS-like schemas  
-
----
-
-## 3. Repository Structure — The "Brain" of the Agent
-
-```plaintext
-/
-├── README.md
-├── code/                   # Main Python logic (the Agent brain)
-│   ├── main.py             # Entry point
-│   └── agent_workflow.py   # Agent reasoning workflow
-├── skills/                 # External tools (APIs)
-│   ├── google_maps.py      # Google Maps integration
-│   └── yelp_api.py         # Yelp API integration
-├── docs/                   # Project knowledge & instructions
-│   ├── PROMPT_GUIDE.md     # Prompt engineering rules
-│   ├── nets_schema.json    # NETS-style data schema
-│   └── methodology.md      # Research design & notes
-└── data/                   # Generated outputs
+# 3. Run a collection task
+python code/main.py --task coffee
+python code/main.py --task library --city Minneapolis
+python code/main.py --task gym --zips 55401 55402 55403
 ```
 
+**Available tasks:** `library` · `park` · `coffee` · `gym` · `grocery` · `civic` · `religion` · `pharmacy`
 
-### Folder Descriptions
-
-#### `README.md`
-
-High-level introduction and documentation of the project.
-
-#### `code/` (The Brain)
-
-Core Python scripts controlling the AI agent using LangChain.
-
-#### `skills/` (The Tools)
-
-Wrappers for external APIs such as Google Maps and Yelp.
-
+```bash
+# 4. (Pharmacy only) Validate AI output against NPPES NPI Registry
+python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS.csv
+python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips --output data/validation_result.csv
+```
 
 ---
 
-## 4. Project Plan (Sprints)
+## 3. Repository Structure
 
-### ✅ Sprint 1 — Build the Agent
-
-**Status:** In progress  
-**Goal:**  
-- Establish a basic agent capable of communicating with the OpenAI API.
-
-### ✅ Sprint 2 — Fix Prompts
-
-**Goal:**  
-- Improve prompt clarity  
-- Reduce unnecessary follow-up questions  
-- Stabilize agent behavior  
-
-### ✅ Sprint 3 — Generate Data (Pilot Study)
-
-**Goal:**  
-- Generate business establishment data for one city  
-  (e.g., Minneapolis or Boulder)
-
-**Focus Questions:**  
-- Can historical data (2005 / 2015) be recovered?  
-- Are business types and classifications accurate?  
-
-### ✅ Sprint 4 — Compare with NETS
-
-**Goal:**  
-- Evaluate whether AI-generated data can replace or complement NETS.
-
-**Tasks:**  
-- Compare AI-generated datasets with NETS  
-- Visualize spatial differences using ArcGIS Pro  
+```
+NETS-AI/
+├── code/
+│   ├── main.py             # CLI entry point (argparse)
+│   └── agent_workflow.py   # NETSAgentWorkflow class (search → classify → save)
+├── skills/
+│   ├── google_maps.py      # Google Maps Places API wrapper
+│   └── yelp.py             # Yelp Fusion API wrapper (reserved for future use)
+├── docs/
+│   ├── PROMPT_GUIDE.md     # Prompt engineering rules and NAICS decision logic
+│   ├── Methodology.md      # Full research methodology
+│   └── nets_schema.json    # Output field definitions (22 columns)
+├── data/                   # Generated CSV outputs (git-ignored, .gitkeep preserves folder)
+├── .env.example            # API key template
+├── requirements.txt        # Python dependencies (UTF-8)
+└── README.md
+```
 
 ---
 
-## 5. Abstract Draft
+## 4. Environment Variables
 
-### Objective
+Create a `.env` file (see `.env.example`):
 
-To expose methodological weaknesses in NETS-based urban research and evaluate  
-AI agents as a reproducible alternative for commercial geography analysis.
+```
+OPENAI_API_KEY=sk-...
+GOOGLE_MAPS_API_KEY=AIza...
+YELP_API_KEY=...
+```
 
-### Methods
+---
 
-A reproducible AI agent is developed and tested against NETS-based studies,  
-with a focus on data structure, spatial accuracy, and historical consistency.
+## 5. Tech Stack
 
-### Key Findings
+| Layer | Technology |
+|-------|-----------|
+| Language | Python 3.11+ |
+| AI Classification | OpenAI GPT-4o-mini (`temperature=0.0`) |
+| Business Search | Google Maps Places API |
+| Secondary Enrichment | Yelp Fusion API (reserved) |
+| Data Output | pandas → CSV |
+| Spatial Analysis | ArcGIS Pro (external) |
 
-AI-generated data is imperfect—particularly for historical reconstruction.  
-However, these errors reveal similar limitations embedded within NETS itself,  
-highlighting broader issues of data opacity and uncertainty.
+---
 
-### Keywords
+## 6. Output Schema
 
-NETS • AI Agents • Synthetic Data • Reproducibility • Urban Geography
+All runs produce a CSV with 22 columns. See [`docs/nets_schema.json`](docs/nets_schema.json) for full field definitions. Key columns:
+
+| Column | Source | Description |
+|--------|--------|-------------|
+| `Company` | Google Maps | Business name |
+| `Calculated_NAICS` | GPT-4o-mini | Assigned 6-digit NAICS code |
+| `Is_Target_Match` | derived | Whether NAICS matches expected category |
+| `Confidence` | GPT-4o-mini | High / Low |
+| `Latitude`, `Longitude` | Google Maps | WGS84 coordinates |
+| `Employees_Estimated` | GPT-4o-mini | Estimated headcount |
+| `Year_Established` | GPT-4o-mini | Estimated founding year |
+
+---
+
+## 7. Sprint Progress
+
+| Sprint | Goal | Status |
+|--------|------|--------|
+| Sprint 1 | Build basic OpenAI Agent | ✅ Done |
+| Sprint 2 | Improve prompt stability & NAICS logic | ✅ Done |
+| Sprint 3 | Pilot data collection — Minneapolis coffee & library | ✅ Done |
+| Sprint 4 | Compare AI data vs NETS · ArcGIS visualization | 🔄 In Progress |
+
+---
+
+## 8. Key Findings (Pilot)
+
+- **267** unique coffee shops collected across 17 Minneapolis ZIP codes.
+- **~92%** NAICS match rate on full dataset; **100%** on verified final dataset (60 records).
+- Main misclassification: music venues with early morning hours misidentified as coffee shops.
+- AI-estimated `Year_Established` mirrors NETS's own opacity — errors expose shared limitations.
+
+---
+
+## 9. Methodology & Prompt Design
+
+- [`docs/Methodology.md`](docs/Methodology.md) — Research design, validation approach, limitations.
+- [`docs/PROMPT_GUIDE.md`](docs/PROMPT_GUIDE.md) — Prompt architecture, NAICS decision rules, model settings.

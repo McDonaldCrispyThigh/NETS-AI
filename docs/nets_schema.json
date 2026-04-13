@@ -1,64 +1,141 @@
 {
+  "version": "2.0",
+  "description": "Output schema for NETS-AI pipeline. Aligns to NETS database variables where possible.",
   "fields": [
     {
       "name": "Company",
-      "description": "Name of the business",
-      "type": "string"
+      "description": "Business name as returned by Google Maps Places API",
+      "type": "string",
+      "source": "Google Maps"
     },
     {
-      "name": "NAICS",
-      "description": "NAICS code (North American Industry Classification System)",
-      "type": "string"
+      "name": "Calculated_NAICS",
+      "description": "6-digit NAICS code assigned by GPT-4o-mini based on hours, attributes, and reviews",
+      "type": "string",
+      "source": "GPT-4o-mini"
     },
     {
-      "name": "SIC",
-      "description": "SIC code (Standard Industrial Classification)",
-      "type": "string"
+      "name": "Target_NAICS",
+      "description": "Expected NAICS code for the search category (ground-truth target)",
+      "type": "string",
+      "source": "config"
     },
     {
-      "name": "Employees",
-      "description": "Number of employees (Must be real data from public sources, NO estimations)",
-      "type": "integer"
+      "name": "Is_Target_Match",
+      "description": "True if Calculated_NAICS equals Target_NAICS",
+      "type": "boolean",
+      "source": "derived"
+    },
+    {
+      "name": "Confidence",
+      "description": "GPT classification confidence: High or Low",
+      "type": "string",
+      "enum": ["High", "Low"],
+      "source": "GPT-4o-mini"
+    },
+    {
+      "name": "Match_Reasoning",
+      "description": "Brief natural-language explanation of the NAICS assignment",
+      "type": "string",
+      "source": "GPT-4o-mini"
+    },
+    {
+      "name": "Business_Status",
+      "description": "Operating status of the business: Active or Inactive",
+      "type": "string",
+      "enum": ["Active", "Inactive"],
+      "source": "GPT-4o-mini"
+    },
+    {
+      "name": "Review_Count",
+      "description": "Number of reviews fetched (max 5 from Google Places API)",
+      "type": "integer",
+      "source": "Google Maps"
+    },
+    {
+      "name": "Has_Reviews",
+      "description": "Whether any reviews were available: Yes or No",
+      "type": "string",
+      "enum": ["Yes", "No"],
+      "source": "derived"
     },
     {
       "name": "Latitude",
-      "description": "GPS Latitude (WGS84)",
-      "type": "float"
+      "description": "GPS latitude (WGS84)",
+      "type": "float",
+      "source": "Google Maps"
     },
     {
       "name": "Longitude",
-      "description": "GPS Longitude (WGS84)",
-      "type": "float"
+      "description": "GPS longitude (WGS84)",
+      "type": "float",
+      "source": "Google Maps"
     },
     {
-      "name": "Address",
-      "description": "Full street address",
-      "type": "string"
+      "name": "Street_Address",
+      "description": "Full formatted street address",
+      "type": "string",
+      "source": "Google Maps"
     },
     {
-      "name": "Website",
-      "description": "Business website URL (if available)",
-      "type": "string"
+      "name": "City",
+      "description": "Target city name",
+      "type": "string",
+      "source": "config"
     },
     {
-      "name": "LegalStatus",
-      "description": "Legal status (e.g., LLC, Corporation, Sole Proprietorship)",
-      "type": "string"
+      "name": "State",
+      "description": "Two-letter US state abbreviation",
+      "type": "string",
+      "source": "config"
     },
     {
-      "name": "YearEstablished",
-      "description": "The year the business started (Must verify with a source link)",
-      "type": "integer"
+      "name": "Zip_Code",
+      "description": "ZIP code from which this place was discovered",
+      "type": "string",
+      "source": "search"
     },
     {
-      "name": "OperatingHours",
-      "description": "Weekly operating hours",
-      "type": "string"
+      "name": "Operating_Hours",
+      "description": "Semicolon-separated weekday hours (e.g. 'Monday: 7 AM–8 PM; Tuesday: ...')",
+      "type": "string",
+      "source": "Google Maps"
     },
     {
-      "name": "Notes",
-      "description": "Key features or extra notes about the business",
-      "type": "string"
+      "name": "Hard_Attributes",
+      "description": "Comma-separated meal/drink attributes (Breakfast, Lunch, Dinner, Beer, Wine)",
+      "type": "string",
+      "source": "Google Maps"
+    },
+    {
+      "name": "Price_Level",
+      "description": "Google price level: 1 (inexpensive) to 4 (very expensive), or N/A",
+      "type": "string",
+      "source": "Google Maps"
+    },
+    {
+      "name": "Business_Website",
+      "description": "Business website URL if available",
+      "type": "string",
+      "source": "Google Maps"
+    },
+    {
+      "name": "Employees_Estimated",
+      "description": "Estimated employee count from GPT. Treat as approximate; not payroll data.",
+      "type": "integer",
+      "source": "GPT-4o-mini"
+    },
+    {
+      "name": "Year_Established",
+      "description": "Estimated year the business opened. Treat as approximate.",
+      "type": "integer",
+      "source": "GPT-4o-mini"
+    },
+    {
+      "name": "Last_Review_Date",
+      "description": "Date of the most recent review (YYYY-MM-DD), or N/A",
+      "type": "string",
+      "source": "Google Maps"
     }
   ]
 }
