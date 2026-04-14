@@ -14,6 +14,10 @@ import argparse
 import os
 import sys
 
+# Force UTF-8 stdout so non-ASCII place names don't crash on Windows cp1252
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+
 from dotenv import load_dotenv
 from openai import OpenAI
 

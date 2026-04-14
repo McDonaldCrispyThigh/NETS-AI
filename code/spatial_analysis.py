@@ -490,6 +490,119 @@ def generate_summary(val_df:    pd.DataFrame,
     print(f"    Written: {output_path}")
 
 
+# ---- Pharmacy desert statistics ----
+
+# Urban desert threshold: 0.5 miles in meters (Qato et al. 2014)
+_DESERT_M = 804
+_MPLS_BBOX = {"lon_min": -93.8, "lon_max": -92.8, "lat_min": 44.7, "lat_max": 45.3}
+
+
+def generate_desert_stats(val_df: pd.DataFrame,
+                          tracts_gdf: gpd.GeoDataFrame,
+                          acs_df: pd.DataFrame,
+                          output_path: str) -> None:
+    """
+    Compute pharmacy desert metrics and append a new section to analysis_summary.txt.
+    Desert = tract centroid >= 804 m (0.5 mi) from nearest AI pharmacy.
+    """
+    # Filter AI pharmacies to MSA bbox
+    pharm = val_df[
+        val_df["Latitude"].notna() & val_df["Longitude"].notna() &
+        val_df["Latitude"].between(_MPLS_BBOX["lat_min"], _MPLS_BBOX["lat_max"]) &
+        val_df["Longitude"].between(_MPLS_BBOX["lon_min"], _MPLS_BBOX["lon_max"])
+    ].copy()
+
+    # Build tract GeoDataFrame in EPSG:3857 (metric) with ACS income
+    acs_df = acs_df.copy()
+    acs_df["GEOID"] = acs_df["GEOID"].astype(str)
+    tracts = tracts_gdf[["GEOID", "geometry"]].copy()
+    tracts["GEOID"] = tracts["GEOID"].astype(str)
+    tracts = tracts.merge(acs_df[["GEOID", "med_hh_income", "total_pop"]], on="GEOID", how="left")
+    tracts_3857 = tracts.to_crs("EPSG:3857").copy()
+    tracts_3857["geometry"] = tracts_3857.geometry.centroid
+
+    if pharm.empty:
+        print("    [desert stats] No pharmacy coordinates available, skipping.")
+        return
+
+    pharm_pts = gpd.GeoDataFrame(
+        geometry=gpd.points_from_xy(pharm["Longitude"], pharm["Latitude"]),
+        crs="EPSG:4326",
+    ).to_crs("EPSG:3857")
+
+    joined = gpd.sjoin_nearest(
+        tracts_3857[["GEOID", "med_hh_income", "total_pop", "geometry"]],
+        pharm_pts[["geometry"]],
+        how="left",
+        distance_col="dist_m",
+    ).drop_duplicates(subset=["GEOID"])
+
+    joined["is_desert"] = joined["dist_m"] >= _DESERT_M
+
+    n_total   = len(joined)
+    n_desert  = int(joined["is_desert"].sum())
+    n_covered = n_total - n_desert
+
+    # Per income-quartile desert rate
+    has_income = joined["med_hh_income"].notna() & (joined["med_hh_income"] > 0)
+    q_df = joined[has_income].copy()
+    q_lines = []
+    if len(q_df) >= 4:
+        try:
+            q_labels = ["Q1 (lowest income)", "Q2", "Q3", "Q4 (highest income)"]
+            q_df["q"] = pd.qcut(q_df["med_hh_income"], q=4,
+                                 labels=q_labels, duplicates="drop")
+            for q in q_labels:
+                sub = q_df[q_df["q"] == q]
+                rate = sub["is_desert"].mean() * 100 if len(sub) > 0 else float("nan")
+                q_lines.append(
+                    f"   {q:<22}: {rate:.1f}% desert  (n={len(sub)} tracts)"
+                )
+        except Exception as e:
+            q_lines.append(f"   [Could not compute quartile desert rates: {e}]")
+    else:
+        q_lines.append("   [Insufficient income data for quartile breakdown]")
+
+    # North Minneapolis tract status
+    geojson_path = os.path.join(DATA_DIR, "north_mpls_zcta.geojson")
+    nm_lines = []
+    if os.path.exists(geojson_path):
+        try:
+            zcta = gpd.read_file(geojson_path).to_crs("EPSG:4326")
+            cent4326 = tracts[["GEOID", "geometry"]].copy().to_crs("EPSG:3857")
+            cent4326["geometry"] = cent4326.geometry.centroid
+            cent4326 = cent4326.to_crs("EPSG:4326")
+            in_north = gpd.sjoin(cent4326, zcta[["geometry"]], how="inner",
+                                 predicate="within")["GEOID"].astype(str).tolist()
+            nm_sub = joined[joined["GEOID"].astype(str).isin(in_north)]
+            nm_n_desert  = int(nm_sub["is_desert"].sum())
+            nm_n_covered = len(nm_sub) - nm_n_desert
+            nm_lines.append(
+                f"   55411/55412 tracts: {len(nm_sub)} total, "
+                f"{nm_n_desert} desert, {nm_n_covered} covered"
+            )
+        except Exception as e:
+            nm_lines.append(f"   [North Mpls spatial join failed: {e}]")
+    else:
+        nm_lines.append("   [north_mpls_zcta.geojson not found; run visualize.py first]")
+
+    new_section = (
+        "\n7. Pharmacy Desert Analysis (0.5-mi threshold, Qato et al. 2014)\n"
+        f"   Total tracts analyzed   : {n_total}\n"
+        f"   Covered (< 804 m)       : {n_covered}\n"
+        f"   Desert (>= 804 m)       : {n_desert}\n"
+        f"   Overall desert rate     : {n_desert / n_total * 100:.1f}%\n"
+        "\n   Desert rate by income quartile:\n"
+        + "\n".join(q_lines) + "\n"
+        "\n   North Minneapolis (55411 / 55412):\n"
+        + "\n".join(nm_lines)
+    )
+
+    with open(output_path, "a", encoding="utf-8") as f:
+        f.write(new_section + "\n")
+    print(f"    Appended desert stats to: {output_path}")
+
+
 # ---- Main ----
 
 def main() -> None:
@@ -566,6 +679,10 @@ def main() -> None:
     print(">>> Step 8: Summary statistics ...")
     summary_out = os.path.join(DATA_DIR, "analysis_summary.txt")
     generate_summary(val_df, fn_df, ai_joined, summary_out)
+
+    # ---- Step 9: Pharmacy desert analysis ----
+    print(">>> Step 9: Pharmacy desert analysis ...")
+    generate_desert_stats(val_df, tracts_gdf, acs_df, summary_out)
 
     print("\n>>> spatial_analysis.py complete.")
 
