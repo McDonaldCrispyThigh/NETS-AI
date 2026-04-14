@@ -171,7 +171,7 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(ai_pts.geometry.x, ai_pts.geometry.y,
-                   c="#1f78b4", s=5, zorder=5, alpha=0.85)
+                   c="#1f78b4", s=3, zorder=5, alpha=0.85)
 
     # NPPES possible-missed-retail: same projection approach
     fn_missed = fn_df[
@@ -190,7 +190,7 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(fn_pts.geometry.x, fn_pts.geometry.y,
-                   c="#e31a1c", s=6, zorder=5, alpha=0.85, marker="^")
+                   c="#e31a1c", s=4, zorder=5, alpha=0.85, marker="^")
 
     # North Minneapolis ZIP outlines in EPSG:3857
     zip_gdf = _load_zip_boundaries(DATA_DIR)
@@ -257,9 +257,9 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
 
     point_handles = [
         Line2D([0], [0], marker="o", color="w", markerfacecolor="#1f78b4",
-               markersize=8, label=f"AI-Collected Pharmacy (n={len(ai_valid)})"),
+               markersize=5, label=f"AI-Collected Pharmacy (n={len(ai_valid)})"),
         Line2D([0], [0], marker="^", color="w", markerfacecolor="#e31a1c",
-               markersize=8,
+               markersize=5,
                label=f"NPPES-Only Possible Retail (n={len(fn_missed)})"),
         mpatches.Patch(color="#d9d9d9", label="No income data"),
         Line2D([0], [0], color="#222222", linewidth=1.5, linestyle="--",
@@ -392,7 +392,7 @@ def figure2a_desert_map(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> None:
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(ai_pts.geometry.x, ai_pts.geometry.y,
-                   c="#1f78b4", s=12, zorder=5, alpha=0.9)
+                   c="#1f78b4", s=5, zorder=5, alpha=0.9)
 
     # ZIP 55411/55412 outlines
     zip_gdf = _load_zip_boundaries(DATA_DIR)
@@ -451,7 +451,7 @@ def figure2a_desert_map(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> None:
         mpatches.Patch(color="#8b0000", alpha=0.8,
                        label=f"Pharmacy Desert (>= 804 m)  n = {n_desert}"),
         Line2D([0], [0], marker="o", color="w", markerfacecolor="#1f78b4",
-               markersize=8, label=f"AI Pharmacy (n = {len(ai_valid)})"),
+               markersize=5, label=f"AI Pharmacy (n = {len(ai_valid)})"),
         Line2D([0], [0], color="#222222", linewidth=1.5, linestyle="--",
                label="ZIP 55411 / 55412 boundary"),
     ]
@@ -465,7 +465,7 @@ def figure2a_desert_map(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> None:
     )
 
     out = os.path.join(FIGURES_DIR, "figure2a_desert_map.png")
-    fig.savefig(out, dpi=300, bbox_inches="tight")
+    fig.savefig(out, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
@@ -497,7 +497,7 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
 
     fig, ax = plt.subplots(figsize=(10, 8))
 
-    sizes = ((plot_df["total_pop"] / plot_df["total_pop"].max()) * 200 + 20).clip(20, 220)
+    sizes = ((plot_df["total_pop"] / plot_df["total_pop"].max()) * 80 + 8).clip(8, 88)
     norm  = mcolors.Normalize(vmin=plot_df["pct_nonwhite"].min(),
                                vmax=plot_df["pct_nonwhite"].max())
 
@@ -547,8 +547,8 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
                label=f"0.5-mi desert threshold ({_DESERT_M} m)")
 
     # Always add North Mpls legend entry (diamonds present or not)
-    ax.scatter([], [], marker="D", c="#888888", s=80,
-               edgecolors="#111111", linewidths=1.8,
+    ax.scatter([], [], marker="D", c="#888888", s=35,
+               edgecolors="#111111", linewidths=1.2,
                label="North Mpls tracts (55411/55412)")
 
     ax.set_xlabel("Median Household Income ($)", fontsize=11)
@@ -575,7 +575,7 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
                 fontsize=8, color="gray", style="italic")
 
     out = os.path.join(FIGURES_DIR, "figure2b_distance_scatter.png")
-    fig.savefig(out, dpi=300, bbox_inches="tight")
+    fig.savefig(out, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
@@ -645,7 +645,7 @@ def figure3_wayback_distribution(ai_df: pd.DataFrame) -> None:
     ax.set_axisbelow(True)
 
     out = os.path.join(FIGURES_DIR, "figure3_wayback_distribution.png")
-    fig.savefig(out, dpi=300, bbox_inches="tight")
+    fig.savefig(out, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
