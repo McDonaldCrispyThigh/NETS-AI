@@ -35,6 +35,7 @@ desktop.ini
 data/*.csv
 data/*.zip
 data/*.txt
+data/*.geojson
 data/figures/
 !data/.gitkeep
 

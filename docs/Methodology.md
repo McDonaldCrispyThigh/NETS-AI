@@ -17,10 +17,12 @@
 
 ## 2. Study Area
 
-**City:** Minneapolis, Minnesota  
-**ZIP codes covered:** 55401–55415, 55454, 55455 (17 ZIP codes, full city coverage)  
-**Business categories:** Libraries, Parks, Coffee Shops, Gyms, Grocery Stores,
-Civic Organizations, Religious Organizations
+**Primary city:** Minneapolis + St. Paul, Minnesota (Twin Cities MSA)  
+**ZIP codes covered:** 60 ZIP codes spanning Minneapolis (55401–55415, 55454, 55455),
+St. Paul (55101–55108, 55116–55119, 55130), and inner-ring suburbs  
+**Pharmacy case study:** Full MSA coverage; other business categories (Libraries,
+Parks, Coffee Shops, Gyms, Grocery Stores, Civic Organizations, Religious
+Organizations) piloted in Minneapolis only (17 ZIP codes)
 
 ---
 
@@ -30,7 +32,7 @@ Civic Organizations, Religious Organizations
 
 | API | Purpose | Limit strategy |
 |-----|---------|----------------|
-| Google Maps Places API | Primary business search + details | Loop 17 ZIP codes to bypass 60-result/query cap |
+| Google Maps Places API | Primary business search + details | 2x2 location-biased grid per ZIP (4 x 60 = up to 240 unique results/ZIP vs. 60 with single query) |
 | Yelp Fusion API | Secondary enrichment (reserved) | 5 results/call; not yet integrated into main pipeline |
 | OpenAI GPT-4o-mini | NAICS classification + metadata estimation | `temperature=0.0` for determinism |
 
@@ -81,7 +83,7 @@ A high match rate indicates the agent correctly identifies the business type.
 
 - Spatial join: AI-generated records are joined to the NETS dataset by address/coordinates.
 - Attribute comparison: NAICS codes, employee counts, and establishment years are compared.
-- Visualization: ArcGIS Pro is used to map discrepancies spatially.
+- Visualization: geopandas + matplotlib + contextily (CartoDB Positron basemap) used to map discrepancies spatially; see `code/visualize.py`.
 
 ---
 
@@ -105,8 +107,10 @@ when a place is a bar that opens early (e.g., music venues with morning hours).
    establishments; some inactive businesses may appear as active.
 3. **Review bias:** Only 5 reviews per place are available; low-review businesses
    are classified primarily on name and hours.
-4. **Spatial coverage:** ZIP-code looping strategy maximizes recall but may still
-   miss businesses at ZIP boundaries.
+4. **Spatial coverage:** 2x2 location-biased grid search improves recall (~5x over
+   single-query approach for dense ZIPs, e.g. 55411: 16 → 79 unique results).
+   Remaining gaps exist at grid cell boundaries and for businesses with low
+   Google Maps visibility. See `docs/API_LIMITATIONS.md` for full discussion.
 
 ---
 

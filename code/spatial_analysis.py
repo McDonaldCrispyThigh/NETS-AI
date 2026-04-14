@@ -608,8 +608,8 @@ def generate_desert_stats(val_df: pd.DataFrame,
 def main() -> None:
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    ai_path  = os.path.join(DATA_DIR, "Minneapolis_pharmacy_20260412_222512.csv")
-    val_path = os.path.join(DATA_DIR, "validation_nppes_20260412.csv")
+    ai_path  = os.path.join(DATA_DIR, "Minneapolis-StPaul_pharmacy_20260413_201606.csv")
+    val_path = os.path.join(DATA_DIR, "validation_nppes_20260413.csv")
     ai_df    = pd.read_csv(ai_path)
     val_df   = pd.read_csv(val_path)
     print(f">>> Loaded {len(ai_df)} AI records, {len(val_df)} validation records.")

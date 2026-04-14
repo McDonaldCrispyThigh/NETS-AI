@@ -53,18 +53,24 @@ python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS
 ```
 NETS-AI/
 ├── code/
-│   ├── main.py             # CLI entry point (argparse)
-│   └── agent_workflow.py   # NETSAgentWorkflow class (search → classify → save)
+│   ├── main.py                 # CLI entry point (argparse)
+│   ├── agent_workflow.py       # NETSAgentWorkflow class (search → classify → save)
+│   ├── spatial_analysis.py     # ACS + TIGER tract join, NPPES FN classification, desert stats
+│   ├── visualize.py            # Figures 1 / 2a / 2b / 3 (geopandas + contextily)
+│   └── validate_nppes.py       # NPPES NPI Registry ground-truth validation
 ├── skills/
-│   ├── google_maps.py      # Google Maps Places API wrapper
-│   └── yelp.py             # Yelp Fusion API wrapper (reserved for future use)
+│   ├── google_maps.py          # Google Maps Places API wrapper (2x2 grid search)
+│   ├── wayback_agent.py        # Wayback Machine CDX enrichment
+│   └── yelp.py                 # Yelp Fusion API wrapper (reserved)
 ├── docs/
-│   ├── PROMPT_GUIDE.md     # Prompt engineering rules and NAICS decision logic
-│   ├── Methodology.md      # Full research methodology
-│   └── nets_schema.json    # Output field definitions (22 columns)
-├── data/                   # Generated CSV outputs (git-ignored, .gitkeep preserves folder)
-├── .env.example            # API key template
-├── requirements.txt        # Python dependencies (UTF-8)
+│   ├── Methodology.md          # Full research methodology
+│   ├── API_LIMITATIONS.md      # Hard constraints + biases for all data sources
+│   ├── IMPLEMENTATION_STATUS.md# Gap tracking: planned vs. running
+│   ├── PROMPT_GUIDE.md         # Prompt engineering rules and NAICS decision logic
+│   └── nets_schema.json        # Output field definitions (22 columns)
+├── data/                       # Generated outputs (git-ignored, .gitkeep preserves folder)
+├── .env.example                # API key template
+├── requirements.txt            # Python dependencies
 └── README.md
 ```
 
@@ -91,7 +97,7 @@ YELP_API_KEY=...
 | Business Search | Google Maps Places API |
 | Secondary Enrichment | Yelp Fusion API (reserved) |
 | Data Output | pandas → CSV |
-| Spatial Analysis | ArcGIS Pro (external) |
+| Spatial Analysis | geopandas + matplotlib + contextily |
 
 ---
 
@@ -118,7 +124,8 @@ All runs produce a CSV with 22 columns. See [`docs/nets_schema.json`](docs/nets_
 | Sprint 1 | Build basic OpenAI Agent | ✅ Done |
 | Sprint 2 | Improve prompt stability & NAICS logic | ✅ Done |
 | Sprint 3 | Pilot data collection — Minneapolis coffee & library | ✅ Done |
-| Sprint 4 | Compare AI data vs NETS · ArcGIS visualization | 🔄 In Progress |
+| Sprint 4 | Compare AI data vs NETS · spatial visualization | 🔄 In Progress |
+| Sprint 5 | Full MSA pharmacy dataset · pharmacy desert analysis · thesis figures | 🔄 In Progress |
 
 ---
 

@@ -9,11 +9,14 @@ actually running in code. Updated as the project evolves.
 
 | Component | File | Notes |
 |-----------|------|-------|
-| Google Maps Places API | skills/google_maps.py | ZIP-code looping, place_id dedup, auto-pagination |
+| Google Maps Places API | skills/google_maps.py | 2x2 location-biased grid per ZIP (pgeocode centroid), place_id dedup, auto-pagination, reviews_sort="newest" |
 | OpenAI GPT-4o-mini | code/agent_workflow.py | temperature=0.0, per-category classification_logic |
 | NPPES NPI Registry validation | code/validate_nppes.py | Fuzzy name match, P/R/F1 report, retry on 429 |
 | Wayback Machine CDX enrichment | skills/wayback_agent.py | Optional; captures chain vs independent signal |
-| NAICS 446110 pharmacy task | code/main.py | Full config with retail-specific classification logic |
+| NAICS 446110 pharmacy task | code/main.py | Full config with retail-specific classification logic; search_variants for fallback |
+| Spatial analysis pipeline | code/spatial_analysis.py | ACS tract join, TIGER/Line shapefile, NPPES FN classification, pharmacy desert stats (Qato et al. 0.5-mi) |
+| Visualization pipeline | code/visualize.py | Figure 1 (coverage map, CartoDB Positron), Figure 2a (desert choropleth), Figure 2b (income vs distance OLS), Figure 3 (Wayback, exploratory) |
+| API limitations documentation | docs/API_LIMITATIONS.md | All hard constraints, biases, and mitigations for Places API, NPPES, Wayback, ACS |
 
 ---
 
@@ -40,7 +43,7 @@ actually running in code. Updated as the project evolves.
 
 | Component | Reason |
 |-----------|--------|
-| HPC / SLURM parallelization | Minneapolis MSA pharmacy dataset is approximately 200-400 records; serial pipeline completes in under 30 minutes; HPC adds no value |
+| HPC / SLURM parallelization | Minneapolis-St. Paul MSA pharmacy dataset with 2x2 grid search is approximately 1,000-2,000 records across 60 ZIPs; serial pipeline completes in 3-5 hours; HPC adds no value at this scale |
 
 ---
 
