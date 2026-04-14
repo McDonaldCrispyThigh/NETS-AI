@@ -35,15 +35,21 @@ cp .env.example .env   # then fill in your keys
 # 3. Run a collection task
 python code/main.py --task coffee
 python code/main.py --task library --city Minneapolis
-python code/main.py --task gym --zips 55401 55402 55403
+python code/main.py --task pharmacy --city Minneapolis-StPaul --zips 55401 55402 ...
 ```
 
 **Available tasks:** `library` · `park` · `coffee` · `gym` · `grocery` · `civic` · `religion` · `pharmacy`
 
 ```bash
 # 4. (Pharmacy only) Validate AI output against NPPES NPI Registry
-python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS.csv
-python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips --output data/validation_result.csv
+python code/validate_nppes.py --ai-csv data/Minneapolis-StPaul_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips
+python code/validate_nppes.py --ai-csv data/Minneapolis-StPaul_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips --output data/validation_result.csv
+
+# 5. Spatial analysis (requires validation CSV)
+python code/spatial_analysis.py
+
+# 6. Generate thesis figures
+python code/visualize.py
 ```
 
 ---
@@ -54,12 +60,12 @@ python code/validate_nppes.py --ai-csv data/Minneapolis_pharmacy_YYYYMMDD_HHMMSS
 NETS-AI/
 ├── code/
 │   ├── main.py                 # CLI entry point (argparse)
-│   ├── agent_workflow.py       # NETSAgentWorkflow class (search → classify → save)
+│   ├── agent_workflow.py       # NETSAgentWorkflow class (search -> classify -> save)
 │   ├── spatial_analysis.py     # ACS + TIGER tract join, NPPES FN classification, desert stats
-│   ├── visualize.py            # Figures 1 / 2a / 2b / 3 (geopandas + contextily)
+│   ├── visualize.py            # Figures 1 / 2a / 2b / 3 (geopandas + contextily, 1200 DPI)
 │   └── validate_nppes.py       # NPPES NPI Registry ground-truth validation
 ├── skills/
-│   ├── google_maps.py          # Google Maps Places API wrapper (2x2 grid search)
+│   ├── google_maps.py          # Google Maps Places API wrapper (2x2 grid search per ZIP)
 │   ├── wayback_agent.py        # Wayback Machine CDX enrichment
 │   └── yelp.py                 # Yelp Fusion API wrapper (reserved)
 ├── docs/
@@ -68,7 +74,12 @@ NETS-AI/
 │   ├── IMPLEMENTATION_STATUS.md# Gap tracking: planned vs. running
 │   ├── PROMPT_GUIDE.md         # Prompt engineering rules and NAICS decision logic
 │   └── nets_schema.json        # Output field definitions (22 columns)
-├── data/                       # Generated outputs (git-ignored, .gitkeep preserves folder)
+├── data/
+│   └── figures/                # Thesis figures (1200 DPI PNG)
+│       ├── figure1_coverage_map.png
+│       ├── figure2a_desert_map.png
+│       ├── figure2b_distance_scatter.png
+│       └── figure3_wayback_distribution.png
 ├── .env.example                # API key template
 ├── requirements.txt            # Python dependencies
 └── README.md
@@ -94,10 +105,12 @@ YELP_API_KEY=...
 |-------|-----------|
 | Language | Python 3.11+ |
 | AI Classification | OpenAI GPT-4o-mini (`temperature=0.0`) |
-| Business Search | Google Maps Places API |
+| Business Search | Google Maps Places API (2x2 location-biased grid per ZIP) |
 | Secondary Enrichment | Yelp Fusion API (reserved) |
-| Data Output | pandas → CSV |
+| Historical Signal | Wayback Machine CDX API |
+| Data Output | pandas -> CSV |
 | Spatial Analysis | geopandas + matplotlib + contextily |
+| ZIP Centroids | pgeocode |
 
 ---
 
@@ -114,6 +127,7 @@ All runs produce a CSV with 22 columns. See [`docs/nets_schema.json`](docs/nets_
 | `Latitude`, `Longitude` | Google Maps | WGS84 coordinates |
 | `Employees_Estimated` | GPT-4o-mini | Estimated headcount |
 | `Year_Established` | GPT-4o-mini | Estimated founding year |
+| `Wayback_Snapshot_Count` | Wayback CDX | Years with archived snapshots (chain proxy) |
 
 ---
 
@@ -121,24 +135,50 @@ All runs produce a CSV with 22 columns. See [`docs/nets_schema.json`](docs/nets_
 
 | Sprint | Goal | Status |
 |--------|------|--------|
-| Sprint 1 | Build basic OpenAI Agent | ✅ Done |
-| Sprint 2 | Improve prompt stability & NAICS logic | ✅ Done |
-| Sprint 3 | Pilot data collection — Minneapolis coffee & library | ✅ Done |
-| Sprint 4 | Compare AI data vs NETS · spatial visualization | 🔄 In Progress |
-| Sprint 5 | Full MSA pharmacy dataset · pharmacy desert analysis · thesis figures | 🔄 In Progress |
+| Sprint 1 | Build basic OpenAI Agent | Done |
+| Sprint 2 | Improve prompt stability & NAICS logic | Done |
+| Sprint 3 | Pilot data collection -- Minneapolis coffee & library | Done |
+| Sprint 4 | Compare AI data vs NETS · spatial visualization | Done |
+| Sprint 5 | Full MSA pharmacy dataset · pharmacy desert analysis · thesis figures | Done |
 
 ---
 
-## 8. Key Findings (Pilot)
+## 8. Key Findings (Full MSA Pharmacy Dataset)
 
-- **267** unique coffee shops collected across 17 Minneapolis ZIP codes.
-- **~92%** NAICS match rate on full dataset; **100%** on verified final dataset (60 records).
-- Main misclassification: music venues with early morning hours misidentified as coffee shops.
-- AI-estimated `Year_Established` mirrors NETS's own opacity — errors expose shared limitations.
+**Data collection** -- Twin Cities MSA, 60 ZIP codes, 2x2 location-biased grid search:
+
+- **399** unique pharmacies collected across **101** ZIP codes
+- **99.2%** NAICS match rate (446110 Pharmacies & Drug Stores)
+- **94.5%** high-confidence classifications
+- 270 chain / 129 independent (by name-keyword classification)
+
+**Validation vs. NPPES NPI Registry** (872 active records, same ZIPs):
+
+| Metric | Value |
+|--------|-------|
+| Precision | 38.8% |
+| Recall | 17.8% |
+| F1 | 24.4% |
+| Possible missed retail (FN) | 252 |
+
+**Pharmacy desert analysis** (Qato et al. 2014, 0.5-mile threshold):
+
+| Income Quartile | Desert Rate |
+|----------------|-------------|
+| Q1 (lowest) | 65.3% |
+| Q2 | 83.8% |
+| Q3 | 91.5% |
+| Q4 (highest) | 94.9% |
+| **Overall** | **83.9%** |
+
+North Minneapolis (55411/55412): 16 of 18 tracts classified as pharmacy deserts.
+
+Low precision/recall against NPPES reflects known NPPES limitations (corporate legal names, specialty/non-retail entries, and closed/acquired chains inflate the registry count). See [`docs/API_LIMITATIONS.md`](docs/API_LIMITATIONS.md).
 
 ---
 
 ## 9. Methodology & Prompt Design
 
-- [`docs/Methodology.md`](docs/Methodology.md) — Research design, validation approach, limitations.
-- [`docs/PROMPT_GUIDE.md`](docs/PROMPT_GUIDE.md) — Prompt architecture, NAICS decision rules, model settings.
+- [`docs/Methodology.md`](docs/Methodology.md) -- Research design, validation approach, limitations.
+- [`docs/PROMPT_GUIDE.md`](docs/PROMPT_GUIDE.md) -- Prompt architecture, NAICS decision rules, model settings.
+- [`docs/API_LIMITATIONS.md`](docs/API_LIMITATIONS.md) -- Hard constraints and biases for all data sources.
