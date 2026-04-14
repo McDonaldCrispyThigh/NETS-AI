@@ -163,14 +163,14 @@ The reported validation figures (Precision 38.8%, Recall 17.8%, F1 24.4%)
 are computed against the full NPPES registry and reflect NPPES structural
 limitations as much as AI data quality.
 
-**Decomposition of NPPES False Negatives (n=755):**
+**Decomposition of NPPES False Negatives (n=717):**
 
 | Category | n | Share of FNs | AI failure? |
 |----------|---|--------------|-------------|
-| Possible missed retail | 252 | 33.4% | Likely yes |
-| Corporate legal name | 237 | 31.4% | No -- NPPES artifact |
-| Closed / acquired chain | 150 | 19.9% | No -- stale NPPES record |
-| Specialty / non-retail | 116 | 15.4% | No -- not a retail location |
+| Corporate legal name | 331 | 46.2% | No -- NPPES artifact |
+| Possible missed retail | 252 | 35.1% | Likely yes |
+| Closed / acquired chain | 95 | 13.2% | No -- stale NPPES record |
+| Specialty / non-retail | 39 | 5.4% | No -- not a retail location |
 
 **Adjusted recall (excluding non-AI-attributable FNs):** Removing
 `corporate_legal_name`, `closed_chain`, and `specialty_nonretail`
