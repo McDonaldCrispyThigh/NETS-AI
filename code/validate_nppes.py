@@ -30,7 +30,7 @@ from urllib.request import urlopen
 
 import pandas as pd
 
-NPPES_API = "https://npiregistry.cms.hhs.gov/api/"
+NPPES_API = "https://npiregistry.cms.hhs.gov/api/?version=2.1"
 
 # NUCC taxonomy codes covering all storefront pharmacy types
 PHARMACY_TAXONOMY_CODES = {

@@ -49,6 +49,12 @@ data/*.geojson
 *.log
 logs/
 
+# Thesis build artifacts (compiler binary + figure duplicates + raw templates)
+docs/thesis/tectonic.exe
+docs/thesis/figures/
+docs/els-cas-templates/
+docs/Honors_Thesis_Zheng_2026_new.docx
+
 # Testing
 .pytest_cache/
 htmlcov/
