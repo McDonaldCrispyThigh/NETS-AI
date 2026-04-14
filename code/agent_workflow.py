@@ -90,37 +90,76 @@ class NETSAgentWorkflow:
     # Step 1: Search
     # ------------------------------------------------------------------
 
+    # 2x2 grid offsets in degrees (~1.5 km at lat 45).
+    # Each offset pair is (delta_lat, delta_lon).
+    _GRID_OFFSETS = [(-0.007, -0.010), (-0.007, 0.010),
+                     ( 0.007, -0.010), ( 0.007, 0.010)]
+
+    @staticmethod
+    def _zip_centroid(zip_code: str):
+        """Return (lat, lon) for a ZIP code using pgeocode, or None."""
+        try:
+            import pgeocode
+            nomi = pgeocode.Nominatim("us")
+            row = nomi.query_postal_code(zip_code)
+            if row is not None and row.latitude == row.latitude:  # NaN check
+                return float(row.latitude), float(row.longitude)
+        except Exception:
+            pass
+        return None
+
     def _search_all_zips(self) -> list[dict]:
         """
         Search Google Maps across all ZIP codes; return de-duplicated places.
 
-        Runs multiple query variants per ZIP (config key: 'search_variants') to
-        work around the 60-result-per-query hard cap of the Places Text Search
-        API. De-duplication is by place_id.
+        Strategy (bypasses the 60-result-per-query hard cap):
+          1. Resolve ZIP centroid via pgeocode.
+          2. Tile a 2x2 grid of Nearby Search calls (radius 1500 m each) around
+             the centroid -- each cell surfaces different nearby places.
+          3. Fall back to Text Search variants if centroid lookup fails.
+        De-duplication is by place_id throughout.
         """
         raw: dict[str, dict] = {}
-        variants: list[str] = self.config.get(
-            "search_variants", [self.config["search_term"]]
+        keyword: str = self.config.get("search_term", "Pharmacy")
+        fallback_variants: list[str] = self.config.get(
+            "search_variants", [keyword]
         )
-        print(
-            f">>> Scanning {len(self.zip_codes)} ZIP codes "
-            f"x {len(variants)} query variant(s) …"
-        )
+        print(f">>> Scanning {len(self.zip_codes)} ZIP codes (2x2 grid per ZIP) …")
 
         for zip_code in self.zip_codes:
             before = len(raw)
             print(f"\n--- ZIP {zip_code} ---")
-            for term in variants:
-                query = f"{term} in {self.city} {zip_code}"
-                results = self.maps.search_places(query)
-                new = 0
-                for place in results:
-                    pid = place["place_id"]
-                    if pid not in raw:
-                        place["_source_zip"] = zip_code
-                        raw[pid] = place
-                        new += 1
-                print(f"    [{term}] {len(results)} results, {new} new unique")
+
+            centroid = self._zip_centroid(zip_code)
+            if centroid:
+                lat, lon = centroid
+                for dlat, dlon in self._GRID_OFFSETS:
+                    results = self.maps.search_nearby(
+                        lat + dlat, lon + dlon,
+                        keyword=keyword, radius=1500,
+                    )
+                    new = sum(
+                        1 for p in results
+                        if p["place_id"] not in raw
+                        and not raw.update({p["place_id"]: {**p, "_source_zip": zip_code}})
+                    )
+                    print(f"    [grid ({dlat:+.3f},{dlon:+.3f})] "
+                          f"{len(results)} results, {new} new unique")
+            else:
+                # pgeocode unavailable -- fall back to text search variants
+                print(f"    [centroid lookup failed, using text search]")
+                for term in fallback_variants:
+                    query = f"{term} in {self.city} {zip_code}"
+                    results = self.maps.search_places(query)
+                    new = 0
+                    for place in results:
+                        pid = place["place_id"]
+                        if pid not in raw:
+                            place["_source_zip"] = zip_code
+                            raw[pid] = place
+                            new += 1
+                    print(f"    [{term}] {len(results)} results, {new} new unique")
+
             print(f"    ZIP total new: {len(raw) - before}")
 
         unique = list(raw.values())

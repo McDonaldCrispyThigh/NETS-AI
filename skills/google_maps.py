@@ -71,6 +71,62 @@ class GoogleMapsAgent:
                 
         return all_results
 
+    def search_nearby(self, lat: float, lon: float,
+                      keyword: str = "Pharmacy", radius: int = 1500) -> list:
+        """
+        Location-biased Text Search centered on (lat, lon).
+
+        Uses places() (Text Search) with location+radius so Google ranks results
+        by proximity to the given point. Different center points return different
+        top-60 results -- this is the mechanism for exceeding the per-query cap.
+        """
+        if not self.client:
+            return []
+
+        all_results = []
+        next_token = None
+        _places = getattr(self.client, "places")  # type: ignore[attr-defined]
+
+        for page_num in range(5):
+            try:
+                response = None
+                if next_token:
+                    attempts = 0
+                    while attempts < 5:
+                        print(f"    ... Grid page {page_num + 1} (attempt {attempts + 1})...")
+                        time.sleep(2 + attempts)
+                        try:
+                            response = _places(
+                                query=keyword,
+                                location=(lat, lon),
+                                radius=radius,
+                                page_token=next_token,
+                            )
+                            if response["status"] == "OK":
+                                break
+                        except Exception as e:
+                            print(f"    [Error] {e}. Retrying...")
+                        attempts += 1
+                else:
+                    response = _places(
+                        query=keyword,
+                        location=(lat, lon),
+                        radius=radius,
+                    )
+
+                if response and response.get("status") in ("OK", "ZERO_RESULTS"):
+                    all_results.extend(response.get("results", []))
+                    next_token = response.get("next_page_token")
+                    if not next_token:
+                        break
+                else:
+                    break
+            except Exception as e:
+                print(f"Grid search error: {e}")
+                break
+
+        return all_results
+
     def get_place_details(self, place_id):
         if not self.client:
             return {}
