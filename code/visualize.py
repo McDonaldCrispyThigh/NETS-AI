@@ -171,7 +171,7 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(ai_pts.geometry.x, ai_pts.geometry.y,
-                   c="#1f78b4", s=3, zorder=5, alpha=0.85)
+                   c="#1f78b4", s=1, zorder=5, alpha=0.85)
 
     # NPPES possible-missed-retail: same projection approach
     fn_missed = fn_df[
@@ -190,7 +190,7 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(fn_pts.geometry.x, fn_pts.geometry.y,
-                   c="#e31a1c", s=4, zorder=5, alpha=0.85, marker="^")
+                   c="#e31a1c", s=2, zorder=5, alpha=0.85, marker="^")
 
     # North Minneapolis ZIP outlines in EPSG:3857
     zip_gdf = _load_zip_boundaries(DATA_DIR)
@@ -289,7 +289,7 @@ def figure1_coverage_map(ai_df: pd.DataFrame, fn_df: pd.DataFrame,
     )
 
     out = os.path.join(FIGURES_DIR, "figure1_coverage_map.png")
-    fig.savefig(out, dpi=600, bbox_inches="tight")
+    fig.savefig(out, dpi=1200, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
@@ -392,7 +392,7 @@ def figure2a_desert_map(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> None:
             crs="EPSG:4326",
         ).to_crs(_CRS)
         ax.scatter(ai_pts.geometry.x, ai_pts.geometry.y,
-                   c="#1f78b4", s=5, zorder=5, alpha=0.9)
+                   c="#1f78b4", s=2, zorder=5, alpha=0.9)
 
     # ZIP 55411/55412 outlines
     zip_gdf = _load_zip_boundaries(DATA_DIR)
@@ -465,7 +465,7 @@ def figure2a_desert_map(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> None:
     )
 
     out = os.path.join(FIGURES_DIR, "figure2a_desert_map.png")
-    fig.savefig(out, dpi=600, bbox_inches="tight")
+    fig.savefig(out, dpi=1200, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
@@ -497,7 +497,7 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
 
     fig, ax = plt.subplots(figsize=(10, 8))
 
-    sizes = ((plot_df["total_pop"] / plot_df["total_pop"].max()) * 80 + 8).clip(8, 88)
+    sizes = ((plot_df["total_pop"] / plot_df["total_pop"].max()) * 40 + 4).clip(4, 44)
     norm  = mcolors.Normalize(vmin=plot_df["pct_nonwhite"].min(),
                                vmax=plot_df["pct_nonwhite"].max())
 
@@ -547,8 +547,8 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
                label=f"0.5-mi desert threshold ({_DESERT_M} m)")
 
     # Always add North Mpls legend entry (diamonds present or not)
-    ax.scatter([], [], marker="D", c="#888888", s=35,
-               edgecolors="#111111", linewidths=1.2,
+    ax.scatter([], [], marker="D", c="#888888", s=20,
+               edgecolors="#111111", linewidths=1.0,
                label="North Mpls tracts (55411/55412)")
 
     ax.set_xlabel("Median Household Income ($)", fontsize=11)
@@ -575,7 +575,7 @@ def figure2b_distance_scatter(ai_df: pd.DataFrame, gdf: gpd.GeoDataFrame) -> Non
                 fontsize=8, color="gray", style="italic")
 
     out = os.path.join(FIGURES_DIR, "figure2b_distance_scatter.png")
-    fig.savefig(out, dpi=600, bbox_inches="tight")
+    fig.savefig(out, dpi=1200, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
@@ -645,7 +645,7 @@ def figure3_wayback_distribution(ai_df: pd.DataFrame) -> None:
     ax.set_axisbelow(True)
 
     out = os.path.join(FIGURES_DIR, "figure3_wayback_distribution.png")
-    fig.savefig(out, dpi=600, bbox_inches="tight")
+    fig.savefig(out, dpi=1200, bbox_inches="tight")
     plt.close(fig)
     print(f"    Saved: {out}")
 
