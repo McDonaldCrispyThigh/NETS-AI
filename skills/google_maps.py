@@ -72,20 +72,23 @@ class GoogleMapsAgent:
         return all_results
 
     def get_place_details(self, place_id):
-        # ... (Keep existing logic) ...
         if not self.client:
             return {}
         try:
+            # reviews_sort="newest" ensures the 5 returned reviews are the
+            # 5 most recent, making Last_Review_Date the actual latest date.
+            # Google Places API hard-caps at 5 reviews regardless of sort order.
             result = self.client.place(
-                place_id=place_id, 
+                place_id=place_id,
                 fields=[
-                    'name', 'formatted_address', 'formatted_phone_number', 
+                    'name', 'formatted_address', 'formatted_phone_number',
                     'type', 'business_status', 'price_level',
                     'geometry', 'website', 'opening_hours',
                     'reviews',
-                    'serves_beer', 'serves_wine', 'serves_breakfast', 
-                    'serves_lunch', 'serves_dinner' 
-                ]
+                    'serves_beer', 'serves_wine', 'serves_breakfast',
+                    'serves_lunch', 'serves_dinner'
+                ],
+                reviews_sort="newest",
             )
             return result.get('result', {})
         except Exception as e:

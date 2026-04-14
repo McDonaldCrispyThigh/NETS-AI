@@ -91,20 +91,37 @@ class NETSAgentWorkflow:
     # ------------------------------------------------------------------
 
     def _search_all_zips(self) -> list[dict]:
-        """Search Google Maps across all ZIP codes; return de-duplicated places."""
+        """
+        Search Google Maps across all ZIP codes; return de-duplicated places.
+
+        Runs multiple query variants per ZIP (config key: 'search_variants') to
+        work around the 60-result-per-query hard cap of the Places Text Search
+        API. De-duplication is by place_id.
+        """
         raw: dict[str, dict] = {}
-        print(f">>> Scanning {len(self.zip_codes)} ZIP codes …")
+        variants: list[str] = self.config.get(
+            "search_variants", [self.config["search_term"]]
+        )
+        print(
+            f">>> Scanning {len(self.zip_codes)} ZIP codes "
+            f"x {len(variants)} query variant(s) …"
+        )
 
         for zip_code in self.zip_codes:
-            query = f"{self.config['search_term']} in {self.city} {zip_code}"
+            before = len(raw)
             print(f"\n--- ZIP {zip_code} ---")
-            results = self.maps.search_places(query)
-            print(f"    Found {len(results)} places.")
-            for place in results:
-                pid = place["place_id"]
-                if pid not in raw:
-                    place["_source_zip"] = zip_code
-                    raw[pid] = place
+            for term in variants:
+                query = f"{term} in {self.city} {zip_code}"
+                results = self.maps.search_places(query)
+                new = 0
+                for place in results:
+                    pid = place["place_id"]
+                    if pid not in raw:
+                        place["_source_zip"] = zip_code
+                        raw[pid] = place
+                        new += 1
+                print(f"    [{term}] {len(results)} results, {new} new unique")
+            print(f"    ZIP total new: {len(raw) - before}")
 
         unique = list(raw.values())
         print(f"\n>>> TOTAL UNIQUE PLACES: {len(unique)}")

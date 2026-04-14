@@ -98,6 +98,8 @@ CATEGORY_CONFIG = {
     },
     "pharmacy": {
         "search_term":   "Pharmacy",
+        # Multiple variants beat the 60-result/query cap via place_id dedup
+        "search_variants": ["Pharmacy", "Drug Store", "Drugstore"],
         "target_naics":  "446110",
         "sic_code":      "5912",
         "definition":    (
