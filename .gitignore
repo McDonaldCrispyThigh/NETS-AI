@@ -36,8 +36,10 @@ data/*.csv
 data/*.zip
 data/*.txt
 data/*.geojson
-data/figures/
 !data/.gitkeep
+
+# Keep figures tracked
+# data/figures/ -- intentionally NOT ignored
 
 # Jupyter
 .ipynb_checkpoints/
