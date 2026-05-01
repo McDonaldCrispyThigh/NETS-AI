@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\bibliographystyle{apalike}
+\doublespacing
+
+\title{Research Prospectus\\[0.5em]
+\large Evaluating Google Maps as a Pharmacy Establishment Data Source:\\
+An AI-Assisted Audit Framework for Health Equity Research in\\
+Minneapolis--St.\ Paul}
+\author{Congyuan (Othello) Zheng\\
+Departments of Applied Mathematics and Geography,\\
+University of Colorado Boulder\\
+\texttt{congyuan.zheng@colorado.edu}}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Research Problem}
+
+Pharmacy desert research depends on the accuracy and completeness of establishment data, yet the quality of commonly used data sources has rarely been subjected to systematic empirical examination. Consumer-facing platforms such as Google Maps maintain geographically comprehensive records of pharmacy locations, but their reliability relative to regulatory ground truth remains untested in the pharmacy domain. Commercial establishment databases such as the National Establishment Time-Series (NETS) carry documented structural biases: stale records for closed chain locations, corporate legal name entries that do not correspond to consumer-accessible facilities, and specialty non-retail dispensaries that inflate reference set counts and artificially suppress apparent recall. These artifacts concentrate measurement error in low-income and minority neighborhoods, undermining health equity analyses that depend on accurate establishment counts. This thesis addresses the gap directly by conducting the first systematic validation of a Google Maps-based, AI-assisted pharmacy data collection pipeline against the Minnesota Board of Pharmacy licensure registry in the Minneapolis-St.\ Paul metropolitan statistical area (MSA), with a subsequent comparison against the NETS commercial database, providing an empirical basis for evaluating low-cost data collection methods in health geography research.
+
+\section{Research Questions}
+
+Three research questions guide this investigation. First, how accurately does the AI-generated Google Maps dataset capture active retail pharmacies relative to the Minnesota Board of Pharmacy licensure data, and what types of establishments constitute genuine coverage gaps? Second, do AI pipeline coverage gaps exhibit spatial patterns correlated with neighborhood income and racial composition, suggesting systematic underservice of vulnerable communities? Third, how does the performance of the AI pipeline compare to the NETS commercial database when each is evaluated against the same regulatory ground truth? These questions collectively assess both the absolute and relative validity of a novel, low-cost data collection framework for pharmacy access research, with direct implications for methodological choices in the field.
+
+\section{Methodology}
+
+This study employs a multi-agent pipeline architecture to collect pharmacy establishment data from the Google Maps Places API across 101 ZIP codes in the Minneapolis-St.\ Paul MSA. An AI classification agent using GPT-4o-mini at temperature 0.0 assigns NAICS codes to each returned record; a stratified validation sample of 100 records confirmed 99.2\% classification accuracy. The pipeline yielded 399 unique pharmacy records after geographic deduplication.
+
+Validation proceeds against the Minnesota Board of Pharmacy licensure registry, obtained April 14, 2026 (\$95 acquisition cost). The registry was filtered to active retail pharmacy licenses within the MSA ZIP footprint, producing a reference set of 459 records. Record matching employs RapidFuzz token-sort-ratio fuzzy string matching at a threshold of 0.75, with a DBA-aware normalization routine that resolves corporate legal names to their consumer-facing operating names and a 15\% cross-ZIP score penalty to reduce false matches across geographic boundaries.
+
+A multi-stage validity audit accompanied the primary validation. The audit identified that 50 of 134 apparent false negatives are institutional pharmacies, including hospital outpatient dispensaries, Federally Qualified Health Center pharmacies, and specialty oncology and mental health pharmacies, that are not accessible to retail consumers. Removing these from the reference denominator produces an adjusted retail-only denominator of 405 records. Spatial analysis of coverage gaps uses American Community Survey 2019 five-year estimates at the census tract level, with income quartiles defined by tract-level median household income breakpoints of \$70,000, \$90,000, and \$117,000. A comparison against the NETS commercial database is pending receipt of licensed data expected April 27, 2026.
+
+\section{Preliminary Findings}
+
+Against the adjusted Board of Pharmacy retail-only denominator of 405 records, the AI pipeline achieves precision of 80.5\%, recall of 79.3\%, and an F1 score of 79.9\%. The raw F1 score of 74.8\%, computed against the full 459-record Board reference set, is a conservative lower bound attributable to the inclusion of non-retail institutional records in the denominator. Threshold sensitivity analysis confirms that the F1 score varies by only 1.4 percentage points across matching thresholds ranging from 0.70 to 0.80, establishing the robustness of the result.
+
+Spatial analysis of false negatives reveals no significant income gradient. The ratio of coverage gaps in the lowest income quartile to coverage gaps in the highest income quartile is 1.16, indicating that the AI pipeline does not systematically underserve low-income communities. In North Minneapolis, encompassing ZIP codes 55411 and 55412, the pipeline correctly identifies the sole operational retail pharmacy, Cub Pharmacy at 701 West Broadway Avenue. The one genuine miss, NorthPoint Health Center Pharmacy, is an FQHC dispensary serving an uninsured and underinsured patient population, a finding with distinct and policy-relevant implications for community pharmacy access.
+
+\section{Significance}
+
+This thesis makes three contributions. Methodologically, it introduces a reproducible, low-cost audit framework that researchers can apply to validate consumer-facing point-of-interest data against regulatory ground truth in any geographic market, providing a transparent and replicable alternative to proprietary database acquisition. Empirically, it delivers the first systematic validation of Google Maps pharmacy data, establishing a documented accuracy profile for a data source already in widespread use across health geography research. For policy, the findings bear directly on pharmacy desert methodology: if a low-cost AI pipeline achieves accuracy comparable to commercial databases without concentrating coverage error in low-income communities, the case for democratizing access to pharmacy access research tools is substantially strengthened, with implications for how researchers, health departments, and policymakers assess the geographic distribution of pharmaceutical services.
+
+\bibliography{bibliography}
+
+\end{document}

@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+\usepackage{xcolor}
+
+\doublespacing
+
+%% Group and bar colors for Gantt chart
+\definecolor{ganttblue}{RGB}{52,110,180}
+\definecolor{ganttgreen}{RGB}{44,150,70}
+\definecolor{ganttorange}{RGB}{210,120,20}
+\definecolor{ganttred}{RGB}{190,40,40}
+
+\title{Thesis Timeline\\[0.5em]
+\large Evaluating Google Maps as a Pharmacy Establishment Data Source:\\
+An AI-Assisted Audit Framework for Health Equity Research in\\
+Minneapolis--St.\ Paul}
+\author{Congyuan (Othello) Zheng\\
+Departments of Applied Mathematics and Geography,\\
+University of Colorado Boulder}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Projected Timeline: April 2026 -- December 2026}
+
+The table below outlines major milestones for thesis completion, from honors program registration through oral defense and final submission. Dates are projected and subject to revision in consultation with the thesis committee.
+
+\vspace{1em}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth}
+                  >{\raggedright\arraybackslash}p{0.70\textwidth}}
+
+\toprule
+\textbf{Period} & \textbf{Milestone} \\
+\midrule
+\endfirsthead
+
+\multicolumn{2}{l}{\small\textit{(continued from previous page)}} \\
+\toprule
+\textbf{Period} & \textbf{Milestone} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+April 2026
+&
+Honors Program registration packet submitted to the Arts and Sciences Honors Program (deadline April 22, 2026).
+Board of Pharmacy validation pipeline completed; 399 AI-collected records matched against 459 Board licensure records.
+Multi-stage validity audit completed; adjusted F1 score 79.9\% documented with institutional contamination analysis.
+Figures B1 through B5 generated and saved to repository; figure manifest updated.
+\\[0.8em]
+
+Late April -- Early May 2026
+&
+NETS commercial database received from research team (expected April 27, 2026).
+NETS vs.\ Board of Pharmacy validation completed using identical fuzzy-matching protocol as Board validation.
+Figure B4 finalized with NETS comparison data replacing pending placeholder bars.
+\\[0.8em]
+
+May -- June 2026
+&
+Literature review chapter finalized; coverage to include pharmacy desert research, commercial database validation literature, and GeoAI methodological work.
+Introduction chapter drafted.
+Methodology chapter drafted; pipeline architecture, matching protocol, and audit procedure documented in full.
+Summer research assistant work begins under supervision of Prof.\ Ellen Considine, CU Boulder.
+\\[0.8em]
+
+July 2026
+&
+IMGS 2026 conference presentation in Toronto (GeoTranslator abstract, acceptance pending); preliminary findings presented to the international GIS community.
+Results chapter drafted; Board validation, NETS comparison, income quartile spatial analysis, and North Minneapolis case study documented.
+Committee check-in with Prof.\ Finlay, Prof.\ Travis, and Prof.\ Becker to review progress and confirm chapter scope.
+\\[0.8em]
+
+August 2026
+&
+Discussion chapter drafted; interpretation of income gradient non-finding, FQHC policy implications, and methodological contributions developed.
+Full draft circulated to thesis committee (Finlay, Travis, Becker) for comments.
+\\[0.8em]
+
+September 2026
+&
+Committee feedback incorporated into revised draft.
+Second full draft submitted to thesis advisor (Prof.\ Finlay) for detailed review.
+\\[0.8em]
+
+October 2026
+&
+Defense copy finalized following advisor review.
+Oral defense scheduled; target date late October or early November 2026.
+Defense copy distributed to committee at least two weeks prior to defense date.
+\\[0.8em]
+
+November 2026
+&
+Oral defense conducted before thesis committee.
+Final revisions completed following defense.
+Final copy submitted to CU Scholar institutional repository.
+\\[0.8em]
+
+December 2026
+&
+Graduation with honors, University of Colorado Boulder.
+\\
+
+\end{longtable}
+
+
+%% -------------------------------------------------------
+%%  Gantt Chart
+%% -------------------------------------------------------
+\newpage
+\begin{landscape}
+\begin{singlespace}
+
+\section{Gantt Chart: Honors Thesis Timeline: Fall 2026 Defense}
+
+\vspace{0.8em}
+\noindent\small
+Color key:\quad
+\textcolor{ganttblue}{\rule{1em}{0.7em}}~Registration \& Setup\quad
+\textcolor{ganttgreen}{\rule{1em}{0.7em}}~Writing\quad
+\textcolor{ganttorange}{\rule{1em}{0.7em}}~Revision\quad
+\textcolor{ganttred}{\rule{1em}{0.7em}}~Defense \& Submission\quad
+{\Large$\diamond$}~Hard deadline
+
+\vspace{1em}
+
+\begin{center}
+\begin{ganttchart}[
+  %% Canvas and grid
+  canvas/.append style={draw=black!20, line width=.4pt},
+  hgrid style/.style={draw=black!15, line width=.4pt},
+  vgrid={*1{draw=black!15, line width=.4pt}},
+  %% Sizing
+  x unit=1.6cm,
+  y unit title=0.6cm,
+  y unit chart=0.72cm,
+  title height=1,
+  %% Title row style
+  title/.append style={fill=gray!18, draw=gray!40},
+  title label font=\bfseries\small,
+  %% Bar style
+  bar/.append style={draw=none, fill=ganttblue},
+  bar height=0.45,
+  bar top shift=0.28,
+  bar label font=\footnotesize,
+  bar label node/.append style={text width=5.6cm, align=flush right},
+  %% Group style
+  group/.append style={draw=none, fill=ganttblue!80},
+  group height=0.32,
+  group top shift=0.35,
+  group label font=\footnotesize\bfseries,
+  group label node/.append style={text width=5.6cm, align=flush right},
+  group left shift=0,
+  group right shift=0,
+  group peaks tip position=0,
+  group peaks width=0.2,
+  group peaks height=0.15,
+  %% Milestone style (diamond)
+  milestone/.append style={fill=ganttred, shape=diamond, inner sep=3.5pt},
+  milestone height=0.5,
+  milestone top shift=0.25,
+  milestone label font=\footnotesize,
+  milestone label node/.append style={text width=5.6cm, align=flush right},
+]{1}{8}
+
+%% ---- Title rows ----
+\gantttitle{Honors Thesis Timeline: Fall 2026 Defense}{8} \\
+\gantttitle{Apr}{1}\gantttitle{May}{1}\gantttitle{Jun}{1}%
+\gantttitle{Jul}{1}\gantttitle{Aug}{1}\gantttitle{Sep}{1}%
+\gantttitle{Oct}{1}\gantttitle{Nov}{1} \\
+
+%% ---- Group 1: Registration & Setup (blue) ----
+\ganttgroup[
+  group/.append style={fill=ganttblue!80}
+]{Registration \& Setup}{1}{2} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttblue}
+]{Honors registration (Apr 22)}{1} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttblue}
+]{Board of Pharmacy validation complete}{1}{1} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttblue!70}
+]{NETS data received and compared}{1}{2} \\
+
+%% ---- Group 2: Writing (green) ----
+\ganttgroup[
+  group/.append style={fill=ganttgreen!80}
+]{Writing}{2}{5} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttgreen}
+]{Literature review}{2}{3} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttgreen}
+]{Intro and Methodology chapters}{2}{3} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttgreen}
+]{Results chapter}{4}{4} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttgreen}
+]{Discussion chapter}{5}{5} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttgreen!70}
+]{Full draft circulated to committee}{5}{5} \\
+
+%% ---- Group 3: Revision (orange) ----
+\ganttgroup[
+  group/.append style={fill=ganttorange!80}
+]{Revision}{6}{7} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttorange}
+]{Committee feedback incorporated}{6}{6} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttorange}
+]{Second draft to advisor}{6}{6} \\
+
+\ganttbar[
+  bar/.append style={fill=ganttorange}
+]{Defense copy finalized}{7}{7} \\
+
+%% ---- Group 4: Defense & Submission (red, milestones) ----
+\ganttgroup[
+  group/.append style={fill=ganttred!80}
+]{Defense \& Submission}{8}{8} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttred}
+]{Oral defense (Nov 4)}{8} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttred}
+]{Defense copy to honors@colorado.edu (Nov 4)}{8} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttred}
+]{Faculty recommendations due (Nov 6)}{8} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttred}
+]{Final copy to CU Scholar (Nov 10)}{8} \\
+
+\ganttmilestone[
+  milestone/.append style={fill=ganttred!70}
+]{Honors designation (Nov 13)}{8}
+
+\end{ganttchart}
+\end{center}
+
+\end{singlespace}
+\end{landscape}
+
+\end{document}
