@@ -1,0 +1,9 @@
+{
+  "n_borderline_dropped": 5,
+  "fn_strict": 79,
+  "precision_pct": 80.45,
+  "recall_pct": 80.25,
+  "f1_pct": 80.35,
+  "baseline_f1_pct": 79.85,
+  "delta_f1_pp": 0.5
+}

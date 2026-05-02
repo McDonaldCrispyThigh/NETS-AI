@@ -1,0 +1,21 @@
+{
+  "nw_quartile_thresholds_pct": [
+    18.9,
+    28.8,
+    50.1
+  ],
+  "n_total": 84,
+  "n_unmapped": 24,
+  "fn_count_by_nw_quartile": {
+    "NW_Q1": 8,
+    "NW_Q2": 15,
+    "NW_Q3": 33,
+    "NW_Q4": 4
+  },
+  "fn_count_by_nw_quartile_pct": {
+    "NW_Q1": 13.3,
+    "NW_Q2": 25.0,
+    "NW_Q3": 55.0,
+    "NW_Q4": 6.7
+  }
+}

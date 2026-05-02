@@ -1,0 +1,7 @@
+{
+  "auto_caught": 50,
+  "manual_slipthrough": 25,
+  "total_institutional": 75,
+  "auto_filter_recall_pct": 66.7,
+  "missed_by_auto_pct": 33.3
+}

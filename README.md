@@ -4,7 +4,8 @@
 **Honors Thesis Project**
 
 **Principal Investigator:** Congyuan Zheng, University of Colorado Boulder  
-**Advisors:** Prof. Jessica Finlay (CU Boulder) · Prof. Michael Esposito (U of Minnesota) · Yue Sun (Postdoc, CU Boulder)
+**Committee:** Prof. Jessica M. Finlay (CU Boulder Geography, Thesis Advisor) · Prof. Stephen Becker (CU Boulder Applied Mathematics) · Prof. William Travis (CU Boulder Geography, Honors Representative)  
+**Mentors:** Yue Sun (Postdoctoral Researcher, University of Minnesota study team)
 
 ---
 
@@ -41,16 +42,33 @@ python code/main.py --task pharmacy --city Minneapolis-StPaul --zips 55401 55402
 **Available tasks:** `library` · `park` · `coffee` · `gym` · `grocery` · `civic` · `religion` · `pharmacy`
 
 ```bash
-# 4. (Pharmacy only) Validate AI output against NPPES NPI Registry
-python code/validate_nppes.py --ai-csv data/Minneapolis-StPaul_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips
-python code/validate_nppes.py --ai-csv data/Minneapolis-StPaul_pharmacy_YYYYMMDD_HHMMSS.csv --use-zips --output data/validation_result.csv
+# 4. (Pharmacy only) Validate AI output against MN Board of Pharmacy
+python code/validate_board.py --ai-csv data/Minneapolis-StPaul_pharmacy_YYYYMMDD_HHMMSS.csv
 
-# 5. Spatial analysis (requires validation CSV)
-python code/spatial_analysis.py
+# 5. Multi-stage validity audit (institutional vs retail FN)
+python code/audit_board_validation.py
 
-# 6. Generate thesis figures
-python code/visualize.py
+# 6. Mobility-weighted desert analysis (requires ACS vehicle data)
+python code/fetch_acs_vehicles.py
+python code/mobility_desert.py
+
+# 7. Generate thesis figures (8 figures total)
+python code/visualize.py                      # figure1-3 (coverage, desert, wayback)
+python code/generate_figures_v3.py            # figure4-6 (wayback x match, chain/indep, FN hierarchy)
+python code/generate_north_mpls_map.py        # figure7 (North Mpls focus)
+python code/generate_holc_overlay.py          # figure8 (HOLC overlay)
+python code/generate_mobility_figures.py      # figure9-10 (MWDR, threshold sensitivity)
+python code/three_source_venn.py              # figure11 (three-source coverage)
+
+# 8. Bootstrap confidence intervals + supplementary analyses
+python code/bootstrap_metrics.py
+python code/supplementary_analyses.py         # logistic regression, MAUP, centroid sensitivity
 ```
+
+**Reproducibility note**: complete prompt template, API parameters,
+RapidFuzz protocol, and bootstrap random seeds are documented in
+`docs/thesis/chapters/appendix_b_reproducibility.tex` (rendered as
+Appendix B in `docs/thesis/main.pdf`).
 
 ---
 
