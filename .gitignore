@@ -37,6 +37,11 @@ data/*.zip
 data/*.txt
 data/*.geojson
 !data/.gitkeep
+# Keep small reference / reproducibility artifacts
+!data/twin_cities_zips.csv
+!data/acs_tracts_vehicles_2023.csv
+!data/holc_twin_cities.geojson
+!data/north_mpls_zcta.geojson
 
 # Keep figures tracked
 # data/figures/ -- intentionally NOT ignored
@@ -47,13 +52,20 @@ data/*.geojson
 
 # Logs
 *.log
+*.blg
+*.aux
+*.out
+*.toc
+*.bbl
 logs/
 
-# Thesis build artifacts (compiler binary + figure duplicates + raw templates)
+# Thesis build artifacts (compiler binary + raw templates)
 docs/thesis/tectonic.exe
-docs/thesis/figures/
 docs/els-cas-templates/
 docs/Honors_Thesis_Zheng_2026_new.docx
+
+# Oversized figures (>20 MB; rebuild from code/ or store via Git LFS if needed)
+data/figures_board/figure_b2_board_fn_map_v2.png
 
 # Testing
 .pytest_cache/

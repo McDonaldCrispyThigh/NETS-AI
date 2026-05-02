@@ -1,0 +1,30 @@
+[
+  {
+    "Qinc": 1,
+    "tracts": 118,
+    "desert_pct_0.5 mi": 44.9,
+    "desert_pct_1.0 mi": 16.1,
+    "desert_pct_2.0 mi": 0.8
+  },
+  {
+    "Qinc": 2,
+    "tracts": 117,
+    "desert_pct_0.5 mi": 64.1,
+    "desert_pct_1.0 mi": 23.9,
+    "desert_pct_2.0 mi": 1.7
+  },
+  {
+    "Qinc": 3,
+    "tracts": 117,
+    "desert_pct_0.5 mi": 80.3,
+    "desert_pct_1.0 mi": 31.6,
+    "desert_pct_2.0 mi": 2.6
+  },
+  {
+    "Qinc": 4,
+    "tracts": 118,
+    "desert_pct_0.5 mi": 85.6,
+    "desert_pct_1.0 mi": 44.1,
+    "desert_pct_2.0 mi": 16.1
+  }
+]

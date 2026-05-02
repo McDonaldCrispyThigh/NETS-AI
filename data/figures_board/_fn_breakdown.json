@@ -1,0 +1,8 @@
+{
+  "total_fn": 134,
+  "institutional": 50,
+  "retail": 84,
+  "dba_chain_failure": 40,
+  "institutional_slipthrough": 25,
+  "genuine_independent_miss": 19
+}

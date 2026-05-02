@@ -1,0 +1,1652 @@
+
+===== PAGE 1 =====
+Geospatial Artificial Intelligence (GeoAI) Is
+Widening the Digital Divide
+Xiao Huang
+Department of Environmental Sciences, Emory University, USA
+Geospatial artificial intelligence (GeoAI), merging AI with spatial data, offers potent new ways to understand
+and shape our world. Yet, its ascent threatens to carve a deeper digital divide, moving beyond access gaps to
+fundamental inequities in data sovereignty, computational power, and the critical literacy required to navigate
+GeoAI’s complexities. This concentration of capability risks entrenching power, enabling the privileged to
+dominate spatial narratives and decisions driven by these technologies. This work dissects how GeoAI
+exacerbates
+existing
+socioeconomic,
+educational,
+and
+infrastructural
+divides,
+examining
+the
+profound
+implications for diverse communities. It argues that mitigation demands more than technological fixes; it
+necessitates inclusive policy frameworks, equitable resource distribution, and the deliberate cultivation of
+widespread GeoAI literacy. Failure risks a future where GeoAI amplifies injustice, demanding proactive
+strategies now to harness its power for genuinely equitable ends and shared societal benefit, rather than
+reinforcing existing fractures. Key Words: big data era, digital divide, GeoAI, geospatial data.
+Soon the digital divide will not be between the haves
+and the have-nots. It will be between the know-hows
+and the non-know-hows.
+—Howard Rheingold
+R
+heingold’s prescient observation signals a criti-
+cal evolution in understanding digital inequality.
+The traditional conception of the digital divide,
+focused primarily on disparities in physical access to
+hardware and Internet connectivity (the haves vs.
+have-nots), proves increasingly inadequate in the face
+of complex technological integration. Rheingold, a key
+observer of modern communication media’s societal
+impacts, directed attention toward a more profound
+chasm: the growing gap predicated on the ability to
+effectively comprehend, use, and critically engage with
+digital technologies. This emphasis on digital literacy
+and competency—the distinction between the “know-
+hows” and the “non-know-hows”—is paramount, yet
+arguably remains underexamined within disciplines like
+geography, where the spatial manifestations and impli-
+cations of such divides are particularly acute.
+Rheingold’s distinction gains profound relevance
+in
+the
+era
+of
+geospatial
+artificial
+intelligence
+(GeoAI). The fusion of geospatial data with AI
+techniques unlocks immense potential across diverse
+sectors—urban planning, environmental monitoring,
+disaster
+management,
+and
+public
+health—by
+enabling the analysis of vast spatial data sets to yield
+unprecedented insights and predictive capabilities
+(Wang, Huang, et al. 2024). The very power of
+GeoAI to generate complex solutions simultaneously,
+however, risks concentrating interpretive and decision-
+making
+authority.
+The
+sophisticated
+capabilities
+required
+to
+develop,
+deploy,
+and
+critically
+assess
+GeoAI systems mean that the benefits derived from
+these technologies are far from uniformly distributed,
+demanding scrutiny of who possesses the essential
+“know-how” Rheingold identified, and who is poten-
+tially excluded or marginalized by these advancements.
+The digital divide, when viewed through the lens
+of GeoAI, extends significantly beyond mere techno-
+logical access. It critically encompasses disparities in
+accessing high-quality data, the availability of robust
+computational resources, and the requisite critical
+digital literacy and technical expertise needed not
+just to use, but to understand and question these
+advanced tools. Individuals and communities lacking
+these elements face substantial disadvantages, creat-
+ing conditions where existing social and economic
+ARTICLE HISTORY
+Initial submission, August 2024; revised submissions, January and April 2025; final acceptance, June 2025
+CORRESPONDING AUTHOR Xiao Huang
+xiao.huang2@emory.edu
+# 2025 by American Association of Geographers
+ANNALS OF THE AMERICAN ASSOCIATION OF GEOGRAPHERS
+https://doi.org/10.1080/24694452.2025.2527316
+
+===== PAGE 2 =====
+inequalities might not only be replicated but actively
+amplified. This widening chasm between those who
+can harness GeoAI’s potential and those who cannot
+impedes the equitable distribution of technological
+benefits
+and
+risks
+reinforcing
+systemic
+societal
+inequities through biased data, opaque algorithms,
+and exclusionary practices.
+Addressing this challenge, this article explores the
+multifaceted dimensions of the digital divide specific
+to GeoAI and its far-reaching implications. It exam-
+ines potential drivers—socioeconomic, educational,
+infrastructural—and analyzes how the GeoAI era
+might intensify the issue across technique develop-
+ment, research pathways, and educational accessibil-
+ity. Furthermore, practical suggestions and strategic
+guidance are offered for bridging this divide, moving
+toward more equitable frameworks. The objective is
+to illuminate the complexities involved and propose
+actionable strategies that foster inclusive access and
+critical engagement, ensuring GeoAI’s transformative
+potential contributes toward a more just and equita-
+ble world, rather than deepening existing societal fis-
+sures. An overview of this analysis is presented in
+Figure 1.
+Figure 1. The overview of this work.
+2
+Huang
+
+===== PAGE 3 =====
+Understanding the Digital Divide
+The term digital divide refers to the significant dispar-
+ity in access to and utilization of digital technologies,
+a growing global issue in the twenty-first century
+(Cullen 2001). This divide encompasses not only the
+gap between those with and without Internet access
+but also disparities in digital literacy, skills, and the
+ability to benefit from digital technologies. With the
+increasing implementation of e-government services
+and digital platforms by governments and organizations
+worldwide, concerns about the digital divide’s impact
+on the equitable delivery of these services has become
+more pronounced (Belanger and Carter 2008).
+The digital divide is a complex phenomenon
+rooted in broader socioeconomic and geographical
+inequalities. It involves more than just access to
+hardware and infrastructure; it includes the ways
+people communicate and access information through
+various digital channels like mobile phones, televi-
+sion, and the Internet. This highlights the impor-
+tance
+of
+considering
+the
+social
+and
+political
+dimensions of the digital divide, as well as the vary-
+ing levels of access and digital literacy among people
+from different backgrounds and skill levels (Fuchs
+and Horak 2008).
+Socioeconomic inequality is a primary driver of the
+digital divide. Individuals from lower income house-
+holds are less likely to afford computers, smartphones,
+and Internet subscriptions, limiting their participation
+in the digital space, access to information, and benefits
+from online education and services (Van Deursen and
+Van Dijk 2011). This disparity is particularly pro-
+nounced in the big data era, where a significant amount
+of data is contributed by individuals who actively par-
+ticipate in the digital space, such as through mobile
+Global Positioning System (GPS) points and social
+media. Consequently, when scholars analyze these data,
+the experiences and contributions of those from these
+groups
+are
+often
+overlooked
+(Li
+et
+al.
+2024).
+Geographical location also significantly affects digital
+access, with rural and remote areas often experiencing
+inadequate infrastructure, slower Internet speeds, or a
+complete lack of connectivity. This geographical digital
+divide exacerbates regional inequalities, hindering eco-
+nomic development and access to digital services in
+these areas (Halford and Savage 2010).
+Educational attainment is closely linked to digital
+literacy. Those with higher education levels are gen-
+erally more proficient in using digital technologies
+and better equipped to leverage the Internet for
+information, employment, and social engagement.
+Conversely, individuals with lower education levels
+might struggle with basic digital tasks, further deep-
+ening the divide (DiMaggio and Hargittai 2001).
+Age is another critical factor, with older adults being
+less likely to use digital technologies compared to
+younger generations. This age-related digital divide
+is due to a lack of familiarity and comfort with tech-
+nology, as well as physical limitations that make using
+digital devices challenging (Hunsaker and Hargittai
+2018). Cultural and linguistic barriers also contribute,
+as people from minority groups or those who speak
+minority languages might find fewer online resources
+available in their language, hindering their full partici-
+pation in the digital world. This underscores the need
+for culturally and linguistically inclusive digital content
+(Fantin and Girardello 2008).
+The advent of GeoAI—the integration of geographic
+information systems (GIS) with AI—significantly shifts
+the digital landscape. The GeoAI era demands new
+knowledge, advanced modeling, training skills, and
+robust Internet facilities. As these technologies become
+integral to various sectors, the digital divide risks being
+further exacerbated. The need for computational resour-
+ces and sophisticated digital skills will become even
+more critical, potentially widening the gap between
+those with access and those without. In this article, I
+aim to dissect how the GeoAI era, combined with the
+big data revolution, intensifies the digital divide, and
+then discuss strategies to overcome this challenge.
+GeoAI Advancements and the Expanding
+Digital Divide
+Unequal Data: Access and Quality Challenges in
+the GeoAI Era
+In the GeoAI era, access to high-quality data is of
+great importance. Disparities in data availability,
+however, can intensify the digital divide. Regions
+with limited Internet infrastructure and lower tech-
+nological investment often lack the requisite data
+repositories and the capacity to effectively collect,
+store, and manage geospatial data. For example, rural
+areas in developing countries might not have access
+to satellite imagery or comprehensive geospatial data
+sets due to inadequate Internet connectivity and
+financial constraints (Turner et al. 2015). In some
+parts of sub-Saharan Africa, limited access to high-
+resolution satellite data hinders efforts to monitor
+agricultural productivity and optimize crop yields.
+GeoAI Is Widening the Digital Divide
+3
+
+===== PAGE 4 =====
+Similarly, in South Africa, the high cost of mobile
+data further exacerbates these challenges. In South
+Africa, ranked 143 out of 230 countries in terms of
+mobile data cost for 1 GB of data, lower income
+groups spend approximately 4.8 percent of their dis-
+posable income on cellphone usage (Venter and
+Daniels 2020). This financial burden significantly
+limits their ability to access and use geospatial data
+effectively. OpenStreetMap (OSM) further high-
+lights how spatially skewed data providers result in
+uneven data distribution and quality (Ma, Sandberg,
+and Jiang 2015), the discrepancies of which can be
+easily translated into biases in the outcomes derived
+from such data, potentially affecting the reliability
+and effectiveness of applications and analyses that
+depend on OSM. In contrast, developed countries
+with robust data-sharing policies can open-source
+fine-grained human mobility data, facilitating a wide
+range of important tasks such as monitoring facility
+usage (Wang et al. 2023; Lu et al. 2024), addressing
+infectious disease challenges (Hu et al. 2021; Huang,
+Lu, et al. 2022), and supporting urban informatics
+research (Kupfer et al. 2021; Huang, Lu, et al.
+2022). In comparison, many developing nations lack
+the resources and infrastructure to achieve similar
+outcomes, which restricts underserved communities
+from leveraging GeoAI technologies for local devel-
+opment, disaster management, and resource alloca-
+tion. The inability to access and use advanced
+geospatial data can lead to inadequate disaster pre-
+paredness
+and
+recovery
+strategies,
+exacerbating
+regional vulnerability and economic instability.
+The High Cost of Precision: Computational
+Resource Inequities
+A critical dimension of the digital divide in the
+GeoAI era stems from profound inequities in access-
+ing the substantial computational power required for
+advanced modeling and analysis. High-performance
+computing (HPC) resources and specialized exper-
+tise, essential for processing large data sets and train-
+ing
+sophisticated
+GeoAI
+models,
+are
+typically
+concentrated within well-funded institutions and
+technologically advanced regions, creating significant
+barriers elsewhere.
+The practical implications are stark. For example,
+developing robust GeoAI models for complex envi-
+ronmental tasks, such as predicting flood zones by
+integrating
+diverse inputs like
+weather
+patterns,
+elevation, historical data, and social sensing feeds,
+necessitates
+considerable
+computational
+capacity
+often unavailable to smaller municipalities or organi-
+zations in developing countries (Huang, Wang, and
+Li 2018a, 2018b; Bulti and Abebe 2020; Song et al.
+2023). Similarly, exploiting the insights from “big
+social
+data”—leveraging
+vast
+streams
+of
+user-
+generated content like social media or mobility
+records—often depends on access to HPC environ-
+ments, limiting participation in this burgeoning area
+of
+GeoAI
+application
+(Bello-Orgaz,
+Jung,
+and
+Camacho 2016).
+These
+limitations
+acutely
+affect
+research
+and
+innovation capacity in resource-constrained settings.
+Many universities and institutions in regions like
+Africa lack the funding or infrastructure for adequate
+HPC facilities, directly hindering their ability to
+engage in cutting-edge GeoAI research or develop
+tailored solutions for local challenges (Mzuza and
+Van der Westhuizen 2020). This resource gap is
+poised to widen further with the increasing computa-
+tional demands of newer technologies; the training
+requirements
+for
+foundational
+generative
+AI
+(GenAI) models, for instance, significantly surpass
+those of many existing GeoAI models (Fui-Hoon
+Nah et al. 2023; Wang, Hu, et al. 2024). Notably,
+such computational barriers are not exclusive to
+developing nations. Even within European countries
+possessing
+relatively
+strong
+economies,
+persistent
+challenges include insufficient funding for crucial
+GIS
+equipment
+updates
+(e.g.,
+Greece,
+Iceland),
+shortages of computers and multimedia resources
+(e.g., Slovenia), and unfavorable student-to-equip-
+ment ratios (e.g., Romania), underscoring the wide-
+spread nature of computational resource inequities in
+the GeoAI landscape (Donert 2005).
+Learning Gaps: Educational Disparities in the
+GeoAI Era
+Educational disparities play an important role in
+addressing the digital divide, with the demands of
+the GeoAI era placing even greater pressure on edu-
+cational systems. The integration of AI with GIS
+necessitates
+advanced
+knowledge
+in
+both
+fields,
+along
+with
+strong
+analytical
+and
+computational
+skills. Regions with underfunded educational institu-
+tions often struggle to provide this level of training,
+putting their populations at a significant disadvan-
+tage. For instance, schools in Tanzania or parts of
+4
+Huang
+
+===== PAGE 5 =====
+Southeast Asia might lack the resources to offer
+advanced courses in GIS and AI (Sumari, Shao, and
+Kira 2018; Gonzalez et al. 2021). In rural Latin
+America, similarly, the absence of specialized train-
+ing programs in GeoAI means that local students
+and professionals are less likely to develop the neces-
+sary skills to engage in high-tech industries or
+research projects (Cascante-Campos 2022). In many
+places, educational resources are often unevenly dis-
+tributed (Taylor and Cantwell 2019). Thus, students
+and GIS practitioners in urban centers might have
+access to better facilities and training programs com-
+pared to their rural counterparts.
+These educational challenges are compounded by
+the absence of high-performance computing resour-
+ces in many developing regions. Even when basic
+computer labs are available, the lack of faculty trained
+in both GIS and AI means that courses might not
+effectively cover advanced topics or practical applica-
+tions. Without adequately trained teachers, students
+miss out on the interactive, project-based learning
+experiences that are crucial for mastering GeoAI skill
+sets. Moreover, resource constraints in underresourced
+regions can make it impossible to provide hands-on
+training with industry-standard software or cloud com-
+puting platforms, further widening the skill gap.
+Governing the Divide: Policy Implications and
+Governance Challenges
+The implementation of GeoAI technologies is
+often hindered by policy and governance challenges,
+especially in regions with weak institutional frame-
+works. Effective utilization of GeoAI necessitates
+robust policies that encourage data sharing, privacy
+protection, and equitable access to technological
+resources (Ghafoor and Tahir 2023; Mortaheb and
+Jankowski 2023). In many developing countries,
+though, the lack of comprehensive geospatial poli-
+cies and regulatory frameworks leads to fragmented
+data governance and limited collaboration between
+governmental and nongovernmental organizations.
+For example, in several African nations, the absence
+of standardized policies for geospatial data collection
+and usage creates significant obstacles to integrating
+GeoAI into national development plans (Osuteye,
+Johnson, and Brown 2017). Furthermore, bureau-
+cratic inefficiencies and corruption can impede the
+deployment of GeoAI solutions, as observed in some
+developing countries where resource allocation for
+technological
+infrastructure
+is
+often
+mismanaged
+(Akinwale
+2010).
+Another
+example
+is
+India’s
+National Spatial Data Infrastructure (NSDI), which
+was designed to establish uniform metadata standards
+but faces challenges due to its top-down, data-centric
+approach,
+limiting
+bottom-up
+involvement
+and
+responsiveness to local needs. The diverse legacy
+processes of mapping agencies further hinder the
+adoption of unified standards and open-data norms,
+creating resistance and inefficiencies (Singh 2005).
+These governance and standardization issues largely
+delay the adoption of GeoAI, perpetuating existing
+inequalities by failing to address the specific needs of
+marginalized communities. Without coherent policy
+frameworks, the potential of GeoAI to drive socio-
+economic development and environmental sustain-
+ability remains largely untapped, thereby reinforcing
+the digital divide.
+Cultural Disconnect: Overcoming Sociocultural
+Barriers in GeoAI Access
+Sociocultural
+barriers
+also
+affect
+the
+unequal
+adoption of GeoAI technologies. Cultural attitudes
+toward technology, levels of digital literacy, and
+societal norms can influence the acceptance and uti-
+lization of GeoAI across various regions. In some tra-
+ditional societies, resistance to new technologies
+arises due to fears of job displacement or mistrust of
+automated systems. For instance, in certain rural
+communities in Asia, farmers who rely on traditional
+agricultural practices might oppose the introduction
+of GeoAI in AI-driven agricultural interventions,
+remaining skeptical of their effectiveness (Raj et al.
+2020). In parts of Africa, low levels of digital liter-
+acy can hinder the effective use of GeoAI tools for
+urban planning or disaster management (Choi, Dutz,
+and Usman 2020). Furthermore, political environ-
+ments can limit access to and use of emerging tech-
+nologies.
+For example,
+in Afghanistan,
+unstable
+governance, ongoing conflicts, and limited policy
+support have severely undermined information tech-
+nology and other critical infrastructure essential for
+high-tech
+applications
+(Kumar
+2021).
+This
+has
+unquestionably hindered the adoption of AI, includ-
+ing GeoAI. These sociocultural challenges are often
+exacerbated by gender disparities, where women and
+girls have less access to education and technological
+resources compared to men (Antonio and Tuffley
+2014).
+GeoAI Is Widening the Digital Divide
+5
+
+===== PAGE 6 =====
+Strategies to Bridge the Digital Divide in
+the GeoAI Era
+To effectively address the digital divide exacer-
+bated by the advent of GeoAI, a comprehensive and
+multifaceted approach is required. The following
+strategies highlight critical areas for intervention and
+policy development to ensure that the benefits of
+GeoAI are accessible to all, thereby promoting equi-
+table socioeconomic development and technological
+inclusion.
+Investment in Digital Infrastructure
+The deployment and utilization of GeoAI funda-
+mentally depend on robust digital infrastructure, yet
+access
+remains
+deeply
+uneven.
+Prioritizing
+the
+expansion of reliable, high-speed Internet to under-
+served rural and remote regions is not merely about
+connectivity; it is about laying the groundwork for
+digital citizenship and participation in an increas-
+ingly data-driven world (Wang 2010; Xia 2022).
+This requires significant public and private invest-
+ment in foundational technologies like fiber-optic
+networks.
+Where
+terrestrial
+infrastructure
+proves
+logistically or economically prohibitive, alternative
+solutions such as advanced wireless networks and
+satellite constellations become crucial.
+Furthermore,
+the
+computational
+demands
+of
+GeoAI—processing vast data sets and training com-
+plex models—necessitate access to HPC resources.
+For many institutions and communities, particularly
+in the Global South, building and maintaining local
+HPC clusters is infeasible. Here, cloud computing
+platforms (e.g., AWS, Azure, Google Cloud) offer a
+potential pathway to democratization, providing scal-
+able, pay-as-you-go access to computational power
+and specialized geospatial tools (Wang 2010). Yet,
+reliance
+on
+cloud
+infrastructure
+introduces
+new
+dependencies and potential vulnerabilities, raising
+questions about data sovereignty and the long-term
+costs
+associated
+with
+access
+versus
+ownership.
+Therefore, infrastructure strategies must consider not
+only access but also digital autonomy and resilience.
+Public–private partnerships can be effective mecha-
+nisms for funding and deployment, but they must be
+structured to prioritize public good and equitable
+access over purely commercial interests. Ultimately,
+I would argue that viewing digital infrastructure less
+as a market commodity and more as an essential
+public utility, akin to roads or electricity, is critical
+for bridging the GeoAI divide.
+Affordable Access to Digital Technologies
+Beyond infrastructure, the tangible tools of the
+digital age—devices, software, and data—must be
+accessible. Financial barriers significantly limit par-
+ticipation; the cost of capable computers, smart-
+phones, and critically, data plans, can be prohibitive
+for low-income households (Van Deursen and Van
+Dijk 2011). Targeted subsidies, voucher programs, or
+universal basic service initiatives can mitigate these
+costs, enabling individuals to acquire the necessary
+hardware. Affordability extends beyond the initial
+purchase,
+however; ongoing
+data
+costs, software
+licenses (although mitigated by open-source alterna-
+tives like QGIS and Python libraries), and the “time
+cost”
+of
+learning
+represent
+significant
+hurdles
+(Schradie 2011).
+Public–private partnerships, such as those exem-
+plified by initiatives like Google’s AI for Social
+Good or the Gates Foundation’s investments (Lai
+2021), can channel resources toward underresourced
+regions. Their impact, however, must be critically
+assessed for sustainability and alignment with local
+needs, avoiding technological solutionism (Morozov
+2013). Community technology centers and libraries
+play a vital role, offering shared access not only to
+devices and the Internet but potentially to more spe-
+cialized software and expertise (Grunwald et al.
+2007; Khmelevsky et al. 2011). These spaces can
+evolve into hubs for collaborative learning and par-
+ticipatory GeoAI projects, integrating local knowl-
+edge with advanced tools. Nonetheless, it is crucial
+to recognize the limitations; shared access points
+might
+not
+suffice
+for
+computationally
+intensive
+GeoAI tasks or provide the privacy needed for sensi-
+tive projects. Ensuring equitable access requires a
+multipronged approach that addresses the full spec-
+trum of costs—financial, temporal, and cognitive—
+associated with engaging meaningfully with GeoAI.
+Digital Literacy and Education Programs
+Bridging the digital divide in the GeoAI era
+necessitates a profound shift in educational para-
+digms, moving beyond basic digital literacy toward
+cultivating critical GeoAI literacy. This encompasses
+6
+Huang
+
+===== PAGE 7 =====
+not only the technical skills to use GIS and AI tools
+but also the capacity to understand their underlying
+principles, critically evaluate their outputs, recognize
+potential biases in data and algorithms, and consider
+the ethical implications of their application (Lee
+2023).
+Educational
+systems,
+from
+K–12
+through
+higher education, must integrate these competencies
+into curricula, treating them not as niche specializa-
+tions but as fundamental components of modern citi-
+zenship and scientific inquiry (Kerski, Demirci, and
+Milson 2013).
+Flexible learning opportunities can be facilitated
+through GIS-related online courses, workshops, and
+certification programs. Particular attention should be
+directed toward providing digital literacy programs in
+underserved regions, such as Africa, where fewer
+than one in five individuals possess the necessary
+level of digital literacy or access to both types of
+devices within their households (Kr€onke 2020).
+These initiatives can help bridge educational gaps
+and promote equitable access to GeoAI tools and
+knowledge,
+fostering
+inclusivity
+and
+empowering
+communities to leverage geospatial technologies for
+development. Fostering this deeper literacy is para-
+mount to ensuring that GeoAI serves diverse public
+interests and contributes to a more just and equita-
+ble spatial understanding of the world, rather than
+merely reinforcing existing power structures through
+opaque, data-driven decision-making.
+Inclusive Policy and Governance Frameworks
+Bridging the digital divide in the GeoAI era
+necessitates proactive and carefully crafted policy
+and governance frameworks that move beyond mere
+technical
+considerations
+to
+embed
+principles
+of
+equity and justice. Simply advocating for data shar-
+ing is insufficient; the terms of collection, access,
+use, and control are paramount, especially given the
+potential for GeoAI to amplify existing societal
+inequalities (Elish 2019). Effective governance must
+establish clear, enforceable, and ethically grounded
+rules for the entire geospatial data life cycle.
+Privacy protection demands particular attention
+in the geospatial context due to the inherent loca-
+tional sensitivity and the heightened risk of reidenti-
+fication, even from supposedly anonymized data sets
+(De Montjoye et al. 2013). Policies must incorporate
+stringent data protection principles, drawing inspira-
+tion
+from
+comprehensive
+frameworks
+like
+the
+European Union (EU) General Data Protection
+Regulation (GDPR), including data minimization
+(collecting only necessary data), purpose limitation
+(using data only for specified purposes), and robust
+security measures (Voigt and Von Dem Bussche
+2017). Critically, this involves defining clear proto-
+cols for obtaining meaningful informed consent,
+especially
+when
+dealing
+with
+collective
+or
+community-level data, and respecting principles of
+Indigenous
+data
+sovereignty
+where
+applicable.
+Predeployment
+algorithmic
+impact
+assessments
+should become standard practice to anticipate and
+mitigate potential discriminatory outcomes (Gupta,
+An, and Shekhar 2023). Furthermore, policies must
+be intentionally designed to counteract the perpetua-
+tion and amplification of historical and systemic
+biases often encoded within geospatial data (e.g., leg-
+acies of redlining, infrastructure disparities, or under-
+representation of marginalized groups in volunteered
+geographic information;
+Laituri 2002; O’Sullivan
+2006). This requires going beyond simple nondiscri-
+mination clauses to mandate proactive measures,
+such as fairness audits of GeoAI models and ensuring
+data sets adequately represent diverse populations
+(Mehrabi et al. 2022).
+Promoting Cultural and Linguistic Inclusion
+To ensure GeoAI technologies are truly inclusive
+and bridge rather than widen the digital divide, pro-
+active strategies must address deep-seated cultural
+and linguistic barriers. This requires moving beyond
+superficial measures toward fundamentally rethinking
+how
+GeoAI
+tools,
+data,
+and
+applications
+are
+designed, deployed, and governed in diverse socio-
+cultural contexts (Tsou and Smith 2011).
+Merely translating interfaces or documentation
+into multiple languages, although necessary, is insuf-
+ficient. Linguistic inclusion demands attention to
+dialects, varying levels of technical literacy, and the
+potential absence of equivalent technical terms in
+all languages, often necessitating collaborative termi-
+nology development. The pervasive dominance of
+English
+within
+the
+GeoAI
+field—from
+software
+menus to foundational research papers—creates sig-
+nificant barriers to entry and participation for non-
+English speakers, reinforcing existing global power
+imbalances in knowledge production. Furthermore,
+cultural appropriateness in GeoAI extends signifi-
+cantly
+beyond
+language.
+It
+involves
+critically
+GeoAI Is Widening the Digital Divide
+7
+
+===== PAGE 8 =====
+examining how spatial phenomena are represented,
+as cartographic choices regarding symbology, color
+palettes, place names (toponyms), and even map
+projections are laden with cultural assumptions and
+historical power dynamics (Harley 1989). GeoAI sys-
+tems must be designed with the flexibility to accom-
+modate diverse ontologies and culturally specific
+ways of understanding and relating to space, moving
+away from a one-size-fits-all approach.
+Finally, data practices within GeoAI must demon-
+strate profound cultural sensitivity, particularly con-
+cerning
+privacy
+and
+data
+ownership.
+Western,
+individualistic notions of privacy often clash with
+collectivist cultural norms where data, especially
+geospatial data linked to community lands or resour-
+ces, are considered a communal asset (Nissenbaum
+2009). Implementing GeoAI ethically in such con-
+texts requires moving beyond individual consent
+models to embrace frameworks like Indigenous data
+sovereignty, which emphasizes collective rights, com-
+munity control over data governance, and protocols
+defined by the communities themselves. Ignoring
+these diverse cultural data ethics not only risks
+alienating communities but can lead to extractive
+practices that undermine trust and the potential for
+equitable GeoAI deployment.
+Supporting Local Innovations and Capacity
+Building
+Although external support can provide initial
+resources, bridging the GeoAI divide sustainably
+necessitates the cultivation of endogenous innova-
+tion capabilities; that is, fostering innovation that
+arises from within local contexts and is responsive to
+specific regional challenges. Supporting local GeoAI
+startups and entrepreneurs requires more than just
+capital; it demands mentorship sensitive to the
+unique socioeconomic and infrastructural landscapes
+they navigate. Incubators and accelerators can be
+valuable, but their efficacy hinges on moving beyond
+replicating Silicon Valley archetypes toward fostering
+“appropriate technology” rooted in local needs and
+resource availability. The goal should be to build
+resilient local innovation ecosystems where knowl-
+edge generation, application, and economic value
+creation reinforce each other.
+Capacity building, therefore, must transcend rudi-
+mentary technical training on specific software pack-
+ages. It must aim to cultivate a deeper critical
+GeoAI literacy—the ability not only to use the tools
+but to understand their theoretical underpinnings,
+evaluate their outputs critically, recognize inherent
+biases in data and algorithms, and navigate the com-
+plex ethical terrain of geospatial data (Elwood and
+Leszczynski 2013). Training programs need curricula
+co-designed with local stakeholders to ensure rele-
+vance to specific environmental, social, or economic
+challenges. Pedagogical approaches should prioritize
+problem-based learning and connect skills develop-
+ment directly to tangible local opportunities to miti-
+gate the risk of “brain drain,” where newly skilled
+individuals leave due to a lack of local application
+pathways. Establishing sustainable training infrastruc-
+tures, perhaps embedded within local universities or
+community centers rather than relying solely on
+short-term external projects, is crucial for long-term
+impact
+and
+accessibility
+(Ashraf,
+Grunfeld,
+and
+Quazi 2015). Ultimately, the objective is not just to
+create users of GeoAI, but to empower communities
+to become critical creators, adaptors, and governors
+of these powerful technologies within their own
+contexts.
+Gender Equality and Empowerment Programs
+The digital divide within the GeoAI era is not
+gender-neutral; it reflects and often amplifies deep-
+seated societal inequities that systematically disad-
+vantage women and girls, particularly those at the
+intersections
+of
+multiple
+marginalizations
+(e.g.,
+based on race, class, location). Addressing this
+requires moving beyond surface-level interventions
+toward tackling the structural barriers, cultural
+biases, and power dynamics that limit women’s
+meaningful participation and leadership in the
+GeoAI field. Initiatives like scholarships and men-
+torship programs can provide crucial support for
+individuals (Riedler et al. 2021), but they primar-
+ily address symptoms rather than the root causes
+embedded within educational pathways, workplace
+cultures, and the very design of geospatial technol-
+ogies. A truly transformative approach necessitates
+systemic change.
+Targeted
+training
+programs,
+if
+thoughtfully
+designed, can help bridge specific competency gaps
+(Franklin et al. 2023). Their effectiveness, though,
+depends on adopting gender-responsive pedagogies
+that actively counter stereotype threat and foster
+critical engagement, rather than merely transferring
+8
+Huang
+
+===== PAGE 9 =====
+technical skills. Crucially, such programs must inte-
+grate perspectives from feminist critiques of science
+and technology, enabling participants to recognize
+and challenge gender biases potentially encoded
+within geospatial data sets (e.g., gendered patterns in
+volunteered
+geographic
+information)
+and
+GeoAI
+algorithms themselves. Without this critical lens,
+even technically proficient women could find their
+work
+inadvertently
+perpetuating
+existing
+spatial
+inequalities.
+Ultimately,
+sustainable
+progress
+demands
+con-
+fronting the often exclusionary cultures prevalent in
+many science, technology, engineering, and mathe-
+matics (STEM) fields, including geospatial science
+and AI development. This requires organizations to
+move beyond tokenistic diversity measures toward
+implementing robust, evidence-based policies that
+promote equitable hiring and promotion, ensure
+equal pay, foster genuinely inclusive and harassment-
+free work environments, and support work–life inte-
+gration
+(Bilimoria
+and
+Liang
+2012).
+The
+goal
+extends beyond mere representation; it is about
+empowering women as cocreators and critical stake-
+holders in steering GeoAI toward more equitable,
+socially just, and contextually relevant outcomes
+for all.
+Community-Driven Approaches
+To ensure GeoAI initiatives genuinely contribute
+to equitable development rather than reinforcing
+existing
+divides,
+community-driven
+approaches
+rooted in the principles of participatory GIS are
+essential (Weiner, Harris, and Craig 2002; Dunn
+2007; Huang, Wang, Lu, et al. 2024). This necessi-
+tates moving fundamentally beyond superficial con-
+sultation
+or
+extractive
+data
+collection
+toward
+processes that center community agency, knowledge,
+and decision-making power throughout the entire
+GeoAI life cycle—from problem definition and data
+generation to analysis, application design, and gover-
+nance. A primary challenge lies in navigating the
+inherent power dynamics between external experts
+(i.e., researchers, developers, and policymakers) and
+community members, as well as inequalities within
+communities themselves (Cooke and Kothari 2001).
+Without deliberate strategies to foster trust, ensure
+transparency, and actively amplify marginalized voi-
+ces, participatory processes risk becoming tokenistic
+exercises that legitimize externally driven agendas or
+are captured by local elites, failing to empower those
+most affected.
+Therefore, truly community-driven GeoAI must
+strive toward genuine coproduction, where commu-
+nity members are partners in defining research ques-
+tions, designing methodologies, interpreting results,
+and determining how technologies are deployed
+(McCall and Minang 2005; Huang 2024; Huang,
+Wang, Yang, et al. 2024). This aligns with advanc-
+ing principles of community data sovereignty, assert-
+ing
+the
+rights
+of
+communities
+to
+govern
+the
+collection, ownership, access, analysis, interpretation,
+and use of data relating to their members, lands, and
+resources. Operationalizing this involves establishing
+clear, community-defined protocols for data gover-
+nance,
+obtaining
+meaningful
+collective
+informed
+consent that addresses the complexities of AI appli-
+cations,
+ensuring
+equitable
+benefit
+sharing,
+and
+developing long-term community data stewardship
+models (Carroll et al. 2023). By embedding GeoAI
+development within frameworks of community con-
+trol and reflexive participatory practice, it becomes
+possible to harness these technologies not merely for
+efficiency but as tools for empowerment, social learn-
+ing, and advancing locally determined visions of a
+just and sustainable future.
+Conclusion
+GeoAI stands as a powerful testament to human
+ingenuity, offering unprecedented capabilities to ana-
+lyze, interpret, and potentially reshape our world.
+Yet, this very power carries profound risks. As
+explored throughout this article, the fusion of AI
+with spatial data threatens not merely to replicate,
+but to significantly deepen the digital divide, trans-
+forming it from a gap in access to a chasm in under-
+standing, capability, and ultimately, agency. The
+danger lies in creating a future where the ability to
+leverage GeoAI becomes a new form of geopolitical
+and socioeconomic power, accessible only to the
+few, leaving vast populations subject to spatial narra-
+tives and decisions crafted without their input or
+understanding.
+Bridging this emergent divide requires more than
+infrastructural investment or basic skills training. It
+demands a fundamental shift toward fostering critical
+GeoAI literacy—the capacity not just to use these
+tools, but to question their assumptions, interrogate
+GeoAI Is Widening the Digital Divide
+9
+
+===== PAGE 10 =====
+their biases, and challenge their outputs. It calls for
+intentional efforts to democratize access not only to
+technology but to the power to shape its develop-
+ment and governance. This involves cultivating
+local innovation, respecting diverse cultural and lin-
+guistic contexts, ensuring gender equity is woven
+into the fabric of the field, and embedding ethical
+considerations and community stewardship at the
+core of GeoAI deployment. The challenge tran-
+scends technical solutions; it is fundamentally about
+ensuring
+that
+these
+powerful
+technologies
+serve
+humanity equitably. The path forward necessitates
+conscious choices to prioritize justice, inclusion, and
+shared empowerment, ensuring that GeoAI becomes
+a tool for collective insight and liberation, rather
+than a force that further fractures our shared world
+along digital fault lines.
+Acknowledgments
+The author gratefully thanks the editor and the
+anonymous reviewers for their thoughtful, construc-
+tive feedback.
+Disclosure Statement
+No potential conflict of interest was reported by
+the author. The authors employed the OpenAI
+ChatGPT-4o model exclusively as a language-editing
+aide to enhance readability, grammar, and stylistic
+clarity. ChatGPT-4o was not used to create, expand,
+or alter the scientific ideas, data analyses, or conclu-
+sions presented herein, and no AI-generated text has
+been included verbatim in the manuscript.
+ORCID
+Xiao Huang
+http://orcid.org/0000-0002-4323-
+382X
+References
+Akinwale, A. A. 2010. The menace of inadequate infra-
+structure
+in
+Nigeria.
+African
+Journal
+of
+Science,
+Technology, Innovation and Development 2 (3):207–28.
+Antonio, A., and D. Tuffley. 2014. The gender digital
+divide in developing countries. Future Internet 6
+(4):673–87. doi: 10.3390/fi6040673.
+Ashraf, M. M., H. Grunfeld, and A. Quazi. 2015. Impact
+of ICT usage on indigenous peoples’ quality of life:
+Evidence
+from
+an
+Asian
+developing
+country.
+Australasian Journal of Information Systems 19:76. doi:
+10.3127/ajis.v19i0.1076.
+Belanger, F., and L. Carter. 2008. Trust and risk in e-
+government adoption. The Journal of Strategic Information
+Systems 17 (2):165–76. doi: 10.1016/j.jsis.2007.12.002.
+Bello-Orgaz, G., J. J. Jung, and D. Camacho. 2016. Social
+big data: Recent achievements and new challenges.
+An International Journal on Information Fusion 28:45–
+59. doi: 10.1016/j.inffus.2015.08.005.
+Bilimoria, D., and X. Liang. 2012. Gender equity in science
+and engineering: Advancing change in higher education.
+London and New York: Routledge.
+Bulti, D. T., and B. G. Abebe. 2020. A review of flood
+modeling methods for urban pluvial flood application.
+Modeling Earth Systems and Environment 6 (3):1293–
+1302. doi: 10.1007/s40808-020-00803-z.
+Carroll, S. R., I. Garba, O. L. Figueroa-Rodrıguez, J.
+Holbrook, R. Lovett, S. Materechera, M. Parsons, K.
+Raseroka, D. Rodriguez-Lonebear, R. Rowe, et al.
+2023. The CARE principles for indigenous data gov-
+ernance. Data Science Journal 19 (1):43.
+Cascante-Campos, A. 2022. Latin American geography
+education research trends in open access journals
+from the twenty-first century. International Research in
+Geographical and Environmental Education 31 (3):188–
+204. doi: 10.1080/10382046.2021.1961061.
+Choi, J., M. A. Dutz, and Z. Usman, eds. 2020. The future
+of work in Africa: Harnessing the potential of digital tech-
+nologies
+for
+all.
+Washington,
+DC:
+World
+Bank
+Publications.
+Cohoon, J., and W. Aspray. 2008. Lost in translation:
+Gender and high school computer science. Cambridge,
+MA: MIT Press.
+Cooke, B., and U. Kothari, eds. 2001. Participation: The
+new tyranny? London: Zed Books.
+Cullen, R. 2001. Addressing the digital divide. Online
+Information
+Review
+25
+(5):311–20.
+doi:
+10.1108/
+14684520110410517.
+De Montjoye, Y. A., C. A. Hidalgo, M. Verleysen, and
+V. D. Blondel. 2013. Unique in the crowd: The pri-
+vacy bounds of human mobility. Scientific Reports 3
+(1):1376. doi: 10.1038/srep01376.
+DiMaggio, P., and E. Hargittai. 2001. From the “digital
+divide” to “digital inequality”: Studying Internet use
+as penetration increases. Working Paper No. 15,
+Princeton University Center for Arts and Cultural
+Policy Studies, Princeton, NJ.
+Donert, K. 2005. Aspects of GIS education and geography
+in European higher education. In Higher education
+GIS in geography: A European perspective. Liverpool
+Hope University. Accessed July 9, 2025. https://www.
+researchgate.net/profile/Karl-Donert/publication/26818
+4310_Chapter_1_Aspects_of_GIS_education_and_Ge
+ography_in_European_higher_education/links/5469e0
+2c0cf2f5eb180559c5/Chapter-1-Aspects-of-GIS-educat
+ion-and-Geography-in-European-higher-education.pdf.
+Dunn, C. E. 2007. Participatory GIS—A people’s GIS?
+Progress in Human Geography 31 (5):616–37. doi: 10.
+1177/0309132507081493.
+10
+Huang
+
+===== PAGE 11 =====
+Elish, M. C. 2019. Moral crumple zones: Cautionary tales
+in
+human–robot
+interaction.
+Engaging
+Science,
+Technology, and Society. Advance online publication.
+doi: 10.17351/ests2019.260.
+Elwood, S., and A. Leszczynski. 2013. New spatial media,
+new knowledge politics. Transactions of the Institute of
+British Geographers 38 (4):544–59. doi: 10.1111/j.
+1475-5661.2012.00543.x.
+Fantin, M., and G. Girardello. 2008. Digital literacy and
+cultural mediations to the digital divide. In Digital lit-
+eracy: Tools and methodologies for information society,
+ed. P. Cesare Rivoltella, 310–40. Hershey, PA: IGI
+Global.
+Franklin, R. S., E. C. Delmelle, C. Andris, T. Cheng, S.
+Dodge, J. Franklin, A. Heppenstall, M.-P. Kwan, W.
+Li, S. McLafferty, et al. 2023. Making space in geo-
+graphical analysis. Geographical Analysis 55 (2):325–
+41. doi: 10.1111/gean.12325.
+Fuchs, C., and E. Horak. 2008. Africa and the digital
+divide. Telematics and Informatics 25 (2):99–116. doi:
+10.1016/j.tele.2006.06.004.
+Fui-Hoon Nah, F., R. Zheng, J. Cai, K. Siau, and L.
+Chen.
+2023.
+Generative
+AI
+and
+ChatGPT:
+Applications, challenges, and AI–human collabora-
+tion.
+Journal
+of
+Information
+Technology
+Case
+and
+Application Research 25 (3):277–304. doi: 10.1080/
+15228053.2023.2233814.
+Ghafoor, L., and F. Tahir. 2023. Data governance in the era
+of big data: Best practices and strategies. Manchester,
+UK: EasyChair.
+Gonzalez, A., C. Bonnin, E. O’Mahony, N. Nguyen
+Hong, and T. Nguyen Thi Minh. 2021. Challenges
+and prospects of integrating GIS education in devel-
+opment studies in a Global South context. Journal of
+Geography
+120
+(1):12–22.
+doi:
+10.1080/00221341.
+2020.1825773.
+Grunwald, S., V. Ramasundaram, G. L. Bruland, and
+D. K. Jesseman. 2007. Expanding distance education
+in the spatial sciences through virtual learning enti-
+ties
+and
+a
+virtual
+GIS
+computer
+laboratory.
+International Journal of Distance Education Technologies
+5 (1):54–69. doi: 10.4018/jdet.2007010105.
+Gupta, J., S. An, and S. Shekhar. 2023. Towards responsi-
+ble spatial data science and Geo-AI. In Proceedings of
+the
+2023
+Fifteenth
+International
+Conference
+on
+Contemporary Computing, 545–51. August 3-5, Noida,
+India.
+Halford, S., and M. Savage. 2010. Reconceptualizing digi-
+tal social inequality. Information, Communication &
+Society 13 (7):937–55. doi: 10.1080/1369118X.2010.
+499956.
+Harley, J. B. 1989. Deconstructing the map. Cartographica
+26 (2):1–20. doi: 10.3138/E635-7827-1757-9T53.
+Hu, T., S. Wang, B. She, M. Zhang, X. Huang, Y. Cui, J.
+Khuri, Y. Hu, X. Fu, X. Wang, et al. 2021. Human
+mobility
+data
+in
+the
+COVID-19
+pandemic:
+Characteristics,
+applications,
+and
+challenges.
+International Journal of Digital Earth 14 (9):1126–47. doi:
+10.1080/17538947.2021.1952324.
+Huang, X. 2024. Computational urban science needs to
+go
+beyond
+computational.
+Computational
+Urban
+Science 4 (1):1–5. doi: 10.1007/s43762-024-00130-4.
+Huang, X., J. Lu, S. Gao, S. Wang, Z. Liu, and H. Wei.
+2022. Staying at home is a privilege: Evidence from
+fine-grained
+mobile
+phone
+location
+data
+in
+the
+United
+States
+during
+the
+COVID-19
+pandemic.
+Annals of the American Association of Geographers 112
+(1):286–305. doi: 10.1080/24694452.2021.1904819.
+Huang, X., C. Wang, and Z. Li. 2018a. A near real-time
+flood-mapping approach by integrating social media
+and post-event satellite imagery. Annals of GIS 24
+(2):113–23. doi: 10.1080/19475683.2018.1450787.
+Huang, X., C. Wang, and Z. Li. 2018b. Reconstructing
+flood inundation probability by enhancing near real-
+time imagery with real-time gauges and tweets. IEEE
+Transactions on Geoscience and Remote Sensing 56
+(8):4691–4701. doi: 10.1109/TGRS.2018.2835306.
+Huang, X., S. Wang, T. Lu, Y. Liu, and L. Serrano-
+Estrada.
+2024.
+Crowdsourced
+geospatial
+data
+is
+reshaping
+urban
+sciences.
+International
+Journal
+of
+Applied
+Earth
+Observation
+and
+Geoinformation
+127:103687. doi: 10.1016/j.jag.2024.103687.
+Huang, X., S. Wang, D. Yang, T. Hu, M. Chen, M.
+Zhang, G. Zhang, F. Biljecki, T. Lu, L. Zou, et al.
+2024. Crowdsourcing geospatial data for earth and
+human observations: A review. Journal of Remote
+Sensing 4:0105. doi: 10.34133/remotesensing.0105.
+Huang, X., Y. Zhao, S. Wang, X. Li, D. Yang, Y. Feng, Y.
+Xu, L. Zhu, and B. Chen. 2022. Unfolding commu-
+nity homophily in US metropolitans via human
+mobility. Cities 129:103929. doi: 10.1016/j.cities.2022.
+103929.
+Hunsaker, A., and E. Hargittai. 2018. A review of
+Internet use among older adults. New Media & Society
+20 (10):3937–54. doi: 10.1177/1461444818787348.
+Kerski, J. J., A. Demirci, and A. J. Milson. 2013. The
+global landscape of GIS in secondary education.
+Journal of Geography 112 (6):232–47. doi: 10.1080/
+00221341.2013.801506.
+Khmelevsky, Y., L. Burge, M. Govorov, and G. Hains.
+2011. Distance learning components in CS and GIS
+courses. In Proceedings of the 16th Western Canadian
+Conference on Computing Education, 17–21. May 6–7,
+Kamloops, Canada.
+Kr€onke, M. 2020. Africa’s digital divide and the promise of e-
+learning. Accra, Ghana: Afrobarometer.
+Kumar, R. 2021. “Enemies of light”: Taliban destroying
+Afghan power, IT sector. Al Jazeera, November 4.
+https://www.aljazeera.com/news/2021/7/15/taliban-afgh
+anistan-it-electricity-power.
+Kupfer, J. A., Z. Li, H. Ning, and X. Huang. 2021. Using
+mobile
+device
+data
+to
+track the
+effects
+of
+the
+COVID-19 pandemic on spatiotemporal patterns of
+national park visitation. Sustainability 13 (16):9366.
+doi: 10.3390/su13169366.
+Lai, S. K. 2021. Creating public–private partnership of a
+real estate database through web geographic informa-
+tion
+systems.
+Journal
+of
+Urban
+Management
+10
+(4):311–13. doi: 10.1016/j.jum.2021.10.001.
+Laituri, M. 2002. Ensuring access to GIS for marginal socie-
+ties. In Community participation and geographical informa-
+tion systems, ed. W. J. Craig, T. M. Harris, and D.
+Weiner, 270–82. Boca Raton, FL: CRC Press.
+GeoAI Is Widening the Digital Divide
+11
+
+===== PAGE 12 =====
+Lee, J. 2023. Beyond geospatial inquiryHow can we inte-
+grate the latest technological advances into geography
+education? Education Sciences 13 (11):1128. doi: 10.
+3390/educsci13111128.
+Li, Z., H. Ning, F. Jing, and M. N. Lessani. 2024.
+Understanding the bias of mobile location data across
+spatial scales and over time: A comprehensive analy-
+sis of SafeGraph data in the United States. PloS ONE
+19 (1):e0294430. doi: 10.1371/journal.pone.0294430.
+Lu, J., X. Xiao, X. Huang, X. Chuai, Z. Li, H. Wei, and
+S. Wang. 2024. Big data insights into urban park use
+in the pandemic: Changes in visitation patterns and
+exacerbated social inequalities in the US. Cities
+152:105204. doi: 10.1016/j.cities.2024.105204.
+Ma, D., M. Sandberg, and B. Jiang. 2015. Characterizing
+the heterogeneity of the OpenStreetMap data and
+community.
+ISPRS
+International
+Journal
+of
+Geo-
+Information 4 (2):535–50. doi: 10.3390/ijgi4020535.
+McCall, M. K., and P. A. Minang. 2005. Assessing partic-
+ipatory GIS for community-based natural resource
+management:
+Claiming
+community
+forests
+in
+Cameroon. The Geographical Journal 171 (4):340–56.
+doi: 10.1111/j.1475-4959.2005.00173.x.
+Mehrabi, N., F. Morstatter, N. Saxena, K. Lerman, and
+A. Galstyan. 2022. A survey on bias and fairness in
+machine learning. ACM Computing Surveys 54 (6):1–
+35. doi: 10.1145/3457607.
+Morozov, E. 2013. To save everything, click here: The folly
+of technological solutionism. New York: PublicAffairs.
+Mortaheb, R., and P. Jankowski. 2023. Smart city re-
+imagined: City planning and GeoAI in the age of big
+data. Journal of Urban Management 12 (1):4–15. doi:
+10.1016/j.jum.2022.08.001.
+Mzuza,
+M. K.,
+and
+C. Van
+der
+Westhuizen.
+2020.
+Inclusion of GIS in student teacher training and its
+significance in higher education in southern African
+countries. International Research in Geographical and
+Environmental Education 29 (4):332–46. doi: 10.1080/
+10382046.2019.1684660.
+Nissenbaum, H. 2009. Privacy in context: Technology,
+policy, and the integrity of social life. In Privacy in
+context, ed. H. Nissenbaum. Redwood City, CA:
+Stanford University Press.
+O’Sullivan, D. 2006. Geographical information science:
+Critical
+GIS.
+Progress
+in
+Human
+Geography
+30
+(6):783–91. doi: 10.1177/0309132506071528.
+Osuteye, E., C. Johnson, and D. Brown. 2017. The data
+gap: An analysis of data availability on disaster losses
+in sub-Saharan African cities. International Journal of
+Disaster Risk Reduction 26:24–33. doi: 10.1016/j.ijdrr.
+2017.09.026.
+Raj, A., G. Dwivedi, A. Sharma, A. B. L. de Sousa
+Jabbour, and S. Rajak. 2020. Barriers to the adoption
+of industry 4.0 technologies in the manufacturing sec-
+tor:
+An
+inter-country
+comparative
+perspective.
+International
+Journal
+of
+Production
+Economics
+224:107546. doi: 10.1016/j.ijpe.2019.107546.
+Riedler,
+B.,
+N.
+Stephenne,
+E.
+Aguilar-Moreno,
+M.
+Jagaille,
+A.
+Monfort-Muriach,
+G.
+Fiore,
+and
+N.
+Antoniou. 2021. Towards gender equality in educa-
+tion and career in the earth observation and GI sec-
+tor. The International Archives of the Photogrammetry,
+Remote Sensing and Spatial Information Sciences XLIII-
+B5-2021:21–27. doi: 10.5194/isprs-archives-XLIII-B5-
+2021-21-2021.
+Schradie, J. 2011. The digital production gap: The digital
+divide and Web 2.0 collide. Poetics 39 (2):145–68.
+doi: 10.1016/j.poetic.2011.02.003.
+Singh, P. K. 2005. Governance issues in GIS infrastructure
+in India. International Journal of Rural Management 1
+(2):223–44. doi: 10.1177/097306800500100205.
+Song, Y., M. Kalacska, M. Gasparovic, J. Yao, and N.
+Najibi. 2023. Advances in geocomputation and geo-
+spatial artificial intelligence (GeoAI) for mapping.
+International Journal of Applied Earth Observation and
+Geoinformation 120:103300. doi: 10.1016/j.jag.2023.
+103300.
+Sumari, N. S., Z. Shao, and E. Kira. 2018. Challenges and
+opportunities for the advancement of GIS education
+in Tanzania. Journal of Education and Practice 8
+(28):67–75
+Taylor, B. J., and B. Cantwell. 2019. Unequal higher educa-
+tion:
+Wealth,
+status,
+and
+student
+opportunity.
+Piscataway, NJ: Rutgers University Press.
+Tsou, M. H., and J. Smith. 2011. Free and Open Source
+software for GIS education. White Paper. San Diego,
+CA: San Diego State University.
+Turner, W., C. Rondinini, N. Pettorelli, B. Mora, A. K.
+Leidner, Z. Szantoi, G. Buchanan, S. Dech, J. Dwyer,
+M. Herold, et al. 2015. Free and open-access satellite
+data are key to biodiversity conservation. Biological
+Conservation 182:173–76. doi: 10.1016/j.biocon.2014.
+11.048.
+Van Deursen, A., and J. Van Dijk. 2011. Internet skills
+and the digital divide. New Media & Society 13
+(6):893–911. doi: 10.1177/1461444810386774.
+Venter, I. M., and A. D. Daniels. 2020. Towards bridging
+the digital divide: The complexities of the South
+African story. In INTED2020 Proceedings, 3250–56.
+14th
+International
+Technology,
+Education
+and
+Development
+Conference,
+March
+2-4,
+Valencia,
+Spain.
+Voigt, P., and A. Von Dem Bussche. 2017. The EU gen-
+eral data protection regulation (GDPR): A practical
+guide. Cham, Switzerland: Springer International.
+Wang, S. 2010. A CyberGIS framework for the synthesis
+of
+cyberinfrastructure,
+GIS,
+and
+spatial
+analysis.
+Annals of the Association of American Geographers 100
+(3):535–57. doi: 10.1080/00045601003791243.
+Wang, S., X. Huang, P. Liu, M. Zhang, F. Biljecki, T. Hu,
+X. Fu, L. Liu, X. Liu, R. Wang, et al. 2024. Mapping
+the landscape and roadmap of geospatial artificial
+intelligence (GeoAI) in quantitative human geogra-
+phy: An extensive systematic review. International
+Journal
+of
+Applied
+Earth
+Observation
+and
+Geoinformation 128:103734. doi: 10.1016/j.jag.2024.
+103734.
+Wang, S., X. Huang, B. She, and Z. Li. 2023. Diverged
+landscape of restaurant recovery from the COVID-19
+pandemic
+in
+the
+United
+States.
+iScience
+26
+(6):106811. doi: 10.1016/j.isci.2023.106811.
+Wang, S., T. Hu, H. Xiao, Y. Li, C. Zhang, H. Ning, R.
+Zhu, Z. Li, and X. Ye. 2024. GPT, large language
+models (LLMs) and generative artificial intelligence
+12
+Huang
+
+===== PAGE 13 =====
+(GAI) models in geospatial science: A systematic
+review.
+International
+Journal
+of
+Digital
+Earth
+17
+(1):2353122. doi: 10.1080/17538947.2024.2353122.
+Weiner, D., T. M. Harris, and W. J. Craig. 2002.
+Community participation and geographic information
+systems. In Community participation and geographical
+information systems, ed. W. J. Craig, T. M. Harris, and
+D. Weiner, 3–16. Boca Raton, FL: CRC Press.
+Xia, F. F. 2022. GIS software product development chal-
+lenges in the era of cloud computing. In New thinking in
+GIScience, ed. B. Li, X. Shi, A-X. Zhu, C. Wang, and
+H. Lin, 129–42. Singapore: Springer Nature Singapore.
+XIAO
+HUANG
+is
+an
+Assistant
+Professor
+in
+the Department of Environmental Sciences at
+Emory
+University,
+Atlanta,
+GA
+30322.
+E-mail:
+xiao.huang2@emory.edu.
+His
+research
+expertise encompasses geospatial artificial intelli-
+gence (GeoAI), human–environment interaction,
+computational social sciences, urban informatics,
+and disaster management.
+GeoAI Is Widening the Digital Divide
+13

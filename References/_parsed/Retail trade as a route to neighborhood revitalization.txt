@@ -1,0 +1,2373 @@
+
+===== PAGE 1 =====
+Retail Trade as a Route to 
+Neighborhood Revitalization
+karen chapple and rick jacobus
+A
+t the end of World War II, most American neighborhoods were serviced
+by neighborhood commercial districts populated with stores selling food,
+clothing, household goods, jewelry, and other items. The strongest of these dis-
+tricts successfully competed with downtowns as locations for major department
+stores. But rapid suburbanization and the development of automobile-oriented
+shopping centers led to the decline of most of these historic commercial dis-
+tricts.1 In low-income and minority neighborhoods, the decline of neighbor-
+hood retail coincided with dramatic shifts in residential housing patterns as
+middle-income minorities and white families of all income levels moved out of
+urban neighborhoods, leaving behind increasingly concentrated poverty and
+racially segregated neighborhoods. By the 1980s, growing income inequality
+was contributing to a “spiral of decay” in which declining incomes and popula-
+tion losses led to declining retail and other neighborhood conditions, which, in
+turn, caused further outmigration.2 This was especially true in communities of
+color. While the 1990s saw the return of some more affluent and white residents
+to the inner city, neighborhood commercial strips have been slower to
+revitalize.3 By 2000, half as many central city neighborhoods had a middle-
+income profile as in 1970, suggesting that these areas epitomize national pat-
+terns of growing income inequality.4 Disinvestment has remained so pervasive
+19
+2
+We gratefully acknowledge suggestions from Karl Seidman and the excellent research
+assistance from Lauren Lambie-Hanson. Any errors are, of course, our own.
+1. Fogelson (2001).
+2. Wilson (1987).
+3. Wilson (1987).
+4. Booza, et al. (2006). 
+02-0297-9 ch02  3/31/09  4:55 PM  Page 19
+
+===== PAGE 2 =====
+that policymakers (urged on by Michael Porter) paradoxically consider these
+older neighborhoods to be “new” or “emerging” markets.
+Neighborhood commercial disinvestment stems not only from population
+shifts but also from shifting consumption patterns. Most obvious, the rise of big
+box retail, now commonly called the Wal-Martization of retail, has vastly
+increased the type and quantity of goods available to consumers, for the most
+part at lower prices. “Big box” means larger market areas and stores, but rarely
+in the traditional commercial corridor locations. The need for larger sites and
+freeway access means that this type of retail generally must locate in industrial or
+commercial areas distant from residential neighborhoods, most often requiring
+the use of an automobile. Moreover, as consumers increasingly purchase goods
+in bulk from discounters, the car has become essential to the shopping trip.
+Though the debate is ongoing about whether big box outlets cannibalize or
+complement small local stores, this overall shift in retailing has undoubtedly dis-
+couraged retailers from locating in neighborhood retail strips.5
+Across the country, local governments and community-based organizations
+are operating a wide variety of programs that seek to reverse this decline. These
+programs intervene in neighborhood retail markets by attracting new retail busi-
+nesses or supporting existing businesses, building new commercial real estate, or
+improving quality-of-life conditions that stand in the way of retail development.
+Although these programs are part of a broader attempt to revitalize disinvested
+urban neighborhoods, their proponents have generally not articulated the spe-
+cific mechanisms through which they are expected to contribute to revitaliza-
+tion. This chapter will fill that gap by describing how retail reinvestment might,
+at least in theory, lead to neighborhood revitalization. 
+Are retail strategies successful? As this chapter will show, few formal evalua-
+tions have been completed, and even those tend to measure discrete outcomes
+such as job creation rather than the contribution of programs to overall neigh-
+borhood well-being. Evaluating retail development programs is difficult, first,
+because of their small scale, and second, because of the variety of actors
+involved. Generally, retail development programs are very local efforts—
+targeting a single neighborhood or, in some cases, areas as small as one or two
+city blocks. The relative shortage of neighborhood-level capacity (including
+community-based organizations, or CBOs, and private market actors such as
+realtors and real estate developers focused on inner-city neighborhoods) makes
+it difficult to develop and sustain programs. Moreover, many revitalization
+efforts are relatively small-scale pilots implemented for limited periods of time,
+with minimal funding. Finally, different stakeholders move in and out of retail
+revitalization, depending on foundation fashions and political conditions. Alter-
+20
+Retail Trade as a Route to Neighborhood Revitalization
+5. Artz and Stone (2006); Basker (2005); Stone (1997); Civic Economics (2002).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 20
+
+===== PAGE 3 =====
+natively, the federal government, the mayor’s office, the redevelopment agency,
+intermediaries such as the Local Initiatives Support Corporation (LISC) or
+Main Street programs, merchants’ associations, local chambers of commerce,
+and local business development centers may get involved in commercial corri-
+dors in joint or separate efforts.
+The evaluations to date use anecdotal and program outcome data to show
+that these efforts do result in some increased market activity, increased sales tax
+revenue, and even an improved sense of community pride. But since very few
+studies have looked at these outcomes in the context of comparison neighbor-
+hoods, it is hard to know if the intervention, rather than other factors, caused
+the improvement. Only studies of empowerment zones tend to employ quasi-
+experimental designs with control neighborhoods.6
+Though it is possible that programs are creating overall economic growth,
+there are several plausible alternative explanations as well. First, retail develop-
+ment strategies may be causing retail activity to shift between neighborhoods:
+rather than creating net new activity, resurgence in one place means decline in
+another. Second, retail consumption may be shifting back to more traditional
+neighborhood-based patterns. Third, the return of higher-income residents to
+urban neighborhoods may be stimulating improvements in retail activity. In
+other words, just as the flight of the urban middle class caused the decline of
+retail, its return is generating a resurgence.
+If some part of this third explanation is accurate—that is, improvements in
+neighborhood retail conditions are associated with changes in the housing pref-
+erences of U.S. households and in the widespread strength of the housing mar-
+ket in the early part of this decade—an interesting chicken-and-egg question
+arises. In addition to population shifts fueling the retail sector, might improve-
+ments in neighborhood retail be stimulating residential revitalization? If so, the
+case for retail revitalization becomes much more compelling, and one key ques-
+tion becomes what kind of revitalization is occurring: an influx of upper-income
+households replacing lower-income residents, a diversification of household
+incomes, or income improvements for existing residents? 
+This chapter begins by outlining the relationship between retail and neigh-
+borhood revitalization, presenting a conceptual model of how changes in one
+shapes the other. We then examine the issue of the retail gap: although interest
+in retail revitalization is based upon a presumption that low-income neighbor-
+hoods are underserved, the evidence on this point is conflicting, and measure-
+ment is generally poor. Next, we examine three broad strategies for retail revital-
+ization: public-led retail development, private-led retail development, and
+commercial corridor revitalization. As the following section shows, each has had
+Karen Chapple and Rick Jacobus
+21
+6. See, for example, Oakley and Tsao (2006).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 21
+
+===== PAGE 4 =====
+varying effects on revitalization outcomes, from job creation to improving
+neighborhood identity. We then provide a case study of revitalization in the San
+Francisco Bay Area, analyzing the relationship between retail and neighborhood
+revitalization from 1990 to 2005 in a region with unusual increases in income
+inequality accompanied by significant revitalization. A conclusion offers
+thoughts for further research.
+How Does Neighborhood Revitalization through Retail Work?
+Proponents of retail development programs cite a wide range of sometimes con-
+flicting reasons for pursuing these strategies. These programs can raise local and
+state tax revenues, often with just minimal expenditures, since they typically use
+underutilized infrastructure. New retail projects or revitalized corridors act as
+catalysts for further public and private development. They also provide entrepre-
+neurship opportunities and create jobs for neighborhood residents.
+Successful commercial development can make low-income neighborhoods
+more attractive places to live for working families and individuals, while also
+stemming the outflow of the low-income population—thus diversifying income
+levels in communities. But making neighborhoods more desirable might also
+spur gentrification—the attraction of new middle- and upper-income residents
+into previously decaying neighborhoods, typically associated with an increase in
+property values and sometimes the displacement of lower-income households as
+well. In the following section, we first examine the debate over neighborhood
+revitalization and gentrification and then turn to the question of how retail revi-
+talization might be connected to neighborhood revitalization. 
+What Is Neighborhood Revitalization? 
+At the outset, it is important to distinguish among different forms of revitaliza-
+tion. By definition, revitalization can only take place in areas that are initially
+declining or low income. In these neighborhoods, the process of revitalization
+might lead to three different types of outcomes for residents. Some low-income
+areas might remain essentially low income but with improved access to services
+and opportunities. One example of this is the Dudley Street Neighborhood Ini-
+tiative in Boston, which seems to have stabilized and revitalized the neighbor-
+hood without a substantial influx of more affluent residents.7 Another form of
+revitalization occurs as a low-income neighborhood becomes mixed income,
+either through an influx of more affluent residents or through improvements in
+the incomes of existing residents (or both). Of particular interest are neighbor-
+hoods that gain middle-income, rather than upper-income, residents; although
+22
+Retail Trade as a Route to Neighborhood Revitalization
+7. Medoff and Sklar (1994).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 22
+
+===== PAGE 5 =====
+the majority of U.S. neighborhoods are diverse, most are losing their middle-
+income households (which is due, in part, to increasing income inequality
+nationwide).8 Research has documented how revitalization strategies from
+small-scale community interventions to physical redevelopment can benefit
+existing residents and stabilize diverse communities; however, it should be noted
+that these studies focus more on racial rather than on income diversity.9
+If the community does not remain mixed income, but continues to attract
+more affluent residents who gradually replace the existing low-income residents,
+then a third form of revitalization, gentrification, has occurred, often without
+benefit to existing residents. Though definitions of gentrification vary, these
+neighborhoods generally experience disinvestment followed by an influx of rein-
+vestment and households of higher socioeconomic status and educational
+attainment.10 Such neighborhood change transforms the “essential character and
+flavor of the neighborhood.”11
+Gentrification has been widely documented, with most commonly cited
+examples in New York, Chicago, Boston, and San Francisco.12 However, a
+debate still flourishes about the extent to which this process is accompanied by
+displacement. Particularly in the hottest real estate markets, with rising rents
+and property taxes, redevelopment of existing housing, condo conversions, or
+even outright evictions can result in displacement of existing residents. Yet, there
+is some evidence that household mobility rates are relatively lower in gentrifying
+neighborhoods (perhaps as more households choose to stay), and even those
+who dispute that finding admit that only a small share of renters move because
+of displacement.13
+If middle-income residents depart as well, then the neighborhood may well
+become bipolar, with growth in the share of both very low- and very high-income
+households.14 Public policies promoting revitalization may help set in motion
+these processes of gentrification and bipolarity. Yet, ironically, the stated intent of
+many of these policies is to facilitate the creation of mixed-income communities. 
+William Julius Wilson suggested that the income mix in a community was
+key to the life outcomes of poor residents.15 The concentration of poverty left
+poor communities without the stabilizing influence of middle-income house-
+Karen Chapple and Rick Jacobus
+23
+8. Galster and others (2005).
+9. Goodman and Monti (1999); Nyden and others (1997).
+10. Freeman (2005); Wyly and Hammel (2004).
+11. Kennedy and Leonard (2001).
+12. See Wyly and Hammel (1999).
+13. Freeman and Braconi (2004); McKinnish, Walsh, and White (2008); Newman and
+Wyly (2006). Newman and Wyly find that from 1989 to 2002, 6.6 percent to 9.9 percent of
+all local moves among renter households were due to displacement.
+14. Galster and Booza (2007).
+15. Wilson (1987).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 23
+
+===== PAGE 6 =====
+holds. A growing consensus of policymakers and academics suggests that poli-
+cies that promote the formation of more mixed-income communities will
+benefit poor families. There are essentially three ways in which the low-
+income benefit from the presence of more affluent neighbors, the first two
+generally are accepted and the third is still hotly debated. First, residents may
+gain from the better resources and services available in neighborhoods with
+more middle- and upper-income residents; second, such neighborhoods have
+better mechanisms for informal social control; and third, social interaction
+with more affluent neighbors may (but probably will not) improve access to
+opportunity.16 While debate continues about the most effective policies, fed-
+eral, state, and local programs have begun to focus on deconcentrating
+poverty by, for example, offering housing vouchers in place of public housing
+complexes, incorporating into market-rate developments low-income housing
+in scattered sites and redeveloping public housing projects to include
+moderate-income units.
+Although the term gentrification has been used positively to refer to any
+community where overall income composition changes to include more higher-
+income households, increasingly the term is used as a pejorative to refer to only
+the negative consequences of such change.17 This leaves advocates for mixed-
+income communities in a difficult bind. If any influx of higher-income house-
+holds is considered gentrification and therefore harmful to the existing commu-
+nity, any improvements to the neighborhood (including reductions in crime or
+blight or new retail development) will inevitably make the neighborhood more
+attractive to higher-income residents and result in the displacement of existing
+residents. Community leaders are left to debate whether it is possible to achieve
+any measure of development without displacement. 
+Whereas concerns about gentrification are focused more often on residential
+change than on the influx of new businesses displacing existing stores, this kind
+of commercial gentrification seems to happen as well and has consequences for
+the broader character of a neighborhood. Businesses serving higher-income cus-
+24
+Retail Trade as a Route to Neighborhood Revitalization
+16. None of the HUD mixed-income policies (Gautreaux and the other consent decrees
+to desegregate housing, Moving to Opportunity or MTO, and HOPE VI) have had a
+demonstrable positive effect on economic opportunity, as measured by employment, earn-
+ings, or income of individuals. In the Gautreaux program in Chicago, the outcome for fami-
+lies who moved to the suburbs was that there was no change in employment or wages (Rosen-
+baum and Popkin 1991). This failure is repeated for individuals in the MTO program, every
+HOPE VI study thus far completed, and even in HUD’s Welfare-to-Work Voucher Program.
+Clampet-Lundquist (2004); Goering and Feins (2003); Goetz (2002); Levy and Woolley,
+2007; Rubinowitz and Rosenbaum (2000); Turney and others (2006); Curley (2006). See
+also Emily Holt, “The Impact of Urban Neighborhood Revitalization on the Self-Sufficiency
+of Public Housing Residents” (http://hdl.handle.net/1961/4255 [2007]); Joseph (2006).
+17. Freeman (2006).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 24
+
+===== PAGE 7 =====
+tomers (either new residents or outsiders attracted into the neighborhood by
+businesses like art galleries or restaurants) may be able to pay higher rents than
+established neighborhood businesses can, which may then be pushed out to
+make way for the new businesses. This commercial transformation can itself
+play a role in the process of residential change. Lance Freeman interviewed
+lower-income residents in gentrifying neighborhoods in New York City who
+pointed to changed or increased retail activity as a key sign of neighborhood
+change.18 Some residents clearly resented the new businesses. One reported “We
+don’t eat there. I went in there for a piece of cake and it was like four bucks! I
+can get a whole cake for four bucks. Obviously they don’t want too many of us
+in there.”19 Others welcomed the same changes, even the arrival of stores that
+were clearly catering to the neighborhoods new demographic. 
+“I just like the change. . . . You know, you get to see, different people, differ-
+ent stores being opened . . . me and my kids, to up on DeKalb Avenue to
+the different restaurants. Then we went to the sushi restaurant. My son was
+like, what is this? I was like, let’s just try it, ‘cause I’ve never had it before.”20
+But Freeman found that when asked about neighborhood changes, most resi-
+dents, rather than commenting on the arrival of expensive stores or restaurants,
+mentioned instead the return of supermarkets and drug stores. One said:
+“like the new stores and shops. . . . I appreciate that. Like I know there’s a
+Pathmark [grocery store] that’s opening up on 145th and 8th Avenue.
+That’s like unheard of. I was really surprised at that, and then up the block
+it’s Duane Reade [drugstore] opening up. ‘Cause we used to have to travel
+so far just to get prescriptions filled.”21
+While Freeman cites these reactions to suggest that gentrification may offer very
+significant underappreciated benefits to lower-income residents, they also sug-
+gest that the impact on lower-income residents may not be the same for all types
+of commercial improvement. Some businesses are more likely to provide key
+services for existing residents and improved economic stability, while others may
+further marginalize the poor and undermine economic stability by fueling spec-
+ulation and displacement. A new, upscale restaurant sends a different kind of
+signal than does a new drugstore, and both are quite different from the message
+that a new art school would send. 
+Karen Chapple and Rick Jacobus
+25
+18. Freeman (2006).
+19. Freeman (2006, p.64).
+20. Freeman (2006, p. 63).
+21. Freeman (2006, p. 66).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 25
+
+===== PAGE 8 =====
+How Does Retail Revitalization Lead to Neighborhood Revitalization? 
+One of the key debates in community development concerns the relative effec-
+tiveness of place-based versus people-based strategies.22 The basic argument for
+targeting place is that since most disadvantaged groups are spatially concen-
+trated, programs (such as redevelopment or enterprise zones) to intervene in
+these neighborhoods will have the most direct impact. But since not all locals
+will benefit, and some may in fact prefer to leave the neighborhood, others
+argue that community economic development programs should target the dis-
+advantaged directly. Another critique of place-based economic revitalization
+argues that revitalization is based on a false assumption that neighborhood-level
+economic growth could have a significant impact on the well-being of low-
+income, inner-city residents; because labor markets are regional, this view sees
+the neighborhood’s increased participation in regional economic growth as key
+to any positive future for these households.23 Others reject the need to choose
+between people and place, seeing social norms and networks as the major obsta-
+cles to opportunity for low-income households, making a combination of
+people-based and place-based strategies necessary to repair inner-city norms and
+networks.24
+Policymakers typically conceptualize commercial development programs in
+terms of their impact on place, rather than on its residents. But there is also an
+argument that these programs can build connections to new social networks and
+the regional economy. Neighborhood-based development efforts may be neces-
+sary to overcome employment and investment obstacles so that neighborhood
+residents can benefit from regional economic growth.25 Likewise, commercial
+district strategies can help address inner-city poverty “by creating a stronger and
+more positive environment for residents, promoting more social interaction and
+helping to change resident self-perceptions and norms.”26
+Beyond its impact on existing residents, neighborhood retail development
+can have an impact on the residential composition of a neighborhood (positively
+or negatively) The relationship between neighborhood-level commercial mar-
+kets and residential markets in the same neighborhoods is unclear; in particular,
+no research has addressed the chicken-and-egg question of whether neighbor-
+hood residential revitalization leads to retail revitalization or vice versa. It is clear
+that demographic changes among neighborhood residents should eventually
+lead to altered retail conditions, given perfect information in the market. How-
+26
+Retail Trade as a Route to Neighborhood Revitalization
+22. For an effective reframing of the debate, see Crane and Manville (2008).
+23. See, for example, Teitz (1989).
+24. Dickens (1999) provides a useful review of this position.
+25. Dickens (1999).
+26. Seidman (2002, p. 24).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 26
+
+===== PAGE 9 =====
+ever it is also clear that the presence of retail centers or strips and the absence of
+blighted commercial properties can influence the location decisions of house-
+holds. Hedonic housing price models have shown that amenities play an impor-
+tant role in residential location, and the literature on the back-to-the-city move-
+ment also suggests that easy access to time-saving household services and retail
+has led residents to value inner-city locations.27 In this way, new commercial
+development can have an impact on the residential market. 
+In addition to the direct impact that the presence or absence of stores has on
+potential neighborhood residents, retail has an indirect impact on the overall
+perception of a neighborhood. Retail strips, commercial corridors, and neigh-
+borhood shopping centers serve as a kind of “front door” to any community. On
+the one hand, if the strip is run down and partially abandoned, it sends a nega-
+tive signal about the quality of the whole neighborhood. If, on the other hand,
+the neirhborhood commercial district is improving, people are likely to see this
+as a strong sign that the whole neighborhood is improving. In this sense, neigh-
+borhood retail serves to signal the market about the direction and specific type
+of change in a community. This signal then affects the location choices of
+potential neighborhood residents and ultimately the overall composition of the
+neighborhood.
+Figure 2-1 summarizes the various indicators used to measure retail revitaliza-
+tion, the outcomes associated with neighborhood revitalization, and the rela-
+tionship between the two. With the exception of improvements to individual
+well-being such as gaining employment and better health, most of these revital-
+ization measures are mutually reinforcing: for instance, declining retail vacancy
+rates can transform neighborhood identity, but also, transformed neighborhood
+identity (due to new residents) can result in declining vacancy rates.
+The Retail Gap: Myths and Realities
+Porter’s article “Competitive Advantage of Inner Cities” brought wider attention
+to the economic potential of inner cities. Among the competitive advantages he
+identified was the relatively untapped local market demand of inner-city resi-
+dents. Yet, as this section describes, there is still considerable debate over
+whether this gap exists and whether it is being measured accurately, as well as
+whether inner cities present significant barriers to retail development.28
+Karen Chapple and Rick Jacobus
+27
+27. Artz and Stone (2006); Basker (2005); Stone (1997); Civic Economics (2002); Birch
+(2005); Smith (1996).
+28. Porter (1995).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 27
+
+===== PAGE 10 =====
+Are Low-Income Urban Neighborhoods Underserved?
+Porter noted that in inner-city Boston “spending power per acre is comparable
+with the rest of the city despite a 21 percent lower average household income,”
+which is due to higher average housing densities in the inner city.29 And yet, as
+Porter and others noted, retail sales in inner-city areas fall far below the level of
+local demand. Porter called for a new era of market-led, inner-city economic
+development in which self-interested businesses would step in to take advantage
+of this real market opportunity. Porter’s Initiative for a Competitive Inner City
+estimates that inner cities represent a $122 billion retail market, and it finds that
+inner-city residents are making one-third of their retail purchases (totalling $40
+billion) outside of inner-city areas.30 A Chicago study confirmed this, finding
+that its neighborhoods experienced an average leakage of 37 percent of retail
+spending, with individual low-income areas leaking between 60 and 70
+percent.31
+How has the retail industry missed this dramatic economic opportunity? In a
+2004 survey, 88 percent of retail industry professionals indicated that “insuffi-
+cient concentration of your target population” was a significant barrier to devel-
+opment of new retail in inner-city areas.32 While low-income households do,
+28
+Retail Trade as a Route to Neighborhood Revitalization
+29. Porter (1995).
+30. Coyle (2007).
+31. Weissbourd and Berry (1999).
+32. International Council of Shopping Centers (2004).
+Retail revitalization indicators
+Neighborhood revitalization outcomes 
+Declining vacancy rates
+Transformed neighborhood identity
+Increase in property values
+New investment catalyzed
+Increase in sales revenues
+Higher tax revenues, new businesses
+Increase in street activity
+Less crime
+Increase in social interaction 
+  and networks
+Mainstream social norms, access 
+  to jobs 
+Altered social norms
+Attraction  of higher-income residents
+Improved access to goods
+  and services
+Improved health
+New jobs
+Lower unemployment rates
+Figure 2-1. Synergistic Relationship between Retail and Neighborhood
+Revitalization
+Source: Authors’ analysis.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 28
+
+===== PAGE 11 =====
+obviously, have less spending power, the retail industry may be overlooking
+much of the real economic potential of lower-income neighborhoods. Problems
+with data collection and common methods of analysis may ultimately prove to
+be a bigger barrier to inner-city development than an actual lack of spending
+power on the part of low-income residents. The market power of low-income
+neighborhoods is notoriously hard to evaluate for three reasons: First, the census
+fails to count many households, especially low-income and immigrant house-
+holds. As much as 6 percent of the population was not counted in some neigh-
+borhoods in Los Angeles.33 Second, many lower-income households receive sig-
+nificant income that is not reported in government data. While some of this
+income comes from illegal activity, most is probably from legal but informal
+activity like childcare. One study showed that families with reported incomes of
+less than $10,000 per year reported spending over $25,000 on goods and serv-
+ices.34 Third, because most market data are based on the decennial census, eco-
+nomic forecasts often fail to reflect more recent changes in a neighborhood’s
+character. A comparison of projections by market research firms for Milwaukee
+neighborhoods for 1999 (projected forward from the 1990 census) with the
+actual 2000 census numbers found significant discrepancies, particularly in low-
+income neighborhoods.35 Several neighborhoods were shown as having rapidly
+declining populations, but they turned out to be experiencing steady growth. 
+Even if the underlying data were fully accurate, many urban neighborhoods
+might be disadvantaged by the traditional reliance by market researchers on
+indicators of economic potential that fail to account for the real economic
+power of urban neighborhoods. Much of the retail industry, accustomed to sub-
+urban locations, has focused on neighborhood median income rather than aggre-
+gate income as a simple metric for comparing potential locations.36 Retailers
+hoping to serve middle-income consumers may overlook real concentrations of
+these households by focusing on the percentage of an area that is middle class
+rather than on the total number of middle-class households (which may be
+higher in a dense area with a low middle-class percentage than in a lower density
+but predominantly middle-class area).37 Similarly, widely used “lifestyle segmen-
+tation” systems such as Tapestry and PRIZM offer a shortcut for retailers hoping
+to quickly understand the demographics of a given area, but often these systems
+present lower-income consumers in inaccurate, biased, and dismissive terms.38
+Karen Chapple and Rick Jacobus
+29
+33. Ong and Houston (2002). 
+34. Weissbourd and Berry (1999).
+35. Pawasarat and Quinn (2001).
+36. Porter (1995); Weissbourd and Berry (1999); HUD (1999).
+37. International Council of Shopping Centers (2004).
+38. These systems, and others like them, group an area’s diverse population into relatively
+homogeneous segments on the basis of demographic traits, such as race, gender, and income,
+02-0297-9 ch02  3/31/09  4:55 PM  Page 29
+
+===== PAGE 12 =====
+Although much of the discussion of Porter’s inner-city work has accepted the
+premise that inner-city neighborhoods are underserved, others question that
+assertion.39 One study of retail location patterns in Chicago found that poor
+areas are in fact home to fewer retail establishments (especially drug stores,
+supermarkets, and banks), but when controlling for lower aggregate spending
+power, poor areas have just as many stores per million dollars of spending power
+as other parts of town. Thus, in spite of a growing concern that low-income
+neighborhoods are underserved by supermarkets, these areas generally have the
+number and size of supermarkets that their spending power alone would indi-
+cate that they could support. However, beyond supermarkets and banks, there
+are significant differences, including shortages (relative to spending power) of
+large-format drug stores, clothing stores, and restaurants, as well as fewer large
+stores in general. The authors conclude that this difference in retail structure is
+evidence that “retailers and service providers are underserving poor areas and are
+not responding to profit opportunities” but also that the situation is “not as
+bleak as many would paint it.”40
+In spite of the recent emphasis on better documentation of the untapped
+spending power of inner-city neighborhoods, there is some evidence that the
+importance of consumer demand in predicting retail locations may be over-
+stated. Theodore Koebel studied the change in the number of neighborhood-
+serving retail and service firms reported by the Census Bureau’s Zip Code Busi-
+ness Patterns file for six cities between 1981 and 1995.41 Selecting a subset of
+retail and service firms (using Standard Industial Classification, SIC, codes) that
+were thought to primarily serve neighborhood markets rather than regional con-
+sumer markets, he compared the growth (or decline) in the number of firms by
+zip code with a very wide range of neighborhood characteristic variables and
+found little correlation. Koebel’s findings are consistent with other results in
+suggesting that noneconomic factors including racial discrimination contribute
+more to changes in neighborhood commerce than do economic factors like pop-
+ulation and income growth.42 Some of Koebel’s neighborhoods saw rising num-
+bers of retail firms in spite of falling populations or falling incomes, while others
+experienced drops in the number of retail firms in spite of rising incomes. 
+There is also some debate about whether the fact that at least one-third of the
+retail spending of lower-income communities is leaking out of these neighbor-
+30
+Retail Trade as a Route to Neighborhood Revitalization
+and attribute similar consumer preferences, hobbies, and other lifestyle traits to members of
+these segments. See Pawasarat and Quinn (2001).
+39. Alwitt and Donley (1997).
+40. Alwitt and Donley (1997).
+41. Koebel (2002).
+42. Immergluck (1999).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 30
+
+===== PAGE 13 =====
+hoods should be seen as cause for concern at all. Every residential neighborhood
+must experience significant leakage, and there has been little analysis of how
+much leakage is normal. Because of the shift in preferences to large discount
+stores, low-income consumers may not be underserved at all; instead, shoppers
+of all income levels are simply driving to large-format stores outside of residen-
+tial neighborhoods. However, as Kelly Clifton notes, these alternatives may not
+serve the poor well because they are not only price-sensitive but also time-
+sensitive; with a combination of income, time, and mobility constraints, low-
+income groups may not be able to patronize stores as regularly as more affluent
+clientele.43
+Moreover, the retail structure of low-income communities may have public
+health consequences. Although it is debatable whether these neighborhoods
+have more or less retail than they can economically support, many community
+advocates and researchers point to health problems associated with poor access
+to fresh food as a sign that more grocery stores are needed. Many studies docu-
+ment the lack of large supermarkets in low-income neighborhoods and the asso-
+ciated health challenges.44 However, recent research on “food deserts” in disad-
+vantaged neighborhoods has found that smaller grocery stores, many with
+decent produce and prices, may substitute for supermarkets.45 A recent study
+found that Latino consumers in particular were effectively meeting their fresh
+food needs through small (under 3,000 square feet) full-service stores, but that
+even in mixed-race neighborhoods with an adequate supply of these small
+stores, African American households were not being served adequately.46 Cul-
+tural differences in the patterns of consumer demand and store-type preferences
+are an overlooked aspect of the “food deserts” problem. 
+Ultimately, consumers themselves may be the best judges of whether their
+neighborhoods are underserved. The Boston Consulting Group’s study of retail
+opportunities in the inner city, for example, documents the dissatisfaction of
+many residents of low-income neighborhoods with the local retail offerings in
+terms of price, quality, and selection.47 In such a context, it is not surprising that
+Freeman found that some residents perceived gentrification positively.48
+Karen Chapple and Rick Jacobus
+31
+43. Clifton (2003, 2004).
+44. Chung and Myers (1999); Mari Gallaghar Research and Consulting (2006); Moore
+and Diez Roux (2006).
+45. Short, Guthman, and Raskin (2007); Raja, Ma, and Yadav (2008).
+46. Short, Guthman, and Raskin (2007).
+47. Boston Consulting Group (1988). 
+48. Freeman (2006).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 31
+
+===== PAGE 14 =====
+Barriers to Retail Development
+If inner-city neighborhoods are underserved, and real market opportunities
+exist, why are retailers slow to return to these areas? Unmet social needs or even
+untapped spending power alone are unlikely to motivate firms to open stores.
+The location preferences of any given retailer will be influenced by a large list of
+factors, some quite technical, beyond spending power, including 
+—traffic patterns;
+—the availability of suitable sites in terms of size, freeway access, and other
+factors;
+—the presence of compatible cotenants in a shopping center or commercial
+district;
+—the perception of crime;
+—the cost of development or occupancy of retail space; 
+—likely preferences of the local consumers for the given retailer’s brand or
+products.
+Many retailers have designed their store formats, their product selection and
+pricing, and their overall brand identity specifically to appeal to suburban
+middle-class customers. Capturing the untapped inner-city market will often
+require changes to the retailer’s format or operating practices to meet the needs
+of consumers with different preferences and needs. In addition, low-income
+urban neighborhoods suffer from a number of unique challenges that make
+retail development more difficult even for those businesses that understand the
+market, in particular, the challenges and costs associated with developing large
+retail projects in the inner city; quality of life issues, particularly crime; and poor
+management.
+Development Challenges
+One commonly cited challenge for urban retail development is the relative lack
+of large development sites. Most urban residential neighborhoods are made up
+of many smaller lots, but current retail development patterns demand the large
+sites that are much more common in suburban areas. The need expressed by
+many retailers for large parking lots greatly exacerbates the challenge of finding
+suitable sites. Even when assembling multiple lots into a single site is possible,
+the process can add significantly to the overall cost of urban projects. Whereas
+there has been some progress in convincing retailers to experiment with new
+store formats that better fit into the existing urban fabric, retailers and many
+consumers continue to express strong preferences for larger-format retail.49
+32
+Retail Trade as a Route to Neighborhood Revitalization
+49. International Council of Shopping Centers (2004).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 32
+
+===== PAGE 15 =====
+A study of the challenges faced by nineteen shopping center development
+projects found that the most common challenges faced by the sponsoring com-
+munity development corporation (CDC) were issues related to identifying
+appropriate sites for new shopping centers and assembling multiple smaller
+parcels for larger-scale development.50 The New Community Corporation in
+Newark had to take absentee property owners to court to force the sale of
+parcels that were key to the development of its center, while the Community
+Development Corporation of Kansas City had to defeat plans to build a mini-
+mum security prison before it could proceed with development of a shopping
+center on a key parcel in its neighborhood. 
+Further, developers report that retail projects in urban neighborhoods are sig-
+nificantly more expensive to develop because of higher land costs, greater likeli-
+hood of environmental contamination, more frequent community opposition,
+more complex planning and zoning regulations, and higher wages.51
+Crime and Cleanliness
+A 2004 survey of retail professionals found widespread agreement within the
+industry regarding the most significant barriers to new retail development in
+underserved markets.52 The most commonly identified barrier, cited by 93 per-
+cent of respondents, was crime and the perception of crime. High crime rates
+impact business operating costs through the direct cost of theft and the higher
+associated security costs; but perhaps more important, high crime makes it
+harder to attract customers. And even areas with relatively modest actual crime
+rates often suffer from a misperception that they are high crime areas. Retailers
+recognize that even when they are wrong, these perceptions affect shopping
+behavior. 
+The “broken windows” theory suggested that people’s sense of safety is not so
+directly connected to the crime rate as it is to the overall level of public order.53
+Factors such as the cleanliness of streets and sidewalks, the condition of public
+infrastructure, the presence or absence of graffiti, and dozens of other small fac-
+tors may have a large influence over which retail locations consumers choose.
+Whether or not they suffer from high crime rates, urban neighborhods often
+suffer from lack of investment in the streetscape, buildings, and other physical
+infrastructure and insufficient maintenance and cleanliness efforts. Overcoming
+these conditions may, in some cases, be more difficult than reducing the crime
+Karen Chapple and Rick Jacobus
+33
+50. Abell (2002). 
+51. International Council of Shopping Centers (2004).
+52. International Council of Shopping Centers (2004).
+53. Wilson and Kelling (1982).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 33
+
+===== PAGE 16 =====
+rate because they require changing the behavior of many public and private
+actors and changing social norms on the street.54
+Management Factors
+Management issues, from poor skills to other complications, also create barriers
+to retail development. Many of the retail businesses serving low-income com-
+munities suffer from a lack of management capacity and difficulties accessing
+financing and supplier networks.55 Immigrant and low-income entrepreneurs
+are less likely to succeed in part because they have lower levels of education and
+prior business experience, as well as less capital to invest in the business.56
+Retailers also point to higher than average operating costs for inner-city
+stores due to factors such as higher tax rates, higher insurance costs, greater
+security costs, and losses due to theft.57 Higher average operating costs mean
+that many types of inner-city stores must rely on a greater than average sales vol-
+ume to be profitable. As a result, inner-city commercial strips generally offer a
+limited variety of stores frequently offering lower-quality goods, less customer
+service, and higher prices—and they are less likely to survive.58
+Strategies to Promote Neighborhood Retail Development
+Local governments and community-based organizations that want to strengthen
+neighborhood retail markets undertake a wide range of strategies These include
+commercial real estate development projects supported by the public sector
+through direct financing or various tax incentives, market-led development
+strategies that rely on market research and promotion to attract new retailers to
+underserved areas, and coordinated commercial revitalization programs that
+combine business attraction with softer activities such as safety and cleanliness
+efforts, consumer marketing, business assistance, and smaller-scale improve-
+ments to the physical infrastructure.
+Public-Led Commercial Development 
+The most direct intervention in neighborhood retail markets is simply to
+develop new commercial real estate projects. Retail development projects range
+from supermarket-anchored neighborhood shopping centers to smaller-scale
+“infill” retail development including ground-floor retail space developed in
+34
+Retail Trade as a Route to Neighborhood Revitalization
+54. Hoyt (2005).
+55. Rauch (1996).
+56. Bates (1997).
+57. Initiative for a Competitive Inner City (2002).
+58. Loukaitou-Sideris (2000).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 34
+
+===== PAGE 17 =====
+mixed-use projects with housing above. A recent trend has been transit-oriented
+development projects that combine higher-density housing and retail around
+transit stations. These projects are frequently referred to as “catalysts” of further
+neighborhood development, with the expectation being that public investment
+in one or more key initial projects will lead to greatly increased private (unsubsi-
+dized) development activity. There is often an unstated expectation that these
+projects will generate jobs for neighborhood residents, offer key services to resi-
+dents, and improve neighborhood safety and contribute to other quality-of-life
+factors. 
+Local governments frequently provide grants, subsidized loans, or tax or reg-
+ulatory incentives to encourage development of new commercial real estate proj-
+ects by private or nonprofit developers. A recent survey of planners working for
+thirty-two local government agencies in major U.S. cities asked about efforts to
+attract retail (especially supermarkets) to inner-city neighborhoods.59 Thirteen
+of these cities offered some kind of financial incentives to supermarket develop-
+ers; ten offered fast-track permitting, fee waivers, or parking or public safety
+assistance; and seven conducted or paid for market studies to help attract retail-
+ers to target sites. Another key form of local government assistance for commer-
+cial development is site assembly. A number of public agencies have undertaken
+the complex task of assembling several smaller parcels into a large enough site to
+attract outside retail developers into urban neighborhoods. This approach
+reduces the risk and the cost that the shopping center developer would other-
+wise face alone.60
+Often local governments turn to CDCs to manage the development of
+neighborhood shopping centers or other retail projects designed to respond to
+unmet retail demand and catalyze neighborhood revitalization.61 Several studies
+of CDC development have attempted to gauge the extent of this type of com-
+mercial development, with the most recent finding that 62 percent of CDCs
+were engaged in commercial real estate activity.62
+Historically local governments relied on urban development action grants to
+fund commercial development, but since that program was terminated, they
+have used a variety of local and federal sources to fund these projects.63 In 2002
+an Urban Institute study found that local governments used Department of
+Housing and Urban Development (HUD) block grant funds to make or guar-
+Karen Chapple and Rick Jacobus
+35
+59. Pothukuchi (2005).
+60. Abell (2002).
+61. Abell (1998).
+62. Gross (2005). Servon and Melendez (2006) found that 46 percent of CDCs were
+involved in commercial real estate development, while 72 percent conducted commercial
+rehab activity.
+63. Abell (2002). 
+02-0297-9 ch02  3/31/09  4:55 PM  Page 35
+
+===== PAGE 18 =====
+antee $2.2 billion in loans to private businesses during the second half of the
+1990s. The majority of this loan volume was made through the Section 108
+loan guarantee program, which allows local governments to provide 100 percent
+loan guarantees for economic development projects with any future loan losses
+repaid from the community’s annual Community Development Block Grant
+(CDBG) funds. Local governments frequently use Section 108 loans to facilitate
+larger business development or commercial real estate development projects. Of
+the Section 108 loans, 18 percent went to retail businesses and 32 percent to
+service businesses.64 Many projects also benefit from tax incentives of some
+kind.
+Redevelopment and tax increment financing. Redevelopment typically occurs
+through tax increment financing (TIF), which spread across the country in the
+wake of the urban fiscal crises of the 1970s, and is now utilized in forty-nine
+states and the District of Columbia. TIF allows redevelopment agencies to use
+the projected additional property taxes to be generated by redevelopment to
+finance certain development costs within a designated district. Cost-benefit
+analyses generally find positive results for TIF, with its primary benefit being its
+ability to finance infrastructure development.65
+EZ-EC programs. Federal and state enterprise zones (EZ) and empowerment
+communities (EC) generally provide a set of tax incentives to encourage busi-
+nesses to locate in targeted disinvested areas and hire local residents. While these
+programs generally do not focus primarily on retail businesses, many include
+retail development as one of several goals. Overall the impact of these programs
+has been mixed at best with several studies demonstrating that the designated
+EZ-EC zones did not experience greater reduction in unemployment, more job
+creation or business growth, or a greater reduction in poverty than that experi-
+enced by comparison areas.66 When enterprise zones are successful, they are typ-
+ically located in neighborhoods that are still economically viable and have a sub-
+stantial manufacturing component.67
+Historic Preservation Tax Credits. Enacted in 1976, the federal Historic Preser-
+vation Tax Incentives program offers a 20 percent tax credit for private investors
+rehabbing historic properties. Many states have enacted their own tax credit
+program to supplement the federal incentive. The literature suggests that these
+credits (and historic preservation in general) have a strong positive impact and
+multiplier effect, but measurement of that is complicated.68
+36
+Retail Trade as a Route to Neighborhood Revitalization
+64. Walker and others (2002).
+65. Johnson and Man (2001).
+66. Oakley and Tsao (2006); GAO (2006); Rich and Stoker (2007); Eisinger (1988).
+67. Wilder and Rubin (1988), Dowall and others (1994).
+68. For a review, see Mason (2005).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 36
+
+===== PAGE 19 =====
+New Markets Tax Credits. More recently the New Markets Tax Credit
+(NMTC) program has used tax policy to provide federal subsidies to induce pri-
+vate investment in targeted low-income areas. However, unlike the EZ-EC
+incentives that generally benefit employers, the NMTC credits are given to
+investors in qualified businesses. The result may be a closer correspondence
+between federal subsidy and private market activity—in other words, more of a
+market-led approach. By the beginning of 2007, the NMTC program had led
+to the investment of about $5.3 billion.69 Although the tax credits can be used
+to fund business loans, industrial facilities, and many other eligible uses, the
+majority of this investment to date seems to have been directed toward commer-
+cial real estate projects, especially those in retail.70 While it is too soon to gauge
+the economic impact of this investment in urban communities, the Govern-
+ment Accountability Office’s (GAO) initial report on the program suggests that,
+at a minimum, the program is spurring new investment and shifting resources
+away from less needy areas.71 Yet, there may be a mismatch between lengthy
+development processes and the relatively quick turnaround required for NMTC
+projects. As a result, this funding may go to projects already in the pipeline
+rather than to projects that would not have happened but for the funding. The
+Department of the Treasury is tracking direct impacts such as the volume and
+type of investment, but Treasury is also interested in indirect neighborhood
+impacts such as increases in employment, increases in property values, and
+access to needed services.
+Market-Led Business Attraction
+Porter lamented the slow progress of publicly led retail development and called
+on local government to “shift its focus from direct involvement and intervention
+to creating a favorable environment for business.”72 Porter’s work contributed to
+a growing sense that government subsidies might be part of the problem and
+that more commercial development might result if the neighborhoods were pro-
+moted on the basis of their assets rather than their liabilities. Expanding on
+Porter’s work, researchers began documenting the dramatic market opportuni-
+ties that were being overlooked by retailers.73 The potential of this new approach
+was seen as so significant that two separate organizations were launched to focus
+primarily on developing new tools to help retailers identify market opportuni-
+Karen Chapple and Rick Jacobus
+37
+69. GAO (2007).
+70. New Markets Tax Credit, “New Markets Tax Credits Progress Report 2007”
+(www..newmarketstaxcreditcoalition.org/reportsETC/newfiles/2007%20NMTC%20Pro-
+gres%20Report%20-%20Final.pdf [2007]). 
+71. GAO (2007).
+72. Porter (1995).
+73. Weissbourd and Berry (1999); HUD (1999).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 37
+
+===== PAGE 20 =====
+ties in underserved inner cities. MetroEdge, founded as a subsidiary of Shore-
+bank and later sold to the Local Initiatives Support Corporation, focused on
+developing new metrics that would represent the real spending power in urban
+neighborhoods more accurately. For example, when traditional market analysis
+focused on the median income, MetroEdge encouraged retailers to look instead
+at total spending per square mile. The other firm, Social Compact, developed
+new tools for identifying undocumented spending resulting from inaccurate
+government statistics or informal economic activity. The unstated assumption
+behind these two programs seems to be that better information about the real
+market opportunities in underserved neighborhoods will encourage developers
+to build new projects and retailers to open new stores for reasons of their own
+self-interest. These new projects and stores would then be expected to have the
+same kinds of community impacts as the government-led commercial real estate
+projects. But where government-subsidized projects might reinforce the idea
+that a neighborhood is not ready for private investment, market-led develop-
+ment projects might be more likely to catalyze further private investment
+because they would signal to other developers and retailers that these markets
+could be profitable on their own. 
+Over the past decade, MetroEdge and Social Compact, together with Porter’s
+own Initiative for a Competitive Inner City (ICIC), have produced a steady
+stream of reports that have called attention to the spending power of inner-city
+neighborhoods in one city after another. The reports regularly receive media
+attention and renewed calls for retailers to take a closer look at the business
+opportunities in these areas. While this market-led approach has successfully
+realigned the philanthropic, and to a lesser extent municipal, strategy toward
+these neighborhoods, it has yet to affect retailer behavior dramatically. A 2006
+study by ICIC found that the gap between retail supply and retail demand in
+inner-city neighborhoods in 100 of the largest U.S. cities has “remained approx-
+imately the same for the past decade.”74 However, ICIC found dramatic differ-
+ences between cities, with some experiencing 30 to 50 percent growth in retail
+jobs in inner-city neighborhoods during the decade while others experienced
+comparable declines. ICIC attributes this difference in part to the fact that “sev-
+eral cities with aggressive entrepreneurial mayors developed strategies for attract-
+ing retail establishments” and concludes that “national retailers, impressed with
+market data and the absence of competition, moved more confidently to open
+branches in select cities.”75
+38
+Retail Trade as a Route to Neighborhood Revitalization
+74. Coyle (2007, p. 1).
+75. Coyle (2007, p. 9). However, a brief review of the websites of Social Compact,
+MetroEdge, and ICIC indicates that, of the cities that have been the focus of inner-city market
+research, just as many fall into the group that Coyle identified as experiencing retail declines. 
+02-0297-9 ch02  3/31/09  4:55 PM  Page 38
+
+===== PAGE 21 =====
+The city of Indianapolis developed a “minimalist” program that followed
+Porter’s approach by identifying sites for retail development, researching
+untapped spending power, and organizing local public and private sector actors
+to promote these opportunities. A study suggests that the effort would have
+been more likely to succeed if the city had identified public sector resources to
+help offset some of the increased cost of inner-city locations.76 Several commu-
+nities have developed more intensive programs to coordinate outreach to retail-
+ers in an effort to bring new stores into existing or planned private develop-
+ments in target neighborhoods.77 These programs are frequently developed
+alongside programs to support commercial real estate development. Retail
+Chicago is perhaps the premier example of this type of program. Staff of Retail
+Chicago serve as a one-stop resource for retailers interested in locating in
+Chicago’s disinvested neighborhoods. The agency contracts with LISC
+MetroEdge to compile market data about the target neighborhoods, maintains a
+list of opportunity sites, organizes annual retailer tours, and markets inner-city
+retail opportunities through national and regional retail trade conventions. The
+program also coordinates a suite of city incentives and support programs
+designed to reduce the cost of opening new stores in the targeted neighbor-
+hoods. Other cities that have used retail attraction successfully are Rochester,
+New York, and Dallas.78
+One assumption underlying this approach is that inner-city markets are
+growing. And in fact, a growing literature demonstrates how an influx of immi-
+grants can revitalize retail, by providing both new entrepreneurs and markets.79
+However, while ICIC found that most of the inner-city areas that experienced
+retail growth also experienced population growth and increased household den-
+sity, it identified a few cities with declining inner-city populations that nonethe-
+less managed net growth in inner-city retail jobs. Deirdre Coyle points to
+Columbus, Ohio, and its “aggressive initiative to build a retail destination and
+attract retailers” as accounting for that city’s retail growth in the face of declining
+inner-city population.80 However, she notes that rather than simply promoting
+the untapped market potential to retailers and developers, as many cities do,
+Columbus also committed to locating a government building at the site, assem-
+bled parcels, offered financing for the developers, and streamlined permitting.
+The result was that between 1995 and 2003 Columbus’s inner-city areas experi-
+enced an 8 percent increase in retail sales and a 14 percent increase in retail sec-
+Karen Chapple and Rick Jacobus
+39
+76. Nunn (2001).
+77. Including Indianapolis under a subsequent administration (see www.focusindy.com).
+78. Pothukuchi (2005).
+79. Ball (2002); Min and Bozorgmehr (2000).
+80. Coyle (2007).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 39
+
+===== PAGE 22 =====
+tor employment in spite of a 3 percent drop in population. This may indicate
+that market-led business attraction works best when accompanied by either
+strong population growth (often led by immigrants) or very significant public
+sector investment. 
+Commercial District Revitalization Programs 
+Comprehensive efforts to improve the strength of existing commercial districts
+have become increasingly popular. Either together with or instead of building
+new shopping centers, these programs attempt to revive the historical pattern of
+neighborhood-serving retail—generally small-format retail arranged along
+major arterials and accessed on foot with adjacent on-street parking or district-
+oriented public parking lots. A large number of these programs are organized
+according to the National Trust for Historic Preservation’s Main Street model.81
+The Main Street model involves committees of local merchants, residents, prop-
+erty owners, and other stakeholders undertaking a long-term, coordinated strat-
+egy for district revitalization including design, promotions, economic restruc-
+turing, and organizing. There are currently more than 1,200 active Main Street
+programs across the country. Although the vast majority of these programs focus
+on downtowns of smaller cities, a growing minority of Main Street programs are
+focused on revitalization of urban neighborhoods. An evaluation of seven Main
+Street programs found that the successful programs had adapted the traditional
+model to the local context; of interest, it found that a program was most effec-
+tive when the local government played a proactive role and also provided finan-
+cial support for large-scale infrastructure or development projects.82
+Many, but not all, Business Improvement Districts (BIDs) operate similarly
+comprehensive programs. BIDs are special tax assessment districts that are
+formed to provide special services to targeted districts. The property owners (or
+sometimes the businesses themselves) pay the special assessment and have the
+right to participate in governance of the BID, which then generally uses the
+funds to pay for additional public safety, cleanliness, or promotional services
+that benefit the entire district. BIDs are still rare in underserved urban neigh-
+borhoods but are becoming more common. In general, although BIDs are con-
+sidered effective, studies have not focused on BIDs in low-income areas.83 One
+exception is a study of New York’s forty-one Business Improvement Districts, of
+which ten serve predominantly low-income neighborhoods.84 These BIDS,
+however, tended to be less well funded and offered significantly less comprehen-
+40
+Retail Trade as a Route to Neighborhood Revitalization
+81. Seidman (2004).
+82. Seidman (2003).
+83. Houstoun (2004); Mitchell (2003).
+84. Gross (2005).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 40
+
+===== PAGE 23 =====
+sive services, with most focusing exclusively on district upkeep and maintenance
+rather than on the promotion and capital improvement activities common in
+higher-income BIDs. 
+A number of CDCs have undertaken comprehensive commercial district
+revitalization programs as well. Some of these CDC programs follow the Main
+Street model, while others are organized as BIDs, but many are less formally
+structured. LISC has supported several dozen CDC commercial revitalization
+programs throughout the country.85 Whether or not they are formally recog-
+nized as Main Street programs, CDC revitalization programs tend to be more
+focused on crime and safety and to use commercial real estate development as a
+key strategy than non-CDC programs.86
+The specific activities undertaken by any individual BID, Main Street Pro-
+gram, or CDC-led revitalization program will depend largely on local circum-
+stances and priorities. Commercial revitalization programs frequently make
+improvements like new street lighting, benches, trash receptacles, bicycle racks,
+sidewalks, curbing, street trees, bus shelters, entryways, signage, banners,
+murals, and pedestrian signage. These programs also undertake efforts to
+improve code enforcement against property owners with blighted properties, to
+remove grafitti in a timely manner, and to increase neighborhood greenspace.
+Some programs offer façade improvement loans or grants to merchants or prop-
+erty owners to make physical improvements to the exterior of their street-front
+retail spaces. These programs frequently require some level of matching financial
+commitment from the merchant or property owner. Less common, some com-
+munities operate tenant improvement loan or grant programs that help finance
+the cost of custom build-outs of retail space in targeted revitalization areas. 
+Crime is a major barrier to retail success in inner-city locations, and commer-
+cial revitalization programs frequently invest significant resources to reduce the
+level of crime and, just as important, to change the perception of safety on the
+part of customers and merchants by taking actions such as hiring private secu-
+rity firms or safety ambassadors to patrol the sidewalks, removing payphones
+used in drug trade, installing security cameras, organizing merchants, and
+implementing principles of “defensible space.”87 Lorlene Hoyt argues that in
+addition to direct safety activities like these, investments such as streetscape
+improvements, façade improvements, and increased street cleaning also have a
+direct impact on crime rates.88
+Karen Chapple and Rick Jacobus
+41
+85. Carlson (2003).
+86. Carlson (2003).
+87. International Council of Shopping Centers (2004); Houstoun (2004); Stokes (2007);
+Carlson (2003); Seidman (2004).
+88. Hoyt (2005).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 41
+
+===== PAGE 24 =====
+Many revitalization programs also organize promotional activities intended
+to change consumer perceptions of the commercial district. Three-fourths of
+BIDs in one study reported conducting direct consumer marketing programs on
+behalf of district businesses—their most common activity.89 However, a study of
+BIDS in lower-income areas found that they tended to focus their more limited
+marketing budgets on promoting special events, while BIDS in higher-income
+areas invested in broader marketing efforts to alter the identity of the district.90
+Another study found that urban main street districts have difficulty identifying
+a unique image that differentiates them from other areas.91 Nonetheless many
+urban main street programs have succeeded in significantly changing percep-
+tions and increasing sales through conscious branding programs.92
+Many commercial corridor programs offer resources for improving and
+expanding existing retail businesses. These programs include training for business
+operators, assistance in accessing financing, and real estate search assistance. A
+recent large-scale survey of CDCs found that 65 percent had worked in the busi-
+ness enterprise development area.93 Karl Seidman evaluated ten CDC-led busi-
+ness assistance programs participating in Boston’s Community Business Network
+and found that, though most did not focus on specific commercial districts, sev-
+eral programs targeted Boston Main Street districts, and many businesses receiv-
+ing assistance reported participating in district revitalization programs.94
+Measuring the Impact of Retail Development Programs
+Although the retail development approaches described above are quite different
+in scope and scale, they generally share a common underlying set of goals. Each
+of these strategies seeks to increase the level of retail activity in targeted under-
+served neighborhoods. Public-led commercial development and market-led
+business attraction both focus on bringing in new catalyst real estate projects
+with new stores; in contrast, the revitalization programs generally seek more
+incremental change, improving the quality and competitiveness of existing busi-
+nesses and attracting new stores to fill existing vacancies. But in either case,
+expanded retail activity is likely to be seen as a means to a broader set of changes
+in the neighborhood as a whole. There is, however, very little agreement about
+how to measure the impact of these projects and programs on neighborhood
+revitalization and probably even about what kind of neighborhood change
+42
+Retail Trade as a Route to Neighborhood Revitalization
+89. Mitchell (2003).
+90. Gross (2005).
+91. Dane(1988).
+92. Jacobus and Hickey (2007).
+93. Servon and Melendez (2006).
+94. Seidman (1999).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 42
+
+===== PAGE 25 =====
+would be considered desirable. For the most part, evaluations have focused
+instead on documenting the impact of the projects on a set of intermediate indi-
+cators including job creation, tax revenue, new investment, higher property val-
+ues, additional services for neighborhood residents, access to healthy food and
+other essential goods, reduced crime, improved perception of the neighborhood,
+and increased neighborhood pride. Studies have not attempted to draw direct
+connections between any of these indicators and overall neighborhood change,
+although the implication generally seems to be that changes in these factors
+should lead to other (presumably positive) changes in the neighborhood. 
+However, if retail growth in one neighborhood is indeed associated with a
+decline in nearby areas, then this focus on intermediate indicators may be prob-
+lematic. Studies have generally neglected to look at the impact of these projects
+within a citywide or regional context or to evaluate whether job growth, crime
+reduction, and other outcomes in the target neighborhoods are associated with
+corresponding changes in neighboring districts.95 This kind of interneighbor-
+hood transfer or geographic spillover would not necessarily undermine the claim
+that retail development is contributing to neighborhood revitalization, but it
+would suggest the need for better measures of neighborhood-level impact. Cur-
+rently, while it is possible to evaluate whether these strategies create jobs or
+reduce crime, it is hard to know whether those limited changes add up to mean-
+ingful change in the overall health, attractiveness, or competitiveness of a
+neighborhood—or whether these strategies actually benefit existing neighbor-
+hood residents. 
+Job Creation
+The Urban Institute study of HUD-funded local economic development loans
+found that only 56 percent of CDBG-funded borrowers and 52 percent of Sec-
+tion 108–supported borrowers met or exceeded their job creation goals. How-
+ever, since a small number of borrowers exceeded their job creation goals by
+large margins, overall, the total number of jobs created by all HUD-funded
+loans amounted to 93 percent of the combined job creation goals. The same
+report found that the Section 108 program generated one new job for every
+$38,000 lent. By comparing Section 108 loan terms with prevailing private
+market loans, the researchers estimated that these below-market loans repre-
+sented an average public subsidy of approximately $7,865 per job. Although
+considerably lower than the cost per job of tax incentives provided to corpora-
+tions, this is considerably higher than the average grant per job created by other
+Karen Chapple and Rick Jacobus
+43
+95. Even studies of enterprise zones, which compare the zones with comparable nonzones,
+generally do not discuss whether the different outcomes are due to shifts in activity between
+these areas.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 43
+
+===== PAGE 26 =====
+federal programs identified in similar studies.96 Furthermore, the study showed
+that jobs created by Section 108 loans in high-poverty neighborhoods required
+25 percent more subsidy per job than those created by loans outside high-
+poverty areas.97
+Many financing programs, such as TIF, do not evaluate job creation out-
+comes. A number of case studies have shown, though, that new supermarket
+development projects have led to the creation of significant numbers of new
+jobs and that neighborhood residents are frequently able to fill the majority of
+these new jobs.98 In addition to the direct employment created in the new
+stores, retail development is likely to have some multiplier effect, stimulating
+local economic activity that results in additional neighborhood jobs beyond the
+new retail development.99 Yet, there has been little research on the extent of this
+multiplier effect for neighborhood retail development. 
+Studies of empowerment zones have found few positive employment effects.
+In a study of six cities with federal empowerment zones, the only city whose
+zone neighborhoods had a significantly different outcome than the correspon-
+ding control group was New York City; the New York census tracts fared worse
+in reducing unemployment than the control group counterparts.100 These and
+other studies have long found that the hiring tax credits are ineffective, because
+of unwillingness of employers to alter their hiring habits, and a more recent
+study of California empowerment zones detailed the abuse of the hiring tax
+credit, which rarely goes to disadvantaged workers.101
+Many commercial district revitalization programs also attempt to track job
+creation outcomes. This is difficult because of the large number of businesses
+that must be contacted. Seidman found that the average urban Main Street pro-
+gram generated 38 net new jobs per year, a total which was comparable with the
+national average for Main Street programs outside of urban areas considered
+successful.102 LISC documented 1,490 net new jobs created by its six pilot
+neighborhood Main Street programs over a four-year period—an average of 62
+jobs per district per year.103 Studying the results of new Main Street programs in
+Boston between 1996 and 2000, Seidman found wide variation in the total
+44
+Retail Trade as a Route to Neighborhood Revitalization
+96. Markusen (2007).
+97. Walker and others (2002). 
+98. Abell (1998); Food Marketing Institute (1993).
+99. Dixon (2005).
+100. Rich and Stoker (2007).
+101. California Budget Project. “California’s Enterprise Zones Miss the Mark”
+(www.cbp.org/pdfs/2006/0604_ezreport.pdf [2006]).
+102. Seidman (2004).
+103. Carlson (2003).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 44
+
+===== PAGE 27 =====
+number of jobs created, with the Hyde Park program generating 166 net new
+jobs while the Hyde/Jackson Square program created only six.104
+Whether they are created by new real estate development or revitalization
+programs, it is likely that some of these jobs are being filled by neighborhood
+residents.105 A 2000 study of the economic impact of the Fruitvale Main Street
+program in Oakland, California, found that 58 percent of district retail employ-
+ees lived in the immediate neighborhood.106 Neighborhood retail jobs are less
+than ideal, however: not only do they pay low wages and rely on part-time or
+temporary workers, but retailers offer the least on-the-job training of any busi-
+ness sector and offer relatively few supervisor positions, thus failing to facilitate
+upward mobility.107 Nevertheless, they may serve as an entry point to the work-
+force for young or discouraged workers, and they provide key work experience,
+which leads to better jobs later. The Initiative for a Competitive Inner City cites
+lower employee turnover in inner-city retail stores as an advantage for businesses
+but low turnover may also occur because employees in these stores are using
+these opportunities as permanent career jobs instead of moving up.108 Further
+research is needed to determine the extent to which neighborhood residents are
+moving successfully from local retail jobs into other career paths.
+Vacancy Rates
+A common goal of commercial development programs is to fill vacant commer-
+cial space. Despite this, it appears that comprehensive data have not been col-
+lected on the impact of new commercial real estate development projects on
+occupancy rates of surrounding commercial properties.
+Commercial district revitalization programs, however, seem to have had more
+success in evaluating their impact. Jerry Mitchell conducted a survey of BID
+managers and found that the majority (55 percent) of BIDs are tracking vacancy
+and occupancy rates, which is the most frequently used benchmark for BID suc-
+cess.109 Suzanne Dane’s report on Main Street programs (mostly in rural areas)
+documented an average decline in vacancy rates from 21 percent to only 5 per-
+cent over a nine-year period.110 Seidman studied the reported results of fourteen
+urban Main Street programs and found an average of eight net new businesses
+were created each year in the Main Street districts.111 Seidman’s earlier study of
+Karen Chapple and Rick Jacobus
+45
+104. Seidman (2001).
+105. Abel (2002); Dunford (2006).
+106. Marketek (2000).
+107. Bernhardt (1999).
+108. Initiative for a Competitive Inner City (2002).
+109. Mitchell (2003). 
+110. Dane (1988).
+111. Seidman (2004).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 45
+
+===== PAGE 28 =====
+Boston Main Street programs found that between 55 and 88 percent of busi-
+nesses reported that the Main Street program had improved their performance.112
+During the first four years of the Main Street pilot in Oakland’s Fruitvale neigh-
+borhood, ground-floor, street-front commercial vacancy rates declined from 12
+percent to less than 1 percent.113
+Private Investment
+Investment of public or charitable resources into retail development projects or
+programs is thought to lead to greater private investment in the same areas.
+Commercial real estate projects are frequently referred to as catalysts, with the
+implication being that one or two key projects with public subsidy can lead to a
+self-sustaining process of private reinvestment in distressed neighborhoods.
+Commercial corridor programs similarly describe increased private investment
+as a likely outcome of activities such as street cleaning, façade improvement, and
+safety improvements. 
+Of commercial district programs, one study showed that formation of a BID
+in Maplewood, New Jersey, led to a significant increase in private building per-
+mit activity.114 Seidman found that successful urban Main Street programs had
+similar effects and generated an average of $1 million in public and private
+investment each year.115 Much of this investment was associated with building
+projects ranging from major renovations to minor storefront improvements. Sei-
+dman found that urban Main Street districts experienced an average of eleven
+such projects per year. Between 1996 and 2000, LISC and the National Main
+Street Center undertook a pilot Neighborhood Main Street Initiative that
+involved an investment of just over $3 million to create and sustain six new
+urban Main Street programs. During a four-year period, these demonstration
+sites closely tracked outcomes and documented more than $35 million in new
+public and private investment in the target areas. One site, Frankford Avenue in
+Philadelphia, generated nearly $10 million in private investment as a result of
+thirty new businesses that opened on the avenue during this time.116
+For commercial real estate development projects, tracking of the impact on
+investment in surrounding properties is uncommon. Yet, there have been several
+studies that have shown that direct public investment in these projects leverages
+significant private investment in the same projects.117 But the type of investment
+matters. For instance, in the survey of local government supermarket attraction
+46
+Retail Trade as a Route to Neighborhood Revitalization
+112. Seidman (2001).
+113. Marketek (2000).
+114. Seidman (2004).
+115. Seidman (2004).
+116. Carlson (2003).
+117. Walker and others (2002); GAO (2007).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 46
+
+===== PAGE 29 =====
+programs, twelve of the nineteen cities with EZ or EC designations reported
+efforts to attract new supermarkets, but only three targeted those efforts within
+the EZ-EC boundaries. These three (Buffalo, Atlanta, and Bridgeport, Con-
+necticut) all reported no success in leveraging EZ-EC resources to attract new
+supermarket development.118
+Historic preservation is generally thought to leverage private investment. Yet,
+while historic district designation has been associated with large increases in res-
+idential property values, there is apparently no correlation between historic dis-
+trict designation and increased commercial property values.119 That may be due
+to any number of factors and seems to suggest that even the relatively more gen-
+erous historic preservation tax credits are not sufficient to generate significant
+increases in economic activity or dramatically alter the location decision of most
+private businesses. But preservation tax credits, when combined with a Main
+Street program, do seem to have a significant impact.120
+Public Investment
+Urban neighborhoods compete for attention and support from local govern-
+ment. Commercial revitalization advocates argue that increased attention and
+organization at the community level combined with increased private invest-
+ment should result in increased investment on the part of local governments. A
+key function of BIDs is their ability to “negotiate with politicians and munici-
+palities on behalf of business owners” and “work to garner additional ser-
+vices.”121 Among Main Street programs nationwide (mostly in rural towns), only
+37 percent report that the program led to increased investment in the district by
+local government; but LISC’s evaluation of its Neighborhood Main Street Ini-
+tiative and Seidman’s evaluation of Boston’s Main Streets Program both suggest
+that urban Main Street programs are far more likely to succeed in increasing
+service levels and public capital investment.122 This may be due to the fact that
+urban commercial revitalization programs are unlikely to be launched at all in
+the absence of political support from local government. 
+Tax Revenue
+Successful commercial development should result in immediate increases in
+local sales tax revenue and longer-term increases in property tax revenue, from
+the development project and from the surrounding properties. Apart from an
+Karen Chapple and Rick Jacobus
+47
+118. Pothukuchi (2005).
+119. Asabere and Huffman (1991).
+120. Listokin, Listokin, and Lahr (1998). 
+121. Hoyt (2005).
+122. Carlson (2003); Seidman (2001).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 47
+
+===== PAGE 30 =====
+evaluation of the Faneuil Hall project in Boston, which found significant but
+very small positive changes in land prices and rents in the vicinity of the project,
+there is only very anecdotal evidence for this positive impact of commercial real
+estate development projects on property values and sales in the surrounding dis-
+trict.123 One study found, for example, that a new Stop & Shop supermarket in
+the Hyde/Jackson Square neighborhood attracted new shoppers, raised rents,
+and led to increased sales by nearby businesses—including increased sales for
+half of the existing independent grocery and convenience stores.124
+Studies of redevelopment typically measure impact in terms of property val-
+ues (and tax revenues), finding that TIFs generally cause growth beyond what
+would be expected in the absence of redevelopment finance.125 However, critics
+charge that TIF districts generally fail to generate enough revenue to pay back
+for the lost property tax revenue and that the programs fail to reimburse local
+governments adequately for lost revenue.126
+By contrast, commercial district revitalization programs have repeatedly doc-
+umented positive impacts on districtwide sales and sales tax receipts. A study of
+California Main Street programs (mostly in rural areas) found that during a
+period when statewide sales taxes increased by 77 percent, the sixteen Main
+Street districts increased tax revenues by an average of 105 percent.127 Surpris-
+ingly, only 19 percent of BIDs reported tracking taxable retail sales as a bench-
+mark of BID success.128 Nonetheless, many BIDs report increased sales tax rev-
+enue as a result of BID activity. In Boston’s Hyde Park Main Street district, for
+example, 40 percent of businesses reported that their sales increased by 25 per-
+cent or more during the first five years of that program.129 It is unknown
+whether these increases were accompanied by decreases in neighboring districts.
+Crime and Safety
+By increasing capital investment, removing blight, and improving cleanliness,
+commercial corridor programs are thought to reduce the liklihood of crime.
+And in fact, a study of BIDs in Philadelphia found that, relative to comparison
+neighborhoods, the BID areas experienced fewer crimes and, in particular, fewer
+thefts and other property crimes or crimes that typically would be directed at
+retail district visitors.130 Commercial development projects may also have a posi-
+48
+Retail Trade as a Route to Neighborhood Revitalization
+123. Sagalyn (1989).
+124. Hernandez (2001) cited in Seidman (2002).
+125. Dardia (1998); Johnson and Man (2001).
+126. Dardia (1998); Weber (2003).
+127. Kelley (1996).
+128. Mitchell (2003).
+129. Seidman (2001).
+130. Hoyt (2005).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 48
+
+===== PAGE 31 =====
+tive impact on crime rates in the surrounding areas because of the presence of
+paid security and as a result of additional “eyes on the street,” but there appears
+to be no research into this aspect of these projects. 
+Some BID critics have suggested that crime reductions in BID districts are
+not due to actual reductions in overall crime but are merely the result of crime
+moving to other areas, another reason why establishing a regional unit of analy-
+sis is needed.131 This is an important point but one which has been scarcely
+studied. If crime reduction is itself a goal, then such a finding would undermine
+some of the value of commercial district programs. However, if crime preven-
+tion is seen as a means to the end of improving the relative competitiveness of a
+given commercial district or neighborhood, then even relocating crimes might
+be considered evidence of neighborhood revitalization. 
+Community Identity
+Commercial revitalization may reshape community identity in two ways: indi-
+vidual or neighborhood. Recent work on the sociology of social exclusion may
+shed some light on how neighborhood retail development might affect resident
+self-perception. Retail exclusion also has important implications for self-
+identity.132 Shopping is increasingly seen as a means of self-expression and as a
+tool for constructing a personal identity. Consumers who are unable to partici-
+pate in this aspect of our culture may define themselves as “excluded shoppers.”
+Even consumers with enough income to purchase essential goods may come to
+see themselves as being excluded because of the mode through which they pur-
+chase. In a situation when goods were acquired informally, the consumer would
+have preferred to purchase from a traditional retailer but was unable to do so
+because of cost and the inaccessibility of retail stores.133
+Many urban consumers are either discouraged from accessing stores outside
+their neighborhood or feel uncomfortable in these environments.134 Social
+exclusion works in both directions to disadvantage lower-income communities:
+low-income residents, minorities, the youth, and seniors may all feel unwelcome
+in mainstream stores outside their neighborhood, and similarly, outsiders are
+less likely to patronize stores in inner-city communities because of the presence
+Karen Chapple and Rick Jacobus
+49
+131. Briffault (1999).
+132. Williams and Windebank (2002).
+133. This section is based on research by Williams and Windebank (2002), who con-
+ducted in-depth interviews with 400 consumers in low-income neighborhoods about their
+methods of acquiring various essential household goods and found that a large number of
+these consumers are purchasing products such as TVs, cars, clothing, and furniture through
+informal channels or secondhand stores rather than through traditional retail outlets. 
+134. Turner (2004).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 49
+
+===== PAGE 32 =====
+of these groups.135 In this sense the retail patterns in lower-income communities
+may have social implications beyond the purely economic factors that are typi-
+cally considered. 
+However, many commercial development programs point to changes in the
+neighborhood’s identity as a key outcome. Many Main Street programs and
+BIDs regularly measure consumer perceptions of the commercial district and
+document improvements over time.136 To the extent that successful retail devel-
+opment requires overcoming this kind of self-segregating behavior on the part of
+consumers, these programs can be seen as affecting not only neighborhood
+identity but individual self-identity. 
+Overall, this review of retail strategies and their impact suggests that com-
+mercial district revitalization strategies have a demonstrably positive effect on
+retail revitalization. Less is known about the effectiveness of public-led commer-
+cial development and market-led retail attraction strategies (see table 2-1). In
+terms of the impact of these strategies on neighborhood revitalization, we can
+really only speculate, since there is very little evidence. In general, it seems that
+leveraging public investment is key no matter which strategy is followed. Com-
+mercial district revitalization programs are the most promising in terms of
+improving neighborhoods, perhaps because they focus more directly on quality-
+of-life issues such as crime. This example suggests the importance of incorporat-
+ing desired outcomes into program design. If crime is a major obstacle to busi-
+ness attraction, then attraction programs should include security as a design
+feature. Although the business cycle will affect the ability of programs to achieve
+some outcomes, such as reductions in vacancy rates and increases in property tax
+revenue, policymakers can clearly design programs to be more effective. They
+can easily build incentives into programs to leverage more private or public
+investment, by requiring matching funding. They can also help spur more job
+creation for local residents, for example, by requiring local hires or partnering
+with job training or apprenticeship programs.
+A Quantitative Analysis of Retail Development 
+and Neighborhood Change 
+What is the relationship between retail development and neighborhood revital-
+ization? As discussed previously, research suggests that retail growth may not
+respond to changes in household income—in other words, as upper-income res-
+idents move into an area, retail revitalization does not necessarily follow.137
+50
+Retail Trade as a Route to Neighborhood Revitalization
+135. Turner (2004).
+136. Seidman (2001); Mitchell (2003).
+137. Koebel (2002); Immergluck (1999).
+02-0297-9 ch02  3/31/09  4:55 PM  Page 50
+
+===== PAGE 33 =====
+Karen Chapple and Rick Jacobus
+51
+Table 2-1. Retail Strategies, Goals, Impact, and Unknowns
+Goal
+Job creation
+Vacancy rate
+Private
+investment 
+Public
+investment
+Tax revenue
+(and property
+values)
+Crime and
+safety
+Community
+identity
+Impact on retail revitalization
+Commercial developments create
+many jobs but often at a high
+public investment per job
+created. Revitalization programs
+are more cost-effective but
+generate only modest job growth.
+Corridor programs have a
+documented impact on occupancy
+and appear to be an effective
+strategy for filling vacant space.
+Real estate projects all involve
+direct private investment, and
+there is some evidence that
+commercial corridor programs
+can lead to increased private
+commercial investment as well.
+Commercial development
+projects frequently involve
+increases in public investment in
+the target area.
+Increased retail activity clearly
+increases sales tax revenue and
+likely adds to property tax
+revenue.
+Revitalization programs can
+clearly cause reductions in crime
+within targeted commercial areas,
+though some of this crime may
+simply be moved to other areas.
+The extent to which retail
+development impacts the overall
+image of the community and the
+self-image of neighborhood
+residents is still largely
+unexplored.
+Impact on neighborhood
+revitalization
+Residents are likely to
+fill many of the new
+jobs, particularly in
+corridor projects.
+However, job quality
+is likely to be poor.
+Declining vacancies
+can alter perceptions
+of an entire
+neighborhood.
+Retail revitalization
+programs are
+associated with an
+increase in residential
+building activity.
+Infrastructure
+development related
+to commercial projects
+can help revitalize
+neighborhoods as well.
+Retail revitalization
+may increase
+residential property
+values as well as
+commercial values.
+From a sociological
+perspective on
+exclusion and a
+planning perspective
+on activity patterns,
+local retail should help
+improve individual and
+community image.
+Remaining questions
+What are the multiplier
+effects for local retail jobs?
+What is the overall economic
+impact of new retail jobs? To
+what extent do neighborhood
+retail jobs provide an avenue
+to better jobs?
+What is the impact of new
+shopping center
+development on
+surrounding occupancy?
+Do commercial real estate
+projects lead to increased
+private investment in
+neighboring properties?
+How does leveraging from
+all sources work?
+Is the increase enough to
+offset investment in these
+programs? Are tax increases
+in one district offset by
+decreases in nearby retail
+districts?
+Is the documented crime
+reduction due to safety
+programs or to the impact of
+economic development (that
+is, more stores, eyes on the
+street, and so on)? What
+impact do commercial real
+estate projects have on crime?
+How much does the
+presence or absence of retail
+influence who chooses to
+live in the neighborhood?
+Source: Authors’ analysis.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 51
+
+===== PAGE 34 =====
+Research has yet to examine the converse: the type of neighborhood revitaliza-
+tion that follows retail revitalization. Models suggest that job creation, private
+and public investment, rising property values, better access to services, and
+improved community identity will benefit residents, either directly or indirectly.
+Yet, to what extent do these benefits accrue to existing residents instead of new-
+comers? Will neighborhood revitalization take the form of transformation from
+a low-income to a moderately low-income, mixed-income, or upper-income
+neighborhood? Is retail best seen as a tool for attracting upper-income residents
+or retaining and developing the middle class?
+In the following discussion, we look in more detail at the association between
+retail and neighborhood revitalization in the San Francisco Bay Area (the Bay
+Area) by linking zip code–level data on retail change (measured in terms of
+establishments, employees, sales, business mix, start-ups and deaths, and chains
+or stand-alone stores) to census tract–level data on neighborhood change. One
+of the most affluent regions in the country, with some of the highest income
+inequality, the San Francisco Bay Area has unique concentrations of neighbor-
+hoods either gentrifying or becoming more bipolar, and thus it offers the oppor-
+tunity to look at a variety of patterns of retail revitalization. This pilot study
+reveals a surprisingly strong relationship between retail revitalization and an
+increase in middle-income households. 
+Methodology
+For this analysis, we start with recent definitions of neighborhood change from
+George Galster and Jason Booza as well as Freeman to create a typology of
+neighborhood change from 1990 to 2000 that include the following categories:
+“bipolar,” “gentrified,” “more middle income,” “more lower income,” “more
+upper income,” and “other.”138 We use the Neighborhood Change Database
+(NCDB) developed by Geolytics, Inc. The NCDB provides 1990 census data
+for normalized 2000 census tract definitions, allowing us to compare 1990
+neighborhood characteristics with those of 2000. 
+To construct the typology, we first had to convert the census data on house-
+hold income from ten to sixteen irregular categorical variables (in 1990 and
+2000) into consistent and meaningful groups. Following Galster, we create six
+income categories that are relative to the area median income (AMI) for the ten-
+county San Francisco Bay Area (which includes Santa Cruz).139 These categories
+are the following: 
+—very low income (less than 50 percent of AMI) 
+—low income (50 percent to 79.9 percent of AMI) 
+52
+Retail Trade as a Route to Neighborhood Revitalization
+138. Freeman (2005); Galster and Booza (2007).
+139. Booza, Cutsinger, and Galster (2006). 
+02-0297-9 ch02  3/31/09  4:55 PM  Page 52
+
+===== PAGE 35 =====
+—moderate income (80 percent to 99.9 percent of AMI) 
+—high to moderate income (100 percent to 119.9 percent of AMI) 
+—high income (120 percent to 149.9 percent of AMI) 
+—very high income (150 percent of AMI and above) 
+Following Berube and Tiffany and Galster and others, we use two different
+methods to aggregate the finer (census) distribution into our six categories.140
+First, we calculate the area median income using the linear interpolation
+method.141 Then, for each census tract in the Bay Area, we calculate the share of
+households in each of the census categories and their cumulative density.142 Gal-
+ster and Booza identified neighborhoods that are bipolar using a formulation
+based on the entropy index.143 The entropy index is based upon the thermody-
+namic principle that any system will naturally trend toward evenness. The
+amount of entropy in a system refers to how far along a system is in reaching
+complete evenness. In the social sciences, researchers have developed an index
+that ranges from 0 (lowest entropy, meaning that the entire population is in the
+same category) to 1 (highest entropy, meaning that the population is evenly
+spread among all categories) to measure entropy of a population across social
+categories.144
+In addition to this nominal entropy index, Galster and Booza constructed a
+new ordinal entropy index and used the ratio of the two to measure bipolarity in a
+tract, that is, the extent to which the population is disproportionately concen-
+trated in the lowest and highest of the six income groups. There are 220 bipolar
+tracts in the San Francisco Bay Area, about 16 percent of the total (see figure 2-2).
+To determine the extent of gentrified neighborhoods, we use the compound
+measure from Freeman, including tracts that have 
+Karen Chapple and Rick Jacobus
+53
+140. Berube and Tiffany (2004); Galster and others (2005). 
+141. We chose to calculate this figure from the Geolytics tract-level data instead of using
+the raw overall figure from the census summary files for consistency reasons. Specifically,
+there is a small possibility of measurement error introduced by Geolytics’ spatial interpolation
+of data from pre-2000 tract geography to a consistent geography. Comparing such interpo-
+lated tract-level data to an externally obtained median could introduce additional error.
+142. In aggregating to our six categories, we used linear interpolation to find breakpoints
+within a census category for those at or below the median income. However, we assumed that
+the distribution of households within the higher-income categories follows a Pareto distribu-
+tion. This assumes that there is more density toward the lower cutoff.
+143. Galster and Booza (2007).
+144. This index, also called the Shannon-Weaver Index, is defined as
+where H is the index, p is the proportion of the population in each category, and k is the
+number of categories.
+H
+n
+i
+i
+i
+k
+=
+−∑π
+π
+ln
+,
+02-0297-9 ch02  3/31/09  4:55 PM  Page 53
+
+===== PAGE 36 =====
+54
+Retail Trade as a Route to Neighborhood Revitalization
+Figure 2-2. A Typology of Neighborhood Change in the San Francisco Bay Area,
+1990–2000 
+Source: Authors’ analysis.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 54
+
+===== PAGE 37 =====
+—a median income less than the 40th percentile for the Bay Area as a whole
+in 1990 ($33,670), 
+—a proportion of housing built from 1980 to 2000 that is lower than the
+proportion found at the 40th percentile for the Bay Area (10.7 percent), 
+—a percentage increase in educational attainment (that is, some college) that
+is greater than the median increase in educational attainment for the Bay Area
+between 1990 and 2000 (7.4 percent), 
+—an increase in real housing prices from 1995 to 2002 that is greater than
+the median for the Bay Area (70.2 percent).
+Freeman also includes a central city designation in his definition, but since
+the Bay Area includes some neighborhoods that may be gentrifying outside of
+its few central cities (such as Berkeley and Richmond), we excluded this crite-
+rion. There are 102 gentrified tracts in the Bay Area, more than 7 percent of the
+total. It is interesting that there is little overlap between the bipolar and gentri-
+fied tracts, just as Galster and Booza have suggested: only three tracts are in both
+categories (which we classified as gentrified).
+We use a relatively simple calculation to identify neighborhoods that are
+becoming more middle income, lower income, or upper income. Change in
+middle-income neighborhoods occurs when the share of population in the two
+middle-income categories is greater in 2000 than in 1990 and is more than 25
+percent by 2000. Ten percent (141) of Bay Area tracts are becoming more mid-
+dle income; just eight overlap with the gentrifying category, and we classified
+them as gentrified. Likewise, lower-income change (448 tracts, 32 percent of the
+total) occurs when the share in the two lower-income categories is greater in
+2000, and the ending point is at least 25 percent, and upper-income change
+(300 tracts, 21 percent) occurs when the share in the top two income categories
+is greater in 2000, with a ending share of 25 percent or more. “Other” (185
+tracts) is a residual category and seems to consist of a mix of tracts where there is
+no systematic pattern of change.
+Of these six forms of neighborhood change, three relate directly to neighbor-
+hood revitalization. Neighborhoods that gentrify are shifting from low-income
+to upper-income status, which is a common definition of revitalization. Neigh-
+borhoods that become bipolar are gaining at both ends of the distribution,
+simultaneously revitalizing and declining. Neighborhoods that become middle
+income are revitalizing by gaining in the middle, often becoming more mixed
+income in the process. Also of interest, but less pertinent to our discussion, are
+two of the other neighborhood change types. Neighborhoods that become
+upper income are in a sense revitalizing, but from a higher-income base than
+that of the gentrifying neighborhoods. Neighborhoods becoming lower income
+are actually declining. 
+Karen Chapple and Rick Jacobus
+55
+02-0297-9 ch02  3/31/09  4:55 PM  Page 55
+
+===== PAGE 38 =====
+For the retail database, we use a private sector–generated time series database
+of individual establishments, the National Establishment Time-Series database
+(NETS), which combines annual Dun and Bradstreet entries into a time series
+from 1990 through 2005. This database provides us with detailed data on indi-
+vidual establishments over time, from establishment births (if post 1989)
+through current operations or deaths. Whereas government sources can provide
+some similar research opportunities, barriers to access to the disaggregated forms
+of this data are high. Further, the NETS database offers access to detailed data
+relevant for creating a clean database of retail establishments; for instance, we
+can eliminate headquarters and identify chains.
+In this analysis, we include a variety of retail and service establishments, most
+locally oriented, based on a list of industry codes used by the Local Initiatives
+Support Corporation’s commercial corridor program. To exclude outliers from
+home-based businesses to national headquarters, we include only non–head-
+quarter establishments having more than one employee and less than $50 mil-
+lion in sales. We look at retail revitalization by zip code. Although the zip code
+is not an ideal proxy for a retail market area, it can give a sense of retail opportu-
+nities in and adjacent to neighborhoods. Since zip codes may include multiple
+census tracts, we weight each zip code by the share of housing units in each cate-
+gory of neighborhood change. For instance, 79 percent of San Francisco’s Mis-
+sion District (94110) is becoming more gentrified, and 21 percent is becoming
+purely upper income.
+Findings
+We first examine some simple indicators of retail revitalization—an increase
+in retail and service establishments, in sales, and in employees—in relation to
+neighborhood change. We focus in particular on the relationship of retail to
+the neighborhoods that become more middle income, since this type of
+change seems to be what most are referring to when they speak of neighbor-
+hood revitalization.
+Retail and service establishments grew generally throughout the region (by
+about 16 percent), with much less growth in bipolarizing and gentrifying neigh-
+borhoods and an overconcentration of growth in the neighborhoods becoming
+middle income (table 2-2). This shows an association that might go either way:
+the growth of middle-income groups might have attracted new establishments
+to the area, or retail and service growth might have attracted new middle-
+income residents. 
+Of note, the difference in growth in total sales was quite dramatic across
+neighborhoods, with just 19 percent and 23 percent growth in bipolarizing and
+gentrifying neighborhoods, respectively, compared with 34 percent in neighbor-
+56
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 56
+
+===== PAGE 39 =====
+hoods becoming middle income, 35 percent in neighborhoods becoming lower
+income, and 38 percent in neighborhoods becoming upper income. Likewise,
+growth in employment occurred disproportionately in these three types of
+neighborhood change. Again, although it is not clear whether neighborhood
+revitalization led retail revitalization or the reverse, it is interesting to note that
+middle-income neighborhoods started with much higher average sales per estab-
+lishment ($605,000 compared with $567,000 across all types). This provides
+some evidence that a concentration of retail was attracting new middle-income
+residents.
+To analyze the chicken-and-egg question more directly, we next looked at
+how neighborhoods that were middle income at the start, in 1990, fared in
+terms of retail revitalization. Table 2-3 suggests that retailers are strongly
+attracted to middle-income neighborhoods; areas that were middle income in
+1990 saw more than 50 percent higher growth in both establishments and sales,
+and almost twice as much growth in employment, relative to the corresponding
+growth in non-middle-income neighborhoods. Thus, it seems likely that the
+Karen Chapple and Rick Jacobus
+57
+Table 2-2. Change in Establishments, Sales, and Employment, by 
+Neighborhood-Change Type
+Number of 
+Percent change
+Neighborhood-
+establishments
+1990–2005
+change type
+1990
+2005
+Percent change
+Sales
+Employment
+Bipolar
+21,466
+23,629
+10
+19
+3
+Gentrified
+9,564
+10,544
+10
+23
+9
+Middle income
+9,761
+11,626
+19
+34
+13
+Lower income
+32,193
+38,068
+18
+35
+12
+Upper income
+23,254
+27,532
+18
+38
+14
+Other
+12,783
+14,934
+17
+32
+10
+Overall
+111,012
+128,339
+16
+34
+12
+Source: Authors’ analysis. 
+Table 2-3. Change in Retail Establishments, Employment, and Sales for 
+Middle-Income Neighborhoods in 1990 
+Neighborhood-
+Percent change 1990–2005
+change type
+Establishments
+Employment
+Sales
+Middle income in 1990
+23
+20
+48
+Not middle income in 1990
+16
+11
+31
+Source: Authors’ analysis.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 57
+
+===== PAGE 40 =====
+existing middle-income composition of the neighborhood in 1990 sent a signal
+to retailers as much as did the influx of more middle-income residents in subse-
+quent years 
+Overall, these indicators suggest that retail revitalization is more likely to
+occur in neighborhoods that are becoming middle income or upper income
+than in those that become bipolar or gentrified (or vice versa: middle-income
+neighborhood revitalization is occurring where retail revitalization is signifi-
+cant). One explanation for this that warrants further exploration is whether
+retailers respond more positively when a group, such as middle-income resi-
+dents, concentrates, since retailers then know what market niche to fill. Another
+theory is that neighborhoods that are becoming bipolar or gentrified are sending
+some sort of negative or mixed signal to the market. That the “other” type, a
+residual category with no clear change pattern, also experiences disproportion-
+ately low revitalization suggests that this confused signal may be the problem. A
+third possibility is that the types of areas that are becoming more middle income
+or upper income are simply more likely to house the types of retail that are
+growing, such as the big box store (because of urban design factors). 
+Though the NETS data do not allow us to explore these theories systemati-
+cally, they do offer potential when considering four other hypotheses: 
+—Neighborhood revitalization is related to the share of independent estab-
+lishments (as opposed to chains).
+—Neighborhood revitalization is more likely to occur when there is a super-
+market in the beginning period.
+—Neighborhood revitalization occurs because of start-up businesses.
+—Neighborhood revitalization is related to the mix of businesses in the
+neighborhood.
+As it turns out, middle-income change areas not only housed a disproportion-
+ate share of chains at the beginning of the period, but also they were substantially
+more likely to see new chain stores come in (table 2-4). This suggests that the
+availability of chain stores may positively affect neighborhood revitalization.
+However, areas in which the middle-income groups are growing do not need
+a supermarket to do well. Overall, areas that had a supermarket in 1990 experi-
+enced far greater sales growth; the one exception was neighborhoods with a
+growing middle class, which experienced roughly the same sales growth even
+without a local supermarket (table 2-5).
+One reason that areas that are becoming middle income may fare better than
+bipolarizing and gentrifying neighborhoods is their ability to attract start-up
+businesses. Table 2-6 shows that start-ups are more attracted to middle-
+income—and, interestingly, lower-income—neighborhoods than to bipolarizing
+or gentrifying areas.
+58
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 58
+
+===== PAGE 41 =====
+Karen Chapple and Rick Jacobus
+59
+Table 2-4. Share of Chain Stores, by Neighborhood-Change Type, 1990–2005
+Percent
+Neighborhood-change type
+1990
+2005
+Bipolar
+8.7
+11.0
+Gentrified
+8.9
+11.6
+Middle income
+11.8
+14.9
+Lower income
+10.4
+13.2
+Upper income
+9.1
+12.0
+Other
+9.7
+12.7
+Overall
+9.4
+12.3
+Source: Authors’ analysis.
+Table 2-5. Change in Average Sales, by Neighborhood-Change Type with and
+without a Supermarket, 1990–2005 
+Percent
+Change in average sales, 1990–2005
+Neighborhood-change type
+With supermarket in 1990
+Without supermarket in 1990
+Bipolarizing
+42
+9
+Gentrifying
+41
+11
+Becoming middle income
+17
+17
+Becoming lower income
+34
+20
+Becoming upper income
+44
+19
+Other
+42
+17
+Overall
+35
+16
+Source: Authors’ analysis.
+Table 2-6. Share of Start-ups, by Neighborhood-Change Type
+Percent
+When establishment started
+Neighborhood-change type
+Before 1950
+1951–90
+1991–2000
+2001–05
+Bipolar
+4
+54
+33
+9
+Gentrified
+6
+52
+34
+8
+Middle income
+3
+50
+35
+12
+Lower income
+4
+51
+34
+11
+Upper income
+4
+51
+35
+10
+Other
+4
+51
+34
+11
+Overall
+4
+51
+34
+10
+Source: Authors’ analysis.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 59
+
+===== PAGE 42 =====
+Finally, areas that are becoming middle income tend to have a similar retail
+and service mix compared with that of other neighborhoods, with similar shifts
+to services and nonprofits from 1990 to 2005. However, they tend to be more
+diverse across the sectors: based on an entropy index ranging from 0 (perfectly
+homogeneous) to 1 (perfectly diverse), the neighborhood-change types score
+from a high of 0.90 for middle-income areas to a low of 0.87 for bipolarizing
+and gentrifying neighborhoods.
+In sum, this exploration suggests that the way the retail sector changes is
+closely related to how the neighborhood changes, with middle-income revital-
+ization most closely associated with retail revitalization. Further research should
+explore the dynamic in more detail.
+Conclusion and Thoughts for Further Research
+If neighborhood retail development contributes to broader community revital-
+ization, it seems unlikely that it does so by dramatically increasing the employ-
+ment or wage levels, the labor force participation rates, or the overall level of
+financial assets, although these changes can help. It seems that certain kinds of
+public investment in retail development (particularly corridor programs) can
+catalyze further private commercial development and, in at least some situa-
+tions, this public investment can be recaptured through increased tax revenues.
+However, none of this activity indicates that there is a much broader impact on
+the well-being of the surrounding community. It may not even have a positive
+impact on the local economy as a whole, since the retail activity generated by
+new commercial development, business attraction programs, or corridor revital-
+ization programs may simply be shifting economic activity between places.
+Despite this, the persistent call for these programs is itself a strong indication
+that there are real needs to which these programs are effectively responding—
+even if those needs are not always that well articulated by program advocates. 
+If retail development has large-scale impacts on community economic health,
+it may be through more indirect outcomes including changes in internal and
+external perceptions of the neighborhood and ultimately changes in neighbor-
+hood residential composition. Because neighborhood-level retail growth is
+closely associated with middle-income growth, retail development may be a key
+component to building the kind of stable mixed-income communities that are
+most likely to positively affect existing low-income residents. However, existing
+studies of the effectiveness of neighborhood retail development strategies have
+not explored these broader impacts.
+Rather than assuming that any neighborhood improvement leads ultimately
+to displacement of the poor, this research suggests that more than one kind of
+60
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 60
+
+===== PAGE 43 =====
+neighborhood change is possible. Further research is necessary to establish
+whether low-income residents face better outcomes living in middle-income or
+bipolar neighborhoods, but it seems likely that middle-income neighborhoods
+would offer more amenities because of their ability to attract more retail growth.
+It is unclear to what extent this association is due to retailers following middle-
+income households as opposed to middle-income consumers strongly preferring
+locations with nearby retail. It seems likely that both factors play a role, though
+certainly a community that starts out as middle income sends a clear signal of a
+sound investment opportunity to retailers. The limited time frame of the NETS
+data (1990 to 2005) limits our ability to explore whether the retail or the resi-
+dential growth comes first. 
+If outcomes for the poor are tied to the specific character of neighborhood
+change, then further research might suggest specific retail development strate-
+gies that most likely will benefit the poor and lead to stable mixed-income com-
+munities without contributing to displacement of the poor. This research sug-
+gests that chain stores are associated with neighborhoods that are becoming
+more middle income—and thus, attracting chain stores may be one way to sta-
+bilize the neighborhood. Further research is needed to better understand, for
+example, whether certain types of establishments (restaurants, bars, and so
+forth) are more likely to contribute to gentrification while others (drug stores,
+groceries, and the like) lead more often to middle-income neighborhoods. 
+We have explored the relationship between neighborhood demographic
+change and the subsequent change in retail activity, but further research might
+allow us to better understand the relationship between the beginning level of
+retail and subsequent demographic changes. Does the presence or absence of
+retail (or, again, certain types of retail) lead to subsequent changes in income
+composition?
+In spite of the recent academic literature and public effort focused on better
+documenting retail demand in low-income neighborhoods, it may be the case
+that demand is not the key factor that determines retail locations. This research
+suggests, in fact, that the existing composition of the neighborhood matters,
+and shifts in demand, such as increases in the high- and low-end of the markets,
+may be confusing retailers. If much of the neighborhood-level retail growth is
+due to the competitive dynamics between neighborhoods, with activity shifting
+between nearby locations, what accounts for these shifts? Future research should
+focus more on the contribution of supply-side factors, particularly business mix,
+to retail location decisions. To generate more meaningful policy implications, it
+will be necessary to drill down to the corridor level, rather than analyzing busi-
+ness patterns at the zip code level as is most commonly done in this type of
+research. 
+Karen Chapple and Rick Jacobus
+61
+02-0297-9 ch02  3/31/09  4:55 PM  Page 61
+
+===== PAGE 44 =====
+To understand these questions and craft more effective policy interventions,
+better data are necessary. The NETS data are a convenient source of the address-
+based longitudinal data that are required to understand retail markets, but they
+fall short in several regards. First, because this database is developed by a private
+vendor, its cost is prohibitive for many researchers. Second, researchers report
+that its employment numbers may be inaccurate.145 Finally, research on retail
+revitalization needs to take into account many different outcomes, including
+changes in crime, tax revenue, vacancy rates, indirect investment, and other
+indicators. To advance this field, it would be helpful to have government agen-
+cies, such as the Small Business Administration and the Department of Housing
+and Urban Development, work together to collect data on these revitalization
+outcomes at the level of the address and neighborhood. Until the collection of
+data becomes more systematic, our studies of revitalization will remain mostly
+speculative. 
+62
+Retail Trade as a Route to Neighborhood Revitalization
+145. Panel discussion on “Employment Dynamics, Firm Movement, and Establishment-
+Level Time-Series Data,” Association of Collegiate Schools of Planning Annual Conference,
+Chicago, July 9, 2008. For the Dun and Bradstreet data, phone surveyors ask employers to
+estimate numbers of employees, and if they decline to provide new data, surveyors simply use
+the total from the previous year. Further, employers may give a total number of employees,
+rather than the number employed at one specific location.
+02-0297-9 ch02  3/31/09  4:55 PM  Page 62
+
+===== PAGE 45 =====
+References
+Abell, Barbara. 2002. Overcoming Obstacles to CDC Supermarket Development: A Guide.
+Washington: National Congress for Community Economic Development. 
+———. 1998. Supermarket Development: CDC’s and Inner City Economic Development.
+Washington: National Congress for Community Economic Development. 
+Alwitt, Linda F., and Thomas D. Donley. 1997. “Retail Stores in Poor Urban Neighbor-
+hoods.” Journal of Consumer Affairs 31, no. 1: 139–64. 
+Artz, Georgeanne, and Kenneth Stone. 2006. “Analyzing the Impact of Wal-Mart Super-
+centers on Local Food Store Sales.” American Journal of Agricultural Economics 88, no. 5:
+1296–303. 
+Asabere, Paul K., and Forrest E. Huffman. 1991. “Historic Districts and Land Values.” Jour-
+nal of Real Estate Research 6, no. 1: 1–7. 
+Ball, Jennifer. 2002. Street Vending (PAS 509): A Survey of Ideas and Lessons for Planners.
+Chicago: American Planning Association Planning Advisory Service. 
+Basker, Emek. 2005. “Job Creation or Destruction? Labor-Market Effects of Wal-Mart
+Expansion.” Review of Economics and Statistics 87: 174–83. 
+Bates, Timothy. 1997. Race, Self-Employment, and Upward Mobility: An Illusive American
+Dream. Johns Hopkins University Press. 
+Bernhardt, Annette. 1999. “The Future of Low-Wage Jobs: Case Studies in the Retail Indus-
+try.” IEE Working Paper 10. New York: Institute on Education and the Economy. 
+Berube, Alan, and Thacher Tiffany. 2004. The Shape of the Curve: Household Income Distribu-
+tions in U.S. Cities, 1979–1999. Living Cities Census Series. Brookings.
+Birch, Eugenie L. 2005. “Who Lives Downtown.” Brookings, Metropolitan Policy Program. 
+Booza, Jason, Jackie Cutsinger, and George Galster. 2006. Where Did They Go? The Decline of
+Middle-Income Neighborhoods in Metropolitan America. Brookings.
+Boston Consulting Group Inc. 1998. “The Business Case for Pursuing Retail Opportunities
+in the Inner City.” Boston: Initiative for a Competitive Inner City. 
+Briffault, Richard. 1999. “A Government for Our Time: Business Improvement Districts and
+Urban Governance.” Columbia Law Review 99, no. 2: 265–477. 
+Carlson, Neil. 2003. “A Road Map to Revitalizing Urban Neighborhood Business Districts.”
+New York: Local Initiatives Support Corporation (October). 
+Chung, Chanjin, and Samuel L. Myers Jr. 1999. “Do the Poor Pay More for Food? An Analy-
+sis of Grocery Store Availability and Food Price Disparities.” Journal of Consumer Affairs
+33, no. 2: 276–96. 
+Civic Economics. 2002. Economic Impact Analysis: A Case Study, Local Merchants vs. Chain
+Retailers, Executive Summary. Report prepared for LiveableCity Austin and Austin Inde-
+pendent Business Alliance. Austin (December). 
+Clampet-Lundquist, Susan. 2004. “Moving Over or Moving Up? Short-Term Gains and
+Losses for Relocated HOPE VI Families.” Cityscape 7, no. 1: 57–80. 
+Clifton, Kelly J. 2003. “Examining Travel Choices of Low-Income Populations: Issues, Meth-
+ods, and New Approaches.” Paper presented at the 10th International Conference on
+Travel Behaviour Research. Lucerne, Switzerland, August. 
+———. 2004. “Mobility Strategies and Food Shopping for Low-Income Families: A Case
+Study.” Journal of Planning Education and Research 23, no. 4: 387–401. 
+Karen Chapple and Rick Jacobus
+63
+02-0297-9 ch02  3/31/09  4:55 PM  Page 63
+
+===== PAGE 46 =====
+Coyle, Deirdre M. 2007. “Realizing the Inner City Retail Opportunity: Progress and New
+Directions, An Analysis of Retail Markets in America’s Inner Cities.” Economic Develop-
+ment Journal 6, no. 1: 6–14. 
+Crane, Randall, and Michael Manville. 2008. “People or Place? Revisiting the Who versus the
+Where in Community Economic Development.” Working Paper. Cambridge, Mass.: Lin-
+coln Institute of Land Policy.
+Curley, Alexandra M. 2006. “HOPE and Housing: The Effects of Relocation on Movers’
+Economic Stability, Social Networks, and Health.” PhD dissertation, Boston University. 
+Dane, Suzanne G., ed. 1988. New Directions for Urban Main Streets. Washington: National
+Trust for Historic Preservation.
+Dardia, Michael. 1998. “Subsidizing Redevelopment in California.” San Francisco: Public
+Policy Institute of California.
+Dickens, William T. 1999. “Rebuilding Urban Labor Markets: What Community Develop-
+ment Can Accomplish.” In Urban Problems and Community Development, edited by
+Ronald F. Ferguson, pp. 381–436. Brookings.
+Dixon, Timothy J. 2005. “The Role of Retailing in Urban Regeneration.” Local Economy 20,
+no. 2: 168–82.
+Dowall, David E., and others. 1994. “Urban Residential Redevelopment in the People’s
+Republic of China.” Urban Studies 31, no. 9: 1497–516.
+Dunford, Jenny. 2006. “Under-served Markets.” Local Economy 21, no. 1: 73–77.
+Eisinger, Peter K. 1988. The Rise of the Entrepreneurial State: State and Local Economic Devel-
+opment Policy in the United States. University of Wisconsin Press.
+Fogelson, Robert M. 2001. Downtown: Its Rise and Fall, 1880–1950. Yale University Press.
+Food Marketing Institute. 1993. Joint Venture in the Inner City—Supermarket General Corpo-
+ration and New Community Corporation. Washington.
+Freeman, Lance. 2004. “There Goes the Hood: The Meaning of Gentrification to Long-
+Term Residents.” Paper presented at annual meeting of American Sociological Association.
+San Francisco, August.
+———. 2005. “Displacement or Succession? Residential Mobility in Gentrifying Neighbor-
+hoods.” Urban Affairs Review 40, no. 4: 463–91.
+———. 2006. There Goes the Hood: Views of Gentrification from the Ground Up. Temple Uni-
+versity Press.
+Freeman, Lance, and Frank Braconi. 2004. “Gentrification and Displacement in New York
+City.” Journal of the American Planning Association 70, no. 1: 39–52.
+Frieden, Bernard J., and Lynne Sagalyn. 1989. Downtown, Inc.: How America Builds Cities.
+MIT Press.
+Galster, George, and Jason Booza. 2007. “The Rise of the Bipolar Neighborhood.” Journal of
+American Planning Association 73, no. 4: 421–35.
+Galster, George, and others. 2005. Low-Income Households in Mixed-Income Neighborhoods:
+Extent, Trends, and Determinants. Report prepared for the U.S. Department of Housing
+and Urban Development. Washington: HUD. 
+Goering, John, and Judith D. Feins. 2003. Choosing a Better Life: Evaluating the Moving to
+Opportunity Social Experiment. Washington: Urban Institute Press.
+Goetz, Edward G. 2002. “Forced Relocation vs Voluntary Mobility: The Effects of Dispersal
+Programs on Households.” Housing Studies 17, no. 1: 107–23.
+64
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 64
+
+===== PAGE 47 =====
+Goodman, Michael D., and Daniel J. Monti. 1999. “Corporately Sponsored Redevelopment
+Campaigns And The Social Stability of Urban Neighborhoods: St. Louis Revisited.” Jour-
+nal of Urban Affairs 21, no. 1: 101–27.
+Gross, Jill S. 2005. “Business Improvement Districts in New York City’s Low-Income and
+High-Income Neighborhoods.” Economic Development Quarterly 19, no. 2: 174–89. 
+Hernandez, Manuel. 2001. “The Impact of Commercial Development on Inner City Revital-
+ization: An Analysis of Projects in Boston.” Master’s thesis, Department of Urban Studies
+and Planning, Massachusetts Institute of Technology. 
+Houstoun, Lawerence O., Jr. 2004. “Business Improvement Districts.” Economic Development
+Journal 3, no. 3: 48–54.
+Hoyt, Lorlene M. 2005. “Do Business Improvement District Organizations Make a Differ-
+ence?” Journal of Planning Education and Research 25, no. 2: 185–99.
+Immergluck, Daniel. 1999. “Neighborhoods, Race, and Capital: The Effects of Residential
+Change on Commercial Investment Patterns.” Urban Affairs Review 34, no. 3: 397–411.
+Initiative for a Competitive Inner City. 2002. The Changing Models of Inner City Grocery
+Retailing. Boston.
+International Council of Shopping Centers. 2004. Developing Successfull Retail in Underserved
+Urban Markets. Report produced in cooperation with Business for Social Responsibility.
+New York.
+Jacobus, Rick, and Maureen Hickey. 2007. “Commercial Revitalization Planning Guide: A
+Toolkit for Community Based Organizations.” New York: Local Initiatives Support Cor-
+poration, Center for Commercial Revitalization.
+Johnson, Craig L., and Joyce Y. Man. 2001. Tax Increment Financing and Economic Develop-
+ment: Uses, Structures, and Impact. State University of New York Press.
+Joseph, Mark. 2006. “Is Mixed-Income Development an Antidote to Urban Poverty?” Hous-
+ing Policy Debate 17, no. 2: 209–34.
+Kelley, Steve. 1996. “The Main Street Program in Mississippi.” Economic Development Review
+14, no. 3: 56.
+Kennedy, Maureen, and Paul Leonard. 2001. “Dealing with Neighborhood Change: A
+Primer on Gentrification and Policy Choices.” Discussion Paper prepared for the Brook-
+ings Institution Center on Urban and Metropolitan Policy and PolicyLink (www.poli-
+cylink.org/pdfs/BrookingsGentrification.pdf).
+Koebel, Theodore C. 2002. “Analyzing Neighborhood Retail and Service Change in Six
+Cities.” Blacksburg, Va.: Virginia Polytechnic Institute and State University, Center for
+Housing Research.
+Levy, Diane K., and Mark Woolley. 2007. “Relocation Is Not Enough: Employment Barriers
+among HOPE VI Families.” Policy Brief 6. Washington: Urban Institute.
+Listokin, David, Barbara Listokin, and Michael Lahr. 1998. “The Contributions of Historic
+Preservation to Housing and Economic Development.” Housing Policy Debate 9, no. 3:
+431–78. 
+Loukaitou-Sideris, Anastasia. 2000. “Revisiting Inner-City Strips: A Framework for Commu-
+nity and Economic Development.” Economic Development Quarterly 14, no. 2: 165–81.
+Mari Gallagher Research and Consulting Group. 2006. “Examining the Impact of Food
+Deserts on Public Health in Chicago.” Chicago: LaSalle Bank. 
+Marketek, Inc. 2000. Economic Impact Assessment of Fruitvale Main Street Initiative. Report
+prepared for the Local Initiatives Support Corporation. New York: LISC. 
+Karen Chapple and Rick Jacobus
+65
+02-0297-9 ch02  3/31/09  4:55 PM  Page 65
+
+===== PAGE 48 =====
+Markusen, Ann R., ed. 2007. Reining in the Competition for Capital. Kalamazoo, Mich.:
+Upjohn Institute for Employment Research.
+Mason, Randall. 2005. “Economics and Historic Preservation: A Guide and Review of the
+Literature.” Brookings.
+McKinnish, Terra, Randall P. Walsh, and Kirk White. 2008. “Who Gentrifies Low-Income
+Neighborhoods?” NBER Working Paper W14036. Cambridge, Mass.: National Bureau of
+Economic Research (http://ssrn.com/abstract=1139352). 
+Medoff, Peter, and Holly Sklar. 1994. Streets of Hope: The Fall and Rise of an Urban Neighbor-
+hood. Boston: South End Press.
+Min, Pyong Gap, and Mehdi Bozorgmehr. 2000. “Immigrant Entrepreneurship and Business
+Patterns: A Comparison of Koreans and Iranians in Los Angeles.” International Migration
+Review 34, no. 3: 707–38.
+Mitchell, Jerry. 2003. “Business Improvement Districts and Innovative Service Delivery.” In
+New Ways of Doing Business, edited by Mark A. Abramson and Ann M. Kieffaber, pp.
+217–48. Lanham, Md.: Rowman & Littlefield.
+Moore, Latetia V., and Ana V. Diez Roux. 2006. “Associations of Neighborhood Characteris-
+tics with the Location and Type of Food Stores.” American Journal of Public Health 96, no.
+2: 325–31.
+Newman, Kathe, and Elvin Wyly. 2006. “The Right to Stay Put, Revisited: Gentrification
+and Resistance to Displacement in New York City.” Urban Studies 43, no. 1: 23–57.
+Nunn, Samuel. 2001. “Planning for Inner-City Retail Development.” Journal of the American
+Planning Association 67, no. 2: 159–72.
+Nyden, Phillip, and others. 1997. Building Community: Social Science in Action. Thousand
+Oaks, Calif.: Pine Forge Press.
+Oakley, Dierdre, and Hui-Shien Tsao. 2006. “A New Way of Revitalizing Distressed Urban
+Communities? Assessing the Impact of the Federal Urban Empowerment Zone Program.”
+Journal of Urban Affairs 28, no. 5: 443–71.
+Ong, Paul M., and Doug Houston. 2002. “The 2000 Census Undercount in Los Angles
+County.” University of California—Los Angeles, School of Public Policy Social Research.
+Pawasarat, John, and Lois M. Quinn. 2001. “Exposing Urban Legends: The Real Purchasing
+Power of Central City Neighborhoods.” Brookings, Center on Urban and Metropolitan
+Policy.
+Porter, Michael E. 1995. “The Competitive Advantage of the Inner City.” Harvard Business
+Review 73, no. 3: 55–71.
+Pothukuchi, Kameshwari. 2005. “Attracting Supermarkets to Inner-City Neighborhoods:
+Economic Development Outside the Box.” Economic Development Quarterly 19, no. 3:
+232–44.
+Raja, Samina, Changxing Ma, and Pavan Yadav. 2008. “Beyond Food Deserts: Measuring
+and Mapping Racial Disparities in Neighborhood Food Environments.” Journal of Plan-
+ning Education and Research 27, no. 4: 469–82.
+Rauch, James E. 1996. “Trade and Networks: An Application to Minority Retail Entrepre-
+neurship.” Working Paper. New York: Russell Sage Foundation.
+Rich, Michael J., and Robert P. Stoker. 2007. “Governance and Urban Revitalization: Lessons
+from the Urban Empowerment Zones Initiative.” Paper prepared for Conference on a
+Global Look at Urban and Regional Governance: The State-Market-Civic Nexus. Emory
+University, January 18–19. 
+66
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 66
+
+===== PAGE 49 =====
+Rosenbaum, James E., and Susan J. Popkin. 1991 “Employment and Earnings of Low-
+Income Blacks Who Move to Middle-Class Suburbs.” In The Urban Underclass, edited by
+Christopher Kencks and Paul Peterson, pp. 342–56. Brookings.
+Rubinowitz, Leonard S. and James E. Rosenbaum. 2000. Crossing the Class and Color Lines:
+From Public Housing to White Suburbia. University of Chicago Press.
+Sagalyn, Lynne. 1989. “Measuring Financial Returns When the City Acts as an Investor:
+Boston and Faneuil Hall Marketplace.” Real Estate Issue 14, no. 2: 7–15.
+Seidman, Karl F. 1999. Community Business Network: An Evaluation of Program Outcomes and
+Operations. Cambridge, Mass.: Massachusetts Association of Community Development
+Corporations.
+———. 2001. Wanted: Solutions for America. Final Research Report, Boston Main Streets
+Program. Prepared for Pew Partnership and Rutgers University Center for Urban and
+Regional Policy.
+———. 2002. “Urban Inner City Commercial Revitalization: A Literature Review.” Unpub-
+lished paper. MIT, Department of Urban Studies and Planning (June).
+———. 2003. “Inner-City Commercial Revitalization: Applying the Main Street Model.”
+Unpublished paper. MIT, Department of Urban Studies and Planning (March).
+———. 2004. Revitalizing Commerce for American Cities: A Practitioner’s Guide to Urban
+Main Street Programs. Washington: Fannie Mae Foundation. 
+Servon, Lisa J., and Edwin Melendez. 2006. “The Evolution of Urban Community Develop-
+ment Corporations.” Unpublished paper. The New School, Community Development
+Research Center.
+Short, Anne, Julie Guthman, and Samuel Raskin. 2007. “Food Deserts, Oases, or Mirages?
+Small Markets and Community Food Security in the San Francisco Bay Area.” Journal of
+Planning Education and Research 26, no. 3: 352–64.
+Smith, Neil. 1996. The New Urban Frontier: Gentrification and the Revanchist City. London:
+Routledge.
+Stokes, Robert J. 2007. “Business Improvement Districts and Small Business Advocacy: The
+Case of San Diego’s Citywide BID Program.” Economic Development Quarterly 21, no. 3:
+278–91.
+Stone, Kenneth E. 1997. “Impact of the Wal-Mart Phenomenon on Rural Communities.” In
+Increasing Understanding of Public Problems and Policies, pp. 189–200. Oak Brook, Ill.:
+Farm Foundation.
+Teitz, Michael. 1989. “Neighborhood Economics: Local Communities and Regional Mar-
+kets.” Economic Development Quarterly 3, no. 2: 111–22.
+Turner, Robyne S. 2004. “Troost Avenue Revival: Breathing New Life into Neighborhood
+Commercial Corridors.” Paper presented at annual meeting of American Political Science
+Association. Portland, November. 
+Turney, Kristen, and others. 2006. “Neighborhood Effects on Barriers to Employment:
+Results from a Randomized Housing Mobility Experiment in Baltimore.” In Brookings-
+Wharton Papers on Urban Affairs, edited by Gary Burtless and Janet Rothenberg Pack, pp.
+137–87. Brookings .
+U.S. Department of Housing and Urban Development (HUD). 1999. New Markets: The
+Untapped Retail Buying Power in America’s Inner Cities. Government Printing Office.
+U.S. Government Accountability Office (GAO). 2006. Empowerment Zone and Enterprise
+Community Program: Improvements Occurred in Communities, but the Effect of the Program
+Is Unclear. Report GAO-06-727. 
+Karen Chapple and Rick Jacobus
+67
+02-0297-9 ch02  3/31/09  4:55 PM  Page 67
+
+===== PAGE 50 =====
+———. 2007. New Markets Tax Credit Appears to Increase Investment by Investors in Low-
+Income Communities, but Opportunities Exist to Better Monitor Compliance. Report GAO-
+07-296. 
+Walker, Christopher, and others. 2002. Public-Sector Loans to Private-Sector Businesses: An
+Assessment of HUD-Supported Local Economic Development Lending Activities. Report to
+U.S. Department of Housing and Urban Development.Washington: Urban Institute.
+Weber, Rachel. 2003. “Equity and Entrepreneurialism: The Impact of Tax Increment Financ-
+ing on School Finance.” Urban Affairs Review 38, no. 5: 619–44.
+Weissbourd, Robert, and Christopher Berry. 1999. “The Market Potential of Inner-City
+Neighborhoods: Filling the Information Gap.” Brookings.
+Wilder, Margaret G., and Barry M. Rubin. 1988. “Targeted Redevelopment through Urban
+Enterprise Zones.” Journal of Urban Affairs 10, no. 1: 1–17.
+Williams, Colin C., and Jan Windebank. 2002. “The ‘Excluded Consumer’: A Neglected
+Aspect of Social Exclusion?” Policy and Politics 30, no. 4: 501–13.
+Wilson, James, and George Kelling. 1982. “Broken Windows.” Atlantic Monthly 249, no. 3:
+29–38.
+Wilson, William J. 1987. The Truly Disadvantaged: The Inner City, the Underclass, and Public
+Policy. University of Chicago Press.
+Wyly, Elvin K., and Daniel J. Hammel. 1999. “Islands of Decay in Seas of Renewal: Urban
+Policy and the Resurgence of Gentrification.” Housing Policy Debate 10: 711–71.
+———. 2004. “Gentrification, Segregation and Discrimination in the American Urban Sys-
+tem.” Environment and Planning A 36: 1215–241.
+68
+Retail Trade as a Route to Neighborhood Revitalization
+02-0297-9 ch02  3/31/09  4:55 PM  Page 68

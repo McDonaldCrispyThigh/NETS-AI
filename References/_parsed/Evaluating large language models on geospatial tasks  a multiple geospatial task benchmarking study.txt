@@ -1,0 +1,1723 @@
+
+===== PAGE 1 =====
+International Journal of Digital Earth
+ISSN: 1753-8947 (Print) 1753-8955 (Online) Journal homepage: www.tandfonline.com/journals/tjde20
+Evaluating large language models on geospatial
+tasks: a multiple geospatial task benchmarking
+study
+Liuchang Xu, Shuo Zhao, Qingming Lin, Luyao Chen, Qianqian Luo, Sensen
+Wu, Xinyue Ye, Hailin Feng & Zhenhong Du
+To cite this article: Liuchang Xu, Shuo Zhao, Qingming Lin, Luyao Chen, Qianqian Luo, Sensen
+Wu, Xinyue Ye, Hailin Feng & Zhenhong Du (2025) Evaluating large language models on
+geospatial tasks: a multiple geospatial task benchmarking study, International Journal of Digital
+Earth, 18:1, 2480268, DOI: 10.1080/17538947.2025.2480268
+To link to this article:  https://doi.org/10.1080/17538947.2025.2480268
+© 2025 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group
+Published online: 06 Apr 2025.
+Submit your article to this journal 
+Article views: 3987
+View related articles 
+View Crossmark data
+Citing articles: 24 View citing articles 
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=tjde20
+
+===== PAGE 2 =====
+Evaluating large language models on geospatial tasks: a multiple 
+geospatial task benchmarking study
+Liuchang Xu 
+a,b,d†, Shuo Zhaoa†, Qingming Lina, Luyao Chena, Qianqian Luoa, 
+Sensen Wub, Xinyue Yec, Hailin Fenga and Zhenhong Dub
+aSchool of Mathematics and Computer Science, Zhejiang Agriculture and Forestry University, Hangzhou, People’s 
+Republic of China; bSchool of Earth Sciences, Zhejiang University, Hangzhou, People’s Republic of China; 
+cDepartment of Landscape Architecture and Urban Planning & Center for Geospatial Sciences, Applications and 
+Technology, Texas A&M University, College Station, TX, USA; dFinancial Big Data Research Institute, Sunyard 
+Technology Co., Ltd., Hangzhou, People’s Republic of China
+ABSTRACT  
+The emergence of large language models like ChatGPT and Gemini has 
+highlighted the need to assess their diverse capabilities. However, their 
+performance on geospatial tasks remains underexplored. This study 
+introduces a novel multi-task spatial evaluation dataset to address this 
+gap, covering twelve task types, including spatial understanding and 
+route planning, with verified answers. We evaluated several models, 
+including OpenAI’s gpt-3.5-turbo, gpt-4-turbo, gpt-4o, ZhipuAI’s glm-4, 
+Anthropic’s claude-3-sonnet-20240229, and MoonShot’s moonshot-v1- 
+8k, using a two-phase testing approach: zero-shot testing followed by 
+difficulty-based categorization and prompt tuning. Results show that 
+gpt-4o had the highest overall accuracy in the first phase at 71.3%. 
+Though 
+moonshot-v1-8k 
+performed 
+slightly 
+worse 
+overall, 
+it 
+outperformed gpt-4o in place name recognition tasks. The study also 
+highlights the impact of prompt strategies on performance, such as the 
+Chain-of-Thought strategy, which boosted gpt-4o’s accuracy in route 
+planning from 12.4% to 87.5%, and a one-shot strategy that raised 
+moonshot-v1-8k’s accuracy in mapping tasks from 10.1% to 76.3%.
+ARTICLE HISTORY
+Received 3 September 2024 
+Accepted 27 February 2025  
+KEYWORDS  
+Large language models; 
+ChatGPT; benchmarking; 
+spatial reasoning; prompt 
+engineering
+1. Introduction
+1.1. Background and development of large language models
+The advent of large language models (LLMs) has revolutionized various domains (Azaria 2022; 
+Kocoń et al. 2023; Zhao et al. 2023; Zhou et al. 2024). Since the release of ChatGPT in late 2022, 
+followed by other advanced models like gpt-4 and Google’s Gemini (Team et al. 2023), these tech­
+nologies have demonstrated significant potential in specialized technical fields. Of particular inter­
+est is their capability to handle complex spatial reasoning and geographic knowledge processing 
+tasks. These models, trained on extensive datasets with billions of parameters, have shown prom­
+ising results in natural language understanding, reasoning, and specialized domain applications, 
+including geospatial analysis. Some advanced models, notably those with multimodal capabilities, 
+© 2025 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group 
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (http://creativecommons. 
+org/licenses/by-nc/4.0/), which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work 
+is properly cited. The terms on which this article has been published allow the posting of the Accepted Manuscript in a repository by the author(s) or 
+with their consent. 
+CONTACT  Zhenhong Du 
+duzhenhong@zju.edu.cn
+School of Earth Sciences, Zhejiang University, Hangzhou 310058, 
+People’s Republic of China
+†These authors contributed equally to this work
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+2025, VOL. 18, NO. 1, 2480268 
+https://doi.org/10.1080/17538947.2025.2480268
+
+===== PAGE 3 =====
+can process both textual and visual geographic information, opening new possibilities for GIS appli­
+cations (Juhász et al. 2023; Li and Ning 2023; Manvi et al. 2024; Roberts et al. 2023; Yang et al. 2024).
+Recent systematic performance comparisons of LLMs have revealed several key insights about 
+their capabilities across various domains. In language processing, researchers have evaluated 
+their performance on Chinese reading comprehension tasks (Kuo, Wu, and Liao 2024); in task 
+planning, studies have examined LLMs’ abilities in natural language planning and sequential 
+decision-making (Zheng et al. 2024). These evaluations, conducted using or referencing various 
+comprehensive benchmarks, focus on three critical aspects: First, foundational knowledge and 
+reasoning abilities have been extensively tested through benchmarks like C-Eval and AGIEval 
+(see Table A1). The results indicate that while the best-performing models achieve high accuracy 
+in basic knowledge tasks (>80%), they face significant challenges in professional-level reasoning 
+tasks, with accuracy rates dropping to 50-60% (Huang et al. 2024; Zhong et al. 2024). Second, prac­
+tical application capabilities have been assessed through Super-CLUE and CMMLU. These evalu­
+ations demonstrate that the best-performing models perform notably better in structured tasks 
+compared to open-ended applications, with accuracy rates differing by 15-20% (Li et al. 2024; 
+Xu et al. 2023). Third, comprehensive multi-dimensional evaluations through platforms like Open­
+Compass have shown that the best-performing models excel in language understanding and knowl­
+edge retrieval (>80% accuracy). However, their performance declines significantly in tasks requiring 
+advanced reasoning or domain-specific expertise, with accuracy rates typically falling below 65% 
+(Borji and Mohammadian 2023). These systematic evaluations reveal a clear pattern: while LLMs 
+demonstrate remarkable abilities in structured, knowledge-based tasks, even the best-performing 
+models face notable challenges in complex reasoning and specialized domain applications (Koubaa 
+2023; Lin et al. 2024).
+1.2. Large language models in geographic information science
+Alongside their general capabilities, there has been an increasing focus on the potential of LLMs to 
+handle tasks within geographic information Science (GIS), particularly in spatial reasoning and geo­
+graphic knowledge processing. Recent research has progressively revealed the significant potential 
+of LLMs across various GIS tasks, highlighting both their promising capabilities and ongoing chal­
+lenges. The foundational study by Peter Mooney et al. laid an important groundwork for evaluating 
+ChatGPT’s performance in GIS standardized exams. The study found that GPT-3.5 and GPT-4 
+achieved D and B+ grades, respectively, in an introductory GIS exam. This study not only provided 
+a deep analysis of the strengths and limitations of LLMs in spatial concept understanding, but also 
+offered valuable insights for educators and researchers on the application of AI models in special­
+ized fields (Mooney et al. 2023). However, as research has advanced, further studies have expanded 
+upon these findings, illustrating both the rapid development and the persistent hurdles LLMs face 
+when applied to complex spatial problems. The body of work in this area can be categorized into 
+three key areas: spatial perception and understanding, spatial reasoning and analysis, and practical 
+applications. Each of these areas reflects the broader progress and ongoing challenges that shape the 
+current state of LLMs in GIS tasks. 
+(a) In the realm of spatial perception and understanding, significant progress has been made, par­
+ticularly in cartography and spatial visualization. Tao and Xu’s pioneering research in map cre­
+ation demonstrated that LLMs like ChatGPT could lower the barriers to map production and 
+improve efficiency in cartographic tasks. However, their study also highlighted important chal­
+lenges related to quality control, which indicates a need for further refinement in map gener­
+ation processes (Tao and Xu 2023). Subsequent advancements, such as those by Tao and Xu 
+with GPT-4 V, have expanded our understanding of LLMs’ capabilities in map interpretation 
+and spatial analysis (Xu and Tao 2024). These studies have revealed that LLMs can effectively 
+extract valuable information from a range of map types and perform complex quantitative 
+2 
+L. XU ET AL.
+
+===== PAGE 4 =====
+spatial analyses. However, challenges remain, particularly in dealing with more intricate and 
+diverse map types, where LLMs may struggle with map complexity and finer details. This high­
+lights the need for future work focused on improving the models’ ability to handle these more 
+complex scenarios. In a complementary study, Liu et al. examined LLMs’ capacity to process 
+geographic diversity by analyzing DBpedia abstracts, further enhancing our understanding 
+of how LLMs represent and interpret geographic knowledge (Liu et al. 2024). Their findings 
+contribute to the ongoing development of LLMs as powerful tools for geographic knowledge 
+representation, revealing both the strengths and the limitations of LLMs in capturing the diver­
+sity of geographic concepts.
+(b) Research on spatial reasoning and analysis has increasingly focused on complex spatial pro­
+blem-solving tasks, particularly those related to navigation. Aghzal et al. demonstrated that 
+LLMs, particularly gpt-4, when optimized with few-shot prompting and fine-tuned BART 
+and T5 models, can effectively handle intricate route planning tasks that require obstacle avoid­
+ance in dynamic environments (Aghzal, Plaku, and Yao 2024). This study underscores the 
+potential of LLMs to perform in real-world, complex spatial scenarios, where the ability to 
+adapt to changing conditions is critical. Expanding on this, Yamada et al. developed sophisti­
+cated natural language navigation tasks that assess spatial structure representation (Yamada 
+et al. 2023). Their work revealed that models like gpt-3.5-turbo and gpt-4 exhibit strong capa­
+bilities in understanding and reasoning about spatial relationships, even in highly complex and 
+cluttered environments, suggesting that these models could play a pivotal role in applications 
+such as autonomous navigation and GIS. Furthermore, Sharma et al. explored the advanced 
+analytical capabilities of LLMs by evaluating multiple models’ performance on both 3D robotic 
+trajectory data and 2D directional tasks (Sharma 2023). Their findings provide valuable 
+insights into LLMs’ adaptability across various forms of spatial reasoning, highlighting both 
+their strengths in processing different data formats and the challenges they face when dealing 
+with real-time, dynamic spatial data. These studies collectively demonstrate the growing poten­
+tial of LLMs in spatial reasoning tasks but also reveal the need for further refinement to 
+improve their performance in more complex, unpredictable environments.
+(c) In terms of practical applications in geospatial tasks, LLMs have demonstrated substantial 
+promise in a variety of real-world scenarios, showcasing their ability to provide efficient and 
+actionable solutions in domains requiring spatial reasoning. In the realm of geographic infor­
+mation extraction, Hu et al. evaluated the performance of ChatGPT and gpt-4 in accurately 
+identifying geographic locations from disaster-related social media content, emphasizing 
+their potential for real-time data processing in crisis situations, where the need for timely 
+and accurate geographic insights is paramount (Hu et al. 2023). Their work highlights the 
+capacity of LLMs to extract valuable geographic information from unstructured text, showcas­
+ing a key strength in processing large-scale, dynamic datasets. In geographic question answer­
+ing, Feng et al. introduced GeoQAMap, an innovative system that integrates LLMs with 
+structured geospatial data to provide interactive map visualizations for answering geographic 
+queries (Feng, Ding, and Xiao 2023). This work further underscores the utility of LLMs in 
+offering actionable geographic insights through natural language interfaces, which can enhance 
+decision-making in various applications such as urban planning, disaster response, and 
+environmental monitoring. Additionally, in location-based services, Feng et al. explored inno­
+vative prompt engineering techniques to improve point-of-interest (POI) recommendation 
+tasks, unlocking new possibilities for personalized and context-aware location-based services 
+(Feng et al. 2024). Their research demonstrates the adaptability of LLMs to provide personal­
+ized recommendations based on user preferences and contextual information, which could 
+revolutionize fields like tourism, navigation, and retail.
+To systematically evaluate these diverse spatial applications, Hochmair et al. conducted a com­
+prehensive evaluation of multiple chatbots across various spatial tasks, establishing crucial 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+3
+
+===== PAGE 5 =====
+benchmarks for assessing LLMs’ spatial reasoning capabilities (Hochmair, Juhász, and Kemp 2024). 
+Their work provided an initial, broad overview of LLMs performance on spatial tasks, laying the 
+groundwork for later benchmarks in this field. To further evaluate, new benchmarks for different 
+spatial tasks have emerged successively. Tang and Kejriwal proposed GRASP, a grid-based bench­
+mark containing 16,000 environments to evaluate commonsense spatial reasoning abilities of LLMs 
+(Tang and Kejriwal 2024). Their findings revealed that even advanced models like GPT-4o face 
+challenges in achieving consistent satisfactory solutions in spatial planning scenarios. Li and Bi 
+developed STBench, which assesses LLMs’ spatio-temporal understanding across four dimensions: 
+knowledge comprehension, spatio-temporal reasoning, accurate computation, and downstream 
+applications (Li et al. 2024). Their evaluation of 13 LLMs showed promising results in knowledge 
+comprehension and reasoning tasks, while highlighting areas for improvement through various 
+prompting strategies. In the urban domain, Feng and Li introduced CityBench, an interactive simu­
+lator-based evaluation platform that tests LLMs’ capabilities in urban perception-understanding 
+and decision-making tasks across 13 global cities (Feng et al. 2024). These benchmarks evaluate 
+LLMs performance from various aspects, particularly in the context of GIS-specific tasks, providing 
+insights into their strengths and limitations in the domain of spatial reasoning. Recently, Yifan 
+Zhang and collaborators have contributed additional benchmarks that focus specifically on the 
+GIS domain. For instance, in BB-GeoGPT, Zhang et al. introduced BB-GeoEval, a framework 
+designed to evaluate LLMs’ understanding of GIS-specific knowledge (Zhang et al. 2024). Further­
+more, their work on Geospatial large language models trained with a simulated environment for 
+generating tool-use chains autonomously led to the development of GTChain-Eval, which assesses 
+the ability of LLMs to autonomously generate geospatial tool-use chains (Zhang et al. 2025). In a 
+similar vein, the GeoTool-GPT project by Zhang’s team proposed GeoTask, a dataset for evaluating 
+LLMs’ proficiency in using GIS tools through 300 annotated instructions (Wei et al. 2025). These 
+benchmarks contribute valuable insights into the strengths and weaknesses of LLMs in handling 
+complex geospatial tasks.
+Our research builds upon prior work, particularly in evaluating the ability of LLMs to handle geos­
+patial tasks. The work of Hochmair et al. provides valuable insights into LLMs’ capabilities in basic 
+spatial reasoning. However, their study focuses mainly on the analysis of individual geospatial 
+tasks and lacks a systematic, hierarchical evaluation framework, which limits a comprehensive exam­
+ination of the interrelationships between various geospatial tasks. Specifically, Hochmair’s study only 
+evaluates LLMs performance in basic geospatial tasks such as GIS concepts and simple code oper­
+ations (Hochmair, Juhász, and Kemp 2024). While the study provides valuable testing of a single 
+task, its approach does not encompass more complex spatial analysis and application tasks. To 
+address this gap, we propose a more detailed and multidimensional classification method for geospa­
+tial tasks. Furthermore, we integrate Geographic Information Science (GIS) with Bloom’s Taxonomy 
+of cognitive theory to develop a multilayered evaluation framework. This framework classifies geos­
+patial tasks into three levels: basic geospatial tasks, spatial analysis and operations tasks, and spatial 
+application tasks. In the design of these task dimensions, we specifically include the evaluation of 
+complex geospatial tasks. While previous studies have demonstrated that LLMs excel in basic geo­
+graphic information processing, map creation, and fundamental spatial reasoning, they also highlight 
+significant challenges in complex spatial analysis and specialized applications. Moreover, these studies 
+primarily focus on specific types of geospatial tasks and lack systematic, comprehensive benchmarks 
+for evaluating LLMs performance across a broader range of geospatial tasks. This one-sided approach 
+limits a comprehensive understanding of LLMs capabilities and their limitations across different geos­
+patial tasks. Our research fills this gap by proposing a more scientifically rigorous and clearly struc­
+tured evaluation framework. By categorizing geospatial tasks into foundational, analytical, and 
+applicative levels, we are better able to capture performance differences across various tasks and cog­
+nitive levels. This multilayered evaluation framework provides a clearer perspective for comprehen­
+sively understanding LLMs performance in geospatial tasks. By combining cognitive complexity with 
+the unique demands of GIS applications, our study offers a more robust and comprehensive 
+4 
+L. XU ET AL.
+
+===== PAGE 6 =====
+benchmark for evaluating LLMs performance in geospatial tasks. This framework not only reveals 
+LLMs’ capabilities in foundational tasks but also explores their potential in complex tasks and appli­
+cations, providing important references for the future automation of geospatial tasks and the devel­
+opment of spatial intelligence applications.
+1.3. Specific contributions
+Our study makes several key contributions to address these challenges: 
+(a) We developed a comprehensive and independent geospatial task dataset (see Figure 1), encom­
+passing twelve distinct task categories: Geographic literacy, GIS concepts, Natural Language to 
+API Mapping (NL2API Mapping), function interpretation, code explanation, code generation, 
+code translation, toponymic identification, spatial understanding, numerical trajectory recog­
+nition, geographic feature search, and simple route planning.
+(b) Our study tested several well-known models, including three from OpenAI: gpt-3.5-turbo, gpt- 
+4-turbo-2024-04-09, and gpt-4o, as well as ANTHROPIC’s claude-3-sonnet-20240229, 
+Figure 1. Construction of task categories in geospatial task datasets.
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+5
+
+===== PAGE 7 =====
+MoonShotAI’s moonshot-v1-8k, and ZhipuAI’s glm-4. Additionally, we designed a compre­
+hensive set of test scripts, utilizing API calls and precise control parameter settings to ensure 
+the rigor and reproducibility of the experimental process.
+(c) This study conducted two rounds of testing: the first round was a zero-shot test to evaluate the models’ 
+initial performance without any prompt tuning. Based on the results of the first round, we classified 
+and assessed the difficulty levels of the geospatial task dataset. For geospatial tasks where the models 
+performed poorly, we conducted prompt strategy tuning tests. The prompt strategies used included 
+One-shot, Combined Techniques Prompt, Chain of Thought (CoT), and Zero-shot-CoT.
+(d) We developed comprehensive evaluation strategies and introduced a new metric, Weighted 
+Accuracy (WA), to more intuitively observe the models’ capabilities.
+2. Geospatial tasks dataset construction
+To develop a comprehensive, reliable, and challenging geospatial task dataset, we implemented a 
+structured and efficient dataset construction strategy. The process consisted of three key stages: 
+dataset design, data collection and processing, and expert validation (see Figure 2).
+2.1. Dataset design
+Designing scientifically sound and reasonable dataset dimensions is crucial for building a highqu­
+ality spatial dataset. In the field of geospatial research, several theoretical frameworks have been 
+proposed to classify geospatial tasks and services. The geospatial community has made significant 
+efforts in this direction. For instance, the OpenGIS Web Services Architecture introduces a three- 
+tiered classification from Application services to Processing services and Information Management 
+services, emphasizing the functional dependencies between different levels (Bai, Di, and Wei 2009). 
+The task-oriented approach in geospatial studies further suggests a granular perspective, categoriz­
+ing tasks based on their complexity and decomposability into geooperators, atomic tasks, and com­
+posite tasks (Zhuang et al. 2018). These existing frameworks provide valuable insights into the 
+hierarchical nature of geospatial tasks and their organizational principles.
+Building upon these theoretical foundations and incorporating Bloom’s taxonomy of cognitive 
+processes – one of the most influential theories in education that categorizes cognitive levels into 
+knowledge, comprehension, application, analysis, synthesis, and evaluation – this study integrates 
+expertise in geographic information science with cognitive theories from educational psychology to 
+Figure 2. Dataset construction pipeline.
+6 
+L. XU ET AL.
+
+===== PAGE 8 =====
+construct a multi-layered evaluation framework. Drawing on these theoretical frameworks and 
+incorporating the specific characteristics of the GIS-related tasks (Law and Collins 2022; O’Sullivan 
+and Unwin 2010), this study divides the evaluation dimensions of the spatial dataset into three 
+levels: foundational spatial tasks, spatial analysis and operational tasks, and spatial application tasks.
+2.1.1. Foundational spatial tasks
+Foundational spatial tasks form the cornerstone of geospatial task evaluation, representing the 
+essential cognitive and operational capabilities required for LLMs to process spatial information. 
+These tasks are not only prerequisites for advanced spatial analysis but also critical for ensuring 
+the quality of spatial data. Evaluating foundational spatial tasks allows for a comprehensive assess­
+ment of a LLMs’s fundamental capabilities in spatial data collection, processing, and interpretation. 
+Based on task characteristics and application requirements, we categorize foundational spatial tasks 
+into three core subtasks: geographic feature search, geographic literacy, and GIS concepts. 
+(a) Geographic Feature Search: This task primarily evaluates a system’s ability to recognize and 
+understand geographic entities and their attributes. It encompasses both natural geographic 
+features (e.g. mountains, rivers, lakes) and human geographic elements (e.g. historical sites, 
+cultural landmarks), including their identification and attribute extraction. In practical appli­
+cations, this task requires the system to accurately extract geographic location information 
+from textual descriptions and comprehend the political, economic, and cultural characteristics 
+of these entities, as well as their spatial relationships. Studies indicate that current generative AI 
+models exhibit certain limitations in representing and understanding geographic features, par­
+ticularly at the local level, where significant regional disparities are observed. Moreover, their 
+knowledge coverage of some geographic features remains inadequate (Liu et al. 2024). This 
+suggests that, despite their potential, these models require further optimization to meet the 
+demands of applications in GIS, tourism recommendations, and academic research.
+(b) Geographic Literacy: Geographic literacy tasks evaluate a system’s comprehensive understand­
+ing of global geographic locations, topographic features, and demographic information. This 
+includes basic knowledge of geographic elements such as cities, countries, major highways, 
+river systems, and elevation data, as well as an understanding of topological relationships between 
+geographic units. Geographic literacy is defined as the ability to understand, evaluate, and apply 
+geographic knowledge, encompassing the identification of geographic facts (e.g. place names, 
+spatial distributions, natural or man-made features) and the capacity to solve problems using 
+spatial reasoning. This concept is inspired by spatial literacy studies, which focus on individuals’ 
+abilities to visualize, reason, and communicate spatial data, such as making inferences and 
+decisions based on spatial relationships (Lane, Lynch, and McGarr 2019). While spatial literacy 
+and geographic literacy share some foundational abilities, geographic literacy places particular 
+emphasis on integrating geographic knowledge with spatial operations. This distinction grants 
+geographic literacy unique value in analytical tasks and practical applications. For instance, spatial 
+literacy typically involves fundamental operations in two- and three- dimensional spaces, such as 
+understanding adjacency relationships or constructing terrain models. In contrast, geographic lit­
+eracy extends this by exploring how geographic knowledge (e.g. patterns of river system distri­
+bution or demographic characteristics) can be situated within broader geographic frameworks 
+for analysis and reasoning. This integration of knowledge and reasoning enables geographic lit­
+eracy to address complex geographic problems comprehensively, demonstrating significant uti­
+lity in fields such as geographic information science, environmental planning, and education.
+(c) GIS Concepts: GIS concept tasks focus on assessing a system’s understanding of the funda­
+mental theories and operational methods of GIS. These tasks encompass core knowledge 
+such as map projections, spatial data management, and analytical processing. They evaluate 
+the system’s ability to use GIS tools to solve complex geospatial problems through simulated 
+scenarios and theoretical questions. As noted by Law and Collins in Getting to Know ArcGIS 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+7
+
+===== PAGE 9 =====
+Desktop 10.8 (Law and Collins 2022), GIS serves as a scientific framework for managing and 
+analyzing data through geographic visualization and locational intelligence. O’Sullivan and 
+Unwin, in Geographic Information Analysis (O’Sullivan and Unwin 2010), further emphasize 
+that GIS analysis requires integrating spatial pattern recognition and statistical methods to 
+scientifically model and predict complex geographic phenomena. Mastery of these founda­
+tional theories is crucial for ensuring the scientific rigor of subsequent spatial analyses.
+2.1.2. Spatial analysis and operational tasks
+Spatial analysis and operational tasks form a pivotal component of geographic information science 
+and the evaluation framework, bridging foundational spatial cognition with practical application 
+outcomes. These tasks assess not only a LLMs’s capability to analyze spatial data but also its ability 
+to transform analytical results into actionable operations. Based on functional characteristics and 
+application requirements, we categorize spatial analysis and operational tasks into six subtasks: 
+numerical trajectory recognition, spatial understanding, code explanation, function interpretation, 
+code translation, and code generation. 
+(a) Numerical Trajectory Recognition: Numerical trajectory recognition tasks focus on evaluat­
+ing a system’s ability to identify and analyze motion trajectories in two- or three- dimensional 
+space. This includes recognizing directional changes (e.g. up, down, left, right) and describing 
+shapes based on the arrangement of points (e.g. waveforms or straight lines). Such capabilities 
+hold significant application value in areas like automated navigation systems, motion trajectory 
+analysis, and GIS data processing, directly affecting system efficiency and accuracy. Research 
+suggests that current LLMs demonstrate potential in handling numerical trajectory data and 
+spatial reasoning tasks. For instance, Sharma evaluated the performance of models like 
+ChatGPT-4 on 3D robotic trajectory data using the CALVIN dataset and achieved significant 
+improvements through prefix prompting techniques (Sharma 2023). This indicates that LLMs, 
+by enhancing spatial reasoning capabilities, can provide robust support for geometric shape 
+recognition and dynamic change analysis.
+(b) Spatial Understanding: Spatial understanding tasks focus on evaluating a system’s ability to rep­
+resent and reason about complex spatial structures. These tasks involve natural language naviga­
+tion challenges incorporating grids, hexagons, triangular grids, and circular or tree-like 
+structures to test the system’s comprehension and manipulation of spatial configurations. 
+This spatial understanding is broadly applicable in fields such as autonomous driving and 
+robotic route planning, requiring systems to not only identify physical locations but also perform 
+abstract analysis and reasoning about spatial relationships. As noted by Yamada et al., LLMs such 
+as gpt-4 and the Llama2 series demonstrate latent representational capabilities for spatial 
+configurations like grids, circular arrangements, and tree structures when tackling natural 
+language navigation tasks. However, their performance varies significantly across different 
+structures. This indicates that while LLMs can capture certain spatial relationships, there is con­
+siderable room for improvement in their abstract spatial reasoning abilities (Yamada et al. 2023).
+(c) Function Interpretation: Function interpretation tasks focus on evaluating a system’s ability to 
+comprehend functions within the spatial sciences, including their purpose, application contexts, 
+and associated terminology. By replacing specific function names and parameters with abstract 
+identifiers, these tasks emphasize understanding the logic and structure of the functions. This 
+encompasses domains such as coordinate transformation, distance calculation, spherical trigon­
+ometry, date processing, multispectral image analysis, and spatial statistical analysis.
+(d) Code Explanation: Code explanation tasks assess a system’s ability to understand and interpret 
+Python and R code snippets, including the application of specific libraries such as Python’s 
+ArcPy or pathlib. By anonymizing function and variable names, these tasks emphasize deep 
+comprehension of code structure and logic rather than reliance on specific naming 
+8 
+L. XU ET AL.
+
+===== PAGE 10 =====
+conventions. By anonymizing function and variable names, these tasks emphasize deep com­
+prehension of code structure and logic rather than reliance on specific naming conventions. As 
+highlighted in the GeoCode-Eval framework proposed by Hou et al., LLMs exhibit potential in 
+code generation and explanation tasks but often suffer from ‘code hallucination’ or errors due 
+to a lack of domain-specific knowledge and coding datasets (Hou et al. 2024). This suggests that 
+while LLMs can understand and generate code, their performance in complex tasks requires 
+further improvement through domain-specific datasets and optimization strategies.
+(e) Code Generation: Code generation tasks evaluate a system’s ability to generate, adapt, and 
+optimize Python and R code. This includes the application of specific libraries, such as Python’s 
+ArcPy and pathlib or R’s spatstat and sp, requiring the system to not only execute programming 
+tasks accurately but also demonstrate flexible and innovative use of library functions. Hou et al., 
+in their study of the GeoCode-Eval framework, noted that LLMs show significant potential in 
+code generation tasks, particularly in spatial data processing and geographic modeling. How­
+ever, due to the lack of domain-specific knowledge and coding datasets, LLMs may encounter 
+challenges such as insufficient accuracy or ‘code hallucination’ when generating code (Hou 
+et al. 2024). Additionally, Gramacki designed and tested benchmark datasets tailored for geos­
+patial tasks, further demonstrating the strengths and limitations of LLMs in addressing com­
+plex geographic problems, while emphasizing the importance of high-quality domain- 
+specific datasets in improving model performance (Gramacki, Martins, and Szymański 
+2024). This indicates that with domain-specific optimizations, LLMs can more effectively sup­
+port complex programming tasks, particularly in geospatial data science applications.
+(f) Code Translation: Code translation tasks evaluate a system’s ability to convert code between 
+Python and R. This involves not only basic syntax translation but also the handling of 
+embedded functions from various libraries (e.g. Python’s ArcPy or R’s sp package), spatial refer­
+ence data, and recursive function conversion. It requires the system to have a deep understand­
+ing of the paradigmatic characteristics of both programming languages to ensure the accuracy 
+and practicality of the conversion.
+2.1.3. Spatial application tasks
+Spatial application tasks represent the practical implementation of GIS technology in real-world 
+scenarios, serving as a critical link in transforming spatial data, theory, analysis, and operations 
+into tangible value. These tasks directly support societal production and daily life, providing a cru­
+cial benchmark for evaluating the spatial application capabilities of LLMs. Based on technical 
+characteristics and application requirements, we categorize spatial application tasks into three 
+core subtasks: NL2API Mapping, Simple Route Planning and toponymic identification. 
+(a) NL2API Mapping: As noted by Tao and Xu, ChatGPT has demonstrated the ability to generate 
+thematic and mental maps based on text descriptions, providing an innovative solution for map­
+ping tasks. This advancement effectively reduces the barriers in traditional map creation and 
+enhances the efficiency of large-scale mapping. However, the study also emphasizes that current 
+language models remain highly dependent on user intervention when dealing with high-precision 
+details and quality control (Tao and Xu 2023; Xu and Tao 2024). The task is based on the design of 
+the mapping task in the research by Hochmair et al., with the core focus on evaluating the ability of 
+language models to understand user requirements and translate them into specific technical 
+actions, rather than directly generating map images (Hochmair, Juhász, and Kemp 2024). The 
+main challenges of this task are as follows. First, the model must accurately understand the natural 
+language queries posed by users, extract key information, and conduct effective semantic analysis. 
+This requires the model to possess strong language comprehension abilities and to accurately 
+identify geographical locations, directions, and other spatially relevant information within user 
+intent. Second, the model must generate API-compliant requests based on user needs and 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+9
+
+===== PAGE 11 =====
+automatically populate the corresponding parameters. For example, when generating a Mapbox 
+link, the model must not only correctly call the API but also automatically input the appropriate 
+coordinates, style, and zoom level parameters. Finally, the model must translate natural language 
+requirements into specific technical operations, generating executable API requests or program­
+ming code. This process tests not only the model’s programming capabilities but also its ability to 
+effectively handle API interactions related to mapping, execute spatial data visualization oper­
+ations, and produce correct technical results. Therefore, this task focuses on assessing the model’s 
+ability to translate natural language into specific technical operations, particularly in map gener­
+ation and geographic information system (GIS) applications. Through this task, we aim to explore 
+the efficient collaboration between language models in processing complex natural language 
+instructions, API interactions, and spatial data visualization.
+(b) Simple Route Planning: Simple route planning tasks evaluate a model’s ability to perform 
+spatial optimization and intelligent navigation in complex environments. These tasks are typi­
+cally conducted in grid-based simulated environments, requiring the model to compute optimal 
+paths based on basic directional commands (up, down, left, right) while considering various 
+constraints. As highlighted by Aghzal et al. in their Path Planning from Natural Language 
+(PPNL) benchmark study, LLMs demonstrate some spatial reasoning potential in route plan­
+ning tasks. Notably, under few-shot prompting conditions, gpt-4 can alternately reason and 
+act, achieving promising results. However, the study also reveals that LLMs show limitations 
+in handling long-term sequential reasoning and planning in more complex environments, par­
+ticularly when scaled to larger or high-density obstacle scenarios (Aghzal, Plaku, and Yao 2024).
+(c) Toponymic Identification: This task focuses on evaluating a system’s ability to extract and com­
+prehend place-name information from complex textual data. The challenge lies in handling non- 
+standardized geographic descriptions from diverse sources such as social media, news reports, 
+and literary works. Systems must demonstrate capabilities in toponym extraction, disambigua­
+tion, and contextual understanding, which are critical for the accuracy of geographic infor­
+mation retrieval and location-based services (Xu et al. 2020; Xu et al. 2024). Research 
+indicates that generative pre-trained models incorporating geographic knowledge (e.g. gpt-4) 
+excel at extracting complex geographic descriptions from disaster-related social media messages, 
+significantly enhancing the recognition of non-standardized geographic descriptions. For 
+instance, using only a small number of geography-informed training samples, these models out­
+perform traditional named entity recognition tools by over 40% on disaster datasets (Hu et al. 
+2023). Accurate toponymic identification is vital for building high-quality spatial data, particu­
+larly in scenarios such as disaster response, where it holds substantial practical value.
+2.2. Data collection
+This study employs a multi-source data integration approach to construct a geospatial task dataset, 
+utilizing three main data sources: 1) publicly available datasets, 2) authoritative GIS textbooks, and 
+3) Wikipedia knowledge snippets. Specifically, for the publicly available datasets, we systematically 
+collected and organized relevant case study datasets used in published GIS-related task studies and 
+academic papers. These datasets include, for example, the 3D trajectory data from the CALVIN bench­
+mark, spatial structure question-answering data from the study by Yamada et al., and spatiotemporal 
+reasoning data from the PPNL benchmark. These datasets provide rich empirical data, covering a var­
+iety of spatial task scenarios. Secondly, in reference to authoritative GIS textbooks, we selected classic 
+texts such as Tang’s 100 Case Studies in Basic GIS Operations, which provided us with foundational 
+theoretical data and practical geospatial task operations. Finally, for the Wikipedia knowledge snip­
+pets, we selected entries closely related to the GIS field, covering fundamental geographic concepts 
+and their professional descriptions. After all data collection was completed, we conducted manual 
+screening and organization to ensure the accuracy and professionalism of the knowledge content.
+10 
+L. XU ET AL.
+
+===== PAGE 12 =====
+To ensure the quality of the dataset and the validity of the tasks, we invited six GIS experts to 
+participate in the question design process, including two GIS professors from universities, two 
+PhD students, and two master’s students in the GIS field. The expert panel, based on the materials 
+collected from the three aforementioned data sources and considering the specific characteristics of 
+different geospatial tasks, designed four categories of questions aimed at comprehensively assessing 
+knowledge understanding and application abilities in geospatial task processing. 
+(a) The first type is multiple-choice questions, where each question provides four options with only 
+one correct answer. These questions primarily assess geographic literacy.
+(b) The second type is true/false questions, requiring binary judgments (true/false) on given GIS- 
+related statements. These are also used to evaluate geographic literacy.
+(c) The third type is objective-answer questions, designed based on deterministic knowledge and 
+requiring precise numerical or textual responses. These questions cover multiple categories, 
+including geographic literacy, toponymic identification, spatial understanding, numerical tra­
+jectory recognition, and geographic feature search.
+(d) The final type is subjective-answer questions, which are highly open-ended and divided into two 
+aspects: theoretical analysis and programming-related tasks. These questions allow for various 
+reasonable answers and are primarily aimed at assessing deeper spatial cognition and practical 
+application abilities. The categories involved include geographic literacy, GIS concepts, NL2API 
+Mapping, code explanation, code generation, code translation, and simple route planning.
+2.3. Expert validation
+Ultimately, we curated and organized a total of 900 questions, covering various aspects from GIS concepts 
+to programming skills (see Figure 3). These questions are distributed across 12 distinct categories, includ­
+ing rare and complex questions, aiming to comprehensively cover the knowledge and skills within the GIS 
+domain. To ensure the dataset’s high quality, all questions were subject to expert review and revision to 
+guarantee answer accuracy and underwent multidimensional analysis and validation tailored to each 
+question type. For multiple-choice questions, experts focused on verifying the distinctiveness and validity 
+of the options to ensure the uniqueness of the correct answer. For true/false questions, experts established 
+clear and unambiguous evaluation criteria to ensure the rigor and decisiveness of the propositions. For 
+objective-answer questions, experts validated the accuracy of the question descriptions and ensured that 
+the answers were unique and unambiguous. For subjective-answer questions, including procedural and 
+code-related tasks, experts provided thorough evaluations. For text-based questions, experts manually 
+revised them to ensure content completeness, readability, and accuracy. For codebased questions, experts 
+individually validated the executability of the code and the correctness of the results.
+3. Methods
+3.1. Model and prompt
+In this geospatial task dataset test, we included several top-performing LLMs. We selected three 
+models from OpenAI: gpt-3.5-turbo, gpt-4-turbo-2024-04-09, and gpt-4o. The gpt-3.5-turbo is 
+regarded as a milestone in LLMs due to its coherent and human-like responses, making it a bench­
+mark for industry performance evaluations. The gpt-4-turbo-2024-04-09 is widely recognized for 
+its exceptional capabilities, ranking highly on multiple model test leaderboards such as MMLU 
+and MATH. The gpt-4o (‘o’ stands for ‘omni’), OpenAI’s latest model at the time of writing, 
+offers enhanced speed and achieves superior performance metrics. We also included ANTHRO­
+PIC’s Claude-3-Sonnet-20240229, which demonstrates outstanding performance in natural 
+language understanding and generation tasks, representing an optimal balance of performance 
+and processing speed in the Claude series. Additionally, we selected moonshot-v1-8k from 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+11
+
+===== PAGE 13 =====
+Moonshot AI and glm-4 from ZhipuAI. The glm-4 exhibits remarkable capabilities in semantic 
+understanding, code generation, and knowledge processing tasks, achieving competitive perform­
+ance metrics comparable to gpt-4 in several benchmarks. The moonshot-v1-8k similarly demon­
+strates strong performance across various evaluation metrics and specialized tasks.
+Our test is divided into two rounds, aiming to comprehensively evaluate the capabilities of var­
+ious LLMs in handling geospatial tasks based on natural language prompts. The first round is a 
+zero-shot test, which does not involve any prompt tuning to assess the initial performance of the 
+models. This allows us to observe the models’ direct response capabilities to geospatial tasks. We 
+used the following system prompt for testing: You are a quiz assistant answering the following ques­
+tions and outputting the results without any additional explanation.
+Following the first round of testing, we will conduct prompt strategy tuning for geospatial tasks 
+where performance was suboptimal to evaluate and enhance the LLMs’ performance in complex 
+geospatial tasks. These strategies include:
+One-shot: In the One-shot test, the model receives an example question and its answer to estab­
+lish context understanding before immediately facing a new question. This method tests whether 
+the model can quickly learn from a single example and apply it to a new scenario without additional 
+data or extended training. This strategy is particularly useful for evaluating the model’s response 
+speed and adaptability when encountering unknown, one-off questions, effectively revealing the 
+model’s mechanism for absorbing and processing new information (Li et al. 2024).
+Combined Techniques Prompt: This strategy uses a combination of model-specific identity 
+prompts, detailed test category descriptions, and specific example questions and answers to create 
+a rich informational environment for the model. This helps the model build a more accurate 
+context for understanding and solving problems and utilize multiple information sources to 
+Figure 3. Number of questions per category in the dataset (total number of questions: 900).
+12 
+L. XU ET AL.
+
+===== PAGE 14 =====
+improve decision accuracy. Combined Techniques Prompt is an advanced testing method aimed 
+at evaluating how models perform complex tasks in an information-rich, structured environment 
+and exploring how different types of information interact to optimize model performance.
+Chain of Thought: The Chain of Thought (CoT) method requires the model to receive and pro­
+cess an example problem with a detailed solution process before answering questions. This strategy 
+emphasizes the model’s ability to understand and generate logical answers by simulating human 
+problem-solving thinking processes to enhance answer transparency and interpretability. CoT is 
+particularly suitable for handling problems requiring advanced reasoning and logical thinking, 
+demonstrating how the model performs in a continuous logical sequence and systematically pro­
+cesses and solves complex problems (Wei et al. 2022; Wei et al. 2022).
+Zero-shot-CoT: Zero-shot-CoT testing involves providing the model with step-by-step thinking 
+instructions (e.g. ‘Let’s think step by step’) without prior specific training or example input, directly 
+guiding the model to develop a thought process. This method’s core is to evaluate how the model 
+autonomously constructs a logical chain of problem-solving without direct prior examples. It aims 
+to test the model’s autonomous learning and innovation capabilities, particularly its adaptability 
+and solution strategies when facing entirely new and complex problems (Kojima et al. 2022).
+Through these methods, we aim to further explore and understand the potential and limitations 
+of various models in handling specific geospatial tasks.
+3.2. Collecting model answers
+As language models are increasingly applied to handle various complex tasks, ensuring these 
+models provide unbiased and consistent answers has become a significant challenge. To address 
+this need, this study developed an automated script specifically for standardizing the answer collec­
+tion process, aiming to minimize human error and the potential influence of conversation history 
+through technical means. This script directly calls the APIs of various models, interacting with them 
+using text input only, and adheres to a single-turn dialogue mode. The single-turn dialogue mode 
+was chosen to minimize the possible impact of conversation history on the answers, ensuring that 
+each answer is generated independently of previous dialogue context. This operation mode is par­
+ticularly suitable for evaluating the model’s ability to respond to immediate questions rather than its 
+performance in multi-turn, continuous dialogues. Additionally, to ensure consistency of exper­
+imental conditions and to promote more predictable and consistent responses from the models, 
+we uniformly set the temperature parameter to 1 for all models tested. This parameter setting 
+aims to enhance the LLMs’ cognitive ability in generating answers, thereby allowing for a more 
+accurate assessment of their true performance levels.
+Specifically, when testing the gpt-3.5-turbo model, we observed that the model might generate 
+different answers to the same question in different dialogues, particularly for questions with a 
+high degree of subjectivity. This variation is primarily due to the random sampling technique 
+used during decoding. Although these differences are typically minor, to improve the simplicity 
+and efficiency of data processing, we chose to collect only one answer per question. Figure 4 is a 
+concrete example illustrating the process of conducting a single round of dialog with the gpt- 
+3.5-turbo model via an API call.
+This code example clearly demonstrates how to construct an API request to ensure consistency 
+and standardization of parameters for each request, thereby enhancing the reliability and validity of 
+the study.
+3.3. Evaluation measures
+Accuracy statistics and qualitative analysis will be used to evaluate the chatbot’s responses. In stat­
+istical analysis, most answers can be clearly classified as correct or incorrect, such as multiple-choice 
+questions or reasoning questions with clear answers. However, in open-ended tasks like explaining 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+13
+
+===== PAGE 15 =====
+GIS concepts or describing trajectory data visualization, the chatbot’s responses may only approxi­
+mate the correct answer. Such cases, typically found in explanatory or conceptual tasks, will be 
+specially marked with a score of 1. Qualitative analysis will explore the challenges encountered 
+during task execution, along with related examples and illustrations. To accurately assess the 
+model’s ability to handle different types of questions, we use the following specific scoring method 
+to quantify the accuracy of the responses: 
+(a) Fully Correct Answer: When the model provides an answer that is completely correct and 
+meets the expectations, we give it 2 points. This indicates that the model not only understood 
+the core of the question but also generated an accurate and correct answer.
+(b) Partially Correct Answer: For answers that are partially correct or partially meet the require­
+ments of the question, we give it 1 point. This situation typically occurs when the model cap­
+tures part of the key points of the question but does not fully cover all the correct details or 
+mishandles some information.
+(c) Completely Incorrect Answer: If the model’s answer is unrelated to the correct answer or com­
+pletely wrong, we give it 0 points. This indicates a fundamental misunderstanding of the ques­
+tion by the model or that the generated response is entirely off the mark.
+Human reviewers play a crucial role in the scoring process, especially when dealing with partially 
+correct answers. Certain task categories, such as ‘Geographic Literacy’ and ‘GIS Concepts’, often 
+include multiple possible correct answers or require subjective judgment in the responses. In 
+these cases, human judgment is essential for determining the final score. To ensure objectivity 
+and consistency in scoring, we require all reviewers to engage in detailed discussions before scoring 
+and decide the final score through a voting process. For specific task categories involving code 
+execution, such as ‘Code Generation’ and ‘Code Translation’, we have made appropriate adjust­
+ments to the scoring criteria: 
+(a) Score of 2: The code runs perfectly, and the output format is correct, fully meeting the expected 
+result.
+(b) Score of 1: The code is basically correct but has minor errors or deficiencies, such as syntax 
+errors, logic errors, or format errors.
+(c) Score of 0: The code fails to run, or the result deviates significantly from the expected outcome, 
+indicating a clear deficiency in the model’s understanding and generation of code.
+Through this detailed and systematic scoring mechanism, we can more accurately measure and 
+compare the ability and effectiveness of different models in handling various types of problems. 
+Figure 4. An example of conducting a single round of dialog with the gpt-3.5-turbo model via an API call.
+14 
+L. XU ET AL.
+
+===== PAGE 16 =====
+This approach not only helps us identify each model’s strengths and weaknesses but also provides 
+valuable data support for future model optimization and development.
+To comprehensively evaluate and compare the ability of LLMs in handling geospatial tasks, we 
+introduced Weighted Accuracy (WA) as a key evaluation metric. This metric assigns different 
+weights to the scores of each response to accurately reflect the importance and difficulty of the 
+tasks. The calculation formula for WA is as follows:
+WA =
+2 · n(s2) + 1 · n(s1)
+2 · (n(s0) + n(s1) + n(s2))
+(1) 
+The variable n(s2) represents the number of answers with a score of 2, n(s1) represents the 
+number of answers with a score of 1, and n(s0) represents the number of answers with a 
+score of 0.
+By applying this formula, we can accurately quantify and compare the efficiency and accuracy of 
+different models in handling spatial-related problems. This provides valuable data support and 
+insights for the optimization and development of future models. This approach emphasizes the 
+importance of a comprehensive assessment of model performance, ensuring that our evaluation 
+is as thorough and impartial as possible.
+4. Results and analysis
+After the first round of zero-shot testing, we evaluated the total scores and WA of 12 subspace tasks, 
+as shown in Table 1. In this evaluation, gpt-4o performed exceptionally well, achieving the highest 
+number of scores of 2 and the highest overall WA. Following closely is gpt-4-turbo-2024-04-09, 
+whose scores are almost identical to gpt-4o. Although Claude-3-sonnet-20240229 exceeded glm- 
+4 in the number of questions scored 2, glm-4’s overall WA remained slightly higher. The overall 
+slightly lower performers are moonshot-v1-8k and gpt-3.5-turbo. In the evaluation of 900 geospa­
+tial tasks, gpt-4o provided completely correct answers for 627 questions and partially correct 
+answers for 24 questions, with an overall WA of 71%. The gpt-4-turbo-2024-04-09 had an overall 
+WA of 69.7%, just 1.3% lower than gpt-4o. Comparatively, gpt-3.5-turbo performed the worst, with 
+an overall WA of only 43.8%. As the most advanced model released by ZhipuAI, glm-4’s perform­
+ance ranked after gpt-4o and gpt-4-turbo-2024-04-09, with an overall WA of 62.4%. The claude-3- 
+sonnet-20240229 and moonshot-v1-8k had overall weighted accuracies of 62.1% and 53.2%, 
+respectively. Analyzing the score distribution, we observed that the number of questions scored 
+1 was significantly lower than those scored 0 and 2, indicating that the models were able to provide 
+clear answers in most cases. It is noteworthy that the performance gap between GPT-4o and GPT- 
+3.5-turbo is substantial, which aligns with the conclusions of the latest report on GPT-4o at the time 
+of writing (OpenAI 2024).
+Figure 5shows the overall WA of various models across different spatial sub-tasks. The figure indicates 
+that the performance order of the models remains consistent across most spatial subtasks. Additionally, 
+Table 2 provides a detailed breakdown of the results for each spatial subtask. The gpt-4o and gpt-4-turbo- 
+2024-04-09 performed the best in six different categories and achieved 100% accuracy in code explanation 
+tasks. In contrast, gpt-3.5-turbo ranked last in performance across six categories.
+Table 1. Scores of each model and overall WA.
+Model
+Count S0
+Count S1
+Count S2
+WA (%)
+gpt-3.5-turbo
+481
+50
+369
+43.8
+gpt-4o
+249
+24
+627
+71.3
+gpt-4-turbo-2024-04-09
+260
+26
+614
+69.7
+claude-3-sonnet-20240229
+334
+15
+551
+62.1
+moonshot-v1-8k
+409
+24
+467
+53.2
+glm-4
+318
+41
+541
+62.4
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+15
+
+===== PAGE 17 =====
+4.1. Model accuracy
+The overall performance of the models on explanatory, knowledge-based, and conceptual tasks was 
+quite good, especially in GIS conceptual tasks, where all models achieved an overall accuracy (WA) 
+of over 80.0%. This performance demonstrates that the training corpora of LLMs encompass exten­
+sive GIS knowledge and showcase the models’ strong capability in understanding and applying this 
+knowledge. However, in numerical trajectory recognition tasks, gpt-3.5-turbo had an accuracy of 
+only 31.0%, significantly lower than the other models. This discrepancy may be related to its train­
+ing dataset, parameter settings, or training algorithm. Additionally, when it comes to operational 
+tasks involving specific programming languages and code details, gpt-3.5-turbo and other weaker 
+models may underperform due to insufficient specialized training.
+The models generally performed poorly on reasoning and application tasks. Especially in simple 
+route planning tasks, which require the models to not only understand the specific requirements but 
+also perform complex logical reasoning, such as considering multiple possible routes and evaluating 
+various environmental factors. Even the best-performing model, gpt-4o, had a WA of only 12.4%, 
+while the worst-performing model, moonshot-v1-8k, had a WA of just 0.8%.
+Additionally, in spatial understanding tasks, gpt-3.5-turbo had a WA of only 1.8%, significantly 
+lower than the other models. In NL2API Mapping tasks, which require models to generate Mapbox 
+links for specified areas or perform map visualization based on specific commands, the performance 
+gap between the models was significant. The gpt-4o performed the best with a WA of 61.9%, while 
+moonshot-v1-8k performed the worst with a WA of only 7.5%, 54.4% lower than gpt-4o.
+Overall, although the major models performed well in explanatory, knowledge-based, and con­
+ceptual tasks, particularly demonstrating excellent accuracy in GIS conceptual tasks, their perform­
+ance in reasoning and application tasks was generally poor. simple route planning and NL2API 
+Mapping tasks especially highlighted the challenges models face in complex logical reasoning 
+and handling advanced spatial information. These results indicate that while current large models 
+Figure 5. Comparison of model results in zero-shot testing.
+16 
+L. XU ET AL.
+
+===== PAGE 18 =====
+can achieve high accuracy in certain areas, they still require further optimization and training for 
+tasks that demand high-level reasoning and specialized knowledge.
+4.2. Clustering questions by difficulty
+To conduct a more detailed model evaluation, we further divided the geospatial task dataset into three 
+levels based on difficulty: Level I (easy), Level II (medium), and Level III (difficult). Through in-depth 
+discussions with an expert panel, we established specific criteria for classifying the difficulty of the ques­
+tions: 1) Questions correctly answered and scored 2 by at least five models were classified as easy. 2) 
+Similarly, questions correctly answered and scored 2 by at least two but no more than four models 
+were marked as medium difficulty. 3) Questions correctly answered and scored 2 by at most one 
+model (usually the best-performing model, such as gpt-4o) were defined as difficult, as these questions 
+are often the most challenging. In these three difficulty levels, the number of questions was 395 (easy), 
+275 (medium), and 230 (difficult), totaling 900 questions. Next, we will evaluate the performance of 
+each model based on these difficulty levels (see Table 3). The evaluation criteria are as follows: 
+(a) If the model answers an easy question completely correctly (score of 2), it is considered to have 
+correctly solved one easy question.
+(b) If the model answers an easy question partially correctly (score of 1), it is considered to have 
+correctly solved 0.5 of an easy question.
+(c) The evaluation criteria for medium and difficult questions are the same.
+According to Figure 6, as expected, the models generally performed well on easy questions. The 
+gpt-4-turbo-2024-0409 performed the best with a result of 99%, while gpt-4o and Claude-3-sonnet- 
+20240229 also had high results of 98%. On medium difficulty questions, gpt-4-turbo-2024-0409 also 
+led with a result of 73%. The gpt-3.5-turbo and moonshot-v1-8k performed poorly, with a result of 
+only 35%. In handling difficult questions, all models performed generally poorly. The gpt-3.5-turbo 
+stood out slightly with a result of 3%, while gpt-4o and gpt-4-turbo-2024-0409 had similar perform­
+ances, both at 13%. This indicates that even the most powerful models faced challenges with the 
+hardest questions. Overall, gpt-4-turbo-2024-0409 and gpt-4o performed well across all three 
+difficulty levels, while gpt-3.5-turbo performed poorly.
+It is noteworthy that using the models’ answers to classify the difficulty of questions is a simple 
+and efficient method. Additionally, another possible approach is to seek the opinions of an expert 
+panel to determine the difficulty level of each question. The main purpose of classifying the dataset 
+by difficulty is to evaluate the performance of future models on this dataset, monitor their progress 
+over time, and compare it with human performance. For example, if a model only shows high 
+Table 2. Performance metrics by category and model. (G3.5t:gpt-3.5-turbo,G4o:gpt-4o,G4t:gpt-4-turbo-2024-0409,Cs:claude-3- 
+sonnet-20240229,Ms:moonshot-v1-8k,Glm:glm-4).
+Category
+WA (%)
+G3.5t
+G4o
+G4t
+Cs
+Ms
+Glm
+Code explanation
+83.7
+100.0
+100.0
+100.0
+91.9
+98.8
+Code generation
+32.6
+82.6
+84.8
+67.4
+21.7
+76.1
+Code translation
+58.3
+95.8
+93.8
+83.0
+68.8
+85.4
+Function interpretation
+80.0
+91.2
+95.2
+88.5
+73.8
+75.0
+Geographic feature searching
+93.1
+98.1
+96.4
+96.0
+90.0
+92.1
+GIS concepts
+81.0
+96.4
+93.6
+96.0
+94.9
+92.1
+NL2API Mapping
+16.3
+61.9
+46.9
+53.1
+7.5
+38.8
+Numerical Trajectory Recognition
+31.0
+79.5
+83.0
+69.0
+42.0
+64.5
+Simple route planning
+4.1
+12.4
+8.7
+2.5
+0.0
+7.5
+Geographic literacy
+69.9
+85.0
+85.5
+84.0
+71.7
+80.6
+Spatial understanding
+1.8
+55.2
+40.8
+54.8
+46.1
+45.0
+Toponym recognition
+93.0
+92.0
+88.0
+88.0
+98.0
+72.0
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+17
+
+===== PAGE 19 =====
+accuracy on easy questions, we cannot consider it a powerful model based on this alone. Conversely, 
+if the model also performs well on medium and difficult questions, we can consider it an outstand­
+ing and effective model for handling geospatial tasks. Therefore, the ability to handle questions of 
+varying difficulty is crucial when evaluating a model’s capabilities.
+4.3. Prompt tuning
+After conducting the first round of zero-shot testing, we found that the models performed poorly in 
+simple route planning, spatial understanding, and NL2API Mapping tasks. Additionally, based on 
+the previous difficulty classification results, we observed that the number of difficult questions in 
+these three tasks was relatively high. Therefore, we will conduct specific prompt optimization 
+tests for these three tasks. For the simple route planning and spatial understanding tasks, we 
+used four prompt strategies for optimization testing: One-shot, Combined Techniques Prompt, 
+Chain of Thought, and Zero-shot-CoT. When discussing the NL2API Mapping task, considering 
+that code-related issues are not suitable for prompt strategy optimization, we focused only on 
+the first type of NL2API Mapping task (see Table 4): where the model accesses online map services 
+to construct and return a map link for a specific area. Since this type of NL2API Mapping task is not 
+suitable for testing with reasoning-based prompt strategies, we selected One-shot and Combined 
+Techniques Prompt strategies for optimization testing. For the simple route planning task, 
+examples of system prompts for each prompt strategy are shown below. These prompt examples 
+are provided as system prompts under the ‘system’ role. 
+(a) One-ShotQuestion: You are in a 4 by 4 two-dimensional array. You have to avoid some 
+obstacles: (0,3). From (1,1) to (3,0). Just use ‘up, down, left, right’ to indicate your rou­
+te.Answer: path: down, down, left
+(b) Combined Techniques PromptAs a simple route planning expert with extensive experience in 
+GIS, you will be responsible for designing and analyzing optimal paths that avoid obstacles.In 
+the ‘simple route planning’ category, the task is to navigate from a starting point to an end point 
+while avoiding obstacles placed in the environment. The process involves computing an 
+efficient route, usually in a gridded virtual environment, by using simple directional commands 
+such as ‘up’, ‘down’, ‘left’, ‘right’.Question: You are in a 4 by 4 two-dimensional arrays. You 
+have to avoid some obstacles: (0,3). From (1,1) to (3,0). Just use ‘up, down, left, right’ to indi­
+cate your route. Your output is formatted as: path:Answer: path: down, down, left
+(c) Chain of Thought (CoT)Question: You are in a 4 by 4 two-dimensional arrays. You have to avoid 
+some obstacles: (0,3). From (1,1) to (3,0). Just use ‘up, down, left, right’ to indicate your route. 
+Your output is formatted as: path:Answer: From the starting point of (1,1), you need to reach 
+the end of (3,0). In the process of moving, we need to avoid the obstacle located at (0,3). First 
+move down one step to (2,1), then continue down one step to (3,1), and finally move one step 
+to the left to reach (3,0) to complete the path. So the answer is: path: down, down, left.
+(d) Zero-shot-CoTLet’s think step by step.
+Table 3. The model’s scores on questions of different difficulty levels.
+Model
+Easy
+Medium
+Difficult
+gpt-3.5-turbo
+342
+96.5
+7.5
+gpt-4o
+385.5
+200.5
+29
+gpt-4-turbo-2024-04-09
+391
+207
+29
+claude-3-sonnet-20240229
+388
+160
+10.5
+moonshot-v1-8k
+375
+95.5
+8.5
+glm-4
+368
+141
+25
+18 
+L. XU ET AL.
+
+===== PAGE 20 =====
+Simple route Planning Task: By comparing the test results (see Figure 7), we observed that opti­
+mizing input prompts significantly improved the models’ overall accuracy. For gpt-4o, in the initial 
+unoptimized zero-shot test, the model’s WA was only 12.4%. After the second round of prompt 
+optimization, its WA increased to 50.8%, 43.3%, 87.5%, and 68.3% under the One-shot, Combined 
+Techniques Prompt, CoT, and Zero-shot-CoT strategies, respectively. We observed that the CoT 
+and Zero-shot-CoT strategies had a particularly significant effect on improving the model’s WA. 
+For gpt-4-turbo-2024-04-09, similar improvement trends were observed in the corresponding 
+tests. The gpt-3.5-turbo achieved its highest WA of 25.8% under the Zero-shot-CoT strategy but 
+showed a performance decline in the One-shot test. Similarly, moonshot-v1-8k’s WA dropped to 
+0 in the One-shot test, and it did not exceed 10% under the CoT and Zero-shot-CoT strategies. 
+The claude-3-sonnet-20240229 showed no significant improvement with the Combined Tech­
+niques Prompt and Zero-shot-CoT strategies, achieving its best performance of 9.1% with the 
+CoT strategy. For glm-4, it achieved its best performance of 36.6% with the CoT strategy. Notably, 
+its WA decreased in both the One-shot and Combined Techniques Prompt tests, dropping to 0 in 
+the Combined Techniques Prompt test.
+Spatial Understanding Task: After prompt optimization (see Figure A1), different prompt strat­
+egies significantly improved the WA of gpt-3.5-turbo, with the CoT strategy being the most effec­
+tive, reaching a WA of 37.8%, which is a 36% increase from the zero-shot test’s 1.8%. The gpt-4o 
+and gpt-4-turbo-2024-04-09 showed similar growth trends, both achieving their highest WA under 
+the Zero-shot-CoT strategy. For Claude-3-sonnet-20240229, the prompt strategies did not 
+Figure 6. WA of questions clustered according to difficulty. (G3.5t:gpt-3.5-turbo,G4o:gpt-4o,G4t:gpt-4-turbo-2024-0409,Cs: 
+claude-3-sonnet-20240229,Ms:moonshot-v1-8k,Glm:glm-4).
+Table 4. Results of the first type of NL2API Mapping task.
+Model
+Count S0
+Count S1
+Count S2
+WA (%)
+gpt-3.5-turbo
+46
+0
+13
+22.0
+gpt-4o
+19
+0
+40
+67.8
+gpt-4-turbo-2024-04-09
+27
+0
+32
+54.2
+claude-3-sonnet-20240229
+28
+0
+31
+52.5
+moonshot-v1-8k
+53
+0
+6
+10.1
+glm-4
+37
+0
+22
+37.2
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+19
+
+===== PAGE 21 =====
+significantly improve its WA, with the CoT strategy being the most effective at 51.2%, an 8.8% 
+increase from the zero-shot test’s 42.4%. Additionally, it is worth noting that both Moonshot 
+and GLM models performed poorly in this task after prompt optimization, with different prompt 
+strategies even leading to a decline in performance. The moonshot-v1-8k only showed improve­
+ment under the Combined Techniques Prompt strategy, increasing from 46.1% in the zero-shot 
+test to 50.6%. The glm-4’s performance decreased across all prompt strategies, with the lowest 
+WA of 32.9% under the Zero-shot-CoT strategy, a 15.6% drop from the zero-shot test’s 48.5%.
+NL2API Mapping Task: By comparing the test results (see Figure A2), we found that the gpt-4o, 
+gpt-4-turbo-2024-04-09, and Claude-3-sonnet-20240229 models showed similar growth trends 
+under the One-shot and Combined Techniques Prompt strategies. The highest weighted accuracies 
+(WA) for these three models were 84.7%, 76.3%, and 66.1%, respectively. Notably, the Combined 
+Techniques Prompt strategy significantly improved the gpt-3.5-turbo model, with its WA increas­
+ing from 22.0% in the zero-shot test to 62.7%. The One-shot strategy also brought substantial 
+improvement to the moonshot-v1-8k model, with its WA soaring from 10.1% in the zero-shot 
+test to 76.3%, matching the performance of gpt-4-turbo-2024-04-09. However, the glm-4 model 
+performed relatively poorly, with its performance even declining under the One-shot strategy. In 
+the Combined Techniques Prompt strategy, its performance only slightly increased from 37.2% 
+in the zero-shot test to 40.7%.
+4.4. Example analysis
+When tasked with ‘creating a Mapbox map link displaying the standard view of downtown 
+San Francisco’, we found that both gpt-4o and gpt-4-turbo-2024-04-09 accurately captured the 
+semantic essence of the task and successfully returned a Mapbox link showing downtown 
+San Francisco. However, each model displayed significant differences in their semantic understand­
+ing when determining the specific location of ‘downtown San Francisco’. This difference was not only 
+Figure 7. Prompt optimization test results for simple route planning task. (G3.5t:gpt-3.5-turbo, G4o:gpt-4o, G4t:gpt-4-turbo- 
+2024-0409, Cs:claude-3-sonnet-20240229, Ms:moonshot-v1-8k, Glm:glm-4).
+20 
+L. XU ET AL.
+
+===== PAGE 22 =====
+reflected in the selection of the map’s central point but also highlighted the models’ differing 
+interpretations of geographic concepts and urban space (see Figure 8). Specifically, gpt-4-turbo- 
+2024-04-09 selected a central point near the Herbst Theatre, located in the cultural and governmental 
+area of downtown, close to the famous Civic Center. In contrast, gpt-4o centered the map on the 
+San Francisco Museum of Modern Art (SFMOMA), a location closer to the Financial District and 
+Union Square, representing a downtown area with a more commercial and artistic atmosphere. 
+Although both models received perfect scores on the task, they exhibited subtle yet interesting differ­
+ences in their understanding of ‘downtown’. This difference highlights the complexity of LLMs in 
+handling geographic and spatial concepts: different models, based on their training data and internal 
+representations, may generate slightly different spatial interpretations of the same geographic con­
+cept. This finding not only demonstrates the fine-grained nature of semantic understanding in 
+models but also serves as a reminder that when evaluating language model performance, attention 
+must be given to their ability to handle complex, ambiguous concepts with nuance.
+It is important to note that these differences are not due to the models directly manipulating the 
+map’s style or content, but rather stem from the models’ inherent mechanisms for translating the 
+semantic concept of ‘downtown’ into specific geographic coordinates. The final presentation of the 
+map is primarily controlled by Mapbox’s style definitions and zoom levels; however, the model’s abil­
+ity to select API parameters still plays a critical role in the specific map display. This case vividly illus­
+trates the unique ability of language models to bridge the gap between spatial concept understanding 
+and technical implementation. Specifically, while Mapbox’s vector tile system and predefined styles 
+determine the visual details of the map, the model plays a crucial role in translating natural language 
+requirements into precise technical parameters, such as coordinates and zoom levels. The differences 
+in semantic understanding of ‘downtown’ across models are directly reflected in the selected map cen­
+ter and API parameters, which in turn affect the final map presentation. These subtle differences 
+reveal the complexity of LLMs in processing spatial concepts and their unique potential in bridging 
+the gap between semantic understanding and technical implementation.
+In the first round of zero-shot testing, we observed an interesting phenomenon in the Numerical 
+Trajectory Recognition task. When handling the question ‘What is the directional description of the 
+coordinate sequence [(5, 0), (5, 15), (15, 15), (15, 5), (5, 5)] in order from left to right?’ gpt-3.5-turbo 
+showed a different understanding compared to other models. Specifically, it considered the move 
+from (5, 5) to (5, 0) as the last direction change, thus generating five directional descriptions for 
+the question. To further investigate whether this phenomenon was common, we selected five differ­
+ent cases and conducted three rounds of testing on gpt-3.5-turbo (see Table 5). In these tests, we 
+focused on the number of directional descriptions rather than their accuracy. The results showed 
+that in 15 tests, only 5 successfully generated the correct number of descriptions.
+5. Discussion
+5.1. Performance comparison of LLMs in geospatial tasks
+Our research indicates that the gpt-4o model outperforms other models overall, particularly excel­
+ling in complex reasoning tasks, with the gpt-4-turbo-2024-04-09 model following closely behind. 
+However, in certain specific sub-tasks, the moonshot-v1-8k model even surpasses both gpt-4o and 
+gpt-4-turbo-2024-04-09 in toponymic identification tasks. For instance, when asked the question 
+‘The Tokyo Tower was badly damaged in last night’s earthquake. Which parts of the sentence rep­
+resent location descriptions?’, moonshot-v1-8k correctly identified ‘Tokyo Tower’ as the location 
+description, whereas gpt-4o mistakenly identified both ‘Tokyo Tower’ and ‘last night’ as location 
+descriptions. This suggests that the performance of moonshot-v1-8k in semantic recognition and 
+understanding tasks is on par with that of gpt-4o.
+Hu et al. reported that gpt-4 and its variant (Geo-gpt-4) achieved approximately 15% higher 
+accuracy than gpt-3 and its variants in disaster-related toponymic identification tasks, establishing 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+21
+
+===== PAGE 23 =====
+them as the best-performing models (Hu et al. 2023). In our study, we observed that moonshot-v1- 
+8k outperformed gpt-4o in toponymic identification tasks, further highlighting the performance 
+variations among different models for such tasks.
+Nevertheless, gpt-4o demonstrated outstanding performance in handling complex tasks, consist­
+ent with our expectations for the model. Compared to the findings of Yamada et al. on spatial 
+Figure 8. Results of ‘Create a Mapbox map link showing a standard map view of downtown San Francisco’ using gpt-4o (top) and 
+gpt-4-turbo-2024-04-09 (bottom).
+22 
+L. XU ET AL.
+
+===== PAGE 24 =====
+understanding capabilities of LLMs, their study revealed that gpt-4 improved accuracy by over 50% 
+compared to gpt-3.5-turbo in handling complex spatial understanding tasks (Yamada et al. 2023). 
+Our results indicate that gpt-4o’s performance in complex reasoning tasks aligns with the con­
+clusions of Yamada et al.’s study, particularly in tasks involving multiple spatial relationships, 
+where gpt-4o exhibited exceptional reasoning capabilities. Additionally, Sharma et al., in their 
+study on spatial reasoning abilities, highlighted that gpt-4 outperformed gpt-3.5 by over 30% on 
+the CALVIN dataset and achieved a 20% improvement in accuracy using few-shot prompting strat­
+egies (Sharma 2023). This finding is consistent with our research, further confirming gpt-4’s advan­
+tage in spatial reasoning tasks. We also noted that Liu et al., in their study on geographic diversity, 
+observed regional variations in model performance on geographic diversity tasks, particularly in 
+geographic guessing related to UNESCO World Heritage sites (Liu et al. 2024). Building on this, 
+we optimized the experiment by employing various prompting strategies to evaluate the perform­
+ance of each model. The results indicated that the gpt-4 series continued to perform best, with other 
+models showing some improvements as well. Lastly, Aghzal et al., in their study on the path-plan­
+ning capabilities of LLMs, found that model performance declined significantly as task complexity 
+and grid size increased (Aghzal, Plaku, and Yao 2024). Our findings align with this observation. For 
+simple route planning tasks, gpt-4o provided relatively accurate solutions, while gpt-3.5-turbo and 
+moonshot-v1-8k performed poorly, offering incorrect path-planning proposals. In more complex 
+environments, such as route planning in grids with multiple obstacles, gpt-4o was able to provide 
+accurate solutions for most tasks, whereas gpt-3.5-turbo achieved an accuracy rate of only 4%.
+LLMs, as powerful AI tools, exhibit remarkable capabilities but also have their respective 
+strengths and limitations. Therefore, in practical applications, the choice of the appropriate 
+model should be based on specific requirements and contexts. For instance, for simple route plan­
+ning tasks, the gpt-4o model, combined with a Chain-of-Thought (CoT) prompting strategy, may 
+yield the most effective results. This underscores the practical significance and application value of 
+our research.
+5.2. The role of dataset difficulty classification
+In traditional computational studies, such as Borji’s research on large model evaluation and dataset 
+creation, the discussion on dataset categorization divides the dataset into simple, medium, and 
+difficult categories, where easy questions are those that all models can answer correctly, and difficult 
+Table 5. Test results of gpt-3.5-turbo on different cases. The bolded content indicates the number of direction descriptions is 
+accurate.
+Question
+Model Answer 1
+Model Answer 2
+Model Answer 3
+What is the direction description of the 
+coordinate sequence [(10, 10), (10, 20), (20, 
+20), (10, 20)] in order from left to right?
+north, east, south, west
+right, up, right, down
+east, north, east, south
+What is the directional description of the 
+coordinate sequence [ (0, 0), (0, 10), (10, 10), 
+(10, 0)] in order from left to right?
+north, east, south
+east, north, west, south
+north, east, south, west
+What is the directional description of the 
+coordinate sequence [(90, 100), (110, 100), 
+(110, 110), (100, 110), (100, 100)]in order 
+from left to right?
+right, up, right, up, left
+right, up, left, down
+east, north, east, south, 
+west
+What is the directional description of the 
+coordinate sequence [(15, 15), (15, 25), (25, 
+25), (25, 15)], (10, 15)] in order from left to 
+right?
+east, north, west, south, 
+east
+north, east, south, 
+west
+up, right, down, left
+What is the directional description of the 
+coordinate sequence [(50, 50), (60, 50), (60, 
+60), (70, 60), (80, 60), (80, 50), (90, 50), (90, 
+40), (100, 40), (110, 40), (110, 50)] in order 
+from left to right?
+east, east, north, east, 
+east, south, east, 
+south, east, east, north
+east, south, east, north, 
+east, south, east, 
+south, east, north, east
+east, north, east, east, 
+south, east, south, 
+east, east, north
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+23
+
+===== PAGE 25 =====
+questions are those that even the best models fail to answer correctly (Borji and Mohammadian 
+2023). Building on this framework, we introduced an improvement by using the performance of 
+six LLMs in zero-shot testing to determine the difficulty levels more effectively. In this study, we 
+adopted an innovative strategy based on the performance of models in the first round of zero- 
+shot testing to classify the dataset difficulty. This method integrates the test results of six different 
+LLMs to categorize the difficulty levels of the dataset and further discuss the outcomes.
+We believe this strategy is not only more efficient but also significantly promotes subsequent 
+research. Difficulty classification is extremely beneficial for follow-up research, as it allows research­
+ers to more accurately assess the effectiveness of different models in handling simple, medium, and 
+difficult problems. Through this approach, researchers can deeply analyze the models’ capabilities 
+and limitations in complex situations. Difficulty classification guides further model development, 
+especially when it is found that the current model performs poorly on high-difficulty problems. 
+Researchers can then specifically enhance the model’s reasoning abilities or improve its perform­
+ance on complex data. Additionally, difficulty classification enables researchers to design test and 
+training sets more rationally, making them more challenging or balanced. This not only tests the 
+models’ limits but also enhances their robustness.
+5.3. Performance of models on tasks of varying difficulty
+Our study tested simple route planning tasks to assess the model’s performance in basic pathfinding 
+and reasoning capabilities. However, despite the simplicity of the task, the model’s performance on 
+more challenging tasks in this category was still suboptimal (see Table 3). We found that the model’s 
+performance significantly declined when handling complex route planning problems, particularly 
+in scenarios involving larger grids or more obstacles. Similar observations were made in the 
+work of Mohamed Aghzal. His research indicated that, in complex route planning tasks, particu­
+larly when the number of obstacles increased, gpt-4 (with CoT prompting) struggled significantly, 
+suggesting that it still has limitations in complex spatial reasoning (Aghzal, Plaku, and Yao 2024). 
+His study further noted that when tasks involved long-distance planning, models like gpt-4 exhib­
+ited decreased performance, particularly when the target was distant, indicating deficiencies in 
+long-duration, cross-temporal reasoning. Furthermore, our research suggests that in spatial reason­
+ing tasks, the difficulty is primarily determined by the complexity of the spatial description and the 
+number of elements involved. More elements imply greater complexity and, consequently, greater 
+difficulty. A similar conclusion was reached in the work of Yamada, who noted that in spatial 
+reasoning tasks, difficulty is not only related to the type of spatial structure but also closely tied 
+to the number of navigation steps (Yamada et al. 2023). In particular, when dealing with complex 
+grid structures, the model’s performance was significantly influenced by both the spatial structure 
+and the number of navigation steps. For example, gpt-4 performed best on square grid structures 
+and worst on hexagonal grids, highlighting that different spatial layouts present distinct challenges 
+to the model.
+To further investigate the differences between models on medium and difficult tasks, we ran­
+domly selected moderate and challenging problems from various task categories and compared 
+the performance of moonshot-v1-8k and gpt-4o (see Table 6). In these more complex tasks, we 
+observed that gpt-4o consistently outperformed moonshot-v1-8k in handling these problems. 
+This suggests that while moonshot-v1-8k performs reasonably well on simpler tasks, its perform­
+ance significantly lags when confronted with complex spatial reasoning or route planning problems.
+We believe that this difference may be attributed to several factors: first, gpt-4o’s training par­
+ameters may be more finely tuned, particularly in terms of reasoning and optimization for complex 
+tasks; second, gpt-4o’s training framework may be more advanced, enabling it to better handle com­
+plex route planning tasks; third, gpt-4o may have been trained on a larger and higher-quality data­
+set, which enhances its ability to solve complex problems. Consequently, whether in route planning 
+or spatial reasoning, the model’s performance on complex reasoning tasks is constrained, which 
+24 
+L. XU ET AL.
+
+===== PAGE 26 =====
+aligns with the findings of Aghzal and Yamada. Future research should address these challenges to 
+enhance the model’s reasoning capabilities in more complex scenarios.
+5.4. The capabilities of multimodal models in geospatial tasks
+In the ‘Example Analysis’ section, we identified significant differences in the performance of LLMs 
+when executing NL2API Mapping tasks. To illustrate these differences, we compared gpt-4o and 
+gpt-4-turbo-2024-04-09 using a specific task: generating a Mapbox map link for downtown 
+San Francisco. While seemingly straightforward, this task tested various aspects of the models’ geo­
+graphic information processing capabilities. To better understand these variations, we analyzed the 
+key differences in the models’ responses from three perspectives:
+Firstly, in terms of semantic understanding of geographic concepts, gpt-4o demonstrated a more 
+precise interpretation of ‘downtown San Francisco’. The generated map focused on the central 
+business district, particularly around Union Square and the Financial District. This aligns closely 
+with the traditional geographic definition of downtown in urban planning and local contexts. Sec­
+ondly, regarding technical implementation through the Mapbox API, both models utilized the same 
+Mapbox GL JS framework and style definitions. Differences in map detail levels were primarily con­
+trolled by the zoom level parameter in the API calls, rather than direct manipulation of map con­
+tent. This is consistent with the functionality of Mapbox’s vector tile system, where the visibility of 
+different features (e.g. labels and points of interest) is predetermined by style definitions at various 
+zoom levels. Finally, in translating natural language requirements into technical parameters, gpt-4o 
+exhibited greater precision in parameter selection. It chose a more appropriate zoom level and cen­
+tral coordinates, accurately representing the concept of ‘downtown’. In contrast, while gpt-4-turbo- 
+2024-04-09 generated a technically valid map, its broader view included residential areas west of the 
+downtown core, indicating a less focused understanding of the task requirements.
+These differences did not stem from the models’ direct understanding of unstructured map 
+data (as the maps were generated through structured API calls) but rather from their varying 
+capabilities in: 
+(a) Accurately interpreting geographic concepts and spatial relationships
+(b) Applying appropriate technical parameters within the constraints of the mapping API
+(c) Bridging the gap between natural language requirements and technical implementation
+This case study highlights that even in seemingly simple geographic tasks, the models’ approach 
+to converting semantic input into technical implementation can significantly impact the outcome. 
+While both models generated valid map links, their differing methods of parameter selection and 
+geographic concept interpretation resulted in markedly different spatial representations of the same 
+area. This analysis provides an important insight into evaluating language models for geographic 
+tasks: the ability to accurately translate geographic concepts into technical parameters is as crucial 
+as interpreting unstructured map data. Although the present case study primarily demonstrates the 
+former through API interactions, both skills are foundational for comprehensive geographic under­
+standing. Future GIS applications of LLMs must excel in both precise parameter selection and 
+spatial-semantic interpretation of unstructured geographic information, underscoring the dual 
+challenge for their development.
+5.5. Enhancing performance of LLMs on complex geospatial tasks with prompt strategies
+LLMs are widely recognized for significantly improving output quality by optimizing input 
+prompts. However, our research reveals significant differences in how different models respond 
+to prompts. In this experiment, we defined NL2API Mapping, simple route planning, and spatial 
+understanding as complex geospatial tasks. The majority of the test results for these tasks 
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+25
+
+===== PAGE 27 =====
+indicated that models like gpt-4o exhibited greater ‘versatility’, improving performance across 
+various prompt strategies. This was particularly evident in reasoning tasks, where the use of 
+chain-of-thought (CoT) and zero-shot CoT significantly enhanced performance (Wei et al. 
+2022). In contrast, models like glm-4 showed a different pattern of responses in spatial under­
+standing tasks, with each prompt strategy seemingly leading to a decline in performance. This 
+Table 6. Performance of moonshot-v1-8k and gpt-4o on tasks of different difficulty, (✓) represents a correct answer, and (×) 
+represents an incorrect answer.
+Questions (difficulty level)
+moonshot-v1-8k
+gpt-4o
+Truth
+You are in a 4 by 4 two-dimensional array. 
+You have to avoid some obstacles: (1,0). 
+From (0,0) to (3,3). Just use ‘up, down, left, 
+right’ to indicate your route. Your output is 
+formatted as: path: (medium)
+up, up, up, right, 
+down, down, right, 
+right (×)
+path: right, right, right, 
+down, down, down (✓)
+right, right, right, down, 
+down, down
+You are in a 7 by 7 two-dimensional array. 
+You must avoid some obstacles: (6,2). From 
+(3,3) to (0,5). Just use ‘up, down, left, right’ 
+to indicate your route. Your output is 
+formatted as: path: (difficult)
+up, up, up, right, 
+right, right (×)
+path: up, up, up, right, right 
+(✓)
+up, up, up, right, right
+You are in a 7 by 7 two-dimensional array. 
+You must avoid some obstacles: (4,3). From 
+(0,0) to (6,2). Just use ‘up, down, left, right’ 
+to indicate your route. Your output is 
+formatted as: path: (difficult)
+up, up, right, right, 
+right, down, down, 
+right (×)
+path: right, right, right, 
+down, down, down, down, 
+down, down, down, left, 
+left (×)
+right, right, down, 
+down, down, down, 
+down, down, down
+You have been given a pointy-topped regular 
+hexagonal tile map consisting of 1 tile. 
+Starting from a vertex, you will move along 
+the edges of the tile. Initially, you are 
+positioned at the bottom right corner of 
+the map, where you find a husky. You move 
+up by one step, where you find a giant 
+panda. You move up-left by one step, 
+where you find a moped. You move down- 
+left by one step, where you find a crane 
+(machine). You move down by one step, 
+where you find a scooter. You move down- 
+right by one step, where you find a hoop 
+skirt. You move up-right by one step. What 
+will you find? (medium)
+giant panda (×)
+You will find a husky. (✓)
+husky
+You have been given a circular grid consisting 
+of 8 connected dots. Starting from a vertex, 
+you will move along the edges of the 
+circular grid. Initially, you are positioned on 
+the dot that’s located at the top of the grid, 
+where you find a wing. You move around 
+the ring by 5 steps in a counter-clockwise 
+direction, where you find a starfish. You 
+move around the ring by 8 steps in a 
+clockwise direction. What will you find? 
+(difficult)
+Wing (×)
+You will find a wing. (×)
+starfish
+You have been given a 3 by 3 square grid. 
+Starting from a vertex, you will move along 
+the edges of the grid. Initially, you are 
+positioned at the bottom right corner of 
+the grid, where you find a power drill. You 
+move left by one step, where you find a 
+sock. You move up by one step, where you 
+find a Dalmatian. You move up by one step, 
+where you find a jeep. You move right by 
+one step, where you find an hourglass. You 
+move down by one step, where you find a 
+slip-on shoe. You move left by one step. 
+What will you find? (difficult)
+You will find a power 
+drill. (×)
+You will find a jeep. (×)
+Dalmatian
+26 
+L. XU ET AL.
+
+===== PAGE 28 =====
+difference may be due to several factors: 1) Differences in architectural design between glm-4 and 
+models like gpt-4o may lead to varying performance when handling prompt strategies (OpenAI 
+2024; Zeng et al. 2024); 2) glm-4 may be relatively weaker in basic spatial understanding and 
+reasoning abilities compared to models like gpt-4o, meaning that even with optimized prompt 
+strategies, its performance may not improve significantly and could even degrade due to infor­
+mation overload or improper processing; 3) glm-4 may face bottlenecks when handling complex 
+tasks, and the introduction of prompt strategies could further increase task complexity, impact­
+ing performance. Therefore, to fully realize the potential of different LLMs, it is essential to care­
+fully design prompts for specific tasks.
+5.6. Limitations of the study
+To accurately assess and compare the performance of different LLMs on geospatial tasks, our study 
+had two core requirements: 1) establishing an independent and diverse geospatial task dataset, and 
+2) designing a comprehensive testing methodology, including the refinement of variable design and 
+evaluation strategies. However, the geospatial task categories used in this study are not comprehen­
+sive. Previous research has conducted more detailed analyses of other geospatial task categories, 
+such as POI recommendation, vector data analysis (Chen et al. 2024; Zhang et al. 2024), and 
+map analysis. Additionally, our study primarily focused on text-based geospatial tasks, while 
+real-world applications of geospatial tasks often involve multimodal elements such as charts and 
+maps. Since some models do not support images as input, our tests did not include image related 
+tasks. In the second round of prompt optimization testing, due to certain limitations in the geos­
+patial task outputs, we were unable to adopt more complex prompt strategies, such as Self-consist­
+ency: sampling multiple solutions and then performing majority voting (Wang et al. 2023), using 
+complex chains instead of simple chains as context examples (Fu et al. 2022), and decomposing 
+complex tasks into simpler tasks to solve them sequentially (Khot et al. 2023). Therefore, introdu­
+cing multimodal test data and designing more comprehensive testing methodologies are key direc­
+tions for future work.
+6. Conclusions
+In our study, we designed a comprehensive geospatial task dataset, including various task categories 
+such as GIS concepts and simple route planning, and systematically evaluated the performance of 
+different LLMs (e.g. gpt-4o, glm-4) on these tasks. We then classified the dataset by difficulty levels 
+to further evaluate the models’ performance in handling problems of varying difficulty. We also 
+tested various prompt strategies (including One-shot, Chain of Thought, etc.) to assess their effec­
+tiveness in enhancing model performance on complex geospatial tasks. The results indicate that 
+different large models have their own strengths and limitations in geospatial tasks, and their per­
+formance generally decreases with increasing task complexity. Specifically, most models did not 
+perform well on tasks requiring high-level reasoning, such as simple route planning. Additionally, 
+there are differences in the sensitivity of different models to prompt strategies. The effectiveness of 
+prompt strategies on Moon shot and GLM models is generally lower than on OpenAI and Gemini 
+models, indicating the need for more tailored prompt strategies to optimize performance for 
+specific model architectures. Overall, our study established a systematic and comprehensive bench­
+mark to test the performance of different LLMs on various geospatial tasks. This allows us to assess 
+which models are better suited for specific geospatial tasks and provides a scientific basis for tar­
+geted performance improvements of future models.
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+27
+
+===== PAGE 29 =====
+Funding
+This work is supported by the National Natural Science Foundation of China [grant number 32471860], and the 
+Natural Science Foundation of Zhejiang Province [grant numbers LGG22D010001, LQ19D010011].
+Geolocation statement
+No geolocation statement required for this study.
+Data availability statement
+The data that support the findings of this study are available with the identifier(s) at the private link: https://figshar­
+e.com/s/be55522f22bf761cfcab.
+ORCID
+Liuchang Xu 
+http://orcid.org/0000-0001-7635-7266
+References
+Aghzal, Mohamed, Erion Plaku, and Ziyu Yao. 2024. “Can Large Language Models be Good Path Planners? A 
+Benchmark and Investigation on Spatial-Temporal Reasoning.” Workshop on Large Language Models for 
+Agents, International Conference on Learning Representations (ICLR), Poster presentation.
+Azaria, Amos. 2022. ChatGPT Usage and Limitations.
+Bai, Yuqi, Liping Di, and Yaxing Wei. 2009. “A Taxonomy of Geospatial Services for Global Service Discovery and 
+Interoperability.” Computers & Geosciences 35 (4): 783–790. https://doi.org/10.1016/j.cageo.2007.12.018
+Borji, Ali, and Mehrdad Mohammadian. 2023. “Battle of the Wordsmiths: Comparing Chatgpt, gpt-4, Claude, and 
+Bard.” GPT-4, Claude, and Bard (June 12, 2023).
+Chen, J., B. Lin, R. Xu, Z. Chai, X. Liang, and K. Y. K. Wong. 2024. “MapGPT: Map-Guided Prompting with Adaptive 
+Path Planning for Vision-and-Language Navigation.” Proceedings of the Annual Meeting of the Association for 
+Computational Linguistics.
+Feng, Yu, Linfang Ding, and Guohui Xiao. 2023. “GeoQAMap – Geographic Question Answering with Maps 
+Leveraging LLM and Open Knowledge Base.” In Vol. 277 of 12th International Conference on Geographic 
+Information Science (GIScience 2023), edited by R. Beecham, J. A. Long, D. Smith, Q. Zhao, and S. Wise, 1–28. 
+Leibniz International Proceedings in Informatics (LIPIcs). Dagstuhl, Germany: Schloss Dagstuhl – Leibniz- 
+Zentrum fu¨r Informatik.
+Feng, S., H. Lyu, F. Li, Z. Sun, and C. Chen. 2024. “Where to Move Next: Zero-Shot Generalization of LLMs for Next 
+poi Recommendation.” 2024 IEEE Conference on Artificial Intelligence (CAI), IEEE, 1530–1535.
+Feng, J., J. Zhang, J. Yan, X. Zhang, T. Ouyang, T. Liu, Y. Du, S. Guo, and Y. Li. 2024. “CityBench: Evaluating the 
+Capabilities of Large Language Model as World Model.” arXiv. https://doi.org/10.48550/arXiv.2406.13945.
+Fu, Y., H. Peng, A. Sabharwal, P. Clark, and T. Khot. 2022. “Complexity-based Prompting for Multi-Step Reasoning.” 
+The Eleventh International Conference on Learning Representations.
+Gramacki, P., B. Martins, and P. Szymański. 2024. “Evaluation of Code LLMs on Geospatial Code Generation.” 
+Proceedings of the ACM GeoAI Conference, New York, NY, USA: Association for Computing Machinery, 1–9.
+Hochmair, H. H., L. Juhász, and T. Kemp. 2024. “Correctness Comparison of ChatGPT-4, Gemini, Claude-3, and 
+Copilot for Spatial Tasks.” Transactions in GIS 28: 2219–2231.
+Hou, S., Z. Shen, J. Liang, A. Zhao, Z. Gui, R. Li, and H. Wu. 2024. “Can Large Language Models Generate Geospatial 
+Code?” arXiv. https://doi.org/10.48550/arXiv.2410.09738.
+Hu, Y., G. Mai, C. Cundy, K. Choi, N. Lao, W. Liu, G. Lakhanpal, R. Z. Zhou, and K. Joseph. 2023. “Geo-Knowledge- 
+Guided GPT Models Improve the Extraction of Location Descriptions from Disaster-Related Social Media 
+Messages.” International Journal of Geographical Information Science 37 (11): 2289–2318. https://doi.org/10. 
+1080/13658816.2023.2266495
+Huang, Y., Y. Bai, Z. Zhu, J. Zhang, J. Zhang, T. Su, J. Liu, et al.. 2024. “C-Eval: A Multi-Level Multi-Discipline 
+Chinese Evaluation Suite for Foundation Models.” Advances in Neural Information Processing Systems 36: 
+62991–63010.
+Juhász, L., P. Mooney, H. H. Hochmair, and B. Guan. 2023. “ChatGPT as a Mapping Assistant: A Novel Method to 
+Enrich Maps with Generative AI and Content Derived from Street-Level Photographs.” Spatial Data Science 
+Symposium 2023 Short Paper Proceedings, UC Santa Barbara: Center for Spatial Studies.
+28 
+L. XU ET AL.
+
+===== PAGE 30 =====
+Khot, T., H. Trivedi, M. Finlayson, Y. Fu, K. Richardson, and P. Clark. 2023. “Decomposed Prompting: A Modular 
+Approach for Solving Complex Tasks.” Proceedings of the International Conference on Learning Representations 
+(ICLR), In-Person Poster Presentation.
+Kocoń, J., I. Cichecki, O. Kaszyca, M. Kochanek, D. Szydło, J. Baran, J. Bielaniewicz, et al. 2023. “ChatGPT: Jack of all 
+Trades, Master of None.” Information Fusion 99:101861. https://doi.org/10.1016/j.inffus.2023.101861
+Kojima, T., S. S. Gu, M. Reid, Y. Matsuo, and Y. Iwasawa. 2022. “Large Language Models are Zero-Shot Reasoners.” 
+Advances in Neural Information Processing Systems 35:22199–22213.
+Koubaa, Anis. 2023. GPT-4 vs. GPT-3.5: A Concise showdown.
+Kuo, Bor-Chen, Pei-Chen Wu, and Chen-Huei Liao. 2024. “GPT-3.5, GPT-4, Bard, and Claude’s Performance on the 
+Chinese Reading Comprehension Test.” In LAK Workshops. Vol. 3667, 219–222. Kyoto, Japan.
+Lane, David, Raymond Lynch, and Oliver McGarr. 2019. “Problematizing Spatial Literacy Within the School 
+Curriculum.” International Journal of Technology and Design Education 29 (4): 685–700. https://doi.org/10. 
+1007/s10798-018-9467-y
+Law, Michael, and Amy Collins. 2022. Getting to Know ArcGIS Desktop 10.8. 6th. Redlands, CA: Esri Press.
+Li, Y., B. Hui, X. Xia, J. Yang, M. Yang, L. Zhang, S. Si, et al. 2024. “One-Shot Learning as Instruction Data Prospector 
+for Large Language Models.” In Proceedings of the 62nd Annual Meeting of the Association for Computational 
+Linguistics (Volume 1: Long Papers), edited by Lun-Wei Ku, Andre Martins, and Vivek Srikumar, 4586–4601. 
+Bangkok, Thailand: Association for Computational Linguistics.
+Li, Zhe, and He Ning. 2023. “Autonomous GIS: The Next-Generation AI-Powered GIS.” International Journal of 
+Digital Earth 16 (2): 4668–4686. https://doi.org/10.1080/17538947.2023.2278895
+Li, W., D. Yao, R. Zhao, W. Chen, Z. Xu, C. Luo, C. Gong, Q. Jing, H. Tan, and J. Bi. 2024. “STBench: Assessing the 
+Ability of Large Language Models in Spatio-Temporal Analysis.” arXiv. https://doi.org/10.48550/arXiv.2406. 
+19065.
+Li, H., Y. Zhang, F. Koto, Y. Yang, H. Zhao, Y. Gong, N. Duan, and T. Baldwin. 2024. “CMMLU: Measuring Massive 
+Multitask Language Understanding in Chinese.” In Findings of the Association for Computational Linguistics: Acl 
+2024, edited by Lun-Wei Ku, Andre Martins, and Vivek Srikumar, 11260–11285. Bangkok, Thailand: Association 
+for Computational Linguistics.
+Lin, B. Y., Y. Deng, K. Chandu, F. Brahman, A. Ravichander, V. Pyatkin, N. Dziri, R. L. Bras, and Y. Choi. 2024. 
+“Wildbench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild.” arXiv. https://doi.org/ 
+10.48550/arXiv.2406.04770.
+Liu, Z., K. Janowicz, K. Currier, and M. Shi. 2024. “Measuring Geographic Diversity of Foundation Models with a 
+Natural Language–Based Geo-Guessing Experiment on GPT-4.” AGILE: GIScience Series 5:38.
+Manvi, R., S. Khanna, G. Mai, M. Burke, D. Lobell, and S. Ermon. 2024. “GeoLLM: Extracting Geospatial Knowledge 
+from Large Language Models.” The Twelfth International Conference on Learning Representations.
+Mooney, P., W. Cui, B. Guan, and L. Juhász. 2023. “Towards Understanding the Geospatial Skills of Chatgpt: Taking 
+a Geographic Information Systems (gis) Exam.” Proceedings of the 6th ACM SIGSPATIAL International 
+Workshop on AI for Geographic Knowledge Discovery, 85–94.
+OpenAI. 2024. GPT-4o System Card. Tech. Rep. This Report Outlines the Safety Work Carried Out Prior to Releasing 
+GPT-4o, Including External Red Teaming and Frontier Risk Evaluations.
+O’Sullivan, David, and David J. Unwin. 2010. Geographic Information Analysis. 2nd. Hoboken, NJ: John Wiley & 
+Sons.
+Roberts, J., T. Lüddecke, S. Das, K. Han, and S. Albanie. 2023. “GPT4GEO: How a Language Model Sees the World’s 
+Geography.” Workshop on Foundation Models for Decision Making, NeurIPS. Oral Presentation. https://doi.org/10. 
+48550/arXiv.2306.00020.
+Sharma, Manasi.. 2023. “Exploring and Improving the Spatial Reasoning Abilities of Large Language Models.” arXiv. 
+https://doi.org/10.48550/arXiv.2312.01054.
+Tang, Zhisheng, and Mayank Kejriwal. 2024. “GRASP: A Grid-Based Benchmark for Evaluating Commonsense 
+Spatial Reasoning.” arXiv. https://doi.org/10.48550/arXiv.2407.01892.
+Tao, Ran, and Jinwen Xu. 2023. “Mapping with ChatGPT.” ISPRS International Journal of Geo-Information 12 (7): 
+284. https://doi.org/10.3390/ijgi12070284
+Team, G., R. Anil, S. Borgeaud, J. B. Alayrac, J. Yu, R. Soricut, J. Schalkwyk, et al. 2023. “Gemini: A Family of Highly 
+Capable Multimodal Models.” arXiv. https://doi.org/10.48550/arXiv.2312.11805.
+Wang, X., J. Wei, D. Schuurmans, Q. Le, E. Chi, S. Narang, A. Chowdhery, and D. Zhou. 2023. “Self-Consistency 
+Improves Chain of Thought Reasoning in Language Models.” Proceedings of the International Conference on 
+Learning Representations (ICLR).
+Wei, J., Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, D. Yogatama, et al. 2022. “Emergent Abilities of Large 
+Language Models.” arXiv. https://doi.org/10.48550/arXiv.2307.15020.
+Wei, J., X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, and D. Zhou. 2022. “Chain-of-thought 
+Prompting Elicits Reasoning in Large Language Models.” Advances in Neural Information Processing Systems 
+35:24824–24837.
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+29
+
+===== PAGE 31 =====
+Wei, C., Y. Zhang, X. Zhao, Z. Zeng, Z. Wang, J. Lin, Q. Guan, and W. Yu. 2025. “GeoTool-GPT: A Trainable Method 
+for Facilitating Large Language Models to Master GIS Tools.” International Journal of Geographical Information 
+Science 39: 707–731.
+Xu, L., Z. Du, R. Mao, F. Zhang, and R. Liu. 2020. “GSAM: A Deep Neural Network Model for Extracting 
+Computational Representations of Chinese Addresses Fused with Geospatial Feature.” Computers, Environment 
+and Urban Systems 81:101473. https://doi.org/10.1016/j.compenvurbsys.2020.101473
+Xu, L., A. Li, L. Zhu, H. Xue, C. Zhu, K. Zhao, H. He, X. Zhang, Q. Kang, and Z. Lan. 2023. “Superclue: A 
+Comprehensive Chinese Large Language Model Benchmark.” arXiv. https://doi.org/10.48550/arXiv.2307.15020.
+Xu, Jinwen, and Ran Tao. 2024. “Map Reading and Analysis with GPT-4(Vision).” ISPRS International Journal of 
+Geo-Information 13 (4): 127. https://doi.org/10.3390/ijgi13040127
+Xu, L., J. Zhang, C. Zhang, X. Zheng, Z. Du, and X. Xue. 2024. “Beyond extraction accuracy: addressing the quality of 
+geographical named entity through advanced recognition and correction models using a modified BERT frame­
+work.” Geo-spatial Information Science 1–19.
+Yamada, Y., Y. Bao, A. K. Lampinen, J. Kasai, and I. Yildirim. 2023. “Evaluating Spatial Understanding of Large 
+Language Models.” arXiv. https://doi.org/10.48550/arXiv.2310.14540.
+Yang, Y., S. Wang, D. Li, S. Sun, and Q. Wu. 2024. “GeoLocator: A Location-Integrated Large Multimodal Model 
+(LMM) for Inferring Geo-Privacy.” Applied Sciences 14 (16): 7091.
+Team GLM, etal. Zeng, A., B. Xu, B. Wang, C. Zhang, D. Yin, D. Zhang, D. Rojas, G. Feng, H. Zhao, and H. Lai. 2024. 
+“ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools.” arXiv. https://doi.org/10. 
+48550/arXiv.2406.12793.
+Zhang, Y., J. Li, Z. Wang, Z. He, Q. Guan, J. Lin, and W. Yu. 2025. “Geospatial Large Language Model Trained with a 
+Simulated Environment for Generating Tool-use Chains Autonomously.” International Journal of Applied Earth 
+Observation and Geoinformation 136: 104312.
+Zhang, Y., Z. Wang, Z. He, J. Li, G. Mai, J. Lin, C. Wei, and W. Yu. 2024. “BB-GeoGPT: A Framework for Learning a 
+Large Language Model for Geographic Information Science.” Information Processing & Management 61 (5): 
+103808. https://doi.org/10.1016/j.ipm.2024.103808
+Zhang, Y., C. Wei, Z. He, and W. Yu. 2024. “GeoGPT: An Assistant for Understanding and Processing Geospatial 
+Tasks.” International Journal of Applied Earth Observation and Geoinformation 131:103976. https://doi.org/10. 
+1016/j.jag.2024.103976
+Zhao, W. X., K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, Y. Min, et al.. 2023. “A Survey of Large Language Models.” 
+arXiv. https://doi.org/10.48550/arXiv.2303.18223.
+Zheng, H. S., S. Mishra, H. Zhang, X. Chen, M. Chen, A. Nova, L. Hou, et al.. 2024. “Natural Plan: Benchmarking 
+LLMs on Natural Language Planning.” arXiv . https://doi.org/10.48550/arXiv.2406.04520.
+Zhong, W., R. Cui, Y. Guo, Y. Liang, S. Lu, Y. Wang, A. Saied, W. Chen, and N. Duan. 2024. “AGIEval: A Human- 
+Centric Benchmark for Evaluating Foundation Models.” In Findings of the Association for Computational 
+Linguistics: NAACL 2024, edited by Kevin Duh, Helena Gomez, and Steven Bethard, 2299–2314. Mexico City, 
+Mexico: Association for Computational Linguistics.
+Zhou, C., Q. Li, C. Li, J. Yu, Y. Liu, G. Wang, K. Zhang, et al. 2024. “A Comprehensive Survey on Pretrained 
+Foundation Models: A History from BERT to ChatGPT.” International Journal of Machine Learning and 
+Cybernetics 1–65.
+Zhuang, C., Z. Xie, K. Ma, M. Guo, and L. Wu. 2018. “A Task-Oriented Knowledge Base for Geospatial Problem- 
+Solving.” ISPRS International Journal of Geo-Information 7 (11). https://doi.org/10.3390/ijgi7110423
+30 
+L. XU ET AL.
+
+===== PAGE 32 =====
+Appendix
+Proofs
+Figure A2. Prompt optimization test results for NL2API Mapping task.
+Figure A1. Prompt optimization test results for spatial understanding task.
+INTERNATIONAL JOURNAL OF DIGITAL EARTH 
+31
+
+===== PAGE 33 =====
+Table A1.  Abbreviations and their descriptions.
+Abbreviation
+Full Name
+Description
+CoT
+Chain-of-Thought
+A reasoning chain method designed to enhance model’s reasoning 
+capabilities through step-by-step inference processes
+LLMs
+Large Language Models
+Language processing models with a large number of parameters
+C-Eval
+Chinese Evaluation
+A benchmark for evaluating Chinese reading comprehension abilities.
+AGIEval
+Artificial General Intelligence 
+Evaluation
+A benchmark for evaluating the performance of base models on 
+standardized human tests.
+SuperCLUE
+Super Chinese Language 
+Understanding Evaluation
+A benchmark dedicated to scientific, objective, and neutral 
+evaluation of language models.
+MMLU
+Massive Multi-task Language 
+Understanding
+A benchmark for evaluating language models’ performance across 
+multiple tasks, suitable for tasks ranging from basic to professional 
+levels.
+CMMLU
+Massive Multi-task Language 
+Understanding in Chinese
+A comprehensive Chinese benchmark covering multiple disciplines 
+including natural sciences, social sciences, engineering, and 
+humanities.
+NL2API 
+Mapping
+Natural Language to API Mapping
+A task of converting natural language requirements into API requests, 
+evaluating language models’ ability to understand user needs and 
+execute technical operations.
+WA
+Weighted Accuracy
+A weighted accuracy metric used to measure models’ comprehensive 
+performance across different tasks in multi-task learning.
+PPNL
+Path Planning from Natural Language
+A benchmark for evaluating large language models’ capabilities in 
+spatial-temporal reasoning.
+CALVIN
+Composing Actions from Language 
+and Vision
+An open-source benchmark set for learning long-horizon language- 
+conditioned tasks.
+SFMOMA
+San Francisco Museum of Modern Art
+The San Francisco Museum of Modern Art (SFMOMA) is a leading 
+modern art museum, known for its extensive collection of 
+contemporary works and innovative exhibitions.
+UNESCO
+United Nations Educational, Scientific 
+and Cultural Organization
+UNESCO is a specialized agency of the United Nations, dedicated to 
+promoting world peace and sustainable development through 
+international cooperation in the fields of education, science, and 
+culture.
+32 
+L. XU ET AL.

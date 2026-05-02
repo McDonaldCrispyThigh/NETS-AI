@@ -1,0 +1,4 @@
+1: Luo W, Wang F. Measures of Spatial Accessibility to Healthcare in a GIS
+Environment: Synthesis and a Case Study in Chicago Region. Environ Plann B Plann
+Des. 2003 Dec;30(6):865-884. doi: 10.1068/b29120. PMID: 34188345; PMCID:
+PMC8238135.

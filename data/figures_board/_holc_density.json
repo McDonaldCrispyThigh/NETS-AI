@@ -1,0 +1,30 @@
+[
+  {
+    "grade": "A",
+    "zones": 20,
+    "area_km2": 49.08,
+    "pharmacies_in_zone": 3,
+    "phar_per_km2": 0.061
+  },
+  {
+    "grade": "B",
+    "zones": 34,
+    "area_km2": 120.67,
+    "pharmacies_in_zone": 11,
+    "phar_per_km2": 0.091
+  },
+  {
+    "grade": "C",
+    "zones": 28,
+    "area_km2": 107.55,
+    "pharmacies_in_zone": 35,
+    "phar_per_km2": 0.325
+  },
+  {
+    "grade": "D",
+    "zones": 24,
+    "area_km2": 77.31,
+    "pharmacies_in_zone": 14,
+    "phar_per_km2": 0.181
+  }
+]

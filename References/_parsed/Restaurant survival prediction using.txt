@@ -1,0 +1,4297 @@
+
+===== PAGE 1 =====
+Restaurant survival prediction using machine learning: Do the variance and
+sources of customers’ online reviews matter?
+Hengyun Li a,1, Anqi Zhou b,1, Xiang (Kevin) Zheng a,1, Jian Xu b, Jing Zhang b,*
+a School of Hotel and Tourism Management, The Hong Kong Polytechnic University, Hong Kong, China
+b School of Data Science and Artificial Intelligence, Dongbei University of Finance and Economics, Dalian, 116025, China
+A R T I C L E I N F O
+Keywords:
+Survival prediction
+Review variance
+Review source
+Machine learning
+Restaurant
+A B S T R A C T
+Restaurant constitutes an essential part of the tourism industry. In times of uncertainty and transition, restaurant
+survival prediction is vital for deepening organizations’ understanding of business performance and facilitating
+decisions. By tapping into online reviews, a prevalent form of user-generated content, this study identifies review
+variance as a leading indicator of restaurants’ survival drawing from data on 2838 restaurants in Boston and their
+corresponding reviews. Machine learning–based survival analysis shows that models integrating fine-grained
+review variance (i.e., review rating variance, overall review sentiment variance, and fine-grained review
+sentiment variance) outperform models that do not account for these factors in restaurant survival prediction
+before and during the pandemic. Furthermore, in most cases, expert reviews hold stronger predictive power for
+pre-pandemic restaurant survival than non-expert and all forms of reviews. This study contributes to the liter-
+ature on business survival prediction and guides industry practitioners in monitoring and enhancing their
+enterprises.
+1. Introduction
+The tourism and hospitality sector is naturally vulnerable and bears
+the brunt of crises. Among various business players, small hospitality
+businesses, such as restaurants, are often suffered from limited resources
+and high fragility, thus being particularly vulnerable to the crisis (Kim
+et al., 2021; Wiener-Bronner, 2023). However, these small hospitality
+businesses offer remarkable economic and social benefits: for instance,
+report from National Restaurant Association (2023) and Statista (2023)
+stated that in the United States restaurants have contributed hundreds of
+billions of dollars to the national economy and created nearly 12.5
+million employments. In addition, restaurant constitutes an essential
+part of the tourism industry, attracts considerable tourist expenditure,
+and plays a crucial role in tourism experiences (Vu et al., 2019).
+Therefore, within an unstable economy and a competitive business
+environment, timely research on restaurants’ survival is urgently
+needed.
+Business survival studies usually involve traditional statistical
+methods, obtaining information either through surveys (Chhatwani
+et al., 2022) or public databases (Baum¨ohl et al., 2019). These modes of
+data collection are simple and easy to perform but come with high costs
+and potentially questionable outcomes (e.g., due to relatively small
+datasets and restrictive assumptions; (Moncada-Torres et al., 2021).
+Advances in information technology have thankfully caused internet big
+data to explode, affording researchers and industry practitioners rich
+insight into businesses’ survival (Cˆorte-Real et al., 2017). Online re-
+views, a common type of electronic word of mouth (eWoM), are
+increasingly prominent: they afford readers key information and help
+business operators monitor customers’ satisfaction so products can be
+improved accordingly (Schuckert et al., 2015).
+The burgeoning development of online reviews has drawn much
+attention. Numerous tourism and hospitality scholars have examined
+how online reviews affect restaurant survival prediction (Li et al., 2023),
+hotel performance (Anagnostopoulou et al., 2019), tourists’ willingness
+to pay (Belarmino et al., 2021), and consumers’ purchase intentions
+(Ladhari & Michaud, 2015). Extensive research has also demonstrated
+the influential role of online reviews in businesses’ financial perfor-
+mance and long-term success (Fernandes et al., 2021; Li et al., 2023).
+Major industry players (e.g., Marriott) have begun tasking individual
+staff, or even teams, with monitoring customer reviews to provide timely
+responses; hospitality businesses that attend closely to online reviews
+perform far better (e.g., in terms of revenue and visibility) than those
+* Corresponding author. School of Data Science and Artificial Intelligence, Dongbei University of Finance and Economics, Dalian, 116025, China.
+E-mail address: zhangjing_qf@dufe.edu.cn (J. Zhang).
+1 The first three authors contribute equally.
+Contents lists available at ScienceDirect
+Tourism Management
+journal homepage: www.elsevier.com/locate/tourman
+https://doi.org/10.1016/j.tourman.2024.105038
+Received 26 November 2023; Received in revised form 26 July 2024; Accepted 29 August 2024
+Tourism Management 107 (2025) 105038 
+Available online 13 September 2024 
+0261-5177/© 2024 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+
+===== PAGE 2 =====
+that do not (Prashar, 2016). Online reviews play an indispensable role in
+today’s business environment. Neglecting their importance can thus be
+detrimental.
+Given this potential, a few studies have integrated online reviews in
+business survival prediction (Li et al., 2023; Zhang & Luo, 2023). Li et al.
+(2023) adopted aspect-based sentiment analysis (ABSA) to evaluate the
+effects of online review aspect sentiments on restaurant survival pre-
+diction. Aspect-based sentiments were found to outperform overall re-
+view sentiments in terms of predictive accuracy. In addition, Naumzik
+et al. (2022) demonstrated review ratings as pivotal in forecasting res-
+taurants’ survival status several months in advance. However, it is un-
+known whether and how review variance, referring to the heterogeneity
+of review information (e.g., ratings and sentiments), affects business
+survival prediction; this role remains understudied (Babi´c Rosario et al.,
+2016). Review variance nonetheless possesses rich information value,
+such as to guide business practices. On the one hand, such variance re-
+flects fluctuations in customers’ attitudes towards specific products. It
+hence offers businesses evaluative insights into product performance
+and enables relevant adjustments. This type of information holds power
+for businesses’ survival, as dynamic customer opinions are central to
+businesses’ success. On the other hand, high review variance (e.g.,
+approval vs. disapproval) signals effective product differentiation
+(Clemons et al., 2006) and can help companies identify niche markets
+(Wang et al., 2015). A firm may then choose to focus on and profit from a
+particular consumer group by catering to these individuals’ preferences
+(e.g., restaurants specializing in niche cuisines). These decisions could
+contribute to businesses’ survival beyond mass market attention.
+Accessibility-diagnosticity theory (Feldman & Lynch, 1988) provides
+persuasive theoretical insights on the role of review variance in affecting
+business survival. Generally, this theory states that people tend to make
+decisions based on two main factors: accessibility and diagnosticity.
+While accessibility refers to the extent to which the critical information
+relevant to people’s decision-making behaviors can be available and
+easily accessed for cognitive processing, diagnosticity denotes the de-
+gree of sufficiency of the accessed information to help people arrive at
+final decisions (Menon et al., 1995). Therefore, when we look at online
+review variance as an information cue through this lens, the accessibility
+aspect can be illustrated as the presence of both positive and negative
+online reviews consumers encounter during information searching
+process. For diagnosticity, review variance can signal both product
+quality (e.g., high variance may denote product quality inconsistency)
+and taste diversity (e.g., high variance may also denote the uniqueness
+of products that cater to niche markets). These information cues are
+poised to have profound impact on consumer decisions. As consumer
+decisions (i.e., purchase or not purchase) play a vital role in influencing
+product demand, which is in turn crucial to business survival, we
+therefore postulate that online review variance is influential in business
+survival. Given the inherent complexity of review variance, with no
+scholarly consensus reached regarding its impact on business survival (e.
+g., high or low variance matters more), this topic merits further research
+to generate more insights. Specifically, this study investigates the role of
+online review variance in predicting business survival within the
+restaurant sector, a crucial area in the tourism and hospitality industry.
+Apart from review content, review sources have ignited scholarly
+interest. Revealing a message source affects customers’ perceptions of a
+review and might inform personal choices (Hass, 1982; Liu & Park,
+2015). Reviews from experts are seen as more trustworthy and helpful
+than those from everyday users (Baek et al., 2012; Lo & Yao, 2019).
+Drawing from source credibility theory (Ohanian, 1990), expertise is
+one of the key aspects contributing to message credibility and persua-
+siveness. Signaling theory, another classic theory aiming to reduce in-
+formation asymmetry between information sender and receiver and
+reach better communication process and judgement (Spence, 2002), also
+provides deep insights on the significance of message source (i.e., re-
+views written by experts). Specifically, in online review context, review
+senders’ expert status, which can be treated as a signal to review
+receivers, can benefit receivers in making better decision based on the
+information gained from this signal. Consequently, consumers’ percep-
+tions and decisions influenced by different signals can affect product
+demand, which ultimately can affect business survival. We draw on this
+line of theoretical deduction by exploring whether and how review
+sources affect business survival prediction.
+Using the restaurant businesses as the example, overall, this study is
+based on three objectives. First, we examine the impact of online review
+variance on restaurant survival prediction before and during the
+pandemic. We also consider variance in review sentiment, both in
+general and in detail (e.g., price and location). Second, we investigate
+the roles of review sources (e.g., expert reviews) in restaurant survival
+prediction. Finally, by employing interpretable machine learning–based
+survival prediction to answer our research questions, we employ Kaplan-
+Meier (KM) curves to analyze the impact of specific variables on
+restaurant survival and identify salient factors via a feature importance
+algorithm.
+2. Literature review
+2.1. Business survival/failure research
+Amid global uncertainty and an ever-changing business environ-
+ment, researchers have increasingly striven to rationalize business fail-
+ure and heighten firms’ likelihood of surviving (Amankwah-Amoah &
+Wang, 2019). Business failure is broadly defined as firms’ inability to
+weather performance declines due to external and/or internal events,
+resulting in closures and identity loss (Amankwah-Amoah, 2016).
+Studies have addressed the causes of business failure from exogenous
+and endogenous perspectives. The former view ponders macro-level
+factors such as macroeconomic conditions, market competition, the
+institutional setting, the political environment, and the technological
+landscape (Soto-Simeone et al., 2020). Abed (2022) systematically
+reviewed
+the
+COVID-19
+pandemic’s
+massive
+economic
+and
+market-related impacts on firms’ survival in industries including
+financing, marketing, and tourism and hospitality. This crisis has posed
+numerous survival threats. The industry environment in which busi-
+nesses operate is similarly crucial. For example, airlines and hospitality
+firms tend to survive for a shorter time than firms in the technology and
+pharmacy industries (Hensler et al., 1997). Higher business hazard rates
+typically correspond to later phases of the industry life cycle as pro-
+gression slows (i.e., fewer innovations) but competition intensifies
+(Agarwal et al., 2002). In short, industry-specific entry rates, scale
+economies, potential, and dynamics have varying effects on businesses’
+survival (Manj´on-Antolín & Arauzo-Carod, 2008).
+The endogenous perspective emphasizes internal (micro-level) fac-
+tors like the attributes of firms (Baum¨ohl et al., 2019; Cucculelli &
+Peruzzi, 2020; Parsa et al., 2011; Resende et al., 2016) and of business
+owners or teams (Chhatwani et al., 2022). Parsa et al. (2011) studied
+restaurants’ survival in Cobb County, Georgia, USA. Findings showed
+that restaurants’ survival rates increased in line with the establishments’
+size and operational complexity. Resende et al. (2016) further pointed
+out that small and medium-sized enterprises’ survival rates were related
+to firm size: establishments that were initially smaller had lower survival
+rates than those that were initially larger. Cucculelli and Peruzzi (2020)
+discovered that poor financial conditions, family ownership, and a small
+size hindered small and medium-sized enterprises’ survival and could
+lead to business closures. Digital maturity was also found to be closely
+associated with businesses’ survival during the pandemic: mature en-
+terprises could adapt better than immature firms in uncertain times
+(Fletcher & Griffiths, 2020).
+As for data sources, business failure prediction models traditionally
+use structured input data (e.g., financial ratios) collected from internal
+company sources to assess business circumstances and forecast survival
+(Lee, 2014; Wieprow & Gawlik, 2021). However, this approach provides
+few insights into operational improvements based on a loosely defined
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+2 
+
+===== PAGE 3 =====
+business status (e.g., healthy vs. filing for bankruptcy) (Geng et al.,
+2015). Companies therefore cannot take concrete steps to tackle prob-
+lems and save the business beyond identifying firms’ operational status.
+Relatedly, some researchers have incorporated unstructured textual
+data (e.g., from company disclosures) into business failure prediction
+models (Cecchini et al., 2010; Mai et al., 2019). Yet the scope of fore-
+casting remains limited to large public companies that are legally
+required to periodically report financial information. Small-scale busi-
+nesses, such as everyday restaurants, have been largely neglected due to
+data unavailability (Borchert et al., 2023). Survey data routinely pre-
+clude
+generalizable
+results
+when
+predicting
+businesses’
+survival
+(Chhatwani et al., 2022). A flexible and powerful approach is needed to
+overcome these types of constraints.
+2.2. Review variance and business survival prediction
+The expansion of the internet has rendered online reviews a popular
+information source for consumers’ product evaluations and decisions (Li
+et al., 2023; Schuckert et al., 2015; Xiang et al., 2017). Three review
+aspects are often researched: volume (i.e., the number of reviews
+available), valence (i.e., customers’ affective attitudes towards prod-
+ucts), and variance (i.e., the heterogeneity in consumers’ opinions about
+products) (Babi´c Rosario et al., 2016). Of these characteristics, review
+variance has been addressed the least aside from a few attempts (Langan
+et al., 2017; Park & Park, 2013; Sun, 2012; Wu et al., 2021). No study
+appears to have explicitly examined how review variance affects busi-
+nesses’ survival; however, findings regarding review variance in other
+contexts (e.g., retail) imply a close relationship between these two
+variables.
+Review variance has been shown to possess informational value (e.
+g., about consumers’ approval or disapproval of a product). It also af-
+fects people’s willingness to pay (Wu et al., 2013), customers’ purchase
+intentions (Wang et al., 2015), product sales (Moe & Trusov, 2011),
+perceived review helpfulness (Mudambi & Schuff, 2010), and busi-
+nesses’ financial returns (Luo et al., 2013). Because these factors are
+directly or indirectly associated with businesses’ survival, review vari-
+ance could be useful in predicting it. Review variance is inherently
+complex: depending on conditions (e.g., product types or consumers’
+risk attitudes), its effect can be negative, positive, insignificant, or of
+varying magnitude (Mudambi & Schuff, 2010; Park & Park, 2013; Wang
+et al., 2015). High review variance might adversely affect sales by
+signaling a potential mismatch and limiting a product’s reach in the
+mass market. High review variance can also be a positive sign of product
+differentiation (Clemons et al., 2006)—it can promote sales by signi-
+fying a product’s distinctiveness, thereby exposing a niche market
+(Wang et al., 2015). Product reviews with high variance may thus pre-
+sent perspectives on product features that people love or hate. This
+uniqueness can stimulate consumers’ purchase intentions if a product
+caters to a niche market’s demands. Review variance could potentially
+facilitate business survival prediction in this regard. Insights on review
+variance from product or customer perspectives (e.g., Moe & Trusov,
+2011; Sun, 2012) have not yet carried over to business survival pre-
+diction, which is paramount in an era of global uncertainty.
+2.3. Review sources and business survival prediction
+In addition to review characteristics, review sources are likely to
+assist in business survival prediction. Experts are often thought to have
+domain-specific knowledge (Wu et al., 2021). Accordingly, expert re-
+views
+usually
+seem
+credible
+and
+readily
+shape
+consumers’
+product-related attitudes, perceived review helpfulness, and subsequent
+decisions (Lo & Yao, 2019). Popular source identity cues include a re-
+viewer’s badge level (Baek et al., 2012), a review’s number of “useful”
+votes (Filieri et al., 2019), and how many reviews a person has written
+(Lee et al., 2011)—all of which convey a reviewer’s expertise. Studies in
+tourism and hospitality have shown that, compared with non-expert
+reviews, expert reviews more strongly affect people’s travel choices
+(Hoang & Khuong, 2015) and views on review usefulness: these types of
+reviews alleviate information asymmetry as consumers browse online
+feedback (Liu & Park, 2015). An expert source can also affect reviewers’
+rating behavior (Zhang et al., 2016). Although scholars have not spe-
+cifically examined how review sources (e.g., expert reviews) shape
+business survival prediction, the literature suggests that these sources
+could inform customers’ attitudes and behavior, which are key to
+businesses’ survival (Fan et al., 2023).
+In summary, online reviews represent an important type of internet
+big data. Yet research that integrates this data source in business sur-
+vival prediction remains thin: much of the literature has concentrated on
+review aspects (e.g., review ratings and review topics) besides review
+variance and review sources. Table 1 displays studies on the roles of
+certain review aspects in business survival prediction. For ensuring
+relevance, completeness, and quality, the selection criteria are: 1) all
+previous articles pertinent to using online reviews for business survival
+prediction; and 2) all articles are sourced from SSCI-indexed journals or
+high-quality computer science conferences. The relative lack of atten-
+tion to review variance and sources has hampered managerial implica-
+tions that may enhance such prediction.
+3. Methodology
+3.1. Data collection
+We obtained data on restaurants in Boston, Massachusetts from Yelp,
+a well-known review platform. The city of Boston is a popular tourist
+destination boasting a dining culture rich with restaurants and cuisine
+types. Our dataset is thus representative. Information on restaurant
+characteristics was drawn from 528,592 reviews of 2838 restaurants
+posted between October 12, 2004, and October 8, 2021 (Yelp only
+provides data to this time point when we accessed their opened public
+database). Restaurant attribute data included each restaurant’s price
+level, cuisine type, zip code, and state of survival. Review data consisted
+of review content; review ratings; the number of “funny,” “useful,” and
+“cool” votes; the review date; and the reviewer’s “Elite” year, as shown
+in Fig. 1.
+3.2. Variable construction
+3.2.1. Opening and exit times
+To study restaurants’ survival status, we needed to determine when
+each business launched (i.e., opening time) and whether and/or when it
+ceased operating (i.e., exit time). Although Yelp provides information
+regarding the restaurants’ closed status, it does not provide the exact
+time of business exit. We thus followed Zhang and Luo’s (2023) method
+to identify opening times by referring to each restaurant’s earliest re-
+view. We adopted keyword matching combined with manual labeling
+(Li et al., 2023; Zhang & Luo, 2023) to specify exit times. First, we
+created a keyword list indicating restaurants’ closure status based on
+129,614 Yelp reviews of 1191 closed restaurants in Boston. For instance,
+the following restaurant’s exit time was identified as October 20, 2012
+based on the keyword “close”: “After its 137 years in business Locke Ober
+the landmark Boston restaurant that opened in 1875 has closed on October
+20, 2012.” (The keyword shown in the example review is “closed” as it
+was written in the present tense. We however used the keyword “close”
+after word normalisation in the following study for business exit
+identification).
+After creating label-based rules (see Appendix A), we employed eight
+annotators to discern restaurants’ exit times through two stages: a
+training stage and a final labeling stage (see Appendix A for details). All
+closed restaurants’ exit times were identified. In total, 225 restaurants’
+exits were overtly noted in reviews. For the 966 restaurants for which
+this detail was unavailable, the date of the last review was used as the
+exit time.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+3 
+
+===== PAGE 4 =====
+3.2.2. Business attribute characterization
+Several business-related factors can affect restaurants’ survival
+(Parsa et al., 2011), including chain business, price, the number of
+competitors, customer engagement, review ratings, review length,
+number of reviews, and business age. Relevant factors were extracted
+from our dataset as attributes for survival prediction.
+Restaurants with more than five branches of the same name are
+considered chains (Hutzschenreuter et al., 2021) and were labeled as 1
+in our study; all other restaurants were deemed independent and labeled
+as 0. Price levels were denoted as 1, 2, 3, and 4, respectively corre-
+sponding to Yelp’s price ranges (i.e., $, $$, $$$, $$$$). Nearby
+competition also influences businesses’ profitability and survival
+(Hutzschenreuter et al., 2021) and was factored into our predictive
+model. Following Li et al. (2023) approach, the number of competitors
+for a restaurant in a given year was first calculated by considering the
+number of restaurants having the same zip code per year. The average
+number of competitors since a restaurant’s inception was then calcu-
+lated to reflect the competitive landscape. Bakhshi et al. (2015) found
+that customer engagement, operationalized as the sum of each review’s
+“funny,” “useful,” and “cool” votes, was a sound indicator of restaurant
+quality. We measured each restaurant’s customer engagement by
+totaling these three vote types and computing the average customer
+engagement each year.
+Moreover, review ratings quantitatively demonstrate customer
+satisfaction and are crucial in restaurant survival prediction (Naumzik
+et al., 2022). We therefore considered this indicator by calculating
+average customer ratings for each restaurant. In order to explore the
+impact of a restaurant’s operating state at a certain observation time on
+its subsequent future survival, we calculated the restaurant’s business
+age based on the actual number of years that the restaurant had been in
+business at a given time of observation. Finally, we calculated the
+average review length and the average number of reviews. Rows 2–9 in
+Table 2 summarize variables related to the chosen business attributes.
+3.2.3. Customer review sentiment
+Customer review sentiment shows how people perceive a restaurant
+Table 1
+Previous studies of business survival prediction using online reviews.
+Authors
+Data & Source(s)
+Method(s)
+Relevant Review Aspects
+Key Findings
+Lian et al.
+(2017)
+Numerical and textual
+review data from
+Dianping
+Logistic regression, gradient boosted
+decision tree, support vector machine
+Review ratings
+Review topics extracted from text
+The model containing all predictors produced
+the best results. Review text had the strongest
+predictive power among all predictors.
+Tao and Zhou
+(2020)
+Numerical and textual
+review data from Yelp
+and TripAdvisor
+Convolutional neural network-long short-
+term memory based prediction model
+Review sentiment
+Review time spans
+Review topics extracted from text
+The proposed deep-learning model showed
+satisfactory prediction performance and
+generalizability. The model with a 12-month
+span outperformed other time spans in terms of
+prediction. Food, ambience, and service were
+the top-ranked features related to business
+closures.
+Vallapuram
+et al. (2021)
+Numerical,
+geographical, textual,
+and image review data
+from Yelp
+Boosting Decision Trees (GBDT), Logistic
+Regression (LR), Support Vector Machine
+(SVM) and Multilayer Perceptron (MLP).
+Review ratings
+Review sentiment
+Bag-of-Words
+Business attributes and linguistic features have
+the highest predictive power
+Li et al. (2022)
+Numerical and textual
+review data from
+Dianping and Yelp
+A prediction model comprising input, co-
+attention, graph representation, joint
+learning modules
+Review keywords extracted from
+text
+The proposed joint learning framework
+improved survival prediction and produced
+interpretable results.
+Naumzik et al.
+(2022)
+Numerical review data
+from Yelp
+Variable-duration hidden Markov model
+Review rating sequence
+The model generated satisfactory results with a
+balanced accuracy of 78.02% and enabled
+prediction several months in advance.
+Fan et al.
+(2023)
+Numerical and textual
+review data from
+Airbnb
+Discrete-time hazard model
+Aspect-based review sentiment
+By mining customers’ service perceptions about
+Airbnb listings from online reviews, the model
+indicated that service differentially affected
+listings’ survival (i.e., for shared and non-shared
+listings).
+Li et al. (2023)
+Numerical and textual
+review data from Yelp
+Conditional survival forest model with
+ABSA
+Aspect-based review sentiment
+Aspect-based review sentiment improved
+restaurant survival prediction compared to
+overall review sentiment. Location and tastiness
+sentiments were essential for restaurant survival
+prediction.
+Current study
+Numerical and textual
+review data from Yelp
+Machine learning–based survival
+prediction with cutting-edge
+algorithms (Bayes, support vector
+machine, multilayer perceptron,
+XGBoost)
+1) Review variance: rating,
+overall sentiment, and fine-
+grained sentiment; 2) review
+source: expert vs. non-expert vs.
+all reviews
+Models with (vs. without) review variance (i.
+e., rating variance, overall sentiment
+variance, and fine-grained sentiment
+variance) generated more accurate
+predictions. Models using expert reviews,
+compared with those using non-expert and
+all reviews, produced better predictions.
+Fig. 1. Sample review.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+4 
+
+===== PAGE 5 =====
+and can influence a brand’s reputation, WOM, consumers’ decisions,
+and general loyalty (Lee, 2017). Positive sentiments tend to bring a
+restaurant more diners and better WOM, whereas negative reviews can
+compromise a restaurant’s competitiveness. Sentiment is thus critical to
+restaurants’ survival. We extracted overall sentiments and specific sen-
+timents from restaurant reviews. ABSA is a more complex task compared
+to traditional textual sentiment analysis and involves identifying the
+sentiment expressed in each aspect (Hoang et al., 2019). BERT has
+demonstrated its ability to yield favorable results in natural language
+processing tasks owing to the extensive textual data it has been trained
+on (Wang et al., 2018). For tasks such as ABSA, BERT contributes to
+performance
+improvement.
+Several
+methods
+can
+be
+used
+for
+BERT-based ABSA, such as ABSA-BERT-pair (Sun et al., 2019),
+LCF-BERT (Zeng et al., 2019), and pipeline-based analysis approaches.
+Pipeline methods provide an existing interface to make predictions that
+can be directly employed on a dataset for immediate use. Li et al. (2023)
+have been conducted to validate the performance of pipeline method for
+ABSA using open-source dataset with a confusion matrix result of 0.85.
+For this current study, BERT-based ABSA2 (Li et al., 2023) was
+employed to calculate fine-grained sentiment scores for aspects such as
+tastiness, service, location, price, and environment (Nakayama & Wan,
+2019; Padillo Jr et al., 2022) using keywords from a previous study (Li
+et al., 2023). Both review text and aspect words were used as inputs to
+perform the above sentiment analysis. Positive scores (Sp), neutral
+scores (Sneu), and negative scores (Sn) were obtained for each charac-
+teristic and ranged from 0 to 1, with higher values denoting a higher
+possibility of belonging to that sentiment. We calculated the final
+sentiment for each aspect as Saspect =
+Sp
+Sp+Sneu+Sn , where a higher senti-
+ment value conveys a more positive sentiment. We also averaged these
+five scores as the overall review sentiment and included it in our model
+(from a restaurant’s opening until a certain time; see “avg.s” in rows
+10–15 in Table 2) to discern how review sentiment affects survival
+prediction. In addition, we show descriptive statistics of variables in
+Appendix B Table A1.
+3.2.4. Review variance characterization
+Fluctuations in review ratings, known as review variance, can in-
+fluence businesses’ survival (Sun, 2012). Variance represents the degree
+of volatility in data, with a small amount indicating a relatively stable
+change in a variable and a large amount implying high volatility. To
+investigate how fluctuating review ratings inform restaurants’ survival,
+we included review rating variance in our model (i.e., var.rating; see
+row 16 in Table 2 for details). It was calculated based on all review
+ratings for a given restaurant during a certain period to determine this
+feature’s role in restaurants’ survival. We additionally explored whether
+the volatility of review sentiment scores influenced survival prediction.
+Variance in the five aspects of sentiment scores and the overall senti-
+ment score (i.e., var.s; see rows 17–22 in Table 2) were incorporated into
+our model to identify the impact of customer sentiment variance. In
+addition, the distribution of the variance variables was also analyzed in
+terms of restaurant chain status and the restaurants with different
+average review volume levels (average review volume less than 10, 10 to
+20, 20 to 50, and more than 50), as detailed in Appendix C.
+3.2.5. Time-varying review characterization
+Duan et al. (2008) considered cumulative and daily WOM to deter-
+mine whether shifts in overall WOM and current WOM informed con-
+sumers’ decisions and businesses’ operations. Accumulated reviews
+reflect a restaurant’s overall operations. These operations can change
+with time, such as when chefs are hired, menus are updated, or service
+improves. Recent reviews reflect a restaurant’s current operations and
+attract people’s attention when browsing. Recent reviews are therefore
+more likely to influence diners’ decisions and, in turn, restaurants’
+survival. We identified a restaurant’s cumulative WOM by extracting a
+variable (Cumt) from all reviews up to time point t in the current period
+(the period was measured in years, with t denoting the end of the year
+Table 2
+Variables and descriptions.
+No.
+Variable
+Description
+Measurement
+1
+State of
+survival
+A restaurant’s survival status
+at the current time point
+Determined manually by
+annotators and
+calculated by the author
+2
+Price
+Yelp’s labels of $, $$$, $$$,
+and $$$$ are denoted as 1, 2,
+3, and 4, respectively
+Derived directly from
+Yelp
+3
+Chain business
+A restaurant with more than
+five stores of the same name
+is a chain (=1, otherwise =
+0)
+Calculated by the author
+4
+Business age
+Age from opening time to
+observation time point
+Calculated by the author
+5
+Avg. No. of
+competitors
+Average restaurant
+competitor density per year
+based on the number of
+restaurants in the same zip
+code
+Calculated by the author
+6
+Avg. amount of
+engagement
+Average sum of “funny,”
+“useful,” and “cool” votes on
+the reviews for a restaurant
+Calculated by the author
+7
+Avg. length of
+reviews
+Average word count of the
+reviews for a restaurant
+Calculated by the author
+8
+Avg. review
+volume
+Average number of the
+reviews for a restaurant
+Calculated by the author
+9
+Avg. rating
+Average rating of the reviews
+for a restaurant
+Calculated by the author
+10
+Avg. location
+senti.
+Average sentiment score on
+location in the reviews for a
+restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+11
+Avg. tastiness
+senti.
+Average sentiment score on
+tastiness in the reviews for a
+restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+12
+Avg. service
+senti.
+Average sentiment score on
+service in the reviews for a
+restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+13
+Avg. price
+senti.
+Average sentiment score on
+price in the reviews for a
+restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+14
+Avg.
+atmosphere
+senti.
+Average sentiment score on
+atmosphere in the reviews
+for a restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+15
+Avg. general
+senti.
+Average sentiment score in
+general of the reviews for a
+restaurant
+Calculated by the author
+16
+Var. rating
+Variance in the rating of the
+reviews for a restaurant
+Calculated by the author
+17
+Var. location
+senti.
+Variance in sentiment score
+on location in the reviews for
+a restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+18
+Var. tastiness
+senti.
+Variance in sentiment score
+on tastiness in the reviews
+for a restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+19
+Var. service
+senti.
+Variance in sentiment score
+on service in the reviews for
+a restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+20
+Var. price senti.
+Variance in sentiment score
+on price in the reviews for a
+restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+21
+Var.
+atmosphere
+senti.
+Variance in sentiment score
+on atmosphere in the reviews
+for a restaurant
+Calculated by the author
+based on BERT-based
+ABSA method
+22
+Var. general
+senti.
+Variance in sentiment score
+in general of the reviews for
+a restaurant
+Calculated by the author
+Notes. Each “Avg.” and “Var.” variable included three time-varying subsets (i.e.,
+OnePeriodt, Cumt, and Changet). This table only lists 22 variables without de-
+tailing these subsets; the study included 58 variables in total. No.6-22 Variables
+are recreated based on full, Elite, and non-Elite datasets.
+2 https://pypi.org/project/aspect-based-sentiment-analysis/.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+5 
+
+===== PAGE 6 =====
+for the current period). We also introduced a one-period current variable
+(OnePeriodt) by extracting variables from reviews posted in the current
+period. Changes in restaurant reviews (e.g., initial negative feedback has
+given way to recent positive feedback) may shape consumers’ percep-
+tions of and trust in an establishment to ultimately inform its reputation
+and profile. The restaurant’s long-term viability can then be affected. We
+used the difference between the one-period current variable (OnePer-
+iodt) of reviews posted in the current period and the cumulative variable
+(Cumt-1) accumulated up to the previous period as the change variable
+(Changet) for the current period. See Appendix B Table A2 for descrip-
+tive statistics of variables.
+3.3. Survival prediction algorithms
+We performed binary classification on our data (Li et al., 2022;
+Zhang & Luo, 2023) to predict restaurants’ survival status in detail (i.e.,
+whether a restaurant will survive in the future). We used multiple
+classification algorithms to assess findings’ robustness: statistics-based
+machine learning (naive Bayes classifier [Bayes]); kernel-based ma-
+chine learning (support vector machine [SVM]); a neural network–based
+model (multilayer perceptron [MLP]); and an integrated method
+(eXtreme gradient boosting [XGBoost])(Kotsiantis et al., 2007).
+The Bayes model is based on Bayes’ theorem, which is normally used
+to manage classification and regression problems; it can deal with a lack
+of, or ambiguity in, prior knowledge during classification tasks
+(Lampinen & Vehtari, 2001). However, to achieve optimal performance,
+the Bayes model typically assumes that sample data are independently
+distributed. SVM is a kernel-based binary classification model that can
+solve high-dimensional problems in the feature space and deal with
+interactions between nonlinear features. It is a key machine learning
+method in survival analysis (Ding et al., 2021). MLP is a neural net-
+work–based model that addresses nonlinear separable problems. This
+technique is widely used for classification, model recognition, experi-
+ence modeling, and other purposes (Park & Lek, 2016). It has also been
+used to predict breast cancer patients’ survival and has shown an ac-
+curacy of up to 88.2% (Kalafi et al., 2019). Finally, XGBoost is another
+popular integrated machine learning algorithm based on gradient
+boosting. It possesses high efficiency, flexibility, and convenience and is
+suitable for calculating problems that involve many predictors (Danciu
+et al., 2022). We projected restaurants’ survival with Bayes, SVM, MLP,
+and XGBoost and identified the algorithm producing the most accurate
+predictions. Detailed specification of parameters for the four algorithms
+used in our experiments is included in Appendix D, Table A11.
+3.4. Experimental design
+We designed four prediction models to test how review variance and
+review source affect restaurants’ survival: base model, base + var.r
+model, base + avg.s model, and base + avg.s + var.r + var.s model.
+These models and their corresponding variables are shown in Table 3.
+All variables except chain business, price, and business age were trans-
+formed based on three time spans (i.e., OnePeriodt, Cumt, and Changet).
+We compared these models’ predictive capacity with and without
+variance-related variables to forecast restaurants’ survival. Specifically,
+we analyzed how review rating variance influences survival by
+comparing the predictive performance of our base model and base + var.
+r model. We similarly evaluated the impacts of variance in review rat-
+ings and text sentiment by comparing the base + avg.s and base + avg.s
++ var.r + var.s models. By doing so, we were able to clarify whether
+variance-related variables affected restaurant survival prediction. To
+measure these variables’ evolving effects on models’ predictive capa-
+bilities, we forecasted restaurants’ survival for one year ahead and
+multiple years ahead. Our datasets were further stratified into “Elite”
+and “non-Elite” categories to identify differences in features’ predictive
+power, particularly in terms of variance, by examining how Elite, non-
+Elite, and all reviews implied restaurants’ survival. We also explored
+whether variance in Elite reviews yielded more promising predictions.
+Furthermore, we also predicted restaurant survival before the COVID-19
+and during the COVID-19 separately in order to compare the impact of
+the pandemic on restaurant survival prediction. Models’ performance
+was assessed using several metrics drawn from earlier work (Liao et al.,
+2020; Zhang & Luo, 2023): area under the curve (AUC), sensitivity,
+specificity, Kullback–Leibler (KL) divergence, precision, and the F1
+score.
+3.4.1. One-year-ahead survival prediction
+To start, we used data from 2014 to 2019 as data prior to the COVID-
+19 and compared the predictive performance of four groups of models
+based on four algorithms to analyze whether variance-related variables
+enhanced one-year-ahead restaurant survival prediction. We defined
+each period as a calendar year (e.g., for the year 2014, t = 2014) to offer
+investors and managers extended lead time (vs. monthly predictions)
+when allocating resources. Additionally, because some restaurants may
+not receive new reviews within a given month, using a yearly (vs.
+monthly) unit of analysis mitigated data sparsity and improved our
+models’ stability.
+To ensure the predictive model could be generalized to restaurants
+outside our dataset, we forecasted the survival status of out-of-sample
+restaurants as well. We specifically conducted 10-fold cross-validation
+by dividing the samples in each period (i.e., each year) into 10 even
+subsets. We then calibrated the model using nine subsets and tested its
+performance to predict restaurants’ survival in the remaining subset. For
+instance, we first used restaurants that survived in 2014 as our sample
+and extracted variables from reviews accumulated for these restaurants
+between 2004 and the end of 2014. These restaurants’ survival status in
+2015 served as their survival label; that is, restaurants that survived in
+2015 were labeled 1 and 0 otherwise (using Xi2014 to predict yi2015, i
+denotes the restaurant). We then trained the model using restaurants
+from 90% of the sample and tested its predictive power using restaurants
+from the remaining 10% of the sample. Again using 10-fold cross-
+validation, we performed 10 predictions for each yearly task, with the
+annual outcome being the average of these 10 predictions. Overall, in
+the one-year-ahead experiment, we extracted features based on reviews
+from the restaurant opening to different observation times t (t = 2014,
+2015, …, 2018), and performed five sets of tasks to predict restaurants’
+survival in 2015–2019 (e.g., we used data from 2004 to 2014 to predict
+the survival status of out-of-sample restaurants in 2015 and so forth).
+Evaluation metrics for the final one-year-ahead predictions were the
+average of the metrics from the five separate sets of prediction results.
+Our data were imbalanced; for example, among restaurants that
+survived until the end of 2014, 6.831% closed in 2015. Imbalanced
+datasets can cause the machine learning model being overly trained on
+Table 3
+Models and variables.
+Model
+Variables
+Base
+Price, Chain business, Business age, Avg. No. of competitors,
+Avg. amount of engagement, Avg. length of review, Avg.
+review volume, Avg. rating
+Base + var.r
+Price, Chain business, Business age, Avg. No. of competitors,
+Avg. amount of engagement, Avg. length of review, Avg.
+review volume, Avg. rating, Var. rating
+Base + avg.s
+Price, Chain business, Business age, Avg. No. of competitors,
+Avg. amount of engagement, Avg. length of review, Avg.
+review volume, Avg. rating, Avg. location senti., Avg.
+tastiness senti., Avg. service senti., Avg. price senti., Avg.
+atmosphere senti., Avg. general senti.
+Base + avg.s + var.r
++ var.s
+Price, Chain business, Business age, Avg. No. of competitors,
+Avg. amount of engagement, Avg. length of review, Avg.
+review volume, Avg. rating, Avg. location senti., Avg.
+tastiness senti., Avg. service senti., Avg. price senti., Avg.
+atmosphere senti., Avg. general senti., Var. rating, Var.
+location senti., Var. tastiness senti., Var. service senti., Var.
+price senti., Var. atmosphere senti., Var. general senti.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+6 
+
+===== PAGE 7 =====
+the majority class while performing poorly on the minority class.
+Consequently, the model may predict the majority class and neglect the
+minority class, compromising its generalisation capabilities (Yu & Liu,
+2004). We thus employed the SMOTE algorithm for oversampling to
+balance our data based on 50% of the restaurants closing. The balanced
+dataset was applied for model training and prediction. We show the
+sample sizes of restaurants in different experiments in Table A3 in Ap-
+pendix B.
+3.4.2. Multiple-years-ahead survival prediction
+Forecasting a restaurant’s survival beyond one year can be chal-
+lenging, but extending predictions into the future can facilitate resource
+allocation and strategic planning. We therefore examined our four
+models’ abilities to predict restaurants’ survival several years ahead.
+We predicted restaurants’ survival within the next Δt years,
+assuming that a restaurant owner would not see future reviews (e.g.,
+using data before the end of 2014 to predict whether a restaurant would
+survive until 2016). We used Xit to predict restaurants’ survival in year yi
+(t+Δt) (Δt = 2, 3, 4, 5). Four models (base, base + var.r, base + avg.s, and
+base + avg.s + var.r + var.s) were trained for each Δt. To match the
+above analyses, we also predicted the survival of out-of-sample restau-
+rants using 10-fold cross-validation. Furthermore, to verify if variance-
+related variables improved models’ predictive capacity for longer-term
+survival, we completed paired comparisons of the prediction results
+for many years ahead (i.e., the base model vs. the base + var.r model; the
+base + avg.s model vs. the base + avg.s + var.r + var.s model).
+3.4.3. Survival prediction based on expert and non-expert reviews
+Yelp certifies reviewers as “Elite” if they write many reviews or if
+their reviews are frequently deemed helpful. Elite reviewers are usually
+actively engaged and spend considerable time and effort contributing to
+the online review community (Li et al., 2017). Reviews from Elite
+members (hereafter referred to as “expert reviews”) also often provide
+more in-depth content (e.g., real-world experiences or unique perspec-
+tives) to inform consumers. This information can influence individuals’
+decisions along with businesses’ prosperity (Tucker, 2011). Reviews
+posted by non-Elite members (hereafter referred to as “non-expert re-
+views”) may contain vague or misleading information. Survival pre-
+diction results based on features from expert reviews may differ from
+those based on features from non-expert reviews; variance-related var-
+iables from expert reviews may yield superior prediction outcomes. To
+compare the impacts of reviews from Elite users, non-Elite users, and all
+users on restaurants’ survival, we categorized all reviews as either
+expert or non-expert. First, we collected Yelp user data (i.e., user ID and
+user’s Elite year) and review data (i.e., user ID and review time). Second,
+we classified reviews as either expert or non-expert by matching the user
+ID and checking whether the review time fell within the user’s Elite year.
+This process resulted in three datasets: a full dataset (528,592 reviews),
+an Elite dataset (109,740 expert reviews), and a non-Elite dataset (418,
+852 non-expert reviews).
+Specifically, in line with the previous experimental design, we
+forecasted survival for one year and multiple years ahead using expert
+and non-expert reviews, respectively (including out-of-sample restau-
+rants via 10-fold cross-validation). We also compared the effects of
+variance features from expert reviews, non-expert reviews and all re-
+views on restaurant survival prediction. These experiments, based on
+three types of reviews, deepened our understanding of how expert re-
+views and variance-related variables influence businesses’ survival.
+3.4.4. Survival prediction during the COVID-19
+The COVID-19 brought a significant challenge to restaurant survival.
+We conducted additional experiments to predict restaurant survival
+during the COVID-19 period. Specifically, we forecasted one-year-ahead
+and multiple-years-ahead restaurants’ survival during the COVID-19 in
+full dataset, Elite dataset, and non-Elite dataset, respectively. In one-
+year-ahead survival prediction during the COVID-19, we conducted 2
+sets of prediction tasks to predict restaurant survival in 2020 and 2021
+(i.e., using data from 2004 to 2019 to predict the survival status of out-
+of-sample restaurants in 2020 and using data from 2004 to 2020 to
+predict the survival status of out-of-sample restaurants in 2021). For
+multiple-years-ahead survival prediction during the COVID-19, we
+predicted restaurant survival in the next two years (i.e., using data from
+2004 to 2019 to predict the survival status of out-of-sample restaurants
+in 2021). Except for the change of sample data, all other experimental
+steps remained the same as in the experiments before the COVID-19.
+4. Results
+4.1. One-year-ahead survival prediction
+To analyze the impacts of different features on one-year-ahead sur-
+vival prediction, the base model, base + var.r model, base + var.s model,
+and base + var.s + var.r model were used in line with the Bayes, SVM,
+MLP, and XGBoost algorithms along with the features extracted from all
+reviews. AUC refers to the area under the receiver operating charac-
+teristic curve and is an intuitive metric with which to evaluate predictive
+models (Ling et al., 2003). AUC values range from 0 to 1, with higher
+values denoting better accuracy. The AUC remains stable regardless of
+the classification threshold; it is insensitive to threshold variations and
+enables consistent outcomes (Fawcett, 2006). Furthermore, by evalu-
+ating the entire classifier instead of its performance at a specific classi-
+fication threshold, AUC can be used to compare models’ efficacy. This
+measure is appropriate for assessing prediction performance in various
+machine learning applications (Fawcett, 2006). We adopted it to
+compare prediction results throughout this section. All other metrics (i.
+e., sensitivity, specificity, KL divergence, precision, and F1 score) are
+listed in Tables A4–A8 in Appendix B.
+Fig. 2 shows that including variance-related variables significantly
+improved prediction performance across eight sets of comparative ex-
+periments. Upon comparing the base model with the base + var.r model
+and the base + avg.s model with the base + avg.s + var.r + var.s model,
+we observed improvements in prediction outcomes for all models con-
+taining variance. For example, the base + avg.s model using the XGBoost
+algorithm achieved an AUC of 96.773%, while the base + avg.s + var.r
++ var.s model attained an AUC of 97.21%. This 0.452% difference is
+notable because the baseline model already had outstanding perfor-
+mance, thus limiting room for improvement (Du et al., 2019; Lee et al.,
+2021). The variance in review ratings and review sentiment can there-
+fore enhance models’ capacity for one-year-ahead restaurant survival
+prediction. We also found that all algorithms except Bayes (i.e., SVM,
+MLP, and XGBoost) demonstrated promising results for one-year-ahead
+survival prediction, with AUC values exceeding 90%. The highest AUC,
+from XGBoost, was 97.21%.
+4.2. Multiple-years-ahead survival prediction
+We further predicted restaurants’ survival multiple years ahead.
+Fig. 3 displays results for the base model, base + var.r model, base +
+avg.s model, and base + avg.s + var.r + var.s model based on the Bayes,
+SVM, MLP, and XGBoost algorithms using all reviews. Time frames
+spanned from one year ahead to five years ahead; findings are based on
+the AUC.
+In terms of one-year-ahead survival prediction, XGBoost performed
+best among the four algorithms. Its results for our four models gradually
+decreased as the prediction timeline extended from one year ahead to
+five years ahead. For instance, whereas one-year-ahead predictions
+consistently exceeded 96%, they declined to approximately 80% for five
+years ahead. This trend indicates our models’ superior performance on
+nearer-term data.
+Among the four models’ prediction results when using the XGBoost
+algorithm for all reviews, the base + avg.s + var.r + var.s model
+consistently demonstrated the most accurate predictions for multiple-
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+7 
+
+===== PAGE 8 =====
+years-ahead survival. The base + var.r model outperformed the base
+model from one year ahead to five years ahead. Additionally, the base +
+avg.s + var.r + var.s model regularly achieved superior prediction re-
+sults compared with the base + avg.s model. Integrating the variance in
+review ratings and review sentiment therefore enhanced multiple-years-
+ahead survival prediction. All other algorithms’ results from one years to
+five years ahead were like those of XGboost apart from SVM; its results
+were similar from one year to four years ahead but returned slightly
+different outcomes for five years ahead. Overall, most algorithms’ re-
+sults were stable.
+4.3. Significance test of prediction results for all reviews
+The baseline model has already demonstrated superb predictions.
+However, the above experiments revealed noteworthy improvements in
+model performance upon including variance-related variables. We
+conducted a significance test using paired samples t tests to assess
+whether these improvements were statistically significant. Because
+some test samples did not meet the approximate normality condition, we
+supplemented the t-test with a Wilcoxon signed-rank test as a non-
+parametric method, and verified these improvements by the median of
+the difference between pairs of results. We initially examined the four
+algorithms’ significance and then tested paired samples of prediction
+results with and without variance-related variables (i.e., based on the
+Fig. 2. Results of one-year-ahead survival prediction.
+Fig. 3. Results for multiple-years-ahead survival prediction.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+8 
+
+===== PAGE 9 =====
+four algorithms with AUC as the evaluation metric). Findings are pre-
+sented in Table 4.
+When comparing models with and without variance-related vari-
+ables, most results were statistically significant (p < 0.1, t/Median<0).
+Specifically, upon considering all reviews, both the base model and the
+base + var.r model for the SVM and XGBoost algorithms were significant
+at the 10% level. All other comparisons yielded significant results at the
+5% level. Overall, regarding all reviews, significant differences emerged
+for the four algorithms when comparing models with and without
+variance-related variables. Models containing variance-related variables
+demonstrated better performance to a statistically significant degree.
+4.4. Survival prediction based on expert reviews and non-expert reviews
+Regarding survival predictions between expert and non-expert re-
+views, Fig. 4 shows the results for four models using various classifica-
+tion algorithms (i.e., one-year-ahead predictions using all reviews,
+expert reviews, and non-expert reviews based on the AUC). Excluding
+MLP, most results for the other three algorithms involving expert re-
+views were more promising than those involving non-expert reviews.
+Consequently,
+compared
+with
+non-expert
+reviews,
+the
+variables
+extracted from expert reviews could more accurately predict restau-
+rants’ one-year-ahead survival status. MLP’s disappointing results for
+expert reviews might have arisen because these reviews had less data. In
+contrast to other algorithms, MLP features more parameters and re-
+quires a relatively larger training dataset. Our relatively small dataset
+for expert reviews might not have allowed MLP to fine-tune its param-
+eters effectively.
+When appraising how variance-related variables affected prediction
+results, only the findings for expert reviews based on SVM showed a
+slightly lower AUC for the base + var.r model (90.255%) compared with
+the base model (90.262%). In summary, whether considering all re-
+views, expert reviews, or non-expert reviews, the models containing
+variance (based on the Bayes, SVM, MLP, and XGBoost algorithms)
+consistently outperformed models without variance. The base + var.r
+model possessed a superior predictive capability over the base model;
+the same pattern applied to the base + avg.s + var.r + var.s model
+compared with the base + avg.s model. The variance in review ratings
+and review sentiment thus noticeably improved model predictions.
+To further scrutinize how variance-related variables extracted from
+expert reviews affected restaurant survival prediction, Fig. 5 provides a
+detailed analysis of outcomes for the XGBoost algorithm. This approach
+yielded optimal results as evidenced by the AUC for one-year-ahead to
+five-year-ahead predictions using four models: base model, base + var.r
+model, base + avg.s model, and base + avg.s + var.r + var.s model.
+Fig. 5 indicates a gradual decrease in predictive accuracy across all four
+models as the prediction horizon extends. With respect to expert
+reviews, which hold greater predictive power for restaurants’ survival,
+we compared 10 sets (i.e., five sets for the base + var.r model vs. the base
+model and five sets for the base + avg.s + var.r + var.s model vs. the
+base + avg.s model) spanning from one year ahead to five years ahead.
+The base + avg.s + var.r + var.s models consistently had more accurate
+predictions than the base + avg.s models. Among the five sets of com-
+parisons between the base + var.r and base models, only one set (i.e.,
+four-year-ahead survival prediction) showed a slightly lower AUC for
+the base + var.r model (83.341%) compared with the base model
+(83.443%); all other models including variance-related variables out-
+performed their counterparts. Therefore, for expert reviews, integrating
+variance-related variables further enhanced the accuracy of restaurant
+survival prediction in most cases.
+4.5. Significance test of prediction results for expert and non-expert
+reviews
+In Section 4.4, we predicted restaurants’ survival status using four
+models based on variables extracted from expert reviews and non-expert
+reviews. We also compared the performance of models with and without
+variance-related variables. Models with (vs. without) these variables
+predicted one-year-ahead survival between 0.037% and 2.247% more
+effectively. We then performed significance tests to verify whether these
+improvements were significant, as shown in Table 5. Significance held
+for most results based on each of the four algorithms for expert and non-
+expert reviews in general. Notable differences emerged for the four
+models with and without variance-related variables (p < 0.1, t/
+Median<0).
+We subsequently compared the survival prediction results for vari-
+ables extracted from expert and non-expert reviews. Variables from
+expert reviews (vs. non-expert reviews) improved the models’ perfor-
+mance by between 0.189% and 1.682% for one-year-ahead survival. To
+determine whether the enhancements were statistically significant, we
+conducted tests to compare the performance of the four algorithms in
+predicting one-year-ahead experiments using expert reviews versus non-
+expert reviews and expert reviews versus all reviews. The results indi-
+cated expert reviews based on SVM and XGBoost significantly improve
+the prediction performance compared to non-expert reviews (p < 0.1, t/
+Median>0), and expert reviews based on Bayes and XGBoost signifi-
+cantly improve the prediction performance compared to all reviews (p
+< 0.1, t/Median>0).
+4.6. Survival prediction during the COVID-19
+Fig. 6 presents the one-year-ahead prediction results during the
+COVID-19 using AUC metric (for prediction results using other metrics,
+see Appendix B, Table A9). It was found that both one-year-ahead
+Table 4
+Significance test of prediction results for all reviews.
+No.
+Paired differences
+Mean
+Median
+SD
+SEM
+t
+Wilcoxon
+p-value
+1
+Bayes base vs. Bayes base + var.r
+−0.007
+−0.006
+0.006
+0.002
+−4.697
+–
+0.000
+2
+Bayes base + avg.s vs. Bayes base + avg.s + var.r + var.s
+−0.010
+−0.010
+0.009
+0.002
+−4.354
+–
+0.001
+3
+SVM base vs. SVM base + var.r
+0.005
+−0.001
+0.025
+0.006
+–
+−1.761
+0.078
+4
+SVM base + avg.s vs. SVM base + avg.s + var.r + var.s
+−0.001
+−0.002
+0.002
+0.001
+−2.618
+–
+0.020
+5
+XGBoost base vs. XGBoost base + var.r
+−0.003
+−0.001
+0.005
+0.001
+−1.862
+–
+0.084
+6
+XGBoost base + avg.s vs. XGBoost base + avg.s + var.r + var.s
+−0.007
+−0.008
+0.005
+0.001
+−5.591
+–
+0.000
+7
+MLP base vs. MLP base + var.r
+−0.007
+−0.005
+0.008
+0.002
+–
+−3.294
+0.001
+8
+MLP base + avg.s vs. MLP base + avg.s + var.r + var.s
+−0.009
+−0.005
+0.009
+0.002
+−4.141
+–
+0.001
+9
+Base vs. Base + var.r
+−0.003
+−0.003
+0.014
+0.002
+–
+−5.160
+0.000
+10
+Base + avg.s vs. Base + avg.s + var.r + var.s
+−0.007
+−0.004
+0.007
+0.001
+–
+−6.022
+0.000
+Notes: Lines 1 and 2 represent significance tests for comparative predictions (i.e., base vs. base + var.r and base + avg.s vs. base + avg.s + var.r + var.s) in terms of the
+AUC based on the Bayes algorithm from one year to five years ahead using variables from all reviews. Each group for the significance test contained 15 pairs of
+comparative prediction results: five pairs for one year ahead, four pairs for two years ahead, three pairs for three years ahead, two pairs for four years ahead, and one
+pair for five years ahead. Rows 3–8 present comparative results based on four algorithms. Rows 9 and 10 indicate the significance of comparative predictions based on
+the four algorithms from one year to five years ahead with 60 pairs of comparative prediction results.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+9 
+
+===== PAGE 10 =====
+prediction before and during COVID-19 showed similar results. Specif-
+ically, the prediction results based on SVM, MLP, and XGBoost exhibited
+superiority, with AUC values exceeding 95%, and the inclusion of
+variance variable (i.e., review rating variance and review sentiment
+variance) enhanced the restaurant survival prediction performance
+during the COVID-19.
+In Fig. 7, we compared the prediction results of base model, base +
+var.r model, base + avg.s model, and base + avg.s + var.r + var.s model
+in one-year-ahead and two-years-ahead prediction over all reviews
+using AUC metric (for prediction results using other metrics, see Ap-
+pendix B, Table A10). It was found that, among four prediction models
+using all reviews, the majority of the results given by base + avg.s + var.
+r + var.s model were best in one-year-ahead and two-years-ahead
+predictions. In addition, the majority of the results given by the
+models that consider review rating variance and review sentiment
+variance showed significant improvement in one-year-ahead and two-
+years-ahead prediction, when comparing to models without consid-
+ering those variances. Furthermore, similar to the results before the
+COVID-19, the models’ prediction performance was better in one-year-
+ahead experiment than in two-years-ahead experiment.
+As similar to the results before the COVID-19, we also segmented the
+Elite and non-Elite dataset to study the impact of reviews from Elite
+users, non-Elite users, and all users on restaurant survival prediction
+during the COVID-19. The results of the AUC metric for the expert and
+non-expert reviews are shown in Table 6, which provides several
+intriguing findings. First, it was verified that the survival prediction
+results of the model with variance were better than that without vari-
+ance in both datasets. Second, the prediction performance of one-year-
+ahead was generally better than that of two-years-ahead. Third, an
+analysis comparing survival prediction results derived from experts and
+non-experts reviews revealed that the source of online reviews –
+whether from Elite or from non-Elite users – did not remarkably influ-
+ence the performance of models, despite a slight improvement in the
+two-years-ahead prediction results drawn from the experts reviews as
+opposed to the non-experts reviews. Interestingly, the prediction per-
+formance based on all reviews was better than that solely based on the
+expert reviews. One plausible explanation could be that, during the
+pandemic where uncertainty prevails, consumers may engage in more
+thorough and comprehensive evaluations before decision-making than
+they would in normal times. Therefore, in such a content, both expert
+and non-expert reviews are likely to be considered, leading to incon-
+sistent yet interesting results meriting further study.
+Fig. 4. One-year-ahead prediction results for expert and non-expert reviews.
+Fig. 5. Multiple-years-ahead survival prediction results for four models based
+on XGBoost using expert reviews.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+10 
+
+===== PAGE 11 =====
+A significance test was conducted, with the outcomes presented in
+Table 7. It was found that there was no significant difference in pre-
+diction performance between expert and non-expert reviews (p > 0.1).
+However, a notable disparity was identified between the performance of
+models using all reviews and those using expert reviews, with the former
+showing superior results (p < 0.1, Median<0). Moreover, a significant
+difference was observed between the prediction results of the model
+incorporating variance variable and the model without them, indicating
+that the inclusion of variance variables significantly enhanced model
+performance (p < 0.1, t/Median<0).
+4.7. Comparative analysis before and during the COVID-19
+To further explore the influence of review variance and source on
+survival, we conducted a comparative analysis, examining the periods
+both before and during the COVID-19 pandemic. Specifically, we
+employed four algorithms and their corresponding AUC metrics for one-
+year-ahead predictions. Across various review sources (all reviews,
+Table 5
+Significance test of prediction results for expert and non-expert reviews.
+Paired differences
+Mean
+Median
+SD
+SEM
+t
+Wilcoxon
+p-value
+Expert reviews
+Bayes base vs. Bayes base + var.r
+−0.002
+−0.001
+0.003
+0.001
+−2.713
+–
+0.017
+Bayes base + avg.s vs. Bayes base + avg.s + var.r + var.s
+−0.011
+−0.011
+0.011
+0.003
+−3.782
+–
+0.002
+SVM base vs. SVM base + var.r
+−0.002
+−0.001
+0.002
+0.001
+−2.720
+–
+0.017
+SVM base + avg.s vs. SVM base + avg.s + var.r + var.s
+−0.001
+−0.001
+0.002
+0.000
+−3.119
+–
+0.008
+XGBoost base vs. XGBoost base + var.r
+−0.003
+−0.003
+0.004
+0.001
+−2.591
+–
+0.021
+XGBoost base + avg.s vs. XGBoost base + avg.s + var.r + var.s
+−0.007
+−0.008
+0.004
+0.001
+−6.059
+–
+0.000
+MLP base vs. MLP base + var.r
+−0.009
+−0.007
+0.013
+0.003
+–
+−2.499
+0.012
+MLP base + avg.s vs. MLP base + avg.s + var.r + var.s
+−0.018
+−0.016
+0.010
+0.003
+−6.620
+–
+0.000
+Base vs. Base + var.r
+−0.004
+−0.003
+0.007
+0.001
+–
+−4.741
+0.000
+Base + avg.s vs. base + avg.s + var.r + var.s
+−0.009
+−0.007
+0.010
+0.001
+–
+−6.144
+0.000
+Non-expert reviews
+Bayes base vs. Bayes base + var.r
+−0.007
+−0.005
+0.006
+0.001
+−4.712
+–
+0.000
+Bayes base + avg.s vs. Bayes base + avg.s + var.r + var.s
+−0.010
+−0.008
+0.009
+0.002
+−4.184
+–
+0.001
+SVM base vs. SVM base + var.r
+−0.004
+−0.004
+0.002
+0.000
+−7.586
+–
+0.000
+SVM base + avg.s vs. SVM base + avg.s + var.r + var.s
+−0.003
+−0.003
+0.002
+0.000
+–
+−3.351
+0.001
+XGBoost base vs. XGBoost base + var.r
+−0.002
+−0.002
+0.001
+0.000
+−5.257
+–
+0.000
+XGBoost base + avg.s vs. XGBoost base + avg.s + var.r + var.s
+−0.009
+−0.008
+0.005
+0.001
+−6.957
+–
+0.000
+MLP base vs. MLP base + var.r
+−0.010
+−0.010
+0.009
+0.002
+−3.996
+–
+0.001
+MLP base + avg.s vs. MLP base + avg.s + var.r + var.s
+−0.014
+−0.014
+0.010
+0.003
+−5.192
+–
+0.000
+Base vs. Base + var.r
+−0.006
+−0.004
+0.006
+0.001
+–
+−5.872
+0.000
+Base + avg.s vs. base + avg.s + var.r + var.s
+−0.009
+−0.007
+0.008
+0.001
+–
+−6.338
+0.000
+Comprehensive comparison
+Expert Bayes vs. All Bayes
+0.008
+0.005
+0.016
+0.004
+–
+−1.867
+0.062
+Expert Bayes vs. non-expert Bayes
+0.004
+−0.003
+0.024
+0.005
+–
+−0.224
+0.823
+Expert SVM vs. All SVM
+−0.009
+−0.012
+0.007
+0.002
+–
+−3.547
+0.000
+Expert SVM vs. non-expert SVM
+0.007
+0.008
+0.008
+0.002
+3.930
+–
+0.001
+Expert MLP vs. All MLP
+−0.009
+−0.012
+0.011
+0.002
+−3.629
+–
+0.002
+Expert MLP vs. non-expert MLP
+−0.005
+−0.004
+0.008
+0.002
+−2.940
+–
+0.008
+Expert XGBoost vs. All XGBoost
+0.002
+0.001
+0.003
+0.001
+2.353
+–
+0.030
+Expert XGBoost vs. non-expert XGBoost
+0.002
+0.002
+0.003
+0.001
+–
+−2.576
+0.010
+Notes: Significance test results for expert reviews and non-expert reviews were similar to those for all reviews. Our comprehensive comparison involved significance
+tests for expert reviews versus non-expert reviews and for expert reviews versus all reviews of the four algorithms (including all AUC results of the four models for one
+year ahead).
+Fig. 6. Results of one-year-ahead survival prediction during the COVID-19.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+11 
+
+===== PAGE 12 =====
+expert reviews and non-expert reviews), we calculated the average
+improvement percentage in survival prediction performance for models
+with and without variance variables. The improvement is calculated as
+improvement = AUC(model with var)−AUC(model without var)
+AUC(model without var)
+× 100%. The re-
+sults are shown in Fig. 8.
+Firstly, for all reviews, the results based on all four algorithms
+(excluding XGBoost) reveal that the variance during the COVID-19 ex-
+erts more pronounced effects on the prediction model enhancement
+compared to the variance before the COVID-19. Secondly, the influence
+of variance on survival before and during the COVID-19 varies signifi-
+cantly based on the review source. Specifically, during the pandemic,
+the effect of variance from expert reviews on the model performance
+shows further improvement in all four algorithms compared to their pre-
+pandemic performance. Nevertheless, for non-expert reviews, the im-
+provements stemming from variance during the pandemic are pro-
+nounced in the Bayes and SVM algorithms, whereas before the
+pandemic, the MLP and XGBoost algorithms demonstrate stronger en-
+hancements attributable to variance.
+4.8. Kaplan-Meier curves
+This paper employs Kaplan-Meier (KM) curves to analyze the impact
+of specific variables on restaurant survival. Specifically, the KM curves
+describes the proportion of restaurants that survive over time given an
+influencing factor. The X-axis denotes restaurant’s survival time (in
+months), defined as the duration from the initial observation to the
+restaurant’s closure, while the Y-axis represents the survival rate – that
+is, the probability that a restaurant will survive at a given observation
+time. As such, this approach facilitates a comparative analysis of the
+impact of high versus low values of a particular feature on restaurant
+survival.
+Fig. 9(a) and (b) display the KM curves of cumulative, current
+average, and variance of the review rating and five aspect-based senti-
+ment for five-years-ahead predictions before the COVID-19 (from 2015
+to 2019) and two-years-ahead during the COVID-19 (from 2020 to
+2021). The blue line indicates restaurants with values of this variable
+below the median and the orange line represents restaurants with values
+of this variable above the median. The closer two lines are to each other,
+the smaller the difference in the impact of the high versus low variable
+on restaurant survival; conversely, the wider separation between the
+two lines, the more pronounced the impact of the high versus low var-
+iable on restaurant survival.
+The following findings can be reached from the two figures. First, as
+can be seen in row 2 in Fig. 9(a) and (b), the cumulative variance was
+similar before and during the Covid-19. Regarding the review rating and
+tastiness sentiment score, restaurants had higher probability of survival
+when the cumulative variance was lower. However, the cumulative
+variance of service, atmosphere, and location sentiment score did not
+have apparent impact on restaurant survival. In addition, regarding the
+price sentiment score, while restaurants exhibited a higher probability
+of survival before the pandemic when its cumulative variance was
+lower, the cumulative variance had little impact on restaurant survival
+during the pandemic. In addition, a comparison of row 4 in Fig. 9(a) and
+(b) revealed that, generally, the current variance in review ratings and in
+five aspect-based sentiment scores exerted a negligible impact on
+restaurant
+survival
+before
+the
+pandemic.
+However,
+during
+the
+pandemic, restaurants exhibited a higher chance of survival when the
+current variance of review ratings and five aspect-based sentiment score
+was lower. Such results indicated that recent review ratings and senti-
+ment scores during the pandemic became more important compared to
+before the pandemic. Furthermore, as can be seen from row 1 and row 3
+in Fig. 9(a) and (b), restaurants had higher chance of survival when the
+majority of both cumulative and average scores was higher, that is,
+higher scores in review ratings and five aspect-based sentiments led to
+higher chance of restaurant survival.
+4.9. Feature importance
+To explore the importance of extracted features for restaurant sur-
+vival prediction, we used the feature importance method to analyze the
+impacts of all variables from all reviews based on the base + avg.s + var.
+r + var.s model before the COVID-19. We used the average coverage of a
+feature over the sample to represent the importance of the feature; the
+Fig. 7. Results of Multiple-years-ahead survival prediction during the COVID-19.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+12 
+
+===== PAGE 13 =====
+better the coverage capability, the more important the feature is for
+prediction (Yang et al., 2020). We predicted survival in 2015 using re-
+views from 2004 to 2014 as an example. All variables were separated
+into groups: variables in the base model (i.e., base variables), average
+senti. variables, and variance-related variables. XGBoost performed best
+among all algorithms. We consequently used feature importance from
+the XGBoost algorithm for sorting; results are pictured in Fig. 10.
+Furthermore, we also used the feature importance method from the
+XGBoost algorithm to analyze the impacts of all variables from all re-
+views based on the base + avg.s + var.r + var.s model during the
+COVID-19, see Appendix E for details.
+Chain business, price, and business age were the most important
+among base variables and all variables, echoing earlier work on res-
+taurants’ survival (Zhang & Luo, 2023). Avg. review volume (cum.) and
+avg. rating (cum.) each ranked highly in terms of importance (i.e., fourth
+and fifth, respectively). These outcomes are unsurprising, as many
+consumers prefer to dine at restaurants that have many reviews and
+positive ratings; thus, the number of cumulative reviews and review
+ratings are important for restaurants’ survival.
+Second, among the average variables, avg. price senti. (cum.) was
+most pertinent. The feature importance of avg. atmosphere senti. (cum.),
+avg. tastiness senti. (cum.), and avg. general senti. (cum.) was also
+higher and possessed greater predictive power regarding future survival.
+Most of the salient variables in this group (i.e., average variables) were
+cumulative, likely because the cumulative sentiment average variable
+was more representative of overall restaurant sentiment.
+Third, the variance was more important than the average, except for
+avg. price senti. (cum.). Variance-related variables thus appeared to
+affect restaurant survival prediction more profoundly than average
+variables. This finding reinforces our prior conclusion that most models
+including variance outperformed those without variance. Among
+variance-related variables, var. price senti. (cum.) was the most influ-
+ential. Those concerning price sentiment were also informative (i.e., var.
+price senti. [cum.], var. price senti. [one-period], and var. price senti.
+[change]). This finding mirrors previous literature highlighting price as
+crucial in consumers’ restaurant choices (Chua et al., 2020). Review
+rating variance was useful in predicting restaurants’ survival as well.
+Var. location senti. (one-period), var. atmosphere senti. (cum.), and var.
+service senti. (cum.) were also prominent within this feature category as
+shown by their rankings.
+5. Conclusion and discussion
+Timely and accurate business survival prediction is vital in today’s
+dynamic business environment. We gathered online review data for
+2838 restaurants in Boston to forecast businesses’ survival. By employ-
+ing advanced machine learning–based algorithms, we investigated the
+roles of variance and review sources in restaurant survival prediction.
+Several revelations were identified.
+First, online review variance was a leading indicator of business
+survival prediction. Online reviews are multifaceted. Closely examining
+specific aspects can untangle these reviews’ complexity and underline
+their power for forecasting businesses’ survival (e.g., in terms of review
+variance). Specifically, it was found that three types of variance (i.e.,
+review rating variance, overall review sentiment variance, and aspect-
+based review sentiment variance) can greatly influence restaurant sur-
+vival prediction. Regarding review rating variance, it vividly reflects the
+heterogeneity of customers’ consumption utility of the product, as high
+ratings usually communicate the high quality of the product and
+Table 6
+AUC metric results for expert and non-expert reviews.
+Algorithm
+Model
+Expert
+reviews
+one-year-
+ahead
+Non-expert
+reviews one-
+year-ahead
+Expert
+reviews
+Two-
+years-
+ahead
+Non-
+expert
+reviews
+Two-
+years-
+ahead
+Bayes
+Base
+63.16%
+64.31%
+57.48%
+56.38%
+base +
+var.r
+66.87%
+69.06%
+63.79%
+62.17%
+base +
+avg.s
+67.57%
+68.69%
+61.26%
+61.82%
+base +
+avg.s +
+var.r +
+var.s
+68.65%
+69.64%
+64.85%
+64.37%
+SVM
+base
+89.74%
+92.22%
+86.60%
+84.21%
+base +
+var.r
+90.21%
+92.69%
+86.73%
+84.91%
+base +
+avg.s
+89.85%
+92.33%
+86.57%
+83.90%
+base +
+avg.s +
+var.r +
+var.s
+90.32%
+92.76%
+87.02%
+84.91%
+MLP
+base
+90.66%
+96.05%
+89.52%
+89.37%
+base +
+var.r
+91.37%
+96.63%
+91.23%
+92.42%
+base +
+avg.s
+91.48%
+96.40%
+91.56%
+90.79%
+base +
+avg.s +
+var.r +
+var.s
+92.83%
+96.70%
+93.21%
+92.36%
+XGBoost
+base
+97.74%
+98.05%
+95.60%
+95.19%
+base +
+var.r
+98.23%
+98.21%
+96.15%
+95.72%
+base +
+avg.s
+98.30%
+98.37%
+96.08%
+95.79%
+base +
+avg.s +
+var.r +
+var.s
+98.41%
+98.47%
+96.64%
+96.48%
+Table 7
+Significance test of prediction results during the COVID-19.
+Paired differences
+Mean
+Median
+SD
+SEM
+t
+Wilcoxon
+p value
+All reviews
+Base vs. Base + var.r
+−0.012
+−0.007
+0.016
+0.005
+–
+−2.275
+0.023
+Base + avg.s vs. base + avg.s + var.r + var.s
+−0.007
+−0.004
+0.006
+0.002
+−3.578
+–
+0.004
+Expert reviews
+Base vs. Base + var.r
+−0.016
+−0.007
+0.022
+0.006
+–
+−3.059
+0.002
+Base + avg.s vs. base + avg.s + var.r + var.s
+−0.010
+−0.006
+0.010
+0.003
+–
+−3.059
+0.002
+Non-expert reviews
+Base vs. Base + var.r
+−0.018
+−0.008
+0.022
+0.006
+–
+−2.824
+0.005
+Base + avg.s vs. base + avg.s + var.r + var.s
+−0.008
+−0.005
+0.010
+0.003
+−2.777
+–
+0.018
+Comprehensive comparison
+Expert vs. all
+−0.023
+−0.011
+0.033
+0.005
+–
+−4.000
+0.000
+Expert vs. non-expert
+−0.012
+−0.001
+0.032
+0.005
+–
+−1.497
+0.134
+Notes: Significance tests for all, expert, and non-expert reviews were similar to those conducted for pre-pandemic times. The test was based on four algorithms from
+one-year-ahead to two-years-ahead with 12 pairs of comparative prediction results. Comprehensive comparison involved significance tests for expert reviews versus
+non-expert reviews and for expert reviews versus all reviews (including all AUC results of the four models and four algorithms for one-year-ahead and two-years-ahead
+prediction).
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+13 
+
+===== PAGE 14 =====
+potentially signal high perceived demand (Sun, 2012), which is central
+to business survival. In terms of overall sentiment variance, it reflects the
+heterogeneity of overall customer valence (i.e., positive, negative, and
+neutral) towards the product, providing an overview of customers’
+satisfaction which is crucial to business survival (Li et al., 2023). More
+interestingly, for aspect-based sentiment variance, while it similarly
+reflects the heterogeneity of customer valence, it does provide a more
+nuanced and multifarious insights on customer’s satisfaction about
+different aspects of products (e.g., the food and the service of certain
+restaurant) (Li et al., 2023). Such fine-grained sentiment variance helps
+practitioners take more concrete actions effectively targeting at certain
+aspects.
+Our findings align with studies indicating the centrality of review
+variance in domains such as product sales (Sun, 2012) and customers’
+willingness to pay (Wu et al., 2013). In addition, different from work
+focusing on review rating variance, we addressed overall review senti-
+ment variance and fine-grained review sentiment variance to offer
+granular insights. Results demonstrate the promise of review variance
+and extend its applicability to business survival prediction. Notably, the
+findings also indicate that during the pandemic, review variance exerts a
+more pronounced effect on survival prediction in most cases compared
+to its impact before the pandemic. Moreover, given the importance of
+revealing underlying mechanisms in management research, we provide
+insights to make the study’s findings more inspiring. Specifically, it is
+inferred that restaurant ratings and customer intentions might mediate
+the impact of review variance on restaurant survival. On the one hand,
+research suggests that review variance exerts negative effect on
+restaurant ratings (Li et al., 2020), as high review variance increases
+product uncertainty, making customers less confident in their evalua-
+tions (Petrocelli et al., 2007). Consequently, lower ratings may
+adversely influence restaurant demand and eventually make the busi-
+ness harder to survive (Kim et al., 2016). On the other hand, previous
+study indicates that rating variance plays a crucial role in influencing
+diners’ visit intentions to restaurants, with lower variance attracting
+more customers due to reduced perceived risk (Lu et al., 2020).
+Following this logic, the underlying mechanism of revealed impact in
+this study could be that restaurants with lower (higher) review variance
+tend to have higher (lower) chance of survival due to higher (lower)
+restaurant ratings or increased (decreased) customer flows.
+Second, we have confirmed the value of review sources as docu-
+mented elsewhere (Li et al., 2017; Lo & Yao, 2019; Wu et al., 2021;
+Zhang et al., 2016) and expanded its potential. Previous research mainly
+covered review sources in relation to consumers’ evaluations (Baek
+et al., 2012; Liu & Park, 2015). We unearthed the importance of these
+sources in predicting businesses’ survival. Additionally, we found that
+during the pandemic, the variance in expert reviews shows a greater
+impact on survival prediction compared to its impact before the
+pandemic. Online reviews from specific sources (e.g., experts) some-
+times comprise more reliable and higher-quality information than re-
+views from other sources. Stakeholders can therefore exploit these
+premium data sources for various purposes.
+Third, the KM curves provide a more nuanced understanding of how
+review variance affects restaurant survival across both pre-pandemic
+and pandemic periods. Specifically, before the pandemic, long-term
+variances in restaurant ratings, tastiness, and price sentiment gain
+greater importance. And restaurants with higher scores but lower vari-
+ance in these aspects are more likely to survive. However, during the
+pandemic, while restaurants with higher scores but lower variance in the
+above aspects still survive better, recent (short-term) fluctuations of
+restaurant’s ratings and respective sentiment on price, tastiness, and
+service start to gain increasing significance. These intriguing findings
+not only echo to the growing importance of services, such as low-risk
+services that ensure safety, during the pandemic (Bove & Benoit,
+2020) but also in line with the emerging pattern of the significance of
+short-term changes and adaptions over long-term trends during the
+crisis (Deloitte, 2020; McKinsey Global Institute, 2021).
+Last, by using feature importance algorithm, we identified chain
+business, price, and age as the most pertinent factors influencing res-
+taurants’ survival. Restaurants that have higher prices, are chains, or
+belong to time-honored brands generally survive longer due to their
+stronger investment abilities, more robust resilience, and better resource
+access (e.g., managerial talent). Scholars have previously come to
+similar conclusions (Parsa et al., 2011, 2015; Zhang & Luo, 2023). We
+also determined that variance-related variables about price contribute to
+restaurant survival prediction. Indeed, cost is an essential consideration
+when diners choose a restaurant (Chua et al., 2020). The variance in
+restaurant ratings, locations, and services are also integral to predicting
+businesses’ survival, further corroborating their importance docu-
+mented in other research (Naumzik et al., 2022).
+5.1. Theoretical implications
+This study contributes to the literature in several ways. First, it
+bolsters research on business survival using internet big data (i.e., online
+review data). To our best knowledge, this study is among one of the first
+examining the role of online review variance in business survival pre-
+diction. While previous studies mainly focused on the use of review
+ratings and valence in predicting business survival, we identified a new
+leading indicator (i.e., review variance) in this important field. Through
+the lens of accessibility-diagnosticity theory, we demonstrated the po-
+tential of online review variance in predicting business survival. Spe-
+cifically, online review variance is likely to serve as an informational
+Fig. 8. Comparative analysis for restaurant prediction before and during the
+COVID-19.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+14 
+
+===== PAGE 15 =====
+signal or cue regarding the quality of products/services provided by
+businesses. Such variance is instrumental in shaping consumers’ per-
+ceptions and influencing their decision uncertainty (e.g., high variance
+may increase the degree of decision uncertainty), which in turn can
+influence their decision behaviors. For instance, in tourism and hospi-
+tality context, consumer may decide whether to patronize a restaurant
+based on various opinions expressed in online reviews. Consequently,
+these behaviors are anticipated to influence product demand, thereby
+ultimately influencing business survival. In addition, by recognizing
+review variance as a significant facet of online reviews, this study
+further underscores the value of online review data in business survival
+research. This type of data is simple to access, fairly vast, and
+information-rich, thus enabling effective business survival prediction
+and warranting continuous use in future studies.
+Second, our research enriches the eWoM literature, particularly in
+terms of online reviews. Regarding review characteristics, scholars have
+acknowledged the role of review rating variance in product sales (Sun,
+2012). We took another step in this direction by exploring overall review
+sentiment variance and fine-grained review sentiment variance. All
+three types of variance seem important for restaurant survival predic-
+tion, unveiling key aspects that may promote restaurants’ survival.
+Compared with studying review variance from a single perspective (e.g.,
+rating variance), we considered multiple angles (e.g., rating variance,
+overall sentiment variance, and fine-grained sentiment variance) to
+Fig. 9. KM curves. (a) before the COVID-19 and (b) during the COVID-19.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+15 
+
+===== PAGE 16 =====
+foster more fruitful outcomes. As for online review sources, based on
+source credibility theory and signaling theory, our study verifies the
+power of expert reviews (Li et al., 2017). These reviews have typically
+been explored with respect to consumer decision making and review
+helpfulness or credibility (Baek et al., 2012). We demonstrated their
+roles in restaurant survival prediction. By treating expert status as a
+signal and expert reviews as more trustworthy content, consumers are
+likely to form better product perceptions and make informed choices
+based on the information obtained from expert reviews. Consequently,
+these decisions can influence product demand (i.e., restaurant business
+volume), which eventually can affect restaurant survival. Our work
+amplifies the value of identity-descriptive information (i.e., expert sta-
+tus) in online reviews (Li et al., 2017) and underscores review sources’
+potential in a new domain (i.e., business survival prediction). This study
+is one of the first to assess these reviews’ profundity in a hospitality and
+tourism context. Follow-up research can produce additional insights.
+Finally, we have fortified business survival prediction using inter-
+pretable machine learning. Unlike studies that merely reported greater
+predictive accuracy without identifying associated causes, we described
+the factors underlying restaurants’ survival. Our use of a feature
+importance algorithm revealed influential aspects of survival prediction.
+In addition, compared with research that processed information from
+surveys or internal databases (Chhatwani et al., 2022; Parsa et al., 2011)
+via conventional quantitative approaches (e.g., proportional hazard
+regression), we implemented a flexible yet powerful machine learning
+method that can generate more reliable, interpretable outcomes. Later
+studies could extend this approach to predict survival in other tourism
+and hospitality settings (e.g., hotels).
+5.2. Practical implications
+Our study also contributes to industry practice in various ways. First,
+business owners should pay attention to review variance. We have
+provided an additional tool with which to evaluate businesses’ survival.
+For instance, restaurant managers should be mindful of product and
+service delivery; it is important to minimize possible inconsistencies
+when observing a high degree of review variance. Managers should
+instead adjust their offerings to suit market expectations. Short-term
+variance shall also be paid attention as consumers start keeping eyes
+on more recent changes. In addition, review variance can help
+Fig. 10. Results of feature importance analysis.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+16 
+
+===== PAGE 17 =====
+businesses identify customers to whom the restaurant’s products and
+services may appeal. Managers can then engage in targeted marketing to
+tap into this market (e.g., specializing in unique or little-known cui-
+sines). While implementing such practices may seem challenging due to
+potential concern regarding the feasibility of quantifying review vari-
+ance through managerial capabilities, the flourishing digital trans-
+formation across industries can in fact facilitate this process, even for
+financially constraint businesses. For instance, restaurant managers who
+lack competent data skills or face financial constraints can utilize
+existing software with open-source tools, which are free and handy, to
+gain insights into review variance. Additionally, leveraging the potential
+of generative AI, such as ChatGPT, to assist managers with review
+variance calculation by providing relevant prompts can be beneficial
+without incurring extra costs.
+Second, apart from paying attention to overall review sentiment
+variance, business owners are also suggested to gain insights from
+aspect-based review sentiment variance. Specifically, we identified
+several aspects, such as price sentiment and service sentiment variance,
+that can prompt business development. Such a finding provides insights
+to practitioners at both micro and macro level. At micro level, for
+instance, restaurateurs should carefully evaluate customers’ attitudes
+towards current price levels to see whether costs meet diners’ expecta-
+tions. At macro level, it highlights the importance of and raises man-
+agers attention to different aspects of their business, instead of merely
+paying attention to the overall picture. On this basis, more concrete
+actions could be taken to make targeted improvement and eventually
+benefit the entire business. Expert reviews are similarly helpful for
+predicting restaurants’ survival. Practitioners should encourage diners
+with expert status to write reviews after visiting a restaurant.
+Third, by leveraging our prediction model, investors can check the
+consistency of customers’ attitudes towards certain restaurants to clarify
+businesses’ status and potential. Investors can then pursue opportunities
+with a higher presumed return on investment. In times of uncertainty,
+when investors become especially prudent about their decisions, our
+study should enable more confident strategic planning.
+Lastly, operators of online review platforms such as Yelp and Tri-
+pAdvisor can refer to our work to understand how variance and online
+review sources contribute to business survival prediction. Platform op-
+erators could introduce functions that display restaurants’ review vari-
+ance to indicate restaurants’ business status. Expert reviewers could also
+be incentivized to post high-quality reviews. Operators can incorporate
+our findings into annual business reports to enhance stakeholders’ sense
+of business prospects based on information derived from review vari-
+ance and sources.
+6. Limitations and future research
+A few limitations of this study need to be acknowledged. First, when
+considering aspects that might affect businesses’ survival, we did not
+account for variables other than review variance and sources (e.g.,
+restaurants’ marketing practices and financial status). Researchers
+should integrate additional factors as relevant data become available. At
+more macro level, the negligence of issues like regional blockade pol-
+icies and government support polices during the pandemic should be
+noted as a limitation and examined in future research. Second, we only
+examined online review text; we ignored visual elements (e.g., review
+photos), although they may provide additional information about res-
+taurants’ survival. Many customers supplement their reviews with pic-
+tures. Finally, we gathered all review data from Yelp and focused on
+restaurants in Boston. Finding may not generalize to other geographic
+areas. Scholars should investigate restaurants in other places and extend
+our method to different hospitality products (e.g., hotels).
+Impact statement
+This study provides practitioners in the restaurant industry with
+novel insights on business survival by tapping into online review vari-
+ance and expert reviews. In times of uncertainty and turbulence, the
+practical value of this study is remarkable and can be summarized as
+follows. First, restaurant managers should pay sufficient attention to the
+different types of online review variance (i.e., review rating variance,
+overall review sentiment variance, and fine-grained review sentiment
+variance), as it provides nuanced understanding about customers’ atti-
+tudes and preferences toward the products and services offered, which
+play a central role in business survival. Second, restaurant managers
+should incentivize expert reviewers to write post-consumption reviews,
+which tend to contain high-quality information relevant to business
+survival. Finally, online review platform operators may gain some
+inspiration from this study and consider integrating these important
+review features into the platform design to better reflect business status
+and potential.
+CRediT authorship contribution statement
+Hengyun Li: Writing – review & editing, Validation, Resources,
+Project administration, Funding acquisition, Conceptualization. Anqi
+Zhou: Writing – original draft, Visualization, Software, Methodology,
+Investigation, Data curation. Xiang (Kevin) Zheng: Writing – review &
+editing, Writing – original draft, Validation, Investigation, Formal
+analysis, Conceptualization. Jian Xu: Validation, Supervision, Re-
+sources, Methodology, Data curation, Conceptualization. Jing Zhang:
+Writing – review & editing, Visualization, Supervision, Software,
+Methodology, Investigation, Data curation.
+Acknowledgments
+The authors acknowledge the support of research funds from the
+National
+Natural
+Science
+Foundation
+of
+China
+(No.
+72474189;
+71901053) and the Hong Kong Polytechnic University SHTM Interdis-
+ciplinary Large Grant (No. 4-ZZNQ).
+Appendix A. Labeling of restaurants’ exit times
+Information about annotators
+There were eight annotators for this study with four males and four females, and all of them were research assistants for this project. Among them,
+there were six postgraduate and two undergraduate students. The selection criteria for the annotators include proficient in English, and having an
+educational background in business and data analytics. Each person was responsible for labeling the exit time for nearly 300 restaurants, requiring full
+examination of around 5000 reviews per person, which included reviews containing specific keywords and the last five reviews of each restaurant.
+Throughout the annotation process, we did not require the annotators to annotate centrally, and the annotators were free to schedule their own
+annotation time, and all of them did not confer with each other.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+17 
+
+===== PAGE 18 =====
+Keywords and priority
+Several keywords could relate to closure (e.g., “out of business,” “shut down,” and “close”). We prioritized more explicit terms as follows based on
+the extent to which they indicated an exit: out_of_business = shut_down > go_under = shutter = bankrupt > close. In this case, “out_of_business” and
+“shut_down” most directly conveyed a business exit. Although “go_under,” “shutter,” and “bankrupt” partly indicate discontinuation, these terms may be
+irrelevant to business status. For example, “bankrupt” can metaphorically denote a restaurant’s expensive nature in that eating there makes diners feel
+bankrupt. “close” can reflect a temporary or permanent closure; it can also show that a restaurant is geographically near other places. Prioritizing
+relevant keywords enabled better prediction.
+Two stages for discerning restaurant exit time
+Stage 1: During training, first, annotators learned about the task and labeling rules. Second, 1% of restaurants and their reviews (i.e., 11 restaurants
+and 1398 reviews) were randomly chosen from the full dataset; the trained annotators labeled each independently. Then, the annotators were re-
+trained to address inconsistencies in the first-round labeling results before an additional 1% of restaurants and their reviews were selected and labeled
+independently. Cohen’s (1960) Kappa coefficient indicated that the labeling consistency reached 0.96, up to the standard of perfect consistency
+(Landis & Koch, 1977). Annotators’ highly aligned results could thus be applied in subsequent experiments. The training stage began on August 9,
+2022 and finished on August 16, 2022.
+Stage 2: All eight annotators worked on the final labeling stage after training. The remaining 98% of data was evenly separated into four groups,
+and the annotators were divided into two groups of four people; that is, each annotator labeled one piece of data simultaneously. Consistent results
+were retained, while inconsistent results were transferred to other groups for further labeling until consistency was reached. The final labeling stage
+began on August 16, 2022 and finished on September 11, 2022.
+Columns to be annotated
+All reviews containing specific keywords (out_of_business = shut_down > go_under = shutter = bankrupt > close) and the last five reviews for each
+restaurant were included. Reviews without these keywords, as well as reviews containing the keywords “open” and “stop,” could be selected based on
+the context provided by the preceding and succeeding reviews (i.e., above and below a target review).
+(i) Closure indication: This column shows whether a review suggested the restaurant had gone out of business. If so, the label “Y” was assigned;
+otherwise, the review was labeled “N.”
+(ii) Renovation indication: This column shows whether a review suggested the restaurant was open for renovation. If so, the label “Y” was assigned;
+otherwise, the review was labeled “N.”
+(iii) Date: This column shows the time of closure as indicated by a review.
+(iv) Closure time: This column shows the exact date of closure for a restaurant by considering all information (each restaurant was marked based on
+the first piece of data).
+Labeling rules
+We chose restaurants marked as closed and then selected a review to determine the time of closure based on the circumstances outlined below. A
+true restaurant closure was differentiated from misleading comments (e.g., a diner was angry about their experience and stated they wished the
+restaurant were closed).
+(i) If a review indicated a specific closure time (e.g., today, this week) and the restaurant was truly closed, the date cited in the review was
+considered the closure time. We calculated closure dates during the labeling process based on expressions such as “a week ago,” “a month ago,”
+or “before the New Year.” For example, if a review mentioned a closure a week ago, we subtracted seven days from the review date to determine
+the date of closure. If a review mentioned a closure before the New Year, we considered December 31st as the closure date.
+(ii) If keywords indicating closure appeared but referred to either a temporary closure for refurbishment, and subsequent reviews indicated a
+reopening or ongoing business (with reviews from more than three months later), we verified the closure time after reopening.
+(iii) If a review contained a keyword indicating closure but the mentioned time was vague (e.g., “recently,” “will be”) or not specified, we took the
+date of the earliest review mentioning a closure as the closing time. In this case, if reviews noted the restaurant’s intention to close or stated that
+customers had heard about an impending closure and a later review indicated the restaurant’s closure, we used the closure time mentioned in
+the latter review. For reviews mentioning the restaurant’s intention to close or stating that customers had heard about an impending closure, if
+no subsequent review mentioned a closure, we referred to the reviews that followed to determine credibility. If news of a closure was deemed
+reliable, we labeled the review as indicating closure (“Y”; reviews were labeled “N” otherwise).
+(iv) If a review mentions that restaurant A has changed its name or location, we need to verify if there is another entry for the changed restaurant B
+in the dataset, based on the new name or address. If the ID for restaurant B does exist and its opening time aligns with the posting time of that
+review, then we can conclude that restaurant A is now closed. In this case, the time mentioned in the review will be considered as the closing
+time for restaurant A.
+(v) If no keyword indicated closure, we took the date of the last review as the closure time. However, if the last review mentioned that the writer
+had visited the restaurant years ago, that review was discarded; the next review was instead used to determine the closure time.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+18 
+
+===== PAGE 19 =====
+Appendix B. Supplementary tables
+Table A1
+Descriptive statistics of variables
+Count
+Mean
+Std
+Min
+Max
+State of survival
+2838
+0.581
+0.493
+0
+1
+Price
+2838
+1.734
+0.700
+1
+4
+Chain business
+2838
+0.058
+0.233
+0
+1
+Business age
+2838
+8.818
+4.926
+1
+18
+No. of competitors
+2838
+101.742
+50.101
+0
+214
+Amount of engagement
+2838
+33.371
+52.997
+0
+1435
+Length of review
+2838
+114.025
+31.890
+37.333
+283.540
+Review volume
+2838
+20.151
+27.391
+0.385
+442.471
+Rating
+528592
+3.696
+1.328
+1.000
+5.000
+Location senti.
+528592
+0.455
+0.263
+0.001
+0.999
+Tastiness senti.
+528592
+0.547
+0.332
+0.001
+0.999
+Service senti.
+528592
+0.476
+0.342
+0.001
+0.999
+Price senti.
+528592
+0.451
+0.330
+0.001
+0.999
+Atmosphere senti.
+528592
+0.458
+0.319
+0.000
+0.999
+General senti.
+528592
+0.477
+0.299
+0.002
+0.999
+Table A2
+Descriptive statistics of all variables for restaurants that survived in 2014
+Count
+Mean
+Std
+Min
+25%
+50%
+75%
+Max
+State of survival
+1537
+0.93
+0.25
+0.00
+1.00
+1.00
+1.00
+1.00
+Price
+1537
+1.71
+0.72
+1.00
+1.00
+2.00
+2.00
+4.00
+Chain business
+1537
+0.08
+0.27
+0.00
+0.00
+0.00
+0.00
+1.00
+Business age
+1537
+6.52
+3.07
+1.00
+4.00
+7.00
+9.00
+11.00
+Avg. No. of competitors(one-period)
+1537
+111.64
+50.53
+0.00
+96.00
+109.00
+129.00
+212.00
+Avg. No. of competitors(cum.)
+1537
+100.03
+47.98
+0.00
+78.00
+97.25
+119.33
+214.00
+Avg. No. of competitors(change)
+1537
+21.76
+31.03
+−10.00
+5.75
+15.29
+24.44
+212.00
+Avg. No. of engagement(one-period)
+1537
+41.57
+68.90
+0.00
+4.00
+17.00
+48.00
+755.00
+Avg. No. of engagement(cum.)
+1537
+39.24
+56.63
+0.00
+6.00
+18.70
+48.67
+496.86
+Avg. No. of engagement(change)
+1537
+2.26
+42.64
+−228.00
+−8.44
+−0.50
+5.00
+512.22
+Avg. length of review(one-period)
+1537
+102.36
+50.30
+0.00
+77.83
+104.39
+128.58
+446.00
+Avg. length of review(cum.)
+1537
+127.49
+36.43
+13.00
+105.42
+123.76
+146.33
+481.00
+Avg. length of review(change)
+1537
+−19.81
+67.87
+−329.50
+−49.90
+−25.66
+0.37
+446.00
+Avg. review volume(one-period)
+1537
+27.43
+42.61
+0.00
+4.00
+13.00
+34.00
+714.00
+Avg. review volume(cum.)
+1537
+20.41
+26.88
+0.00
+3.30
+10.89
+27.00
+290.00
+Avg. review volume(change)
+1537
+8.36
+24.74
+−48.00
+−0.20
+1.67
+9.00
+471.11
+Avg. rating(one-period)
+1537
+3.23
+1.19
+0.00
+2.89
+3.50
+4.00
+5.00
+Avg. rating(cum.)
+1537
+3.48
+0.66
+1.00
+3.11
+3.55
+3.93
+5.00
+Avg. rating(change)
+1537
+−0.26
+1.04
+−5.00
+−0.41
+−0.01
+0.18
+4.00
+Avg. tastiness senti.(one-period)
+1537
+0.49
+0.22
+0.00
+0.38
+0.51
+0.62
+1.00
+Avg.tastiness senti.(cum.)
+1537
+0.52
+0.13
+0.01
+0.44
+0.53
+0.60
+1.00
+Avg.tastiness senti.(change)
+1537
+−0.04
+0.20
+−1.00
+−0.10
+0.00
+0.05
+0.75
+Avg.service senti.(one-period)
+1537
+0.42
+0.21
+0.00
+0.31
+0.45
+0.55
+1.00
+Avg.service senti.(cum.)
+1537
+0.44
+0.13
+0.01
+0.36
+0.44
+0.52
+1.00
+Avg.service senti.(change)
+1537
+−0.01
+0.18
+−1.00
+−0.09
+0.00
+0.07
+0.84
+Avg.location senti.(one-period)
+1537
+0.41
+0.18
+0.00
+0.34
+0.44
+0.52
+0.97
+Avg.location senti.(cum.)
+1537
+0.43
+0.10
+0.10
+0.37
+0.44
+0.49
+0.96
+Avg.location senti.(change)
+1537
+−0.02
+0.16
+−0.92
+−0.07
+0.00
+0.06
+0.63
+Avg.price senti.(one-period)
+1537
+0.40
+0.20
+0.00
+0.29
+0.42
+0.52
+1.00
+Avg.price senti.(cum.)
+1537
+0.43
+0.13
+0.01
+0.34
+0.43
+0.50
+0.99
+Avg.price senti.(change)
+1537
+−0.02
+0.18
+−0.98
+−0.10
+0.00
+0.06
+0.90
+Avg.atmosphere senti.(one-period)
+1537
+0.39
+0.20
+0.00
+0.28
+0.42
+0.52
+1.00
+Avg.atmosphere senti.(cum.)
+1537
+0.41
+0.13
+0.02
+0.32
+0.42
+0.49
+0.99
+Avg.atmosphere senti.(change)
+1537
+−0.02
+0.17
+−0.96
+−0.08
+0.00
+0.06
+0.83
+Avg.general senti.(one-period)
+1537
+0.42
+0.19
+0.00
+0.33
+0.45
+0.55
+0.99
+Avg.general senti.(cum.)
+1537
+0.44
+0.12
+0.04
+0.37
+0.45
+0.52
+0.98
+Avg.general senti.(change)
+1537
+−0.02
+0.17
+−0.97
+−0.08
+0.00
+0.06
+0.67
+Var.rating(one-period)
+1537
+1.19
+0.82
+0.00
+0.51
+1.28
+1.78
+4.00
+Var.rating(cum.)
+1537
+1.29
+0.55
+0.00
+0.99
+1.31
+1.59
+4.00
+Var.rating(change)
+1537
+−0.02
+0.80
+−3.36
+−0.35
+0.00
+0.43
+3.84
+Var.tastiness senti.(one-period)
+1537
+0.08
+0.05
+0.00
+0.05
+0.09
+0.11
+0.24
+Var.tastiness senti.(cum.)
+1537
+0.08
+0.03
+0.00
+0.07
+0.09
+0.10
+0.21
+Var.tastiness senti.(change)
+1537
+0.00
+0.05
+−0.18
+−0.02
+0.00
+0.03
+0.19
+Var.service senti.(one-period)
+1537
+0.08
+0.05
+0.00
+0.05
+0.10
+0.12
+0.24
+Var.service senti.(cum.)
+1537
+0.09
+0.03
+0.00
+0.08
+0.09
+0.11
+0.21
+Var.service senti.(change)
+1537
+0.00
+0.05
+−0.17
+−0.02
+0.00
+0.03
+0.23
+Var.location senti.(one-period)
+1537
+0.05
+0.03
+0.00
+0.03
+0.06
+0.07
+0.22
+Var.location senti.(cum.)
+1537
+0.05
+0.02
+0.00
+0.05
+0.06
+0.06
+0.19
+(continued on next page)
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+19 
+
+===== PAGE 20 =====
+Table A2 (continued)
+Count
+Mean
+Std
+Min
+25%
+50%
+75%
+Max
+Var.location senti.(change)
+1537
+0.00
+0.03
+−0.16
+−0.01
+0.00
+0.02
+0.16
+Var.price senti.(one-period)
+1537
+0.08
+0.05
+0.00
+0.05
+0.09
+0.11
+0.24
+Var.price senti.(cum.)
+1537
+0.09
+0.03
+0.00
+0.08
+0.09
+0.10
+0.21
+Var.price senti.(change)
+1537
+0.00
+0.05
+−0.19
+−0.02
+0.00
+0.02
+0.21
+Var.atmosphere senti.(one-period)
+1537
+0.07
+0.05
+0.00
+0.04
+0.08
+0.10
+0.24
+Var.atmosphere senti.(cum.)
+1537
+0.07
+0.03
+0.00
+0.06
+0.08
+0.09
+0.21
+Var.atmosphere senti.(change)
+1537
+0.00
+0.04
+−0.17
+−0.02
+0.00
+0.02
+0.20
+Var.general senti.(one-period)
+1537
+0.06
+0.04
+0.00
+0.04
+0.07
+0.09
+0.22
+Var.general senti.(cum.)
+1537
+0.07
+0.02
+0.00
+0.06
+0.07
+0.08
+0.21
+Var.general senti.(change)
+1537
+0.00
+0.04
+−0.15
+−0.02
+0.00
+0.02
+0.17
+Table A3
+Sample size of closing and survival restaurants
+Observation time
+Predict period
+Unbalanced closing restaurants
+Unbalanced survival restaurants = balanced closing restaurants = balanced survival restaurants
+2014
+2015
+105
+1432
+2015
+2016
+87
+1487
+2016
+2017
+96
+1544
+2017
+2018
+130
+1570
+2018
+2019
+104
+1595
+2014
+2015–2016
+184
+1353
+2015
+2016–2017
+167
+1407
+2016
+2017–2018
+207
+1433
+2017
+2018–2019
+229
+1471
+2014
+2015–2017
+252
+1285
+2015
+2016–2018
+270
+1304
+2016
+2017–2019
+298
+1342
+2014
+2015–2018
+343
+1194
+2015
+2016–2019
+351
+1223
+2014
+2015–2019
+416
+1121
+2019
+2020
+102
+1611
+2020
+2021
+21
+1647
+2019
+2020–2021
+123
+1590
+Table A4
+One-year-ahead survival prediction results of all reviews
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+59.34%
+29.84%
+88.84%
+0.2205
+72.64%
+42.10%
+base + var.r
+60.63%
+32.39%
+88.88%
+0.1995
+74.44%
+44.88%
+base + avg.s
+62.23%
+38.94%
+85.52%
+0.1269
+73.09%
+50.62%
+base + avg.s + var.r + var.s
+63.35%
+42.29%
+84.41%
+0.1011
+73.24%
+53.47%
+SVM
+base
+91.13%
+84.56%
+97.70%
+0.0095
+97.36%
+90.47%
+base + var.r
+91.24%
+84.70%
+97.78%
+0.0095
+97.46%
+90.58%
+base + avg.s
+91.16%
+84.64%
+97.69%
+0.0094
+97.35%
+90.51%
+base + avg.s + var.r + var.s
+91.37%
+84.94%
+97.80%
+0.0092
+97.49%
+90.73%
+MLP
+base
+92.75%
+88.73%
+96.76%
+0.0042
+96.50%
+92.40%
+base + var.r
+93.24%
+89.26%
+97.21%
+0.0038
+96.99%
+92.93%
+base + avg.s
+94.19%
+90.56%
+97.83%
+0.0034
+97.68%
+93.94%
+base + avg.s + var.r + var.s
+94.31%
+90.52%
+98.10%
+0.0034
+97.95%
+94.06%
+XGBoost
+base
+96.54%
+96.70%
+96.39%
+0.0002
+96.42%
+96.55%
+base + var.r
+96.78%
+96.77%
+96.78%
+0.0002
+96.80%
+96.78%
+base + avg.s
+96.77%
+96.67%
+96.88%
+0.0003
+96.90%
+96.77%
+base + avg.s + var.r + var.s
+97.21%
+96.69%
+97.73%
+0.0003
+97.73%
+97.20%
+Table A5
+Two-years-ahead survival prediction results of all reviews
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+57.42%
+27.12%
+87.71%
+0.2371
+68.88%
+38.67%
+base + var.r
+57.88%
+28.25%
+87.52%
+0.2239
+69.54%
+39.95%
+base + avg.s
+59.56%
+35.14%
+83.98%
+0.1397
+68.79%
+46.39%
+base + avg.s + var.r + var.s
+61.17%
+39.33%
+83.02%
+0.1101
+70.01%
+50.20%
+SVM
+base
+85.40%
+76.17%
+94.62%
+0.0185
+93.49%
+83.88%
+base + var.r
+85.71%
+76.66%
+94.76%
+0.0177
+93.67%
+84.26%
+base + avg.s
+85.48%
+76.25%
+94.71%
+0.0185
+93.60%
+83.97%
+(continued on next page)
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+20 
+
+===== PAGE 21 =====
+Table A5 (continued)
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+base + avg.s + var.r + var.s
+85.59%
+76.45%
+94.73%
+0.0180
+93.62%
+84.11%
+MLP
+base
+85.17%
+80.17%
+90.17%
+0.0071
+89.17%
+84.33%
+base + var.r
+86.14%
+81.16%
+91.12%
+0.0070
+90.29%
+85.38%
+base + avg.s
+86.52%
+80.63%
+92.42%
+0.0089
+91.47%
+85.61%
+base + avg.s + var.r + var.s
+87.60%
+82.18%
+93.03%
+0.0073
+92.25%
+86.85%
+XGBoost
+base
+92.48%
+92.95%
+92.02%
+0.0008
+92.15%
+92.51%
+base + var.r
+92.74%
+92.95%
+92.54%
+0.0007
+92.64%
+92.76%
+base + avg.s
+57.42%
+27.12%
+87.71%
+0.2371
+68.88%
+38.67%
+base + avg.s + var.r + var.s
+57.88%
+28.25%
+87.52%
+0.2239
+69.54%
+39.95%
+Table A6
+Three-years-ahead survival prediction results of all reviews
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+57.00%
+26.20%
+87.80%
+0.2432
+68.13%
+37.71%
+base + var.r
+57.60%
+27.33%
+87.88%
+0.2336
+69.21%
+39.03%
+base + avg.s
+58.81%
+33.32%
+84.30%
+0.1529
+68.08%
+44.65%
+base + avg.s + var.r + var.s
+59.46%
+36.26%
+82.66%
+0.1236
+67.75%
+47.15%
+SVM
+base
+81.15%
+72.60%
+89.70%
+0.0160
+87.69%
+79.38%
+base + var.r
+81.23%
+72.50%
+89.96%
+0.0167
+87.96%
+79.42%
+base + avg.s
+81.23%
+72.63%
+89.83%
+0.0163
+87.84%
+79.45%
+base + avg.s + var.r + var.s
+81.38%
+72.58%
+90.19%
+0.0170
+88.21%
+79.57%
+MLP
+base
+81.24%
+76.59%
+85.89%
+0.0068
+84.62%
+80.29%
+base + var.r
+81.59%
+76.81%
+86.37%
+0.0070
+85.17%
+80.67%
+base + avg.s
+82.22%
+77.03%
+87.40%
+0.0073
+86.11%
+81.23%
+base + avg.s + var.r + var.s
+83.81%
+78.64%
+88.98%
+0.0065
+87.81%
+82.92%
+XGBoost
+base
+88.68%
+89.99%
+87.36%
+0.0013
+87.74%
+88.81%
+base + var.r
+88.69%
+89.63%
+87.75%
+0.0011
+88.04%
+88.79%
+base + avg.s
+88.93%
+89.24%
+88.62%
+0.0007
+88.75%
+88.96%
+base + avg.s + var.r + var.s
+89.91%
+89.34%
+90.48%
+0.0009
+90.42%
+89.84%
+Table A7
+Four-years-ahead survival prediction results of all reviews
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+56.15%
+24.31%
+87.99%
+0.2668
+66.97%
+35.50%
+base + var.r
+56.36%
+24.68%
+88.04%
+0.2627
+67.38%
+35.97%
+base + avg.s
+58.42%
+34.01%
+82.83%
+0.1394
+66.51%
+44.90%
+base + avg.s + var.r + var.s
+58.62%
+36.37%
+80.88%
+0.1133
+65.52%
+46.67%
+SVM
+base
+75.33%
+66.62%
+84.04%
+0.0172
+80.77%
+72.93%
+base + var.r
+75.64%
+67.04%
+84.25%
+0.0165
+81.05%
+73.31%
+base + avg.s
+75.42%
+66.79%
+84.05%
+0.0169
+80.81%
+73.05%
+base + avg.s + var.r + var.s
+75.83%
+67.04%
+84.63%
+0.0172
+81.42%
+73.46%
+MLP
+base
+75.35%
+70.62%
+80.08%
+0.0087
+78.33%
+74.08%
+base + var.r
+76.96%
+73.00%
+80.92%
+0.0074
+79.58%
+75.95%
+base + avg.s
+76.69%
+71.36%
+82.02%
+0.0090
+80.05%
+75.31%
+base + avg.s + var.r + var.s
+78.53%
+73.43%
+83.64%
+0.0099
+82.03%
+77.27%
+XGBoost
+base
+84.83%
+86.05%
+83.61%
+0.0016
+84.07%
+85.00%
+base + var.r
+84.88%
+85.52%
+84.24%
+0.0014
+84.51%
+84.96%
+base + avg.s
+84.34%
+84.19%
+84.49%
+0.0014
+84.51%
+84.29%
+base + avg.s + var.r + var.s
+85.64%
+85.60%
+85.69%
+0.0012
+85.79%
+85.64%
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+21 
+
+===== PAGE 22 =====
+Table A8
+Five-years-ahead survival prediction results of all reviews
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+55.79%
+24.62%
+86.97%
+0.2508
+65.88%
+35.72%
+base + var.r
+55.97%
+25.07%
+86.88%
+0.2451
+66.13%
+36.23%
+base + avg.s
+58.34%
+33.45%
+83.22%
+0.1448
+66.92%
+44.52%
+base + avg.s + var.r + var.s
+58.56%
+35.42%
+81.71%
+0.1235
+66.13%
+46.03%
+SVM
+base
+72.13%
+62.45%
+81.81%
+0.0213
+77.50%
+69.06%
+base + var.r
+71.95%
+62.00%
+81.90%
+0.0222
+77.47%
+68.78%
+base + avg.s
+72.08%
+62.45%
+81.72%
+0.0214
+77.43%
+69.03%
+base + avg.s + var.r + var.s
+71.81%
+61.55%
+82.07%
+0.0233
+77.49%
+68.52%
+MLP
+base
+71.63%
+65.02%
+78.23%
+0.0124
+74.94%
+69.47%
+base + var.r
+72.17%
+66.27%
+78.06%
+0.0104
+75.18%
+70.30%
+base + avg.s
+75.64%
+73.85%
+77.43%
+0.0061
+76.96%
+75.16%
+base + avg.s + var.r + var.s
+75.91%
+73.14%
+78.68%
+0.0071
+77.65%
+75.09%
+XGBoost
+base
+78.77%
+79.13%
+78.41%
+0.0006
+78.63%
+78.85%
+base + var.r
+80.38%
+80.73%
+80.02%
+0.0012
+80.25%
+80.45%
+base + avg.s
+80.51%
+80.20%
+80.82%
+0.0014
+80.79%
+80.44%
+base + avg.s + var.r + var.s
+80.64%
+80.20%
+81.08%
+0.0012
+81.04%
+80.57%
+Table A9
+One-year-ahead survival prediction results of all reviews during the COVID-19
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+63.97%
+43.72%
+84.23%
+0.0974
+72.55%
+54.23%
+base + var.r
+67.36%
+54.32%
+80.40%
+0.0467
+72.98%
+61.78%
+base + avg.s
+68.63%
+56.97%
+80.28%
+0.0348
+73.70%
+63.96%
+base + avg.s + var.r + var.s
+69.87%
+60.18%
+79.55%
+0.0369
+74.12%
+65.65%
+SVM
+base
+95.69%
+92.68%
+98.70%
+0.0023
+98.57%
+95.51%
+base + var.r
+95.86%
+92.96%
+98.76%
+0.0022
+98.65%
+95.69%
+base + avg.s
+95.72%
+92.71%
+98.73%
+0.0023
+98.60%
+95.54%
+base + avg.s + var.r + var.s
+95.91%
+93.08%
+98.73%
+0.0020
+98.62%
+95.75%
+MLP
+base
+95.96%
+93.57%
+98.36%
+0.0019
+98.23%
+95.80%
+base + var.r
+96.50%
+93.88%
+99.13%
+0.0021
+99.06%
+96.36%
+base + avg.s
+96.40%
+94.47%
+98.32%
+0.0011
+98.23%
+96.30%
+base + avg.s + var.r + var.s
+96.69%
+94.53%
+98.85%
+0.0015
+98.77%
+96.58%
+XGBoost
+base
+98.19%
+98.15%
+98.23%
+0.0001
+98.25%
+98.19%
+base + var.r
+98.47%
+98.05%
+98.88%
+0.0001
+98.88%
+98.46%
+base + avg.s
+98.24%
+97.96%
+98.51%
+0.0001
+98.51%
+98.23%
+base + avg.s + var.r + var.s
+98.41%
+97.96%
+98.85%
+0.0001
+98.84%
+98.40%
+Table A10
+Two-years-ahead survival prediction results of all reviews during the COVID-19
+Algorithm
+Model
+AUC
+Sensitivity
+Specificity
+KL divergence
+Precision
+f1 Score
+Bayes
+base
+56.26%
+30.00%
+82.52%
+0.1656
+63.65%
+40.64%
+base + var.r
+60.63%
+42.70%
+78.55%
+0.0697
+66.74%
+52.05%
+base + avg.s
+61.48%
+46.60%
+76.35%
+0.0469
+66.49%
+54.78%
+base + avg.s + var.r + var.s
+62.92%
+45.47%
+80.38%
+0.0660
+69.97%
+55.08%
+SVM
+base
+91.26%
+85.91%
+96.60%
+0.0064
+96.23%
+90.74%
+base + var.r
+91.19%
+85.91%
+96.48%
+0.0063
+96.09%
+90.68%
+base + avg.s
+91.38%
+86.16%
+96.60%
+0.0061
+96.25%
+90.89%
+base + avg.s + var.r + var.s
+91.32%
+86.16%
+96.48%
+0.0060
+96.11%
+90.83%
+MLP
+base
+91.45%
+86.73%
+96.16%
+0.0049
+95.78%
+91.00%
+base + var.r
+92.23%
+87.30%
+97.17%
+0.0052
+96.87%
+91.82%
+base + avg.s
+91.89%
+87.42%
+96.35%
+0.0048
+96.00%
+91.46%
+base + avg.s + var.r + var.s
+93.46%
+89.62%
+97.30%
+0.0033
+97.09%
+93.19%
+XGBoost
+base
+95.50%
+95.47%
+95.53%
+0.0002
+95.56%
+95.50%
+base + var.r
+96.45%
+95.79%
+97.11%
+0.0003
+97.08%
+96.42%
+base + avg.s
+95.53%
+95.35%
+95.72%
+0.0003
+95.74%
+95.53%
+base + avg.s + var.r + var.s
+96.76%
+96.16%
+97.36%
+0.0003
+97.35%
+96.74%
+Appendix C. Distribution of variance variable
+In this study, we further analyzed the distribution of variance variable. Specifically, we analyze the distribution of variance variables from two
+aspects of chain status restaurants and the restaurants of different average review volume levels, respectively. First, we classified all restaurants into
+chain and independent restaurants, and divide all restaurants into restaurants with low review volume, restaurants with moderate review volume,
+restaurants with high review volume and restaurants with very high review volume according to the average review volume of less than 10, 10 to 20,
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+22 
+
+===== PAGE 23 =====
+20 to 50, and more than 50. Second, we classified variance into four ranges according to the upper and lower quartiles and the median value of the
+variance variables. Lastly, we calculated the proportion of the four variance ranges in restaurants of different chain status and of different average
+review volume levels. Resulted showed that the distribution of rating variance and sentiment variance exhibited similar patterns. As such, Figure A1
+and Figure A2 displayed the distribution of rating variance and overall sentiment variance, respectively, in restaurants of different chain status and of
+different average review volume levels.
+Our findings indicated that, compared to independent restaurants, chain restaurants exhibited a more stable pattern of variance in review ratings
+and sentiments. Notably, restaurants with low review volume were more likely to exhibit extreme variance. Conversely, restaurants with moderate
+review volume and high review volume rarely exhibited extremely low variance, typically experiencing significant fluctuations in review ratings and
+sentiments. For those restaurants with very high review volume, they exhibited a moderate level of fluctuation in review ratings and sentiments,
+without showing extreme variance.
+Fig. A1. Distribution of chain business for some of the variance variables.
+Notes: min, Q1, Q2, Q3 and max are the minimum, lower quartile, median, upper quartile and maximum value of the variance variables respectively.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+23 
+
+===== PAGE 24 =====
+Fig. A2. Distribution of review volume for some of the variance variables.
+Notes: min, Q1, Q2, Q3 and max are the minimum, lower quartile, median, upper quartile and maximum value of the variance variables respectively.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+24 
+
+===== PAGE 25 =====
+Appendix D. Parameters of algorithms
+Table A11
+Parameters of four algorithms
+Algorithm
+Parameter
+Bayes
+GaussianNB(var_smoothing = 1e-9)
+SVM
+svm.SVC(kernel = ’rbf’, C = 50, gamma = 0.0001, random_state = 30)
+MLP
+MLPClassifier(random_state = 10, activation = ’logistic’, solver = ’adam’, max_iter = 1000, batch_size = 128, learning_rate_init = 0.001, hidden_layer_sizes=(100))
+XGBoost
+xgb.XGBClassifier(learning_rate = 0.07, n_estimators = 700, max_depth = 6, min_child_weight = 2, seed = 0, subsample = 0.5, colsample_bytree = 0.6, gamma = 0.01,
+reg_alpha = 0.1, reg_lambda = 2)
+Appendix E. Feature importance during the pandemic
+We employed the same method to analyze the impact of all variables in base + avg.s + var.r + var.s model using all reviews on restaurant survival
+prediction during the pandemic (using the data from 2004 to 2019 to predict restaurant survival status in 2020). Figure A3 shows the feature
+importance analysis.
+First, our results indicated that, in base variables, price, avg. no. of competitors (one-period), and business age are the three most important
+variables influencing restaurant survival during the pandemic. Both price and business age have been identified as important factors affecting business
+survival, regardless of before or during the pandemic. However, the current number of competitors has gained increasing importance to restaurant
+survival during the pandemic, whereas the importance of being a chain business has decreased during this period. These findings vividly uphold the
+importance of business competitiveness to restaurant survival during the pandemic, a period featured by intense competition. In addition, the results
+also underscore the important role of both the avg. amount of engagement (cum.) and the avg. review volume (cum), which rank fourth and fifth in
+importance, respectively.
+Second, regarding the average variables, avg. service senti. (one-period) is of most importance, followed by the avg. atmosphere senti. (cum.), avg.
+service senti. (cum.), and avg. tastiness senti. (one-period). In addition, cumulative variables appeared to be more important to restaurant survival
+before the pandemic compared to during the pandemic, where current variables exhibited more importance. This interesting finding can be attributed
+to consumers’ increasing attention to recent/short-term trends/status of restaurants during the pandemic.
+Third, it is found that, overall, variance variables exerted more pronounced impact on restaurant survival compared to average variables. This
+further upholds the above conclusion in our study: models incorporating variance variables showed significant improvement in prediction perfor-
+mances. Specifically, var. location senti. (cum.), var. price senti. (one-period), and var. rating (one-period) are the three most important variables
+influencing restaurant survival. Given that restaurant’s location is a more objective factor and is unlikely to be changed frequently, consumers are thus
+more likely to focus on its long-term variance. However, echoing our earlier discussion, consumers appear to place greater emphasis on recent
+fluctuations in price sentiment and review ratings during the pandemic, where consumers become more cautious and pay closer attention to recent
+changes. This further demonstrates the critical role of current variables in restaurant survival during the pandemic. Furthermore, variables concerning
+atmosphere (i.e., var. atmosphere senti. (change), var. atmosphere senti. (cum), and var. atmosphere senti. (one-period)) also provide valuable in-
+sights to restaurant survival prediction.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+25 
+
+===== PAGE 26 =====
+Fig. A3. Results of feature importance analysis during the COVID-19.
+References
+Abed, S. S. (2022). A literature review exploring the role of technology in business
+survival during the Covid-19 lockdowns. International Journal of Organizational
+Analysis, 30(5), 1045–1062.
+Agarwal, R., Sarkar, M. B., & Echambadi, R. (2002). The conditioning effect of time on
+firm survival: An industry life cycle approach. Academy of Management Journal, 45
+(5), 971–994.
+Amankwah-Amoah, J. (2016). An integrative process model of organisational failure.
+Journal of Business Research, 69(9), 3388–3397.
+Amankwah-Amoah, J., & Wang, X. (2019). Business failures around the world: Emerging
+trends and new research agenda. Journal of Business Research, 98, 367–369.
+Anagnostopoulou, S. C., Buhalis, D., Kountouri, I. L., Manousakis, E. G., &
+Tsekrekos, A. E. (2019). The impact of online reputation on hotel profitability.
+International Journal of Contemporary Hospitality Management, 32(1), 20–39.
+Babi´c Rosario, A., Sotgiu, F., De Valck, K., & Bijmolt, T. H. (2016). The effect of electronic
+word of mouth on sales: A meta-analytic review of platform, product, and metric
+factors. Journal of Marketing Research, 53(3), 297–318.
+Baek, H., Ahn, J., & Choi, Y. (2012). Helpfulness of online consumer reviews: Readers’
+objectives and review cues. International Journal of Electronic Commerce, 17(2),
+99–126.
+Bakhshi, S., Kanuparthy, P., & Shamma, D. A. (2015). Understanding online reviews:
+Funny, cool or useful?. In Proceedings of the 18th ACM conference on computer
+supported cooperative work & social computing (pp. 1270–1276).
+Baum¨ohl, E., Iwasaki, I., & Koˇcenda, E. (2019). Institutions and determinants of firm
+survival in European emerging markets. Journal of Corporate Finance, 58, 431–453.
+Belarmino, A., Demirciftci, T., & Zhang, L. (2021). Online reviews and travel magazine
+awards: Their influence on willingness-to-pay. Journal of Revenue and Pricing
+Management, 20(4), 436–445.
+Borchert, P., Coussement, K., De Caigny, A., & De Weerdt, J. (2023). Extending business
+failure prediction models with textual website content using deep learning. European
+Journal of Operational Research, 306(1), 348–357.
+Bove, L. L., & Benoit, S. (2020). Restrict, clean and protect: Signaling consumer safety
+during the pandemic and beyond. Journal of Service Management, 31(6), 1185–1202.
+Cecchini, M., Aytug, H., Koehler, G. J., & Pathak, P. (2010). Making words work: Using
+financial text as a predictor of financial events. Decision Support Systems, 50(1),
+164–175.
+Chhatwani, M., Mishra, S. K., Varma, A., & Rai, H. (2022). Psychological resilience and
+business survival chances: A study of small firms in the USA during COVID-19.
+Journal of Business Research, 142, 277–286.
+Chua, B. L., Karim, S., Lee, S., & Han, H. (2020). Customer restaurant choice: An
+empirical analysis of restaurant types and eating-out occasions. International Journal
+of Environmental Research and Public Health, 17(17), 6276.
+Clemons, E. K., Gao, G. G., & Hitt, L. M. (2006). When online reviews meet
+hyperdifferentiation: A study of the craft beer industry. Journal of Management
+Information Systems, 23(2), 149–171.
+Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and
+Psychological Measurement, 20(1), 37–46.
+Cˆorte-Real, N., Oliveira, T., & Ruivo, P. (2017). Assessing business value of big data
+analytics in European firms. Journal of Business Research, 70, 379–390.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+26 
+
+===== PAGE 27 =====
+Cucculelli, M., & Peruzzi, V. (2020). Post-crisis firm survival, business model changes,
+and learning: Evidence from the Italian manufacturing industry. Small Business
+Economics, 54, 459–474.
+Danciu, I., Agasthya, G., Tate, J. P., Chandra-Shekar, M., Goethert, I.,
+Ovchinnikova, O. S., … Justice, A. C. (2022). In with the old, in with the new:
+Machine learning for time to event biomedical research. Journal of the American
+Medical Informatics Association, 29(10), 1737–1743.
+Deloitte, M. (2020). Impact of the COVID-19 crisis on short-and medium-term consumer
+behavior: Will the COVID-19 crisis have a lasting effect on consumption?. https
+://www2.deloitte.com/sk/en/pages/consumer-business/articles/impact-of-covid-1
+9-on-short-and-medium-term-consumer-behavior.html.
+Ding, D., Lang, T., Zou, D., Tan, J., Chen, J., Zhou, L., … Zhou, Q. (2021). Machine
+learning-based prediction of survival prognosis in cervical cancer. BMC
+Bioinformatics, 22(1), 1–17.
+Du, C., Chen, Z., Feng, F., Zhu, L., Gan, T., & Nie, L. (2019, July). In Explicit interaction
+model towards text classification, 33 pp. 6359–6366) (1).
+Duan, W., Gu, B., & Whinston, A. B. (2008). The dynamics of online word-of-mouth and
+product sales—an empirical investigation of the movie industry. Journal of Retailing,
+84(2), 233–242.
+Fan, N., Lai, S., Fan, Z. P., & Chen, Y. (2023). Exit and transition: Exploring the survival
+status of Airbnb listings in a time of professionalization. Tourism Management, 95,
+Article 104665.
+Fawcett, T. (2006). An introduction to ROC analysis. Pattern Recognition Letters, 27(8),
+861–874.
+Feldman, J. M., & Lynch, J. G. (1988). Self-generated validity and other effects of
+measurement on belief, attitude, intention, and behavior. Journal of Applied
+Psychology, 73(3), 421.
+Fernandes, E., Moro, S., Cortez, P., Batista, F., & Ribeiro, R. (2021). A data-driven
+approach to measure restaurant performance by combining online reviews with
+historical sales data. International Journal of Hospitality Management, 94, Article
+102830.
+Filieri, R., Raguseo, E., & Vitari, C. (2019). What moderates the influence of extremely
+negative ratings? The role of review and reviewer characteristics. International
+Journal of Hospitality Management, 77, 333–341.
+Fletcher, G., & Griffiths, M. (2020). Digital transformation during a lockdown.
+International Journal of Information Management, 55, Article 102185.
+Geng, R., Bose, I., & Chen, X. (2015). Prediction of financial distress: An empirical study
+of listed Chinese companies using data mining. European Journal of Operational
+Research, 241(1), 236–247.
+Hass, R. G. (1982). Effects of source characteristics on cognitive responses and
+persuasion. In Cognitive responses in persuasion (pp. 141–172). Psychology Press.
+Hensler, D. A., Rutherford, R. C., & Springer, T. M. (1997). The survival of initial public
+offerings in the aftermarket. Journal of Financial Research, 20(1), 93–110.
+Hoang, M., Bihorac, O. A., & Rouces, J. (2019). Aspect-based sentiment analysis using
+bert. In Proceedings of the 22nd nordic conference on computational linguistics (pp.
+187–196).
+Hoang, N. T., & Khuong, M. N. (2015). The effects of consumer-generated media on
+Vietnamese travellers decision making-Mediation analysis of perceived creditability
+and trust. International Journal of Electronic Commerce Studies, 6(2), 315–330.
+Hutzschenreuter, T., Borchers, S. A., & Harhoff, P. L. (2021). Competitors matter: How
+competitors’ actions moderate the influence of firm profitability on the prioritization
+between growth and efficiency increase. Managerial and Decision Economics, 42(2),
+326–342.
+Kalafi, E. Y., Nor, N. A. M., Taib, N. A., Ganggayah, M. D., Town, C., & Dhillon, S. K.
+(2019). Machine learning and deep learning approaches in breast cancer survival
+prediction using clinical data. Folia Biologica, 65(5/6), 212–220.
+Kim, J., Kim, J., & Wang, Y. (2021). Uncertainty risks and strategic reaction of restaurant
+firms amid COVID-19: Evidence from China. International Journal of Hospitality
+Management, 92, Article 102752.
+Kim, W. G., Li, J. J., & Brymer, R. A. (2016). The impact of social media reviews on
+restaurant performance: The moderating role of excellence certificate. International
+Journal of Hospitality Management, 55, 41–51.
+Kotsiantis, S. B., Zaharakis, I., & Pintelas, P. (2007). Supervised machine learning: A
+review of classification techniques. Emerging Artificial Intelligence Applications in
+Computer Engineering, 160(1), 3–24.
+Ladhari, R., & Michaud, M. (2015). eWOM effects on hotel booking intentions, attitudes,
+trust, and website perceptions. International Journal of Hospitality Management, 46,
+36–45.
+Lampinen, J., & Vehtari, A. (2001). Bayesian approach for neural networks—review and
+case studies. Neural Networks, 14(3), 257–274.
+Landis, J. R., & Koch, G. G. (1977). The measurement of observer agreement for
+categorical data. Biometrics, 159–174.
+Langan, R., Besharat, A., & Varki, S. (2017). The effect of review valence and variance on
+product evaluations: An examination of intrinsic and extrinsic cues. International
+Journal of Research in Marketing, 34(2), 414–429.
+Lee, M.-C. (2014). Business bankruptcy prediction based on survival analysis approach.
+International Journal of Computer Science & Information Technology, 6(2), 103.
+Lee, I. (2017). Big data: Dimensions, evolution, impacts, and challenges. Business
+Horizons, 60(3), 293–303.
+Lee, H. A., Law, R., & Murphy, J. (2011). Helpful reviewers in TripAdvisor, an online
+travel community. Journal of Travel & Tourism Marketing, 28(7), 675–688.
+Lee, S., Lee, D., & Yu, H. (2021). Oommix: Out-of-manifold regularization in contextual
+embedding space for text classification. In Proceedings of the 59th annual meeting of
+the association for computational linguistics and the 11th international joint conference on
+natural language processing (pp. 590–599).
+Li, H., Bruce, X., Li, G., & Gao, H. (2023). Restaurant survival prediction using customer-
+generated content: An aspect-based sentiment analysis of online reviews. Tourism
+Management, 96, Article 104707.
+Li, H., Meng, F., Jeong, M., & Zhang, Z. (2020). To follow others or be yourself? Social
+influence in online restaurant reviews. International Journal of Contemporary
+Hospitality Management, 32(3), 1067–1087.
+Li, X., Zhang, X., JiaHao, P., Mao, R., Zhou, M., Xie, X., & Liao, H. (2022). A joint
+learning framework for restaurant survival prediction and explanation. In
+Proceedings of the 2022 conference on empirical methods in natural language processing
+(pp. 3285–3297).
+Li, H., Zhang, Z., Meng, F., & Janakiraman, R. (2017). Is peer evaluation of consumer
+online reviews socially embedded? – An examination combining reviewer’s social
+network and social identity. International Journal of Hospitality Management, 67,
+143–153.
+Lian, J., Zhang, F., Xie, X., & Sun, G. (2017). Restaurant survival analysis with
+heterogeneous information. In Proceedings of the 26th international conference on
+world wide web companion (pp. 993–1002).
+Liao, H., Zhang, X., Li, X., Zhou, M., Vidmer, A., & Mao, R. (2020). A Deep Concept-
+aware Model for predicting and explaining restaurant future status. In 2020 IEEE
+international conference on web services (ICWS) (pp. 559–567). IEEE.
+Ling, C. X., Huang, J., & Zhang, H. (2003). Auc: A statistically consistent and more
+discriminating measure than accuracy. Ijcai, 519–524.
+Liu, Z., & Park, S. (2015). What makes a useful online review? Implication for travel
+product websites. Tourism Management, 47, 140–151.
+Lo, A. S., & Yao, S. S. (2019). What makes hotel online reviews credible? An investigation
+of the roles of reviewer expertise, review rating consistency and review valence.
+International Journal of Contemporary Hospitality Management, 31(1), 41–60.
+Lu, L., Wu, L., & He, Z. (2020). Is your restaurant worth the risk? A motivational
+perspective on reviews’ rating distribution and volume. Journal of Hospitality &
+Tourism Research, 44(8), 1291–1317.
+Luo, X., Raithel, S., & Wiles, M. A. (2013). The impact of brand rating dispersion on firm
+value. Journal of Marketing Research, 50(3), 399–415.
+Mai, F., Tian, S., Lee, C., & Ma, L. (2019). Deep learning models for bankruptcy
+prediction using textual disclosures. European Journal of Operational Research, 274
+(2), 743–758.
+Manj´on-Antolín, M. C., & Arauzo-Carod, J.-M. (2008). Firm survival: Methods and
+evidence. Empirica, 35, 1–24.
+McKinsey Global Institute. (2021). The consumer demand recovery and lasting effects of
+COVID-19. https://www.mckinsey.com/industries/consumer-packaged-goods/our-
+insights/the-consumer-demand-recovery-and-lasting-effects-of-covid-19.
+Menon, G., Raghubir, P., & Schwarz, N. (1995). Behavioral frequency judgments: An
+accessibility-diagnosticity framework. Journal of Consumer Research, 22(2), 212–228.
+Moe, W. W., & Trusov, M. (2011). The value of social dynamics in online product ratings
+forums. Journal of Marketing Research, 48(3), 444–456.
+Moncada-Torres, A., van Maaren, M. C., Hendriks, M. P., Siesling, S., & Geleijnse, G.
+(2021). Explainable machine learning can outperform Cox regression predictions
+and provide insights in breast cancer survival. Scientific Reports, 11(1), 6968.
+Mudambi, S. M., & Schuff, D. (2010). Research note: What makes a helpful online
+review? A study of customer reviews on Amazon.com. MIS Quarterly, 34(1),
+185–200.
+Nakayama, M., & Wan, Y. (2019). The cultural impact on social commerce: A sentiment
+analysis on Yelp ethnic restaurant reviews. Information & Management, 56(2),
+271–279.
+National Restaurant Association. (2023). Restaurant industry facts at a glance. https://
+restaurant.org/research-and-media/research/industry-statistics/national-statistics/.
+Naumzik, C., Feuerriegel, S., & Weinmann, M. (2022). I will survive: Predicting business
+failures from customer ratings. Marketing Science, 41(1), 188–207.
+Ohanian, R. (1990). Construction and validation of a scale to measure celebrity
+endorsers’ perceived expertise, trustworthiness, and attractiveness. Journal of
+Advertising, 19(3), 39–52.
+Padillo Jr, C., Go, N., Manreal, P., Samson, S., Galli, B., Yamagishi, K., … Ocampo, L.
+(2022). Modelling the priority attributes of customer loyalty in Philippine single-dish
+restaurants. Journal of Modelling in Management, 17(4), 1432–1455.
+Park, Y. S., & Lek, S. (2016). Artificial neural networks: Multilayer perceptron for
+ecological modeling. In , Vol. 28. Developments in environmental modelling (pp.
+123–140). Elsevier.
+Park, S. B., & Park, D. H. (2013). The effect of low-versus high-variance in product
+reviews on product evaluation. Psychology and Marketing, 30(7), 543–554.
+Parsa, H. G., Self, J., Sydnor-Busso, S., & Yoon, H. J. (2011). Why restaurants fail? Part II
+- the impact of affiliation, location, and size on restaurant failures: Results from a
+survival analysis. Journal of Foodservice Business Research, 14(4), 360–379.
+Parsa, H. G., van der Rest, J.-P. I., Smith, S. R., Parsa, R. A., & Bujisic, M. (2015). Why
+restaurants fail? Part IV:The relationship between restaurant failures and
+demographic factors. Cornell Hospitality Quarterly, 56(1), 80–90.
+Petrocelli, J. V., Tormala, Z. L., & Rucker, D. D. (2007). Unpacking attitude certainty:
+Attitude clarity and attitude correctness. Journal of Personality and Social Psychology,
+92(1), 30.
+Prashar, P. (2016, September 8). “The impact of online reviews on the hospitality
+industry”. HospitalityNet. https://www.hospitalitynet.org/opinion/4078144.html.
+Resende, M., Cardoso, V., & Façanha, L. O. (2016). Determinants of survival of newly
+created SMEs in the Brazilian manufacturing industry: An econometric study.
+Empirical Economics, 50, 1255–1274.
+Schuckert, M., Liu, X., & Law, R. (2015). Hospitality and tourism online reviews: Recent
+trends and future directions. Journal of Travel & Tourism Marketing, 32(5), 608–621.
+Soto-Simeone, A., Sir´en, C., & Antretter, T. (2020). New venture survival: A review and
+extension. International Journal of Management Reviews, 22(4), 378–407.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+27 
+
+===== PAGE 28 =====
+Spence, M. (2002). Signaling in retrospect and the informational structure of markets.
+The American Economic Review, 92(3), 434–459.
+Statista. (2023). Restaurants in the U.S. - statistics & facts. https://www.statista.
+com/topics/1135/us-restaurants/#topicOverview.
+Sun, M. (2012). How does the variance of product ratings matter? Management Science,
+58(4), 696–707.
+Sun, C., Huang, L., & Qiu, X. (2019). Utilizing BERT for aspect-based sentiment analysis via
+constructing auxiliary sentence.
+Tao, J., & Zhou, L. (2020). Can online consumer reviews signal restaurant closure: A deep
+learning-based time-series analysis. IEEE Transactions on Engineering Management, 70
+(3), 834–848.
+Tucker, T. (2011). Online word of mouth: Characteristics of Yelp. Com reviews. Elon
+Journal of Undergraduate Research in Communications, 2(1), 37–42.
+Vallapuram, A. K., Nanda, N., Kwon, Y. D., & Hui, P. (2021). Interpretable business
+survival prediction. In Proceedings of the 2021 IEEE/ACM international conference on
+advances in social networks analysis and mining (pp. 99–106).
+Vu, H. Q., Li, G., Law, R., & Zhang, Y. (2019). Exploring tourist dining preferences based
+on restaurant reviews. Journal of Travel Research, 58(1), 149–167.
+Wang, F., Liu, X., & Fang, E. E. (2015). User reviews variance, critic reviews variance,
+and product sales: An exploration of customer breadth and depth effects. Journal of
+Retailing, 91(3), 372–389.
+Wang, A., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. R. (2018). Glue: A multi-
+task benchmark and analysis platform for natural language understanding. arXiv
+preprint arXiv:1804.07461.
+Wiener-Bronner, D. (2023). Covid shrank the restaurant industry. That’s not changing
+anytime soon. CNN. https://edition.cnn.com/2023/02/25/business/restaurant-clos
+ures/index.html.
+Wieprow, J., & Gawlik, A. (2021). The use of discriminant analysis to assess the risk of
+bankruptcy of enterprises in crisis conditions using the example of the tourism sector
+in Poland. Risks, 9(4), 78.
+Wu, X., Jin, L., & Xu, Q. (2021). Expertise makes perfect: How the variance of a
+reviewer’s historical ratings influences the persuasiveness of online reviews. Journal
+of Retailing, 97(2), 238–250.
+Wu, J., Wu, Y., Sun, J., & Yang, Z. (2013). User reviews and uncertainty assessment: A
+two stage model of consumers’ willingness-to-pay in online markets. Decision Support
+Systems, 55(1), 175–185.
+Xiang, Z., Du, Q., Ma, Y., & Fan, W. (2017). A comparative analysis of major online
+review platforms: Implications for social media analytics in hospitality and tourism.
+Tourism Management, 58, 51–65.
+Yang, B., He, Y., Liu, H., Chen, Y., & Jin, Z. (2020). A lightweight fault localization
+approach based on xgboost. In 2020 IEEE 20th international conference on software
+quality, reliability and security (QRS) (pp. 168–179). IEEE.
+Yu, L., & Liu, H. (2004). Efficient feature selection via analysis of relevance and
+redundancy. Journal of Machine Learning Research, 5, 1205–1224.
+Zeng, B., Yang, H., Xu, R., Zhou, W., & Han, X. (2019). Lcf: A local context focus
+mechanism for aspect-based sentiment classification. Applied Sciences, 9(16), 3389.
+Zhang, M., & Luo, L. (2023). Can consumer-posted photos serve as a leading indicator of
+restaurant survival? Evidence from Yelp. Management Science, 69(1), 25–50.
+Zhang, Z., Zhang, Z., & Yang, Y. (2016). The power of expert identity: How website-
+recognized expert reviews influence travelers’ online rating behavior. Tourism
+Management, 55, 15–24.
+Hengyun Li is an Associate professor in the School of Hotel and
+Tourism Management at The Hong Kong Polytechnic Univer-
+sity. His research interests include user-generated content and
+big data analytics in tourism and hospitality.
+Anqi Zhou is a post-graduate student in the School of Data
+Science and Artificial Intelligence at Dongbei University of
+Finance and Economics. Her research interests include natural
+language processing, machine learning and survival analysis.
+Xiang (Kevin) Zheng is a Ph.D. student in the School of Hotel
+and Tourism Management at The Hong Kong Polytechnic
+University. His research interests include digital marketing and
+consumer behaviour in tourism and hospitality.
+Jian Xu is a Professor in Dongbei University of Finance and
+Economics. He received his Ph.D. degree in Marketing from
+Dongbei University of Finance and Economics. His research
+interests include social media, information security, and
+tourism.
+Jing Zhang is an Associate Professor at Dongbei University of
+Finance and Economics. She received her Ph.D. degree in
+computer application technology from the Dalian University of
+Technology. Her current research interests include natural
+language
+processing,
+machine
+learning
+and
+survival
+prediction.
+H. Li et al.
+Tourism Management 107 (2025) 105038 
+28 

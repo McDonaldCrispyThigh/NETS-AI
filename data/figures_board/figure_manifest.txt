@@ -1,0 +1,7 @@
+
+# Added 2026-04-14 17:30 (v2 Board validation figures)
+figure_b1_validation_metrics_v2.png | 2026-04-14 17:30 | Raw vs adjusted precision/recall/F1 grouped bar chart
+figure_b2_board_fn_map_v2.png       | 2026-04-14 17:30 | Board FN spatial distribution choropleth map
+figure_b3_fn_income_quartile_v2.png | 2026-04-14 17:30 | FN rate by income quartile, two panels (all vs genuine)
+figure_b4_ai_vs_nets_v2.png         | 2026-04-14 17:30 | AI vs NETS comparison (NETS pending April 27)
+figure_b5_threshold_sensitivity.png | 2026-04-14 17:30 | Threshold sensitivity line chart (0.70/0.75/0.80)

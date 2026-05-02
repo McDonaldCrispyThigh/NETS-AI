@@ -1,0 +1,22 @@
+[
+  {
+    "segment": "Chain",
+    "ai": 247,
+    "tps": 243,
+    "fps": 4,
+    "board_denom": 276,
+    "fns": 33,
+    "precision_pct": 98.4,
+    "recall_pct": 88.0
+  },
+  {
+    "segment": "Independent",
+    "ai": 152,
+    "tps": 78,
+    "fps": 74,
+    "board_denom": 129,
+    "fns": 51,
+    "precision_pct": 51.3,
+    "recall_pct": 60.5
+  }
+]

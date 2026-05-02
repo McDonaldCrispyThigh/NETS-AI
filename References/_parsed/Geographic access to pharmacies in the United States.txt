@@ -1,0 +1,131 @@
+
+===== PAGE 1 =====
+Invited Commentary | Pharmacy and Clinical Pharmacology
+Measuring Geographic Access to Pharmacies
+Kelly E. Anderson, PhD, MPP; T. Joseph Mattingly II, PharmD, MBA, PhD
+In this issue of JAMA Network Open, Mathis et al1 define a new measure of community pharmacy
+access, which they coin as pharmacy vulnerability index and use to identify keystone pharmacies.
+This research comes at a critical time when there are substantial concerns about the viability of
+community pharmacies, documented in numerous news articles, and during a policy window when
+there is bipartisan support in Congress in pursuing legislation to reform payments from pharmacy
+benefit managers (PBMs) to community pharmacies.
+Over the last decade, Qato et al2 and Guadamuz et al3 have led the charge on measuring access
+to community pharmacies. In pioneering work, they developed a definition of pharmacy deserts
+adapted from the concept of food deserts, focused on communities without access to a pharmacy
+based on a predefined travel distance (varying based on urbanicity) and whether the community was
+lower income.2 Through the definition of pharmacy deserts, they have identified communities most
+adversely affected by a lack of pharmacy access.3 As geocoding capabilities have improved, there are
+opportunities to further refine this definition.
+Mathis et al1 make several key contributions toward refining our measurements and
+understanding of pharmacy access. First, although a multifaceted social vulnerability index has been
+widely applied in health disparities research, the authors apply the measure specifically on
+community pharmacy access to anticipate potential deserts. This adds to the pharmacy desert
+construct by introducing a way to flag areas of concern, describing areas relying on a single pharmacy
+as areas with a keystone pharmacy. Second, they incorporate drive times into their index, which adds
+to a traditional distance-focused measure, as urban and rural travel may vary substantially in terms
+of time. Third, this measurement identifies that when it comes to race and ethnicity disparities, White
+populations in small rural areas may be at risk when we consider the heavy reliance on a single
+pharmacy.
+As 2024 drew to a close, Congress introduced and advanced several pieces of legislation that
+would substantially change the relationship between PBMs and community pharmacies with the goal
+of improving payments to community pharmacies. PBMs are entities hired by health plan sponsors
+(eg, employers) to develop formularies, manage prescription utilization, contract with pharmacies to
+form a pharmacy network for beneficiaries, and negotiate manufacturer rebates for the brand-
+name drugs included on the formulary.4 Legislative proposals included reforms such as prohibiting a
+parent company of a PBM or health insurer from also owning pharmacies, requiring that PBMs pass
+through all rebates from drug manufacturers to health insurers, and setting minimum
+reimbursement amounts to pharmacies based on the amount the PBM charges to the insurer.
+Although these bills and provisions did not pass into law during the lame-duck session, there was
+clear bipartisan interest in legislation to support access to prescription medications through
+community pharmacies, which is likely to carry forward into the new Congress.
+Mathis and colleagues1 estimate 8.9% of the population lives in a community with a single
+keystone pharmacy. In communities with limited pharmacy access, enticing new pharmacies to open
+in pharmacy deserts requires different policy solutions than policies that fight to keep pharmacies
+open in at-risk communities. Prior to this study, we did not have a measure to identify the at-risk
+communities sitting on the precipice of losing pharmacy access. Yet emerging studies show that
+when any community pharmacy closes, medication adherence for key drug classes such as
+anticonvulsants and cardiovascular medications is significantly reduced and mail-order pharmacy
++ Related article
+Author affiliations and article information are
+listed at the end of this article.
+Open Access. This is an open access article distributed under the terms of the CC-BY License.
+JAMA Network Open. 2025;8(3):e250725. doi:10.1001/jamanetworkopen.2025.0725
+(Reprinted)
+March 13, 2025
+1/3
+Downloaded from jamanetwork.com by guest on 05/02/2026
+
+===== PAGE 2 =====
+does not meaningfully compensate for the role of community pharmacies.5,6 These effects are likely
+worse when the community pharmacy closure leads to a pharmacy desert.
+While broad PBM reform may improve the financial status of community pharmacies across the
+country, if we have a policy goal of preventing at-risk communities from becoming pharmacy deserts,
+more targeted policy proposals to support keystone pharmacies may be needed. This could take the
+form of federal legislation or could be implemented by states with a disproportionately high number
+of communities relying on keystone pharmacies. Mathis et al1 make several recommendations for
+this type of targeted legislation such as increasing dispensing fees for keystone pharmacies. Another
+model could be a critical access pharmacy model adapted from the existing critical access
+hospital model.7
+The approaches developed by Mathis and colleagues1 also offer a template to improve
+pharmacy network adequacy standards. For the Medicare and Tricare programs, pharmacy network
+adequacy standards are set using travel distance thresholds by county urbanicity. This study offers
+an approach to instead assess the adequacy of pharmacy networks based on pharmacy availability
+and typical travel patterns in each community.
+While the pharmacy landscape is changing with an increasing reliance on mail-order pharmacies
+and the introduction of innovative pharmacy models, such as Mark Cuban Cost Plus Drug Company,
+community pharmacies play a vital role in medication access and the health of communities. The
+research by Mathis et al1 is a key methodologic advancement in allowing researchers and
+policymakers to identify communities where community pharmacy access is at risk.
+ARTICLE INFORMATION
+Published: March 13, 2025. doi:10.1001/jamanetworkopen.2025.0725
+Open Access: This is an open access article distributed under the terms of the CC-BY License. © 2025 Anderson
+KE et al. JAMA Network Open.
+Corresponding Author: Kelly E. Anderson, PhD, MPP, Department of Clinical Pharmacy, Skaggs School of
+Pharmacy and Pharmaceutical Sciences, University of Colorado Anschutz Medical Campus, 12850 E Montview
+Blvd, Room V20-1203, Aurora, CO 80045 (kelly.e.anderson@cuanschutz.edu).
+Author Affiliations: Department of Clinical Pharmacy, Skaggs School of Pharmacy and Pharmaceutical Sciences,
+University of Colorado, Aurora (Anderson); Department of Pharmacotherapy, University of Utah College of
+Pharmacy, Salt Lake City (Mattingly).
+Conflict of Interest Disclosures: Dr Anderson reported grants from Arnold Ventures and contract research from
+Pharmaceutical Care Management Association (PCMA) outside the submitted work. Dr Mattingly reported
+personal fees from PCMA and personal fees from Arnold Ventures outside the submitted work.
+Funding/Support: The time dedicated to writing this commentary was funded by the Skaggs Scholars Program at
+the University of Colorado Skaggs School of Pharmacy and Pharmaceutical Sciences.
+Role of the Funder/Sponsor: The funder had no role in the preparation, review, or approval of the manuscript; and
+decision to submit the manuscript for publication.
+Disclaimer: The content is solely the responsibility of the authors and does not necessarily represent the official
+views of the funder.
+REFERENCES
+1. Mathis WS, Berenbrok LA, Kahn PA, Appolon G, Tang S, Hernandez I. Identifying pharmacy deserts and keystone
+pharmacies in the US. JAMA Netw Open. 2025;8(3):e250715. doi:10.1001/jamanetworkopen.2025.0715
+2. Qato DM, Daviglus ML, Wilder J, Lee T, Qato D, Lambert B. ‘Pharmacy deserts’ are prevalent in Chicago’s
+predominantly minority communities, raising medication access concerns. Health Aff (Millwood). 2014;33(11):
+1958-1965. doi:10.1377/hlthaff.2013.1397
+3. Guadamuz JS, Wilder JR, Mouslim MC, Zenk SN, Alexander GC, Qato DM. Fewer pharmacies in Black and
+Hispanic/Latino neighborhoods compared with White or diverse neighborhoods, 2007-15. Health Aff (Millwood).
+2021;40(5):802-811. doi:10.1377/hlthaff.2020.01699
+4. Mattingly TJ II, Hyman DA, Bai G. Pharmacy benefit managers: history, business practices, economics, and
+policy. JAMA Health Forum. 2023;4(11):e233804. doi:10.1001/jamahealthforum.2023.3804
+JAMA Network Open | Pharmacy and Clinical Pharmacology
+Measuring Geographic Access to Pharmacies
+JAMA Network Open. 2025;8(3):e250725. doi:10.1001/jamanetworkopen.2025.0725
+(Reprinted)
+March 13, 2025
+2/3
+Downloaded from jamanetwork.com by guest on 05/02/2026
+
+===== PAGE 3 =====
+5. Anderson KE, Sahu M, DiStefano MJ, Asche CV, Mattingly TJ II. Pharmacy closures and anticonvulsant
+medication prescription fills. JAMA. 2024;332(21):1847-1849. JAMA. doi:10.1001/jama.2024.19993
+6. Qato DM, Alexander GC, Chakraborty A, Guadamuz JS, Jackson JW. Association between pharmacy closures
+and adherence to cardiovascular medications among older US adults. JAMA Netw Open. 2019;2(4):e192606. doi:
+10.1001/jamanetworkopen.2019.2606
+7. Centers for Medicare & Medicaid Services (CMS). Critical Access Hospitals. Accessed December 18, 2024. https://
+www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals
+JAMA Network Open | Pharmacy and Clinical Pharmacology
+Measuring Geographic Access to Pharmacies
+JAMA Network Open. 2025;8(3):e250725. doi:10.1001/jamanetworkopen.2025.0725
+(Reprinted)
+March 13, 2025
+3/3
+Downloaded from jamanetwork.com by guest on 05/02/2026

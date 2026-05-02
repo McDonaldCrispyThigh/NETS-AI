@@ -1,0 +1,772 @@
+
+===== PAGE 1 =====
+RESEARCH
+Geographic access to community pharmacies based on walking, 
+driving, and public transportation in the 10 most populated U.S. 
+areas
+Nasser Sharareh * , Shangbin Tang, Adam Bress, Walter S. Mathis, 
+Lucas A. Berenbrok, Inmaculada Hernandez
+a r t i c l e i n f o
+Article history:
+Received 19 February 2025 
+Accepted 13 July 2025 
+Available online 18 July 2025
+a b s t r a c t
+Background: Previous analyses measuring geographic access to community pharmacies (phar-
+macy access) have relied solely on driving distance or time, without considering other modes of 
+transportation such as walking and public transportation. This omission represents an important 
+limitation, particularly in metropolitan areas where other transportation modes are regularly 
+used, which potentially can lead to the underestimation of inequities in pharmacy access. 
+Objectives: To investigate whether measuring pharmacy access based on driving underestimates 
+inequities in access, given the fact that not everyone has access to a vehicle.
+Methods: We used geographic information system analysis to measure pharmacy access. We 
+selected the top 10 metropolitan and micropolitan statistical areas with the largest popula-
+tion in the United States because of the feasibility and availability of different transportation 
+modes in those areas.
+Results: We found that across the top 10 populated U.S. areas and based on a 20-minute travel 
+time, pharmacy access will be overestimated for approximately 702,708 and 2,430,764 in-
+dividuals if we consider driving as the transportation mode instead of walking and public 
+transportation, respectively.
+Conclusion: Results suggest that measures of pharmacy access derived solely from driving 
+time will underestimate inequities in pharmacy access, specifically in areas with a low rate of 
+private vehicle ownership.
+© 2025 The Authors. Published by Elsevier Inc. on behalf of the American Pharmacists 
+Association ® . This is an open access article under the CC BY-NC-ND license (http:// 
+creativecommons.org/licenses/by-nc-nd/4.0/).
+Background
+Community pharmacies play a crucial role in the United 
+States public health system. In addition to medication 
+dispensing, they provide consultations, harm-reduction
+services, health screenings, medication management services, 
+vaccine administration, and access to nonprescription medi-
+cations for symptomatic and supportive care and over-the-
+counter tests and devices. 1-5 In a commercially insured 
+population, patients visited community pharmacies almost 
+twice as often as they visited their physicians. 6 This ratio was 
+the same among Medicare beneficiaries as well. 7 Further-
+more, national initiatives have focused on the delivery of 
+enhanced pharmacy services that can reach diverse pop-
+ulations through clinically integrated U.S. state networks of 
+pharmacy providers. 8,9 Therefore, ensuring reliable commu-
+nity pharmacy access for every American is essential to 
+improving overall health outcomes and reducing health care 
+disparities.
+Access to community pharmacies has increasingly been 
+threatened by the trend of pharmacy closures in recent 
+years. 10-12 Pharmacy closures have been associated with
+Disclosure: The authors declare no relevant conflicts of interest or financial 
+relationships.
+* Correspondence: Nasser Sharareh, PhD, Department of Population 
+Health Sciences, University of Utah, 295 Chipeta Way, Room 1N490, Salt Lake 
+City, UT 84108.
+E-mail address: nasser.sharareh@hsc.utah.edu (N. Sharareh).
+ORCIDs
+Nasser Sharareh: http://orcid.org/0000-0001-9552-2028 
+Shangbin Tang http://orcid.org/0000-0003-2088-2891
+Walter Mathis: http://orcid.org/0000-0003-1341-2963
+Lucas A. Berenbrok: http://orcid.org/0000-0001-9479-8209 
+Inmaculada Hernandez: http://orcid.org/0000-0002-0118-4986
+Contents lists available at ScienceDirect
+Journal of the American Pharmacists Association
+journal homepage: www.japha.org
+https://doi.org/10.1016/j.japh.2025.102479
+1544-3191/© 2025 The Authors. Published by Elsevier Inc. on behalf of the American Pharmacists Association ® . This is an open access article under the CC BY-
+NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Journal of the American Pharmacists Association 65 (2025) 102479
+SCIENCE AND PRACTICE
+
+===== PAGE 2 =====
+decreased medication adherence for both cardiovascular 
+medications and anticonvulsant medications, suggesting that 
+decreased pharmacy access may impact individuals' 
+health. 13,14 Recently, the term “keystone pharmacy” has been 
+proposed to describe pharmacy locations serving a popula-
+tion that would otherwise be a pharmacy desert (i.e., areas 
+with no access to a pharmacy within a defined travel time 
+range). In other words, “keystone pharmacies” serve areas 
+with low pharmacy access and should be protected from 
+closing to prevent the formation of a pharmacy desert. 15 
+However, pharmacy locations have continued to close 
+throughout the United States. The threat of pharmacy 
+closures has generated a need to quantify geographic access 
+to community pharmacies (pharmacy access) across the 
+country to identify and prevent disparate access to health 
+care.
+A nationwide study calculated the driving distance to the 
+closest community pharmacy and found that, in 2020, 
+almost 90% of the U.S. population lived within 5 miles 
+(8.04 km) of one. 16 Another study showed that almost 80% of 
+census tracts in the U.S. have access to at least one pharmacy 
+per 10,000 people within a 10-minute drive time. 17 However, 
+these existing measures of pharmacy access are solely based 
+on driving distance or time, assuming that individuals have 
+access to a private vehicle. This is an important limitation of 
+existing research, particularly in metropolitan areas, where 
+alternative modes of transportation (walking or public
+transportation) are frequently used. Furthermore, from a 
+health equity perspective, using only driving distance or time 
+may underestimate inequities in pharmacy access, since so-
+cially disadvantaged individuals and underrepresented 
+racial/ethnic minority groups are less likely to own cars. 18-20 
+In other words, when access is measured solely by driving 
+distance or time, some areas may be mistakenly classified as 
+having optimal pharmacy access, even though residents 
+without access to a private vehicle may still face significant 
+challenges.
+Objective
+The primary objective of this paper was to investigate 
+whether measuring pharmacy access based on driving 
+underestimates inequity in access, given the fact that not 
+everyone has access to a vehicle.
+Methods
+Data
+We acquired the location of open-door pharmacies from 
+the National Council for Prescription Drug Programs (NCPDP)
+- DataQ in 2020. 21 We defined open-door pharmacies as those 
+listed in the NCPDP DataQ database with a provider type 
+classified as retail/community, Indian Health Service, Veter-
+ans Affairs, or compounding pharmacies, and with an 
+immunizations-provided indicator marked as “Yes.” We ob-
+tained population data, weighted population centroids, and 
+census block group boundaries from the 2020 Decennial 
+Census data and TIGER/Line. 22 Block group-level household 
+vehicle availability (i.e., percentage of households with access 
+to a private vehicle at the census block group level) statistics 
+were extracted from the 2020 American Community Survey 
+5-year estimate data profile. We also used the ArcGIS Street-
+Map Premium, 23 which provided the street data necessary for 
+the travel time calculations.
+Population
+Analyses focused on the 10 most populated U.S. metro-
+politan areas, including Atlanta, Chicago, Dallas, Houston, Los 
+Angeles, Miami, New York, Philadelphia, Phoenix, and 
+Washington. These areas were selected from the metropolitan 
+and micropolitan statistical areas with the largest population 
+in the United States. 24 All census block groups and their 
+populations within these 10 metropolitan areas were selected 
+for the analysis. We selected metropolitan areas because of 
+the feasibility and availability of different transportation 
+modes in those areas. We extracted pharmacies within 
+100 km of the metropolitan area and generated their 
+40-minute drive time to ensure that the following calculation 
+included all possible pharmacies and populations.
+Spatial analysis
+We used ArcGIS Online and ArcGIS StreetMap Premium 23 
+geocoding locator to geocode the location of pharmacies (see 
+Appendix A for more details). To measure pharmacy access, 
+we used advanced geographic information system (GIS)
+Key Points
+Background:
+• Previous analyses measuring geographic access to 
+community pharmacies (pharmacy access) have 
+relied solely on driving distance or time, without 
+considering other modes of transportation such as 
+walking and public transportation.
+• This omission represents an important limitation, 
+particularly in metropolitan areas where other 
+transportation modes are regularly used, which 
+potentially can lead to the underestimation of in-
+equities in pharmacy access.
+Findings:
+• We investigated whether measuring pharmacy ac-
+cess based on driving underestimates inequities in 
+access, given the fact that not everyone has access to 
+a vehicle.
+• Across the 10 most populated U.S. areas and based 
+on a 20-minute travel time, pharmacy access will be 
+overestimated for approximately 702,708 and 
+2,430,764 individuals if we consider driving as the 
+transportation mode instead of walking and public 
+transportation, respectively.
+• Measures of pharmacy access derived solely from 
+driving time can underestimate inequities in phar-
+macy access, specifically in areas with a low rate of 
+private vehicle ownership.
+N. Sharareh et al. / Journal of the American Pharmacists Association 65 (2025) 102479
+SCIENCE AND PRACTICE
+2
+
+===== PAGE 3 =====
+analysis and the enhanced 2-step floating catchment area 
+(E2SFCA) method. E2SFCA is the most accurate and advanced 
+method to measure geographic access to services, which 
+considers population demand for services (e.g., pharmacies), 
+supply capacity of pharmacies, and the interaction between 
+supply and demand within a travel time range. 25,26 It also uses 
+a continuous distance decay effect so that an increase in 
+distance would lead to less utilization of services. Travel time 
+was measured from the population-weighted centroids of 
+census block groups to the geocoded location of community 
+pharmacies for each transportation mode, with the starting 
+time being 3:00 PM on a Friday. We selected this time as it is 
+the busiest time for pharmacies in the United States. (based 
+on data collected during the COVID-19 pandemic.) 27 
+Population-weighted centroids allowed us to account for the 
+population distribution within census block groups rather 
+than simply estimating their geometric centers (see Appendix 
+B for its calculations). 28 The walking and driving isochrones 
+and routes were generated in ArcGIS Pro using the Arcpy.nax 
+module, with ArcGIS StreetMap Premium (North America 
+2023 Release 1) as the transportation network data source. 23 
+Public transit-related spatial analyses and routing were con-
+ducted via the Bing Maps Directions API. 29 Both network data 
+sources perform analyses based on historical and predicted 
+traffic data, speed limits, road direction, and turn restrictions 
+(see Appendix C for more GIS details).
+In the first step of the E2SFCA, we created a catchment area 
+of 20 min around each community pharmacy using network 
+analysis. Since there was no specific estimate for travel time 
+to pharmacies, this travel time threshold was based on 
+average travel time for health care visits, shopping, picking up 
+or returning goods, and other family or personal errands 
+based on the 2022 National Household Travel Survey data. 30 
+Specifically, in Metropolitan Statistical Areas with a popula-
+tion greater than 3 million, 75% of household trips had du-
+rations no more than 20 minutes for purposes including 
+health care visits, shopping, picking up or returning goods, 
+and other family or personal errands. Then, we calculated a 
+pharmacy-to-population ratio based on the population de-
+mand within each catchment. In the second step, we created a 
+catchment area with the same travel time used in step one for 
+each population-weighted centroid of census block groups, 
+searched for the pharmacies within that catchment area, and 
+summed up their pharmacy-to-population ratios to represent 
+pharmacy access at the census block group level. Ratios closer 
+to 0 indicate lower accessibility. In each step, distance decay 
+weights based on a Gaussian function were used for travel 
+times, with populations close to a pharmacy assigned weights 
+near 1 to reflect the attraction of low travel costs, whereas 
+individuals located in more distant locations are assigned 
+weights near 0 to discount the attraction due to higher 
+impedance (see Appendix D for the distance decay function 
+calculations).
+We measured an access index ratio for each transportation 
+mode using the E2SFCA method and multiplied them by 
+10,000 to represent pharmacy access per 10,000 people. We 
+reported the percentage of census block groups with access to 
+more than one pharmacy per 10,000 people (a common 
+approach in prior analysis 17 ) for each transportation mode. In 
+addition, we identified block groups and their associated 
+population with walking or public transportation access to
+fewer than one pharmacy but driving access to more than one 
+pharmacy per 10,000 people for each metropolitan area. Then 
+we estimated the population of each metropolitan area that 
+do not have a private vehicle whose pharmacy access would 
+be overestimated if we assumed they used a private vehicle 
+for transportation.
+Results
+We identified 61,715 open-door pharmacies in the United 
+States. Of those, 23,090 pharmacies were located within the 
+study area. Figure 1 shows the percentage of census block 
+groups in each metropolitan area with access to at least one 
+pharmacy per 10,000 people within a 20-minute travel time 
+by mode of transportation (see Appendix E for the private 
+vehicle ownership rates, population density, and the cities 
+included in each metropolitan area). Results indicate a wider 
+disparity in pharmacy access based on walking and public 
+transportation compared to driving. Across all 10 metro-
+politan areas, over 95% of the block groups had access to at 
+least one pharmacy per 10,000 people within a 20-minute 
+driving time. Access was considerably lower for public 
+transit and walking transportation modes. Specifically, the 
+proportion of block groups with access to at least one 
+pharmacy per 10,000 people within a 20-minute travel time 
+by public transit ranged from 31.5% in Atlanta metropolitan 
+area to 76.7% in Miami metropolitan area. The Atlanta 
+metropolitan area also had the lowest access based on 
+walking, with only 68.3% of block groups having access to at 
+least one pharmacy per 10,000 people within a 20-minute 
+walking time.
+Table 1 reports the proportion of block groups and popu-
+lation in each metropolitan area that had access to fewer than 
+one pharmacy per 10,000 people within a 20-minute walking 
+time. For instance, in Atlanta metropolitan area, 34.9% of 
+block groups or 2.3 million individuals had walking access to 
+fewer than one pharmacy per 10,000 people. However, of 
+those block groups with suboptimal pharmacy access based 
+on walking time, 99.8% had access to more than one pharmacy 
+per 10,000 people based on driving.
+Table 2 reports the proportion of block groups and 
+population in each metropolitan area with public trans-
+portation access to fewer than one pharmacy per 10,000 
+people within a 20-minute travel time. For instance, in 
+Dallas metropolitan area, 60.8% of block groups or 5.3 
+million individuals had access to fewer than one pharmacy 
+per 10,000 people. However, all these block groups had 
+access to more than one pharmacy per 10,000 people based 
+on driving.
+Considering that only some people in the identified block 
+groups in Tables 1 and 2 do not have access to a vehicle, we 
+estimated the population whose pharmacy access would be 
+overestimated if we assumed they used a private vehicle for 
+transportation. Table 3 shows the estimated population 
+without a private vehicle and with access to fewer than one 
+pharmacy by walking or public transportation, but access to 
+more than one pharmacy by driving, per 10,000 people within 
+a 20-minute travel time. We based this estimate on the pri-
+vate vehicle ownership rates of the identified block groups in 
+Tables 1 and 2.
+Pharmacy access based on 3 transportation modes
+SCIENCE AND PRACTICE
+3
+
+===== PAGE 4 =====
+Overall, among the populations identified in Table 1 (i.e., 
+populations with walking access to fewer that one pharmacy), 
+702,708 individuals do not have access to a vehicle and their 
+pharmacy access would be overestimated if we assumed they 
+used a private vehicle. This number varies across our study 
+area, ranging from 27,023 in the Miami metropolitan area to 
+135,454 in the New York City metropolitan area. In addition, 
+among the populations identified in Table 2 (ie, populations 
+with public transportation access to fewer than one phar-
+macy), 2,430,764 individuals do not have access to a vehicle 
+and their pharmacy access would be overestimated if we 
+assumed they used a private vehicle. This number varies across 
+our study area, ranging from 75,049 in the Miami metropolitan 
+area to 786,830 in the New York City metropolitan area.
+Discussion
+Prior analysis on geographic access to community phar-
+macies (pharmacy access) has solely focused on driving dis-
+tance or time to pharmacies. 16,17 However, residents of 
+metropolitan areas do not always own private vehicles, and 
+they may rely on other modes of transportation such as 
+walking or public transportation. In this paper, we used 
+advanced GIS analysis to measure pharmacy access while 
+accounting for 2 other modes of transportation individuals 
+may use when accessing pharmacies. We investigated 
+whether measuring pharmacy access based on driving over-
+estimates inequity in access, given the fact that not everyone 
+has access to a private vehicle.
+We observed a greater disparity in the pharmacy access 
+index based on walking and public transportation compared 
+to driving across the top 10 most populated U.S. areas. For 
+instance, in the Dallas metropolitan area, 98.0% of block
+groups had driving access to at least one pharmacy per 10,000 
+people within a 20-minute travel time, but only 81.8% and 
+34.1% had similar access based on walking and public trans-
+portation. Also, in the Atlanta metropolitan area, 99.7% of 
+block groups had driving access to at least one pharmacy per 
+10,000 people, while only 64.8% and 32.1% had similar access 
+based on walking and public transportation, respectively. Our 
+results suggest that pharmacy access in metropolitan areas is 
+heavily dependent on the transportation mode. Therefore, 
+relying solely on driving time to measure pharmacy access 
+can significantly overestimate the actual pharmacy access for 
+individuals who depend on other modes of transportation. 
+This can lead to a misleading perception of how well com-
+munities are served by pharmacies, and therefore, those 
+communities may not receive needed pharmacy resources 
+due to this misattribution.
+We also found that in block groups with walking access to 
+fewer than one pharmacy per 10,000 people, between 89.5% 
+(in the Phoenix metropolitan area) and 99.9% (in the Dallas 
+metropolitan area) had driving access to at least one phar-
+macy per 10,000 people (see Table 1). In addition, we found 
+that in block groups with public transportation access to 
+fewer than one pharmacy per 10,000 people, between 97.5% 
+(in the Phoenix metropolitan area) and 100% (in the Dallas 
+metropolitan area) had driving access to at least one phar-
+macy per 10,000 people (see Table 2). Together, these findings 
+suggest that walking and public transportation access to 
+pharmacies would be overestimated for some block groups if 
+we used driving as the transportation mode. These findings 
+also emphasize that pharmacy planning in metropolitan areas 
+should consider populations without a private vehicle, as they 
+may face greater challenges in accessing necessary health 
+care provided through pharmacies.
+Figure 1. The percentage of census block groups in the 10 most populated U.S. areas with access to at least one pharmacy per 10,000 within a 20-min travel time 
+based on different travel models. Abbreviations used: ATL, Atlanta; CHI, Chicago; DAL, Dallas; HOU, Houston; LA, Los Angeles; MIA, Miami; NYC, Ney York City; PHL, 
+Philadelphia; PHX, Phoenix; DC, District of Columbia.
+N. Sharareh et al. / Journal of the American Pharmacists Association 65 (2025) 102479
+SCIENCE AND PRACTICE
+4
+
+===== PAGE 5 =====
+In summary, overestimating pharmacy access for pop-
+ulations in certain geographic areas may have unintentional 
+yet consequential downstream effects. These effects may 
+include a failure to open new pharmacies in metropolitan 
+areas with a low rate of private vehicle ownership and high 
+reliance on public transportation. Should areas of low phar-
+macy access via public transportation identified in this paper 
+remain unaddressed, disparate health outcomes may grow for 
+populations already in need of additional healthcare 
+resources. Secondly, pharmacy deserts will likely grow as 
+pharmacy closures continue to rise as a result of unsustain-
+able business models tied to low or negative reimbursement 
+rates for prescription dispensing and limited opportunities to 
+diversify reimbursement streams. As deserts grow, pharmacy 
+access, even in metropolitan areas with good pharmacy ac-
+cess based on driving, will likely decrease. This will leave 
+millions of Americans with fewer options to obtain their
+medications same day or receive enhanced services provided 
+by pharmacists from brick and mortar locations.
+Limitations
+Our analysis is subject to a few limitations. First, the travel 
+time threshold we used was based on average travel time for 
+health care visits, shopping, picking up or returning goods, and 
+other family or personal errands, as there was no specific es-
+timate for travel time to pharmacies. Second, while biking is a 
+common mode of transportation in metropolitan areas, we did 
+not consider that in this paper. Third, public transit travel times 
+were calculated for a single departure time (Friday at 3:00 PM), 
+which may not fully reflect the variability in transit accessi-
+bility. Unlike driving or walking, transit users often plan their 
+trips around scheduled departures, and small shifts in depar-
+ture time (e.g., leaving at 2:55 vs 3:00) can significantly alter
+Table 1
+Number of census block groups and population in the 10 most populated U.S. areas with walking access to fewer than one pharmacy but driving access to more 
+than one pharmacy
+Metro name
+Number of block groups with 
+walking access to fewer than 1 
+pharmacy per 10,000 people within 
+a 20-min travel time (proportion of 
+all the block groups)
+Associated 
+population of 
+these block 
+groups
+The percentage of these block 
+groups with driving access to 
+more than one pharmacy per 
+10,000 people within a 20-min 
+travel time (N)
+Atlanta-Sandy Springs-Alpharetta, GA
+1375 (34.9%)
+2,343,754
+99.8% (1373)
+Chicago-Naperville-Elgin, IL-IN-WI
+728 (10.6%)
+1,176,650
+99.3% (723)
+Dallas-Fort Worth-Arlington, TX
+707 (16.2%)
+1,446,400
+99.9% (706)
+Houston-the Woodlands-Sugar 
+Land, TX
+682 (16.4%)
+1,327,055
+95.7% (653)
+Los Angeles-Long Beach-Anaheim, CA
+326 (3.8%)
+527,837
+90.5% (295)
+Miami-Fort Lauderdale-Pompano 
+Beach, FL
+182 (4.6%)
+296,308
+91.2% (166)
+New York-Newark-Jersey City, 
+NY-NJ-PA
+998 (6.7%)
+1,420,186
+92.6% (924)
+Philadelphia-Camden-Wilmington,
+PA-NJ-DE-MD
+650 (14.1%)
+988,398
+98.6% (641)
+Phoenix-Mesa-Chandler, AZ
+381 (12.6%)
+645,921
+89.5% (341)
+Washington-Arlington-Alexandria,
+DC-VA-MD-WV
+742 (18.5%)
+1,325,642
+96.1% (713)
+Table 2
+Number of census block groups and population in the 10 most populated U.S. areas with public transportation access to fewer than one pharmacy but driving 
+access to more than one pharmacy
+Metro Name
+Number of block groups with public 
+transportation access to fewer than 1 
+pharmacy per 10,000 people within a 
+20-min travel time (proportion of all 
+the block groups)
+Associated 
+population of 
+these block 
+groups
+The percentage of these block groups 
+with driving access to more than one 
+pharmacy per 10,000 people within a 
+20-min travel time (N)
+Atlanta-Sandy Springs-Alpharetta, GA
+2665 (67.6%)
+4,445,119
+99.9% (2663)
+Chicago-Naperville-Elgin, IL-IN-WI
+3513 (51.2%)
+5,302,994
+99.9% (3508)
+Dallas-Fort Worth-Arlington, TX
+2795 (63.9%)
+5,278,485
+100.0% (2794)
+Houston-the Woodlands-Sugar 
+Land, TX
+2548 (61.3%)
+4,815,203
+98.9% (2519)
+Los Angeles-Long Beach-Anaheim, CA
+3354 (38.8%)
+5,300,719
+99.0% (3322)
+Miami-Fort Lauderdale-Pompano 
+Beach, FL
+859 (21.8%)
+1,416,719
+98.1% (843)
+New York-Newark-Jersey City, 
+NY-NJ-PA
+4713 (31.5%)
+6,769,596
+98.5% (4640)
+Philadelphia-Camden-Wilmington,
+PA-NJ-DE-MD
+1485 (32.3%)
+2,334,637
+99.4% (1476)
+Phoenix-Mesa-Chandler, AZ
+1569 (51.7%)
+2,625,957
+97.5% (1529)
+Washington-Arlington-Alexandria,
+DC-VA-MD-WV
+2187 (54.5%)
+3,726,312
+98.7% (2158)
+Pharmacy access based on 3 transportation modes
+SCIENCE AND PRACTICE
+5
+
+===== PAGE 6 =====
+total travel time. Future research could explore minimum 
+public transit travel times across multiple departure times to 
+better capture the most efficient transit-based access.
+Conclusion
+In this article, we measured pharmacy access in the 10 
+most populated U.S. areas using different modes of trans-
+portation. Results suggest that measures of pharmacy access 
+derived solely on driving time will underestimate inequities 
+in pharmacy access. Findings can inform urban planning and 
+public health policies. Efforts to improve pharmacy access 
+should consider different transportation modes to ensure that 
+all community members have adequate access to pharmacies, 
+specifically in areas with a low rate of private vehicle 
+ownership.
+Acknowledgments
+Pharmacy access indices for each transportation mode can 
+be provided through a written request to the corresponding 
+author.
+Supplementary data
+Supplementary data related to this article can be found at 
+https://doi.org/10.1016/j.japh.2025.102479.
+References
+1. Donohue JA, Severson T, Martin LP. The food pharmacy: theory, imple-
+mentation, and opportunities. Am J Prev Cardiol. 2021;5:100145.
+2. Mossialos E, Courtin E, Naci H, et al. From “retailers” to health care 
+providers: transforming the role of community pharmacists in chronic 
+disease management. Health policy. 2015;119(5):628—639.
+3. Strand MA, Mager NAD, Hall L, Martin SL, Sarpong DF. Pharmacy con-
+tributions to improved population health: expanding the public health 
+roundtable. Prev Chronic Dis. 2020;17:E113.
+4. Stergachis A. Promoting the pharmacist's role in public health. J Am 
+Pharm Assoc. 2006;46(3):311—319.
+5. Layson-Wolf C, Sharfstein JM. US Community Pharmacies and Public 
+Health―Building on the COVID-19 Response. Paper Presented at: JAMA 
+Health Forum. 4. 2023:e232583.
+6. Valliant SN, Burbage SC, Pathak S, Urick BY. Pharmacists as accessible 
+health care providers: quantifying the opportunity. J Manag Care 
+Specialty Pharm. 2022;28(1):85—90.
+7. Berenbrok LA, Gabriel N, Coley KC, Hernandez I. Evaluation of frequency 
+of encounters with primary care physicians vs visits to community 
+pharmacies among Medicare beneficiaries. JAMA Netw Open. 2020;3(7): 
+e209132.
+8. Doucette WR, Alhersh E, Ludwig L, Veach S. Effects of a community 
+pharmacy cardiovascular practice transformation (CPT) program on 
+blood pressure. Exploratory Res Clin Soc Pharm. 2025;17:100559.
+9. Herbert SM, Herbert BM, Hake KL, McGrath SH. Flip the Pharmacy's 
+impact on comprehensive medication management performance. J Am 
+Pharm Assoc. 2023;63(4):1070—1076.
+10. Xu R, Brown A, Berenbrok LA. Mapping U.S. Pharmacy closures. Avail-
+able 
+at: 
+https://storymaps.arcgis.com/stories/21620f1e07c14d7f81 
+adc4503faaf51e; 2024. Accessed December 10, 2024.
+11. Guadamuz JS, Alexander GC, Zenk SN, Qato DM. Assessment of phar-
+macy closures in the United States from 2009 through 2015. JAMA Intern 
+Med. 2020;180(1):157—160.
+12. Guadamuz JS, Alexander GC, Kanter GP, Qato DM. More US pharmacies 
+closed than opened in 2018—21; Independent pharmacies, those in Black, 
+Latinx communities most at Risk: study examines US pharmacy closures 
+at the county level, 2018—21. Health Aff. 2024;43(12):1703—1711.
+13. Qato DM, Alexander GC, Chakraborty A, Guadamuz JS, Jackson JW. 
+Association between pharmacy closures and adherence to cardiovas-
+cular medications among older US adults. JAMA Netw open. 2019;2(4): 
+e192606.
+14. Anderson KE, Sahu M, DiStefano MJ, Asche CV, Mattingly TJ. Pharmacy 
+closures and anticonvulsant medication prescription Fills. JAMA. 
+2024;332(21):1847—1849.
+15. Mathis WS, Berenbrok LA, Kahn PA, Appolon G, Tang S, Hernandez I. 
+Vulnerability index approach to identify pharmacy deserts and keystone 
+pharmacies. JAMA Netw Open. 2025;8(3):e250715.
+16. Berenbrok LA, Tang S, Gabriel N, et al. Access to community pharmacies: 
+a nationwide geographic information systems cross-sectional analysis. 
+J Am Pharm Assoc. 2022;62(6):1816—1822.e1812.
+17. Sharareh N, Zheutlin AR, Qato DM, Guadamuz J, Bress A, Vos RO. 
+Access to community pharmacies based on drive time and by rurality 
+across the contiguous United States. J Am Pharm Assoc. 2024;64(2): 
+476—482.
+18. Matsuo M. Carpooling and drivers without household vehicles: gender 
+disparity in automobility among Hispanics and non-Hispanics in the US. 
+Transportation. 2020;47(4):1631—1663.
+19. Berube A, Deakin E, Raphael S. Socioeconomic Differences in Household 
+Automobile Ownership Rates: Implications for Evacuation Policy. Paper 
+Presented at: Program on Housing and Urban Policy Conference Paper 
+Series, University of California, Berkeley, Working Paper. Available at: 
+gspp.berkeley.edu/assets/uploads/research/pdf/berubedeakenraphael. 
+pdf; 2006. Accessed December 5, 2024.
+Table 3
+Estimated population without a private vehicle and overestimated pharmacy access based on driving compared to walking and public transportation
+Metro name
+Average vehicle 
+ownership rate of block 
+groups with walking 
+access to fewer than 
+one pharmacy 
+(identified in Table 1)
+Estimated population 
+without a private vehicle 
+and overestimated 
+pharmacy access based 
+on driving compared to 
+walking a
+Average vehicle 
+ownership rate of block 
+groups with public 
+transportation access to 
+fewer than one pharmacy 
+(identified in Table 2)
+Estimated population 
+without a private vehicle 
+and overestimated 
+pharmacy access based 
+on driving compared to 
+public transportation b
+Atlanta-Sandy Springs-Alpharetta, GA
+97.0%
+70,242
+96.7%
+146,542
+Chicago-Naperville-Elgin, IL-IN-WI
+95.6%
+51,410
+94.3%
+301,968
+Dallas-Fort Worth-Arlington, TX
+97.3%
+39,014
+97.0%
+158,354
+Houston-the Woodlands-Sugar Land, TX
+93.1%
+87,629
+95.4%
+219,063
+Los Angeles-Long Beach-Anaheim, CA
+89.2%
+99,360
+95.1%
+257,138
+Miami-Fort Lauderdale-Pompano Beach, FL
+90.0%
+27,023
+94.6%
+75,049
+New York-Newark-Jersey City, NY-NJ-PA
+89.7%
+135,454
+88.2%
+786,830
+Philadelphia-Camden-Wilmington, PA-NJ-
+DE-MD
+95.7%
+41,906
+95.8%
+97,466
+Phoenix-Mesa-Chandler, AZ
+87.6%
+71,684
+94.6%
+138,257
+Washington-Arlington-Alexandria, DC-VA-
+MD-WV
+93.8%
+78,984
+93.2%
+250,095
+a Population identified in Table 1 × last column in Table 1 × (1− average vehicle ownership rate for block groups identified in Table 1).
+b Population identified in Table 2 × last column in Table 2 × (1− average vehicle ownership rate for block groups identified in Table 2).
+N. Sharareh et al. / Journal of the American Pharmacists Association 65 (2025) 102479
+SCIENCE AND PRACTICE
+6
+
+===== PAGE 7 =====
+20. National Equity Atlas. Car access: everyone needs reliable transportation
+access and in most American communities that means a car. Available at: 
+https://nationalequityatlas.org/indicators/Car_access?breakdown=by-race-
+ethnicity; 2020. Accessed December 10, 2024.
+21. NCPDP. Accessing accurate pharmacy data has Never been Easier. Learn
+How. Available at: https://dataq.ncpdp.org/; 2023. Accessed March 10, 2020.
+22. Census. TIGER/Line Shapefiles. Available at: https://www.census.gov/
+geographies/mapping-files/time-series/geo/tiger-line-file.html; 
+2024. 
+Accessed December 10, 2024.
+23. ESRI. What is ArcGIS StreetMap Premium?. Available at: https://doc.
+arcgis.com/en/streetmap-premium/latest/get-started/overview.htm;
+2024. Accessed December 10, 2024.
+24. Census. American community Survey 5-year estimate. Available at: https://
+data.census.gov/table/ACSST5Y2020.S0101?q=United+States&g=01 
+0XX00US$3100000&y=2020; 2020. Accessed December 10, 2024.
+25. Luo W, Qi Y. An enhanced two-step floating catchment area (E2SFCA)
+method for measuring spatial accessibility to primary care physicians. 
+Health & place. 2009;15(4):1100—1107.
+26. Wan N, Zhan FB, Zou B, Chow E. A relative spatial access assessment
+approach for analyzing potential spatial access to colorectal cancer 
+services in Texas. Appl Geogr. 2012;32(2):291—299.
+27. Google. Br(rr)ing on the holiday trends from Google Maps. Available at:
+https://blog.google/products/maps/2020holiday-trends-google-maps/. 
+Accessed December 10, 2024.
+28. Luo W, Wang F. Measures of spatial accessibility to health care in a GIS
+environment: synthesis and a case study in the Chicago region. Environ 
+Plann B Plann Des. 2003;30(6):865—884.
+29. Microsoft. Bing Maps APIs. Available at: https://www.microsoft.com/en-
+us/maps/bing-maps/choose-your-bing-maps-api%20; 2023. Accessed 
+December 10, 2024.
+30. Federal Highway Administration. National household travel Survey. 
+Available at: https://nhts.ornl.gov/; 2022. Accessed December 10, 
+2024.
+Nasser Sharareh, PhD, Research Assistant Professor, Department of Population 
+Health Sciences, Spence Fox Eccles School of Medicine at the University of Utah, 
+Salt Lake City, UT
+Shangbin Tang, MS, Research Data Analyst, Division of Clinical Pharmacy, 
+Skaggs School of Pharmacy and Pharmaceutical Sciences, University of Cali-
+fornia, San Diego, CA
+Adam Bress, PharmD, MS, Associate Professor, Department of Population 
+Health Sciences, Spence Fox Eccles School of Medicine at the University of Utah, 
+Salt Lake City, UT
+Walter S. Mathis, MD, Assistant Professor, Department of Psychiatry, Yale 
+School of Medicine, New Haven, CT
+Lucas A. Berenbrok, PharmD, Associate Professor, Department of Pharmacy 
+and Therapeutics, School of Pharmacy, University of Pittsburgh, PA
+Inmaculada Hernandez, PharmD, PhD, Professor, Division of Clinical Phar-
+macy, Skaggs School of Pharmacy and Pharmaceutical Sciences, University of 
+California, San Diego, CA
+Pharmacy access based on 3 transportation modes
+SCIENCE AND PRACTICE
+7

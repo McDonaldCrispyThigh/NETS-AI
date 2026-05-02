@@ -1,0 +1,34 @@
+[
+  {
+    "Qinc": 1,
+    "tracts": 118,
+    "median_carless_pct": 18.0,
+    "median_dist_mi": 0.47,
+    "qato_desert_rate_pct": 44.9,
+    "mwdr_pct": 7.8
+  },
+  {
+    "Qinc": 2,
+    "tracts": 117,
+    "median_carless_pct": 8.7,
+    "median_dist_mi": 0.63,
+    "qato_desert_rate_pct": 64.1,
+    "mwdr_pct": 6.7
+  },
+  {
+    "Qinc": 3,
+    "tracts": 117,
+    "median_carless_pct": 4.6,
+    "median_dist_mi": 0.76,
+    "qato_desert_rate_pct": 80.3,
+    "mwdr_pct": 5.7
+  },
+  {
+    "Qinc": 4,
+    "tracts": 118,
+    "median_carless_pct": 1.8,
+    "median_dist_mi": 0.92,
+    "qato_desert_rate_pct": 85.6,
+    "mwdr_pct": 21.0
+  }
+]

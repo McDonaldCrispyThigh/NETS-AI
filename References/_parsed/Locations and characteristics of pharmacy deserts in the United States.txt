@@ -1,0 +1,1059 @@
+
+===== PAGE 1 =====
+Locations and characteristics of pharmacy deserts in the 
+United States: a geospatial study
+Rachel Wittenauer1,*
+, Parth D. Shah2
+, Jennifer L. Bacci1
+, Andy Stergachis1,3
+1CHOICE Institute, School of Pharmacy, University of Washington, Seattle, WA 98195, United States
+2Hutchinson Institute for Cancer Outcomes Research (HICOR), Fred Hutchinson Cancer Center, Seattle, WA 98109, United States
+3Department of Global Health, School of Public Health, University of Washington, Seattle, WA 98105, United States
+*Corresponding author: Comparative Health Outcomes, Policy, and Economics (CHOICE) Institute, University of Washington School of Pharmacy, Seattle, 
+WA 98195, United States. E-mail: rwitten1@uw.edu
+Abstract
+Pharmacies are important health care access points, but no national map currently exists of where pharmacy deserts are located. This cross- 
+sectional study used pharmacy address data and Census Bureau surveys to define pharmacy deserts at the census tract level in all 50 US 
+states and the District of Columbia. We also compared sociodemographic characteristics of pharmacy desert vs non-pharmacy desert 
+communities. Nationally, 15.8 million (4.7%) of all people in the United States live in pharmacy deserts, spanning urban and rural settings in all 
+50 states. On average, communities that are pharmacy deserts have a higher proportion of people who have a high school education or less, 
+have no health insurance, have low self-reported English ability, have an ambulatory disability, and identify as a racial or ethnic minority. While, 
+on average, pharmacies are the most accessible health care setting in the United States, many people still do not have access to them. 
+Further, the people living in pharmacy deserts are often marginalized groups who have historically faced structural barriers to health care. This 
+study demonstrates a need to improve access to pharmacies and pharmacy services to advance health equity.
+Key words: pharmacy desert; pharmacy access; pharmacy health services; pharmaco-equity.
+Received: January 29, 2024; Revised: March 12, 2024; Accepted: March 14, 2024 
+© The Author(s) 2024. Published by Oxford University Press on behalf of Project HOPE - The People-To-People Health Foundation, Inc. 
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which 
+permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.
+Introduction
+Community pharmacies are a crucial component of health 
+care infrastructure in the United States.1,2 Nearly 7 in 10 
+adults between 40 and 79 years old take at least 1 prescription 
+drug, and approximately 1 in 5 adults take 5 or more prescrip­
+tion drugs.3 In addition to dispensing medications for acute 
+and chronic illnesses, a wide variety of health services are of­
+fered at pharmacies, including routine vaccination, opioid 
+and addiction management therapy, contraception, and pa­
+tient counseling on medications. There is a long history of 
+pharmacists providing important community health services, 
+and the scope and breadth of these practices have expanded 
+over time.4-6 Recently, the COVID-19 pandemic highlighted 
+the importance of community pharmacists and pharmacies 
+as points of access for providing essential health products 
+and services, including administering half of all COVID-19 
+vaccines.7
+Communities that are both low-income and have low 
+access to pharmacies are known as “pharmacy deserts” and 
+lack access to the wide range of services provided at 
+pharmacies.8 Pharmacy deserts disproportionately exist in ru­
+ral or historically marginalized neighborhoods, compounding 
+already-existing health inequities experienced by these 
+communities.8-16 However, information is lacking on the spe­
+cific locations and characteristics of pharmacy deserts nation­
+wide, making it difficult to measure both the detrimental 
+effects of poor access and the beneficial effects of pharmacy- 
+based health services across geography.
+The term pharmacy desert was first coined in 2014 in Qato 
+et al’s analysis of pharmacy desert locations and 
+characteristics in Chicago.8 Since then, literature on this topic 
+has grown to include identification of pharmacy deserts in Los 
+Angeles County, the 30 largest metropolitan areas of the 
+United States, and all rural counties throughout the United 
+States.8,10-13,16-20 Additional analyses examine characteristics 
+of pharmacy closures9 and several examine access to pharma­
+cies but from an exclusively spatial lens (ie, not considering in­
+come factors).2,21
+While these piecemeal analyses are 
+beginning to create a cohesive evidence base, each map uses 
+different methods and data sources and applies them to a small 
+geographic area. To date, there is no comprehensive, system­
+atically defined map of pharmacy desert locations in the 
+United States. The objective of this study was to identify the 
+locations of pharmacy desert neighborhoods using a standard 
+methodology and characterize the population that lives in 
+these areas and the pharmacies that serve them.
+Data and methods
+Approach
+We applied the pharmacy desert definition8 to classify the cen­
+sus tracts in all 50 US states and the District of Columbia. We 
+reported locations and population estimates of all pharmacy 
+deserts and presented them visually on a choropleth map. 
+We examined the tract-level social and demographic charac­
+teristics of populations (eg, race/ethnicity, health insurance 
+status) in pharmacy desert communities vs non-pharmacy des­
+ert communities and the characteristics of pharmacies (eg, 
+services offered, independent vs chain ownership) serving 
+pharmacy desert communities vs those serving non-pharmacy 
+desert communities.
+Health Affairs Scholar, 2024, 2(4), qxae035 
+https://doi.org/10.1093/haschl/qxae035
+Advance access publication: March 16, 2024                                                                                                               
+Research Article
+
+===== PAGE 2 =====
+Data sources
+The locations and characteristics of all licensed pharmacies as 
+of April 2022 were sourced from the National Council for 
+Prescription Drug Programs.22 Data to define pharmacy de­
+serts and their associated characteristics were from multiple 
+sources produced by the US Census Bureau, including the 
+2020 Decennial Census and the 2017–2021 5-year American 
+Community Survey.23,24 Additional detail on the dataset cre­
+ation process, variable definitions, and the calculation process 
+can be found in Supplement A1. (To access the Appendix, click 
+on the Details tab of the article online.)
+Key measures
+We created binary indicators for the low-income and the low- 
+access criteria of the pharmacy desert definition. A census tract 
+meeting both indicators was then designated as a pharmacy 
+desert. The specific measures are defined as follows: 
+1. Low income: Tract has either (1) 20% or more of its 
+population living below the Federal Poverty Level or (2) 
+a median household income that was less than 80% of 
+the median income of the nearest metropolitan area.
+2. Low access: Tract has at least 33% of its population living 
+1 mile or more from the pharmacy for urban tracts, more 
+than 5 miles for suburban tracts, more than 10 miles for 
+rural tracts, and more than 0.5 miles for tracts with less 
+than 100 individuals owning a car.
+Census tracts were classified as urban, suburban, and rural 
+using population density,21 based on thresholds defined in pre­
+vious analyses25 and consistent with survey research on living 
+environments.26
+We used areal interpolation at the block level to calculate 
+the proportion of a tract’s population living within the acces­
+sibility radius of a pharmacy.27 For each urbanicity level’s ac­
+ceptable pharmacy radius (0.5, 1, 5, or 10 miles), we evaluated 
+whether the centroid of every census block in the United States 
+was inside or outside of a pharmacy’s radius. Then, for every 
+tract, we summed the population of the blocks that were inside 
+any pharmacy radius based on tract urbanicity. If more than 
+one-third of the population was not in the radius, the tract 
+was designated as meeting the “low access” component of 
+the pharmacy desert definition. Additional details on this pro­
+cess are available in Supplement A1.
+Statistical analyses
+We compared characteristics of populations and pharmacies in 
+pharmacy desert vs non–pharmacy desert communities. For 
+continuous variables we tested statistical significance with a 
+2-sample t test and for categorical variables a chi-square test 
+of independence. All P values were corrected for multiple com­
+parisons using the Benjamini-Hochberg correction.28-30 All 
+analyses were conducted using R version 4.2.2 (R Foundation 
+for Statistical Computing, Vienna, Austria). Maps were created 
+using Tableau Desktop version 2023.2 (Tableau Software LLC, 
+Seattle, USA) (see Supplement A1 for additional details).31,32
+Results
+Locating and quantifying pharmacy deserts
+Nationally, 15.82 million (4.7%) of all people in the United 
+States live in pharmacy desert communities. Of the 84 414 
+census tracts, 4679 (5.5%) were identified to be pharmacy de­
+serts, 78 723 (93.3%) were designated as not pharmacy de­
+serts, and 1012 could not be classified due to no available 
+income data (n = 446, 0.5%) or having a population of zero 
+(n = 566, 0.7%). Among the census tracts that are pharmacy 
+deserts, the majority have zero pharmacies (n = 4,421, 
+94.5%) (Table 1). Of the 60 475 community pharmacies na­
+tionwide, only 294 (0.5%) are serving pharmacy desert com­
+munities (Table 2).
+The states with the highest proportion of their adult popu­
+lation living in pharmacy deserts are New Mexico (14.9%), 
+Alaska (14.8%), and Arizona (8.6%). The states with the low­
+est proportion were New Hampshire (0.86%), New Jersey 
+(1.05%), and New York (1.74%). The states with the highest 
+number of adults living in pharmacy deserts are California 
+(2.53 million), Texas (1.68 million), and Florida (749 103), re­
+flecting the size of those states’ large populations. These data 
+by state are summarized in Supplement Figure A2-1.
+The locations of all pharmacy desert tracts and all 
+tracts with low access (but which did not meet the 
+low-income criteria and thus are not considered full “phar­
+macy deserts” in our main analysis) are visualized on a 
+choropleth map in Figure 1. An interactive version of the 
+map is available via Tableau Public (https://tinyurl.com/ 
+PharmacyDesertsMap2022). Map inset views of 5 example 
+urban areas in the United States are available in Supplement 
+Figure A2-3. Locations of each individual pharmacy and the 
+number of pharmacies per population are also mapped in 
+Supplement Figures A2-4 and A2-5.
+If the low-income component of the pharmacy desert defin­
+ition was not accounted for, as is the case in some pharmacy 
+access research,2,21,33,34 then a higher number of census tracts 
+would be designated as pharmacy deserts. In this case, beyond 
+the 4679 pharmacy desert tracts, an additional 7536 tracts 
+were identified as having low access to pharmacies. This total 
+of 12 215 tracts represents approximately 34 million adults 
+(13.2% of all adults) in the country living in areas with low ac­
+cess to pharmacies.
+Characteristics of pharmacy deserts
+Pharmacy deserts are most often located in urban and rural 
+areas as opposed to suburban areas (P < .001). Communities 
+that are pharmacy deserts, as compared with non-pharmacy 
+desert communities, have a higher proportion of people 
+who have a high school education or less (33.2% vs 27.6%, 
+P < .001), have no health insurance (15.2% vs 9.9%, 
+P < .001), have public health insurance (41.9% vs 35.4%, 
+P < .001), speak English “not well” or “not at all” (5.7% vs 
+3.1%, P < .001), have an ambulatory disability (10.4% vs 
+8.3%, P < .001), identify as non-Hispanic Black race 
+(19.1% vs 12.6%, P < .001), identify as American Indian or 
+Alaskan Native (3.5% vs 0.5%, P < .001), and identify as 
+Hispanic White race (12.0% vs 8.0%, P < .001). Pharmacy 
+desert communities have a lower proportion of people who 
+are under the age of 65 (15% vs 16.9%, P < .001), identify 
+as non-Hispanic White race (45.5% vs 61.2%, P < .001), 
+and identify as non-Hispanic Asian race (3.3% vs 5.3%, 
+P < .001). These results are summarized in Table 1. Most pat­
+terns seen at the national level persist when stratified by urban­
+icity—for example, pharmacy deserts still have a higher 
+proportion of people with lower education, non-White race, 
+and no health insurance across urban, suburban, and rural 
+2                                                                                                                                                        Health Affairs Scholar, 2024, 2(4), qxae035
+
+===== PAGE 3 =====
+areas. However, among rural pharmacy deserts vs rural non– 
+pharmacy deserts, there is a slightly higher proportion of indi­
+viduals aged 65 years and older. Supplement Table A2-2
+presents these data stratified by urbanicity level and 
+Supplement Table A2-3 presents these data for tracts that 
+have low spatial access to pharmacies but did not meet the 
+low-income criteria of the pharmacy desert definition.
+We also examined the characteristics of pharmacies that are 
+located in pharmacy desert tracts vs non-pharmacy desert 
+tracts (Table 2). Pharmacies serving pharmacy deserts are 
+more often in urban and rural areas rather than suburban 
+areas. Pharmacies located in pharmacy deserts vs non- 
+pharmacy desert areas have different distributions of owner­
+ship: those in pharmacy deserts are more often independently 
+owned pharmacies (41.2% vs 36.6%, P < .001). Pharmacies 
+in pharmacy deserts also have varying levels of service offer­
+ings: for example, they more often have walk-in clinics avail­
+able as compared with non-pharmacy desert pharmacies 
+(13.6% vs 6.5%, P < .001). Additional detail is available in 
+Supplement Table A2-4.
+Discussion
+Our study provides estimates of the number of adults living in 
+pharmacy deserts in the United States—nearly 16 million 
+people. The proportion and number of adults living in phar­
+macy deserts vary by state, from less than 1% of adults in 
+New Hampshire to nearly 15% of adults in New Mexico. 
+Nationally, our results indicate that pharmacy desert neigh­
+borhoods are associated with many social and political deter­
+minants of health, including lower educational attainment, 
+lower income, lower health insurance coverage, and a higher 
+proportion of people identifying as racial or ethnic minorities. 
+These patterns did not vary substantially by urbanicity of the 
+neighborhood. Of the tracts that are pharmacy deserts, nearly 
+95% had contained zero pharmacies. In examining character­
+istics of pharmacies, we found that the few that are serving 
+pharmacy desert communities are more often independently 
+owned rather than chain owned, and more often have walk-in 
+clinic services available as compared with pharmacies serving 
+non-pharmacy deserts.
+Compared with other studies of pharmacy deserts with 
+similar operational definitions, our results indicate a smaller 
+proportion of the population is living in pharmacy deserts. 
+This is potentially due to our paper’s inclusion of a “subur­
+ban” category rather than an urban/rural binary, which we be­
+lieve to be an important distinction but is not often included. 
+An analysis of pharmacy deserts in Washington State with a 
+similar approach (but using only urban and rural categories) 
+found 8% of the adult population living in pharmacy deserts 
+Table 1. Characteristics of populations living in pharmacy deserts vs non-pharmacy deserts.
+Pharmacy desert 
+(n = 4679)
+Not a pharmacy desert 
+(n = 78 723)
+Urbanicity and access, n (%)
+Urbanicity of census tracta
+Urban
+2692 (57.5%)
+19 972 (25.4%)
+Suburban
+204 (4.4%)
+30 264 (38.4%)
+Rural
+1783 (38.1%)
+28 487 (36.2%)
+Pharmacies per census tracta
+Zero pharmacies in the tract
+4421 (94.5%)
+43 249 (54.9%)
+One pharmacy in the tract
+34 (0.7%)
+14 852 (18.9%)
+Two or more pharmacies
+224 (4.8%)
+20 622 (26.2%)
+Social characteristics, mean (SD)
+Prop. below FPLa
+24.6% (14.3)
+13.0% (10.8)
+Median household incomea
+$46 400 ($14 900)
+$76 000 ($37 000)
+Prop. with high school education or lessa
+33.2% (10.4)
+27.6% (11.4)
+Prop. with no health insurancea
+15.2% (11.2)
+9.89% (8.56)
+Prop. with public health insurancea
+41.9% (15.8)
+35.4% (12.9)
+Prop. that do not speak Englisha
+5.73% (9.53)
+3.07% (6.78)
+Demographic characteristics, mean (SD)
+Prop. with ambulatory disabilitya
+10.4% (6.37)
+8.34% (4.97)
+Prop. older adults (age 65+)a
+15.0% (10.1)
+16.9% (8.80)
+Race and ethnicity
+Prop. NH, Whitea
+45.5% (32.1)
+61.2% (29.3)
+Prop. NH, Blacka
+19.1% (26.1)
+12.6% (20.4)
+Prop. NH, Asiana
+3.29% (7.03)
+5.25% (9.80)
+Prop. NH, AIANa
+3.50% (1.49)
+0.51% (2.78)
+Prop. NH, 2 or more racesa
+3.02% (3.31)
+3.16 (3.16)
+Prop. NH, other race
+0.33% (1.02)
+0.36% (1.10)
+Prop. Hispanic, White racea
+12.0% (16.1)
+7.97% (11.6)
+Prop. Hispanic, Black racea
+0.39% (1.11)
+0.35% (1.15)
+Prop. Hispanic, Asian race
+0.06% (0.29)
+0.07% (0.37)
+Prop. Hispanic, AIAN racea
+0.42% (1.28)
+0.22% (0.80)
+Prop. Hispanic, 2 or more racesa
+4.74% (6.85)
+3.47% (5.37)
+Prop. Hispanic, other racea
+7.32% (11.5)
+4.70% (8.80)
+Abbreviations: AIAN, American Indian or Alaskan Native; FPL, Federal Poverty Level; NH, non-Hispanic; Prop., proportion of tract population; SD, standard 
+deviation. 
+Source: Authors’ analysis of pharmacy address data, 2020 Decennial Census data, and 2021 5-year American Community Survey data. 
+aDenotes statistically significant difference of characteristic in pharmacy desert vs non-pharmacy desert tracts at P < .01. All P values are from a t test for 
+continuous variables or a chi-square test for categorical variables, all adjusted for multiple comparisons using the Benjamini-Hochberg correction.
+Health Affairs Scholar, 2024, 2(4), qxae035                                                                                                                                                        3
+
+===== PAGE 4 =====
+vs our analysis that found 7.62% of Washington adults were 
+in pharmacy deserts.19 An analysis of pharmacy deserts in the 
+30 largest metropolitan areas in the United States found that 
+32% of tracts were pharmacy deserts, while our study found 
+that 11.8% of urban tracts were pharmacy deserts.18 We be­
+lieve that using a 5-mile radius for tracts with less than 5000 
+people per square mile (suburban definition) is a key contribu­
+tor to this discrepancy, as is our study’s limitation of using lin­
+ear distance rather than road distance. The magnitude of the 
+population living in pharmacy deserts in our study is compar­
+able to that of people living in food deserts (similar in both 
+concept and definition): approximately 18.8 million people 
+(6.1% of the US population) live in census tracts that are 
+food deserts.35
+In terms of population characteristics, other published stud­
+ies of pharmacy deserts in smaller geographies have found 
+similar associations.20 For example, studies of pharmacy ac­
+cess in Shelby County, Tennessee, Chicago Illinois, and the 
+30 most populous US cities found that neighborhoods with 
+worse pharmacy access were associated with higher propor­
+tions of racial and ethnic minority groups.8,12,18 In Los 
+Angeles County, a clustering analysis identified 2 statistically 
+distinct types of pharmacy deserts: 1 type with higher popula­
+tion density, a younger population, and a higher proportion of 
+racial/ethnic minorities, and a second type with a lower popu­
+lation density and a higher proportion of non-Hispanic White 
+persons.10 The results of this national analysis align with those 
+findings from Los Angeles County.
+Implications
+These findings have implications for patient and population 
+health, policy solutions, and future research to understand 
+and address patient access to medications and pharmacy serv­
+ices. We note that, while many insurance plans provide their 
+enrollees with access to prescriptions via mail order, the focus 
+of this analysis is access to physical pharmacy locations that 
+provide many important health services including and beyond 
+dispensing medications. Implications of this study’s findings 
+regarding lack of access to pharmacy-based services are sum­
+marized in Table 3 and further described below.
+Implications for patient and population health
+At a broad level, these results highlight that many adults in the 
+United States do not have adequate access to pharmacies. This 
+Figure 1. Choropleth map of pharmacy deserts and pharmacy access at the census tract level in the United States in 2022. Maps of select urban areas are 
+available in Supplemental Figure A2-3. For more detail, an interactive Tableau version of this map is available at https://tinyurl.com/PharmacyDesertsMap2022. 
+Source: Authors’ analysis of pharmacy address data, 2020 Decennial Census data, and 2021 5-year American Community Survey data.
+Table 2. Characteristics of pharmacies located in pharmacy deserts.
+Pharmacy 
+desert 
+(n = 294)
+Not a pharmacy 
+desert 
+(n = 60 175)
+Pa
+Urbanicity of 
+pharmacy location
+Urban
+179 (60.9%)
+15 986 (26.6%)
+<.001
+Suburban
+8 (2.7%)
+26 922 (44.7%)
+Rural
+107 (36.4%)
+17 206 (28.6%)
+NA: no population
+0 (0%)
+61 (0.1%)
+Pharmacy ownership
+Independent
+121 (41.2%)
+22 010 (36.6%)
+<.001
+Chain
+165 (56.1%)
+37 371 (62.1%)
+Franchise
+3 (1.0%)
+659 (1.1%)
+Government
+5 (1.7%)
+135 (0.2%)
+Immunization services 
+available
+221 (75.2%)
+48 510 (80.6%)
+.051
+ADA accessible
+290 (98.6%)
+59 429 (98.8%)
+1.000
+Multidose packaging 
+available
+73 (24.8%)
+12 056 (20.0%)
+.087
+Emergency services 24 
+hours
+82 (27.9%)
+17 841 (29.6%)
+.621
+Walk-in clinic 
+available
+40 (13.6%)
+3923 (6.5%)
+<.001
+Compounding 
+pharmacy
+172 (58.5%)
+37 230 (61.9%)
+.335
+DME available
+219 (74.5%)
+46 742 (77.7%)
+.323
+Abbreviations: ADA, Americans with Disabilities Act; DME, durable 
+medical equipment; NA, not applicable. 
+Source: Authors’ analysis of pharmacy address data, 2020 Decennial Census 
+data, and 2021 5-year American Community Survey data. 
+aAll P values result from a t test for continuous variables and a chi-square test 
+for categorical variables, all adjusted for multiple comparisons using the 
+Benjamini-Hochberg correction.
+4                                                                                                                                                        Health Affairs Scholar, 2024, 2(4), qxae035
+
+===== PAGE 5 =====
+lack of access (1) signals important barriers in routine health 
+care, (2) weakens emergency and pandemic preparedness in­
+frastructure, and (3) raises health equity concerns.
+Access to pharmacies and the variety of services pharmacists 
+provide is an important means to protect and promote one’s 
+health. One cohort study found that, when neighborhood 
+pharmacies closed, patients who had previously been filling 
+their cardiovascular medication prescriptions in those stores 
+had a clinically and statistically significant decline in medica­
+tion adherence.36 Our results found that the most common 
+structure of a pharmacy desert is to have no pharmacies in 
+that neighborhood as opposed to inadequate access driven 
+by per capita pharmacy to population ratio—a dynamic that 
+poses a clear barrier for patients to access their medications 
+and pharmacy services. Our results further found that, in com­
+munities that do have pharmacies, a smaller proportion of 
+pharmacies in pharmacy deserts (compared with non-deserts) 
+offered health services such as administering immunizations, 
+selling durable medical equipment, and offering 24-hour 
+emergency services. Although these differences were not stat­
+istically significant in our study, past analyses have identified 
+statistically different service offerings in areas that are phar­
+macy deserts compared with non-deserts.13,33 Lack of access 
+to pharmacies puts pharmacy desert communities—and their 
+nearly 16 million residents—at a disadvantage for staying 
+healthy.
+Nationwide gaps in pharmacy accessibility are also note­
+worthy for emergency preparedness and response. The 
+COVID-19 pandemic is the most recent example of the import­
+ance of pharmacy infrastructure—not only for testing, vaccina­
+tions, and treatment access to mitigate health and economic 
+consequences of the pandemic but to enable continuity of 
+care for peoples’ prescription medications.7 In climate-related 
+and natural disasters, pharmacists remain trusted health pro­
+viders who are perceived as responsible for the continuity of 
+medication supply chains by both patients and other health 
+care providers,37,38 and may be well suited to take on roles 
+such as triaging evacuees, assessing vaccination needs, and pro­
+viding over-the-counter and prescription medications.39 People 
+living in pharmacy desert communities may be left behind in ac­
+cessing important emergency services.
+If left unaddressed, pharmacy deserts may contribute to 
+widening health disparities for populations living in these 
+areas. Our results indicate that, on average, pharmacy desert 
+residents already face many known barriers to accessing 
+health care, including lower income, lower educational level, 
+lower English-speaking ability, and lower health insurance 
+coverage. All of these barriers may layer on each other to 
+Table 3. Implications of study results for patient and population health, policy solutions, and future research.
+Key findings
+Implications
+Application to patient 
+and population 
+health
+• Nearly 16 million adults in the United States live in 
+pharmacy deserts
+• People living in pharmacy deserts already face many 
+known barriers to accessing health care including lower 
+educational level, lower self-reported English-speaking 
+ability, and lower insurance coverage
+• Pharmacy desert communities have a higher population 
+of racial and ethnic minorities as compared with 
+non-pharmacy deserts
+• Many adults in the United States do not have adequate 
+access to pharmacies, which (1) signals gaps in access to 
+important routine health care, (2) weakens emergency 
+and pandemic preparedness infrastructure, and (3) 
+raises health equity concerns.
+• Left unaddressed, pharmacy deserts may contribute to 
+widening health disparities for individuals living in 
+these areas
+Policies to improve 
+access to 
+pharmacies
+• Nearly 95% of pharmacy deserts have no pharmacies in 
+them at all
+• Pharmacy desert communities have a higher proportion 
+of their population with no insurance and with public 
+insurance compared with non-pharmacy desert 
+communities
+• Pharmacy deserts were overwhelmingly in 
+lower-income areas and in urban or rural areas (rather 
+than wealthier or suburban areas); evidence shows 
+pharmacies in these areas are more likely to close
+• Populations living in pharmacy deserts were more likely 
+to have public health insurance and be under the age of 
+65—2 characteristics that point to the inability of 
+state-level laws to adequately act through commercial 
+insurance plans to improve pharmacy access for patients 
+and reimbursements for pharmacy services
+• State and federal policies can halt the growth of 
+pharmacy deserts and address patient care in existing 
+ones by (1) preventing closures of existing pharmacies 
+especially in underserved areas, possibly including PBM 
+regulation and provider status recognition by CMS (2 
+issues that impact pharmacy revenue and viability), (2) 
+establishing or incentivizing new services access points 
+for patients similar to the HPSA incentives for primary 
+care, and (3) leveraging new technology and care 
+models such as telepharmacy, mobile clinics, and 
+expanded scopes of practice
+• New medicines, technologies, or policies that are 
+intended to be delivered or act through pharmacies to 
+improve patient health will have minimal effect in 
+pharmacy desert neighborhoods; thus, it is essential to 
+prioritize these areas in any policies which aim to 
+improve access to health care via pharmacy-based 
+services
+Future research on 
+pharmacy access
+• Inclusion of an income component in the pharmacy 
+definition substantially reduces the population who are 
+considered to be living in “pharmacy deserts,” as 
+opposed to if only geographic access was considered
+• Study has many limitations that could be improved 
+upon with more robust methods and data in future 
+research
+• The field of pharmacy-based services research would 
+benefit from a carefully considered consensus definition 
+on what a “pharmacy desert” is and how to 
+parameterize their locations for analysis, particularly 
+including the inclusion of an income component and 
+role of urbanicity and access radius definitions
+• The causes of pharmacy deserts and individual-level 
+health effects on patients should be explored in future 
+research
+Abbreviations: CMS, Centers for Medicare and Medicaid Services; HPSA, Health Professional Shortage Area; PBM, pharmacy benefit manager. 
+Source: Authors’ analysis of pharmacy address data, 2020 Decennial Census data, and 2021 5-year American Community Survey data.
+Health Affairs Scholar, 2024, 2(4), qxae035                                                                                                                                                        5
+
+===== PAGE 6 =====
+further limit patients’ abilities to reach accessible, appropriate, 
+affordable health care.40 Pharmacy desert communities also 
+have a higher population of racial and ethnic minorities as 
+compared with non-pharmacy deserts. For example, the pro­
+portion of population identifying as American Indian or 
+Alaskan Native is 7 times higher in pharmacy deserts com­
+pared with non-pharmacy deserts (3.5% vs 0.5%), and the 
+proportion of Black population is higher as well (19.1% vs 
+12.6%). The association between pharmacy locations today 
+and race-based exclusionary policies from decades ago, such 
+as redlining, has been established empirically,41 and the 
+propagation of health disparities for historically minoritized 
+groups will continue to propagate through the legacies of 
+structural racism and colonialism if deliberate steps are not 
+taken to close access gaps in these specific communities.42,43
+Implications for policy
+State and federal policies can halt the growth of pharmacy de­
+serts and address patient care in existing ones by (1) prevent­
+ing closures of existing pharmacies especially in underserved 
+areas,9 (2) establishing or incentivizing new service access 
+points for patients,44,45 and (3) leveraging new technology 
+and care models to reach all patients (including adoption of 
+tele-pharmacy, addressing staff shortages, using mobile clin­
+ics, and expanding scopes of practice).33,46-49 One important 
+factor in pharmacy closures is the lack of a sufficient level of 
+revenue. Pharmacies serving primarily low-income, publicly 
+insured, and uninsured populations are at increased risk of 
+closure, and independent pharmacies are more likely to close 
+than chain pharmacies.9 Legislative efforts to acknowledge 
+pharmacists as health care providers in Medicare,44,50,51 regu­
+late pharmacy benefit managers,52,53 and provide Health 
+Professional Shortage Area (HPSA)–like financial incentives 
+for pharmacies operating in underserved areas could all help 
+alleviate this financial pressure, particularly on pharmacies 
+serving medically underresourced communities. The most ef­
+fective policy solutions may take different forms for pharma­
+cies in urban areas vs rural areas and regionally, as the 
+logistics of reaching people in these areas differ greatly. 
+Federal-level legislation is likely to have a more meaningful 
+impact than state-level changes: the results of our study found 
+that populations in pharmacy deserts were more likely to have 
+public health insurance and be under the age of 65—2 charac­
+teristics that point to the inability of state-level laws to ad­
+equately act through only commercial insurance plan 
+regulations to improve pharmacy access for patients.
+We also found that the most common type of pharmacy des­
+ert were tracts with no pharmacies in them at all (94.5% of 
+pharmacy deserts). New medicines, technologies, or policies 
+that are intended to be delivered through pharmacies to im­
+prove patient health will undoubtedly have minimal availabil­
+ity and effect in pharmacy desert neighborhoods. Thus, it is 
+essential to consider the differential impact in these communi­
+ties of any policies that aim to improve access to health care via 
+pharmacy-based services.54
+Implications for future research
+Beyond addressing this study’s conceptual and methodologic­
+al limitations, there are several ways that future research can 
+extend this work. To inform ongoing policy discussions such 
+as provider status legislation, the relationship between 
+HPSAs and pharmacy deserts should be better defined. One 
+study found that, within urban areas in the United States, 
+the prevalence of pharmacy deserts was similar in Medically 
+Underserved Areas (MUAs) vs non-MUAs, indicating that na­
+tional measures of primary care access should not be presumed 
+to correlate directly with pharmacy access.18 If a better under­
+standing of these differences is to be accomplished, consensus 
+in the field about an appropriate definition for low pharmacy 
+access must first be achieved, including the inclusion of any in­
+come components and delineating access radii that are based 
+on empirical evidence relating geographic accessibility to real- 
+world patterns of pharmacy use and acceptability to patients.
+Once pharmacy deserts are defined, evaluations of interven­
+tions and of patient health implications can take place. For ex­
+ample, an evaluation of any negative effects at the individual 
+patient level of accessing medications in pharmacy deserts vs 
+non-pharmacy deserts could help policymakers understand 
+the magnitude and implications of these access concerns, 
+and evaluations of the effects of varying state-level pharmacy 
+policies (eg, regulation of pharmacy benefit managers, pro­
+vider status, telemedicine, etc) can be contextualized. More ro­
+bust statistical and causal inference methodologies can be 
+applied to determine root causes of pharmacy deserts and 
+may reveal potential solutions to prevent or reduce the loss 
+of community pharmacies, and the vital services they provide, 
+in the future.
+Limitations
+The data underlying this analysis have several limitations. 
+These pharmacy locations are as of April 2022 and may 
+soon be outdated. In 2022 and 2023, the 3 largest pharmacy 
+chains (CVS, Walgreens, and Rite Aid) all announced signifi­
+cant planned store closures numbering over 1500 total 
+stores.55 Previous research has indicated that pharmacy clo­
+sures are more likely to happen in low-income areas in both 
+urban and rural settings,9 which the results from this analysis 
+suggest already face higher likelihoods of being a pharmacy 
+desert. These trends suggest a need to update this map in the 
+coming years. The results presented here should thus be con­
+sidered an underestimate of the gaps in pharmacy access.
+These results are also limited by several assumptions in par­
+ameterizing pharmacy deserts, particularly in defining urban­
+icity and selecting access thresholds. Our use of population 
+density as a proxy for urban status presents several challenges, 
+we apply linear distance rather than travel time, and empirical 
+data justifying the specific mileage of the access radii are lim­
+ited. However, we note that minimum pharmacy benefit re­
+quirements from CMS also use population density to define 
+urban, suburban, and rural areas and corresponding accept­
+able radii.21,56 Further limitations to this study can be found 
+in Supplement A1.
+Finally, there are contextual limitations to consider when 
+interpreting these results. This analysis assumes that any pa­
+tient can go to any pharmacy, but, in reality, insurance net­
+works determine a select list of pharmacies for their 
+enrollees. For any given individual, a map of pharmacies 
+that accept their specific insurance would be much sparser. 
+For example, in Washington State, pharmacies in rural areas 
+were less likely to contract with Medicaid, heightening the ex­
+isting access disparities there.17 In addition to insurance cover­
+age, a long list of nonspatial factors feed into the concept of 
+“access,” including language spoken, financial accessibility, 
+hours and appointments, ADA (Americans with Disabilities 
+6                                                                                                                                                        Health Affairs Scholar, 2024, 2(4), qxae035
+
+===== PAGE 7 =====
+Act) accessibility, quality of care, and more.57 These factors 
+are well summarized by Levesque et al40 in their description 
+of the interface of health systems and populations. The results 
+of our study indicate that populations in pharmacy deserts 
+have a higher proportion of individuals who speak English 
+“not well” or “not at all,” have lower median incomes, and 
+have more of their community living below the Federal 
+Poverty Level. While describing access barriers comprehen­
+sively is outside the scope of this analysis, a spectrum of chal­
+lenges must be considered by policymakers seeking to improve 
+patient access to pharmacies.
+Strengths of the study
+This analysis also has several strengths. To our knowledge, 
+this study represents the first published estimates of locations 
+and characteristics of pharmacy desert locations at the local 
+level throughout the United States applying the most widely 
+used definition of “pharmacy desert.” We use the precise loca­
+tion of all licensed community pharmacies and population 
+count data from the 2020 Decennial Census—the most com­
+prehensive population estimate available. We also derive pro­
+portions of the population living inside vs outside the radius of 
+a pharmacy using areal interpolation with the most granular 
+geographic unit possible—all 8.1 million census blocks—and 
+incorporate suburban locations as a category beyond an ur­
+ban/rural binary. Last, we include an interactive map of results 
+and all source codes alongside our publication to facilitate fur­
+ther inquiry on the definition and characteristics of pharmacy 
+deserts. Despite the limitations described above, these results 
+summarize a comprehensive national estimate of pharmacy 
+desert locations and characteristics.
+Conclusion
+In this first national estimate of pharmacy desert locations and 
+characteristics, 15.8 million people in the United States are living 
+in areas without adequate access to pharmacies. These commu­
+nities span all 50 states and the District of Columbia and occur in 
+urban, suburban, and rural areas. Populations residing in phar­
+macy deserts are more likely to face multiple known social, pol­
+itical, and demographic barriers to accessing health, including 
+lower educational level, lower health insurance coverage, a high­
+er proportion identifying as racial or ethnic minorities, a higher 
+proportion with difficulty speaking English, and a higher pro­
+portion with ambulatory disabilities. These findings raise im­
+portant concerns about pharmacy services and medication 
+access in these specific communities throughout the United 
+States. Future research and policy solutions should consider 
+pharmacy desert locations in evaluating pharmacy-based health 
+services and improvements to medication access.
+Acknowledgments
+The authors thank the Biomedical Regulatory Affairs (BRAMS) 
+Program; Comparative Health Outcomes, Policy, and 
+Economics (CHOICE) Institute; and Institute for Innovative 
+Pharmacy Practice (I2P2) Programs within the Department of 
+Pharmacy at the University of Washington for partial funding 
+contributions to purchase data supporting this analysis.
+Supplementary material
+Supplementary material is available at Health Affairs Scholar 
+online.
+Funding
+Partial support for this research came from a Eunice Kennedy 
+Shriver National Institute of Child Health and Human 
+Development research infrastructure grant (P2C HD042828) 
+to the Center for Studies in Demography & Ecology at the 
+University of Washington. The content is solely the responsi­
+bility of the authors and does not necessarily represent the of­
+ficial views of the National Institutes of Health.
+Conflicts of interest
+Please see ICMJE form(s) for author conflicts of interest. These 
+have been provided as supplementary materials.
+Notes
+1.
+Qato DM, Zenk S, Wilder J, Harrington R, Gaskin D, Alexander 
+GC. The availability of pharmacies in the United States: 2007– 
+2015. PLoS One. 2017;12(8):e0183172. https://doi.org/10.1371/ 
+journal.pone.0183172
+2.
+Berenbrok LA, Tang S, Gabriel N, et al. Access to community phar­
+macies: a nation-wide geographic information systems cross- 
+sectional analysis. J Am Pharm Assoc. 2022;62(6):1816-1822.e2. 
+https://doi.org/10.1016/J.JAPH.2022.07.003
+3.
+Hales CM, Servais J, Martin CB, Kohen D. Prescription drug use 
+among adults aged 40–79 in the United States and Canada Key findings 
+data from the National Health and Nutrition Examination Survey and 
+the Canadian Health Measures Survey. NCHS Data Brief. US 
+Department of Health and Human Services; 2019:347. Accessed 
+May 15, 2023. https://www.cdc.gov/nchs/products/index.htm.
+4.
+Shen AK, Peterson A. The pharmacist and pharmacy have evolved 
+to become more than the corner drugstore: a win for vaccinations 
+and public health. Hum Vaccin Immunother. 2019;16(5): 
+1178-1180. https://doi.org/10.1080/21645515.2019.1660119
+5.
+Bragazzi NL, Mansour M, Bonsignore A, Ciliberti R. The role of 
+hospital and community pharmacists in the management of 
+COVID-19: towards an expanded definition of the roles, responsi­
+bilities, and duties of the pharmacist. Pharmacy. 2020;8(3):140. 
+https://doi.org/10.3390/pharmacy8030140
+6.
+Nguyen E, Walker K, Adams JL, Wadsworth T, Robinson R. 
+Reimbursement for pharmacist-provided health care services: a 
+multistate review. J Am Pharm Assoc. 2021;61(1):27-32. https:// 
+doi.org/10.1016/J.JAPH.2020.09.009
+7.
+Grabenstein JD. Essential services: quantifying the contributions of 
+America’s pharmacists in COVID-19 clinical interventions. J Am 
+Pharm Assoc. 2022;62(6):1929-1945. E1. https://doi.org/10.1016/ 
+J.JAPH.2022.08.010
+8.
+Qato DM, Daviglus ML, Wilder J, Lee T, Qato D, Lambert B. 
+‘Pharmacy deserts’ are prevalent in Chicago’s predominantly mi­
+nority communities, raising medication access concerns. Health 
+Aff (Millwood). 2014;33(11):1958-1965. https://doi.org/10.1377/ 
+hlthaff.2013.1397
+9.
+Guadamuz JS, Alexander GC, Zenk SN, Qato DM. Assessment of 
+pharmacy closures in the United States from 2009 through 2015. 
+JAMA Intern Med. 2020;180(1):157-160. https://doi.org/10.1001/ 
+jamainternmed.2019.4588
+10. Wisseh C, Hildreth K, Marshall J, Tanner A, Bazargan M, 
+Robinson P. Social determinants of pharmacy deserts in Los 
+Angeles County. J Racial Ethn Health Disparities. 2021;8(6): 
+1424-1434. https://doi.org/10.1007/s40615-020-00904-6
+11. Guadamuz JS, Alexander GC, Zenk SN, Kanter GP, Wilder JR, 
+Qato DM. Access to pharmacies and pharmacy services in 
+New York City, Los Angeles, Chicago, and Houston, 2015–2020. 
+J Am Pharm Assoc. 2021;61(6):e32-e41. https://doi.org/10.1016/ 
+J.JAPH.2021.07.009
+12. Chisholm-Burns MA, Spivey CA, Gatwood J, Wiss A, Hohmeier K, 
+Erickson SR. Evaluation of racial and socioeconomic disparities in 
+medication pricing and pharmacy access and services. Am J 
+Health Affairs Scholar, 2024, 2(4), qxae035                                                                                                                                                        7
+
+===== PAGE 8 =====
+Health-Syst Pharm. 2017;74(10):653-669. https://doi.org/10.2146/ 
+AJHP150872
+13. Pednekar P, Peterson A. Mapping pharmacy deserts and determin­
+ing accessibility to community pharmacy services for elderly en­
+rolled in a State Pharmaceutical Assistance Program. PLoS One. 
+2018;13(6):e0198173. 
+https://doi.org/10.1371/journal.pone.019 
+8173
+14. Amstislavski P, Matthews A, Sheffield S, Maroko AR, Weedon J. 
+Medication deserts: survey of neighborhood disparities in availabil­
+ity of prescription medications. Int J Health Geogr. 2012;11(1):48. 
+https://doi.org/10.1186/1476-072X-11-48
+15. Neuner JM, Zhou Y, Fergestrom N, et al. Pharmacy deserts and pa­
+tients with breast cancer receipt of influenza vaccines. J Am Pharm 
+Assoc. 2021;61(6):e25-e31. https://doi.org/10.1016/J.JAPH.2021. 
+07.006
+16. Constantin J, Ullrich F, Mueller KJ. Rural and urban pharmacy 
+presence-pharmacy deserts. Accessed August 30, 2022. http:// 
+www.public-health.uiowa.edu/ruprihttp://www.public-health. 
+uiowa.edu/rupri/
+17. Graves JM, Abshire DA, Undeberg M, Forman L, Amiri S. 
+Rural-urban disparities in access to Medicaid-contracted pharma­
+cies in Washington State, 2017. Prev Chronic Dis. 2020;17:E92. 
+https://doi.org/10.5888/pcd17.200066
+18. Guadamuz JS, Wilder JR, Mouslim MC, Zenk SN, Alexander GC, 
+Qato DM. Fewer pharmacies in Black and Hispanic/Latino neigh­
+borhoods compared with white or diverse neighborhoods, 2007– 
+15. Health Aff (Millwood). 2021;40(5):802-811. https://doi.org/ 
+10.1377/HLTHAFF.2020.01699
+19. Wittenauer R, Shah P, Bacci JL, Stergachis A. Pharmacy deserts and 
+COVID-19 risk at the census tract level in the state of Washington. 
+Vaccine X. 2022;12:100227. https://doi.org/10.1016/J.JVACX. 
+2022.100227
+20. Fernandes BD, Foppa AA, Almeida PHRF, Lakhani A, de 
+Mendonça Lima TM. Application and utility of geographic infor­
+mation systems in pharmacy specific health research: a scoping re­
+view. Res Social Admin Pharm. 2022;18(8):3263-3271. https:// 
+doi.org/10.1016/j.sapharm.2021.11.004
+21. Sharareh N, Zheutlin AR, Qato DM, Guadamuz J, Bress A, Vos 
+RO. Access to community pharmacies based on drive time and by 
+rurality across the contiguous United States. J Am Pharm Assoc. 
+2024;64(2):476-482. https://doi.org/10.1016/j.japh.2024.01.004
+22. National Council for Prescription Drug Programs. DataQ version 
+3.1. Accessed April, 2022. https://dataq.ncpdp.org/.
+23. US Census Bureau. 2020 Decennial Census. US Department of 
+Commerce; 2021.
+24. US Census Bureau. 2017–2021 5-Year American Community 
+Survey. US Department of Commerce; 2022.
+25. Airgood-Obrycki W, Rieger S. Defining suburbs: how definitions 
+shape the suburban landscape. 2019. Accessed November 3, 
+2023. www.jchs.harvard.edu.
+26. Kolko J. How suburban are big American cities? FiveThirtyEight. 
+Published online May 21, 2015. Accessed November 3, 2023. 
+https://fivethirtyeight.com/features/how-suburban-are-big-american- 
+cities/.
+27. Liu XH, Martinez A. Areal interpolation using parcel and census 
+data in highly developed urban environments. ISPRS Int J 
+Geo-Inform. 2019;8(7):302. https://doi.org/10.3390/IJGI8070302
+28. Hommel G. A stagewise rejective multiple test procedure based on a 
+modified Bonferroni test. Biometrika. 1988;75(2):383-386. https:// 
+doi.org/10.1093/BIOMET/75.2.383
+29. Sarkar SK, Chang C-K, Chang C-K. The Simes method for multiple 
+hypothesis testing with positively dependent test statistics. J Am Stat 
+Assoc. 1997;92(440):1601-1608. https://doi.org/10.1080/0162 
+1459.1997.10473682
+30. Chen S-Y, Feng Z, Yi X. A general introduction to adjustment for 
+multiple comparisons. J Thorac Dis. 2017;9(6):1725-1729. 
+https://doi.org/10.21037/jtd.2017.05.34
+31. Tableau Software, LLC. Seattle, USA. Tableau Desktop. version 
+2023.2.
+32. R Foundation for Statistical Computing. Vienna, Austria. R Studio. 
+version 4.2.2.
+33. Urick BY, Adams JK, Bruce MR. State telepharmacy policies and 
+pharmacy deserts. JAMA Netw Open. 2023;6(8):e2328810. 
+https://doi.org/10.1001/jamanetworkopen.2023.28810
+34. Berenbrok LA, Tang S, Coley KC, University of Pittsburgh and West 
+Health Policy Center, et al. Access to potential COVID-19 vaccine 
+administration facilities: a geographic information systems analysis. 
+Updated February 2, 2021. Accessed February 3, 2022. https:// 
+s8637.pcdn.co/wp-content/uploads/2021/02/Access-to-Potential-CO 
+VID-19-Vaccine-Administration-Facilities-2-2-2021.pdf.
+35. Rhone 
+A, 
+Williams 
+R, 
+Dicken 
+C. 
+Low-income 
+and 
+low-foodstore-access census tracts, 2015–19. EIB-236. Published 
+online 2022. Accessed November 2, 2023. www.ers.usda.gov
+36. Qato DM, Alexander GC, Chakraborty A, Guadamuz JS, Jackson 
+JW. Association between pharmacy closures and adherence to car­
+diovascular medications among older US adults. JAMA Netw 
+Open. 2019;2(4):192606. https://doi.org/10.1001/jamanetwork 
+open.2019.2606
+37. Sahota H, Guzman S, Tordera L, Chan M, Cocohoba J, Saberi P. 
+Pharmacy deserts and pharmacies’ roles post-extreme weather 
+and climate events in the United States: a scoping review. J Prim 
+Care Community Health. 2023;14:21501319231186497. https:// 
+doi.org/10.1177/21501319231186497
+38. Jiménez-Mangual BC, Cuevas-Acevedo DM, Quiles-Alves N, 
+Rodríguez-Nazario I, Melin KR. Description of patients medica­
+tions needs and the community pharmacist’s role in Puerto Rico fol­
+lowing a natural disaster. J Prim Care Community Health. 2019;10: 
+2150132719842701. https://doi.org/10.1177/2150132719842701
+39. Melin K, Rodríguez-Díaz CE. Community pharmacy response in 
+the aftermath of natural disasters: time-sensitive opportunity for re­
+search and evaluation. J Prim Care Community Health. 2018;9: 
+2150132718813494. https://doi.org/10.1177/2150132718813494
+40. Levesque J-F, Harris MF, Russell G. Patient-centred access to health 
+care: conceptualising access at the interface of health systems and 
+populations. Int J Equity Health. 2013;1218. https://doi.org/10. 
+1186/1475-9276-12-18/FIGURES/2
+41. Appolon G, Tang S, Gabriel N, et al. Association between redlining 
+and spatial access to pharmacies. JAMA Netw Open. 2023;6(8): 
+e2327315. https://doi.org/10.1001/JAMANETWORKOPEN.2023. 
+27315
+42. Yearby R, Clark B, Figueroa JF. Structural racism in historical and 
+modern US health care policy. Health Aff (Millwood). 2022;41(2): 
+187-194. https://doi.org/10.1377/hlthaff.2021.01466
+43. Phelan JC, Link BG. Is racism a fundamental cause of inequalities in 
+health? Annu Rev Sociol. 2015;41(1):311-330. https://doi.org/10. 
+1146/annurev-soc-073014-112305
+44. Murphy EM, West L, Jindal N. Pharmacist provider status: geopro­
+cessing analysis of pharmacy locations, medically underserved 
+areas, populations, and health professional shortage areas. J Am 
+Pharm Assoc. 2021;61(6):651-660, e1. https://doi.org/10.1016/J. 
+JAPH.2021.08.021
+45. Khoury S, Leganza JM, Masucci A. Health professional shortage 
+areas and physician location decisions. Am J Health Econ. 2023. 
+https://doi.org/10.1086/729117
+46. Tak CR, Gunning K, Kim J, et al. The effect of a prescription order 
+requirement for pharmacist-administered vaccination on herpes 
+zoster vaccination rates. Vaccine. 2019;37(4):631-636. https://doi. 
+org/10.1016/J.VACCINE.2018.12.003
+47. Wootton J. Telepharmacy brings meds to rural Idaho Town. 
+Published January 2017. Accessed October 23, 2021. https://www. 
+hmpgloballearningnetwork.com/site/ihe/article/telepharmacy-brings- 
+meds-rural-idaho-town
+48. Maine LL, Knapp KK, Scheckelhoff DJ. Pharmacists and techni­
+cians can enhance patient care even more once national policies, 
+practices, and priorities are aligned. Health Aff (Millwood). 
+2017;32(11):1956-1962. https://doi.org/10.1377/HLTHAFF.201 
+3.0529
+8                                                                                                                                                        Health Affairs Scholar, 2024, 2(4), qxae035
+
+===== PAGE 9 =====
+49. Newlon JL, Clabaugh M, Illingworth Plake KS. Policy solutions to 
+address community pharmacy working conditions. J Am Pharm 
+Assoc. 2021;61(4):450-461. https://doi.org/10.1016/j.japh.2021. 
+02.011
+50. Bernstein I, Murphy EM. Accomplishing provider status: getting 
+pharmacists paid for their patient care services. Pharm Today. 
+2022;28(6):41-43. https://doi.org/10.1016/j.ptdy.2022.05.015
+51. Pharmacy and Medically Underserved Areas Enhancement Act. HR 
+2759, 117th Congress (2021–2022). Accessed October 23, 2021. 
+https://www.congress.gov/bill/117th-congress/house-bill/2759/text
+52. Mattingly TJ, Lewis M, Socal MP, Bai G. State-level policy efforts 
+to regulate pharmacy benefit managers (PBMs). Res Social Admin 
+Pharm. 
+2022;18(11):3995-4002. 
+https://doi.org/10.1016/J. 
+SAPHARM.2022.07.045
+53. Comer James. Comer launches investigation into pharmacy benefit 
+managers’ role in rising health care costs. House Committee on 
+Oversight and Accountability. 2023. Accessed May 14, 2023. 
+https://oversight.house.gov/release/comer-launches-investigation-into 
+-pharmacy-benefit-managers-role-in-rising-health-care-costs%EF%B 
+F%BC/.
+54. Phelan JC, Link BG, Tehranifar P. Social conditions as fundamental 
+causes of health inequalities: theory, evidence, and policy implica­
+tions. J Health Soc Behav. 2010;51:S28-S40. https://doi.org/10. 
+1177/0022146510383498
+55. Gregg A, Peiser J. Drugstore closures are leaving millions without 
+easy access to a pharmacy. The Washington Post. October 22, 
+2023. Accessed November, 2023. https://www.washingtonpost. 
+com/business/2023/10/22/drugstore-close-pharmacy-deserts/.
+56. Centers for Medicare and Medicaid Services. Prescription drug 
+benefit manual 5: benefits and beneficiary protections. 2011. 
+Accessed November 2, 2023. https://www.cms.gov/medicare/ 
+prescription-drug-coverage/prescriptiondrugcovcontra/downloads/ 
+memopdbmanualchapter5_093011.pdf
+57. Ying X, Kahn P, Mathis WS. Pharmacy deserts: more than where 
+pharmacies are. J Am Pharm Assoc (2003). 2022;62(6):1875-1879. 
+https://doi.org/10.1016/J.JAPH.2022.06.016
+Health Affairs Scholar, 2024, 2(4), qxae035                                                                                                                                                        9

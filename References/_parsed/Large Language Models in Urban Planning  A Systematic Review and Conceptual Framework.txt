@@ -1,0 +1,2356 @@
+
+===== PAGE 1 =====
+Journal of Urban Technology
+ISSN: 1063-0732 (Print) 1466-1853 (Online) Journal homepage: www.tandfonline.com/journals/cjut20
+Large Language Models in Urban Planning: A
+Systematic Review and Conceptual Framework
+Ke Liu, Tan Yigitcanlar, Rashid Mehmood, Juan Corchado & Xinyu Fu
+To cite this article: Ke Liu, Tan Yigitcanlar, Rashid Mehmood, Juan Corchado & Xinyu Fu (10
+Nov 2025): Large Language Models in Urban Planning: A Systematic Review and Conceptual
+Framework, Journal of Urban Technology, DOI: 10.1080/10630732.2025.2556551
+To link to this article:  https://doi.org/10.1080/10630732.2025.2556551
+© 2025 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group
+View supplementary material 
+Published online: 10 Nov 2025.
+Submit your article to this journal 
+Article views: 3811
+View related articles 
+View Crossmark data
+Citing articles: 6 View citing articles 
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=cjut20
+
+===== PAGE 2 =====
+Large Language Models in Urban Planning: A Systematic 
+Review and Conceptual Framework
+Ke Liua, Tan Yigitcanlar 
+a, Rashid Mehmoodb, Juan Corchadoc, and Xinyu Fud
+aQUT Urban AI Hub, Queensland University of Technology, Brisbane, Australia; bIslamic University of 
+Madinah, Saudi Arabia; cBISITE Research Group, University of Salamanca, Spain; dTexas A&M University, 
+College Station, USA
+ABSTRACT  
+The rapid advancement of large language models (LLMs) has 
+sparked growing interest in their potential applications within 
+urban planning. These models offer novel capabilities in natural 
+language processing tasks, potentially providing advanced 
+support across various aspects of urban planning. Despite the 
+promises, little is known about how and to what extent LLMs have 
+been applied in the planning literature. This study addresses this 
+gap by conducting a comprehensive literature review using the 
+Preferred Reporting Items for Systematic Reviews and Meta- 
+Analyses (PRISMA) methodology. The review depicts five key 
+domains where LLMs are being applied in urban planning: (a) 
+planning and management; (b) public services and participation; 
+(c) 
+transportation 
+and 
+urban 
+mobility; 
+(d) 
+environmental 
+monitoring and sustainability; and (e) urban design and 
+architecture. Additionally, the review identifies four essential 
+characteristics that LLMs should possess to be effective in urban 
+planning: (a) professionalism; (b) inclusivity; (c) trustworthiness; and 
+(e) convenience. Considering the findings, a conceptual framework 
+is developed that illustrates how these characteristics enhance the 
+flexibility and effectiveness of LLMs in supporting urban planning 
+tasks. This framework offers a theoretical foundation for urban 
+planners to effectively integrate LLMs into practice and provides a 
+roadmap for future research and technological innovations in the 
+application of LLMs within urban environments.
+KEYWORDS  
+large language models 
+(LLM); generative artificial 
+intelligence (AI); predictive 
+analytics; urban planning; 
+smart cities
+Introduction and Background
+Urban planning practice and research have long been shaped by evolving technological 
+paradigms and conceptual frameworks, reflecting cyclical waves of technological inno­
+vation over decades (Yigitcanlar et al., 2025). In recent years, the integration of artificial 
+intelligence (AI) into urban planning has emerged as an important research frontier, 
+© 2025 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group 
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License 
+(http://creativecommons.org/licenses/by-nc-nd/4.0/), which permits non-commercial re-use, distribution, and reproduction in any 
+medium, provided the original work is properly cited, and is not altered, transformed, or built upon in any way. The terms on which 
+this article has been published allow the posting of the Accepted Manuscript in a repository by the author(s) or with their consent. 
+CONTACT  Tan Yigitcanlar 
+tan.yigitcanlar@qut.edu.au, QUT Urban AI Hub, 
+School of Architecture and Built 
+Environment, Queensland University of Technology, 2 George Street, Brisbane, QLD 4000, Australia.
+Supplemental data for this article can be accessed online at https://doi.org/10.1080/10630732.2025.2556551
+JOURNAL OF URBAN TECHNOLOGY 
+https://doi.org/10.1080/10630732.2025.2556551
+
+===== PAGE 3 =====
+reflecting broader shifts in smart city development, governance practices, and public 
+sector innovation (Yigitcanlar et al., 2022, 2023, 2024).
+Urban planning, which is defined as a systematic process of thinking through commu­
+nity issues, evaluating alternative courses of action, and selecting and implementing sol­
+utions that promote health, safety, economic well-being, and environmental quality 
+(Levy et al., 2024), has historically evolved in response to technological innovations. 
+From the introduction of geographic information systems (GIS) in the 1960s (Goodchild, 
+2023) to the emergence of participatory planning technologies in the digital era (Foth, 
+2011), the discipline has continuously integrated new tools to address increasingly 
+complex urban challenges.
+Recent studies have documented LLM applications across various urban planning 
+domains. In strategic planning, LLMs have been employed for policy document analysis, 
+trend identification, and scenario development (Wang, Pang et al., 2024; Li, Xia et al., 
+2024). Transportation planning applications include traffic pattern analysis, public 
+transit optimization, and mobility demand forecasting (Zhang, Fu et al., 2024; Tian 
+et al., 2023). Environmental planning has seen LLM applications in sustainability assess­
+ment, climate change adaptation planning, and environmental impact analysis (Hao 
+et al., 2024; Chen, Yao et al., 2024). Public participation represents another significant 
+application area, where LLMs facilitate multilingual community engagement, automate 
+feedback analysis, and support inclusive planning processes (Fu et al., 2024; Zhou, Lin 
+et al., 2024). Urban design applications include spatial layout optimization, regulatory 
+compliance checking, and design alternative generation (Liang et al., 2024; Zhang, 
+Xiang et al., 2024).
+These emerging applications reflect contemporary urban planning’s evolution across 
+multiple interconnected domains, such as strategic management, public engagement, 
+transportation systems, environmental sustainability, and urban design, as discussed in 
+diverse scholarly works (Campbell, 2013; Hall, 2014; Alexander, 2016). Each domain pre­
+sents unique analytical challenges requiring sophisticated data processing capabilities, 
+stakeholder coordination, and long-term strategic thinking that have traditionally 
+relied on human expertise, institutional knowledge, and established planning method­
+ologies (Healey, 2006; Allmendinger, 2017).
+The application of digital technologies in urban contexts has undergone significant 
+conceptual and practical evolution over the past two decades. The initial smart cities 
+movement, emerging in the early 2000s, focused primarily on optimizing urban 
+systems through Internet of Things (IoT) technologies, sensor networks, and data ana­
+lytics platforms (Hollands, 2008; Kitchin, 2014). These approaches emphasized 
+efficiency, predictability, and centralized control, reinforcing what Vanolo (2014) 
+describes as a disciplinary strategy for governing cities through data-driven decision 
+making.
+Nevertheless, recent scholarship has identified significant limitations in traditional 
+smart city approaches, particularly their technocratic orientation, limited citizen engage­
+ment, and tendency toward technological determinism (Cardullo and Kitchin, 2019). 
+These critiques have contributed to the emergence of what several scholars term “AI 
+urbanism” (Cugurullo, 2020; Caprotti et al., 2024), representing a paradigmatic shift 
+from automation-focused smart cities toward more autonomous, adaptive urban 
+systems.
+2 
+K. LIU ET AL.
+
+===== PAGE 4 =====
+AI urbanism differs from smart urbanism in several key aspects. While smart cities 
+emphasize real-time data processing and system optimization, AI urbanism introduces 
+autonomous decision-making capabilities that can operate with varying degrees of 
+human oversight (Milakis et al., 2017; Batty, 2018; Cugurullo, 2020). This transition illus­
+trates a shift from using digital technologies as tools for optimization toward embedding 
+autonomous, learning systems into urban governance (Batty, 2018; Cugurullo, 2020).
+Recent research has characterized this evolution through multiple theoretical lenses. 
+Urban political economists examine how AI urbanism reproduces or challenges existing 
+power structures in city governance (Leszczynski, 2020). Urban geographers investigate 
+the spatial implications of AI deployment, particularly regarding accessibility, equity, and 
+spatial justice (Safransky, 2019; Fields, 2022). Meanwhile, urban planning scholars focus 
+on the professional and methodological implications of integrating AI tools into plan­
+ning practice (Qian et al., 2023; He et al., 2025).
+Within this broader context of AI urbanism, large language models (LLM) represent a 
+distinct category of urban AI. Unlike earlier AI applications that focused primarily on 
+numerical data processing or image recognition, LLMs excel in natural language under­
+standing, text generation, and complex reasoning tasks that closely align with traditional 
+planning activities (Zhang, Fu et al., 2024; Chen, Yao et al., 2024). Their ability to process 
+extensive textual information, synthesize diverse data sources, and generate human-read­
+able outputs positions them as potentially transformative tools for urban planning 
+practice.
+LLMs’ training on vast corpora of text enables them to draw upon extensive knowl­
+edge bases spanning multiple disciplines relevant to urban planning, including econ­
+omics, environmental science, transportation engineering, and social policy (Brown 
+et al., 2020; Chowdhery et al., 2023). This interdisciplinary knowledge integration 
+capacity aligns well with urban planning’s inherently cross-sectoral nature and its 
+requirement for synthesizing insights from multiple domains of expertise. Additionally, 
+their technical capabilities—including proficiency in multilingual processing, capacity 
+for handling incomplete information, and ability to generate contextually appropriate 
+responses—address several longstanding challenges in planning practice, such as synthe­
+sizing information from multiple sources, engaging diverse stakeholders, and communi­
+cating complex concepts to broad audiences (Forester, 1999; Healey, 2006).
+Nonetheless, these applications also reveal significant challenges that require careful 
+consideration. Technical limitations include issues of accuracy, bias, and reliability 
+when processing complex urban data (Li, Haider et al., 2024; Wang and Zhong, 2024). 
+Methodological challenges involve questions of appropriate integration with existing 
+planning workflows, quality control mechanisms, and professional accountability 
+(Cugurullo and Xu, 2024). Ethical considerations encompass concerns about algorithmic 
+bias, democratic participation, and the potential displacement of human judgment in 
+critical planning decisions (Bozkir et al., 2024; Jiao et al., 2024).
+Despite growing interest in LLM applications within urban planning, current research 
+remains fragmented and lacks a comprehensive theoretical framework for understanding 
+how these technologies can be effectively integrated into planning practice. Most existing 
+studies focus on specific technical applications without addressing broader questions of 
+professional integration, methodological appropriateness, or long-term implications for 
+planning practice and democratic governance.
+JOURNAL OF URBAN TECHNOLOGY 
+3
+
+===== PAGE 5 =====
+This fragmentation reflects what Palmini and Cugurullo (2023) and Markus et al. 
+(2025) identify as broader challenges in urban AI research: the field’s rapid technological 
+development has outpaced theoretical and methodological reflection, resulting in appli­
+cation-driven research that lacks sufficient critical analysis of fundamental assumptions 
+and implications. Furthermore, the interdisciplinary nature of both urban planning and 
+AI development has led to research efforts that often operate within disciplinary silos, 
+limiting opportunities for comprehensive understanding (Palmini and Cugurullo, 
+2023; Markus et al., 2025).
+The present study addresses this research gap by developing a systematic understand­
+ing of LLM applications in urban planning through comprehensive literature review and 
+conceptual framework development. Building on established traditions in planning 
+theory that emphasize the importance of reflective practice and communicative ration­
+ality (Healey, 2006; Allmendinger, 2017), this research seeks to provide both practical 
+guidance for LLM integration and critical analysis of broader implications for planning 
+practice.
+Specifically, this research contributes to emerging scholarship on AI urbanism by 
+focusing on the particular characteristics and requirements of LLMs in urban planning 
+contexts, developing a conceptual framework that addresses both technical capabilities 
+and professional considerations, and providing recommendations for responsible inte­
+gration of these technologies into planning practice.
+This systematic review is guided by three interrelated research questions that address 
+both technical and theoretical dimensions of LLM integration in urban planning: 
+. What are the existing applications of LLMs in urban planning literature?
+. What key characteristics should LLMs possess to effectively address the complex chal­
+lenges inherent in urban planning practice?
+. How can a conceptual framework be developed to guide the application and advance­
+ment of LLMs in urban planning research and practice?
+The study employs a systematic literature review methodology following the Preferred 
+Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines to 
+ensure comprehensive coverage and methodological rigor. The analysis synthesizes 
+findings across multiple dimensions, including technical capabilities, application 
+domains, professional considerations, and broader implications for planning theory 
+and practice.
+Research Design
+This research follows the PRISMA protocol to ensure the systematicity and transparency 
+of the literature review. The PRISMA protocol provides a clear framework for database 
+searches, selection of relevant literature, and information synthesis, thereby ensuring the 
+comprehensiveness and reproducibility of the research process. The methodology of this 
+review encompasses formulating keywords, execution of a systematic search, application 
+of inclusion and exclusion criteria, literature screening, and analysis and synthesis of the 
+research data.
+4 
+K. LIU ET AL.
+
+===== PAGE 6 =====
+To comprehensively explore the application of LLMs in urban planning, this research 
+developed a set of keywords designed to cover relevant research areas. Based on the 
+research questions, the keywords were categorized into two groups: topic-related 
+terms and method-related terms. 
+▪ Topic-related terms: These were used to retrieve studies related to urban planning, 
+including urban, city, town, and regional planning.
+▪ Method-related terms: These were used to retrieve studies related to LLMs, including 
+the generative per-trained transformer (GPT), LLM.
+Each keyword string variant was adjusted according to the search functionalities of 
+different databases to ensure the retrieval of the most relevant and consistent results. 
+Given that the application of LLMs in urban planning is still in its early stages, this 
+search did not set a publication date range to avoid omitting significant early literature.
+The literature search utilized Scopus and Web of Science (WoS) databases. To further 
+optimize the search process, Boolean operators AND and OR were employed. The AND 
+operator was used to combine multiple topics to ensure the search results included 
+studies spanning both LLMs and urban applications. The OR operator expanded the 
+search scope by introducing synonyms and related terms, capturing a broader range of 
+relevant literature. Based on the search keywords, the study initially retrieved 1,379 
+articles from Web of Science and Scopus. After removing duplicates and conducting a 
+title screening, the results were reduced to 174 articles. Following a detailed review of 
+the titles based on inclusion criteria, the final selection was narrowed down to 58 articles 
+(See Figure 1 and Supplementary Material Table S1).
+To ensure that the selected literature is closely aligned with the application of LLMs in 
+urban planning, the following inclusion and exclusion criteria were established to main­
+tain a clear research focus and ensure the quality and relevance of the literature.
+Inclusion Criteria: 
+▪ The study explores the application of LLMs in urban, city, town, or regional planning.
+▪ The study presents case studies, experimental results, or analyses of real-world appli­
+cations where LLMs are used to address specific urban planning problems.
+▪ The literature provides a clear methodological description, including the use, optimization, 
+or innovation of LLM technologies, with sufficient theoretical or practical support.
+Exclusion Criteria: 
+▪ Studies that focus solely on other AI technologies unrelated to LLMs.
+▪ Studies that only discuss traditional urban planning methods and tools without invol­
+ving LLM technologies.
+▪ Studies that focus solely on LLM development or technical improvements without 
+applications in urban planning contexts.
+▪ Studies that lack sufficient methodological support or fail to clearly demonstrate the 
+real impact of LLMs on urban planning.
+▪ Non-peer-reviewed publications or research reports that do not provide detailed appli­
+cation scenarios and results.
+JOURNAL OF URBAN TECHNOLOGY 
+5
+
+===== PAGE 7 =====
+These criteria were strictly applied throughout our screening process. For example, we 
+excluded studies that only used traditional computer vision methods to analyze urban 
+traffic patterns and predict congestion, as they did not involve LLM technologies 
+despite being relevant to urban planning. We also excluded studies focusing purely on 
+LLM development, such as those proposing new pre-training strategies or architectural 
+improvements for enhanced language understanding, as they lacked specific applications 
+in urban planning contexts. The application of these criteria ensured that our analysis 
+remained focused specifically on advanced LLM applications within urban planning con­
+texts. While our reliance on Web of Science and Scopus databases may not capture all 
+technical developments in LLMs, particularly those presented at computer science con­
+ferences, this approach aligns with our focus on understanding LLM applications specifi­
+cally within urban planning contexts.
+Figure 1. Literature selection procedure
+6 
+K. LIU ET AL.
+
+===== PAGE 8 =====
+This research focused on peer-reviewed academic literature, including journal articles, 
+book chapters, and conference papers that met our inclusion criteria. Studies that did not 
+undergo rigorous peer review or failed to meet the above criteria were excluded. Through 
+this screening process, 58 articles were selected for subsequent systematic analysis and 
+discussion.
+For each selected article, this research developed a systematic data extraction protocol 
+with the categories outlined in Table 1.
+For data synthesis, this study employed narrative synthesis as its primary analytical 
+method, an approach particularly well-suited for examining complex, multidimensional 
+Figure 2: Proportion of research across planning domains
+Table 1: Systematic data extraction protocol framework
+Category
+Sub-category
+Specific Content
+Examples
+Publication 
+Information
+Author(s)
+　
+Raikov et al., 2024
+Year of 
+publication
+　
+2023, 2024
+Title of the article
+　
+"Large Language Models in Urban 
+Planning: A Comprehensive Analysis"
+Research themes
+Specific application themes directly 
+identified from literature content
+Intelligent Planning Systems; Traffic 
+Flow Prediction and Management; 
+Public Participation and Opinion 
+Analysis
+LLM Techniques
+Specific technical 
+approaches
+Technical implementation methods 
+explicitly mentioned in studies
+Natural Language Generation; 
+Knowledge Graph; Conversational 
+Reasoning
+Application 
+Manifestation
+Manifestation 
+forms
+How LLM capabilities manifest in 
+actual urban planning 
+applications as described in 
+literature
+Interactivity; Flexibility; Efficiency; 
+Transparency; Accuracy; Reliability
+Findings
+Key advantages
+Positive effects demonstrated by 
+LLMs in urban planning 
+applications
+Enhanced public engagement through 
+natural language interfaces
+Technical 
+limitations
+Limiting factors identified in current 
+applications
+Limited accuracy in complex spatial 
+reasoning tasks
+Applicable 
+scenarios
+Specific urban planning contexts 
+where technology performs 
+optimally
+Policy document analysis; Public 
+feedback processing
+JOURNAL OF URBAN TECHNOLOGY 
+7
+
+===== PAGE 9 =====
+research topics (Popay et al., 2006). The extracted data were systematically analyzed to 
+identify the relationships between technical implementations and their outcomes. Specifi­
+cally, by examining the LLM techniques and technology domains alongside their manifes­
+tations and findings across different urban planning areas, we were able to understand 
+how technical choices influenced practical outcomes. This analytical approach not only 
+helped us identify both the potential and limitations of LLMs in urban planning contexts 
+but also enabled us to reveal commonalities and differences across studies, assess the effec­
+tiveness of existing LLMs, and identify research gaps and future directions in the field. 
+Through this narrative synthesis approach, we were able to conduct a detailed examin­
+ation of LLM applications in urban planning from multiple dimensions.
+Analysis and Results
+General Observations
+Based on the data extracted from the reviewed articles (n = 58), analysis reveals that 
+research on LLMs in urban planning began to increase in 2023, with further growth in 
+2024. Prior to 2023, studies related to LLMs were primarily focused on language 
+models (LMs) and NLP, with a particular focus on applications in chatbot systems, 
+healthcare, and finance (Meng, 2021; Chang and Bergen, 2024). During this earlier 
+period, researchers concentrated on improving the language comprehension capabilities 
+of models, addressing challenges such as text generation, sentiment analysis, and 
+machine translation (Wei et al., 2022; Zhao et al., 2023; Sahebi, 2024; Minaee et al., 2024).
+The increase in LLM research in urban planning after 2023 relates to the complex data 
+characteristics of this domain. Urban planning requires processing of multiple data types, 
+including sensor data, geographic information, and real-time video streams, which were 
+beyond the capabilities of earlier LMs (De Zarzà et al., 2023; Blečić et al., 2024; Guan 
+et al., 2024). Furthermore, the complexities associated with cross-technology integration 
+and the stringent real-time data processing requirements in urban management applications 
+further constrained the scope of early research efforts (Guan et al., 2024; Li, Xia et al., 2024).
+The introduction of advanced models like GPT-4 in 2023 improved LLMs’ capabilities 
+in multimodal data processing and dynamic analysis (Josh et al., 2023). This led to 
+expanded applications in smart cities, traffic management, and environmental monitor­
+ing, extending research beyond traditional NLP tasks to cross-disciplinary applications. 
+At the same time, the maturation of IoT and edge computing technologies has facilitated 
+the integration of LLMs with these systems, creating new opportunities for urban plan­
+ning and automated management.
+LLM Research Proportion in the Field of Urban Planning
+The first stage of our data extraction process employed inductive thematic analysis 
+methods (Braun and Clarke, 2006). For each included study, we conducted open 
+reading and coding to identify primary research focus and application contexts. 
+Through iterative reading and comparison, we inductively identified twenty distinct 
+specific application themes, which emerged directly from literature content, representing 
+actual LLM application domains within urban planning contexts. The twenty themes 
+8 
+K. LIU ET AL.
+
+===== PAGE 10 =====
+were then grouped into five broader urban planning domains through similarity cluster­
+ing and functional relationship analysis.
+Through systematic analysis of these five domains, our research reveals that LLM 
+applications are concentrated in planning and management (n = 20) and transportation 
+and urban mobility (n = 19), with these two domains collectively accounting for over 67 
+percent of all identified applications. This concentration reflects a fundamental align­
+ment between LLM technological capabilities and the specific characteristics of infor­
+mation-intensive planning domains.
+Information Processing Challenges and Computational Planning Problems. Contem­
+porary urban planning faces what scholars term the “knowledge integration problem,” 
+where institutional analytical capacity struggles to match the complexity of available 
+information (Healey, 2006; Allmendinger, 2017). Planning and management activities 
+require synthesizing exponentially growing data volumes from diverse sources including 
+regulatory frameworks, demographic data, economic indicators, and stakeholder 
+opinions, while maintaining decision coherence and democratic accountability. This 
+challenge has become central to AI urbanism discourse, representing a paradigmatic 
+shift from automation-oriented smart cities toward more autonomous, adaptive analyti­
+cal capabilities (Cugurullo, 2020).
+Within this context, the information-intensive characteristics of the planning and 
+management domain have fostered LLM applications focused on knowledge integration 
+and processing. As shown in Table 2, intelligent planning systems (n = 9) emerged as the 
+highest-proportion application theme in this domain, reflecting LLM technological 
+advantages in addressing large-scale, multi-source data synthesis and analysis needs. 
+The development of systems such as CityGPT’s multi-agent urban IoT integration 
+(Guan et al., 2024) and UrbanLLM’s autonomous activity planning (Jiang et al., 2024) 
+indicates that LLMs are being shaped as cognitive enhancement tools specifically 
+designed to handle complex information integration tasks that traditional methods 
+struggle to address.
+The emergence of policy analysis and development support (n = 6) as another cluster 
+reflects the necessity for LLMs to balance technical analytical capabilities with policy 
+comprehensibility. The development trajectory from ChatGPT’s planning evaluation 
+capabilities (Valmeekam et al., 2023) to transparent urban management frameworks 
+(Wang and Zhong, 2024) shows that LLM applications are compelled to develop stronger 
+interpretability and transparency functions while maintaining analytical depth.
+Temporal Dynamics and Real-time Adaptation Requirements as Technology Drivers. 
+Unlike the relatively static analysis of planning and management, transportation’s 
+demand for continuous data stream processing and instant decision-making has 
+driven LLM evolution toward real-time analysis and dynamic optimization (Batty, 2018).
+Table 2: Research theme distribution in planning and management domain
+Theme
+Description
+n
+Intelligent Planning Systems
+Cognitive enhancement tools for multi-source data synthesis
+9
+Policy Analysis and Development Support
+Balance between technical analysis and policy comprehensibility
+6
+Risk and Crisis Management
+Specialized adaptation to dynamic risk scenarios.
+3
+Resource Management Optimization
+Digital twin-driven resource allocation
+2
+JOURNAL OF URBAN TECHNOLOGY 
+9
+
+===== PAGE 11 =====
+The multi-variable optimization needs of transportation systems have fostered 
+specialized LLM development in traffic flow prediction and management (n = 6). The 
+emergence of systems such as TrafficGPT’s foundation model approach (Zhang, Fu 
+et al., 2024) and multimodal traffic accident prediction (De Zarzà et al., 2023) reflects 
+LLMs being specifically designed to handle the fundamental tension between predictabil­
+ity and emergence in urban systems. These applications demonstrate how LLMs are com­
+pelled to develop capabilities for simultaneously processing multiple data streams while 
+maintaining contextual awareness.
+Furthermore, transportation’s requirement for balancing personalization with system 
+optimization has driven LLM development of coordination functions in autonomous 
+driving and urban mobility services (n = 4). The development of intelligent transpor­
+tation automation systems such as VistaGPT (Tian et al., 2023) indicates that transpor­
+tation complexity has forced LLMs to evolve as intermediary technologies between user 
+preferences and system constraints (See Table 3).
+Human-Centered Challenges. However, as perspectives shift from technology-oriented 
+to human-centered approaches, LLM applications face more complex challenges. AI 
+urbanism raises fundamental questions about power structures and democratic govern­
+ance in urban contexts, particularly regarding how algorithmic systems mediate relation­
+ships between citizens and planning institutions (Bratton, 2021). When examining 
+domains requiring more complex human-machine interaction, we find that public ser­
+vices and citizen participation (n = 13), environmental monitoring and sustainability 
+(n = 11), and urban design and architecture (n = 6) present challenges that extend 
+beyond computational problem-solving to require deep integration of contextual intelli­
+gence and cultural sensitivity (See Table 4).
+First, the inclusivity and transparency requirements of democratic participation 
+necessitate that LLMs in public services develop specific adaptive functions. Research 
+by Fu et al. (2024) on participatory urban planning and Zhou, Lin et al. (2024) on 
+citizen issue identification shows that the fundamental requirements of democratic gov­
+ernance compel LLMs to develop specialized functions such as multilingual processing, 
+cultural adaptation, and bias mitigation in this domain—capabilities that are relatively 
+less important in technology-oriented domains. Simultaneously, democratic partici­
+pation’s demand for humanistic characteristics makes LLM applications in this domain 
+more manifestations of auxiliary tools rather than independent decision-making systems.
+Second, environmental domain’s scientific uncertainty and inter-agency coordination 
+requirements provide development space for LLM applications in complexity manage­
+ment. The development of applications such as urban environmental monitoring (Esqui­
+nas et al., 2024) and climate technology innovation monitoring (Toetzke et al., 2023) 
+Table 3: Research theme distribution in transportation and urban mobility domain
+Theme
+Description
+n
+Traffic Flow Prediction and Management
+Specialized LLM development for multi-variable optimization
+6
+Autonomous Driving and Urban Mobility 
+Services
+Coordination functions balancing personalization with system 
+optimization
+4
+Intelligent Tourism and Itinerary Planning
+Intermediary technologies between user preferences and system 
+constraints
+4
+Mobility Analysis and Assessment
+Continuous data stream processing and instant decision-making
+3
+Urban Traffic Signal Control Optimization
+Real-time analysis and dynamic optimization capabilities
+2
+10 
+K. LIU ET AL.
+
+===== PAGE 12 =====
+shows that environmental systems’ high uncertainty requires LLMs to possess capabili­
+ties for processing ambiguous information and multi-agency data integration. 
+However, environmental governance’s requirements for scientific rigor and long-term 
+responsibility also make LLMs more functionally oriented toward data integration 
+rather than decision-making in this domain (See Table 5).
+Finally, urban design domain’s core requirements for creativity and aesthetic judg­
+ment impose certain constraints on LLM application depth while providing opportu­
+nities for innovation in human-machine collaboration models. Research by Chen, Yao 
+et al. (2024) on intelligent building design shows that design domain’s creative character­
+istics make LLMs primarily function to enhance human creativity rather than replace 
+creative thinking. This characteristic helps explain why LLM application research in 
+the design domain is relatively limited in quantity but demonstrates unique value in 
+human-machine collaboration model innovation (See Table 6).
+Overview of LLM Technology Domains in Urban Planning
+To systematically analyze the technological foundations underlying LLM applications in 
+urban planning, we employed inductive content analysis methods (Schreier, 2012; 
+Erlingsson and Brysiewicz, 2017). In this review, we define LLM techniques as a compre­
+hensive collection of underlying model architectures, algorithmic mechanisms, and 
+engineering implementation methods that support LLMs in executing semantic under­
+standing, language generation, knowledge management, multimodal processing, and 
+human-computer interaction functions in practical applications. This encompasses 
+both general language capabilities at the model level and functional technical modules 
+with system integration mechanisms constructed for specific tasks.
+For each study, we focused on two key aspects. First, we extracted the actual appli­
+cation effects and implementation results of LLMs reported in the literature. Second, 
+we identified the specific LLM technologies and methods employed to achieve these 
+application outcomes. Subsequently, the extracted technologies were categorized into 
+eight technology domains based on functional similarity (Figure 3). The following analy­
+sis examines each domain’s specific role and relative prominence in urban planning 
+applications, revealing how different technological capabilities address distinct aspects 
+of urban planning complexity.
+Table 4: Research theme distribution in public services and participation domain
+Theme
+Description
+n
+Public Participation and Opinion Analysis
+Multilingual and cultural adaptation for democratic governance
+3
+Public Safety and Crisis Management
+Specific adaptive functions for inclusivity and transparency
+2
+Social Dynamics and Virtual Applications
+Manifestation as auxiliary tools with humanistic characteristics
+2
+Privacy Policy Management
+Algorithmic mediation of citizen-institution relationships
+1
+Public Service Intelligence
+Optimization of citizen-planning institution relationships
+1
+Table 5: Research theme distribution in environmental monitoring and sustainability domain
+Theme
+Description
+n
+Urban Environmental Monitoring
+Development space for complexity management
+2
+Sustainable Development Policy Support
+Capabilities for processing scientific uncertainty
+2
+Environmental Metabolism Analysis
+Multi-agency data integration for ambiguous information
+1
+Climate Technology Monitoring
+Scientific rigor and long-term responsibility orientation
+1
+JOURNAL OF URBAN TECHNOLOGY 
+11
+
+===== PAGE 13 =====
+Text Understanding and Generation. This is the core domain of LLMs (appearing in all 
+58 studies), establishing it as the foundational technology domain that underpins all 
+other LLM capabilities in urban planning applications. This domain encompasses 
+various specific LLM technologies, including Natural Language Generation (NLG), 
+Natural Language Understanding (NLU), as well as conversational reasoning and gener­
+ation (Sarzaeim et al., 2024; Yang et al., 2024a; Zhang, Fu et al., 2024) (See Table 7).
+The universal presence of this domain reflects the fundamental architecture of LLM 
+systems, where natural language processing serves as the primary interface through 
+which all other technical capabilities are accessed and coordinated (Fu, 2024; Yang 
+et al., 2024a). At the core, Natural Language Understanding enables LLMs to parse 
+complex textual inputs, extract semantic relationships, and interpret contextual 
+nuances within urban planning documents and data sources (Cugurullo and Xu, 2024; 
+Li, Xia et al., 2024; Zhou, Li et al., 2024). Complementing this, Natural Language Gener­
+ation provides the technical foundation for producing coherent, contextually appropriate 
+textual outputs that can range from technical reports to policy recommendations (Wang 
+and Zhong, 2024; Zhu et al., 2024; Chan et al., 2023). The integration of conversational 
+reasoning capabilities further enhances these core functions by enabling multi-turn dia­
+logue processing and maintaining contextual consistency across extended interactions 
+(Yang et al., 2024b; Zhang, Fu et al., 2024a; Blečić et al., 2024). This technical architecture 
+explains why text understanding and generation appears in every study—it functions as 
+the essential communication layer that enables LLMs to interface with users, process 
+diverse information inputs, and deliver comprehensible outputs across all urban plan­
+ning applications (Wandelt et al., 2024; Li, Xia et al., 2024; Jiang et al., 2024).
+Data Processing and Analysis (n = 42), Intelligent Systems and Simulation (n = 38), and 
+Knowledge Management and Learning (n = 36). These represent the specialized technical 
+capabilities that extend LLMs beyond their foundational text processing functions. The 
+Table 6: Research theme distribution in urban design and architecture domain
+Theme
+Description
+n
+Intelligent Building Design
+Application constraints from creativity and aesthetic judgment
+2
+Spatial Quality Assessment
+Innovation opportunities in human-machine collaboration models
+2
+Figure 3: Distribution of LLM technology domains
+12 
+K. LIU ET AL.
+
+===== PAGE 14 =====
+Figure 4: LLM technology domains and characteristics concerning planning
+JOURNAL OF URBAN TECHNOLOGY 
+13
+
+===== PAGE 15 =====
+relatively balanced research attention across these three domains reflects the technical 
+requirements for adapting general-purpose LMs to the specialized analytical demands 
+of urban planning contexts.
+Data Processing and Analysis (See Table 8) encompasses the algorithmic mechanisms 
+that enable LLMs to handle the structured and semi-structured data formats character­
+istic of urban planning workflows. This domain includes spatio-temporal data processing 
+algorithms that allow LLMs to interpret time-series urban datasets, semantic similarity 
+analysis techniques for document classification and comparison, and behavioral model­
+ing algorithms that extract quantitative insights from qualitative urban data sources 
+(Kuftinova et al., 2024; Luo et al., 2024; Malisetty and Perez, 2024). These techniques rep­
+resent adaptations of core LLM architectures to accommodate data types and analytical 
+requirements that extend beyond traditional natural language processing tasks.
+Intelligent Systems and Simulation (See Table 9) represents the architectural enhance­
+ments that enable LLMs to perform predictive modeling and complex reasoning tasks 
+specific to planning scenarios. This domain integrates reinforcement learning mechan­
+isms with transformer architectures to create adaptive decision-making capabilities, 
+implements multi-agent system designs for modeling complex stakeholder interactions, 
+and employs causal inference algorithms that can identify relationships within urban 
+system data (Raikov et al., 2024; Yang et al., 2024a; Zhou, Li et al., 2024; Wang, Pang 
+et al., 2024). These capabilities require significant modifications to standard LLM archi­
+tectures, incorporating specialized neural network components and training procedures.
+Knowledge Management and Learning (See Table 10) encompasses the technical frame­
+works that enable LLMs to acquire, organize, and apply domain-specific planning knowl­
+edge beyond their pre-training data. This includes knowledge graph integration 
+Table 7: LLM techniques in text understanding and generation domain
+LLM Techniques
+Description
+n
+Natural Language Generation
+Produces coherent, contextually appropriate textual outputs for reports and 
+recommendations
+15
+Natural Language 
+Understanding
+Parses complex textual inputs and extracts semantic relationships from planning 
+documents
+12
+Conversational Reasoning
+Enables multi-turn dialogue processing and maintains contextual consistency
+8
+Sentiment Analysis
+Interprets emotional and opinion content in citizen feedback and public input
+6
+Multilingual Support
+Handles multiple languages and cultural contexts in diverse urban environments
+5
+Text Generation and Analysis
+Combines generation with analytical capabilities for integrated text processing
+4
+Contextual Reasoning
+Maintains context across extended interactions in complex planning scenarios
+3
+Event Extraction
+Identifies and extracts specific events from urban planning documentation
+2
+Others
+　
+3
+Table 8: LLM techniques in data processing and analysis domain
+LLM Techniques
+Description
+n
+Spatio-temporal Data Processing
+Handles time-series urban datasets and spatial information integration
+8
+Semantic Similarity Analysis
+Enables document classification, comparison, and content categorization
+6
+Behavioral Modeling
+Extracts quantitative insights from qualitative urban data sources
+5
+Data Retrieval and Organization
+Systematic data access, structuring, and information management
+4
+Predictive Analysis
+Statistical prediction, trend analysis, and forecasting capabilities
+4
+Content Analysis and Reasoning
+Deep content understanding and logical inference from complex data
+3
+Event Recognition
+Identifies significant events and patterns in urban data streams
+3
+Topic Extraction
+Extracts key themes and topics from large urban datasets
+3
+Others
+　
+6
+14 
+K. LIU ET AL.
+
+===== PAGE 16 =====
+architectures that systematically incorporate planning regulations and precedents, retrieval- 
+augmented generation mechanisms that access external planning databases, and continuous 
+learning algorithms that update model parameters based on planning-specific feedback 
+(Cugurullo and Xu, 2024; Zhu et al., 2024; Li, Xia et al., 2024; Wang and Zhong, 2024).
+Multimodal Integration (n = 28) and Cross-domain Integration and Scheduling (n =  
+23). These domains represent the advanced technical capabilities that enable LLMs to 
+transcend single-modality processing limitations. These domains reflect the technical 
+challenges of extending transformer architectures beyond their original text-only 
+design to accommodate the heterogeneous data environments characteristic of urban 
+planning applications.
+Multimodal Integration (See Table 11) encompasses the architectural modifications 
+and algorithmic frameworks that enable LLMs to process and correlate information 
+across different data modalities. This domain includes vision-language model (VLM) 
+architectures that combine visual and textual understanding capabilities, cross-modal 
+attention mechanisms that establish semantic relationships between images and text, 
+and multimodal pre-training techniques that enable unified representation learning 
+across data types (Yang et al., 2024b; Zhang, Xiang et al., 2024; Blečić et al., 2024). 
+These technical implementations require sophisticated neural network designs that can 
+handle the computational complexity of aligning different data modalities within a 
+single model architecture.
+Cross-Domain Integration and Scheduling (See Table 12) addresses the technical chal­
+lenges of coordinating LLM capabilities across different computational domains and task 
+sequences. This domain encompasses zero-shot and few-shot learning mechanisms that 
+Table 9: LLM techniques in intelligent systems and simulation domain
+LLM Techniques
+Description
+n
+Multi-Agent Systems
+Models the complex stakeholder interactions and coordination in planning 
+processes
+8
+Reinforcement Learning 
+Integration
+Creates adaptive decision-making capabilities responsive to planning scenarios
+6
+Multi-Step Reasoning
+Handles sequential decision-making processes in complex planning workflows
+5
+Predictive Modeling
+Anticipates urban system behaviors and outcomes for planning decisions
+4
+Causal Inference
+Identifies cause-effect relationships within urban system data
+3
+End-to-End Optimization
+Comprehensive optimization across entire planning workflows
+3
+Task Planning and Execution
+Autonomous task management and execution in planning systems
+3
+Simulation Control
+Controls and manages urban system simulations and modeling
+3
+Others
+　
+3
+Table 10: LLM techniques in knowledge management and learning domain
+LLM Techniques
+Description
+n
+Knowledge Graph Integration
+Systematically incorporates planning regulations, precedents, and structured 
+knowledge
+7
+Retrieval-Augmented 
+Generation
+Accesses and integrates external planning databases and knowledge sources
+6
+Automated Evaluation Systems
+Provides automated assessment of planning outputs and decision quality
+5
+Feedback Loop Optimization
+Updates model parameters based on domain-specific feedback and learning
+4
+Policy-Making Support
+Provides analytical support for policy development and decision-making
+3
+Deep Probabilistic Reasoning
+Manages uncertainty and probabilistic inference in planning knowledge
+3
+Recommendation Systems
+Provides context-aware recommendations for planning decisions
+3
+Context Awareness
+Maintains awareness of planning contexts and situational factors
+2
+Others
+　
+3
+JOURNAL OF URBAN TECHNOLOGY 
+15
+
+===== PAGE 17 =====
+enable knowledge transfer between different planning contexts, scheduling algorithms 
+that optimize the sequence of LLM operations across multiple tasks, and integration 
+frameworks that coordinate LLM outputs with external computational systems (Xu 
+et al., 2024; Zeng et al., 2024; Li, Xia et al., 2024). The technical complexity involves devel­
+oping robust interfaces between LLM architectures and diverse external systems while 
+maintaining computational efficiency and output coherence.
+Although the significance of these areas is undeniable, the relatively lower volume of 
+research may be attributed to the high technical complexity of cross-domain and multi­
+modal integration (Tian et al., 2023), as well as the diversity of data sources and proces­
+sing methods, which increases the challenges in this research domain (Chen, Yao et al., 
+2024; Yang and Mekies, 2024).
+Human-Computer Interaction and Feedback (n = 12) and Security and Privacy (n = 4). 
+These domains represent the least developed technical domains, revealing significant 
+gaps in LLM technology development for urban planning applications. The limited 
+research attention in these areas highlights the current immaturity of LLM architectures 
+in addressing the operational and ethical requirements essential for real-world planning 
+deployment.
+Human-Computer Interaction and Feedback (See Table 13) encompasses the interface 
+technologies and user experience mechanisms that mediate between LLM capabilities 
+and planning practitioners. This domain includes conversational interface design that 
+enables natural language interaction with complex planning systems, feedback loop archi­
+tectures that allow continuous model refinement based on user input, and explainable AI 
+mechanisms that provide transparency in LLM decision-making processes (Cruz-Castro 
+et al., 2024; Yu and McKinley, 2024; Blečić et al., 2024). The modest research volume in 
+this domain suggests that current LLM development prioritizes core analytical capabilities 
+over user-centered design, potentially limiting practical adoption in professional planning 
+contexts where intuitive interfaces and clear accountability mechanisms are essential.
+Security and Privacy (See Table 14) represents the most underdeveloped technical 
+domain, encompassing the computational frameworks necessary to protect sensitive 
+urban data and ensure ethical LLM deployment. This domain includes privacy-preser­
+ving machine learning techniques that protect citizen data during model training and 
+inference, access control mechanisms that regulate LLM interactions with confidential 
+planning information, and audit trail systems that track model decision-making pro­
+cesses for accountability purposes (Bozkir et al., 2024; Malisetty and Perez, 2024). The 
+minimal research attention reflects both the technical complexity of implementing 
+Table 11: LLM techniques in multimodal integration domain
+LLM Techniques
+Description
+n
+Vision-Language Models
+Combines visual and textual understanding for comprehensive urban data analysis
+6
+Multimodal Data Integration
+Integrates information across different data modalities (text, image, spatial)
+5
+Cross-Modal Attention
+Establishes semantic relationships between different data modalities
+4
+Spatial Data Analysis
+Processes spatial and geographic information with multimodal context
+3
+Image Recognition
+Interprets and analyzes visual urban data including satellite and street imagery
+3
+3D Visualization Generation
+Creates three-dimensional representations for urban planning visualization
+2
+Multimodal Pre-training
+Unified representation learning across multiple data types
+2
+AI-Generated Content
+Produces multimodal content including visualizations for planning communication
+2
+Others
+　
+1
+16 
+K. LIU ET AL.
+
+===== PAGE 18 =====
+robust security measures within LLM architectures and the emerging nature of regulat­
+ory frameworks governing AI applications in public planning contexts.
+Essential Characteristics of LLMs
+The identification of LLM characteristics follows a systematic inductive approach that 
+abstracts core qualities from observed application manifestations. This analytical 
+process moves beyond describing what LLMs do in urban planning contexts to concep­
+tualizing the fundamental characteristics that enable their effectiveness across diverse 
+planning scenarios.
+Our analysis employed inductive content analysis (Schreier, 2012; Erlingsson and Bry­
+siewicz, 2017) to systematically examine how LLMs perform in practice across the 
+reviewed literature. This examination revealed eleven distinct manifestations of LLM 
+capabilities, including accuracy in analytical tasks, flexibility in adapting to different 
+scenarios, efficiency in processing complex information, and transparency in decision- 
+making processes. These manifestations, derived entirely from empirical descriptions 
+and evaluations of LLM performance in the literature, represent the observable qualities 
+through which LLMs demonstrate their value in urban planning applications.
+Through systematic analysis and conceptual clustering of these manifestations, follow­
+ing grounded theory’s axial coding principles (Charmaz, 2014), four core characteristics 
+emerged: professionalism, inclusivity, trustworthiness, and convenience (See Table 15). 
+Each characteristic represents a conceptual aggregation of related manifestations, captur­
+ing different dimensions of the fundamental qualities required for LLMs to function 
+effectively in urban planning contexts.
+These characteristics not only facilitate a systematic understanding of the application 
+value of LLMs in urban planning but also provide a clear framework for future research 
+and the development of LLMs. The sections that follow delve into the specifics of these 
+four key characteristics, analyzing their concrete applications and significance in the 
+context of urban planning.
+Table 13: LLM Techniques in Human-Computer Interaction and Feedback Domain
+LLM Techniques
+Description
+n
+Explainable AI (XAI)
+Provides transparency and interpretability in LLM decision-making processes.
+3
+User Interface Design
+Enables natural language interaction with complex planning systems.
+3
+Feedback Loop Architecture
+Allows continuous model refinement based on user input and experience.
+2
+Personalized Interaction
+Customizes interaction patterns based on user preferences and roles.
+2
+Multi-tool Integration
+Integrates multiple planning tools within unified user interfaces.
+1
+Virtual Agent Systems
+Creates intelligent virtual agents for automated user assistance.
+1
+Table 12: LLM techniques in cross-domain integration and scheduling domain
+LLM Techniques
+Description
+n
+Zero-shot Learning
+Enables adaptation to new planning contexts without additional training
+4
+Scheduling Algorithms
+Optimizes sequence of LLM operations across multiple planning tasks
+4
+System Integration Frameworks
+Coordinates LLM outputs with external computational and planning systems
+3
+Cross-domain Knowledge Transfer
+Transfers knowledge and capabilities between different planning domains
+3
+Workflow Optimization
+Optimizes planning workflows and task sequences for efficiency
+3
+Multi-system Coordination
+Manages coordination across multiple planning and computational systems
+2
+Real-time Integration
+Handles real-time cross-system coordination and data synchronization
+2
+Rule-based Integration
+Integrates traditional rule-based planning systems with LLM capabilities
+2
+JOURNAL OF URBAN TECHNOLOGY 
+17
+
+===== PAGE 19 =====
+Professionalism. Professionalism emerges as a core characteristic of LLMs through sys­
+tematic analysis of their demonstrated professional competence in urban planning appli­
+cations. This characteristic was inductively derived by examining multiple manifestations 
+of LLM performance across the 58 reviewed studies, where these models consistently dis­
+played domain-specific expertise, analytical rigor, and adherence to professional stan­
+dards. The analysis reveals that professionalism manifests through three key 
+dimensions that collectively define LLMs’ professional competence in urban planning 
+contexts: accuracy, authority, and comprehensiveness (See Table 16).
+Within the dimension of professionalism, accuracy emerges as a fundamental mani­
+festation that reflects how effectively LLMs align their performance with real-world 
+urban planning requirements. This manifestation is particularly critical given the 
+inherent complexity of urban planning tasks, such as spatio-temporal data processing, 
+regulatory interpretation, and spatial layout design, which demand precise analytical 
+capabilities and multidimensional data management (Cugurullo and Xu, 2024; Jiao 
+et al., 2024).
+The importance of accuracy is highlighted across various studies. For instance, in pro­
+cessing spatio-temporal data generated by the IoT, the high accuracy of LLMs is critical for 
+ensuring the reliability of real-time analysis and decision making (Guan et al., 2024). Simi­
+larly, studies by Sarzaeim et al. (2024) and Yao (2023) highlight the advantages of LLMs in 
+managing large volumes of real-time data. However, these studies also emphasize the 
+trade-off between precision and speed in dynamic environments, noting that LLMs 
+must maintain high accuracy to support rapid decision making. Further research indicates 
+that by fine-tuning algorithms for spatio-temporal tasks, LLMs can provide more precise 
+recommendations for autonomous urban planning and management (Jiang et al., 2024). 
+This fine-tuning capability not only enhances LLMs’ adaptability in complex urban 
+Table 15: Key characteristics of LLMs
+Characteristic
+Description
+Reference
+Professionalism
+Professionalism emphasizes the LLM’s ability to make 
+precise decisions and process data when handling 
+complex tasks, ensuring that the outcomes are not only 
+accurate but also actionable.
+(Raikov et al., 2024; Wang and Zhong, 
+2024; Xu et al., 2024; Yang et al., 2024a)
+Inclusivity
+Inclusivity reflects LLM’s capacity to adapt to a wide 
+range of scenarios and requirements, providing 
+effective support for different populations, regions, and 
+contexts.
+(Bhandari et al., 2024; Šturm et al., 2024; 
+Yu and McKinley, 2024; Zhou, Lin et al., 
+2024)
+Trustworthiness
+Trustworthiness means that the LLM offers transparency 
+and security, clearly demonstrating its decision-making 
+process while ensuring the reliability of the results, thus 
+earning the users’ trust.
+(Li, Xia et al., 2024; Tian et al., 2023; Wang 
+and Zhong, 2024; Zhou, Li et al., 2024)
+Convenience
+Convenience refers to the LLM’s ability to simplify 
+complex tasks through automated and efficient 
+processes, making it easier for users to operate and 
+apply.
+(Chan et al., 2023; De Zarzà et al., 2023; 
+Gundawar et al., 2024; Li, Xia et al., 
+2024)
+Table 14: LLM techniques in security and privacy domain
+LLM Techniques
+Description
+n
+Privacy Protection Mechanisms
+Protects sensitive urban and citizen data during model training and inference
+2
+Privacy Classification
+Automatically classifies and handles private information in planning data
+1
+Real-time Data Monitoring
+Monitors data flows for security compliance and privacy protection
+1
+18 
+K. LIU ET AL.
+
+===== PAGE 20 =====
+environments but also demonstrates their accuracy and effectiveness in handling diverse 
+tasks (Jiang et al., 2024; Xu et al., 2024; Yang et al., 2024a; Zeng et al., 2024).
+Beyond technical precision, authority represents another crucial dimension of pro­
+fessional competence, particularly given urban planning’s reliance on multidisciplinary 
+knowledge integration. This manifestation encompasses LLMs’ capacity to navigate 
+complex regulatory frameworks, including building regulations, land use policies, and 
+environmental protection ordinances, while ensuring that generated planning schemes 
+meet established legal and professional standards through strict adherence to relevant 
+laws and industry norms.
+Zhu et al. (2024) demonstrated how LLMs can offer authoritative planning rec­
+ommendations by incorporating the latest standards from various fields, including 
+law, economics, and environmental science, highlighting the advantage of LLMs in 
+managing multidisciplinary knowledge. Raikov et al. (2024) further argued that integrat­
+ing cross-disciplinary knowledge bases is essential for ensuring the legality and credibility 
+of planning schemes. Guan et al. (2024) emphasized that LLMs rely on authoritative data 
+sources and professional analytical tools to ensure the rationality and compliance of plan­
+ning decisions. This reliance on authoritative data ensures that LLMs can offer decision 
+support that aligns with industry standards, even when dealing with complex and 
+dynamic datasets. However, studies by Fu et al. (2023), Chen, Yao et al. (2024), and 
+Šturm et al. (2024) caution that while LLMs depend on authoritative data, variations 
+in the quality of different data sources can affect the reliability of final decisions. 
+Additionally, studies by Gao et al. (2024), Raikov et al. (2024), and Šturm et al. (2024) 
+have shown that LLMs can dynamically adjust planning content by accessing external 
+urban management databases and real-time data, ensuring that their outputs remain 
+compliant with current legal regulations. This ability to collaborate with external 
+systems enhances both the authority and adaptability of LLMs in complex urban plan­
+ning tasks, providing robust technical support for decision-makers.
+Complementing both accuracy and authority, comprehensiveness manifests through 
+LLMs’ ability to synthesize diverse knowledge domains into holistic planning solutions. 
+From a systems perspective, this dimension reflects how models integrate multiple data 
+sources and technical approaches to address the interconnected nature of urban chal­
+lenges, moving beyond isolated problem-solving to embrace the multidimensional com­
+plexity that characterizes contemporary urban planning practice (Bozkir et al., 2024; 
+Chen, Yao et al., 2024).
+Table 16: Keywords concerning professionalism
+Keyword
+Description
+Reference
+Accuracy
+Accuracy refers to the LLM’s ability to provide precise 
+predictions, analyses, and solutions, ensuring highly correct 
+and reliable outcomes across various complex tasks.
+(De Zarzà et al., 2023; Šturm 
+et al., 2024)
+Authority
+Authority indicates that the LLM, by drawing from extensive 
+knowledge bases and verified information, offers 
+recommendations or decisions, making it a trusted and 
+authoritative tool across different fields.
+(Li, Xia et al., 2024; Wang and 
+Zhong, 2024; Zhu et al., 2024)
+Comprehensiveness
+Comprehensiveness means that the LLM can integrate and 
+analyze data and information from multiple dimensions and 
+sources, offering full-spectrum decision support to ensure the 
+completeness and diversity of results.
+(Li, Xia et al., 2024; Xu et al., 
+2024; Zhou, Lin et al., 2024)
+JOURNAL OF URBAN TECHNOLOGY 
+19
+
+===== PAGE 21 =====
+In data integration tasks, the comprehensiveness of LLMs is enhanced through their 
+combination of core and external technologies. For instance, in the VistaGPT frame­
+work, LLMs integrate data from intelligent vehicle systems with multimodal information 
+processing technologies, combining real-time traffic data with urban infrastructure infor­
+mation gathered from multiple sensors (Tian et al., 2023). This integration equips the 
+model with advanced data processing capabilities in traffic scheduling and management, 
+enabling it to process complex datasets and convert them into multidimensional visual­
+izations, thereby enhancing the accuracy and comprehensiveness of decision making for 
+urban planners (Tian et al., 2023).
+Furthermore, comprehensiveness is also demonstrated in the model’s capacity to 
+address multidimensional issues. By incorporating analyses of sustainability challenges 
+alongside urban operational transparency technologies, LLMs can assist urban planners 
+in assessing the impacts of urban development from environmental, social, and techno­
+logical perspectives (Jiao et al., 2024). This holistic analytical capability enables the model 
+to provide support not only at the technical level but also in evaluating the sustainability 
+and social impacts of urban planning decisions (Gao et al., 2024; Regona et al., 2024).
+Inclusivity. Inclusivity emerges as a distinctive characteristic that addresses the social 
+dimension of LLM effectiveness in urban planning contexts. While professionalism 
+focuses on technical competence and adherence to standards, inclusivity reflects LLMs’ 
+capacity to bridge diverse communities and contexts within urban environments. This 
+characteristic was identified through examining how LLMs demonstrate adaptive capa­
+bilities across varied user groups, linguistic communities, and cultural contexts in the 
+reviewed literature.
+The analysis reveals that inclusivity manifests through two interconnected dimen­
+sions: diversity and fairness (See Table 17). These dimensions capture how LLMs 
+extend beyond technical functionality to address the social complexity inherent in 
+urban planning, encompassing capabilities such as multilingual processing, multimodal 
+data handling, personalized response generation, and algorithmic bias mitigation. 
+Together, these manifestations reflect LLMs’ potential to democratize access to planning 
+processes and ensure equitable representation across diverse urban communities.
+The first dimension of inclusivity becomes evident through LLMs’ capacity to embrace 
+diversity across urban planning environments, particularly in addressing the varied needs 
+of heterogeneous user populations (Li, Haider et al., 2024; Otal et al., 2024). Given the 
+multilingual nature of urban environments often results in communication barriers, 
+with the needs of different linguistic communities either overlooked or inadequately 
+expressed (Cadier and Mar-Molinero, 2014; Otal et al., 2024; Zhou, Lin et al., 2024). 
+To overcome this challenge, LLMs must be capable of processing multilingual inputs 
+to support users from various linguistic backgrounds (Wong et al., 2023). Studies 
+suggest that through multilingual processing techniques, LLMs can convert resident 
+feedback into a unified text format, enabling planners to gather insights from diverse lin­
+guistic communities (Wong et al., 2023; Fu et al., 2024; Zhou, Lin et al., 2024). This multi­
+lingual capability not only reduces language barriers but also ensures that the 
+perspectives of all linguistic groups are considered equally in the planning process.
+Beyond linguistic diversity, different communities have varied needs and methods of 
+information expression. Planners must extract information that reflects cultural differ­
+ences, and evolving community needs from various data formats, such as text, images, 
+20 
+K. LIU ET AL.
+
+===== PAGE 22 =====
+and audio (Liang et al., 2024; Yang et al., 2024b; Zhang, Xiang et al., 2024). Research 
+highlights that LLMs should not only process single-type data but also integrate multi­
+modal data. For instance, combining visual and textual data allows planners to better 
+understand the spatial layouts and needs of different communities (De Zarzà et al., 
+2023; Liang et al., 2024; Zeng et al., 2024). This ability to process diverse forms of data 
+ensures that LLMs can respond to the varied needs of communities, adapting to the 
+complex urban planning tasks that involve different cultures, languages, and data 
+types, thus providing more inclusive and diverse solutions.
+However, achieving true inclusivity requires addressing fairness as an equally critical 
+dimension, particularly given the inherent challenges posed by LLMs’ reliance on large- 
+scale training datasets. Biases related to gender, race, and culture embedded within these 
+datasets can lead to unjust outcomes in LLM applications, creating particular concerns in 
+urban planning contexts where such biases may result in the systematic neglect of certain 
+groups’ needs (Fu et al., 2024; Otal et al., 2024).
+To address these potential bias issues, various studies have proposed different sol­
+utions. For instance, Esquinas et al. (2024) introduced a heterogeneous intelligence meth­
+odology aimed at reducing biases that may emerge during LLM data processing and 
+analysis. This study emphasizes optimizing LLMs through human oversight and multi­
+modal data integration at various stages of the planning process to mitigate data imbal­
+ances, ensuring unbiased decision making for all users. Similarly, Otal et al. (2024) 
+proposed an alternative method known as adversarial training, which involves simulating 
+inputs from different genders, races, and socioeconomic backgrounds to adjust LLM 
+outputs. This approach helps prevent decisions from being negatively influenced by 
+these factors, offering a new perspective on reducing bias in LLM applications across 
+diverse contexts.
+While most existing research has focused on model performance and application 
+scenarios, ensuring that these technologies are applied fairly across different groups 
+remains a critical avenue for future research. Despite the relatively limited body of 
+research on fairness, it remains a fundamental component of the inclusivity characteristic 
+of LLMs.
+Trustworthiness. Trustworthiness emerges as the third core characteristic, addressing 
+the fundamental question of credibility that underpins successful LLM deployment in 
+urban planning contexts. While professionalism establishes technical competence and 
+inclusivity ensures broad accessibility, trustworthiness determines whether stakeholders 
+can confidently rely on LLM outputs for critical planning decisions. This characteristic 
+was identified through analyzing how LLMs build and maintain credibility across 
+diverse planning scenarios in the reviewed literature.
+Table 17: Keywords concerning inclusivity
+Keyword
+Description
+Reference
+Diversity
+Diversity refers to the LLM’s ability to adapt to and handle a variety of 
+inputs across different cultures, languages, social backgrounds, and 
+environments, ensuring its effectiveness across a wide range of 
+groups and contexts.
+(Yu and McKinley, 2024; Zhou et al., 
+2024a)
+Fairness
+Fairness means that the LLM can minimize biases in its applications, 
+ensuring that all users, social groups, and scenarios are treated 
+equitably during decision making and processing.
+(Li et al., 2024b; Yu and McKinley, 
+2024; Zhou, Lin et al., 2024)
+JOURNAL OF URBAN TECHNOLOGY 
+21
+
+===== PAGE 23 =====
+The analysis reveals that trustworthiness manifests through three interconnected 
+dimensions: reliability, transparency, and security (See Table 18). These dimensions col­
+lectively address the multifaceted nature of trust in planning contexts, encompassing 
+LLMs’ ability to provide stable and consistent performance, offer clear reasoning expla­
+nations, incorporate robust data privacy protection mechanisms, and demonstrate con­
+tinuous improvement through learning and feedback processes.
+From a foundational perspective, reliability emerges as a critical dimension through 
+which LLMs establish credibility in urban planning applications. LLMs with high 
+reliability must generate contextually appropriate outputs not only in routine scenarios 
+but also demonstrate consistency and stability in complex and dynamic environments, 
+ensuring that their performance remains unaffected by variations in data sources (De 
+Zarzà et al., 2023; Fu et al., 2023; Tang, Wang et al., 2024; Wang, Pang et al., 2024; 
+Zhang, Fu et al., 2024). For instance, in the domain of traffic management, LLMs can 
+employ advanced multimodal data integration techniques to ensure the seamless coordi­
+nation of diverse data types, thereby preventing accuracy degradation due to data hetero­
+geneity (Li, Xia et al., 2024). In tasks concerning knowledge management and 
+integration, Cugurullo and Xu (2024) highlighted that LLMs leverage knowledge 
+graphs and natural language processing techniques to extract reliable information 
+from extensive textual datasets, ensuring the consistent incorporation of knowledge 
+from multiple sources within the model. This capacity enables LLMs to maintain high 
+reliability in managing multi-source information, rendering them dependable 
+decision-support tools in complex urban planning tasks.
+While reliability focuses on consistent performance, transparency addresses the 
+important challenge of making LLM decision-making processes accessible to users. 
+Urban planning frequently involves the processing of multidimensional data and the 
+provision of complex decision support. When users can clearly comprehend the reason­
+ing logic and decision-making processes of LLMs, they are more likely to trust and adopt 
+the models’ recommendations (Cugurullo and Xu, 2024; Esquinas et al., 2024; Šturm 
+et al., 2024).
+For example, Dingil and Pribyl (2024) emphasized the importance of transparent 
+feedback mechanisms in LLMs, particularly when managing complex tasks. Transpar­
+ency enables users to understand the model’s reasoning logic, which not only enhances 
+user confidence in the system’s outputs but also helps them accurately interpret the 
+model’s behavior during dynamic adjustments, leading to more effective responses to 
+Table 18: Keywords concerning trustworthiness
+Keyword
+Description
+Reference
+Reliability
+Reliability refers to the LLM’s ability to consistently deliver 
+stable and accurate results across various environments and 
+tasks, ensuring that its outputs remain dependable and 
+consistent in real-world applications.
+(Chen, Yao et al., 2024; De Zarzà et al., 
+2023; Wang, Pang et al., 2024)
+Transparency
+Transparency means that the LLM provides a clear and 
+explainable decision-making process, allowing users to 
+understand the model’s behavior and outcomes, thereby 
+enhancing trust.
+(Jiao et al., 2024; Zhang, Fu et al., 
+2024)
+Security
+Security refers to the LLM’s ability to ensure data privacy and 
+system safety when handling sensitive information, while 
+also preventing data breaches, misuse, or malicious attacks.
+(Malisetty and Perez, 2024; Wang and 
+Zhong, 2024; Yang et al., 2024a)
+22 
+K. LIU ET AL.
+
+===== PAGE 24 =====
+complex urban management challenges. Yang and Mekies (2024) further explored how 
+technical approaches can improve transparency, particularly regarding the interpretabil­
+ity of complex reasoning processes. By progressively revealing the reasoning path, urban 
+planners can clearly discern the logic and rationale behind each decision step.
+Beyond performance and interpretability considerations, security represents a distinct 
+but interconnected dimension that has gained critical importance as LLMs process 
+growing volumes of sensitive information in urban planning, including personal 
+records, sensor measurements, and critical infrastructure details (Kuftinova et al., 
+2024). Ensuring data security and privacy protection has thus become a critical require­
+ment for LLMs operating in this complex field (Wang, Pang et al., 2024). Malisetty and 
+Perez (2024) noted that LLMs can effectively safeguard users’ personal information by 
+employing encryption and data anonymization techniques when generating privacy pol­
+icies for IoT devices. These techniques are also applicable to planning policies, particu­
+larly in large systems that involve both personal and public data. In such contexts, robust 
+data security mechanisms support the system’s stable operation and effectively prevent 
+information leakage and misuse (Malisetty and Perez, 2024).
+Moreover, in handling complex urban data, security also encompasses the ability to 
+withstand anomalous inputs. Research has shown that urban planning data often con­
+tains noise or anomalies, such as sensor false positives or data loss (Kuftinova et al., 
+2024). Luo et al. (2024) and Momennejad et al. (2023) utilized chain-of-thought reason­
+ing techniques to verify and check input data at each reasoning stage, ensuring that 
+anomalous data does not interfere with the LLM’s reasoning process. This approach pro­
+vides robust protection against unstable data. De Zarzà et al. (2023) and Hao et al. (2024) 
+emphasized that urban planners can rely on this security mechanism to make more accu­
+rate decisions without the concern of potential risks posed by data anomalies.
+Convenience. Convenience emerges as the fourth core characteristic that completes the 
+framework of LLM effectiveness in urban planning contexts. While the previous three 
+characteristics establish the foundational requirements for professional, inclusive, and 
+trustworthy LLM applications, convenience addresses the practical dimension of user 
+experience and operational efficiency that ultimately determines adoption success. 
+This characteristic resonates with established findings in Planning Support Systems 
+(PSS) and digital planning literature, which consistently identify usability and conven­
+ience as critical factors for improving planning processes through digital tools (Blečić 
+et al., 2024; Yang et al., 2024b; Zhang, Fu, et al., 2024).
+The analysis reveals that convenience manifests through three interconnected dimen­
+sions: interactivity, flexibility, and efficiency (See Table 19). These dimensions were 
+inductively derived by examining how LLMs facilitate seamless natural language inter­
+actions, demonstrate adaptive capabilities across varied planning scenarios, and enable 
+rapid task execution in the reviewed studies. Together, these manifestations reflect 
+how LLMs transform complex planning tasks into accessible, adaptive, and efficient pro­
+cesses, thereby bridging the gap between sophisticated analytical capabilities and practi­
+cal usability requirements.
+The dimension of interactivity addresses one of the most fundamental challenges in 
+the adoption of technology in urban planning: bridging the gap between sophisticated 
+analytical capabilities and intuitive user engagement. Through natural language 
+JOURNAL OF URBAN TECHNOLOGY 
+23
+
+===== PAGE 25 =====
+processing, LLMs enable users to execute complex planning tasks via conversational 
+exchanges without requiring specialized technical expertise, thereby simplifying tra­
+ditionally complex operational processes (Wong et al., 2023; Wang, Jiang et al., 2024; 
+Guan et al., 2024). This capability proves particularly vital for urban planning pro­
+fessionals who must navigate intricate planning scenarios while maintaining accessibility 
+for broader stakeholder participation.
+In practical applications, interactivity shows clear advantages in improving work 
+efficiency and decision-making quality in urban planning. For instance, Tang, Dai 
+et al. (2024) demonstrated how natural language inputs can translate traffic managers’ 
+instructions into executable actions for controlling city traffic signals. This method of 
+interaction eliminates the need for urban planners to rely on programming languages 
+or technical details, greatly simplifying complex traffic management tasks. In scenarios 
+requiring real-time decision making, such as urban traffic management, interactivity 
+not only enhances task execution efficiency but also accelerates planners’ response 
+times. This intuitive interaction approach makes managing complex urban infrastructure 
+more efficient (Wong et al., 2023; Tang, Dai et al., 2024; Wang, Pang et al., 2024; Zhang, 
+Fu et al., 2024,).
+Zhang, Fu et al. (2024) further explored the flexible applications of interactivity in 
+urban planning. Their research demonstrated that users only need to issue simple 
+natural language commands, such as show the current network heatmap, and the 
+system automatically generates the desired results through contextual understanding 
+(Zhang, Fu et al., 2024). Given the large amounts of data and complex analyses involved 
+in urban planning, users may not always know how to issue precise commands. In such 
+cases, interactivity becomes particularly important (Wang, Jiang et al., 2024; Zhang, Fu 
+et al., 2024). LLMs’ semantic understanding capabilities enable the generation of results 
+that align with user expectations, making data analysis and decision support more 
+flexible while reducing the cognitive burden on planners.
+Moreover, interactivity ensures consistency and coherence in complex urban planning 
+tasks by integrating multi-turn dialogue history (Yao, 2023). When planners engage in 
+long-term or multi-step projects, they do not need to re-enter previous inputs. LLMs 
+can continuously maintain contextual consistency based on dialogue history. This con­
+tinuous interaction capability is crucial in complex tasks involving urban development, 
+infrastructure adjustments, and traffic layout planning, as it ensures the fluidity of infor­
+mation and operational coherence throughout the decision making process, significantly 
+enhancing planning efficiency (Bozkir et al., 2024; Zhou, Lin et al., 2024).
+Table 19: Keywords concerning convenience
+Keyword
+Description
+Reference
+Interactivity
+Interactivity refers to the LLM’s ability to engage in natural 
+and real-time interactions with users, allowing the system 
+to quickly provide feedback and adjust decisions based on 
+user input.
+(Šturm et al., 2024; Yang et al., 2024b; 
+Zhou, Lin et al., 2024)
+Flexibility
+Flexibility means that the LLM can adapt to various 
+application scenarios and requirements, swiftly adjusting 
+its model and outputs to meet specific user needs.
+(Guan et al., 2024; Jiang et al., 2024; Yu 
+and McKinley, 2024; Zhou, Lin et al., 
+2024)
+Efficiency
+Efficiency refers to the LLM’s capacity to process large 
+volumes of data or complex tasks at high speed, 
+significantly enhancing the workflow and decision-making 
+process in terms of speed and effectiveness.
+(Li, Xia et al., 2024; Tian et al., 2023; Xu 
+et al., 2024)
+24 
+K. LIU ET AL.
+
+===== PAGE 26 =====
+Flexibility emerges as the adaptive capacity that enables LLMs to respond dynamically 
+to the inherently variable nature of urban planning contexts. Given the complex demands 
+of multidimensional, multi-task environments, LLMs must possess capabilities such as 
+multimodal data processing, contextual awareness, and adaptability to respond flexibly 
+to challenges in ever-changing environments (Chen, Yao et al., 2024).
+For instance, in the domain of traffic management, which is a highly dynamic task 
+within urban planning—real-time responsiveness is essential. Wang, Pang et al. (2024) 
+highlighted that LLMs need to dynamically optimize traffic signal control strategies 
+based on traffic flow and environmental fluctuations, thereby enhancing system 
+efficiency. To manage continuous changes in urban traffic systems, Zhang, Fu et al. 
+(2024) and Luo et al. (2024) emphasized that the model must have real-time data analysis 
+capabilities to flexibly allocate traffic resources and ensure the system’s efficient operation.
+Zhang, Fu et al. (2024) also noted that urban planning tasks often involve multiple 
+parallel processes, such as traffic flow analysis, accident report generation, and the simu­
+lation of different traffic scenarios. LLMs must possess multi-task processing capabilities 
+and the ability to switch flexibly between tasks to maintain coherence and effectiveness 
+throughout the planning process.
+Although Yao’s (2023) research focused on personalized travel recommendations, it 
+demonstrated the LLM’s capacity to flexibly address various needs. This study has signifi­
+cant implications for responding to the needs of residents in urban planning. LLMs must 
+be able to generate customized solutions based on the preferences or real-time changes of 
+different communities and individuals to enhance the convenience of urban services 
+(Wong et al., 2023; Cruz-Castro et al., 2024; Zhu et al., 2024). Therefore, flexibility is 
+not only essential for addressing complex tasks but also serves as a core driving force 
+in ensuring that LLMs can adapt to the evolving urban environment.
+The third dimension, efficiency, captures LLMs’ capacity to transform time-intensive plan­
+ning processes into streamlined workflows that enhance both productivity and decision- 
+making speed. Given the large-scale datasets and complex analytical requirements that 
+characterize urban planning applications, efficiency becomes crucial for maintaining both 
+analytical rigor and practical applicability (Wong et al., 2023; Fu et al., 2024; Liang et al., 2024).
+For instance, Zhu et al. (2024) demonstrated that LLMs could quickly extract key infor­
+mation from large-scale urban planning documents using vector retrieval techniques. This 
+approach mitigates the challenge of processing large and dispersed information during the 
+planning process, significantly reducing data processing time and enabling planners to 
+access essential content more rapidly. Additionally, Jiang et al. (2024) focused on task auto­
+mation and dynamic matching mechanisms, showcasing how LLMs can achieve a high 
+degree of automation in urban management tasks. This automation technology minimizes 
+manual intervention and accelerates task execution, particularly in handling repetitive or 
+procedural tasks, thereby significantly enhancing efficiency.
+Findings and Discussion
+Key Study Insights
+This study systematically reviewed the literature to investigate the application of LLMs in 
+urban planning, identifying several key characteristics and challenges. The empirical 
+JOURNAL OF URBAN TECHNOLOGY 
+25
+
+===== PAGE 27 =====
+analysis reveals a rapid expansion of LLM research in urban planning, particularly accel­
+erating since 2023, which reflects growing recognition of their potential to enhance 
+decision-making and data processing capabilities in complex urban environments. 
+This surge aligns with broader developments in AI urbanism, where cities increasingly 
+adopt autonomous and adaptive technologies that extend beyond traditional smart 
+city approaches (Cugurullo, 2020).
+From a domain perspective, our systematic analysis identified five primary application 
+areas where LLMs demonstrate particular effectiveness: planning and management, 
+public services and participation, transportation and urban mobility, environment and 
+sustainability, and urban design and architecture. These domains represent the core 
+functions where LLMs’ natural language processing capabilities address longstanding 
+challenges in urban planning practice. Furthermore, through our inductive analysis of 
+application manifestations, we identified four essential characteristics that enable LLM 
+effectiveness across these domains: professionalism, inclusivity, trustworthiness, and 
+convenience. These characteristics emerge not as isolated technical features, but as inter­
+connected qualities that collectively address the multifaceted needs and complex chal­
+lenges inherent in contemporary urban planning practice.
+Based on these findings, we conceptualize the role of LLMs in urban planning as 
+advanced socio-technical systems capable of managing multi-source and multimodal 
+data. These models are intended to facilitate cross-disciplinary decision making by inte­
+grating diverse data sources and addressing complex urban challenges, representing a 
+shift toward more adaptive and responsive urban planning processes that can better 
+accommodate the dynamic nature of contemporary cities while maintaining democratic 
+accountability and professional rigor.
+Synergistic Effects of LLM Characteristics Across Urban Planning Domains
+Our systematic analysis reveals that LLM characteristics do not operate in isolation but 
+demonstrate complex synergistic relationships that vary across different urban planning 
+domains. Rather than functioning as independent attributes, the four identified charac­
+teristics—professionalism, inclusivity, trustworthiness, and convenience—interact dyna­
+mically to create enhanced effectiveness in specific planning contexts. This finding 
+emerges from our inductive examination of how these characteristics manifest and 
+reinforce each other within the reviewed literature, suggesting that successful LLM 
+implementation depends not merely on individual characteristic optimization, but on 
+understanding their contextual interdependencies. The analysis further indicates that 
+while all characteristics contribute to LLM effectiveness across domains, certain charac­
+teristic combinations demonstrate particularly pronounced synergistic relationships in 
+specific planning areas, reflecting the distinct operational requirements and stakeholder 
+dynamics that characterize different aspects of urban planning practice.
+In the Area of Planning and Management, professionalism and convenience demon­
+strate synergistic effects in handling stable, long-term planning tasks. LLMs’ profession­
+alism ensures precise analysis of complex datasets and strategic planning processes 
+(Chen, Yao et al., 2024; Guan et al., 2024; Wang and Zhong, 2024), while the convenience 
+characteristic streamlines these traditionally time-consuming tasks through automated 
+26 
+K. LIU ET AL.
+
+===== PAGE 28 =====
+workflows (De Zarzà et al., 2023; Jiao et al., 2024). This synergy manifests in comprehen­
+sive planning scenarios, where LLMs maintain analytical rigor while automating complex 
+administrative processes. For example, in infrastructure management and land use plan­
+ning, LLMs combine detailed spatial analysis with efficient data processing (Sarzaeim 
+et al., 2024; Zhu et al., 2024), demonstrating how these characteristics work together 
+in static, deliberative contexts. While other characteristics influence this domain, such 
+as trustworthiness in resource allocation (Guan et al., 2024), the synergy between profes­
+sionalism and convenience reveals that long-term urban planning fundamentally 
+requires both methodical precision and operational efficiency.
+In the Area of Public Services and Participation, the characteristics of inclusivity and 
+convenience demonstrate evident synergy. Through multilingual processing and fairness 
+correction technologies, LLMs’ inclusivity enables public service systems to overcome 
+language and cultural barriers, ensuring diverse perspectives are treated equitably 
+(Bozkir et al., 2024; Fu et al., 2024; Li, Haider et al., 2024; Zhou, Lin et al., 2024). The 
+convenience characteristic frequently accompanies this inclusivity, manifesting 
+through automated feedback systems and real-time data processing capabilities (Bozkir 
+et al., 2024; Fu et al., 2024; Zhou, Lin et al., 2024; Zhu et al., 2024). The interaction of 
+these characteristics is particularly visible in public participation processes, where 
+LLMs facilitate efficient collection and analysis of diverse public input while ensuring 
+accessibility for different community groups (Wong et al., 2023; Cruz-Castro et al., 
+2024). For instance, in processing public feedback, LLMs can simultaneously handle mul­
+tiple languages and provide rapid responses (Fu et al., 2024; Zhou, Lin et al., 2024). While 
+other characteristics influence this domain, such as professionalism in maintaining 
+service quality (Chen, Yao et al., 2024), the prominent synergy between inclusivity and 
+convenience indicates that effective public service delivery inherently depends on achiev­
+ing both accessibility and swift responsiveness.
+In the Area of Transportation and Urban Mobility, unlike the relatively static nature of 
+planning and management tasks, convenience and professionalism exhibit a dynamic, 
+real-time synergistic relationship. The convenience characteristic enables instant 
+responses to changing traffic conditions (Tang, Dai et al., 2024; Wang, Pang et al., 
+2024), while professionalism ensures these rapid adjustments are grounded in accurate 
+analysis (Zhang, Fu et al., 2024). This creates a continuous feedback loop where quick 
+responses and precise analysis reinforce each other. In adaptive traffic management, 
+this dynamic synergy enables systems to simultaneously process real-time data and 
+implement immediate adjustments (Jiao et al., 2024; Li, Xia et al., 2024). The iterative 
+interaction between rapid response capabilities and analytical precision distinguishes 
+transportation management from static planning tasks. While trustworthiness plays a 
+role in ensuring data reliability (Wang, Pang et al., 2024), the cyclical synergy between 
+convenience and professionalism emphasizes the critical need for real-time responsive­
+ness and continuous optimization in dynamic urban mobility systems.
+In the Area of Environmental Monitoring and Sustainability, professionalism and 
+trustworthiness show strong synergistic interaction in managing complex environmental 
+data. Analysis reveals that LLMs’ professionalism enables precise integration of diverse 
+environmental datasets through multimodal and spatiotemporal data processing 
+JOURNAL OF URBAN TECHNOLOGY 
+27
+
+===== PAGE 29 =====
+(Liang et al., 2024; Li, Xia et al., 2024; Yang and Mekies, 2024), while trustworthiness 
+ensures transparency in data handling and decision-making processes (Bozkir et al., 
+2024; Cugurullo and Xu, 2024). The synergy between these characteristics is evident in 
+environmental assessment tasks, where LLMs simultaneously maintain high accuracy 
+in data analysis while ensuring transparent reporting of environmental impacts (Wang 
+and Zhong, 2024; Chen, Yao et al., 2024). For example, in monitoring urban air 
+quality, LLMs combine precise sensor data analysis with transparent decision-making 
+processes (Li, Xia et al., 2024; Yang and Mekies, 2024). While convenience facilitates 
+rapid data processing (Jiao et al., 2024), the complementary functions of professionalism 
+and trustworthiness in environmental monitoring illuminate the inherent need for both 
+technical accuracy and public accountability within this domain.
+In the Area of Urban Design and Architecture, professionalism and inclusivity 
+demonstrate distinctive synergistic effects in addressing diverse design needs within 
+complex urban environments. LLMs’ professionalism ensures compliance with techni­
+cal standards and regulations through advanced information processing (Chen, Yao 
+et al., 2024; Zhang, Xiang et al., 2024), while inclusivity enables adaptation to varied 
+cultural preferences and community requirements (Liang et al., 2024; Zhang, Xiang 
+et al., 2024). This synergy manifests uniquely in urban design projects, where LLMs 
+balance technical precision with cultural sensitivity. In architectural planning, LLMs 
+combine regulatory compliance with culturally adaptive design solutions (Zeng et al., 
+2024; Zhu et al., 2024), ensuring that urban spaces are both technically sound and cul­
+turally resonant. For example, when designing public spaces, LLMs can incorporate 
+both structural safety standards and local cultural elements into their recommendations 
+(Chen, Yao et al., 2024; Zhang, Xiang et al., 2024). While trustworthiness plays a role in 
+ensuring design validation and community acceptance (Chen, Yao et al., 2024), the 
+synergy between professionalism and inclusivity highlights the essential need to inte­
+grate universal technical standards with diverse cultural and social considerations in 
+contemporary urban design practice.
+Evaluating the Potential and Limitations of LLMs in Urban Planning
+Although LLMs exhibit immense potential in urban planning applications, current 
+research remains largely exploratory, lacking sufficient discussion on whether these tools 
+truly align with specific use cases. Drawing from past experiences, such as PSS and com­
+puter-aided planning, we have seen that an over-reliance on such new tools can result in 
+the ‘law of the instrument’ effect—treating all planning problems as solvable by a single 
+tool (Matti et al., 2017). This caution should similarly extend to the application of LLMs.
+Despite some preliminary successes in areas such as urban governance and intelligent 
+transportation systems, the adaptability of LLMs in urban planning remains limited. 
+These limitations reflect broader challenges in the evolution from smart cities to AI 
+urbanism, where autonomous decision-making capabilities must navigate complex 
+urban contexts (Caprotti et al., 2024). From a technical component perspective, 
+current research reveals specific performance disparities across different LLM implemen­
+tations. For instance, while text understanding and generation technologies perform 
+effectively in policy document analysis and citizen feedback processing, they struggle 
+28 
+K. LIU ET AL.
+
+===== PAGE 30 =====
+with the semantic complexity and domain-specific terminology characteristic of urban 
+planning discourse (Sharan et al., 2023; Bhandari et al., 2024).
+Similarly, knowledge management and learning capabilities demonstrate success in 
+retrieving planning regulations and historical cases but exhibit limitations when integrat­
+ing contradictory or incomplete information sources commonly encountered in planning 
+practice (Arrotta et al., 2024; Zhang, Fu et al., 2024,). Models such as TrafficGPT and City- 
+LEO have demonstrated the advantages of LLMs in traffic signal control and urban man­
+agement, succeeding primarily because these applications involve structured data 
+environments with clear performance metrics and limited stakeholder complexity (Jiao 
+et al., 2024; Zhang, Fu et al., 2024). Nevertheless, when these models are applied to 
+larger, more complex urban environments, their performance is often constrained by 
+three primary categories of challenges that reflect both technical limitations and 
+broader socio-institutional complexities inherent in urban planning contexts.
+First, LLMs struggle with real-time data integration and synchronization across 
+different urban systems, reflecting fundamental limitations in multimodal integration 
+and cross-domain integration technologies that are essential for urban planning appli­
+cations. Current data processing and analysis capabilities cannot adequately handle the 
+temporal complexity and format heterogeneity characteristic of dynamic urban environ­
+ments, as evidenced in transportation management scenarios, where the models face 
+difficulties in simultaneously processing real-time traffic sensor data, historical traffic 
+patterns, and urban event information to make timely decisions (De Zarzà et al., 
+2023). Similarly, existing multimodal integration approaches remain insufficient for 
+managing the scale and diversity of real-time urban data streams, demonstrated by chal­
+lenges in environmental monitoring, where LLMs must integrate diverse data types from 
+various sources, such as air quality sensors and satellite imagery, while maintaining data 
+consistency and accuracy (Guan et al., 2024).
+While these integration challenges might appear novel, they reflect a long-standing 
+evolution in urban planning tools. Traditional GIS like ArcGIS (Yeh, 1999) and early 
+urban modeling tools like CUBE and EMME/2 approached data integration through pre­
+defined, structured workflows with clear data hierarchies (Boyce, 2002). These systems 
+excelled in processing structured spatial data but were limited by their inability to 
+handle unstructured information. Decision support systems like What if? and Commu­
+nityViz similarly relied on explicit rule-based processes (Klosterman and Akron, 2001; 
+Lieske and Hamerlinck, 2015), offering reliable performance within designed parameters 
+but lacking flexibility for dynamic data integration. LLMs attempt to overcome these his­
+torical limitations through more flexible data processing capabilities, yet the challenge of 
+maintaining data consistency and accuracy across diverse, real-time data streams remains 
+a significant technical hurdle that highlights the ongoing limitations of current technol­
+ogy domains in addressing the temporal and semantic complexity inherent in contem­
+porary urban systems.
+Second, the scalability of LLM applications presents significant challenges when 
+moving from district-level to city-wide implementations, revealing limitations in intelli­
+gent systems and simulation capabilities that are critical for comprehensive urban plan­
+ning. LLMs continue to face technical challenges in maintaining consistent performance 
+and accuracy when processing complex, interrelated datasets at larger scales, particularly 
+when knowledge management and learning systems must handle the multi-level, multi- 
+JOURNAL OF URBAN TECHNOLOGY 
+29
+
+===== PAGE 31 =====
+dimensional data that encompasses spatial, temporal, and socioeconomic factors 
+inherent in urban environments (Kuftinova et al., 2024; Luo et al., 2024). While these 
+models demonstrate effectiveness in managing localized planning tasks, their perform­
+ance often deteriorates when handling the increased complexity and interconnectedness 
+of larger urban systems (Liang et al., 2024). Indicating that current technology domains 
+lack the architectural capacity to maintain analytical rigor across expanding spatial and 
+institutional scales.
+This scalability issue presents an interesting contrast to earlier urban simulation 
+systems. For instance, pioneering tools like UrbanSim and MEPLAN managed city- 
+scale analyses through modular, compartmentalized approaches, breaking down 
+complex urban systems into discrete components with clear computational boundaries 
+(Hunt and Simmonds, 1993; Waddell, 2002). While these earlier systems achieved com­
+putational stability through structured simplification, they often failed to capture the 
+nuanced interactions between urban components (Iacono et al., 2008). LLMs represent 
+a shift toward more sophisticated modeling of urban complexities that aligns with AI 
+urbanism’s emphasis on adaptive and autonomous systems (Cugurullo, 2020) yet achiev­
+ing the same level of computational reliability at larger scales remains an ongoing chal­
+lenge in this paradigmatic transition toward more integrated urban intelligence systems.
+Another significant issue is that the social and ethical adaptability of LLMs has not yet 
+received sufficient attention. This is reflected in the lack of research in related areas, par­
+ticularly in discussions surrounding transparency, fairness, and ethical responsibility. 
+Studies have shown that LLMs may exhibit bias when handling socially sensitive 
+issues, especially in multilingual or multicultural contexts (Fu et al., 2024; Li, Haider 
+et al., 2024; Wang, Jiang et al., 2024). For instance, research reveals that LLMs trained 
+on data from predominantly developed urban areas may generate planning recommen­
+dations that overlook the unique challenges and solutions found in informal settlements 
+or developing regions (Cugurullo and Xu, 2024). In multilingual environments, these 
+models often show varying levels of comprehension and response quality across 
+different language groups, potentially leading to unequal access to urban services and 
+participation opportunities (Zhou, Lin et al., 2024).
+In the field of urban planning, which involves public and multiple stakeholder inter­
+ests, technological decisions need not only to be effective but also to ensure fairness and 
+transparency (Cugurullo and Xu, 2024; Jiao et al., 2024; Yang et al., 2024a; Zhou, Lin 
+et al., 2024). This becomes particularly critical in applications such as public resource 
+allocation or community development planning. For example, when processing public 
+feedback for urban renewal projects, LLMs might inadvertently prioritize inputs from 
+technologically proficient groups while underrepresenting communities with limited 
+digital access (Jiao et al., 2024). This challenge of equitable representation recalls 
+earlier experiences with participatory planning tools like Public Participation GIS 
+(PPGIS) and Geodesign platforms.
+While these traditional tools faced accessibility barriers due to their technical com­
+plexity, they provided explicit, traceable decision-making processes that users could 
+understand and verify (Brown and Kyttä, 2014). Similarly, early sketch planning tools 
+like INDEX and CommunityViz emphasized transparency through visual feedback 
+and clear analytical rules (Lieske and Hamerlinck, 2015). In contrast, LLMs offer more 
+intuitive interaction through natural language processing, potentially broadening 
+30 
+K. LIU ET AL.
+
+===== PAGE 32 =====
+participation, but their “black box” nature of decision making can hinder public trust and 
+accountability, especially in contexts where planning decisions significantly affect com­
+munity well-being (Zhou, Lin et al., 2024).
+Existing research provides a broad outline of LLMs’ applications yet ensuring their 
+effectiveness in broader and more complex contexts will require future studies to 
+possess several key characteristics. First, research should further enhance LLMs’ ability 
+to process multimodal data, enabling the integration of real-time information from 
+diverse sources such as visual, linguistic, and geospatial data, thus providing more accu­
+rate decision-making support in complex urban environments (De Zarzà et al., 2023; 
+Bhandari et al., 2024; Guan et al., 2024; Liang et al., 2024). This improvement would 
+enhance LLMs’ adaptability and flexibility when handling complex scenarios (Jiao 
+et al., 2024; Wang and Zhong, 2024; Zeng et al., 2024).
+Moreover, there is a need to develop stronger localization capabilities for LLMs. This 
+entails optimizing global models based on regional cultural, linguistic, and socioeco­
+nomic contexts, thereby mitigating the biases currently observed in multilingual and 
+multicultural environments (Chen, Yu et al., 2024; Li, Haider et al., 2024; Zhou, Lin 
+et al., 2024; Zhu et al., 2024). In addition to these technical improvements, future research 
+should emphasize transparency and accountability mechanisms. This is essential to 
+ensure that, when applied in public decision making and governance, the models can 
+be widely monitored and understood by society (Cugurullo and Xu, 2024; Zhou, Lin 
+et al., 2024). Developing more transparent algorithms and interpretive tools would 
+allow the decision-making logic of LLMs to be clearly traceable, which could enhance 
+public trust and ensure fairness in practical applications.
+Furthermore, as the application of LLMs in socially sensitive issues becomes more 
+prevalent, it is crucial to incorporate ethical and fairness frameworks into their design. 
+This would ensure that their use in public policy and civic engagement consistently 
+aligns with standards of fairness and ethics (Bozkir et al., 2024; Li, Haider et al., 2024; 
+Zhou, Lin et al., 2024). Such frameworks would help prevent misuse and decision- 
+making biases, safeguarding the fairness of AI-driven decisions for all societal groups.
+The analysis of these potentials and limitations in LLM applications provides impor­
+tant insights for developing systematic approaches to urban planning integration. The 
+demonstrated capabilities in data processing, multimodal integration, and real-time 
+decision support suggest the possibility of progressive technological development 
+paths. Meanwhile, the current limitations in technical adaptability and social-ethical con­
+siderations emphasize the importance of incorporating robust optimization mechanisms 
+in future implementations. These findings collectively point toward the need for a struc­
+tured framework that can guide both the technical advancement and practical implemen­
+tation of LLMs in urban planning, while ensuring their effectiveness across various 
+planning domains.
+Towards a Conceptual Framework of LLM in Urban Planning
+Based on a systematic literature review, we recognize that the four key characteristics of 
+LLMs—professionalism, inclusivity, trustworthiness, and convenience—are not isolated or 
+parallel attributes but are interdependent. These characteristics function synergistically 
+to ensure the effectiveness of LLMs in various urban planning scenarios. By integrating 
+JOURNAL OF URBAN TECHNOLOGY 
+31
+
+===== PAGE 33 =====
+these features, LLMs are capable of handling complex planning tasks, addressing both 
+data processing and decision-making demands. With this hierarchical understanding, 
+this study proposes a conceptual framework for the application of LLMs in urban plan­
+ning (See Figure 5). Through a hierarchical structure comprising four distinct roles and a 
+feedback mechanism, the framework demonstrates how LLMs can evolve from basic 
+knowledge management to sophisticated planning collaboration while systematically 
+addressing current limitations. The significance of this framework lies in its dual contri­
+bution. It not only outlines the developmental trajectory of LLM technology but also pro­
+vides researchers and practitioners with a clear perspective on how LLMs can be applied 
+across different roles within the urban planning domain.
+In the initial stage of evolution, LLMs function primarily as Knowledge Managers, 
+utilizing pre-trained models and domain-specific knowledge to assist planners in 
+managing and retrieving vast amounts of urban planning knowledge and regulations. 
+For instance, Zhu et al. (2024) demonstrated LLMs’ effectiveness in organizing and 
+processing massive planning policies and regulatory documents through semantic 
+analysis techniques, substantially reducing planners’ information retrieval time. 
+Studies by Chen, Yao et al. (2024) and Li, Xia et al. (2024) documented the systematic 
+capabilities of LLMs in categorizing planning cases and historical decisions based on 
+multiple attributes, including context relevance and regulatory alignment, enabling 
+more efficient application of knowledge in new planning scenarios. This indicates 
+that as a Knowledge Manager, this stage shows potential in addressing the knowledge 
+integration challenges, particularly in synthesizing fragmented planning knowledge 
+and complex regulatory frameworks that traditionally require extensive professional 
+experience to navigate.
+However, this role also reveals important constraints. While demonstrating high pro­
+fessionalism in knowledge organization and retrieval, its effectiveness remains limited to 
+static, text-based information. The model struggles with incorporating dynamic urban 
+information and cross-domain knowledge integration (Toetzke et al., 2023), indicating 
+the need for more advanced capabilities to address complex urban planning challenges. 
+Such constraints in static data processing reveal the need for more dynamic capabilities, 
+propelling the development of advanced LLM functionalities.
+With advancing capabilities in natural language processing and computation, LLMs 
+evolve into a Diverse Data Platform role. At this stage, LLMs demonstrate enhanced 
+ability to integrate and process heterogeneous urban data, including textual, visual, 
+and spatial information. For example, Wang, Pang et al. (2024) demonstrated LLMs’ 
+capability in synthesizing diverse data sources including citizen feedback, spatial plan­
+ning data and policy documents to generate comprehensive urban development insights 
+through integrated analysis techniques. The research by Liang et al. (2024) and Zhang, Fu 
+et al. (2024) further illustrates LLMs’ capability to process multimodal urban data, effec­
+tively analyzing urban images alongside textual descriptions to support planning 
+decisions. This indicates that as a Diverse Data Platform, this stage shows potential in 
+addressing the multimodal integration challenges, particularly in bridging the gap 
+between different data formats and sources that traditionally exist in isolated systems. 
+Through improved inclusivity and data processing capabilities, LLMs at this stage can 
+help planners better understand the multifaceted nature of urban environments. 
+However, while this role represents significant progress in data integration, it still faces 
+32 
+K. LIU ET AL.
+
+===== PAGE 34 =====
+Figure 5: Conceptual framework of LLM in urban planning
+JOURNAL OF URBAN TECHNOLOGY 
+33
+
+===== PAGE 35 =====
+limitations in real-time processing and dynamic adaptation. Studies by De Zarzà et al. 
+(2023) and Blečić et al. (2024) point out that when faced with rapidly changing urban 
+scenarios, the platform’s response time and processing efficiency need further optimiz­
+ation. The challenges in real-time processing underscore a critical technological gap, 
+marking the transition towards more sophisticated analytical frameworks.
+The progression of LLM technology enables the model to advance into an Intelligent 
+Assistant role for handling dynamic scenarios. At this stage, LLMs exhibit advanced capa­
+bilities in real-time analysis and decision support for urban planning tasks. For instance, 
+Tang, Dai et al. (2024) demonstrated how LLMs can provide instant recommendations 
+for traffic signal optimization by processing real-time traffic flow data and historical pat­
+terns simultaneously. Studies by Guan et al. (2024) and Wang and Zhong (2024) further 
+showcase LLMs’ ability to offer dynamic decision support in urban resource allocation, 
+adapting recommendations based on changing urban conditions.
+This indicates that as an Intelligent Assistant, this stage shows potential in addres­
+sing the real-time decision-making challenges, particularly in scenarios requiring 
+rapid response and adaptive planning strategies. Through enhanced processing capa­
+bilities and real-time adaptation, LLMs at this stage can support planners in making 
+informed decisions under dynamic conditions. However, while this role demonstrates 
+significant advancement in handling real-time scenarios, it still faces challenges in 
+managing large-scale complex urban systems. Research by Momennejad et al. 
+(2023) and Otal et al. (2024) reveals that when dealing with city-wide systems invol­
+ving multiple interacting components, the model’s accuracy and response speed 
+require further improvement. While showing promise in localized applications, 
+these scalability challenges highlight the importance of developing more robust colla­
+borative mechanisms.
+The highest level of LLM development manifests in their role as Collaborative Plan­
+ning Experts, designed to work closely with human planners in complex decision- 
+making scenarios. At this stage, LLMs demonstrate sophisticated capabilities in facilitat­
+ing multi-stakeholder collaboration and cross-disciplinary planning processes. For 
+example, Zhou, Lin et al. (2024) evaluated LLMs’ effectiveness in mediating stakeholder 
+communications in urban development projects, where the models successfully trans­
+lated complex planning concepts into accessible language for different audiences 
+without compromising technical accuracy. Research by Cugurullo and Xu (2024) 
+further demonstrates LLMs’ ability to integrate expert knowledge with public feedback, 
+helping planners balance technical requirements with community needs.
+This indicates that as a Collaborative Planning Expert, this stage shows potential in 
+addressing the social-ethical challenges, particularly in enhancing transparency in 
+decision making and ensuring inclusive planning processes. Through advanced inter­
+action capabilities and cross-disciplinary knowledge integration, LLMs at this stage 
+can support more participatory and equitable urban planning practices. However, 
+current research suggests this role remains partially aspirational. Studies by Guan et al. 
+(2024) and Li, Xia et al. (2024) indicate that achieving true collaborative expertise 
+requires further advancement in human-AI interaction and ethical decision-making 
+frameworks. While some systems demonstrate promising capabilities in controlled 
+environments, fully realizing this role depends on continued progress in multimodal 
+AI, cross-cultural adaptation, and transparent decision-making processes.
+34 
+K. LIU ET AL.
+
+===== PAGE 36 =====
+The analysis of these four developmental roles reveals that the effectiveness and evol­
+ution of each role depends heavily on learning from practical implementations. From the 
+Knowledge Manager’s need to refine information retrieval processes to the Collaborative 
+Planning Expert’s requirement for adaptive interaction capabilities, the necessity for sys­
+tematic feedback becomes evident. This recognition of feedback’s importance across all 
+roles emphasizes the feedback and technical optimization mechanism as a critical com­
+ponent that connects and enhances all developmental roles while enabling continuous 
+improvement.
+Throughout this evolutionary process, the Feedback and Technical Optimization 
+mechanism serves as a critical driving force that connects and enhances all developmen­
+tal roles while enabling continuous improvement. Through systematic collection and 
+analysis of real-world application data, this component enables LLMs to refine their 
+capabilities from basic knowledge management to sophisticated collaborative planning. 
+For instance, Yang et al. (2024a) found that continuous feedback from planning practice 
+significantly improves LLMs’ capabilities in knowledge organization and multimodal 
+processing, resulting in enhanced accuracy and contextual awareness in their responses.
+Studies by Wang and Zhong (2024) and Zhou, Lin et al. (2024) further revealed that 
+user interaction data and implementation outcomes play a crucial role in strengthening 
+LLMs’ decision-making processes and social adaptability. This continuous optimization 
+process helps address several limitations identified in the framework. It improves knowl­
+edge retrieval accuracy, enhances data integration capabilities, optimizes real-time 
+responses, and refines collaborative interactions across the various roles LLMs can 
+play in urban planning. The feedback mechanism thus ensures that LLMs can progress­
+ively enhance their performance in complex urban environments, learning from practical 
+applications to better serve diverse planning needs. However, implementing effective 
+feedback systems presents its own challenges. Research by Li, Xia et al. (2024) and 
+Guan et al. (2024) highlights that maintaining data quality and ensuring representative 
+feedback across different urban contexts requires careful consideration. These findings 
+emphasize that while the feedback mechanism is essential for advancing LLM capabilities 
+across all roles, its effectiveness depends on systematic implementation and continuous 
+refinement of optimization processes.
+Conclusion
+This systematic review has addressed a significant knowledge gap in our understanding 
+of how LLMs are transforming urban planning practice. Through analyzing 58 carefully 
+selected studies, we have traced the emergence of a new technological paradigm that 
+extends far beyond traditional planning support systems to encompass sophisticated 
+AI-driven capabilities that promise to reshape how cities are planned, managed, and 
+governed.
+The analysis reveals that LLM applications in urban planning are not simply about 
+technological efficiency—they represent a fundamental shift toward more adaptive, 
+responsive, and potentially democratic planning processes. Our identification of five 
+key application domains demonstrates how LLMs are addressing longstanding chal­
+lenges across the full spectrum of planning activities, from strategic management and 
+public participation to environmental monitoring and urban design. Perhaps most 
+JOURNAL OF URBAN TECHNOLOGY 
+35
+
+===== PAGE 37 =====
+significantly, the four characteristics we identified—professionalism, inclusivity, trust­
+worthiness, and convenience—emerge not as isolated technical features but as intercon­
+nected qualities that collectively address the complex, multifaceted nature of 
+contemporary urban challenges.
+This research makes important advances to urban planning theory by providing the 
+first comprehensive framework for understanding AI integration as an evolutionary 
+process rather than a simple technology adoption decision. The four-stage developmental 
+model we propose, ranging from Knowledge Managers to Collaborative Planning 
+Experts, offers planning theory its first systematic approach to analyzing how emerging 
+technologies mature within professional practice contexts. This framework addresses a 
+critical gap in planning theory regarding the relationship between technological capa­
+bility development and institutional readiness.
+Our analysis reveals that LLM effectiveness emerges from the complex interplay 
+between different characteristics rather than from any single technical capability. The 
+synergistic relationships we identified between professionalism, inclusivity, trustworthi­
+ness, and convenience across different planning domains demonstrate that successful AI 
+integration requires understanding how these qualities reinforce each other in specific 
+planning contexts. This finding suggests that future LLM development should move 
+beyond optimizing individual features toward creating systems that balance multiple 
+characteristics simultaneously.
+The practical implications of this research extend well beyond academic understand­
+ing. For planning organizations grappling with whether and how to integrate AI systems, 
+our characteristic framework provides a systematic evaluation tool that can guide tech­
+nology selection and implementation strategies. Rather than being overwhelmed by tech­
+nical specifications, planners can assess whether specific LLM implementations possess 
+the necessary combination of characteristics for their intended applications, such as 
+prioritizing professionalism and convenience for analytical tasks, or inclusivity and con­
+venience for public participation processes.
+For policymakers, our findings highlight critical areas requiring immediate atten­
+tion. The analysis reveals a concerning imbalance in current LLM development tra­
+jectories: while research heavily emphasizes technical applications focused on 
+efficiency and automation, there is insufficient attention to security, privacy, 
+ethical considerations, and democratic participation. This concentration of research 
+in technical applications versus the limited attention to governance concerns reveals 
+significant gaps that could undermine public trust in AI-assisted planning and poses 
+risks to the participatory and equity-focused values that define contemporary plan­
+ning practice. The scalability challenges we identified further suggest that successful 
+LLM deployment requires not just technological advancement but also institutional 
+capacity building and regulatory frameworks that can evolve alongside the 
+technology.
+Looking ahead, this research points toward the need for what we might call “respon­
+sible AI urbanism,” an approach that harnesses the powerful capabilities of LLMs while 
+maintaining the democratic, participatory, and equity-focused values that define good 
+planning practice. This will require not just better technology, but better frameworks 
+for ensuring that AI systems serve to enhance rather than replace human judgment in 
+planning decisions.
+36 
+K. LIU ET AL.
+
+===== PAGE 38 =====
+The feedback and optimization mechanism central to our framework suggests that 
+successful LLM integration is an iterative process requiring continuous learning and 
+adaptation. This insight has important implications for how planning education, pro­
+fessional development, and research priorities should evolve to meet the challenges 
+and opportunities of an AI-enhanced planning practice.
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+Funding
+This research was funded by the Australian Research Council Discovery Grant Scheme, grant 
+number DP220101255.
+Conflicts of Interest
+The authors declare no conflict of interest.
+Notes on contributors
+Ke Liu is a PhD student at Queensland University of Technology (QUT) and is a research assistant 
+on the Responsible Urban Innovation with Artificial Intelligence Systems for Local Governments 
+project. His research focuses on large language models (LLMs), human–AI interaction in urban 
+planning, prompt engineering, and AI governance.
+Tan Yigitcanlar is a globally renowned Australian researcher in urban sustainability, technology, 
+and planning. Hi is a professor at Queensland University of Technology (QUT)where he leads the 
+Urban AI Hub, City 4.0 Lab, and Smart City Research Group. A member of the ARC College of 
+Experts, he has held appointments in five countries. With 350+ articles, 35 books, and 33,000+ 
+citations, he ranks #1 in Australia and top 10 globally in urban studies, recognized among the 
+world’s top 1 percent of researchers.
+Rashid Mehmood is Professor of High Performance Data Analytics at the Islamic University of 
+Madinah, where he directs the Centre for Technology Governance. His expertise lies in big data 
+systems, distributed computing, high-performance computing, and computational intelligence, 
+with applications in smart cities, IoT, real-time intelligence, and autonomous systems. 
+Juan Manuel Corchado is a professor in computer science and automation at the University of 
+Salamanca, where he directs the BISITE Research Group and the IoT Digital Innovation Hub. 
+He also holds visiting positions at Osaka Institute of Technology and Universiti Malaysia Kelan­
+tan. His research covers artificial intelligence, IoT, edge and fog computing, smart cities, fintech, 
+blockchain, and cybersecurity. 
+Xinyu Fu is an assistant professor in the Department of Landscape Architecture and Urban Plan­
+ning at Texas A&M University. His research focuses on integrating computational approaches into 
+urban planning, including text mining, natural language processing (NLP), and advanced analytic 
+methods.
+ORCID
+Tan Yigitcanlar 
+http://orcid.org/0000-0001-7262-7118
+JOURNAL OF URBAN TECHNOLOGY 
+37
+
+===== PAGE 39 =====
+References
+E. R. Alexander, Evaluation in Planning: Evolution and Prospects (London: Routledge, 2016).
+P. Allmendinger, Planning Theory (3rd ed.) (London: Palgrave Macmillan, 2017).
+L. Arrotta, C. Bettini, G. Civitarese, and M. Fiori, “ContextGPT: Infusing LLMs Knowledge into 
+Neuro–Symbolic Activity Recognition Models,” in Proceedings of the 2024 IEEE International 
+Conference on Smart Computing (SMARTCOMP) (Osaka, Japan, 2024) 55–62. https://doi. 
+org/10.1109/SMARTCOMP61445.2024.00029.
+M. Batty, “Artificial Intelligence and Smart Cities,” Environment and Planning B: Urban Analytics 
+and City Science 45: 1 (2018) 3–6. https://doi.org/10.1177/2399808317751169.
+P. Bhandari, A. Anastasopoulos, and D. Pfoser, “Urban Mobility Assessment Using LLMs,” in 
+Proceedings of the 32nd ACM International Conference on Advances in Geographic Information 
+Systems (SIGSPATIAL ’24) (New York, USA, 2024) 67–79. https://doi.org/10.1145/3678717.3691221
+I. Blečić, V. Saiu, and G. Trunfio, “Enhancing Urban Walkability Assessment with Multimodal 
+Large Language Models,” ICCSA 2024 Workshops: Computational Science and its 
+Applications (Singapore: Springer, 2024) 394–411.
+D. Boyce, “Is the Sequential Travel Forecasting Paradigm Counterproductive?” Journal of Urban 
+Planning 
+and 
+Development 
+4 
+(2002) 
+169–183. 
+https://doi.org/10.1061/(ASCE)0733- 
+9488(2002)128:4(169).
+E. Bozkir, S. Özdel, K. Lau, M. Wang, H. Gao, and E. Kasneci, “Embedding Large Language Models 
+Into Extended Reality,” Proceedings of the 6th ACM Conference on Conversational User 
+Interfaces (CUI ‘24), Association for Computing Machinery (New York, 2024) 1–7. https:// 
+doi.org/10.1145/3640794.3665563.
+B. Bratton, “Ai Urbanism: A Design Framework for Governance, Program, and Platform 
+Cognition,” AI & Society 36: 4 (2021) 1307–1312. https://doi.org/10.1007/s00146-020-01121-9.
+V. Braun and V. Clarke, “Using Thematic Analysis in Psychology,” Qualitative Research In 
+Psychology 3: 2 (2006) 77–101. https://doi.org/10.1191/1478088706qp063oa.
+G. Brown and M. Kyttä, “Key Issues And Research Priorities For Public Participation GIS (PPGIS): 
+A Synthesis Based on Empirical Research,” Applied Geography 46 (2014) 122–136. https://doi. 
+org/10.1016/j.apgeog.2013.11.004.
+T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. 
+Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, 
+D. M. Ziegler, J. Wu, C. Winter, and D. Amodei, “Language Models are Few-Shot Learners,” 
+Advances In Neural Information Processing Systems 33 (2020) 1877–1901. https://doi.org/10. 
+48550/arXiv.2005.14165.
+E. Buitrago-Esquinas, M. Puig-Cabrera, J. Santos, M. Custódio-Santos, and R. Yñiguez-Ovando, 
+“Developing a Hetero-Intelligence Methodological Framework for Sustainable Policy-Making 
+Based on the Assessment of Large Language Models,” MethodsX 12 (2024). https://doi.org/ 
+10.1016/j.mex.2024.102707.
+L. Cadier and C. Mar-Molinero, “Negotiating Networks of Communication in a Superdiverse 
+Environment,” Multilingua 33 (2014) 505–524. https://doi.org/10.1515/multi-2014-0026.
+S. D. Campbell, “Sustainable Development and Social Justice: Conflicting Urgencies and the 
+Search for Common Ground in Urban and Regional Planning,” Michigan Journal Of 
+Sustainability 1 (2013). https://doi.org/10.3998/mjs.12333712.0001.007.
+F. Caprotti, F. Cugurullo, M. Cook, A. Karvonen, S. Marvin, P. McGuirk, and A.-M. Valdez, “Why 
+does Urban Artificial Intelligence (AI) Matter for Urban Studies? Developing Research 
+Directions in Urban AI Research,” Urban Geography 45: 5 (2024) 883–894. https://doi.org/ 
+10.1080/02723638.2024.2329401.
+C. Cardullo and R. Kitchin, “Being A ‘Citizen’ in the Smart City: Up and Down the Scaffold of 
+Smart Citizen Participation in Dublin, Ireland,” GeoJournal 84 (2019) 1–13. https://doi.org/ 
+10.1007/s10708-018-9845-8.
+C. Chan, W. Chen, Y. Su, J. Yu, W. Xue, S. Zhang, J. Fu, and Z. Liu, “Chateval: Towards Better 
+LLM-Based Evaluators Through Multi-Agent Debate,” arXiv (2023) 1–16. https://doi.org/10. 
+48550/arXiv.2308.07201.
+38 
+K. LIU ET AL.
+
+===== PAGE 40 =====
+T. Chang and B. Bergen, “Language Model Behavior: A Comprehensive Survey,” Computational 
+Linguistics 50 (2024) 293–350. https://doi.org/10.1162/coli_a_00492.
+K. Charmaz, Constructing Grounded Theory (2nd ed.) (London: SAGE Publications, 2014).
+C. Chen, H. Yu, and Y. Guo, “Perception And Reality: Urban Green Space Analysis Using Language 
+Model-Based Social Media Insights,” in N. Gardner, C. Herr, L. Wang, T. Hirano, and S. Khan, 
+eds., Proceedings Of The 29th CAADRIA Conference (Singapore, April 20–26, 2024) 119–128.
+R. Chen, X. Yao, X. Jiang, Z. Han, J. Guo, X. Zhang, C. Lin, C. Liu, J. Zhao, Z. Lian, J. Zhang, and K. 
+Li, “HSC-GPT: A Large Language Model for Human Settlements Construction,” CoRR abs/ 
+2401.00504 (2024). https://doi.org/10.48550/arXiv.2401.00504.
+T. Ching and A. Chua, “Early Exploration Of GPT-4’s Abilities in the Context of Urban Planning 
+and Design in Singapore,” Urban Redevelopment Authority (2023). https://www.ura.gov.sg/-/ 
+media/Corporate/Resources/Ideas/AI-GPT4-abilities-planning/2023_04_17_UrbanPlanning_ 
+GPT4.pdf. Accessed 18 January 2025.
+P. Bhandari, A. Anastasopoulos, and D. Pfoser, “Urban Mobility Assessment Using LLMs,” in 
+Proceedings of the 32nd ACM International Conference on Advances in Geographic 
+Information Systems (SIGSPATIAL ’24) (New York, USA, 2024) 67–79. https://doi.org/10. 
+1145/3678717.3691221
+A. Chowdhery, S. Narang, J. Devlin, M. Bosma, G. Mishra, A. Roberts, P. Barham, H. W. Chung, S. 
+Gehrmann, P. Schuh, C. Sutton, M. Lambert, R. Soricut, J. Hu, A. M. Dai, F. Xia, M. Collins, R. 
+Matthews, and J. Dean, “PaLM: Scaling Language Modeling with Pathways,” Journal of Machine 
+Learning Research 24 (2023) 1–113. https://www.jmlr.org/papers/v24/22-1144.html.
+Y. Chuang, A. Goyal, N. Harlalka, S. Suresh, R. Hawkins, S. Yang, D. Shah, J. Hu, and T. Rogers, 
+“Simulating Opinion Dynamics with Networks of LLM-Based Agents,” arXiv (2024) 1–21. 
+https://doi.org/10.48550/arXiv.2311.09618.
+L. Cruz-Castro, G. Castelblanco, and P. Antonenko, “LLM-Based System For Technical Writing 
+Real-Time Review In Urban Construction And Technology,” Proceedings of the 60th Annual 
+Conference of the Association of Collegiate Schools of Architecture 5 (2024) 130–138.
+F. Cugurullo, “Urban Artificial Intelligence: From Automation to Autonomy in the Smart City,” 
+Frontiers In Sustainable Cities 2, Article 38 (2020). https://doi.org/10.3389/frsc.2020.00038.
+F. Cugurullo and Y. Xu, “When AIs Become Oracles: Generative Artificial Intelligence, 
+Anticipatory Urban Governance, and the Future of Cities,” Policy And Society (2024) 1–18. 
+https://doi.org/10.1093/polsoc/puae025.
+I. de Zarzà, J. de Curtò, G. Roig, and C. Calafate, “LLM Multimodal Traffic Accident Forecasting,” 
+Sensors 23 (2023) 9225. https://doi.org/10.3390/s23229225.
+A. Dingil and O. Pribyl, “Understanding State-of-the-Art Situation of Transport Planning 
+Strategies in Earthquake-Prone Areas by Using AI-Supported Literature Review 
+Methodology,” Heliyon 10 (2024) e33645. https://doi.org/10.1016/j.heliyon.2024.e33645.
+C. Erlingsson and P. Brysiewicz, “A Hands-on Guide to Doing Content Analysis,” African Journal 
+of Emergency Medicine 7: 3 (2017) 93–99. https://doi.org/10.1016/j.afjem.2017.08.001.
+E. Esquinas, R. Ovando, M. Cabrera, M. Santos and J. Santos, “Artificial Intelligence and 
+Sustainable Tourism Planning: A Hetero-Intelligence Methodology Proposal,” Tourism And 
+Management Studies 20 (2024) 45–59. https://doi.org/10.18089/tms.2024SI04.
+D. Fields, “Automated Landlord: Digital Technologies and Post-Crisis Financial Accumulation,” 
+Environment And Planning A: Economy and Space 54: 1 (2022) 160–181. https://doi.org/10. 
+1177/0308518X19846514.
+J. Forester, The Deliberative Practitioner: Encouraging Participatory Planning Processes 
+(Cambridge, MA: MIT Press, 1999).
+M. Foth, ed., From Social Butterfly to Engaged Citizen: Urban Informatics, Social Media, Ubiquitous 
+Computing, and Mobile Technology to Support Citizen Engagement (Cambridge, MA: MIT 
+Press, 2011).
+X. Fu, “Natural Language Processing in Urban Planning: A Research Agenda,” Journal of Planning 
+Literature 39 (2024) 395–407. https://doi.org/10.1177/08854122241229571.
+X. Fu, T. Sanchez, C. Li, and J. Reu Junqueira, “Deciphering Public Voices in the Digital 
+Era: Benchmarking ChatGPT for Analyzing Citizen Feedback in Hamilton, New Zealand,” 
+JOURNAL OF URBAN TECHNOLOGY 
+39
+
+===== PAGE 41 =====
+Journal of the American Planning Association (2024). https://doi.org/10.1080/01944363.2024. 
+2309259.
+X. Fu, R. Wang, and C. Li, “Can ChatGPT Evaluate Plans?” Journal of the American Planning 
+Association 90 (2023) 525–536. https://doi.org/10.1080/01944363.2023.2271893.
+Y. Gao, D. Yu, S. Wang, and H. Wang, “Large Language Model Powered Site Selection 
+Recommender System,” Journal of Computer Research And Development 61 (2024) 
+1681–1696. https://doi.org/10.7544/issn1000-1239.202330629.
+M. F. Goodchild, “The Roots Of GIS,” in A. J. Kent and D. Specht, eds., The Routledge Handbook of 
+Geospatial Technologies and Society (London: Routledge, 2023) 42–49. https://doi.org/10.4324/ 
+9780367855765-5.
+Q. Guan, J. Ouyang, D. Wu, and W. Yu, “CityGPT: Towards Urban IoT Learning, Analysis 
+and Interaction with Multi-Agent System,” arXiv (2024) 1–14. https://doi.org/10.48550/arXiv. 
+2405.14691.
+A. Gundawar, M. Verma, L. Guan, K. Valmeekam, S. Bhambri, and S. Kambhampati, “Robust 
+Planning with LLM-Modulo Framework: Case Study in Travel Planning,” arXiv (2024) 1–7. 
+https://doi.org/10.48550/arXiv.2405.20625.
+P. Hall, Cities Of Tomorrow: An Intellectual History of Urban Planning and Design Since 1880 (4th 
+ed.) (Hoboken, NJ: Wiley, 2014).
+Y. Hao, J. Qi, X. Ma, S. Wu, R. Liu, and X. Zhang, “An LLM-Based Inventory Construction 
+Framework of Urban Ground Collapse Events with Spatiotemporal Locations,” ISPRS 
+International Journal of Geo-Information 13 (2024) 133. https://doi.org/10.3390/ijgi13040133.
+P. Healey, Urban Complexity and Spatial Strategies: Towards a Relational Planning for our Times 
+(London: Routledge, 2006). https://doi.org/10.4324/9780203099414.
+M. He, Y. Liang, S. Wang, Y. Zheng, Q. Wang, D. Zhuang, L. Tian, and J. Zhao, “Generative AI for 
+Urban Design: A Stepwise Approach Integrating Human Expertise with Multimodal Diffusion 
+Models,” arXiv (2025) 1–28. https://doi.org/10.48550/arXiv.2505.24260.
+R. G. Hollands, “Will The Real Smart City Please Stand Up? Intelligent, Progressive Or 
+Entrepreneurial?,” City: Analysis of Urban Trends, Culture, Theory, Policy, Action 12: 3 
+(2008) 303–320. https://doi.org/10.1080/13604810802479126.
+J. Hunt and D. Simmonds, “Theory and Application of an Integrated Land-Use and Transport 
+Modelling Framework,” Environment and Planning B: Planning and Design 20 (1993) 
+221–244. https://doi.org/10.1068/b200221.
+M. Iacono, D. Levinson, and A. El-Geneidy, “Models of Transportation and Land Use Change: A 
+Guide to the Territory,” Journal of Planning Literature 22 (2008) 323–340. https://doi.org/10. 
+1177/0885412207314010.
+Y. Jiang, Q. Chao, Y. Chen, X. Li, S. Liu, and G. Cong, “UrbanLLM: Autonomous Urban Activity 
+Planning and Management with Large Language Models,” arXiv (2024) 1–28. https://doi.org/ 
+10.48550/arXiv.2406.12360.
+Z. Jiao, M. Sha, H. Zhang, X. Jiang, and W. Qi, “City-LEO: Toward Transparent City Management 
+Using LLM with End-to-End Optimization,” arXiv (2024) 1–26. https://doi.org/10.48550/arXiv. 
+2406.10958.
+A. Josh, S. Adler, S. Agarwal, L. Ahmad, L. Akkaya, F. Aleman, and D. Almeida, “GPT-4 Technical 
+Report,” arXiv (2023) 1–100. https://doi.org/10.48550/arXiv.2303.08774.
+R. Kitchin, “The Real-Time City? Big Data and Smart Urbanism,” GeoJournal 79: 1 (2014) 1–14. 
+https://doi.org/10.1007/s10708-013-9516-8.
+R. Klosterman and O. Akron, “The What if? Planning Support System,” in R. K. Brail and R. E. 
+Klosterman, eds., Planning Support Systems – Integrating Geographic Information Systems, 
+Models, and Visualization Tools (Redlands, CA: ESRI Press, 2001) 263–284.
+N. Kuftinova, A. Ostroukh, O. Maksimychev, A. Podberezkin, and A. Volkov, “Large Language 
+Model in Suburban Transport Data Management,” in 2024 Systems of Signals Generating and 
+Processing in the Field of on Board Communications (Moscow, 2024) 1–5. https://doi.org/10. 
+1109/IEEECONF60226.2024.10496733.
+A. Leszczynski, “Glitchy Vignettes of Platform Urbanism,” Environment and Planning D: Society 
+and Space 38: 2 (2020) 189–208. https://doi.org/10.1177/0263775819878721.
+40 
+K. LIU ET AL.
+
+===== PAGE 42 =====
+J. Levy, S. A. Hirt, and C. J. Dawkins, Contemporary Urban Planning (12th ed.) (London: 
+Routledge, 2024). https://doi.org/10.4324/9781003291145.
+B. Li, S. Haider, and C. Callison-Burch, “This Land is {Your, My} Land: Evaluating Geopolitical 
+Bias in Language Models Through Territorial Disputes,” in Proceedings of the 2024 
+Conference of the North American Chapter of the Association for Computational Linguistics: 
+Human Language Technologies (Mexico City, 2024) 3855–3871. https://doi.org/10.18653/v1/ 
+2024.naacl-long.213.
+Z. Li, L. Xia, J. Tang, Y. Xu, L. Shi, L. Xia, D. Yin, and C. Huang, “UrbanGPT: Spatio-Temporal 
+Large Language Models,” in Proceedings of the 30th ACM SIGKDD Conference on Knowledge 
+Discovery and Data Mining (New York, 2024) 5351–5362. https://doi.org/10.1145/3637528. 
+3671578.
+H. Liang, J. Zhang, Y. Li, B. Wang, and J. Huang, “Automatic Estimation for Visual 
+Quality Changes of Street Space Via Street-View Images and Multimodal Large 
+Language Models,” IEEE Access 12 (2024) 87713–87727. https://doi.org/10.1109/ACCESS. 
+2024.3408843.
+S. Lieske and J. Hamerlinck, “Integrating Planning Support Systems and Multicriteria Evaluation 
+for Energy Facility Site Suitability Evaluation,” URISA Journal 26 (2015) 13–24.
+Y. Luo, Z. Cao, X. Jin, K. Liu, and L. Yin, “Deciphering Human Mobility: Inferring Semantics of 
+Trajectories with Large Language Models,” in Proceedings of the 2024 25th IEEE International 
+Conference on Mobile Data Management (MDM) (Brussels, Belgium, 2024) 289–294. https:// 
+doi.org/10.1109/MDM61037.2024.00060.
+B. Malisetty and A. Perez, “Evaluating Quantized Llama 2 Models For IoT Privacy Policy Language 
+Generation,” Future Internet 16: 7 (2024) 224. https://doi.org/10.3390/fi16070224.
+D. K. Markus, F. Gilardi, and D. Stetsenko, “Societal AI Research has Become Less 
+Interdisciplinary,” arXiv (2025) 1–24. https://doi.org/10.48550/arXiv.2506.08738.
+K. Matti, C. Wiebel, and H. Wersing, “From Tools Towards Cooperative Assistants,” in 
+Proceedings of the 5th International Conference on Human Agent Interaction (Bielefeld, 
+Germany, October 17–20, 2017) 287–294. https://doi.org/10.1145/3287560.3287598.
+C. Meng, “Natural Language Processing for Urban Research: A Systematic Review,” Heliyon 7 
+(2021) e06322. https://doi.org/10.1016/j.heliyon.2021.e06322.
+D. Milakis, B. van Arem, and B. van Wee, “Policy and Society Related Implications of Automated 
+Driving: A Review of Literature and Directions for Future Research,” Journal of Intelligent 
+Transportation Systems 21: 4 (2017) 324–348. https://doi.org/10.1080/15472450.2017.1291351.
+S. Minaee, T. Mikolov, N. Nikzad, M. Chenaghlu, R. Socher, X. Amatriain, and J. Gao, “Large 
+Language Models: A Survey,” arXiv (2024) 1–43. https://doi.org/10.48550/arXiv.2402.06196.
+I. Momennejad, H. Hasanbeig, F. Vieira Frujeri, H. Sharma, N. Jojic, H. Palangi, R. Ness, and J. 
+Larson, “Evaluating Cognitive Maps and Planning in Large Language Models with CogEval,” 
+37th Conference On Neural Information Processing Systems (2023).
+H. Otal, E. Stern, and M. Canbaz, “LLM-Assisted Crisis Management: Building Advanced LLM 
+Platforms for Effective Emergency Response and Public Collaboration,” in 2024 IEEE 
+Conference on Artificial Intelligence (Singapore, 2024) 851–859. https://doi.org/10.1109/ 
+CAI59869.2024.00159.
+O. Palmini and F. Cugurullo, “Charting AI Urbanism: Conceptual Sources and Spatial 
+Implications of Urban Artificial Intelligence,” Discover Artificial Intelligence 3: 1 (2023) 15. 
+https://doi.org/10.1007/s44163-023-00060-w.
+J. Popay, H. Roberts, A. Sowden, M. Petticrew, L. Arai, M. Rodgers, N. Britten, K. Roen, and S. 
+Duffy, “Guidance on the Conduct of Narrative Synthesis in Systematic Reviews,” A Product 
+From The ESRC Methods Programme 1: 1 (2006) b92.
+K. Qian, L. Mao, X. Liang, Y. Ding, J. Gao, X. Wei, Z. Guo, and J. Li, “AI Agent as Urban Planner: 
+Steering Stakeholder Dynamics in Urban Planning Via Consensus-Based Multi-Agent 
+Reinforcement Learning,” arXiv (2023) 1–9. https://doi.org/10.48550/arXiv.2310.16772.
+A. Raikov, A. Giretti, M. Pirani, L. Spalazzi, and M. Guo, “Accelerating Human–Computer 
+Interaction Through Convergent Conditions For LLM Explanation,” Frontiers in Artificial 
+Intelligence 7 (2024). https://doi.org/10.3389/frai.2024.1406773.
+JOURNAL OF URBAN TECHNOLOGY 
+41
+
+===== PAGE 43 =====
+M. Regona, T. Yigitcanlar, C. Hon, and M. Teo, “Artificial Intelligence and Sustainable 
+Development Goals: Systematic Literature Review of the Construction Industry,” Sustainable 
+Cities and Society 108 (2024) 105499. https://doi.org/10.1016/j.scs.2024.105499.
+S. Safransky, “Geographies of Algorithmic Violence: Redlining the Smart City,” International 
+Journal of Urban and Regional Research 44: 2 (2019) 200–218. https://doi.org/10.1111/1468- 
+2427.12833.
+F. Sahebi, “Application of Large Language Models in the Industry,” International Journal of 
+Sustainable Applied Science and Engineering 1 (2024) 42–53.
+P. Sarzaeim, Q. Mahmoud, and A. Azim, “A Framework for LLM-Assisted Smart Policing 
+System,” IEEE Access 12 (2024) 74915–74929. https://doi.org/10.1109/ACCESS.2024.3404862.
+M. Schreier, Qualitative Content Analysis in Practice (London: SAGE Publications, 2012).
+S. Sharan, F. Pittaluga, V. Kumar, and M. Chandraker, “LLM-Assist: Enhancing Closed-Loop 
+Planning with Language-Based Reasoning,” arXiv (2023) 1–15. https://doi.org/10.48550/ 
+arXiv.2401.00125.
+J. Šturm, P. Zajec, M. Škrjanc, D. Mladenić, and M. Grobelnik, “Enhancing Cognitive Digital Twin 
+Interaction Using an LLM Agent,” in 2024 47th MIPRO ICT and Electronics Convention 
+(Opatija, Croatia, 2024) 103–107. https://doi.org/10.1109/MIPRO60963.2024.10569919.
+Y. Tang, X. Dai, and Y. Lv, “Large Language Model-Assisted Arterial Traffic Signal Control,” IEEE 
+Journal of Radio Frequency Identification 8 (2024) 322–326. https://doi.org/10.1109/JRFID. 
+2024.3384289.
+Y. Tang, Z. Wang, A. Qu, Y. Yan, Z. Wu, D. Zhuang, J. Kai, K. Hou, X. Guo, J. Zhao, Z. Zhao, and 
+W. Ma, “ITINERA: Integrating Spatial Optimization with Large Language Models for 
+Open-Domain Urban Itinerary Planning,” arXiv (2024). https://doi.org/10.48550/arXiv.2402. 
+07204.
+Y. Tian, X. Li, H. Zhang, C. Zhao, B. Li, X. Wang, X. Wang, and F. Wang, “VistaGPT: Generative Parallel 
+Transformers for Vehicles with Intelligent Systems for Transport Automation,” IEEE Transactions on 
+Intelligent Vehicles 8 (2023) 4198–4207. https://doi.org/10.1109/TIV.2023.3307012.
+M. Toetzke, B. Probst, and S. Feuerriegel, “Leveraging Large Language Models to Monitor Climate 
+Technology Innovation,” Environmental Research Letters 18 (2023) 091004. https://doi.org/10. 
+1088/1748-9326/acf233.
+K. Valmeekam, M. Marquez, S. Sreedharan, and S. Kambhampati, “On the Planning Abilities of Large 
+Language Models,” Advances in Neural Information Processing Systems 36 (2023) 75993–76005.
+A. Vanolo, “Smartmentality: The Smart City as Disciplinary Strategy,” Urban Studies 51: 5 (2014) 
+883–898. https://doi.org/10.1177/0042098013494427.
+P. Waddell, “UrbanSim: Modeling Urban Development for Land Use, Transportation, and 
+Environmental Planning,” Journal of the American Planning Association 68 (2002) 297–314. 
+https://doi.org/10.1080/01944360208976274.
+S. Wandelt, C. Zheng, S. Wang, Y. Liu, and X. Sun, “Large Language Models for Intelligent 
+Transportation: A Review of the State of the Art and Challenges,” Applied Sciences 14 (2024) 
+7455. https://doi.org/10.3390/app14177455.
+L. Wang and H. Zhong, “LLM-SAP: Large Language Models Situational Awareness-Based 
+Planning,” in 2024 IEEE International Conference on Multimedia And Expo Workshops 
+(Niagara Falls, Canada, 2024) 1–6. https://doi.org/10.1109/ICMEW63481.2024.10645429.
+J. Wang, R. Jiang, C. Yang, Z. Wu, M. Onizuka, R. Shibasaki, N. Koshizuka, and C. Xiao, “Large 
+Language Models as Urban Residents: An LLM Agent Framework for Personal Mobility 
+Generation,” in Proceedings of the 38th Conference on Neural Information Processing Systems 
+(NeurIPS 2024) (2024) 124547–124574.
+M. Wang, A. Pang, Y. Kan, M. Pun, C. Chen, and B. Huang, “LLM-Assisted Light: Leveraging 
+Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex 
+Urban Environments,” arXiv (2024) 1–20. https://doi.org/10.48550/arXiv.2403.08337.
+J. Wei, Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, and D. Yogatama, “Emergent 
+Abilities of Large Language Models,” arXiv (2022) 1–30. https://doi.org/10.48550/arXiv.2206. 
+07682.
+42 
+K. LIU ET AL.
+
+===== PAGE 44 =====
+I. Wong, Q. Lian, and D. Sun, “Autonomous Travel Decision-Making: An Early Glimpse into 
+ChatGPT and Generative AI,” Journal of Hospitality and Tourism Management 56 (2023) 
+253–263. https://doi.org/10.1016/j.jhtm.2023.06.022.
+H. Xu, J. Yuan, A. Zhou, G. Xu, W. Li, and X. Ye, “GenAI-Powered Multi-Agent Paradigm for 
+Smart Urban Mobility: Opportunities and Challenges for Integrating Large Language Models 
+(LLMs) and Retrieval-Augmented Generation (RAG) with Intelligent Transportation 
+Systems,” arXiv (2024) 1–24. https://doi.org/10.48550/arXiv.2409.00494.
+Y. Yang and A. Mekies, “EcoCircuit, a Text2Flow Application: Deciphering Environmental 
+Metabolism Through Staging and Collaborating with Language Models,” in Digital Landscape 
+Architecture Conference DLA 2024: New Trajectories in Computational Urban Landscapes And 
+Ecology (Virtual Hybrid, Vienna, June 5–7, 2024). https://doi.org/10.14627/537752009.
+H. Yang, M. Siew, and C. Joe-Wong, “An LLM-Based Digital Twin for Optimizing Human-in-the- 
+Loop Systems,” in Proceedings of the 2024 IEEE International Workshop on Foundation Models 
+for Cyber-Physical Systems & Internet of Things (FMSys) (Hong Kong, 2024) 26–31. https://doi. 
+org/10.1109/FMSys62467.2024.00009.
+S. Yang, J. Dortheimer, A. Sprecher, and Q. Yang, “When Design Workshops Meet Chatbots: 
+Meaningful Participation at Scale?” International Journal of Architectural Computing 22 
+(2024) 216–237. https://doi.org/10.1177/14780771241253440.
+J. Yao, “Elevating Urban Tourism: Data-Driven Insights and AI-Powered Personalization with 
+Large Language Models Brilliance,” in 2023 IEEE 3rd International Conference on Social 
+Sciences and Intelligence Management (Chengdu, China, August 18–20, 2023). https://doi. 
+org/10.1109/SSIM59263.2023.10468915.
+A. Yeh, “Urban Planning and GIS,” in Geographical Information Systems: Principles, Techniques, 
+Applications and Management 2 (1999) 877–888.
+T. Yigitcanlar, D. Agdas, and K. Degirmenci, “Artificial Intelligence in Local Governments: 
+Perceptions of City Managers on Prospects, Constraints and Choices,” AI And Society 38 
+(2023) 1135–1150. https://doi.org/10.1007/s00146-022-01450-x.
+T. Yigitcanlar, K. Degirmenci, L. Butler, and K. Desouza, “What are the Key Factors Affecting 
+Smart City Transformation Readiness? Evidence From Australian Cities,” Cities 120 (2022) 
+103434. https://doi.org/10.1016/j.cities.2021.103434.
+T. Yigitcanlar, K. Desouza, K. Mossberger, P. Cheong, R. Li, R. Mehmood, and J. Corchado, 
+“Artificial Intelligence and the City: An Editorial Perspective,” Journal of Urban Technology 
+(2025) 1–7. https://doi.org/10.1080/10630732.2025.2500822.
+T. Yigitcanlar, S. Senadheera, R. Marasinghe, S. Bibri, T. Sanchez, F. Cugurullo, and R. Sieber, 
+“Artificial Intelligence and the Local Government: A Five-Decade Scientometric Analysis on 
+the Evolution, State-of-The-Art, and Emerging Trends,” Cities 152 (2024) 105151. https://doi. 
+org/10.1016/j.cities.2024.105151.
+J. Yu and G. McKinley, “Synthetic Participatory Planning of Shared Automated Electric Mobility 
+Systems,” Sustainability 16 (2024) 5618. https://doi.org/10.3390/su16135618.
+Q. Zeng, Q. Yang, S. Dong, H. Du, L. Zheng, F. Xu, and Y. Li, “Perceive, Reflect, and Plan: 
+Designing LLM Agent for Goal-Directed City Navigation Without Instructions,” arXiv 
+(2024) 1–14. https://doi.org/10.48550/arXiv.2408.04168.
+W. Zhang and Y. Su, “Perception Study of Urban Green Spaces in Singapore Urban Parks: Spatio- 
+Temporal Evaluation and the Relationship with Land Cover,” Urban Forestry and Urban 
+Greening 99 (2024) 128455. https://doi.org/10.1016/j.ufug.2024.128455.
+J. Zhang, R. Xiang, Z. Kuang, B. Wang, and Y. Li, “ArchGPT: Harnessing Large Language Models 
+for Supporting Renovation and Conservation of Traditional Architectural Heritage,” Heritage 
+Science 12 (2024) 220. https://doi.org/10.1186/s40494-024-01334-x.
+S. Zhang, D. Fu, W. Liang, Z. Zhang, B. Yu, P. Cai, and B. Yao, “TrafficGPT: Viewing, Processing 
+and Interacting with Traffic Foundation Models,” Transport Policy 150 (2024) 95–105. https:// 
+doi.org/10.1016/j.tranpol.2024.03.006.
+W. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, and Y. Min, “A Survey of Large Language 
+Models,” arXiv (2023)  1–124. https://doi.org/10.48550/arXiv.2303.18223.
+JOURNAL OF URBAN TECHNOLOGY 
+43
+
+===== PAGE 45 =====
+Z. Zhou, Y. Lin, D. Jin, and Y. Li, “Large Language Model for Participatory Urban Planning,” arXiv 
+(2024) 1–14. https://doi.org/10.48550/arXiv.2402.17161.
+X. Zhou, L. Li, and D. Zeng, “RRdE: A Decision-Making Framework For Language Agents In 
+Interactive Environments,” in 2024 International Joint Conference On Neural Networks 
+(Yokohama, Japan, 2024) 1–8. https://doi.org/10.1109/IJCNN60899.2024.10650094.
+H. Zhu, W. Zhang, N. Huang, B. Li, L. Niu, Z. Fan, T. Lun, Y. Tao, J. Su, Z. Gong, C. Fang, and X. 
+Liu, “PlanGPT: Enhancing Urban Planning with Tailored Language Model and Efficient 
+Retrieval,” arXiv (2024) 1–20. https://doi.org/10.48550/arXiv.2402.19273.
+44 
+K. LIU ET AL.

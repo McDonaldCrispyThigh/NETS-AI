@@ -1,0 +1,30 @@
+[
+  {
+    "group": "Chain sentinel",
+    "n": 195,
+    "tps": 192,
+    "fps": 3,
+    "match_rate_pct": 98.5
+  },
+  {
+    "group": "Zero web presence",
+    "n": 100,
+    "tps": 54,
+    "fps": 46,
+    "match_rate_pct": 54.0
+  },
+  {
+    "group": "Low (1-7 yrs)",
+    "n": 5,
+    "tps": 4,
+    "fps": 1,
+    "match_rate_pct": 80.0
+  },
+  {
+    "group": "Established (>=20 yrs)",
+    "n": 99,
+    "tps": 71,
+    "fps": 28,
+    "match_rate_pct": 71.7
+  }
+]

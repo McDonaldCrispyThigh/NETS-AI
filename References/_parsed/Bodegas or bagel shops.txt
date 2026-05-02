@@ -1,0 +1,2482 @@
+
+===== PAGE 1 =====
+Economic Development Quarterly
+26(1) 73­–94
+© The Author(s) 2012
+Reprints and permission:  
+sagepub.com/journalsPermissions.nav
+DOI: 10.1177/0891242411430328
+http://edq.sagepub.com
+Introduction
+Social scientists studying the disadvantages of poor urban 
+neighborhoods have tended to focus on the quality of pub-
+licly provided amenities, such as public schools and crime 
+rates, or negative peer effects (Case & Katz, 1991; Cutler, 
+Glaeser, & Vigdor, 1999; Jargowsky, 2003; Massey & Denton, 
+1993; Wilson, 1987). However, the quantity and quality of 
+local private amenities, such as grocery stores, restaurants, 
+banking facilities, and other retail services, can also have 
+important quality-of-life implications for neighborhood resi-
+dents. The “consumer city” literature suggests that attractive 
+and abundant retail services affect a city’s ability to attract 
+and retain high-skilled residents; by extension, the quality of 
+neighborhood retail may affect the neighborhood’s growth 
+prospects (Glaeser & Gottlieb, 2006; Glaeser, Kolko, & Saiz, 
+2001). A smaller empirical literature has shown that low-
+income and minority neighborhoods are typically less well 
+served by certain types of retail and household services 
+(Alwitt & Donley, 1997; Carr & Schuetz, 2001; Helling & 
+Sawicki, 2003; Lewis et al., 2005; Pearce, Blakely, Witten, & 
+Bartie, 2007; Powell, Slater, Mirtcheva, Bao, & Chaloupka, 
+2007; Zenk, 2005). In general, a smaller number of retail 
+outlets implies a more limited choice, and an apparent lack 
+of competition has led some researchers to argue that “the poor 
+pay more” for many basic goods and services (Caplovitz, 
+1967; Hayes, 2000; Kaufman, MacDonald, Lutz, & Smallwood, 
+1997). Therefore, understanding the extent and reasons behind 
+differences in the amount and composition of neighborhood 
+commercial activity is an important area for research.
+To date, there has been little large-scale empirical work 
+looking at disparities in retail services across neighborhoods of 
+varying economic and demographic compositions. Moreover, 
+there has been no work looking at the change in neighborhood 
+retail services over time and how these changes correspond 
+with economic and demographic changes in the local popula-
+tion. Therefore, before we can explain the causes behind dif-
+ferences in neighborhood retail services, we should begin by 
+measuring and describing these differences. The current arti-
+cle moves the literature toward this end in two ways. First, 
+we explore a number of approaches to measuring neighbor-
+hood “retail access” and compare various metrics over time 
+and space. Second, whereas many previous studies focus on 
+a single type of good or service, we consider access to a wide 
+range of retail and household services. We combine publicly 
+available data on business establishments at the ZIP code 
+level with several New York City–specific data sources, 
+including the location of all commercial and residential 
+430328 EDQXXX10.1177/0891242411430328Meltz
+er and SchuetzEconomic Development Quarterly
+1The New School, New York, NY, USA
+2University of Southern California, Los Angeles, CA, USA
+Corresponding Author:
+Rachel Meltzer, The Milano School of International Affairs, Management 
+and Urban Policy, The New School, 72 Fifth Avenue, Room 503, New York, 
+NY 10011, USA 
+Email: meltzerr@newschool.edu
+Bodegas or Bagel Shops? Neighborhood 
+Differences in Retail and Household Services
+Rachel Meltzer1 and Jenny Schuetz2
+Abstract
+Social scientists studying the disadvantages of poor urban neighborhoods have focused on the quality of publicly provided 
+amenities. However, the quantity and quality of local private amenities, such as grocery stores and restaurants, can also have 
+important quality-of-life implications for neighborhood residents. In the current article, the authors develop neighborhood-
+level metrics of “retail access” and analyze how retail services vary across New York City neighborhoods by income and by 
+racial composition. The authors then examine how retail services change over time, particularly in neighborhoods undergoing 
+rapid economic growth. Results indicate that lower income and minority neighborhoods have fewer retail establishments, 
+smaller average establishments, a higher proportion of “unhealthy” restaurants, and in certain cases, less diversity across retail 
+subsectors. In addition, the rate of retail growth between 1998 and 2007 has been particularly fast in neighborhoods that 
+were initially lower valued and experienced relatively high housing price appreciation compared with the city overall.
+Keywords
+downtowns, economic development incentives/tools, location decisions, quality of life, state and local ED policy
+
+===== PAGE 2 =====
+74	 	
+Economic Development Quarterly 26(1)
+buildings, the location and corporate affiliation for several 
+retail and food service chain establishments, residential 
+population characteristics, and sales values of residential 
+properties. Using this combined data set, we assess differ-
+ences in retail access for approximately 208 neighborhoods, 
+based on income and racial composition and differential 
+growth rates in housing values.
+Results confirm some findings from previous research, 
+namely that lower income and minority neighborhoods have 
+a lower density of commercial establishments and employ-
+ment, smaller average establishments, a higher proportion of 
+“unhealthy” restaurants, and, in some cases, less diversity 
+across retail subsectors. However, the patterns vary by retail 
+type and demographics: The disparities are smaller for gro-
+cery stores, pharmacies, and clothing than for food service or 
+for retail as a whole. Perhaps surprisingly, predominantly 
+Hispanic neighborhoods have more diverse retail and food 
+services and greater access to retail corridors than predomi-
+nantly White neighborhoods; the opposite is true for predomi-
+nantly Black neighborhoods. Although most neighborhoods 
+in New York City saw an increase in retail activity between 
+1998 and 2007, the rate of retail growth has been particularly 
+fast in neighborhoods that were initially lower valued and 
+experienced relatively high housing price appreciation com-
+pared with the city overall. However, initially higher valued 
+and appreciating neighborhoods experienced relatively faster 
+growth in the size of retail establishments.
+This article proceeds in the following way. The next section 
+provides a review of the relevant literature. The “Method and 
+Data Description” section describes the data and methodology 
+and the “Results” section summarizes the results from the cur-
+rent analysis. The “Conclusions and Policy Implications” sec-
+tion concludes and offers some implications for designing 
+economic development policies.
+Literature Review
+Because the size of retail market areas will vary by product 
+type, we begin by reviewing the types of retail that are likely 
+to serve primarily neighborhood markets. We then outline 
+several possible reasons why retail activity may differ by 
+underlying neighborhood characteristics: variation in store 
+operating or set-up costs, variation in purchasing power and 
+preferences among local consumers (or residents), and insti-
+tutional factors or public policies that influence commercial 
+activity.
+Market Area and Product Type
+The urban economics literature provides several models of 
+firm decision making and retail location that provide a theo-
+retical framework for why the size of retail markets will 
+vary by product type. Hotelling’s (1929) simple spatial 
+model of firm location suggests that the density of stores 
+depends on a variety of factors, including fixed costs of the 
+store, buyer density, and travel costs, all of which may vary 
+by neighborhood economic conditions. One implication is 
+that there will be different market sizes and, thus, different 
+densities of store networks, for establishments selling vari-
+ous products, which will translate into a hierarchy of retail 
+networks. Retail store networks will be denser (i.e., more 
+locally based) for stores that have low fixed costs and sell 
+goods that are highly standardized and frequently con-
+sumed, so that consumers will not be willing to travel long 
+distances to purchase them (B. Berry, 1967).1 Following 
+DiPasquale and Wheaton (1996), we focus on the lowest 
+geographical level of store networks: neighborhood stores 
+whose customers are drawn primarily from within the 
+immediate vicinity; these establishments will most likely 
+reflect the composition of neighborhood residents. The 
+goods most likely to be sold at neighborhood stores include 
+groceries, health and beauty products, and general house-
+hold items, such as cleaning and household supplies. These 
+items are typically sold at grocery stores, supermarkets, 
+convenience stores, pharmacies, and general merchandise 
+stores. In addition to retail, some service establishments 
+primarily serve the immediate neighborhood, namely laun-
+dry services, coffee shops, and limited service restaurants, 
+gyms, and beauty salons.
+Variation in Store Fixed or Operating Costs
+Set-up and operating costs for retailers include a number of 
+factors, some of which vary by neighborhood and others that 
+are specific to the firm and therefore somewhat idiosyn-
+cratic.2 For instance, rents are likely to be higher in high-
+income (or high-wage) neighborhoods, whereas insurance 
+and security costs increase with neighborhood crime rates. 
+Although wages for similar positions (sales clerk or shelf 
+stocker) may be relatively similar across neighborhoods 
+within the same metropolitan area, there is some anecdotal 
+evidence that employee turnover or training needs are higher 
+in low-income neighborhoods (International Council of 
+Shopping Centers, 2004), increasing average labor costs in 
+those areas. Two other fixed costs that are likely to vary 
+across neighborhoods are local land use regimes (zoning of 
+commercial uses) and characteristics of the local building 
+stock. Specifically, restrictions against or incentives for retail 
+occupancy can increase or reduce costs associated with ini-
+tial setup. Similarly, the inherent nature of the building stock 
+will determine the feasibility and costs associated with 
+adapting the particular retail business to the existing com-
+mercial space. For example, grocery stores often require 
+enough space and a robust enough infrastructure to support 
+freezers, whereas restaurants require venting from stoves and 
+ovens (Barragan, 2010; International Council of Shopping 
+Centers, 2004). Availability of suitable land parcels for 
+development may be particularly important for large chains 
+that have a preferred (often low-density) model for their 
+stores (i.e., Big Box).
+
+===== PAGE 3 =====
+Meltzer and Schuetz	
+75
+Variation in Consumer Characteristics
+For any given type of store/product, the Hotelling model 
+implies that the density of store networks will be increasing 
+in density of buyers. The stylized model assumes that buyers 
+are uniformly distributed and have homogeneous prefer-
+ences. In reality, it is unlikely that all residents of a single 
+neighborhood have the same demand function, either based 
+on income/ability to pay or preferences, so estimating the 
+density of actual rather than potential buyers within a given 
+geographic area becomes more complicated. Waldfogel (2008) 
+demonstrates that there is considerable heterogeneity across 
+consumer preferences for services such as restaurants and 
+media, and that preferences are strongly correlated with 
+observable population characteristics, such as educational 
+attainment and race/ethnicity.
+This conclusion mirrors the findings of a sizable body of 
+literature in public health that explores the differences in the 
+locational decisions of food establishments across neighbor-
+hoods. Powell et al. (2007), Zenk (2005), and Alwitt and 
+Donley (1997) demonstrate that various retailers (namely 
+banks and supermarkets) opt not to locate in poorer ZIP codes 
+even after controlling for purchasing power—leading the 
+authors to conclude that retail locational decisions may hinge 
+on a host of factors in addition to an area’s market potential. 
+Interestingly, Alwitt and Donley found that fast food restau-
+rants were least likely to discriminate across neighborhoods, 
+whereas Block, Scribner, and DeSalvo (2004) and Lewis 
+et al. (2005) found that fast-food restaurants were more likely 
+to locate in poorer, predominately minority neighborhoods.
+A few other empirical studies relate retail markets to local 
+characteristics. S. T. Berry and Waldfogel (2003) find that as 
+market size increases, the range of product variety and qual-
+ity widens, and the number of high-quality products grows. 
+A recent study by Chapple and Jacobus (2009) of retail 
+change in the San Francisco Bay area finds that retail revital-
+ization is most strongly associated with gains for middle-
+income neighborhoods. Zukin et al. (2009) conduct case 
+studies of two gentrifying neighborhoods in New York City 
+and find a large increase in the number of independently 
+owned (or local chain) establishments in those neighbor-
+hoods, compared with a small increase in large chain stores.
+Institutional Factors and Public Policies
+The models described thus far assume only market factors in 
+the determination of local retail markets, but a variety of 
+federal, state, and local public interventions have been used 
+to try to stimulate business development and job growth, 
+particularly in lower income urban neighborhoods.
+The largest federal policy aimed at business develop-
+ment, the Empowerment Zones and Enterprise Communities 
+Initiative, provides federal tax incentives and other financial 
+benefits to businesses that locate in more than 100 designated 
+neighborhoods in economically and socially depressed urban or 
+rural communities (Hebert, Vidal, Mills, James, & Gruenstein, 
+2001). Empirical analysis of the Empowerment Zones/ 
+Enterprise Communities program provides very mixed evi-
+dence on the program’s effectiveness, but most find little or no 
+effect on job or firm creation (Bondonio, 2003; Busso & Kline, 
+2008; Coopers & Lybrand Economic Studies Group, 1982; 
+Dowall, 1996; Glickman, 1981; Neumark & Kolko, 2008).
+The Community Development Block Grant program pro-
+vides federal funds that can be spent on a variety of activities 
+designed to enhance neighborhood economic and social con-
+ditions broadly, including economic development programs. 
+As with the Empowerment Zones evaluations, evidence on 
+the effects of Community Development Block Grant on 
+employment growth in targeted neighborhoods is somewhat 
+mixed: Higher spending per poor resident on economic devel-
+opment does seem to increase the number of businesses, but 
+the effects vary by initial city and neighborhood conditions 
+(Galster, Walker, Hayes, Boxall, & Johnson, 2004; Walker, 
+Hayes, Galster, Boxall, & Johnson, 2002).
+Many local governments in large cities, including New 
+York City, have additional policies designed to encourage 
+business creation or retention in targeted areas, such as tax 
+abatements. Local governments can also change the feasibil-
+ity and costs of commercial activity indirectly through zon-
+ing codes by differentially allowing or restricting the uses 
+and sizes of buildings.
+Method and Data Description
+In this article, we use data from the Census Bureau’s ZIP 
+Business Pattern series (an extension of the County Business 
+Patterns data), as well as two New York City–specific data 
+sets on commercial properties and chain establishments, to 
+develop a set of metrics that describe neighborhood retail 
+access. We then use those metrics to establish some stylized 
+facts about the relationship between retail activity, income, 
+and ethnic composition in New York City, and how retail 
+activity changes over time in the context of neighborhood 
+economic transition. The first part of the empirical analysis 
+develops several different metrics, presenting summary sta-
+tistics for each and examining the correlation between them, 
+to determine whether the choice of metric is likely to affect 
+the outcome of analysis. In the second part of the analysis, 
+we present descriptive statistics around two research ques-
+tions:
+1.	 How do retail patterns in New York City vary by 
+neighborhood income and racial/ethnic composi-
+tion? Do these patterns differ by retail category?
+2.	 How has retail activity in New York City changed 
+over time? How do the changes vary by baseline 
+neighborhood economic characteristics and eco-
+nomic growth?
+
+===== PAGE 4 =====
+76	 	
+Economic Development Quarterly 26(1)
+Development of Retail Metrics
+Our primary source of data on retail and commercial activity 
+is the ZIP Business Patterns (ZBP) data set, collected annu-
+ally by the Census Bureau. The ZBP data provide counts of 
+the number of establishments in each industrial sector, bro-
+ken out in several size categories based on the number of 
+employees.3 We are using the data from 1998 through 2007, 
+which uses the North American Industrial Classification 
+System (NAICS) to indicate industrial sector up to a 6-digit 
+level of detail.4 Because our research focuses on retail that 
+primarily serves the residents of the immediate neighbor-
+hood, and because we are interested in quality-of-life impli-
+cations, we have chosen to focus on four industry categories 
+that meet these criteria: supermarkets (NAICS 6-digit code: 
+445110), pharmacies and personal care stores (NAICS 
+3-digit code: 446), clothing stores (NAICS 3-digit code: 
+448), and food service establishments (NAICS 3-digit code: 
+722). To provide some context, we also look at the total num-
+ber of establishments in retail (NAICS 2-digit code: 44-45) 
+and food service and hospitality (NAICS 2-digit code: 72).
+For each of these industrial groupings, we construct four 
+metrics at the ZIP-code level. We match each ZIP code to the 
+land area of the ZIP-code tabulation area (ZCTA) from the 
+2000 census, which allows us to calculate the density of 
+establishments per acre, by industry-ZIP-year (because land 
+areas vary widely by ZCTA, comparing simple counts of 
+establishments across ZCTAs may be misleading).5 Second, 
+we estimate the total employment by industry-ZIP-year, 
+using the counts of establishments in each size category, and 
+again use the land area to calculate employment density.6 
+Third, we combine the employment and establishment counts 
+to calculate the average size of establishments by number of 
+employees. Fourth, to measure the diversity of establish-
+ments, we construct a set of Herfindahl indices for each 
+grouping. The Herfindahl index is calculated according to 
+the following equation:
+	
+	
+	
+H
+si
+i
+n
+=
+=∑
+2
+1
+,
+where si is the share of establishments in category i for a given 
+industrial grouping. The index values range from 0 to 1, with 
+higher numbers indicating greater concentration or less 
+diversity. For example, if all the establishments in a ZIP 
+code were in the same industry, then the share for that indus-
+try would be equal to 1, as would the value of the index. For 
+the retail Herfindahl index, we use the share of establish-
+ments in each of the 12 three-digit NAICS categories within 
+the two-digit retail industry (NAICS code: 44-45). For the 
+food service Herfindahl index, we use each of the 4 four-
+digit categories within the three-digit food service category 
+(NAICS code: 722). The subcategories within each index are 
+shown in Table 1. All ZBP-based metrics are constructed as 
+averages across all years in the sample (1998-2007) at the 
+industry-ZIP level.7
+Our fifth metric of retail access draws on a different data 
+source and focuses on geographic distance between residen-
+tial and commercial properties. Using 2006 property-level 
+data from the NYC Department of Finance Real Property 
+Assessment Database and the NYC Department of City 
+Planning PLUTO Database, which identify the location and 
+use type of all properties in the city, we calculate the share of 
+all residential building areas within ¼ mile and ½ mile of a 
+commercial corridor. Using geographic information system 
+(GIS) mapping techniques, commercial corridors are identi-
+fied as clusters of retail building area and properties classi-
+fied under commercial zoning overlays (that permit retail use 
+in mixed-use areas). A map of the retail corridors is displayed 
+in Figure A1 in the appendix.
+The ZBP has two main advantages as a data source: 
+Because it is collected annually, it can be used to examine 
+changes over time, and it is available for all ZIP codes across 
+the country, allowing consistent analysis for multiple cities. 
+A notable drawback to the ZBP, however, is that it provides 
+no information on the type or quality of goods and services 
+within each industrial category. For instance, one of the cate-
+gories of interest is supermarkets. The 6-digit NAICS code for 
+this category (445110) captures a wide range of store sizes and 
+types, from branches of large national chains such as Safeway 
+and Kroger, to small, independently-owned neighborhood 
+Table 1. Retail and Food Service Subsectors
+NAICS 
+code
+Industry subsector
+44
+Retail
+  441
+  Motor vehicle and parts dealers
+  442
+  Furniture and home furnishings stores
+  443
+  Electronics and appliance stores
+  444
+  Building material, garden equipment
+  445
+  Food and beverage stores
+  446
+  Health and personal care stores
+  447
+  Gasoline stations
+  448
+  Clothing and clothing accessories 
+stores
+  451
+  Sporting goods, hobby, book, and music 
+stores
+  452
+  General merchandise stores
+  453
+  Miscellaneous store retailers
+  454
+  Nonstore retailers
+722
+Food service
+  7221
+  Full-service restaurants
+  7222
+  Limited-service eating places
+  7223
+  Special food services
+  7224
+  Drinking places (alcoholic beverages)
+Source. North American Industrial Classification System (NAICS).
+
+===== PAGE 5 =====
+Meltzer and Schuetz	
+77
+stores or bodegas.8 Although these stores will overlap some-
+what in goods offered, bodegas generally carry a much nar-
+rower range of products than traditional supermarkets, and 
+may differ from supermarkets (and from one another) by 
+quality and price. The same is true for our other categories of 
+interest (notably food service).
+To examine differences across neighborhoods in the 
+quality of goods and services, we supplement the ZBP data 
+with information on the location and corporate affiliation 
+for a large number of regional and national chains in New 
+York City, collected by the Center for an Urban Future 
+(2009). From this database, we identify 98 chains that cor-
+respond to our categories of interest: all food services, some 
+clothing and apparel (selected to cover a range of price 
+points, adults of both genders and children, and with a large 
+enough number of franchises to offer room for spatial varia-
+tion), pharmacies, tax preparation services, gyms, and some 
+home goods. The full list of chains selected is shown in 
+Table A1 in the appendix. We then aggregate the data to the 
+ZIP-code level, calculating the total number of chain estab-
+lishments and, within that, the number of chain restaurants. 
+Of the restaurants, we flag certain chains as “unhealthy” 
+fast food (shown in Table A1 in the appendix), and calculate 
+the share of chain restaurants that are “unhealthy” (Neal, 
+2006; Pillsbury, 2010; Warde, Martens, & Olsen, 1999). For 
+illustration, we also identify four iconic chains—McDonalds, 
+Subway, Dunkin Donuts, and Starbucks. McDonalds is the 
+most prevalent fast-food chain (it is third out of all chains, 
+after Dunkin Donuts and Subway) with predominately 
+unhealthy food choices. Subway also has a large number of 
+locations and advertises itself as a healthier alternative that 
+is still low cost. Dunkin Donuts and Starbucks both offer 
+coffee and baked goods (and we make no claims about their 
+comparative health values), but at different price points, in 
+quite different environments, and their marketing strategies 
+target different clientele. To identify some quality differ-
+ences within our category of greatest interest, supermarkets, 
+we augment data from the Center for an Urban Future chain 
+database with online searches to assemble a list of locations 
+for a large number of multi-establishment grocery store 
+firms present in New York City. The list of firm names is 
+shown in Table A2 in the appendix. We use this to calculate 
+the number of chain supermarkets in each ZIP code and 
+identify several chains as “upscale”; these chains typically 
+carry more organic or locally provided foods, have a large 
+fresh-produce section, and offer hard-to-obtain or expen-
+sive specialty items.
+One of the purposes of this article is to determine what 
+types of metrics should be used to describe retail access 
+and whether the choice of metric is likely to affect the pat-
+terns observed. Having created five separate metrics for 
+several industry categories, we calculate pairwise correla-
+tions between all the retail metrics (shown in Table 4 later 
+in the text).
+Testing the Relationship Between Retail 
+Activity and Neighborhood Characteristics
+To identify patterns of retail activity across neighborhoods 
+in New York City, we calculate summary statistics for each 
+of the metrics described above and compare them in several 
+ways. As described in the “Literature Review” section, we 
+expect that the amount and type of retail activity will vary 
+by purchasing power, consumer preferences, and store costs. 
+Thus, we will compare retail metrics across neighborhoods 
+with underlying differences in variables (Table 2) that proxy 
+for purchasing power and preferences, specifically house-
+hold income and racial/ethnic composition.9 We also briefly 
+address one potential difference in store costs; this part of 
+the analysis is discussed in the next section. All data on 
+population characteristics for ZIP codes are taken from the 
+2000 census of population and housing. To account for 
+variation in size across the ZIP codes, we weight the sum-
+mary statistics by population. As shown in Table 3, ZIP-code 
+areas in New York City exhibit significant differences from 
+one another in underlying population characteristics, such as 
+population density, income, and ethnic composition. The 
+measures of retail activity and access also vary substantially 
+across neighborhoods. In addition, the average population of 
+a ZIP code in New York City is approximately 43,000, large 
+enough to be a market area for neighborhood stores.
+To understand how differences in two key characteristics, 
+income and racial/ethnic composition, affect patterns or 
+retail activity, we compare retail metrics by these character-
+istics. Specifically, we compare the average value for each of 
+our retail metrics (density of establishments and employ-
+ment, average size, Herfindahl index, residential access, 
+and the counts of various chains) for ZIPs in which average 
+household income is less than 80% of the average income for 
+New York City with ZIPs with average household income 
+above 80% of the city average income ($58,505 in constant 
+2,000 dollars). To assess the correlation with ethnic compo-
+sition, we compare retail metrics for ZIPs that are super-
+majority non-Hispanic White (≥60%) with ZIPs that have a 
+super majority of Black or Hispanic residents.
+Changes in Retail Activity Over Time
+In addition to comparing level differences in retail metrics, 
+we are interested in how retail presence has changed over 
+time and whether those changes reflect underlying changes 
+in neighborhood characteristics. Thus, we calculate the 
+growth rate for each of our retail metrics from 1998 to 2007 
+(annual changes tend to be quite small and somewhat noisy). 
+The growth rate is calculated using a standard measure:
+	
+gi
+i
+i
+i
+i
+,
+,
+,
+,
+,
+.
+98 07
+07
+98
+07
+98
+0 5
+−
+−
+(
+)
+×
++
+(
+=
+Retail
+Retail
+Retail
+Retail
+)
+,
+
+===== PAGE 6 =====
+78	 	
+Economic Development Quarterly 26(1)
+in which Retaili,98 is the retail metric in industry i in 1998 and 
+Retaili,07 is the retail metric in industry i in 2007. As dis-
+cussed in several previous articles that have used this mea-
+sure, this growth rate provides a symmetric growth rate. By 
+using an average of retail metrics in the beginning and end-
+ing years rather than just the beginning year in the denomi-
+nator, we reduce potential measurement error associated 
+with large deviations from average retail activity (see Davis, 
+Haltiwanger, & Schuh, 1996; Haltiwanger, Jarmin, & Krizan, 
+2010, for more discussion). To analyze these changes in 
+retail, we stratify the sample of ZIPs in two ways: by initial 
+economic status as of 1998 and by transition in economic 
+status between 1998 and 2007. Since we do not have any 
+measures of income at the ZIP-code level after 2000, we use 
+instead residential housing sales data to identify the initial 
+and change in economic status for each neighborhood in 
+New York City.10 We obtain NYC Department of Finance 
+residential sales data for all New York City ZIP codes from 
+the Furman Center for Real Estate and Urban Policy at New 
+York University. The data provide us with the average price 
+per unit for all residential sales transactions in New York 
+City between 1998 and 2007. From these data, we construct 
+relative measures of neighborhood housing values for every 
+neighborhood i in year t:
+Table 2. Variable Definitions and Sources
+Variable
+Definition
+Source
+Primary retail metrics
+ 
+  Est/land
+Number of establishments in ZIP divided by land 
+area (acres)
+ZBP (1998-2007), Census 2000
+  Emp/land
+Number of establishments in ZIP divided by land 
+area (acres)
+ZBP (1998-2007), Census 2000
+  Emp/est
+Total employment in ZIP divided by total 
+establishments
+ZBP (1998-2007)
+  Herfindahl
+Herfindahl index of diversity for retail, food 
+service
+ZBP (1998-2007)
+  Share res within ¼mile 
+commercial
+Percentage of residential sq. ft. within ¼, ½ mile of 
+commercial corridor
+GIS calculations using RPAD
+Chain retail metrics
+ 
+  Chain stores
+Number of retail establishments in selected chains
+CUF (2009)
+  Chain restaurants
+Number of restaurant establishments in selected 
+chains
+CUF (2009)
+  Percentage unhealthy
+Number of fast-food chains/total chain restaurants
+CUF (2009)
+  Gyms
+Number of establishments in selected gym chains
+CUF (2009)
+  Chain groceries
+Number of establishments in selected grocery 
+chains
+Authors’ search online
+  Percentage upscale
+Number of upscale groceries/number of chain 
+groceries
+Authors’ search online
+Population characteristics
+ 
+  Medium-upper income
+ZIP income ≥80% of NYC average household 
+income
+Census (2000)
+  Low income
+ZIP income <80% of NYC average household 
+income
+Census (2000)
+  Non-Hispanic White
+>60% ZIP population non-Hispanic White
+Census (2000)
+  Black
+>60% ZIP population Black
+Census (2000)
+  Hispanic
+>60% ZIP population Hispanic (all races)
+Census (2000)
+  Low value
+ZIP average (residential) sales price < 80% NYC 
+average price
+DoF residential sales data (1998), 
+Furman Center
+  Upgrading
+ZIP percentage change in average housing value > 
+NYC percentage change in average housing value 
+(1998-2007)
+DoF residential sales data (1998-2007), 
+Furman Center
+  Stable/lagging
+ZIP percentage change in average housing value ≤ 
+NYC percentage change in average housing value 
+(1998-2007)
+DoF residential sales data (1998-2007), 
+Furman Center
+Note. ZBP = ZIP business patterns; CUF, Center for an Urban Future; DoF = Department of Finance; GIS = geographic information system; RPAD = Real 
+Property Assessment Database.
+
+===== PAGE 7 =====
+Meltzer and Schuetz	
+79
+	
+RelativeZIP
+AvgPricePU
+ZIP_AvgPricePU
+NYC_AvgPricePU
+_
+/
+,
+,
+i t
+i t
+=
+t.
+To differentiate neighborhoods based on their initial eco-
+nomic status, we calculate this ratio for all ZIP codes in 1998 
+and classify neighborhoods with relative average housing val-
+ues less than 0.8 as “Low Value.” Neighborhoods with relative 
+average housing values greater than or equal to 0.8 are clas-
+sified as “Moderate/High Value.”
+We then classify the neighborhoods based on their relative 
+change in housing values between 1998 and 2007. We clas-
+sify neighborhoods as “Upgrading” if they experience a per-
+centage gain in average housing values (absolute, not relative) 
+that is greater than the percentage change in average housing 
+values for the city overall (housing values for New York City 
+on average increased by 120% between 1998 and 2007). 
+Neighborhoods with percentage changes in average housing 
+values less than those experienced for the city overall are 
+classified as “Stable/Lagging.”
+Since we are interested in observing how changes in retail 
+manifest themselves in low-income neighborhoods, we first 
+compare changes in the retail metrics across low-value neigh-
+borhoods that are upgrading and stable/declining. In addition, 
+Table 3. Summary Statistics of All Variables
+Variable
+Mean
+SD
+Minimum
+Maximum
+n
+Population
+42,762
+26,956
+16
+106,415
+208
+Pop/acre
+62.35
+44.70
+0.13
+277.81
+208
+Average household income
+$81,315
+$41,431
+$0
+$227,494
+208
+BA plus
+36.6
+26.9
+0.0
+100.0
+208
+Poverty rate
+18.3
+12.7
+2.5
+100.0
+208
+Percentage White
+43.9
+29.9
+0.4
+100.0
+208
+Percentage Black
+21.8
+26.6
+0.0
+93.9
+208
+Percentage Hispanic
+22.0
+19.2
+0.0
+79.9
+208
+Sales price per unit, 1998
+$252,010
+$231,578
+$24,931
+$2,130,190
+171
+Percentage change in sales prices, 1998-2007
+138.2
+160.5
+−26.6
+1354.2
+170
+Est/land (retail)
+0.26
+0.46
+0.00
+2.79
+208
+Emp/land (retail)
+2.69
+5.94
+0.00
+48.36
+208
+Emp/est (retail)
+9.78
+8.28
+2.50
+95.25
+208
+Herfindahl (retail)
+0.24
+0.19
+0.10
+1.00
+208
+Share of residence within ¼ mile
+0.85
+0.22
+0.02
+1.00
+163
+Share of residence within ½ mile
+0.93
+0.17
+0.10
+1.00
+124
+Chain stores (per acre)
+0.04
+0.06
+0.00
+0.36
+208
+Chain restaurants (per acre)
+0.02
+0.05
+0.00
+0.29
+208
+Percentage unhealthy
+0.23
+0.16
+0.00
+0.75
+208
+Gyms (per acre)
+0.00
+0.00
+0.00
+0.04
+208
+Chain groceries (per acre)
+0.00
+0.01
+0.00
+0.04
+208
+Percentage upscale
+0.03
+0.11
+0.00
+0.80
+208
+Note. Population statistics are from 2000; business statistics are ZIP-industry averages across 10 years of ZIP business patterns (ZBP) data (1998-2007); 
+chain statistics are calculated as of 2009.
+we want to compare changes in retail activity with those 
+experienced by relatively higher income neighborhoods. 
+Therefore, we also calculate the difference in change between 
+low-value upgrading and stable/declining neighborhoods 
+and compare this with the same difference across moderate-/
+high-value neighborhoods. The initial retail landscapes are 
+quite different across low- and moderate-/high-value neigh-
+borhoods (retail activity is significantly lower in low-value 
+neighborhoods), and therefore we conduct this simplified 
+“difference-in-difference” to avoid any upward bias in our 
+estimates of retail change in low-value neighborhoods.
+Additional Data Issues
+A possible concern with the ZBP data is the consistency of the 
+industrial classification system. According to the census, in 
+the surveys used to construct the ZBP database, establish-
+ments are self-classified by employee or contact at the com-
+pany, based on revenues. This raises the possibility that 
+similar types of establishments may be classified differently, 
+particularly for establishments engaged in multiple activities. 
+For instance, as described above, bodegas could be classified 
+as grocery stores because they sell food items. Many, but not 
+all of these stores, also prepare and sell some fresh food, such 
+
+===== PAGE 8 =====
+80	 	
+Economic Development Quarterly 26(1)
+as made-to-order deli sandwiches, coffee, and bagels. Depending 
+on the share of revenues received from these activities (or the 
+knowledge of the employee filling out the survey), a bodega 
+may be counted in the ZBP as either a grocery store (NAICS 
+code: 4451) or a limited service restaurant (NAICS code: 
+7222), while performing largely similar functions. Similar 
+ambiguity in the NAICS codes may be present for other types 
+of establishments as well. Classification of the same estab-
+lishment may also change over time, even if the establish-
+ment does not change functions.11
+Results
+In this section, we provide summary statistics of the various 
+retail metrics to describe the amount, type, and mix of retail 
+access and activity in New York City. We describe variation in 
+retail metrics across neighborhoods by income and ethnic com-
+position, and changes over time, stratified by economic growth.12
+How Can We Characterize  
+Retail Activity in New York City?
+All neighborhoods in New York City have at least some 
+amount of retail activity; there are no entirely residential 
+neighborhoods in the city. However, there is considerable 
+variation in the quantity of retail activity, measured by the 
+density of establishments and shown in Figure 1. Table 3 
+also displays a selection of the retail metrics and demon-
+strates that neighborhoods across the city are diverse in 
+terms of retail density, the size of retail establishments, and 
+Figure 1. Density of retail establishments by ZIP code (2007)
+
+===== PAGE 9 =====
+Meltzer and Schuetz	
+81
+the diversity of stores and services. Although residents, on 
+average, have great access to retail (nearly 90% of all resi-
+dential space is within ¼ mile of a retail corridor), there are 
+neighborhoods where this is the case for less than 10% of 
+residentially occupied space.
+Because one of the purposes of this analysis is to deter-
+mine what metric or combination of metrics should be used 
+to characterize retail, it is worth asking to what degree the 
+various metrics are correlated with one another, both within 
+and across industry categories. If the retail metrics are not 
+strongly correlated, that implies that the choice of metric (in 
+our analysis, intended to serve as the dependent variable) 
+may affect the results of the analysis. In Table 4, we show 
+simple pairwise correlation coefficients between each metric 
+for groceries, all retail establishments, all food service estab-
+lishments, and chains. In general, the measures of establish-
+ment density across the categories are highly correlated 
+(ranging from 0.70 to 0.90), which suggests that there is 
+colocation among different types of retail. However, the 
+other metrics, such as size, are not as consistently or strongly 
+associated. Moreover, neither retail diversity (as measured 
+by the Herfindahl index) nor retail access (as measured by 
+distance to a retail corridor) is highly correlated with the 
+other metrics. This suggests the need for a multi-dimensional 
+approach to characterizing neighborhood retail activity.
+How Does Retail Activity in  
+New York City Vary by Income?
+To develop a better understanding of the relationships 
+between household income and retail activity, we compare 
+all the retail metrics for neighborhoods with average house-
+hold income above and below 80% of the city average 
+income in 2000 ($58,505).13 In Table 5, we display the 
+results for the primary retail and food service metrics, which 
+summarize overall retail access by neighborhood type. 
+Consistent with theory and previous case studies, relatively 
+higher income neighborhoods have higher densities of both 
+establishments and employment and larger establishments 
+on average (for retail and food service). These disparities are 
+generally larger for food services. In addition, the Herfindahl 
+index for food services is significantly lower, on average, in 
+higher income neighborhoods, suggesting that they have 
+access to a more diverse pool of food services (the Herfindahl 
+index for retail services is also lower in higher income neigh-
+borhoods, but this difference is statistically insignificant). 
+Although both low- and moderate-/high-income neighbor-
+hoods have considerable access to retail corridors, low-income 
+neighborhoods have significantly more access. Together, these 
+results suggest that residents in relatively low-income neigh-
+borhoods have retail activity nearby, but that it is less dense 
+and composed of smaller and less diverse options (both of 
+which could have implications for the quality and cost of the 
+goods and services).
+In the “Literature Review” section, we discussed how 
+neighborhood characteristics other than income, such as 
+access to transit and the amount of retail space in the local 
+building stock, may affect variation in retail density. To test 
+the importance of these factors, we calculate the average 
+proximity between subway and rail transit and commercial 
+properties and the average retail space per building for each 
+ZIP.14 Although Table 5 does not display these statistics, we 
+find that relatively low-income neighborhoods have greater 
+access to transit and more retail space per building. Therefore, 
+in spite of possessing some characteristics that would, theo-
+retically, make these neighborhoods more appealing to retail 
+businesses, they still face less retail access overall.
+Next we drill down to finer industry categories to better 
+understand variations in access to specific quality-of-life retail. 
+Again, we compare retail activity across low- and middle/
+high–income neighborhoods. These results are displayed in 
+Table 6. Overall, the pattern echoes that for retail access more 
+generally. The density (in terms of establishments and employ-
+ment) is significantly higher in relatively high-income neigh-
+borhoods, and the magnitude is the largest for food services; 
+none of the other differences compare, in terms of magnitude, 
+with the differences found among retail establishments more 
+broadly (which are consistently much larger). The retail 
+establishments are also larger in higher income neighbor-
+hoods, a pattern that is particularly stark for grocery stores. 
+The grocery stores, however, are slightly denser in lower 
+income neighborhoods, and there is no statistically signifi-
+cant difference in the density of large grocery stores across 
+the two types of neighborhoods (this result, however, is not 
+replicated using the employment density measure). Therefore, 
+it appears that lower income neighborhoods are not as severely 
+disadvantaged when it comes to “necessity” services and 
+goods, such as groceries and drugstores; restaurants and food 
+establishments, however, disproportionately locate in higher 
+income neighborhoods.
+Finally, we compare the prevalence of chain stores and 
+restaurants across low- and middle-/high-income neighbor-
+hoods. The results in Table 7 indicate that higher income 
+neighborhoods have more chain stores and restaurants. In 
+addition, chains in poorer neighborhoods tend to be more 
+unhealthy (35% compared with 21% of chain restaurants 
+in higher income neighborhoods). Note that the difference 
+in McDonalds’ locations is about two times that for 
+Subway locations. Dunkin Donuts are more prevalent than 
+Starbucks in both types of neighborhoods, but the 
+Starbucks–Dunkin Donuts ratio is the highest in middle-/
+high-income neighborhoods (0.54 compared with 0.03 in 
+low-income neighborhoods and 0.41 citywide). Although 
+we cannot make a clear-cut comparison on the health 
+aspects of Starbucks versus Dunkin Donuts, the latter cer-
+tainly offers a lower cost option and markets itself to a dif-
+ferent clientele. The difference in the number of gyms is 
+also stark: Middle-/high-income neighborhoods have, on 
+
+===== PAGE 10 =====
+82	
+Table 4. Correlation of Selected Retail Metrics
+Grocery
+All retail
+Food service
+Variable
+Est/land Emp/land Emp/est Est/land Emp/land Emp/est Est/land Emp/land Emp/est Herfindahl retail
+Chain store 
+density
+Percentage 
+unhealthy
+Starbucks–
+Dunkin Donuts
+Grocery
+  Emp/land
+0.592
+ 
+  Emp/est
+−0.150
+0.461
+ 
+All retail
+  Est/land
+0.729
+0.576
+0.015
+ 
+  Emp/land
+0.615
+0.643
+0.133
+0.935
+ 
+  Emp/est
+−0.079
+0.333
+0.540
+−0.007
+0.082
+ 
+Food service
+  Est/land
+0.698
+0.663
+0.087
+0.901
+0.870
+0.033
+ 
+  Emp/land
+0.569
+0.630
+0.142
+0.822
+0.864
+0.079
+0.917
+ 
+  Emp/est
+0.191
+0.437
+0.284
+0.174
+0.250
+0.667
+0.214
+0.326
+ 
+Herfindahl retail
+0.259
+0.261
+0.100
+−0.064
+−0.023
+0.097
+0.000
+0.032
+0.232
+ 
+Chain store density
+0.660
+0.582
+0.044
+0.824
+0.841
+0.028
+0.905
+0.854
+0.223
+−0.058
+ 
+Percentage unhealthy
+−0.136
+−0.275
+−0.188
+−0.203
+−0.236
+−0.188 −0.256
+−0.247
+−0.218
+−0.347
+−0.227
+ 
+Starbucks–Dunkin Donuts
+0.484
+0.654
+0.263
+0.666
+0.702
+0.246
+0.747
+0.822
+0.483
+0.516
+0.717
+−0.370
+ 
+Percentage residence units 
+within ¼ mile of retail 
+corridor
+0.477
+0.253
+−0.269
+0.312
+0.244
+−0.218
+0.282
+0.219
+−0.042
+0.064
+0.274
+−0.078
+0.158
+Note. Correlation coefficients for ZIP Business Patterns (ZBP) metrics are from 2007.
+
+===== PAGE 11 =====
+Meltzer and Schuetz	
+83
+Table 5. Retail Access: Primary Retail Metrics by Income
+NYC
+Middle-upper income
+Low income
+Difference
+Est/land
+ 
+  Retail
+0.256
+0.269
+0.216
+0.053***
+  Food service
+0.136
+0.153
+0.082
+0.070***
+Emp/land
+ 
+  Retail
+2.488
+2.821
+1.421
+1.400***
+  Food service
+2.166
+2.641
+0.650
+1.991***
+Emp/est
+ 
+  Retail
+9.208
+9.897
+7.032
+2.865***
+  Food service
+11.582
+12.574
+8.509
+4.066***
+Herfindahl
+ 
+  Retail
+0.232
+0.231
+0.237
+−0.006
+  Food service
+0.448
+0.444
+0.460
+−0.016***
+Share of residence within
+ 
+  ¼ mile
+0.824
+0.854
+0.933
+−0.079***
+  ½ mile
+0.948
+0.944
+0.967
+−0.024***
+n
+208
+169
+39
+ 
+Note. “Middle-upper income” defined as greater than 80% of NYC average household income. Statistics are population-weighted ZIP-industry averages 
+across 10 years of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01.
+Table 6. Quality-of-Life Retail Metrics by Income
+NYC
+Middle-upper income
+Low income
+Difference
+Est/land
+ 
+  Groceries
+0.040
+0.036
+0.051
+−0.015***
+  Large groceries
+0.004
+0.004
+0.002
+0.002***
+  Drugstores
+0.021
+0.022
+0.018
+0.004***
+  Clothing
+0.039
+0.043
+0.027
+0.016***
+  Food service
+0.136
+0.153
+0.082
+0.070***
+Emp/land
+ 
+  Groceries
+0.441
+0.475
+0.343
+0.132***
+  Large groceries
+0.291
+0.339
+0.153
+0.186***
+  Drugstores
+0.272
+0.313
+0.153
+0.161***
+  Clothing
+0.531
+0.629
+0.238
+0.390***
+  Food service
+2.166
+2.641
+0.650
+1.991***
+Emp/est
+ 
+  Groceries
+12.76
+14.59
+7.53
+7.07***
+  Drugstores
+76.61
+80.69
+63.91
+16.78***
+  Clothing
+12.99
+14.57
+8.47
+6.10***
+  Food service
+10.77
+11.50
+8.60
+2.90***
+n
+208
+169
+39
+ 
+Note. “Middle-upper income” defined as greater than 80% of NYC average household income. Statistics are population-weighted ZIP-industry averages 
+across 10 years of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+average, one gym, whereas low-income neighborhoods 
+have just 0.29. This result, together with the statistics on 
+chain food stores, conveys a rather unhealthy environ-
+ment for residents in low-income neighborhoods. Finally, 
+we see that lower income neighborhoods actually have 
+significantly more chain supermarkets, but they have no 
+“upscale” markets. Although poorer neighborhoods likely 
+do not suffer from lack of access to a Whole Foods or 
+Zabar’s, this may point to disparities in access to fresh 
+produce or other healthy foods.
+
+===== PAGE 12 =====
+84	 	
+Economic Development Quarterly 26(1)
+Table 7. Chain Stores and Restaurants by Income
+NYC
+Middle-upper income
+Low income
+Difference
+Chain stores (n)
+22.87
+24.11
+18.90
+5.21***
+Chain restaurants (n)
+15.27
+16.01
+12.90
+3.11***
+  “Unhealthy” (%)
+24.7
+21.1
+35.2
+−14.2***
+Notable chains (percentage of total)
+  McDonalds
+6.8
+5.8
+9.7
+−0.04***
+  Subway
+8.4
+8.0
+9.8
+−0.02***
+  Starbucks
+3.8
+5.0
+0.4
+0.05***
+  Dunkin Donuts
+11.8
+12.2
+10.7
+0.01***
+Starbucks–Dunkin Donuts ratio
+0.41
+0.54
+0.03
+0.50***
+Gyms (n)
+0.86
+1.04
+0.29
+0.75***
+Chain groceries (n)
+3.34
+2.92
+4.67
+−1.75***
+  “Upscale” (%)
+3.2
+4.4
+0.0
+4.4***
+n
+208
+169
+39
+ 
+Note. “Middle-upper income” defined as greater than 80% of NYC average household income. Statistics are population-weighted ZIP-industry averages 
+across 10 years of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+Table 8. Retail Access: Primary Retail Metrics by Predominant Racial/Ethnic Group
+White non-Hispanic
+Black
+Hispanic
+Difference, White–Black
+Difference, White–Hispanic
+Est/land
+ 
+  Retail
+0.336
+0.129
+0.263
+0.207***
+0.073***
+  Food service
+0.210
+0.037
+0.076
+0.173***
+0.134***
+Emp/land
+ 
+  Retail
+4.084
+0.874
+1.653
+3.209***
+2.431***
+  Food service
+4.479
+0.366
+0.676
+4.113***
+3.804***
+Emp/est
+ 
+  Retail
+10.570
+7.195
+6.478
+3.375***
+4.092***
+  Food service
+14.963
+11.423
+9.111
+3.540***
+5.852***
+Herfindahl
+ 
+  Retail
+0.265
+0.245
+0.219
+0.020
+0.046***
+  Food service
+0.470
+0.519
+0.430
+−0.049***
+0.040***
+Share of residence within
+ 
+  ¼ mile
+0.873
+0.851
+0.960
+0.023***
+−0.086***
+  ½ mile
+0.947
+0.942
+1.000
+0.005***
+−0.053***
+n
+78
+26
+16
+ 
+Note. Predominant racial/ethnic group defined as greater than 60% of population. Statistics are population-weighted ZIP-industry averages across 10 years 
+of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+How Does Retail Activity in New York City 
+Vary by Race/Ethnic Composition?
+We replicate the same analyses across neighborhoods strati-
+fied by supermajority race/ethnicity. Table 8 displays the 
+results for the primary retail access metrics. Consistent with 
+the income results, neighborhoods with predominantly 
+Black and Latino residents have lower establishment and 
+employment densities and smaller establishments than those 
+with predominantly White residents. Predominantly White 
+neighborhoods also have significantly more diverse food 
+service activity than predominantly Black neighborhoods 
+(as indicated by the lower Herfindahl index); retail diversity 
+in Latino neighborhoods, however, is greater than that in 
+predominantly White neighborhoods. In addition, residents 
+in predominantly Hispanic neighborhoods on average live 
+closer to retail corridors (the opposite is true for predomi-
+nantly Black neighborhoods, compared with predominantly 
+White neighborhoods). In sum, neighborhoods with pre-
+dominantly minority populations (which also tend to be 
+
+===== PAGE 13 =====
+Meltzer and Schuetz	
+85
+poorer) have access to fewer and smaller stores and services. 
+Retail diversity and physical access to retail services, how-
+ever, vary by race/ethnicity. Residents in predominantly 
+Latino neighborhoods on average live closer to retail and 
+have more diverse retail options; residents in predominantly 
+Black neighborhoods, however, have less physical access to 
+retail services and somewhat less diverse options.
+As for access to transit and prevalence of retail space, 
+predominantly Black neighborhoods generally have more 
+rail access than and about the same amount of retail space 
+per building as predominantly White neighborhoods. 
+Predominantly Hispanic neighborhoods, however, have 
+significantly less access to transit and more retail space per 
+building. Again, it appears that any disadvantage (or advan-
+tage in the case of predominantly Hispanic neighborhoods) 
+in retail access is not solely driven by these cost-related 
+factors.
+Table 9 shows the results for finer, quality-of-life retail 
+categories and indicates that overall minority neighborhoods 
+have relatively lower densities (for establishments and 
+employment) and smaller establishments for local basic ser-
+vices such as groceries, drugstores, clothing, and food ser-
+vices. One exception is groceries, which are more densely 
+located in Latino neighborhoods relative to predominantly 
+White neighborhoods; they do tend to be smaller, which 
+could represent mostly bodega or deli-type outfits rather than 
+general supermarkets (on average 6 employees compared 
+with about 19 in predominantly White neighborhoods). As 
+with the income results, these differences tend to be the larg-
+est for food service establishments.
+The last set of results for chain stores and restaurants are 
+displayed in Table 10. Predominantly Black and Hispanic 
+neighborhoods have significantly fewer chains and consider-
+ably more “unhealthy” chain restaurants (41% and 30% for 
+Black and Latino neighborhoods, respectively, compared with 
+13% for predominantly White neighborhoods). Consistent 
+with the income results, predominantly minority neighbor-
+hoods have fewer Starbucks relative to Dunkin Donuts, fewer 
+gyms, and no “upscale” supermarkets. Predominantly Hispanic 
+neighborhoods, however, have more chain groceries overall, 
+although the previous set of results suggests that they are, on 
+average, smaller.
+How Does Retail Activity in  
+New York City Vary Over Time?
+In this section, we review the results from the dynamic 
+analysis, which looks at changes in retail activity between 
+1998 and 2007 for low- and moderate-/high-valued neigh-
+borhoods undergoing economic transitions.15 The first col-
+umn of Table 11 shows the changes in four retail metrics for 
+the city as a whole, and columns 2 and 3 show the metrics 
+for low-valued neighborhoods that are either upgrading or 
+stable/lagging. The fourth and fifth columns display the dif-
+ference in retail change across upgrading and stable/lagging 
+neighborhoods, for both low-valued and high-valued 
+Table 9. Quality-of-Life Retail Metrics by Predominant Racial/Ethnic Group
+White non-Hispanic
+Black
+Hispanic
+Difference, White–Black
+Difference, White–Hispanic
+Est/land
+ 
+  Groceries
+0.040
+0.029
+0.064
+0.012***
+−0.023***
+  Large groceries
+0.007
+0.002
+0.003
+0.005***
+0.004***
+  Drugstores
+0.030
+0.012
+0.022
+0.018***
+0.007***
+  Clothing
+0.064
+0.017
+0.036
+0.047***
+0.029***
+  Food service
+0.210
+0.037
+0.076
+0.173***
+0.134***
+Emp/land
+ 
+  Groceries
+0.724
+0.220
+0.377
+0.504***
+0.347***
+  Large groceries
+0.569
+0.107
+0.162
+0.462***
+0.407***
+  Drugstores
+0.469
+0.118
+0.199
+0.351***
+0.270***
+  Clothing
+1.067
+0.134
+0.298
+0.933***
+0.770***
+  Food service
+4.479
+0.366
+0.676
+4.113***
+3.804***
+Emp/est
+ 
+  Groceries
+19.19
+8.86
+6.25
+10.330***
+12.94***
+  Drugstores
+91.58
+72.99
+61.20
+18.586***
+30.38***
+  Clothing
+15.88
+11.66
+8.86
+4.215***
+7.01***
+  Food service
+13.24
+8.37
+7.82
+4.864***
+5.42***
+n
+78
+26
+16
+ 
+Note. Predominant racial/ethnic group defined as greater than 60% of population. Statistics are population-weighted ZIP-industry averages across 10 years 
+of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+
+===== PAGE 14 =====
+86	 	
+Economic Development Quarterly 26(1)
+neighborhoods. We present the statistics for four retail cat-
+egories to pick up any variation among types of service.16
+Both upgrading and stable/lagging low-valued neighbor-
+hoods are growing in terms of retail activity. This is consis-
+tent with most of New York City, and the outer boroughs in 
+particular, where most of the low-valued neighborhoods are 
+located (see Figure 2). Moreover, upgrading neighborhoods 
+are generally outpacing the stable/lagging neighborhoods 
+and about half of these differences are statistically signifi-
+cantly different from zero. Upgrading neighborhoods are 
+Table 10. Chain Stores and Restaurants by Race/Ethnicity
+White non-Hispanic
+Black
+Hispanic
+Difference, White–Black
+Difference, White–Hispanic
+Chain stores (n)
+23.98
+19.67
+19.27
+4.31***
+4.72***
+Chain restaurants (n)
+15.71
+13.11
+12.44
+2.60***
+3.27***
+  “Unhealthy” (%)
+12.8
+40.6
+29.6
+−27.8***
+−16.8***
+Notable chains (%)
+  McDonalds
+4.2
+7.7
+9.4
+−3.4***
+−5.1***
+  Subway
+7.8
+7.1
+11.3
+0.7
+−3.6***
+  Starbucks
+8.9
+0.4
+0.7
+8.5***
+8.2***
+  Dunkin Donuts
+11.5
+10.1
+12.1
+1.4***
+−0.6
+Starbucks–Dunkin Donuts ratio
+0.94
+0.03
+0.06
+0.92***
+0.88***
+Gyms (n)
+1.41
+0.52
+0.44
+0.90***
+0.98***
+Chain groceries (n)
+2.26
+4.25
+3.90
+−1.99***
+−1.64***
+  “Upscale” (%)
+8.8
+0.0
+0.0
+8.8***
+8.8***
+\n
+78
+26
+16
+ 
+Note. Predominant racial/ethnic group defined as greater than 60% of population. Statistics are population-weighted ZIP-industry averages across 10 years 
+of ZBPA data (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+Table 11. Does Retail Access Improve in Low-Value Neighborhoods That Upgrade?
+Percentage change in housing values 
+(1998-2007)
+Difference, upgrading–stable/lagging
+ 
+NYC
+Upgrading
+Stable/lagging
+Low-value ZIPs
+Moderate-/High-Value ZIPs
+Percentage change est/acre
+  Retail (44)
+10.2
+20.03
+15.01
+5.02
+1.10
+  Food service (72)
+29.3
+44.31
+32.53
+11.78*
+12.34**
+  Groceries
+16.4
+23.23
+24.18
+−0.94
+−3.54**
+  Clothing
+7.5
+31.49
+7.34
+24.15**
+22.36*
+Percentage change emp/acre
+  Retail (44)
+19.4
+31.95
+18.08
+13.87*
+25.92***
+  Food service (72)
+32.9
+49.31
+30.98
+18.34*
+16.20**
+  Groceries
+15.9
+30.09
+6.01
+24.08**
+31.25**
+  Clothing
+20.4
+37.25
+8.86
+28.39
+32.80*
+Percentage change emp/est
+  Retail (44)
+9.8
+12.95
+4.05
+8.90
+25.27***
+  Food service (72)
+5.3
+7.62
+1.14
+6.48
+4.24
+  Groceries
+0.3
+9.16
+−17.40
+26.56**
+34.73***
+  Clothing
+14.5
+12.30
+2.03
+10.27
+13.44
+Percentage change Herfindahl
+  Retail (44)
+65.8
+47.61
+61.77
+−14.16**
+−6.83
+  Food service (72)
+0.5
+0.14
+−0.39
+0.53
+−7.99**
+n
+171
+31
+64
+95
+76
+Note. ZIPs in columns 1 and 2 had initial housing values (1998) <80% NYC average. “Upgrading” defined as ZIP percentage change in average housing value 
+>NYC percentage change in average housing value (1998-2007). “Stable/lagging” defined as ZIP percent change in average housing value ≤NYC percentage 
+change in average housing value (1998-2007).
+*p < .10. **p < .05. ***p < .01. (Based on t test for difference in means.)
+
+===== PAGE 15 =====
+Meltzer and Schuetz	
+87
+Figure 2. Percentage change in retail establishment density (1998-2007)
+receiving significantly more food service and clothing estab-
+lishments (per acre) compared with stable/lagging neigh-
+borhoods, but the change in density and size of retail 
+establishments more generally is indistinguishable across 
+the two types of neighborhoods (with the exception of 
+employee density, which is marginally statistically signifi-
+cant). In addition, all low-valued neighborhoods are becom-
+ing more homogeneous in terms of retail services (the 
+Herfindahl index is increasing), but the upgrading neighbor-
+hoods are doing so at a slower rate (there is no discernible 
+difference in food service diversity). This reflects the general 
+trend toward larger chains (that might actually offer a wider 
+range of product options within each store location). That 
+said, the more substantial changes in retail activity for eco-
+nomically upgrading neighborhoods are consistent with 
+increasing buying power and, perhaps, shifts in consumer 
+preferences, that is, toward larger chain stores.
+As a second comparison, we calculate the same statistics 
+for moderate-/high-valued neighborhoods and derive the 
+difference in retail change between the neighborhoods that 
+were upgrading and stable/lagging (displayed in the last 
+column of Table 11). We then compare this difference with 
+
+===== PAGE 16 =====
+88	 	
+Economic Development Quarterly 26(1)
+the difference in retail change calculated for the low-valued 
+neighborhoods (i.e., compare the two right-hand columns 
+of Table 11). Overall, both low- and high-/moderate-valued 
+neighborhoods exhibit the same change patterns across 
+upgrading and stable/declining neighborhoods. However, 
+in terms of establishment densities, low-valued and upgrading 
+neighborhoods are generally outpacing their stable/lagging 
+comparison neighborhoods more so than high-valued and 
+upgrading neighborhoods (except for food services, which 
+is growing at a relatively slower pace for low-valued and 
+upgrading neighborhoods). The results for employee densi-
+ties show the reverse: High-valued and upgrading neigh-
+borhoods are generally outpacing their stable/lagging 
+comparison neighborhoods more so than low-valued and 
+upgrading neighborhoods (again, with the exception of food 
+services). Similarly, except for food service establishments, 
+higher valued and upgrading neighborhoods are outpacing 
+comparable stable/lagging neighborhoods in establishment 
+size more so than low-valued neighborhoods. These results 
+suggest that although lower valued neighborhoods are 
+growing relatively faster in terms of retail establishment 
+density, they are not attracting as many larger businesses 
+(again, this might be due to differential location choices of 
+larger chains). Last, although retail activity in high-valued 
+and upgrading neighborhoods is becoming more homoge-
+neous, it is doing so at a relatively faster pace than low-
+valued and upgrading neighborhoods (compared with 
+similar stable/lagging neighborhoods). The opposite is true 
+for diversity of food services.
+In sum, low-valued neighborhoods appear to fare better 
+(in terms of retail activity) if they are economically upgrad-
+ing, compared with similar, economically stable/lagging 
+neighborhoods. However, initially higher valued and appre-
+ciating neighborhoods experienced relatively faster growth 
+in the size of retail establishments.
+Conclusions and Policy Implications
+Scholars have dedicated a great deal of rigor and thought to 
+understanding the nature of and mechanisms behind residen-
+tial neighborhood change. Although we expect commercial 
+amenities to change along with the residential population, 
+and anecdotal evidence generally supports this, essentially 
+no quantitative research has focused on neighborhood com-
+mercial change. In the current article, we aim to fill this gap 
+by providing a much needed assessment of local retail estab-
+lishments and the neighborhoods they serve. First, we con-
+struct and compare various metrics of “retail presence,” and 
+find that a single measure is not sufficient for capturing the 
+multidimensional nature of retail presence. Whereas the 
+densities of establishments and employment are strongly and 
+positively correlated, measures of size, access, and diversity 
+are generally negatively and weakly correlated with density 
+measures.
+Second, we analyze how retail services vary across neigh-
+borhoods with different economic and demographic charac-
+teristics. Results show that low-income neighborhoods have 
+lower densities of both establishments and employment, 
+smaller average establishment size, and less diverse retail 
+composition. However, the size of disparities varies by retail 
+category: Poor neighborhoods are more disadvantaged in 
+food service than in retail, and within retail, the differences 
+are smallest for basic necessities, such as grocery stores and 
+pharmacies. Low-income neighborhoods have fewer chain 
+stores and restaurants, somewhat contrary to conventional 
+wisdom. Supporting prior findings, a much higher propor-
+tion of chain restaurants in poor neighborhoods are unhealthy 
+fast food establishments, and there are many fewer gyms 
+available. Low-income neighborhoods actually have a higher 
+number of chain supermarket branches, but are less likely to 
+have upscale supermarkets, possibly a proxy for food qual-
+ity. Similar disparities exist when comparing predominantly 
+White neighborhoods with predominantly Black and Latino 
+ones. Predominantly Latino neighborhoods, however, do 
+have more diverse retail and food services and greater physi-
+cal access to retail corridors than predominantly White 
+neighborhoods.
+Third, we examine changes in retail activity over time. 
+We find that by almost all measures, retail access has 
+improved in New York City between 1998 and 2007, and 
+that it improved particularly rapidly in low-value neighbor-
+hoods that experienced upgrading or gentrification. However, 
+initially higher valued and appreciating neighborhoods expe-
+rienced relatively faster growth in larger retail establish-
+ments over this same time period. Together, these results 
+suggest that retail is quite sensitive to changes in neighbor-
+hood economic or demographic characteristics.
+A number of areas remain for future research. This article 
+focuses exclusively on New York City, which differs from 
+many other U.S. cities in its size, density, and integration of 
+residential and commercial activities throughout many 
+neighborhoods. Thus, an important next step is to conduct 
+similar analyses and verify whether the relationships between 
+income, race, and retail access hold true in other cities.17 
+Second, as new neighborhood-level data become available 
+from the 2010 census (and the 2005-2009 average of the 
+American Community Survey), it will become possible to 
+examine more directly how retail patterns have changed in 
+neighborhoods undergoing economic and demographic 
+change. This may help illuminate some of the causes behind 
+the disparities: If low incomes are the main source of limited 
+retail access, then retail should increase in neighborhoods 
+experiencing rising incomes. Additional research in this area 
+should help policy makers better construct programs to help 
+residents in low-income and minority neighborhoods gain 
+access to a broader range of goods and services, and health-
+ier food options, and to generally improve neighborhood 
+quality of life.
+
+===== PAGE 17 =====
+Meltzer and Schuetz	
+89
+The purpose of this article is not to evaluate the success of 
+existing economic development policies, but based on our 
+results, we pose several questions about how future pro-
+grams might be designed. First, should eligibility be defined 
+through constant geographic boundaries, as is the case for 
+programs such as federal empowerment zones? As shown in 
+Figure 3, although there is some geographic clustering of 
+poor and minority neighborhoods, rigid geographic boundar-
+ies are somewhat of a blunt instrument if the intent is to tar-
+get investment toward these neighborhoods. In addition, 
+retail markets may span broader or more distinct areas than 
+those defined by racial or economic clusters.
+A second question is whether policies should target or 
+favor businesses based on size. Many traditional economic 
+development policies are intended to help small, locally 
+owned “mom and pop” businesses. Such assistance is 
+thought to improve opportunities for entrepreneurs and 
+assist wealth building within the community. However, our 
+research finds that poor and minority neighborhoods cur-
+rently have much smaller average stores for nearly all the 
+retail categories examined. This implies a smaller range of 
+product choices within each store, and, to the extent that 
+economies of scale exist, may result in higher prices than in 
+larger establishments. Moreover, larger stores by definition 
+Figure 3. Density of retail establishments (2007) and average household income (2000)
+
+===== PAGE 18 =====
+90	 	
+Economic Development Quarterly 26(1)
+offer more opportunities for employment. Thus, although 
+small business–friendly policies may be popular among 
+business owners, it is not clear if they are advantageous for 
+either consumers or potential workers in low-income neigh-
+borhoods. Alternatively, perhaps the public programs could 
+subsidize certain types of products (e.g., healthier ones) for 
+smaller businesses that cannot offer those goods at competi-
+tive prices.
+Third, should economic development policies treat all 
+types of commercial activity as equally desirable? Policies 
+that encourage manufacturing or business incubation may 
+provide employment opportunities but will not directly 
+address the discrepancies in access to grocery stores, cloth-
+ing, or healthy food service options. Targeted policies 
+around health-related retail may be more effective at allevi-
+ating consumption disparities than more broadly framed tax 
+abatements. Policy makers should consider whether the pri-
+mary purpose of each program is to encourage jobs or ben-
+efit consumers, and whether these goals are mutually 
+exclusive.
+Figure A1. Retail corridors, New York City
+Appendix
+
+===== PAGE 19 =====
+Meltzer and Schuetz	
+91
+Table A1. Chain Stores and Restaurants in Database
+Category
+Chain name
+Clothes and shoes
+American Apparel, Ann Taylor, Banana Republic, Brooklyn Industries, Foot Locker, Gap, H&M, 
+Marshalls, Old Navy, Payless, The Childrens Place, Urban Outfitters
+Drugstore
+CVS, Duane Reade, Rite Aid, Walgreens
+Financial services
+H&R Block, Jackson Hewitt, Liberty Tax
+Food/beverage: Fast food
+Auntie Annies,a Burger King,a Crown Fried Chicken,a Dominos,a Five Guys,a Golden Krust,a KFC,a 
+Master Wok,a Mcdonalds,a Nathans,a Papa Johns,a Pizza Hut,a Popeyes,a Pretzel Time,a Ranch1, 
+Sbarro,a Taco Bell,a Wendys,a White Castlea
+Food/beverage: Other
+7-Eleven, Applebee’s, Arthur Treacher, Au Bon Pain, Baskin Robbins, Ben and Jerrys, Blimpie, Boston 
+Market, Carvel, Chevy’s, Chipotle, Chuck E. Cheese, Cold Stone Creamery, Cosi, Crumbs, Dallas 
+BBQ, Dunkin Donuts, Famiglia, Fridays, Gloria Jeans Coffee, Godiva, Haagen-Dazs, Hale and 
+Hearty, Hard Rock Café, Ihop, Jamba Juice, Johnny Rockets, Juan Valdez, Le Pain Quotidien, Mrs 
+Fields, Olive Garden, Outback, Panera Bread, Pax Wholesome, Pinkberry, Pret a Manger, Quiznos, 
+Red Lobster, Starbucks, Subway, Tasti D-Lite, Tim Horton, Two Boots, UNO’S
+Gyms
+Bally’s Total Fitness, Crunch, Curves, David Barton, Equinox, Gold’s Gym, Lucille Roberts, NY Sports 
+Club
+Home goods
+Home Depot, Rent-a-Center
+Source. Adapted from Center for an Urban Future (2009).
+a. “Unhealthy” fast-food restaurant.
+Table A2. Supermarket Chains in Database
+Supermarket name
+Associated Supermarkets
+Bravo
+Citarellaa
+Costco
+C-Town
+D’Agostinoa
+Fairway
+Fine Fare
+Food Emporium
+Garden of Edena
+Gourmet Garagea
+Gristedes
+Key Food
+Morton Williams
+Pathmark
+Trader Joe’s
+West Side Market
+Western Beef
+Western Beef/Junior’s
+Whole Foodsa
+Source. Adapted from Center for an Urban Future (2009), additional online 
+research by authors.
+a. “Upscale” supermarket.
+Table A3. Does Retail Access Improve in High-Value 
+Neighborhoods That Upgrade?
+Percentage Change in 
+Housing Values (1998-
+2007)
+ 
+Upgrading
+Stable/
+Lagging
+Difference
+Percentage change est/acre
+ 
+Retail (44)
+2.96
+1.86
+1.10
+Food service (72)
+29.70
+17.35
+12.34**
+Groceries
+4.57
+8.11
+−3.54**
+Clothing
+14.98
+−7.38
+22.36*
+Percentage change emp/
+acre
+ 
+Retail (44)
+35.07
+9.15
+25.92***
+Food service (72)
+40.06
+23.86
+16.20**
+Groceries
+41.94
+10.69
+31.25**
+Clothing
+47.75
+14.95
+32.80*
+Percentage change emp/est
+ 
+Retail (44)
+32.66
+7.39
+25.27***
+Food service (72)
+11.16
+6.92
+4.24
+Groceries
+37.84
+3.11
+34.73***
+Clothing
+35.62
+22.18
+13.44
+Percentage change 
+Herfindahl
+ 
+Retail (44)
+71.65
+78.48
+−6.83
+Food service (72)
+−4.68
+3.32
+−7.99**
+n
+18
+58
+ 
+Note. All ZIPs had initial housing values (1998) ≥80% NYC average “Upgrading” 
+defined as ZIP percentage change in average housing value > NYC percentage 
+change in average housing value (1998-2007). Stable/lagging defined as ZIP 
+percentage change in average housing value ≤ NYC percentage change in 
+average housing value (1998-2007).
+*p < .10. **p < .05. ***p < .01.
+
+===== PAGE 20 =====
+92	 	
+Economic Development Quarterly 26(1)
+Acknowledgments
+We thank Gabriela Gutierrez, Ray Calnan, and Stephaney Kipple 
+for excellent research assistance.
+Declaration of Conflicting Interests
+The author(s) declared no potential conflicts of interest with respect to 
+the research, authorship, and/or publication of this article. 
+Funding
+The author(s) disclosed receipt of the following financial support for 
+the research, authorship, and/or publication of this article: 
+The author(s) gratefully acknowledge financial support and 
+data access from the Furman Center for Real Estate and Urban 
+Policy at New York University. JS acknowledges financial support 
+from University of Southern California’s Advancing Scholarship in 
+the Humanities and Social Sciences Initiative.
+Notes
+  1.	 In the classic example, the market area for ice cream vendors 
+will be very small, due to the highly perishable nature of the 
+good, so in equilibrium there will be a large number of vendors 
+each with a small market area. On the other end of the spectrum, 
+consumers should be willing to travel long distances to purchase 
+goods that are expensive, infrequently purchased, or highly dif-
+ferentiated by quality, such as cars, furniture, or high-end res-
+taurants; these retail categories will have a smaller number of 
+establishments, each serving quite large geographic markets.
+  2.	 Many retail firm costs are not only not “fixed” in the traditional 
+sense but are also not exactly marginal. For instance, building 
+rents are often fixed over lease terms, which may be 5 or 10 
+years long but may offer some flexibility between leases, 
+depending on negotiations between tenant and landlord. 
+Likewise contracts with suppliers, insurance, utilities, and so 
+on, may be fixed over a short period of time (1-2 years), and so 
+cannot be directly reduced with marginal productivity.
+  3.	 An establishment is defined as a “single physical location at 
+which business is conducted or services or industrial operations 
+are performed.” A firm may have multiple establishments, each 
+of which are counted separately.
+  4.	Prior to 1997, the ZBP use the Standard Industrial 
+Classification system, which differs from the NAICS in several 
+ways. In general, the NAICS offers a more fine-grained level 
+of detail that is helpful for our analysis, but makes it infeasible 
+to match counts by industry category precisely between the 
+two coding systems.
+  5.	 We were unable to match 96 ZIP codes to 2000 ZCTAs. These 
+nonmatched ZIP codes are composed of single buildings and 
+P.O. boxes, constituting at most 200 retail establishments in 
+total (less than 1% of all retail establishments in NYC). 
+Therefore, we do not miss a great deal of retail activity in these 
+nonmatched ZIP codes. In addition, most of these ZIP codes 
+are located in midtown Manhattan, and all our analyses are 
+robust to analyses without midtown neighborhoods.
+  6.	 The size measure is a weighted average, using the midpoint of 
+each size category multiplied by the number of establishments 
+in the category. For the largest category, 1,000 or more employ-
+ees, we use 1,000 as the average number. Very few establish-
+ments in New York City fall into this category, so any noise 
+introduced by this approximation is likely to be small.
+  7.	 We average across the 10 years, because individual ZIP–
+industry–year statistics can be noisy and actually change 
+slowly on a year-to-year basis.
+  8.	 In this article, we use the term bodegas to refer to small stores 
+that carry a limited selection of groceries, such as canned and 
+frozen goods, prepackaged basic dry goods, milk, sodas and beer, 
+and household or personal items, such as cleaning supplies and 
+toiletries. Some also offer limited selections of fresh produce, 
+fresh baked goods, coffee, and deli sandwiches made to order.
+  9.	 We ran similar analyses based on educational attainment and 
+got results substantially similar to the income analysis. Results 
+are available on request from authors.
+10.	 The 2010 decennial census has not yet been released and the 
+American Community Survey will not report income at the 
+ZIP-code level until releasing 5-year averages in late 2010.
+11.	 Our related research using a longitudinal establishment data-
+base, the NETS data set, confirms that establishments do 
+change their NAICS classification over time, although overall 
+numbers of these changes are fairly small.
+12.	 All the results described in this section are robust to analyses 
+that (a) exclude predominantly office- and retail-occupied mid-
+town Manhattan ZIP codes, (b) exclude all Manhattan ZIP 
+codes, and (c) exclude ZIP codes with low populations (less 
+than 200) and low retail activity (less than 50 establishments).
+13.	 All the results comparing low- and moderate-/high-income 
+neighborhoods, as defined above, are robust to analyses com-
+paring retail metrics across neighborhoods with (a) income 
+below and above the citywide median income and (b) share 
+of college-educated residents above and below the share of 
+college-educated residents for the entire city.
+14.	 Both variables are constructed using NYC Department of City 
+Planning PLUTO Database for 2006. Proximity to rail and 
+subway transit is created using GIS maps of rail and subway 
+entrances and calculating the average distance between the 
+entrances and retail properties for each ZIP code. The amount 
+of retail space per building is calculated by dividing the aggre-
+gate amount of retail space for the ZIP code by the total num-
+ber of commercial and mixed-use buildings in the ZIP code.
+15.	 All the results for the dynamic analysis are robust to analyses 
+that (a) exclude predominantly office- and retail-occupied mid-
+town Manhattan ZIP codes, (b) exclude ZIP codes with low 
+populations (<200) and low retail activity (<50 establish-
+ments), and (c) other thresholds for low- and moderate-/
+high-valued neighborhoods (specifically 60%, 10%, and 120% 
+of the average price per unit for New York City overall).
+16.	 We cannot use the chains or supermarket data in the dynamic 
+analysis, because we have those data for only one point in time 
+(2009).
+
+===== PAGE 21 =====
+Meltzer and Schuetz	
+93
+17.	 Schuetz, Kolko, and Meltzer (2010) conducted a large-scale 
+analysis of retail and neighborhood income for 58 large U.S. 
+metro areas. They found that retail density varies with income 
+for certain retail types, such as food service and chain super-
+markets and drugstores. In addition, average establishment size 
+increases with income for all retail types. Retail density 
+increases with population density, as expected, and decreases 
+with distance to CBD and with share of owner-occupied 
+housing.
+References
+Alwitt, L., & Donley, T. (1997). Retail stores in poor neighbor-
+hoods. Journal of Consumer Affairs, 31, 139-164.
+Barragan, R. (2010, September 9). A one stop shop for small and 
+micro business. Presentation at Federal Reserve Bank of Kan-
+sas City, Economic Development in Underserved Communities 
+Conference, Kansas City.
+Berry, B. (1967). Geography of market centers and retail distribu-
+tion. Englewood Cliffs, NJ: Prentice Hall.
+Berry, S. T., & Waldfogel, J. (2003, May). Product quality and mar-
+ket size. (NBER working paper No. 9675). Cambridge, MA: 
+National Bureau of Economic Research.
+Block, J., Scribner, R., & DeSalvo, K. (2004). Fast food, race/ 
+ethnicity, and income: A geographic analysis. American Jour-
+nal of Preventive Medicine, 27, 211-217.
+Bondonio, D. (2003). Do tax incentives affect local economic 
+growth? What mean impacts miss in the analysis of Enter-
+prise Zone policies (WP 03-17). Washington, DC: U.S. Census 
+Bureau, Center for Economic Studies.
+Busso, M., & Kline, P. (2008, February). Do local economic 
+development programs work? Evidence from the Federal 
+Empowerment Zone Program (Cowles Foundation Discussion 
+Paper No. 1638; Yale Economics Department Working Paper 
+No. 36). Retrieved from http://papers.ssrn.com/sol3/papers.
+cfm?abstract_id=1090838
+Caplovitz, D. (1967). The poor pay more: Consumer practices of 
+low-income families. New York, NY: Free Press.
+Carr, J., & Schuetz, J. (2001). Financial services in distressed com-
+munities: Framing the issue, finding solutions. Washington, 
+DC: Fannie Mae Foundation.
+Case, A., & Katz, L. (1991, May). The company you keep: The 
+effect of family and neighborhood on disadvantaged youth 
+(NBER Working Paper No. 3705). Cambridge, MA: National 
+Bureau of Economic Research.
+Center for an Urban Future. (2009). Return of the chains. Retrieved 
+from http://www.nycfuture.org/images_pdfs/pdfs/Returnofthe-
+Chains.pdf
+Chapple, K., & Jacobus, R. (2009). Retail trade as a route to neigh-
+borhood revitalization. In H. Wial, N. Pindus, & H. Wolman 
+(Eds.), Urban and regional policy and its effects (Vol. 2, pp. 
+19-68). Washington, DC: Brookings Institution/Urban Institute.
+Coopers & Lybrand Economic Studies Group. (1982). Impact of 
+enterprise zone tax incentives on selected small businesses. 
+Washington, DC: Author.
+Cutler, D., Glaeser, E., & Vigdor, J. (1999). The rise and decline 
+of the American ghetto. Journal of Political Economy, 107, 
+455-506.
+Davis, S., Haltiwanger, J., & Schuh, S. (1996). Job creation and 
+destruction. Cambridge: MIT Press.
+DiPasquale, D., & Wheaton, W. (1996). Urban economics and real 
+estate markets. Boston, MA: Prentice Hall.
+Dowall, D. (1996). An evaluation of California’s enterprise zone 
+programs. Economic Development Quarterly, 10, 352-368.
+Galster, G., Walker, C., Hayes, C., Boxall, P., & Johnson, J. (2004). 
+Measuring the impact of Community Development Block Grant 
+spending on urban neighborhoods. Housing Policy Debate, 15, 
+903-934.
+Glaeser, E., & Gottlieb, J. (2006). Urban resurgence and the con-
+sumer city. Urban Studies, 43, 1275-1299.
+Glaeser, E., Kolko, J., & Saiz, A. (2001). Consumer city. Journal of 
+Economic Geography, 1, 27-50.
+Glickman, N. J. (1981). Emerging urban policies in a slow-growth 
+economy: Conservative initiatives and progressive responses 
+in the U.S. International Journal of Urban and Regional 
+Research, 5, 492-527.
+Haltiwanger, J., Jarmin, R., & Krizan, C. J. (2010). Mom-and-pop 
+meet Big-Box: Complements or substitutes? Journal of Urban 
+Economics, 67, 116-134.
+Hayes, L. R. (2000). Do the poor pay more? An empirical investi-
+gation of price dispersion in food retailing (Industrial Relations 
+Working Paper No. 446). Princeton, NJ: Princeton Department 
+of Economics.
+Hebert, S., Vidal, A., & Mills, G., James, F., & Gruenstein, D. 
+(2001). Interim assessment of the Empowerment Zones and 
+Enterprise Communities (EZ/EC) Program: A progress report. 
+Retrieved from http://www.huduser.org/Publications/pdf/ezec_
+report.pdf
+Helling, A., & Sawicki, D. (2003). Race and residential accessibil-
+ity to shopping and services. Housing Policy Debate, 14, 69-84.
+Hotelling, H. (1929). Stability in competition. Economic Journal, 
+39, 41-57.
+International Council of Shopping Centers. (2004). Developing 
+successful retail in underserved urban markets. New York, NY: 
+Author.
+Jargowsky, P. (2003). Poverty and place: Ghettoes, barrios and the 
+American City. New York, NY: Russell Sage.
+Kaufman, P. R., MacDonald, J. M., Lutz, S. M., & Smallwood, D. M. 
+(1997, December). Do the poor pay more for food? Item selec-
+tion and price differences affect low-income household food 
+costs (Agricultural Economics Report No. 759). Washing-
+ton, DC: United States Department of Agriculture, Economic 
+Research Service.
+Lewis, L. B., Sloane, D. C., Nascimento, L. M., Diamant, A. L., 
+Guinyard, J. J., Yancey, A., & Flynn, G. (2005). African Ameri-
+cans’ access to healthy food options in South Los Angeles res-
+taurants. American Journal of Public Health, 95, 668-673.
+Massey, D., & Denton, N. (1993). American apartheid. Cambridge, 
+MA: Harvard University Press.
+
+===== PAGE 22 =====
+94	 	
+Economic Development Quarterly 26(1)
+Neal, Z. (2006). Culinary deserts, gastronomic oases: A classifica-
+tion of US cities. Urban Studies, 43, 1-21.
+Neumark, D., & Kolko, J. (2008, December). Do enterprise zones 
+create jobs? Evidence from California’s Enterprise Zone Pro-
+gram (NBER Working Paper No. 14530). Cambridge, MA: 
+National Bureau of Economic Research.
+Pearce, J., Blakely, T., Witten, K., & Bartie, P. (2007). Neighbor-
+hood deprivation and access to fast food retailing: A national 
+study. American Journal of Preventive Medicine, 32, 375-382.
+Pillsbury, R. (2010). From Hamburger Alley to Hedgerose Heights: 
+Toward a model of restaurant location dynamics. The Profes-
+sional Geographer, 39, 326-344.
+Powell, L., Slater, S., Mirtcheva, D., Bao, Y., & Chaloupka, F. J. 
+(2007). Food store availability and neighborhood characteris-
+tics in the United States. Preventive Medicine, 44, 189-195.
+Schuetz, J., Kolko, J., & Meltzer, R. (2010, September). Is the 
+“shop around the corner” a luxury or a nuisance? The relation-
+ship between income and neighborhood retail patterns (Work-
+ing paper). Retrieved from http://papers.ssrn.com/sol3/papers.
+cfm?abstract_id=1681734
+Waldfogel, J. (2008). The median voter and the median consumer: 
+Local private goods and population composition. Journal of 
+Urban Economics, 63, 567-582.
+Walker, C., Hayes, C., Galster, G., Boxall, P., & Johnson, J. (2002). 
+The impact of CDBG spending on urban neighborhoods. 
+Washington, DC: Urban Institute. Retrieved from http://www.
+urban.org/uploadedpdf/410664_CDBG_Spending.pdf
+en, W. (1999). Consumption and the problem of variety: Cultural 
+omnivorousness, social distinction and dining out. Sociology, 
+33, 105-127.
+Wilson, W. J. (1987). The truly disadvantaged. Chicago, IL: Uni-
+versity of Chicago Press.
+Zenk, S., Schulz, A. J., Israel, B. A., James, S. A., Bao, S., & Wilson, 
+M. (2005). Neighborhood racial composition, neighborhood pov-
+erty, and the spatial accessibility of supermarkets in Metropolitan 
+Detroit. American Journal of Public Health, 95, 660-667.
+Zukin, S., Trujillo, V., Frase, P., Jackson, D., Recuber, T., & Walker, A. 
+(2009). New retail capital and neighborhood change: Boutiques 
+and gentrification in New York City. City & Community, 8, 47-64.
+Bios
+Rachel Meltzer, PhD, is an assistant professor in the Milano 
+School for Management and Urban Policy at The New School. Her 
+primary research interests are economic development and housing 
+policy, local public finance, and urban economics.
+Jenny Schuetz, PhD, is an assistant professor in the School of 
+Policy, Planning, and Development at the University of Southern 
+California. Her primary research interests are urban economics, 
+local public finance, land use regulation, and housing policy.

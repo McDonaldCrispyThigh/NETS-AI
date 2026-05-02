@@ -1,0 +1,5326 @@
+
+===== PAGE 1 =====
+United States 
+Department of 
+Agriculture
+Economic
+Research
+Service
+Michele Ver Ploeg, Vince Breneman, Paula Dutko, Ryan Williams, 
+Samantha Snyder, Chris Dicken, Phil Kaufman
+Access to Affordable and 
+Nutritious Food
+Updated Estimates of Distance to 
+Supermarkets Using 2010 Data 
+Economic 
+Research 
+Report 
+Number 143
+November 2012
+
+===== PAGE 2 =====
+w
+w
+w
+w
+w
+.
+e
+r
+s
+.
+u
+s
+d
+a.gov
+o
+Visit Our Website To Learn More!
+The U.S. Department of Agriculture (USDA) prohibits discrimination in all its 
+programs and activities on the basis of race, color, national origin, age, 
+disability, and, where applicable, sex, marital status, familial status, parental 
+status, religion, sexual orientation, genetic information, political beliefs, reprisal, 
+or because all or a part of an individual’s income is derived from any public 
+assistance program. (Not all prohibited bases apply to all programs.) Persons 
+with disabilities who require alternative means for communication of program 
+information (Braille, large print, audiotape, etc.) should contact USDA’s 
+TARGET Center at (202) 720-2600 (voice and TDD). 
+To file a complaint of discrimination write to USDA, Director, Office of Civil 
+Rights, 1400 Independence Avenue, S.W., Washington, D.C. 20250-9410 or 
+call (800) 795-3272 (voice) or (202) 720-6382 (TDD). USDA is an equal 
+opportunity provider and employer.
+Cover photo credit: Shutterstock.
+    
+http://www.ers.usda.gov
+Find additional information on this topic: 
+Use of commercial and trade names does not imply approval or constitute 
+endorsement by USDA.
+Recommended citation format for this publication:
+Ver Ploeg, Michele, Vince Breneman, Paula Dutko, Ryan Williams, 
+Samantha Snyder, Chris Dicken, and Phil Kaufman. Access to Affordable 
+and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 
+2010 Data, ERR-143, U.S. Department of Agriculture, Economic Research 
+Service, November 2012.
+
+===== PAGE 3 =====
+United States
+Department
+of Agriculture
+www.ers.usda.gov
+A Report from the Economic Research Service
+Abstract
+Efforts to encourage Americans to improve their diets and to eat more nutritious foods 
+presume that a wide variety of these foods are accessible to everyone. But for some 
+Americans and in some communities, access to healthy foods may be limited. This report 
+updates population estimates of indicators of spatial access to healthy and affordable foods 
+in the United States using population data from the 2010 Census, income and vehicle avail-
+ability data from the 2006-2010 American Community Survey, and a 2010 directory of 
+supermarkets. Spatial access to healthy and affordable food is proxied by measuring the 
+distance to the nearest supermarket for the overall U.S. population and for subpopulations 
+including households without vehicles, populations with low incomes, and populations that 
+live in low-income areas. These updated data reﬂ ect recent changes in population charac-
+teristics, the economy, and the location of supermarkets. An estimated 9.7 percent of the 
+total population, or 29.7 million people, live in low-income areas more than 1 mile from a 
+supermarket. However, most households that are far from a supermarket have vehicles: only 
+1.8 percent of all households (2.1 million households) live more than 1 mile from a super-
+market and do not have a vehicle. Estimated distance to the nearest three supermarkets is an 
+indicator of the choices available to consumers and the level of competition among stores. 
+Estimates show that half of the U.S. population lives within 2 miles of three supermarkets. 
+Keywords: food access, food deserts, supermarkets, food assistance, low-income, diet and 
+health
+Acknowledgments
+The authors would like to acknowledge the reviewers of this report, Parke Wilde, 
+Agricultural Economist and Associate Professor, Friedman School of Nutrition Science and 
+Policy, Tufts University; Angela Liese, Professor and Director of the Center for Research in 
+Nutrition and Health Disparities, University of South Carolina and Tracey Farrigan of ERS.  
+David Smallwood and Ephraim Leibtag of ERS also provided valuable comments on the 
+report.  Dale Simms and Curtia Taylor provided editorial and design support.  
+Michele Ver Ploeg, Vince Breneman, Paula Dutko, Ryan Williams, 
+Samantha Snyder, Chris Dicken, Phil Kaufman
+Access to Affordable and Nutritious 
+Food:  Updated Estimates of Distance 
+to Supermarkets Using 2010 Data
+Economic 
+Research 
+Report
+Number 143
+November 2012
+
+===== PAGE 4 =====
+ii
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Contents
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . iii
+Introduction and Background  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Previous National Estimates of Food Access . . . . . . . . . . . . . . . . . . . . . . . 3
+Data, Deﬁ nitions, and Methods  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Results. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Study Limitations and Future Research . . . . . . . . . . . . . . . . . . . . . . . . . 38
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+Appendix A: Data and Methodological Details. . . . . . . . . . . . . . . . . . . . 43
+Appendix B: Additional Tables With Estimates 
+That Include Alaska and Hawaii  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+
+===== PAGE 5 =====
+iii
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Summary
+What Is the Issue?
+Efforts to encourage Americans to improve their diets and to eat more 
+nutritious foods presume that a wide variety of these foods are accessible 
+to everyone. But, for some Americans and in some communities, access 
+to healthy foods may be limited. In the 2009 report to Congress, Access 
+to Affordable and Nutritious Food: Measuring and Understanding Food 
+Deserts and Their Consequences, the U.S. Department of Agriculture esti-
+mated several indicators of access to healthy food sources, based on popula-
+tion data from the 2000 Census and supermarket location data from 2006. 
+This report uses data from 2010 to provide updated population estimates 
+of spatial access to affordable and nutritious food. These estimates reﬂ ect 
+openings and closings of supermarkets, changes in the distribution of the 
+population in relation to supermarkets, and the effects of the 2007-09 reces-
+sion, which include the expansion of the number of low-income people and 
+areas. Estimates by income, vehicle availability, and other characteristics of 
+the population are provided in addition to estimates for those who live in low-
+income neighborhoods. These estimates are based on data from 2010 and, 
+therefore, precede Federal policy initiatives to reduce barriers to food access, 
+which began in 2011. 
+What Did the Study Find?
+Updated estimates from 2010 data present a mixed picture of the extent 
+of food access challenges in the United States. First, there was very little 
+change in the distance to the nearest supermarket between 2006 and 2010 
+overall, both in terms of the median distance to the nearest supermarket and 
+throughout the distribution. 
+Second, vehicle availability for households more than 1 mile from a super-
+market has improved. In 2010, 1.8 percent of all U.S. households (2.1 
+million households) did not have a vehicle and were more than 1 mile from 
+a supermarket. This is a decrease relative to 2006, when an estimated 2.3 
+percent (2.4 million households) were more than 1 mile from a supermarket 
+and without a vehicle. The number and percentage of households without 
+a vehicle between one-half to 1 mile from a supermarket also decreased in 
+2010. 
+In contrast, the number of people in low-income areas who are more than 
+1 mile from a supermarket increased. In 2010, 29.7 million people, or 9.7 
+percent of the population, lived in low-income areas (½ kilometer-square 
+grids where more than 40 percent of the population has income at or below 
+200 percent of Federal poverty thresholds for family size) more than 1 mile 
+from a supermarket, up from 23.5 million, or 8.4 percent, in 2006. However, 
+given the stability in the distribution of the population relative to the nearest 
+supermarket and in the number of supermarkets overall, growth in the share 
+of population in low-income areas more than 1 mile from a store is likely due 
+more to the greater number of low-income areas in 2010 than in 2006, not to 
+substantial changes in store openings and closings. 
+
+===== PAGE 6 =====
+iv
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Distance to the nearest supermarket by individual income level and area 
+income level differs from rural areas to urban areas. In urban areas, low-
+income people (those with income at or below 200 percent of Federal poverty 
+thresholds for family size) and people in low-income areas are closer to 
+supermarkets than moderate- and high-income people and areas. But in rural 
+areas, low-income people and people in low-income areas are farther from 
+supermarkets than moderate- and high-income areas. 
+Examining the distance to only one supermarket does not provide informa-
+tion on whether that supermarket is competitive as it may be the one and only 
+store in the area. Distance to the three nearest supermarkets was estimated 
+for the U.S. population and for subpopulations as an additional indicator of 
+the level of consumer choice and competition among supermarkets. Estimates 
+show that half of the U.S. population lived within 2 miles of three supermar-
+kets in 2010, while 80 percent lived within 5 miles.
+How Was the Study Conducted?
+This study estimates several distance-based measures of supermarket access. 
+These measures proxy access to healthy and affordable food for the overall 
+U.S. population and for subpopulations, including households without 
+vehicles, populations with low incomes, and populations that live in low-
+income areas. Data on the total population—along with data on age, race, 
+and ethnicity—come from the 2010 Decennial Census. Data on income 
+and vehicle availability come from the 2006-2010 American Community 
+Survey. These population data were downcast, or allocated aerially, to 
+½-kilometer-square grids that cover the entire U.S. land area. Two 2010 lists 
+of supermarkets, supercenters, and large grocery stores (food stores selling 
+all major categories of food and having annual sales of at least $2 million) 
+were combined to produce a comprehensive list of stores that represent 
+sources of affordable and nutritious food. Distances from the center of each 
+½-kilometer-square grid containing population data to the center of the grid 
+containing the nearest store were estimated for the entire population and 
+for population subgroups. In addition to updating the previous analysis, a 
+new analysis of supermarket access in Alaska Native, American Indian, and 
+Native Hawaiian tribal areas is presented, as well as estimates of the distance 
+to the three nearest stores as an indicator of the amount of competition and 
+consumer choice available. 
+
+===== PAGE 7 =====
+1
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Introduction and Background
+Efforts to encourage Americans to improve their diets and to eat more 
+nutritious foods presume that a wide variety of these foods are accessible 
+to everyone. But, for some Americans and in some communities, access to 
+affordable healthy foods may be limited. If healthy foods can be obtained 
+only with great effort, those affected by poor access may have poorer diets 
+and higher rates of diet-related disease, such as obesity and diabetes. The 
+cost and effort required to access healthful food may also contribute to food 
+insecurity if a household has to spend scarce budget and time resources trav-
+eling to a store that sells healthful food. The lack of full-service stores in 
+some neighborhoods may also make participation in the USDA Supplemental 
+Nutrition Assistance Program (SNAP) less attractive if it is more difﬁ cult to 
+redeem beneﬁ ts. 
+Policies to improve access to healthful foods have been implemented at all 
+levels of government. One national effort, the First Lady Michelle Obama’s 
+Let's Move! campaign, considers access to healthy food one of ﬁ ve pillars in 
+the effort to address childhood obesity. A plan, the Healthy Food Financing 
+Initiative (HFFI), has been proposed in Congress to bring affordable, 
+nutritious food to areas of low access and low income. A working group 
+comprising staff from the U.S. Departments of Treasury, Health and Human 
+Services, and Agriculture is charged with coordinating and sharing informa-
+tion about strategies to expand the availability of nutritious food in areas of 
+limited access. (Information about this combined Federal effort can be found 
+at http://apps.ams.usda.gov/fooddeserts/.)
+This tri-agency effort made its ﬁ rst awards in the fall of 2011 and builds upon 
+State and local programs already in existence. For example, the Pennsylvania 
+Fresh Food Financing Initiative uses State funds, combined with funds from 
+private organizations, to provide grants and loans to develop grocery stores 
+in areas of limited access throughout Pennsylvania. This program has been 
+underway since 2004 and served as a model for other programs in New York 
+City, New Orleans, and California. Many other communities have private and 
+publicly sponsored programs to improve healthy food access, as well. 
+Upon request from Congress in 2009, USDA’s Economic Research Service 
+published a report that estimated the extent of food access limitations in 
+the United States, reviewed literature and conducted analyses on the effects 
+of food access on food choices and health, studied the causes and conse-
+quences of food deserts, and outlined policy options and future research 
+(USDA, 2009; http://www.ers.usda.gov/Publications/AP/AP036/). The report 
+presented population estimates of several indicators of access to healthy food. 
+Estimated distances to the nearest supermarket were provided for the entire 
+population and by characteristics such as income, age, and vehicle avail-
+ability. The report also compared distances to the nearest supermarket in low-
+income areas versus higher income areas. Self-reported estimates of whether 
+store accessibility affected a household’s ability to provide food for household 
+members were included, as well as estimates of the amount of time spent 
+traveling to a grocery store. The 2009 report also analyzed price differences 
+in products across store type and summarized literature on how prices paid 
+for groceries differ across income levels. 
+
+===== PAGE 8 =====
+2
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+The 2009 report used population data from the 2000 Decennial Census and 
+supermarket location data from 2006, both the most current data available 
+at the time. This report updates and expands that analysis with data from 
+the 2010 Census, the 2006-2010 American Community Survey (ACS), and 
+an updated list of stores from 2010. The analysis in this report is important 
+because the past decade has seen substantial changes in population charac-
+teristics such as an aging population, migration and immigration, and wide 
+swings in the economic well-being of families amid a 3-year recession. The 
+development and placement of food retail stores of all types have responded 
+to market, population, and economic conditions. Our analysis estimates 
+supermarket access for the overall population and for those without vehicles, 
+both in low-income and moderate/high-income areas.
+
+===== PAGE 9 =====
+3
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Previous National-Level Estimates 
+of Food Access
+The concept of food deserts and how food access limitations are measured 
+continues to evolve. USDA (2009) reviews some of the ways that the concept 
+of limited food access has been measured. Bitler and Haider (2010) give a 
+general critique of the barriers to measurement. Deﬁ ning which foods are 
+“healthy” is not straightforward, and measuring which retailers carry healthy 
+food is difﬁ cult, especially when detailed data on many smaller retailers are 
+not available at a national level. Some of the focus has been on whether or not 
+people lack access to healthy food—and whether healthy food options are not 
+accessible because they are too far away and hard to get to without a vehicle. 
+A separate focus that involves more of a behavioral component to food choice 
+is on the relative access of healthful food options compared to less healthful 
+options; while healthful options are accessible, those may be “swamped” 
+by the overabundance of less healthful options. Much of the research on 
+measuring food access has focused on neighborhood-level access, speciﬁ cally 
+access in low-income neighborhoods. Individual-level estimates of healthy 
+food access, regardless of whether those individuals live in high- or low-
+income neighborhoods, have received less attention. 
+USDA (2009) was the ﬁ rst effort to measure healthy food access on a 
+national level. That report included both individual and area-based measures 
+of access. For example, one key area-level measure from the report estimated 
+that 23.5 million people, or 8.4 percent of the U.S. population, lived in low-
+income neighborhoods, 1-kilometer-square grids where more than 40 percent 
+of the population has income at or below 200 percent of Federal poverty 
+thresholds for family size, that were more than 1 mile from a supermarket 
+or large grocery store.2 As is typical in the food access literature, this area-
+based measure focuses on low-income neighborhoods because they contain 
+higher concentrations of residents who may have difﬁ culty accessing stores. 
+Neighborhoods are, however, heterogeneous—not all low-income people live 
+in low-income neighborhoods, and not all people who live in low-income 
+neighborhoods have low incomes. Further, most households that are far from 
+a supermarket have access to vehicles for personal use, which is a reasonable 
+proxy for individuals’ access to supermarkets and other food stores. USDA 
+(2009) estimated that 2.3 million households, or 2.2 percent of all house-
+holds, were more than 1 mile from a supermarket and did not have access to 
+a vehicle.3 An additional 3.4 million households (3.2 percent) were between 
+one-half to 1 mile from a supermarket and without a vehicle.
+USDA (2009) also estimated self-reported barriers to food access from direct 
+questions in the 2001 Current Population Survey. Responses showed that 
+nearly 6 percent of U.S. households did not always have the food they wanted 
+or needed because of access-related problems. The 2009 USDA report also 
+matched data from the American Time Use Survey (ATUS) to census tract-
+level information on supermarket distance in order to investigate differences 
+in time use and travel modes for grocery shopping trips. People living in low-
+income areas more than a mile from the nearest supermarket spent slightly 
+more time traveling to a grocery store (19.5 minutes) than the national 
+average (15 minutes).4 Most of the people surveyed drove to the supermarket. 
+This is true even for those who lived in low-income neighborhoods over a 
+2For this estimate, the 1-mile marker 
+was used for the entire Nation, both 
+urban and rural areas, and does not 
+account for vehicle availability. 
+3Quasi-individual may be a better 
+term for these estimates because 
+although they are based on individual 
+population or household characteristics 
+like vehicle availability, distance to the 
+store is estimated at the ½-kilometer-
+square grid level, not at the individual 
+level.  
+4Hamrick et al. (2011) extend some 
+of the analysis of the ATUS data to 
+measure food access by examining trip 
+chaining (combining trip purposes) and 
+characteristics of grocery shopping trips 
+in more detail.
+
+===== PAGE 10 =====
+4
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+mile from a supermarket—over 93 percent traveled to shop for groceries in a 
+vehicle that they or another household member drove. 
+Finally, the 2009 USDA report also summarized research on store choices, 
+shopping behaviors, and prices paid for food among low-income consumers 
+and participants in SNAP. For example, almost half of all SNAP beneﬁ ts 
+are redeemed at supercenters—large stores usually 100,000 square feet or 
+more of ﬂ oor space, with a separate grocery area and general merchandise 
+area under a single roof (USDA, 2011), which often offer lower prices than 
+traditional supermarkets and grocery stores (Leibtag, 2006). Further, Broda 
+et al. (2009) ﬁ nd that low- and middle-income households are more likely to 
+purchase foods at supercenters than higher income households and that most 
+low-income consumers pay less for the same grocery items than do higher 
+income consumers. 
+Based on these different estimates, USDA (2009) concluded that between 2 
+and 5 percent of U.S. households and about 4 to 8 percent of the population 
+experienced some difﬁ culty in accessing healthy food. 
+Recently, both public and private institutions have made advancements in 
+measuring food access on a national level. In order to begin understanding the 
+scope of food deserts, and the characteristics of limited healthy food access, 
+ERS estimated food desert locations using census tracts as the geographical 
+unit of analysis. Under this deﬁ nition, food deserts are low income census tracts 
+where a substantial number or share of residents has low access to a super-
+market or large grocery store. This effort resulted in the development of the 
+Food Desert Locator (http://www.ers.usda.gov/Data/FoodDesert/index.htm), 
+an online mapping tool that indicates the location of food desert census tracts 
+and selected characteristics of the population in food desert tracts (USDA/ERS, 
+2012a). Data in the Food Desert Locator are used by the interagency group as a 
+starting point to assess need and as one way to help guide the targeting of funds 
+to develop healthy retail food options. ERS has plans to update this census 
+tract-level measure of food access, which will be made available in the Food 
+Desert Locator, along with additional indicators of vehicle availability and 
+alternative measures of distance to the nearest supermarket.1
+Others have also estimated area-based measures of food access.  For example, 
+The Reinvestment Fund (TRF)—a Philadelphia, PA-area community devel-
+opment organization that ﬁ nances neighborhood revitalization—developed 
+a national-level measure of low-access areas (LAAs) and a tool to map these 
+areas (http://www.trfund.com/). LAAs are clusters of census block groups 
+where residents are farther from supermarkets than high-income block groups 
+that are otherwise similar in terms of population density and car ownership 
+rates (TRF, 2011). The census tract unit of measurement is also used for the 
+Centers for Disease Control and Prevention’s (CDC) Healthy Tracts measure, 
+published in the 2009 State Indicator Report on Fruit and Vegetables (CDC, 
+2009). The Healthy Tracts measure considers a census tract healthy if a 
+healthy food retailer is within the census tract or within one-half mile of the 
+tract boundary. Esri—a private company that provides geographic informa-
+tion systems (GIS) software and consulting services—has also developed 
+area-based measures of food access that use network distance measures to 
+consider supermarket walking and driving scores (Richardson, 2010). Finally, 
+the Food Research Action Center (FRAC) sponsored a question on the 2011 
+1ERS’ Food Environment Atlas 
+offers additional data about factors 
+that may contribute to healthy food 
+access challenges at the county level: 
+www.ers.usda.gov/data-products/food-
+environment-atlas.aspx. 
+
+===== PAGE 11 =====
+5
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Gallup-Healthways Well-Being Index project that asked respondents if it was 
+easy to get affordable fresh fruits and vegetables (FRAC, 2011).
+The Importance of Updated Population Estimates
+USDA (2009) was unique in its broad approach to food access measure-
+ment—including both individual and area-based measures of food access and 
+estimates of the distribution of food access for vulnerable subpopulations. 
+Area-based measures can imply that everyone in the same area has the same 
+access to healthy food, when, in reality, access varies for individuals within 
+an area. Individuals have different resources available to them (income, 
+vehicle ownership, social and family networks, and time), which are likely 
+to translate into differences in access within areas. Focusing only on low-
+income areas—instead of low-income or vehicle-less individuals—may 
+overestimate the access problem in these areas while underestimating the 
+access problems in higher income areas. For example, of the estimated 2.3 
+million households that did not own vehicles and were more than 1 mile from 
+a supermarket in 2006, 1.4 million lived in moderate- and high-income areas, 
+while 900,000 lived in low-income areas (USDA, 2009).
+Individual measures are also important because areas can change in ways 
+that suggest improved access when, in fact, access for vulnerable popula-
+tions has not changed or has worsened. For example, if enough higher income 
+people move into a low-income area, the area may no longer be designated as 
+low income. However, if there is still no nearby source of healthy food, then 
+access has not improved for the low-income or vehicle-less people in the area. 
+Alternatively, an area may become a low-income area because the overall 
+incomes of people in the area falls—a point that is especially relevant for the 
+current analysis because it uses income data from during and after the Great 
+Recession. The locations of supermarkets in and around such areas may not 
+have changed at all, but the area may now be a concern simply because the 
+overall income level changed enough to make it a "low-income" neighborhood.
+Thus far, most food access policy has focused on area-based estimates for 
+potential interventions—speciﬁ cally low-income areas. This focus on areas 
+may have resulted in a narrow view of which policy instruments could be 
+used to improve access. If individuals who lack access are concentrated in 
+neighborhoods, then policy strategies that bring healthy food retailers to those 
+neighborhoods may be appropriate. If, on the other hand, individuals with 
+access barriers are dispersed, then other policies—like a voucher to offset 
+transportation costs of getting to a store or providing stores with funds to 
+deliver groceries to those with access problems—might make more sense.
+This report updates many of the food access measures in USDA (2009) using 
+new population and store location data and expands access estimates by 
+including measures for Alaska and Hawaii, and separate estimates of food 
+access for Alaska Native, American Indian, and Native Hawaiian tribal areas. 
+We also expand upon the 2009 report by including an estimate of the distance 
+to the three nearest supermarkets, which indicates both consumer choice and 
+price competition (Apparicio et al., 2007; Sparks et al., 2009). This report 
+uses a grid-based method similar to USDA (2009) that allocates more recent 
+population data to the ½-kilometer-square grid level, enabling greater preci-
+sion in measuring supermarket distances. 
+
+===== PAGE 12 =====
+6
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Data, Deﬁ nitions, and Methods
+The data and methods used to estimate food store access for this update are 
+quite similar to those used in USDA (2009). However, some enhancements 
+were implemented. In this section, we describe the methods used to estimate 
+food store access using 2010 data and indicate where current methods diverge 
+from those used in USDA (2009). 
+Development of the 2010 Supermarket Directory 
+The methods used to develop a 2010 directory of stores are similar to 
+those used in USDA (2009). Two lists of stores were combined: a list of 
+stores authorized to accept SNAP beneﬁ ts and a list of stores from Trade 
+Dimensions TDLinx®, a proprietary store directory. The combined directory 
+includes only retail food stores that offer a full range of food products—
+including fresh meat and poultry, produce, dairy, dry and packaged foods, 
+and frozen foods—and that have at least $2 million or more in annual sales.5 
+Stores meeting these criteria include one of three store types: (1) super-
+centers—large stores usually 100,000 square feet or more of ﬂ oor space, with 
+a separate grocery area and general merchandise area under a single roof; 
+(2) supermarkets—stores that are typically smaller than a supercenter and 
+that primarily sell food and nonfood grocery products; and (3) large grocery 
+stores—stores that sell a full range of foods and have at least $2 million in 
+annual sales, but are not as large as supermarkets.6 Throughout the rest of 
+this report, we use the general term “supermarket” to refer to this combined 
+list of all three types of stores, except in tables where the types of stores are 
+broken out separately (tables 4 and B-2). 
+This combined list of stores is intended to serve as an estimate of access to 
+healthy and affordable food. It is only a proxy, however, because there are 
+other retailers that offer healthy and affordable food. Some convenience 
+stores, drugstores, and dollar stores, for example, carry healthy foods as well. 
+Farmers’ markets also provide a source of healthy food and ﬁ ll in gaps in 
+healthy food in some neighborhoods. Many community and public policy 
+efforts to improve the food retail environment have started with improving 
+the offerings at smaller stores (see, for example, a review of these efforts 
+in Gittelsohn et al., 2012). While more of these smaller retailers may be 
+carrying a greater selection of healthy foods, the offerings and their prices 
+can still vary greatly from store to store. Detailed information on what 
+products and prices are offered in each of these stores is not available on a 
+national level. Without such information, we cannot reliably classify these 
+stores as offering healthy and affordable foods, so they are not included in 
+our directory. Further, we exclude military commissaries—whose size and 
+product offerings are comparable to supermarkets—because they are only 
+available to active-duty military personnel. Warehouse club stores—such as 
+Costco, BJ’s, and Sam’s Club—are also excluded because a membership fee 
+is required. The exclusion of these types of food retailers from our analysis 
+is likely to result in an overestimate of the number and percentage of the 
+population that lacks access to healthy food sources, because some people 
+who would otherwise lack access to supermarkets may obtain healthy foods 
+through these retailers. 
+5The sales and product offering 
+criteria follow established retail food 
+industry standards used to deﬁ ne a 
+supermarket.
+6The combined directory used in 
+USDA (2009) also included these three 
+types of stores. However, separate esti-
+mates of store numbers and types were 
+not presented in that report. 
+
+===== PAGE 13 =====
+7
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Each supermarket directory provided the store name and address from which 
+geo-coded location coordinates (latitude and longitude) were derived to 
+measure distance from the center of each grid cell to the center of the grid 
+cell containing the nearest supermarket. In total, there were 39,877 super-
+markets in the 2010 merged directory. The majority of supermarkets in the 
+merged list—28,693—were in both data sources. Of the remaining ones, 
+7,195 were found only in the TDLinx list, and 3,989 were found only in the 
+SNAP list. Details on the merging are in Appendix A. 
+Population Data
+Population data from the 2010 Census and the 2006-10 ACS are used in this 
+analysis. We draw total population, age, race, and ethnicity data at the Census 
+block level from the 2010 Census.7 We use block group-level data on income-
+to-poverty ratios and vehicle availability from the 2006-2010 ACS.8 
+The ACS is an ongoing survey that replaced the census long form after 2000 
+and asks similar questions, relying on monthly, independent samples to 
+collect data for small areas (i.e. census tracts and block groups) in the United 
+States and separately for Puerto Rico. By producing 1-year, 3-year, and 5-year 
+estimates, the ACS provides more continuous measurement than the decen-
+nial census. Five-year estimates are intended to replace the long form of the 
+decennial census and thus include data for all statistical, legal, and admin-
+istrative geographies for the most recent 5 years of data collection; 3-year 
+estimates are released for geographies of 20,000 residents or more; and 1-year 
+estimates are provided only for entities with a population of 65,000 or greater. 
+For each survey year, approximately 3 million housing units and 2.5 percent 
+of the expected residents of group quarters are sampled, with a slightly higher 
+sampling rate for group quarters in 16 States with particularly small group 
+quarters populations.9 Data collection via mail, phone, and personal interview 
+lasts for 3 months for each sample. The process operates in continuous cycles 
+so that, at any given time, multiple samples are in different phases of data 
+collection (U.S. Census Bureau, 2009). 
+The 2006-10 data are the most recent data available at the smaller levels of 
+geography required for this report’s detailed analysis (i.e., population charac-
+teristic estimates at the block, block group, and census tract levels). In 2010, 
+the ACS covered 99.1 percent of all housing units and 81 percent of all group 
+quarters populations, to reﬂ ect approximately 94.6 percent of the U.S. popula-
+tion. The response rates from 2006 through 2010 were 97.5 percent or higher. 
+For our analysis, all data are taken at the smallest geographic area that is 
+available to minimize error involved in downcasting the data to ½-kilometer-
+square grid cells (that is, allocating the population estimates at the census 
+geography level down to ½-kilometer square grids). Table 1 shows the data 
+source of each population characteristic used in the analysis, as well as the 
+geographic level at which the estimates are drawn. 
+Downcasting Population Data to Half-Kilometer-
+Square Grids
+USDA (2009) used 1-kilometer-square grid estimates of population char-
+acteristics to measure distance to supermarkets for population subgroups. 
+7Census blocks are statistical areas 
+bounded by visible features, such as 
+streets, roads, streams, and railroad 
+tracks, and by nonvisible boundaries, 
+such as selected property lines; city, 
+township, school district, and county 
+limits; and short line-of-sight exten-
+sions of streets and roads.  They are 
+the smallest geographic unit used by 
+Census and are contained within block 
+groups.
+8The ACS records income on a 
+rolling 12-month basis, which is 
+different than the calendar-year 
+measurement used for the income 
+measure based on the 2000 Census. 
+We are not sure whether or how much 
+this may affect comparisons between 
+measures of income and poverty levels 
+between 2000 and 2010, but changes in 
+income over a 10-year period are likely 
+to be substantial enough to outweigh 
+discrepancies due to different income 
+measurements.
+9Group quarters include such places 
+as college residence halls, residential 
+treatment centers, skilled nursing facili-
+ties, group homes, military barracks, 
+correctional facilities, and workers’ 
+dormitories.
+
+===== PAGE 14 =====
+8
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+These population grid estimates came from the Socioeconomic Data and 
+Applications Center (SEDAC), 2000 Census of Population (SEDAC, 2006). 
+This report uses a similar process to allocate more recent population data to 
+the ½-kilometer-square grid level, which allows for even greater precision in 
+measuring distance. The process of allocating population estimates to grid 
+cells can introduce error in estimates of population numbers and characteris-
+tics for each grid cell. However, we expect that the improvement in estimating 
+distance relative to other methods that rely on larger and irregular geog-
+raphies outweighs the potential for error in the allocation process. Further 
+details of this downcasting method can be found in Appendix A. 
+Measuring Distance and Other Indicators 
+of Food Store Access
+In measuring access to affordable, nutritious food, we consider distance 
+measures in addition to socioeconomic characteristics that are likely to play 
+a role in food access. Distance to the nearest supermarket is the primary 
+measure of access. For each ½-kilometer-square grid cell, we calculate the 
+Euclidean distance from the geographic center of the cell to the geographic 
+center of the cell with the nearest supermarket. Using this calculation, we 
+estimate median distances to the nearest supermarket for the population and 
+population subgroups, as well as distance at the 20th and 80th percentiles. 
+We also calculate the percentage of the population that lives within different 
+distances to at least one supermarket: within half a mile, between one-half to 
+1 mile, and more than 1 mile. In estimates that separately consider urban and 
+rural areas (tables 10-14 and tables 17-18), a separate categorization of access 
+is used for rural areas: within 10 miles of a supermarket, between 10 and 20 
+miles from a supermarket, and more than 20 miles from a supermarket. For 
+some population characteristics, we also present ﬁ gures showing cumulative 
+density functions of the distance to the nearest supermarket. These ﬁ gures 
+show the distance to the supermarket on the horizontal axis and the cumula-
+tive share of the population on the vertical axis. These ﬁ gures can be used to 
+Table 1
+Sources for demographic and economic data
+Data
+Data source
+Source geographic level
+Total population
+Census 2010
+Block
+Age
+Census 2010
+Block
+Race
+Census 2010
+Block
+Hispanic ethnicity
+Census 2010
+Block
+Sex
+Census 2010
+Block
+Household type
+Census 2010
+Block
+Housing units
+ACS 2006-2010
+Block group
+Vehicle access
+ACS 2006-2010
+Block group
+Income 
+ACS 2006-2010
+Block group
+ACS = American Community Survey.
+Source: USDA, Economic Research Service.
+
+===== PAGE 15 =====
+9
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+measure the share of the population that is within a speciﬁ c distance to the 
+nearest grocery store. 
+We estimate distance-based measures of access on a national level and across 
+subgroups of the population—by income level, race and ethnicity, age, and 
+household vehicle availability. Income, which is deﬁ ned and collected for 
+families, is reported on an individual basis (where everyone in a family is 
+assigned the family income level). We also consider the income on the grid 
+cell level, comparing supermarket access in low-income grids to access in 
+moderate/high-income grids. Individuals are considered low-income if their 
+family income is at or below 200 percent of Federal poverty thresholds for 
+family size, and grids are considered low-income if more than 40 percent of 
+the grid population has income at or below 200 percent of the poverty level.
+The ACS measures vehicle “availability” for occupied households as the 
+number of passenger cars, vans, and trucks with a capacity of 1 ton or less, 
+kept at the home and available for use by household members. This number 
+includes vehicles that have been rented or leased for at least 1 month. It also 
+counts police, government, and company vehicles, provided the vehicle is 
+kept at home and is used for non-business purposes. We use the responses to 
+the question as an indicator of whether a household has at least one vehicle 
+available. The income and vehicle availability data both come from the 
+2006-2010 ACS, which includes data from both the pre- and post-recession 
+period. Data from the most recent year only, if it were available, would likely 
+show greater economic hardship—lower incomes and perhaps lower vehicle 
+availability. 
+For some measures, we separately estimate supermarket access for rural and 
+urban areas due to differences in population density and development. Urban 
+areas are the most densely developed of urban geographies, with 50,000 or 
+more people. The Census deﬁ nes urban clusters as densely developed geogra-
+phies with at least 2,500 people but fewer than 50,000. Areas not meeting the 
+urban cluster or urban area deﬁ nition are considered rural. 
+Changes in Population Characteristics Between 2000 and 2010
+Changes in the total U.S. population and in the macroeconomy may affect 
+estimates of food access. The U.S. population grew by 9.7 percent between 
+2000 and 2010, from 281.4 million to 308.7 million (Mackun and Wilson, 
+2011). In 2000, the economy was very strong, and real household income 
+levels were at all-time high levels (DeNavas-Walt et al., 2011). The decade 
+following 2000 saw one modest recession that began in late 2001 and one 
+severe recession that began in late 2007 and continued through most of 2009. 
+Over this period, real median household income was largely stagnant from 
+2000 to 2007, fell substantially as the 2007 recession hit, and has continued 
+to fall from the peak in 2000 (DeNavas-Walt et al., 2011). Falling incomes 
+mean that more people are poor and more neighborhoods are poor. The weak 
+economy could also mean fewer grocery stores as some stores are forced to 
+close. Both overall real food expenditures and real at-home food expenditures 
+fell between 2008 and 2009. 
+Macroeconomic trends have altered the income distribution of the population 
+since 2000. Comparing data from the 2000 census and the 2006-2010 ACS, 
+
+===== PAGE 16 =====
+10
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+the share of the population classiﬁ ed as low-income has increased from 28.8 
+percent to 31.9 percent (table 2).10 Nearly all of the increase has taken place 
+in urban areas, where the share of low-income people rose from 28.5 percent 
+in 2000 to 32.7 percent. (The share of low-income people in rural areas 
+remained constant at 29.6 percent.)
+We are also interested in the income characteristics of neighborhoods. The 
+share of the population residing in low-income areas increased from 25.5 
+percent in 2000 to 31.4 percent in 2010. Low-income individuals repre-
+sented a larger share of the population of low-income areas—overall and 
+in both rural and urban areas—in 2010 when compared to 2000, which is 
+not surprising given the recession of 2007-09. Moderate- and high-income 
+neighborhoods, on the other hand, tend to be more homogenous in terms of 
+resident income level relative to low-income neighborhoods. In both 2000 and 
+2010, moderate- or high-income households comprised over three-quarters of 
+the residents in moderate- and high-income neighborhoods. 
+10The 2010 estimates in table 2 do 
+not include Alaska and Hawaii, as they 
+were not included in USDA (2009).  
+Appendix table B-1 provides estimates 
+including these two States.  
+Table 2
+Changes in income of the population and of low-income 
+areas for 2000 and 2010
+Population characteristics
+Overall
+2000
+2010
+Million
+%
+Million
+%
+Total low-income population
+79.3
+28.8
+ 97.9 
+31.9
+Total moderate/high-income population
+196.1
+71.2
+ 208.8 
+68.1
+Total population
+275.5
+ 306.7 
+Total population in low-income areas
+71.3
+25.5
+ 96.4 
+31.4
+Total population in moderate/high-
+income areas
+208.3
+74.5
+ 210.3 
+68.6
+Total population
+279.6
+ 306.7 
+Low-income population in low-income 
+areas
+36.0
+50.5
+ 51.2 
+53.1
+Moderate/high-income population in low-
+income areas
+35.3
+49.5
+ 45.2 
+46.9
+Total population
+71.3
+ 96.4 
+Low-income population in moderate/
+high-income areas
+43.3
+21.2
+ 46.7 
+22.2
+Moderate/high-income population in 
+moderate/high income areas
+160.8
+78.8
+ 163.6 
+77.8
+Total population
+204.1
+ 210.3 
+Note: 2000 data from Census of the Population. 2010 data from 2006-2010 American 
+Community Survey. 
+Income data are missing for about 4.1 million people in 2000. 
+Estimates do not include Alaska and Hawaii. See appendix table B-1 for national estimates 
+for the entire United States in 2010. 
+
+===== PAGE 17 =====
+11
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+In 2010, about 36 percent of the U.S. population was minority, versus 30.7 
+percent in 2000 (table 3). Minorities were overrepresented in low-income 
+areas in both 2000 and 2010 (about 55.5 percent of the population in low-
+income areas in 2010). In moderate- and high-income areas, the large 
+majority of residents are non-minority, comprising nearly 73 percent of the 
+population in these neighborhoods in 2010 (compared with nearly 78 percent 
+in 2000). 
+The elderly population (age 65 and older) as a share of the total population 
+increased from 12.4 percent in 2000 to 13.0 percent in 2010. In moderate- 
+and high-income areas, the elderly share increased from 12.9 percent to 13.8 
+percent (versus 11.2 to 11.4 percent in low-income areas).
+Vehicle availability is measured and released at the census geographies for 
+households, not individuals. In 2000, just over one-tenth of U.S. households 
+did not have a vehicle available for use. By 2010 that percentage had fallen to 
+8.8 percent, almost a 15-percent drop. However, as expected, vehicle avail-
+ability rates are lower in low-income areas. In 2010, over 15 percent of house-
+holds in low-income neighborhoods did not have a vehicle, compared with 6 
+percent in moderate- and high-income areas.
+Changes in the Number of Food Stores Between 2006 and 2010
+The total number of supercenters, supermarkets, and large grocery stores 
+decreased slightly between 2006 and 2010 (table 4).11 The number of super-
+centers and large grocery stores increased, while the number of supermarkets 
+declined. The observed increase in large grocery stores may be due, in part, 
+to our use of better individual store sales data in 2010 for some large grocery 
+stores in the SNAP directory, which were not available in 2006. 
+11Data on supermarkets used in 
+USDA (2009) came from a 2006 
+directory. The estimates in table 4 do 
+not include Alaska and Hawaii, which 
+were not part of the 2006 estimation.  
+Appendix table B-2 shows 2010 esti-
+mates that include these two States. 
+Table 3
+Changes in selected population characteristics: Overall and by income of area of residence for 2000 
+and 2010
+Population 
+characteristics
+Overall
+Low-income areas
+Moderate/high- 
+income areas
+2000
+2010
+2000
+2010
+2000
+2010
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+Race/ethnicity:
+Minority
+85.7
+30.7
+ 110.6 
+36.1
+39.7
+55.7
+ 53.5 
+55.5
+46.0
+22.1
+ 57.2 
+27.2
+Non-minority
+193.9
+69.3
+ 196.1 
+63.9
+31.6
+44.3
+ 42.9 
+44.5
+162.3
+77.9
+ 153.1 
+72.8
+Age:
+Elderly (65 or older)
+34.8
+12.4
+40.0
+13.0
+8.0
+11.2
+ 11.0 
+11.4
+26.8
+12.9
+ 29.0 
+13.8
+Under age 65
+244.8
+87.6
+266.7
+87.0
+63.3
+88.8
+ 85.4 
+88.6
+181.5
+87.1
+ 181.3 
+86.2
+Total population
+279.6
+100.0
+306.7
+100.0
+71.3
+100.0
+ 96.4 
+100.0
+208.3
+100
+ 210.3 
+100.0
+Occupied housing units 
+without vehicles
+10.8
+10.3
+ 10.2 
+8.8
+4.5
+17.9
+ 5.3 
+15.2
+6.3
+7.9
+ 4.9 
+6.0
+Total occupied housing 
+units
+104.9
+100.0
+116.0
+100.0
+25.1
+100.0
+ 34.9 
+100.0
+79.8
+100
+ 81.1 
+100
+Note:  2000 data from Census of the Population. 2010 data from 2006-2010 American Community Survey.
+Estimates do not include Alaska and Hawaii. 
+
+===== PAGE 18 =====
+12
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Over the past 20 years, there has been large growth in the share of grocery 
+shopping at nontraditional grocery stores—supercenters, warehouse clubs, 
+and other stores (Leibtag, 2005) and an increase in the share of SNAP bene-
+ﬁ ts redeemed at what the SNAP program calls “superstores”— stores that 
+sell a wide variety of nonfood goods in addition to groceries, the equivalent 
+of our supercenters (USDA, Food and Nutrition Service, 2012). Nonetheless, 
+supermarkets still outnumber other types of stores and account for more than 
+three-quarters of the total number of food retailers in our 2010 directory. In 
+2006, supermarkets accounted for almost four-ﬁ fths of food retailers. Large 
+grocery stores were the second most common store type in 2010. 
+In low-income areas, the largest proportional increase between 2006 and 
+2010 was in the number of supercenters, which increased 49.1 percent from 
+719 supercenters in 2006 to 1,072 in 2010. The number of food stores in 
+moderate- and high-income areas decreased from 2006 to 2010 for each store 
+type. However, comparisons over time of store numbers in low-income and 
+moderate/high-income areas are tenuous because the number of low-income 
+areas has increased. Thus, the differences in store numbers for each of these 
+areas may be attributed more to the income status of an area than to the 
+opening or closing of stores.
+Table 4
+Changes in the number of stores by store type and by income level of area, 2006 and 2010
+Continental U.S.
+Low-income areas
+Moderate/high- 
+income areas
+2006
+2010
+2006
+2010
+2006
+2010
+Num.
+%
+Num.
+%
+Num.
+%
+Num.
+%
+Num.
+%
+Num.
+%
+Store type:
+Supercenter
+3,089
+7.8
+3,432
+8.7
+719
+6.6
+1,072
+7.3
+2,370
+8.2
+2,360
+9.4
+Supermarket
+31,652
+79.5 30,519
+77.1
+8,179
+74.9 10,767
+73.7 23,473
+81.3 19,752
+79.1
+Large grocery store
+5,050
+12.7
+5,627
+14.2
+2,026
+18.5
+2,765
+18.9
+3,024
+10.5
+2,862
+11.5
+Total (excludes Alaska 
+and Hawaii)
+39,791
+100.0 39,578
+100.0 10,924
+100.0 14,604
+100.0 28,867
+100.0 24,974
+100.0
+Note:  Store data for both 2006 and 2010 are combined from TDLinx and SNAP-authorized lists of stores.  
+2000 income data from Census of the Population. 2010 income data from 2006-2010 American Community Survey.
+Estimates do not include Alaska and Hawaii. See appendix table B-2 for national estimates for the entire United States in 2010.
+
+===== PAGE 19 =====
+13
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Results
+We ﬁ rst examine distance-based measures of food access for the entire popu-
+lation comparing estimates from USDA (2009) (which used 2000 census data 
+and 2006 store data) with 2010 data-based estimates. The proportion of the 
+total population living within a speciﬁ c distance of the nearest supermarket 
+in 2010 barely changed from 2006 to 2010 (ﬁ g. 1). In both years, about 85 
+percent of the population lived within 3 miles of the nearest supermarket, and 
+nearly the entire population lived within 10 miles. It is possible, however, that 
+the overall picture masks shifts in the location of individuals and population 
+subgroups with respect to supermarkets. 
+Household Vehicle Availability and Distance
+to the Nearest Supermarket
+Vehicle availability is a key indicator of how easily a household can access 
+a supermarket. The number of U.S. households without a vehicle for private 
+use dropped between 2000 and 2010 (table 3), and supermarket access for 
+households without vehicles improved (table 5). In 2010, 2.1 million housing 
+units, or 1.8 percent of all households, were more than 1 mile from a super-
+market and without a vehicle, down from 2.4 million households (2.3 percent) 
+in 2006. Further, the number of households without a vehicle and living 
+between a half-mile to 1 mile from a supermarket also dropped from 3.4 
+Source: USDA, Economic Research Service.
+Figure 1
+Distance to the nearest supermarket for the continental United States, 
+2006 and 2010
+0
+0
+2
+4
+6
+8
+10
+20
+40
+60
+80
+100
+Cumulative share of the population
+Distance to nearest supermarket (mi)
+2010
+2006
+
+===== PAGE 20 =====
+14
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+million (3.2 percent of all households) in 2006 to 2.7 million (2.4 percent) in 
+2010.12 
+The number of households without vehicles in low-income areas increased 
+from 2006 to 2010, but all of the increase was among those living within a 
+half mile of a supermarket (table 5). Moderate- and high-income areas, like 
+low-income areas, showed a decrease in the number and share of households 
+without a vehicle that were more than a half mile from a supermarket. 
+These estimates highlight a problem in focusing only on supermarket access 
+in low-income areas. Speciﬁ cally, in 2010 there were just over 900,000 
+households in low-income areas without a vehicle that were more than 1 
+mile from a supermarket. However, there were 1.4 million such households 
+in moderate-/high-income areas. According to this indicator, moderate- and 
+high-income areas may contain more people with supermarket access limita-
+tions than low-income areas.13 
+Households without vehicles are closer to the nearest supermarket than 
+households with a vehicle at the 20th, 40th, 50th (median), 60th, and 80th 
+percentiles of the total population of households (table 6). This pattern holds 
+for low-income and moderate- and high-income areas. The distance to the 
+nearest supermarket at the 20th percentile of all households without vehicles 
+was 0.03 mile, compared to 0.34 mile at the 20th percentile of households 
+with vehicles. For households without vehicles, the distance to the nearest 
+supermarket at the 80th percentile was 0.99 mile, compared with 2.26 miles 
+12This table excludes 2010 estimates 
+for Alaska and Hawaii to make the 
+2010 estimates comparable to the 2006 
+estimates, which only covered the 
+continental United States. Appendix 
+table B-3 contains 2010 estimates for 
+Alaska and Hawaii. 
+13We do not have data to determine 
+if a household is both low income 
+and without a vehicle.  It is possible 
+that some of the households without 
+vehicles have sufﬁ cient incomes to pay 
+for other ways to obtain their groceries 
+(e.g., delivery services), whether they 
+live in low-income or moderate- and 
+high-income areas. 
+Table 5
+Supermarket access for households without vehicles:  Overall and by income level of area, 2006 and 2010
+2006
+2010
+# house-
+holds 
+% of HH 
+without 
+vehicles
+% of all HH 
+in U.S.
+# house-
+holds 
+% of HH 
+without 
+vehicles
+% of all HH 
+in U.S.
+All areas:
+HH without vehicle and > 1 mile
+ 2,400,000 
+22.2
+2.3
+2,056,174 
+20.1
+1.8
+HH without vehicle and ½ mile to 1 mile
+ 3,400,000 
+31.5
+3.2
+2,741,044 
+26.8
+2.4
+HH without vehicle and < ½ mile
+ 5,000,000 
+46.3
+4.8
+5,412,449 
+53.0
+4.7
+Total HH without vehicles
+ 10,800,000 
+100.0
+10.3
+10,209,670 
+100.0
+8.8
+Low-income areas:
+HH without vehicle and > 1 mile
+ 936,700 
+20.9
+0.9
+ 903,568 
+17.0
+0.8
+HH without vehicle and ½ mile to 1 mile
+ 1,596,846 
+35.7
+1.5
+ 1,482,819 
+27.9
+1.3
+HH without vehicle and < ½ mile
+ 1,941,814 
+43.4
+1.9
+ 2,928,067 
+55.1
+2.5
+Total HH without vehicles
+ 4,475,360 
+100.0
+4.3
+ 5,314,457 
+100.0
+4.6
+Moderate/high-income areas:
+HH without vehicle and > 1 mile
+ 1,449,144 
+22.9
+1.4
+ 1,152,606 
+23.5
+1.0
+HH without vehicle and ½ mile to 1 mile
+ 1,821,953 
+28.8
+1.7
+ 1,258,225 
+25.7
+1.1
+HH without vehicle and < ½ mile
+ 3,045,857 
+48.2
+2.9
+ 2,484,382 
+50.8
+2.1
+Total HH without vehicles
+ 6,316,954 
+100.0
+6.0
+ 4,895,213 
+100.0
+4.2
+Total number of occupied households
+ 104,900,000 
+ 116,002,896 
+HH = households. Estimates do not include Alaska and Hawaii. See appendix table B-3 for national estimates for the entire United States in 
+2010. 
+
+===== PAGE 21 =====
+15
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+for households with vehicles. The bottom two panels of the table show the 
+distribution of distance to the nearest supermarket for households by area-
+level income. Households without vehicles are closer to supermarkets in both 
+low-income areas and in moderate- and high-income areas. Further, house-
+holds in low-income areas are closer to supermarkets than households in 
+moderate- and high-income areas, regardless of whether they have vehicles. 
+Estimates of access to supermarkets by vehicle availability reﬂ ect the general 
+increase in vehicle availability since the last census. It is also consistent with 
+other studies that have shown a marked increase in vehicle ownership among 
+low-income populations over the past two decades, as asset tests for public 
+assistance programs have been reduced or eliminated and as the Earned 
+Income Tax Credit has expanded (Baum and Owens, 2010; Goodman-Bacon 
+and McGranahan, 2008; Hurst and Ziliak, 2006; and Sullivan, 2006). The 
+2006-10 ACS data may not fully reﬂ ect the economic downturn, which may 
+stall this upward trend. 
+Area Income and Supermarket Access
+We compare indicators of supermarket access for people in low-income areas 
+with people in moderate- and high-income areas ﬁ rst for the entire Nation, 
+and then separately for urban and rural areas. For the overall and urban esti-
+mates, we use the one-half-mile and 1-mile cutoffs to demarcate categories 
+of distance to the nearest supermarket. For rural areas, we use the distance 
+categories of less than 10 miles, between 10 and 20 miles, and more than 20 
+miles from a supermarket. It is important to reemphasize that the number of 
+people who live in low-income areas increased substantially between 2006 
+and 2010. 
+Low-income areas tend to be closer to supermarkets than moderate- and high-
+income areas (table 7). This is consistent with previous estimates in USDA 
+(2009). The distance in miles to the nearest supermarket for people in low-
+income areas is 0.21 at the 20th percentile, 0.69 at the median, and 1.56 at 
+the 80th percentile; these numbers are 0.37, 0.88, and 2.44 for households in 
+Table 6
+Quintile and median distance to the nearest supermarket by household vehicle availability, 2010
+Distance at 
+20th percentile
+Distance at 
+40th percentile
+Distance at 
+Median
+Distance at 
+60th percentile
+Distance at 
+80th percentile
+Miles
+All households:
+0.32
+0.64
+0.83
+1.00
+2.19
+Households without vehicles
+0.03
+0.29
+0.41
+0.61
+0.99
+Households with vehicles
+0.34
+0.66
+0.90
+1.07
+2.26
+All households in low-income areas:
+0.22
+0.50
+0.65
+0.84
+1.57
+Households without vehicles
+0.04
+0.28
+0.39
+0.55
+0.94
+Households with vehicles
+0.26
+0.57
+0.67
+0.91
+1.81
+All households in moderate/high- 
+income areas:
+0.35
+0.67
+0.93
+1.15
+2.34
+Households without vehicles
+0.03
+0.31
+0.43
+0.64
+1.22
+Households with vehicles
+0.38
+0.68
+0.94
+1.24
+2.46
+
+===== PAGE 22 =====
+16
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 7
+Supermarket access for low-income areas compared with moderate/high-income areas, 2006 and 2010
+Area characteristic
+Distance to Nearest Supermarket
+< ½ mIle 
+20th Percentile
+Median
+80th Percentile
+2006
+2010
+2010 miles
+Million
+Percent 
+(of row)
+Million
+Percent 
+(of row)
+All areas
+Income of area
+Low-income area
+0.21
+0.69
+1.56
+22.9
+32.1
+36.1
+37.5
+Moderate/high-income area
+0.37
+0.88
+2.44
+47.6
+22.8
+51.3
+24.4
+Total
+0.33
+0.83
+2.19
+70.5
+25.2
+87.4
+28.5
+Urban areas
+Income of area
+Low-income area
+0.15
+0.59
+0.95
+22.0
+40.0
+34.6
+45.6
+Moderate/high-income area
+0.29
+0.72
+1.28
+45.9
+29.3
+48.3
+32.3
+Total
+0.23
+0.68
+1.19
+67.9
+32.1
+82.9
+36.8
+Rural areas
+< 10 miles
+Income of area
+Low-income area
+1.14
+4.1
+7.57
+13.8
+85.7
+18.3
+89.6
+Moderate/high-income area
+1.30
+3.4
+5.94
+49.0
+94.2
+57.6
+94.8
+Total
+1.28
+3.5
+6.35
+62.8
+92.2
+75.9
+93.5
+--continued
+Table 7
+Supermarket access for low-income areas compared with moderate/high-income areas, 2006 
+and 2010—continued
+Area characteristic
+½ mile to 1 mile
+> 1 mile 
+2000 total 
+population
+2010 total 
+population
+2006
+2010
+2006
+2010
+Mil.
+Percent 
+(of row)
+Mil.
+Percent 
+(of row)
+Mil.
+Percent 
+(of row)
+Mil.
+Percent 
+(of row)
+Million
+Million
+All areas
+Income of area
+Low-income area
+24.9
+34.9
+30.7
+31.9
+23.5
+33.0
+29.7
+30.8
+71.3
+96.4
+Moderate/high-income area
+68.0
+32.6
+62.4
+29.7
+92.8
+44.5
+96.6
+45.9
+208.3
+210.3
+Total
+92.9
+33.2
+93.1
+30.4
+116.3
+41.6
+126.3
+41.2
+279.6
+306.7
+Urban areas
+Income of area
+Low-income area
+23.1
+42.0
+28.5
+37.5
+9.9
+18.0
+12.9
+17.0
+55.0
+76.0
+Moderate/high-income area
+63.9
+40.9
+56.6
+37.9
+46.6
+29.8
+44.6
+29.8
+156.4
+149.6
+Total
+87.0
+41.2
+85.1
+37.7
+56.5
+26.7
+57.5
+25.5
+211.4
+225.5
+Rural areas
+10 to 20 miles
+> 20 miles
+Income of area
+Low-income area
+1.9
+11.8
+1.8
+9.0
+0.4
+2.5
+0.3
+1.4
+16.1
+20.4
+Moderate/high-income area
+2.7
+5.2
+2.9
+4.7
+0.3
+0.6
+0.3
+0.5
+52
+60.7
+Total
+4.6
+6.8
+4.7
+5.8
+0.7
+1.0
+0.6
+0.7
+68.1
+81.2
+Note:  Population reported in millions. 
+Data do not include Alaska and Hawaii.  See appendix table B-4 for national estimates that include Alaska and Hawaii.
+
+===== PAGE 23 =====
+17
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+moderate- to high-income areas. Figure 2 shows the share of the population 
+in low-income areas (indicated by the orange line) and moderate/high-income 
+areas (depicted by the blue line) living a speciﬁ c distance from the nearest 
+supermarket in 2010. Up to a distance of 5 miles, low-income areas are closer 
+to a supermarket than moderate-/high-income areas—a greater proportion of 
+people in low-income areas are within 5 miles of a supermarket. For example, 
+close to 70 percent of all people in low-income areas are within 1 mile of a 
+supermarket compared with about 55 percent of people in moderate-/high-
+income areas. However, for distances of more than 5 miles, people in low-
+income areas tend to be farther from a supermarket than those in moderate/
+high-income areas, although differences are small since so few people are 
+that far from a supermarket. 
+While the number of people living in low-income areas and more than 1 mile 
+from a supermarket increased between 2006 and 2010, there was a much 
+larger increase in the number of people living in low-income areas within ½ 
+mile of the nearest supermarket (table 7).14 Speciﬁ cally, the number of people 
+living in low-income areas that are more than 1 mile from a supermarket 
+increased from 23.5 million, or 8.4 percent of the total population in 2006, to 
+29.7 million, or 9.7 percent of the total population in 2010. The increase in the 
+number of people in low-income areas living within ½ mile of a supermarket 
+was much greater, however—from 22.9 million to 36.1 million. 
+14This table excludes 2010 estimates 
+for Alaska and Hawaii to make the 
+2010 estimates comparable to the 2006 
+estimates. Appendix Table B-4 contains 
+2010 estimates for Alaska and Hawaii.
+0 0.5 1
+2
+4
+6
+8
+10
+Source: USDA, Economic Research Service.
+Figure 2
+Distance to the nearest supermarket for people in low-income areas 
+compared with people in moderate/high-income areas, 2010
+0
+20
+40
+60
+80
+100
+Cumulative share of the population
+People in low-income areas
+People in moderate/high-
+income areas
+Distance to nearest supermarket (miles)
+
+===== PAGE 24 =====
+18
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Together, these indicators present a mixed picture of changes in access over 
+time. Indeed, more people lived in low-income areas far from a supermarket 
+in 2010 than in 2006. However, as a percentage of all people in low-income 
+areas, a greater share is within a half mile of a supermarket in 2010 than in 
+2006 (37.5 percent in 2010 compared with 32.1 percent in 2006). A smaller 
+share of people in low-income areas is more than 1 mile from a supermarket 
+(down to 30.8 percent in 2010 from 33.0 percent in 2006). Further, the 
+median distance to the nearest supermarket in low-income areas in 2010 was 
+essentially unchanged compared with 2006 (0.83 mile compared with 0.84 
+mile (USDA, 2009)). Given the stability in median distance and the increased 
+number of stores in low-income areas (table 4), growth in the share of the 
+population in low-income areas more than 1 mile from a store is likely due 
+more to the greater number of low-income areas in 2010, not to substantial 
+changes in store openings and closings. 
+Changes in urban areas follow the same trend as overall changes. For rural 
+areas, though, the number of people living in low-income areas that are more 
+than 20 miles from a supermarket dropped from 400,000 people in 2006 to 
+about 288,000 people in 2010. There was also a slight decline in the number 
+of people in low-income areas between 10 and 20 miles from a supermarket 
+(table 7). Residents of moderate-/high-income areas saw less change in 
+access from 2006 to 2010. The share of people living in moderate-/high-
+income urban areas more than 1 mile from a supermarket remained stable at 
+29.8 percent, while the share in moderate/high-income rural areas fell from 
+0.6 percent to 0.5 percent.
+Individual Income and Supermarket Access
+The income levels of neighborhoods are a general indicator of the resources 
+available, but neighborhoods are not homogeneous. Low-income neighbor-
+hoods may contain residents who are not poor and higher income neighbor-
+hoods may contain residents who are poor. Focusing solely on low-income 
+neighborhoods misses some households that may experience barriers 
+accessing healthy foods. We compare indicators of supermarket access for 
+low-income people to indicators of access for moderate and high-income 
+people, regardless of the income levels of the neighborhoods in which they 
+live. 
+The cumulative distribution of distance to the nearest supermarket for low-
+income individuals compared with moderate/high-income individuals (ﬁ g. 3) 
+shows only small differences for these two populations. Roughly parallel to 
+the distribution for low-income areas compared with moderate/high-income 
+areas (ﬁ g. 2), people with low incomes are closer to supermarkets than those 
+with moderate/high incomes for most of the distribution. At distances greater 
+than 4 miles (the right tail of the distribution), those with low incomes tend 
+to be farther from supermarkets than those with moderate and high incomes. 
+These results likely reﬂ ect that low-income people in urban areas tend to 
+be closer to supermarkets than moderate- and high-income people, but in 
+rural areas, low-income people tend to be farther from supermarkets than 
+moderate- and high-income people. We explore urban and rural differences 
+below. 
+
+===== PAGE 25 =====
+19
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+In 2006, 11 percent of the entire population, and 38.1 percent of the low-
+income population, lived more than 1 mile from a supermarket (table 8). By 
+2010, the number of low-income people living more than a mile from a super-
+market increased to 35.6 million, which represents an increase from 2006 
+to 11.6 percent of the total U.S. population. However, a smaller share (36.4 
+percent) of all low-income people was more than 1 mile from a supermarket. 
+There was a greater increase in the number of low-income people within ½ 
+mile of a supermarket, which was up by nearly 10 million from 22.6 million 
+in 2006 to 32.5 million in 2010. 
+The number of low-income people in low-income areas more than a mile 
+from the nearest supermarket increased from 11.5 million in 2006 to 15.4 
+million in 2010 (table 8), although the share of such people (in low-income 
+areas) dropped nearly 2 percentage points. Further, in 2010, a greater propor-
+tion of the low-income population in low-income areas lived within ½ mile 
+of the nearest supermarket than in 2006. In moderate/high-income areas, the 
+proportion of the overall population and of the low-income population living 
+within ½ mile of a supermarket increased between 2006 and 2010.
+The number of low-income people living more than 1 mile from a super-
+market is greater in moderate/high-income areas than in low-income 
+areas—20.1 million or 6.6 percent of the total population compared with 15.4 
+million or 5.0 percent of the total population (table 8). Low-income areas 
+have a greater number of low-income people between ½ and 1 mile from a 
+Source: USDA, Economic Research Service.
+Figure 3
+Distance to the nearest supermarket for low-income people compared 
+with moderate/high-income people, 2010
+Cumulative share of the population
+0 0.5 1
+2
+4
+6
+8
+10
+0
+20
+40
+60
+80
+100
+Low-income population
+Moderate/high-
+income population
+Distance to nearest supermarket (miles)
+
+===== PAGE 26 =====
+20
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+supermarket than moderate- and high-income areas. But when combined 
+with those more than 1 mile from a supermarket, moderate- and high-income 
+areas have a larger number of low-income people more than ½ mile from a 
+supermarket (33.7 million compared with 31.6 million, or 11 percent of the 
+total population compared with 10.3 percent). 
+Distance to Supermarkets by Subpopulation 
+Characteristics
+People with low income are closer to supermarkets than those with moderate 
+and high incomes at the median (0.79 mile vs. 0.94 mile) and at the 20th and 
+80th percentiles of distance (table 9). Overall, 41.2 percent of the U.S. popu-
+lation lived more than 1 mile from a supermarket in 2010. A smaller share 
+of low-income (36.3 percent) than moderate/high-income individuals (43.4 
+percent) were more than 1 mile from a supermarket. These general trends by 
+income group are similar to what was found in USDA (2009). 
+The median distance estimates show that most racial and ethnic minorities 
+are closer to supermarkets than Whites. A notable exception is for American 
+Indian/Alaska Native populations—a result we explore in more detail later. 
+These results are similar to ﬁ ndings in USDA (2009) and are true not only for 
+Table 8
+Supermarket access for low-income populations:  Overall and by income level of area, 2006 and 2010
+2006
+2010
+# of low-
+income 
+people
+% of low-
+income 
+population
+% of total 
+population
+ # of low-
+income 
+people
+% of low-
+income 
+population
+% of total 
+population
+Million
+Million
+All areas
+> 1 mile
+30.2 
+38.1
+11.0
+ 35.6 
+36.4
+11.6
+½ mile to 1 mile
+26.4 
+33.3
+9.6
+ 29.8 
+30.4
+9.7
+< ½ mile
+22.6 
+28.5
+8.2
+ 32.5 
+33.2
+10.6
+Total number of low income people
+79.3 
+100.0
+28.8
+ 97.9 
+100.0
+31.9
+Low-income areas
+> 1 mile
+11.5 
+31.9
+4.2
+ 15.4 
+30.1
+5.0
+½ mile to 1 mile
+12.5 
+34.7
+4.5
+ 16.2 
+31.6
+5.3
+< ½ mile
+12.1 
+33.6
+4.4
+ 19.6 
+38.2
+6.4
+Total low-income people in low-income 
+areas
+36.0 
+100.0
+13.1
+ 51.2 
+100.0
+16.7
+Moderate/high-income areas
+> 1 mile
+ 18.7 
+43.2
+6.8
+20.1 
+43.1
+6.6
+½ mile to 1 mile
+ 13.9 
+32.1
+5.0
+13.6 
+29.2
+4.4
+< ½ mile
+ 10.5 
+24.2
+3.8
+12.9 
+27.7
+4.2
+Total low-income people in moderate/
+high-income areas
+ 43.3 
+100.0
+15.7
+46.7 
+100.0
+15.2
+Total number of people
+275.5 
+306.6 
+Estimates do not include Alaska and Hawaii.
+
+===== PAGE 27 =====
+21
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+median distances, but at the 20th and 80th percentiles of distance also. These 
+results likely reﬂ ect differences in the racial composition in rural, urban, and 
+suburban areas. Differences in access levels across age groups are small. The 
+elderly are slightly more likely to be more than 1 mile from a supermarket 
+than other age groups, and slightly less likely to be within ½ mile. 
+Urban Food Store Access
+The median distance to the nearest supermarkets for urban populations was 
+about 0.68 mile in 2010 (table 10). Median distances were shorter for low-
+income individuals, most non-Whites, and Hispanics. As was true in USDA 
+(2009), the share of White urban residents living more than a mile from 
+the nearest supermarket was greater than for other racial groups. Hispanics 
+also tend to live within ½ mile of a supermarket in greater proportion than 
+Table 9
+Supermarket access for selected population characteristics, 2010
+Population 
+characteristics
+20th percen-
+tile distance 
+to nearest 
+supermarket
+Median 
+distance to 
+nearest su-
+permarket
+80th percen-
+tile distance 
+to nearest 
+supermarket
+< ½ mile 
+to nearest 
+supermarket
+½ mile to 1 
+mile to nearest 
+supermarket
+> 1 mile 
+to nearest 
+supermarket
+Total
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+All individuals
+0.33
+0.90
+2.19
+88.0
+28.5
+ 93.7 
+30.3
+127.1 
+41.2
+ 308.7 
+Income
+Low-income 
+people
+0.26
+0.79
+1.98
+32.7
+33.2
+ 29.9 
+30.4
+ 35.8 
+36.4
+ 98.4 
+Moderate/high- 
+income people
+0.35
+0.94
+2.24
+55.3
+26.3
+ 63.7 
+30.3
+ 91.4 
+43.4
+ 210.3 
+Expanded race
+White
+0.37
+0.97
+2.66
+55.1
+24.6
+ 65.3 
+29.2
+ 103.2 
+46.2
+ 223.6 
+Black
+0.24
+0.69
+1.35
+13.7
+35.3
+ 13.4 
+34.5
+ 11.8 
+30.2
+ 38.9 
+Asian
+0.16
+0.64
+1.10
+6.3
+42.8
+ 5.0 
+34.0
+ 3.4 
+23.2
+ 14.7 
+Native Hawaiian/
+Paciﬁ c Islander
+0.23
+0.69
+1.42
+0.2
+ 0.2 
+ 0.2 
+American Indian/
+Alaska Native
+0.36
+1.06
+5.09
+0.7
+ 0.7 
+ 1.5 
+Other and 
+multiple races
+0.17
+0.64
+1.26
+11.9
+42.4
+ 9.0 
+32.2
+ 7.1 
+25.4
+ 28.1 
+Hispanic ethnicity
+Hispanic
+0.17
+0.64
+1.25
+21.5
+42.5
+ 16.5 
+32.7
+ 12.5 
+24.8
+ 50.5 
+Non-hispanic
+0.36
+0.95
+2.49
+66.5
+25.7
+ 77.2 
+29.9
+ 114.6 
+44.4
+ 258.3 
+Age
+Children (age 17 
+or less)
+0.33
+0.91
+2.18
+20.3
+27.5
+ 22.5 
+30.6
+ 30.9 
+41.9
+ 73.7 
+Working age (18 
+to 64)
+0.32
+0.90
+2.19
+56.2
+29.1
+ 58.6 
+30.4
+ 78.2 
+40.5
+ 193.0 
+Elderly (65 or 
+older)
+0.34
+0.93
+2.42
+10.9
+27.2
+ 12.0 
+30.0
+ 17.1 
+42.8
+ 40.0 
+
+===== PAGE 28 =====
+22
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 10
+Urban supermarket access: Overall and by selected population characteristics, 2010
+Population 
+characteristics
+20th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+Median 
+dis-
+tance to 
+nearest 
+super-
+market
+80th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+< ½ mile 
+to nearest 
+supermaket
+½ mile to 1 
+mile to nearest 
+supermaket
+> 1 mile 
+to nearest 
+supermaket
+Total urban
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+All individuals
+0.23
+0.68
+1.19
+ 83.5 
+36.8
+ 85.6 
+37.7
+ 58.0 
+25.5
+ 227.1 
+100.0
+Income
+Low-income people
+0.18
+0.64
+1.01
+ 31.2 
+42.1
+ 27.6 
+37.2
+ 15.4 
+20.8
+ 74.2 
+32.7
+Moderate/high- 
+income people
+0.26
+0.69
+1.26
+ 52.3 
+34.2
+ 58.0 
+37.9
+ 42.6 
+27.9
+ 152.8 
+67.3
+Race
+White
+0.28
+0.71
+1.26
+ 51.5 
+33.4
+ 58.9 
+38.2
+ 43.8 
+28.4
+ 154.2 
+67.9
+Black
+0.19
+0.65
+1.04
+ 13.4 
+40.2
+ 12.7 
+38.2
+ 7.2 
+21.6
+ 33.3 
+14.6
+Asian
+0.13
+0.60
+0.96
+ 6.1 
+46.5
+ 4.7 
+35.4
+ 2.4 
+18.1
+ 13.2 
+5.8
+Native Hawaiian/
+Paciﬁ c Islander
+0.19
+0.64
+1.07
+ 0.2 
+41.7
+ 0.2 
+36.1
+ 0.1 
+22.2
+ 0.5 
+0.2
+American Indian/
+Alaska Native
+0.20
+0.66
+1.11
+ 0.7 
+39.7
+ 0.6 
+36.6
+ 0.4 
+23.7
+ 1.7 
+0.8
+Other and multiple 
+races
+0.13
+0.58
+0.95
+ 11.6 
+48.0
+ 8.5 
+35.1
+ 4.1 
+16.9
+ 24.2 
+10.7
+Hispanic ethnicity
+Hispanic
+0.14
+0.58
+0.95
+ 21.0 
+47.6
+ 15.6 
+35.4
+ 7.5 
+17.0
+ 44.0 
+19.4
+Non-hispanic
+0.27
+0.69
+1.25
+ 62.5 
+34.2
+ 70.0 
+38.2
+ 50.5 
+27.6
+ 183.0 
+80.6
+Age
+Children
+(age 17 or less)
+0.25
+0.68
+1.24
+ 19.3 
+35.6
+ 20.6 
+37.9
+ 14.4 
+26.4
+ 54.3 
+23.9
+Working age
+(18 to 64)
+0.22
+0.67
+1.17
+ 53.9 
+37.4
+ 54.0 
+37.5
+ 36.1 
+25.1
+ 144.0 
+63.4
+Elderly 
+(65 or older)
+0.25
+0.68
+1.22
+ 10.3 
+35.7
+ 11.0 
+38.2
+ 7.5 
+26.1
+ 28.8 
+12.7
+Family type (single-
+person households 
+are excluded)
+All households
+0.22
+0.67
+1.15
+ 32.4 
+37.7
+ 32.3 
+37.6
+ 21.3 
+24.8
+ 86.1 
+100.0
+Married couple
+0.29
+0.73
+1.27
+ 12.5 
+32.3
+ 14.7 
+38.1
+ 11.4 
+29.5
+ 38.6 
+44.8
+Female householder 
+(no husband 
+present)
+0.19
+0.65
+1.04
+ 5.0 
+40.5
+ 4.7 
+37.9
+ 2.7 
+21.6
+ 12.3 
+14.3
+Male householder 
+(no wife present)
+0.20
+0.65
+1.06
+ 1.8 
+40.4
+ 1.6 
+37.4
+ 1.0 
+22.2
+ 4.4 
+5.1
+1Estimates include Alaska and Hawaii.
+
+===== PAGE 29 =====
+23
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+non-Hispanics: 47.6 percent of the urban Hispanic population lived ½ mile or 
+closer to the nearest supermarket in 2010, versus 34.2 percent of urban non-
+Hispanic individuals. 
+Compared with female- and male-headed households with no spouse present, 
+a greater share of urban married households lived more than a mile from a 
+supermarket (29.5 percent compared with almost 22 percent for both female- 
+and male-headed single households) in 2010. 
+When the urban population is broken down by neighborhood income level 
+(table 11), those who live in low-income areas tend to live closer to the 
+nearest supermarket than others. In moderate/high-income areas, 29.8 percent 
+of all individuals lived more than 1 mile from the nearest supermarket or 
+large grocery in 2010 versus 17 percent in low-income urban areas. Further, 
+moderate- and high-income urban areas had 1.6 million more low-income 
+people living more than 1 mile from a supermarket than did low-income 
+urban areas. Again, this demonstrates a problem in focusing only on low-
+income areas. 
+In low-income urban areas, 17.4 percent of both children and the elderly 
+lived more than 1 mile from the nearest supermarket in 2010 (table 11). In 
+moderate/high-income areas, however, children were more likely to live more 
+than 1 mile from the supermarket than the elderly, with 31.6 percent of those 
+under the age of 18 living a mile or more from the nearest supermarket or 
+grocery store in 2010, compared to 29.5 percent of seniors.
+Figure 4 uses the St. Louis, Missouri, area to illustrate supermarket access 
+by population density and for low-income areas. One-mile radius circles are 
+drawn around each supermarket in the area, and population density for the 
+½-kilometer-square grids are shown by shading, with lighter areas being less 
+dense and darker areas being more dense. Low-income ½-kilometer-square 
+grids are represented by cross-hatching. Middle sections of St. Louis and 
+portions of the northern and northwest parts of the city have densely popu-
+lated low-income areas outside of 1 mile from a supermarket. The East St. 
+Louis, Illinois, area on the east side of the Mississippi River, although less 
+densely populated, also has very large swaths of areas that are low-income 
+and outside of 1 mile from a supermarket. 
+Rural Food Store Access
+Approximately 26.5 percent of the U.S. population is located in rural census 
+tracts, as deﬁ ned by the U.S. Census Bureau. Of this population, over 93 
+percent lived within 10 miles of a supermarket in 2010 (table 12). Nearly 6 
+percent lived in areas between 10 and 20 miles to the nearest supermarket, 
+and almost 1 percent were more than 20 miles away. 
+A smaller share of low-income individuals (91.6 percent) than higher income 
+individuals (94.2 percent) lived within 10 miles of a supermarket. Larger 
+shares of low-income individuals live in rural areas between 10 and 20 
+miles from the nearest supermarket (7.3 percent) or farther than 20 miles 
+(1.1 percent) compared with higher income individuals (5.2 and 0.6 percent, 
+respectively). These results differ from urban areas where low-income 
+
+===== PAGE 30 =====
+24
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 11
+Urban supermarket access by income level of area and by selected population characteristics, 2010
+Population 
+characteristics
+20th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+Median 
+dis-
+tance to 
+nearest 
+super-
+market
+80th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+< ½ mile 
+to nearest 
+supermaket
+½ mile to 1 
+mile to nearest 
+supermaket
+> 1 mile 
+to nearest 
+supermaket
+Total urban
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+Low-income areas
+All individuals
+0.15
+0.61
+0.96
+ 34.6 
+45.5
+ 28.5 
+37.5
+ 12.9 
+17.0
+ 76.0 
+100.0
+Income
+Low-income people
+0.15
+0.60
+0.95
+ 18.9 
+46.1
+ 15.1 
+36.9
+ 6.9 
+17.0
+ 40.9 
+53.8
+moderate/high- 
+income people
+0.16
+0.62
+0.96
+ 15.8 
+44.9
+ 13.4 
+38.1
+ 6.0 
+17.1
+ 35.2 
+46.2
+Race
+White
+0.18
+0.63
+0.97
+ 17.4 
+42.9
+ 15.7 
+38.7
+ 7.5 
+18.5
+ 40.6 
+53.3
+Black
+0.16
+0.63
+0.97
+ 8.2 
+43.3
+ 7.4 
+38.7
+ 3.4 
+18.0
+ 19.0 
+24.9
+Asian
+0.04
+0.42
+0.69
+ 1.7 
+60.0
+ 0.9 
+31.0
+ 0.3 
+9.0
+ 2.9 
+3.8
+Native Hawaiian/
+Paciﬁ c Islander
+0.17
+0.61
+0.95
+ 0.1 
+45.5
+ 0.1 
+38.4
+ 0.0 
+16.1
+ 0.1 
+0.2
+American Indian/
+Alaska Native
+0.16
+0.63
+0.98
+ 0.4 
+44.5
+ 0.3 
+35.6
+ 0.2 
+19.9
+ 0.9 
+1.1
+Other and multiple 
+races
+0.09
+0.49
+0.88
+ 6.9 
+54.2
+ 4.2 
+33.3
+ 1.6 
+12.5
+ 12.6 
+16.6
+Hispanic ethnicity
+Hispanic
+0.10
+0.51
+0.90
+ 12.8 
+52.9
+ 8.1 
+33.5
+ 3.3 
+13.6
+ 24.2 
+31.8
+Non-hispanic
+0.18
+0.64
+0.97
+ 21.8 
+42.1
+ 20.4 
+39.3
+ 9.6 
+18.6
+ 51.9 
+68.2
+Age
+Children
+(age 17 or less)
+0.16
+0.62
+0.96
+ 8.9 
+45.2
+ 7.3 
+37.4
+ 3.4 
+17.4
+ 19.6 
+25.8
+Working age
+(18 to 64)
+0.15
+0.61
+0.95
+ 22.2 
+45.8
+ 18.1 
+37.4
+ 8.1 
+16.8
+ 48.4 
+63.6
+Elderly 
+(65 or older)
+0.16
+0.62
+0.96
+ 3.6 
+44.4
+ 3.1 
+38.1
+ 1.4 
+17.4
+ 8.0 
+10.6
+Family type (single-person 
+households are excluded)
+All households
+0.15
+0.61
+0.95
+Married couple
+0.17
+0.63
+0.97
+ 4.1 
+43.4
+ 3.5 
+38.0
+ 1.7 
+18.6
+ 9.3 
+34.2
+Female householder 
+(no husband 
+present)
+0.14
+0.61
+0.95
+ 2.5 
+45.8
+ 2.1 
+37.6
+ 0.9 
+16.6
+ 5.6 
+20.3
+Male householder 
+(no wife present)
+0.14
+0.59
+0.94
+ 0.8 
+47.3
+ 0.7 
+36.8
+ 0.3 
+15.9
+ 1.8 
+6.6
+--continued
+
+===== PAGE 31 =====
+25
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 11
+Urban supermarket access by income level of area and by selected population characteristics, 
+2010—continued
+Population 
+characteristics
+20th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+Median 
+dis-
+tance to 
+nearest 
+super-
+market
+80th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+< ½ mile 
+to nearest 
+supermarket
+½ mile to 1 
+mile to nearest 
+supermaket
+> 1 mile 
+to nearest 
+supermaket
+Total urban
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+%
+Moderate/high- income areas
+All individuals
+0.29
+0.74
+1.28
+ 48.9 
+32.4
+ 57.1 
+37.8
+ 45.1 
+29.8
+ 151.0 
+100.0
+Income
+Low-income poeple
+0.23
+0.68
+1.19
+ 12.4 
+37.1
+ 12.5 
+37.5
+ 8.5 
+25.4
+ 33.3 
+22.1
+Moderate/high- 
+income people
+0.31
+0.77
+1.29
+ 36.5 
+31.0
+ 44.6 
+37.9
+ 36.6 
+31.1
+ 117.7 
+77.9
+Race
+White
+0.32
+0.79
+1.31
+ 34.1 
+30.0
+ 43.2 
+38.0
+ 36.3 
+31.9
+ 113.7 
+75.3
+Black
+0.24
+0.68
+1.24
+ 5.2 
+36.1
+ 5.4 
+37.5
+ 3.8 
+26.5
+ 14.3 
+9.5
+Asian
+0.17
+0.64
+1.00
+ 4.4 
+42.7
+ 3.8 
+36.7
+ 2.1 
+20.6
+ 10.3 
+6.8
+Native Hawaiian/
+Paciﬁ c Islander
+0.20
+0.66
+1.20
+ 0.1 
+40.0
+ 0.1 
+35.2
+ 0.1 
+24.7
+ 0.3 
+0.2
+American Indian/
+Alaska Native
+0.26
+0.69
+1.26
+ 0.3 
+34.8
+ 0.3 
+37.7
+ 0.2 
+27.5
+ 0.9 
+0.6
+Other and multiple 
+races
+0.19
+0.65
+1.04
+ 4.8 
+41.1
+ 4.3 
+37.2
+ 2.5 
+21.7
+ 11.6 
+7.7
+Hispanic ethnicity
+Hispanic
+0.20
+0.65
+1.02
+ 8.2 
+41.1
+ 7.5 
+37.7
+ 4.2 
+21.2
+ 19.9 
+13.2
+Non-hispanic
+0.31
+0.77
+1.30
+ 40.7 
+31.0
+ 49.6 
+37.8
+ 40.8 
+31.1
+ 131.2 
+86.8
+Age
+Children
+(age 17 or less)
+0.32
+0.78
+1.30
+ 10.5 
+30.2
+ 13.2 
+38.2
+ 10.9 
+31.6
+ 34.7 
+22.9
+Working age
+(18 to 64)
+0.28
+0.72
+1.27
+ 31.7 
+33.2
+ 35.9 
+37.6
+ 28.0 
+29.3
+ 95.6 
+63.3
+Elderly 
+(65 or older)
+0.29
+0.74
+1.27
+ 6.7 
+32.3
+ 7.9 
+38.2
+ 6.1 
+29.5
+ 20.7 
+13.7
+Family type (single-person 
+households are excluded)
+All households
+0.26
+0.71
+1.26
+ 20.0 
+ 34.0 
+ 22.0 
+ 37.5 
+ 16.8 
+ 28.5 
+ 58.8 
+ 100.0 
+Married couple
+0.33
+0.82
+1.33
+ 8.4 
+28.8
+ 11.2 
+38.2
+ 9.6 
+33.0
+ 29.2 
+49.7
+Female householder 
+(no husband 
+present)
+0.24
+0.68
+1.20
+ 2.4 
+36.1
+ 2.6 
+38.1
+ 1.7 
+25.8
+ 6.7 
+11.5
+Male householder 
+(no wife present)
+0.25
+0.68
+1.25
+ 0.9 
+35.6
+ 1.0 
+37.8
+ 0.7 
+26.6
+ 2.6 
+4.4
+1Estimates include Alaska and Hawaii.
+
+===== PAGE 32 =====
+26
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+individuals are, in general, closer to supermarkets than individuals with 
+higher incomes. 
+Grouping the rural population by race reveals some striking differences. 
+Each group follows the same general pattern illustrated in the national 
+numbers—i.e., the largest portion of the population lives within 10 miles of 
+the nearest supermarket, followed by those living between 10 and 20 miles, 
+and those beyond 20 miles. However, for the American Indian/Alaska Native 
+population, the percentages are dramatically different. While this category 
+makes up just 1.5 percent of the total rural population, more than 1 in 10 
+American Indians/Alaskan Natives live more than 20 miles from the nearest 
+supermarket. Moreover, American Indians and Alaskan Natives are the only 
+minority population living farther from the nearest supermarket than Whites. 
+The difference in distance to the nearest supermarket between this popula-
+tion and all other racial and ethnic groups is particularly pronounced in rural 
+areas: distance to the nearest supermarket at the 80th percentile is 12.2 miles 
+for American Indians and Alaskan Natives, compared to 6.4 miles for Whites 
+Figure 4
+Supermarket access in St. Louis, Missouri
+Source: USDA, Economic Research Service.
+
+===== PAGE 33 =====
+27
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+(table 12). Measures of access to supermarkets for residents of tribal areas are 
+examined in greater detail in the next section.
+The rural elderly also appear to be slightly farther from the nearest super-
+market than other age groups. Approximately 94 percent of both rural 
+Table 12
+Rural supermarket access: Overall and by selected population characteristics, 2010
+Population characteristics
+20th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+Median 
+distance 
+to 
+nearest 
+super-
+market
+80th 
+percentile 
+distance 
+to nearest 
+super-
+market
+< 10 miles 
+to nearest 
+supermarket
+10-20 miles 
+to nearest 
+supermaket
+> 20 miles 
+to nearest 
+supermarket
+Total
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+All individuals
+1.3
+3.2
+6.4
+76.3
+93.4
+4.7
+5.8
+0.6
+0.8
+81.7
+Income
+Low-income people
+1.3
+3.5
+7.0
+22.2
+91.6
+1.8
+7.3
+0.3
+1.1
+24.2
+Moderate/high-income 
+people
+1.3
+3.1
+6.1
+54.2
+94.2
+3.0
+5.2
+0.4
+0.6
+57.5
+Race
+White
+1.3
+3.3
+6.4
+64.9
+93.5
+4.0
+5.8
+0.5
+0.7
+69.3
+Black
+1.0
+2.6
+6.0
+5.3
+94.3
+0.3
+5.7
+0.0
+0.1
+5.7
+Asian
+0.7
+1.6
+2.9
+1.5
+98.6
+0.0
+1.2
+0.0
+0.2
+1.5
+Native Hawaiian/Paciﬁ c 
+Islander
+0.9
+2.2
+5.3
+0.1
+94.9
+0.0
+4.4
+0.0
+0.7
+0.1
+American Indian/Alaska 
+Native
+1.6
+4.7
+12.2
+0.9
+75.1
+0.2
+14.5
+0.1
+10.4
+1.2
+Other and multiple races
+1.0
+2.5
+5.7
+3.6
+93.8
+0.2
+5.3
+0.0
+0.9
+3.9
+Hispanic ethnicity
+Hispanic
+1.0
+2.4
+5.5
+6.1
+93.9
+0.3
+5.1
+0.1
+1.0
+6.4
+Non-hispanic
+1.3
+3.2
+6.4
+70.3
+93.4
+4.4
+5.9
+0.6
+0.7
+75.2
+Age
+Children
+(age 17 or less)
+1.3
+3.1
+6.2
+18.7
+93.8
+1.1
+5.5
+0.1
+0.7
+19.9
+Working age
+(18 to 64)
+1.3
+3.2
+6.3
+47.1
+93.6
+2.9
+5.7
+0.4
+0.7
+50.3
+Elderly 
+(65 or older)
+1.3
+3.3
+6.7
+10.6
+92.1
+0.8
+6.9
+0.1
+1.0
+11.5
+Family type (single-person 
+households are excluded)
+All households
+1.3
+3.19
+6.5
+28.5
+93.1
+1.9
+6.1
+0.2
+0.8
+30.6
+Married couple
+1.4
+3.3
+6.4
+16.8
+93.5
+1.0
+5.8
+0.1
+0.7
+17.9
+Female householder 
+(no husband present)
+1.0
+2.9
+6.2
+2.8
+93.6
+0.2
+5.7
+0.0
+0.7
+3.0
+Male householder 
+(no wife present)
+1.3
+3.4
+6.6
+1.3
+92.8
+0.1
+6.4
+0.0
+0.9
+1.4
+1Estimates include Alaska and Hawaii.
+
+===== PAGE 34 =====
+28
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+children and working-age adults lived within 10 miles of the nearest super-
+market in 2010, while only 92 percent of those aged 65 and older lived within 
+the same distance. A slightly higher proportion of the elderly population lived 
+farther than 20 miles from the nearest supermarket as well, but those more 
+than 20 miles away represent only 1 percent of all elderly in rural areas.
+Separate estimates for low-income areas versus moderate/high-income areas 
+show that those living in low-income rural areas tend to be farther from a 
+supermarket than those in moderate- and high-income rural areas (table 13). 
+The median distance that individuals in low-income rural areas must travel to 
+the nearest supermarket is 3.6 miles, compared with 3.1 miles for individuals 
+in moderate/high-income rural areas. Just under 90 percent of individuals 
+in low-income rural areas live within 10 miles of the nearest supermarket 
+versus nearly 95 percent of individuals in moderate/high-income rural areas. 
+Similarly, 1.5 percent of individuals in low-income rural areas lived more 
+than 20 miles from the nearest supermarket in 2010 versus 0.5 percent in 
+moderate/high-income areas. 
+For several demographic subgroups, those in low-income areas are farther 
+from supermarkets. In every case, a larger percentage of the subgroup popu-
+lation living in low-income rural areas is at least 20 miles from the nearest 
+supermarket than for the same subgroup living in moderate/high-income 
+rural areas. For example, while the problem of access for American Indian/
+Alaska Native individuals is apparent overall, it is even more striking when 
+area income is considered. Over 15 percent of American Indian/Alaska 
+Native individuals in low-income rural areas lived farther than 20 miles from 
+a supermarket in 2010 (table 13) versus 2.8 percent in moderate/high-income 
+areas. 
+Figure 5 shows supermarket access in South Dakota, again using shading 
+to indicate more densely populated areas and cross-hatches to indicate 
+low-income areas. In contrast to the St. Louis map, this map uses 10- and 
+20-mile radii around supermarkets to indicate access levels. The map shows 
+that signiﬁ cant portions of the State, including many low-income areas, 
+are beyond 20 miles from a supermarket. These parts of South Dakota are 
+sparsely populated, but there are still areas with sizable numbers of people far 
+from supermarkets, including some tribal areas. 
+Food Access in Tribal Areas
+We now describe access to healthful food for populations living in feder-
+ally designated tribal areas, including American Indian Tribal Areas, Alaska 
+Native Village Areas, and Native Hawaiian Homelands. As in the rest of 
+this report, access is measured as the distance to the nearest supermarket—
+regardless of whether this supermarket is located within tribal lands or not. 
+The analysis is conducted separately for rural and urban tribal areas. Due to 
+data limitations, Oklahoma Tribal Statistical Areas (OTSAs) were excluded 
+from the analysis.15 
+More than 1.3 million individuals reside in tribal areas in the United 
+States, representing American Indian (AI), Alaska Native (AN), and Native 
+Hawaiian (NH) homelands. Of the total tribal area population, 71.5 percent 
+live in rural areas while the remaining live in urban areas.
+15OTSAs are areas in Oklahoma that 
+have high concentrations of American 
+Indian (AI) populations, but include 
+considerable non-AI populations.  Only 
+a small portion of OTSAs are federally 
+designated tribal lands.
+
+===== PAGE 35 =====
+29
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 13
+Rural supermarket access by income level of area and by selected population characteristics, 2010
+Population 
+characteristics
+20th 
+percentile 
+distance to 
+nearest su-
+permarket
+Median 
+distance 
+to nearest 
+super-
+market
+80th
+percentile 
+distance to 
+nearest su-
+permarket
+< 10 miles to 
+nearest super-
+market
+10-20 miles to 
+nearest super-
+market
+> 20 miles to 
+nearest super-
+market
+Total
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+Low-income areas
+All individuals
+1.1
+3.6
+7.6
+18.4
+89.4
+1.9
+9.0
+0.3
+1.5
+20.5
+Income
+Low-income people
+1.2
+3.7
+7.7
+9.3
+89.0
+1.0
+9.3
+0.2
+1.7
+10.4
+Moderate/high- 
+income people
+1.1
+3.6
+7.5
+9.1
+89.8
+0.9
+8.8
+0.1
+1.4
+10.1
+Race
+White
+1.2
+3.8
+7.6
+14.3
+90.1
+1.4
+8.8
+0.2
+1.1
+15.8
+Black
+1.0
+3.0
+7.2
+2.3
+91.0
+0.2
+8.9
+0.0
+0.1
+2.5
+Asian
+0.7
+1.7
+4.9
+0.1
+94.4
+0.0
+4.5
+0.0
+1.1
+0.1
+Native Hawaiian/
+Paciﬁ c Islander
+0.9
+2.7
+6.5
+0.0
+90.3
+0.0
+8.6
+0.0
+1.1
+0.0
+American Indian/
+Alaska Native
+1.6
+5.8
+16.4
+0.5
+66.4
+0.1
+18.4
+0.1
+15.2
+0.7
+Other and multiple 
+races
+0.9
+2.9
+6.8
+1.2
+90.9
+0.1
+7.6
+0.0
+1.5
+1.3
+Hispanic ethnicity
+Hispanic
+0.9
+2.8
+6.4
+2.2
+91.4
+0.2
+6.9
+0.0
+1.7
+2.4
+Non-hispanic
+1.2
+3.8
+7.7
+16.2
+89.2
+1.7
+9.3
+0.3
+1.5
+18.2
+Age
+Children
+(age 17 or less)
+1.1
+3.6
+7.5
+4.5
+89.6
+0.4
+8.8
+0.1
+1.6
+5.0
+Working age
+(18 to 64)
+1.2
+3.6
+7.5
+11.2
+89.7
+1.1
+8.9
+0.2
+1.5
+12.5
+Elderly 
+(65 or older)
+1.0
+3.7
+7.9
+2.6
+88.2
+0.3
+10.1
+0.1
+1.8
+3.0
+Family type (single-person 
+households are excluded)
+All households
+1.1
+3.7
+7.7
+Married couple
+1.3
+4.0
+7.8
+3.5
+89.1
+0.4
+9.4
+0.1
+1.5
+3.9
+Female householder 
+(no husband 
+present)
+0.9
+3.1
+7.2
+0.9
+90.3
+0.1
+8.3
+0.0
+1.4
+1.0
+Male householder 
+(no wife present)
+1.1
+3.7
+7.7
+0.4
+89.1
+0.0
+9.2
+0.0
+1.7
+0.4
+--continued
+
+===== PAGE 36 =====
+30
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 13
+Rural supermarket access by income level of area and by selected population characteristics, 
+2010—continued
+Population 
+characteristics
+20th 
+percentile 
+distance to 
+nearest su-
+permarket
+Median 
+distance 
+to nearest 
+super-
+market
+80th
+percentile 
+distance to 
+nearest su-
+permarket
+< 10 miles to 
+nearest super-
+market
+10-20 miles to 
+nearest super-
+market
+> 20 miles to 
+nearest super-
+market
+Total
+Miles
+Miles
+Miles
+Million
+%
+Million
+%
+Million
+%
+Million
+Moderate/high-income areas
+All individuals
+1.3
+3.1
+5.9
+57.9
+94.8
+2.9
+4.7
+0.3
+0.5
+61.1
+Income
+Low-income people
+1.3
+3.3
+6.5
+12.9
+93.5
+0.8
+5.9
+0.1
+0.7
+13.8
+Moderate/high-  
+income people
+1.3
+3.0
+5.8
+45.1
+95.1
+2.1
+4.4
+0.2
+0.5
+47.4
+Race
+White
+1.4
+3.2
+6.1
+50.6
+94.6
+2.6
+4.9
+0.3
+0.5
+53.5
+Black
+1.1
+2.4
+5.0
+3.1
+96.8
+0.1
+3.2
+0.0
+0.1
+3.2
+Asian
+0.7
+1.5
+2.8
+1.3
+99.1
+0.0
+0.8
+0.0
+0.1
+1.4
+Native Hawaiian/
+Paciﬁ c Islander
+0.9
+2.1
+4.8
+0.1
+96.4
+0.0
+3.0
+0.0
+0.6
+0.1
+American Indian/
+Alaska Native
+1.5
+3.7
+7.3
+0.4
+88.7
+0.0
+8.5
+0.0
+2.8
+0.5
+Other and multiple 
+races
+1.0
+2.4
+5.3
+2.4
+95.3
+0.1
+4.2
+0.0
+0.5
+2.6
+Hispanic ethnicity
+Hispanic
+1.0
+2.2
+4.9
+3.9
+95.4
+0.2
+4.1
+0.0
+0.6
+4.1
+Non-hispanic
+1.3
+3.1
+6.0
+54.1
+94.7
+2.7
+4.8
+0.3
+0.5
+57.1
+Age
+Children
+(age 17 or less)
+1.3
+2.9
+5.8
+14.2
+95.2
+0.6
+4.3
+0.1
+0.4
+14.9
+Working age
+(18 to 64)
+1.3
+3.1
+5.9
+35.8
+94.9
+1.8
+4.6
+0.2
+0.5
+37.8
+Elderly 
+(65 or older)
+1.3
+3.2
+6.3
+8.0
+93.5
+0.5
+5.8
+0.1
+0.7
+8.5
+Family type (single-person 
+households are excluded)
+All households
+1.3
+3.11
+6.0
+Married couple
+1.4
+3.1
+6.0
+13.3
+94.7
+0.7
+4.8
+0.1
+0.5
+14.0
+Female householder 
+(no husband 
+present)
+1.1
+2.9
+5.8
+1.9
+95.3
+0.1
+4.3
+0.0
+0.4
+1.9
+Male householder 
+(no wife present)
+1.3
+3.3
+6.2
+0.9
+94.3
+0.1
+5.2
+0.0
+0.5
+1.0
+1Estimates include Alaska and Hawaii.
+
+===== PAGE 37 =====
+31
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Urban Tribal Areas
+Of the total urban population, 47.9 percent lived more than 1 mile from the 
+nearest supermarket in 2010, while 23.4 percent were within ½ mile (table 
+14). Levels of supermarket access vary across population subgroups. The 
+share of low-income population living more than 1 mile from a supermarket 
+(43.6 percent) was lower than the share of moderate/high-income individuals 
+(50.7 percent). As in all urban areas, those households without vehicles in 
+urban tribal areas were closer to the nearest supermarket than those with 
+vehicles. 
+Rural Tribal Areas
+Among the total population in rural tribal areas, 14.0 percent lived more than 
+20 miles from a supermarket in 2010 (table 15). Another 18.2 percent live 
+between 10 and 20 miles from the nearest supermarket. The median distance 
+to a supermarket was 5.3 miles in 2010.
+Disadvantaged populations in rural tribal areas tend to be farther from super-
+markets than those with higher incomes and with vehicles: 18.4 percent of 
+low-income people were more than 20 miles from a supermarket, compared 
+with 10 percent of those with higher incomes. Though only about 10 percent 
+of all households in rural tribal areas lack vehicles, those households were 
+located much farther from the nearest supermarket (9.9 miles, median 
+distance) than those with vehicles (4.9 miles). Among rural tribal households 
+Figure 5
+Supermarket access in South Dakota
+Source: USDA, Economic Research Service.
+
+===== PAGE 38 =====
+32
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+without a vehicle, 31.3 percent were more than 20 miles from the nearest 
+supermarket in 2010.  
+By age group, the share of individuals more than 20 miles from a super-
+market ranged from 12.5 percent for the elderly (65 and older) to 15.4 percent 
+among children (age 17 or younger). The share of rural tribal households 
+without a vehicle (10.6 percent) was slightly higher than the share for urban 
+tribal areas (8.2 percent).
+This analysis does not include distribution sites served by the USDA Food 
+Distribution Program on Indian Reservations (FDPIR). Including these 
+distribution sites in the store directory would likely reduce the distance to 
+the nearest source of healthful food, particularly in rural areas.16 Future ERS 
+research will measure tribal area population access to FDPIR sites in greater 
+detail. 
+16Tribal areas designated as urban are 
+largely excluded from participation in 
+FDPIR.
+Table 14
+Supermarket access in urban Tribal Areas of the United States: Overall and selected population 
+characteristics, 2010
+Urban population 
+characteristics
+20th 
+percentile 
+distance 
+to nearest 
+super-
+market
+Median 
+distance 
+to 
+nearest 
+super-
+market
+80th 
+percentile 
+distance 
+to nearest 
+supermar-
+ket
+< ½ mile 
+to nearest 
+supermarket
+½ mile to 1 
+mile to nearest 
+supermarket
+> 1 mile 
+to nearest 
+supermarket
+Total urban 
+tribal areas
+Miles
+Miles
+Miles
+Number
+%
+Number
+%
+Number
+%
+Number
+All individuals
+0.39
+1.0
+2.1
+ 87,884 
+23.4
+ 108,006 
+28.7
+ 180,249 
+47.9
+ 376,139 
+Income
+Low-income people
+0.35
+1.0
+2.0
+ 38,548 
+26.0
+ 44,938 
+30.4
+ 64,492 
+43.6
+ 147,977 
+Moderate/high- 
+income people
+0.41
+1.1
+2.1
+ 49,336 
+21.6
+ 63,068 
+27.6
+ 115,757 
+50.7
+ 228,161 
+Age
+Children 
+(age 17 or less)
+0.40
+1.0
+2.2
+ 22,762 
+22.5
+ 28,856 
+28.5
+ 49,518 
+49.0
+ 101,136 
+Working age 
+(18 to 64)
+0.39
+1.0
+2.1
+ 52,882 
+23.3
+ 64,479 
+28.4
+ 109,733 
+48.3
+ 227,094 
+Elderly 
+(65 or older)
+0.36
+1.0
+1.9
+ 12,240 
+25.5
+ 14,671 
+30.6
+ 20,998 
+43.8
+ 47,909 
+Household vehicle 
+availability
+All households
+0.37
+1.0
+2.0
+ 33,484 
+24.6
+ 39,823 
+29.2
+ 62,969 
+46.2
+ 136,276 
+With vehicle 
+available
+0.38
+1.0
+2.0
+ 29,911 
+23.9
+ 36,273 
+29.0
+ 58,970 
+47.1
+ 125,153 
+Without vehicle 
+available
+0.29
+0.8
+1.6
+ 3,574 
+32.1
+ 3,550 
+31.9
+ 4,000 
+36.0
+ 11,123 
+Note: Oklahoma Tribal Statistical Areas are excluded.
+
+===== PAGE 39 =====
+33
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Distance to Three Supermarkets
+Estimated distance to the nearest supermarket indicates the ease of access 
+to one source of healthy food, but the nearest store may not offer the best 
+prices or quality. Distance to the nearest store does not indicate whether other 
+sources of healthful food are just beyond the nearest store or if that store is 
+the only store for miles. If a number of food stores are relatively close by, 
+competition on price, quality, and other store attributes is likely to be greater, 
+and consumers are likely to beneﬁ t. If a store is the only one nearby, there 
+is likely to be less competition on these attributes. Previous studies have 
+used measures of the distance to three stores selling healthy foods in order 
+to capture this concept of competition (Apparicio et al., 2007; Sparks et al., 
+2009). We estimate the median distance to the third nearest supermarket, 
+along with the distances at the 20th and 80th percentiles by population char-
+acteristics, ﬁ rst for the whole country and then, separately, for urban and rural 
+areas in order to provide additional insight into the extent of access chal-
+lenges across the United States (tables 16-18). 
+Table 15
+Supermarket access in rural Tribal Areas of the United States: Overall and selected population 
+characteristics, 2010
+Rural population 
+characteristics
+20th 
+percentile 
+distance 
+to nearest 
+super-
+market
+Median 
+distance 
+to 
+nearest 
+super-
+market
+80th 
+percentile 
+distance 
+to nearest 
+supermar-
+ket
+< 10 miles 
+to nearest 
+supermarket
+10-20 miles 
+to nearest 
+supermarket
+> 20 miles 
+to nearest 
+supermarket
+Total rural 
+tribal areas
+Miles
+Miles
+Miles
+Number
+%
+Number
+%
+Number
+%
+Number
+All individuals
+1.8
+5.3
+15.6
+ 639,100 
+67.8
+ 171,698 
+18.2
+ 131,926 
+14.0
+ 942,724 
+Income
+Low-income people
+1.9
+6.5
+18.9
+ 274,602 
+61.1
+ 92,023 
+20.5
+ 82,826 
+18.4
+ 449,450 
+Moderate/high- 
+income people
+1.7
+4.7
+12.5
+ 364,498 
+73.9
+ 79,675 
+16.2
+ 49,100 
+10.0
+ 493,274 
+Age
+Children 
+(age 17 or less)
+1.8
+5.6
+16.6
+ 187,534 
+65.9
+ 53,282 
+18.7
+ 43,716 
+15.4
+ 284,532 
+Working age 
+(18 to 64)
+1.8
+5.3
+15.2
+ 379,831 
+68.6
+ 98,773 
+17.8
+ 75,189 
+13.6
+ 553,793 
+Elderly 
+(65 or older)
+1.6
+5.3
+14.7
+ 71,735 
+68.7
+ 19,643 
+18.8
+ 13,021 
+12.5
+ 104,400 
+Household vehicle 
+availability
+All households
+1.7
+5.1
+14.6
+ 218,015 
+69.6
+ 55,725 
+17.8
+ 39,406 
+12.6
+ 313,146 
+With vehicle 
+available
+1.6
+4.9
+13.4
+ 201,303 
+71.9
+ 49,575 
+17.7
+ 29,006 
+10.4
+ 279,885 
+Without vehicle 
+available
+1.9
+9.9
+30.3
+ 16,711 
+50.2
+ 6,150 
+18.5
+ 10,399 
+31.3
+ 33,261 
+Note: Oklahoma Tribal Statistical Areas are excluded.
+
+===== PAGE 40 =====
+34
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Half the U.S. population is within 2 miles of three supermarkets. Further, 
+80 percent of the population is within 5 miles of three supermarkets. These 
+results indicate that overall, Americans have several choices of supermarkets 
+within a few miles of their homes.
+The same general patterns across subpopulations hold for measures of 
+distance to the three nearest supermarkets as they do for the nearest super-
+market (table 5). At the median, households without vehicles are closer to 
+three supermarkets than households with vehicles (1.3 miles compared with 
+2.0 miles). Further, 80 percent of households without vehicles are within 2.2 
+miles of three supermarkets (table 16). Low-income people and areas are also 
+closer to three supermarkets than moderate/high-income people and areas at 
+the median. Distance to the nearest (single) supermarket has been criticized 
+as a poor indicator of supermarket quality and affordability, especially for 
+low-income individuals, given the presumed lack of competition on price and 
+quality. To the extent that the distance to the third nearest supermarket is an 
+indicator of competition, differences across income levels are small overall. 
+In urban areas, the median distance to the third nearest supermarket is 
+1.6 miles (table 17), and in rural areas, the median is 6.2 miles (table 18). 
+Differences across subpopulations in urban areas are small, but the general 
+patterns of distance to the nearest three supermarkets for the 20th, 50th and 
+80th percentiles are similar to the overall distribution. This is not the case for 
+subpopulations in rural areas. Rural low-income people and low-income areas 
+are farther from three supermarkets than moderate/high-income people and 
+areas at the 20th, 50th, and 80th percentiles. Rural American Indians/Alaska 
+Natives are much farther from three supermarkets than other racial groups at 
+the 20th, median, and 80th percentiles of distance. 
+
+===== PAGE 41 =====
+35
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 16
+Distance to nearest three supermarkets: Overall and by population 
+characteristics, 2010
+Population characteristics
+Overall
+20th percentile 
+distance to 
+3rd nearest 
+supermarket
+Median 
+distance to 
+3rd nearest 
+supermarket
+80th percentile 
+distance to 
+3rd nearest 
+supermarket
+Miles
+All people
+1.0
+1.9
+4.8
+Income
+Low-income people
+0.9
+1.8
+5.0
+Moderate/high-income people
+1.0
+2.0
+4.7
+Race
+White
+1.1
+2.2
+5.7
+Black
+0.9
+1.6
+2.6
+Asian
+0.7
+1.4
+2.1
+Native Hawaiian/Paciﬁ c 
+Islander
+0.8
+1.6
+3.1
+American Indian/Alaska 
+Native
+1.1
+2.8
+12.8
+Other and multiple races
+0.7
+1.5
+2.5
+Hispanic ethnicity
+Hispanic
+0.7
+1.4
+2.5
+Non-hispanic
+1.1
+2.1
+5.3
+Age
+Children 
+(age 17 or less)
+1.0
+2.0
+4.8
+Working age 
+(18 to 64)
+1.0
+1.9
+4.6
+Elderly 
+(65 or older)
+1.0
+2.0
+5.5
+All households
+1.0
+1.9
+4.8
+Household vehicle 
+ownership
+Own vehicle
+1.0
+2.0
+5.0
+Do not own vehicle
+0.4
+1.3
+2.2
+Low-income areas
+0.8
+1.6
+4.5
+Moderate/high-income areas
+1.1
+2.1
+4.8
+Estimates include Alaska and Hawaii. 
+
+===== PAGE 42 =====
+36
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 17
+Urban areas' distance to nearest three supermarkets: Overall and by 
+population characteristics, 2010
+Population characteristics
+Urban areas
+20th percentile 
+distance to 
+3rd nearest 
+supermarket
+Median 
+distance to 
+3rd nearest 
+supermarket
+80th percentile 
+distance to 
+3rd nearest 
+supermarket
+Miles
+All individuals
+0.8
+1.6
+2.3
+Income
+Low-income people
+0.8
+1.5
+2.2
+Moderate/high-income people
+0.9
+1.6
+2.4
+Race
+White
+0.9
+1.7
+2.5
+Black
+0.8
+1.5
+2.0
+Asian
+0.7
+1.3
+1.8
+Native Hawaiian/Paciﬁ c 
+Islander
+0.8
+1.5
+2.3
+American Indian/Alaska 
+Native
+0.8
+1.6
+2.6
+Other and multiple races
+0.7
+1.3
+1.9
+Hispanic ethnicity
+Hispanic
+0.7
+1.3
+1.9
+Non-hispanic
+0.9
+1.6
+2.4
+Age
+Children 
+(age 17 or less)
+0.9
+1.6
+2.4
+Working age 
+(18 to 64)
+0.8
+1.6
+2.3
+Elderly 
+(65 or older)
+0.9
+1.6
+2.4
+All households
+0.8
+1.6
+2.3
+Household vehicle 
+ownership
+Own vehicle
+0.9
+1.6
+2.4
+Do not own vehicle
+0.4
+1.2
+1.7
+Low-income areas
+0.7
+1.4
+2.0
+Moderate/high-income areas
+0.9
+1.7
+2.5
+Estimates include Alaska and Hawaii. 
+
+===== PAGE 43 =====
+37
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table 18
+Rural areas' distance to nearest three supermarkets: Overall and by 
+population characteristics, 2010
+Population characteristics
+Rural areas
+20th percentile 
+distance to 
+3rd nearest 
+supermarket
+Median 
+distance to 
+3rd nearest 
+supermarket
+80th percentile 
+distance to 
+3rd nearest 
+supermarket
+Miles
+All individuals
+3.1
+6.2
+10.7
+Income
+Low-income people
+3.4
+7.1
+11.9
+Moderate/high-income people
+3.0
+5.9
+10.2
+Race
+White
+3.2
+6.4
+10.7
+Black
+2.6
+5.5
+10.7
+Asian
+1.7
+2.9
+5.0
+Native Hawaiian/Paciﬁ c 
+Islander
+2.2
+4.8
+9.9
+American Indian/Alaska 
+Native
+4.8
+10.4
+26.3
+Other and multiple races
+2.5
+5.3
+10.3
+Hispanic ethnicity
+Hispanic
+2.4
+5.0
+10.1
+Non-hispanic
+3.1
+6.3
+10.8
+Age
+Children 
+(age 17 or less)
+3.0
+6.1
+10.5
+Working age 
+(18 to 64)
+3.1
+6.2
+10.6
+Elderly 
+(65 or older)
+3.3
+6.7
+11.6
+All households
+3.1
+6.3
+10.9
+Household vehicle 
+ownership
+Own vehicle
+3.1
+6.3
+10.8
+Do not own vehicle
+2.8
+6.8
+10.8
+Low-income areas
+3.7
+8.1
+13.3
+Moderate/high-income areas
+3.0
+5.8
+9.8
+Estimates include Alaska and Hawaii. 
+
+===== PAGE 44 =====
+38
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Study Limitations and Future Research
+Our analysis updates estimates of food access across the United States, and 
+provides the impetus for further research on food access measures and on 
+the effects of economic and demographic changes on retail food markets. 
+Future research could address the issue of store type and its connection to 
+healthy food access. In this report, we use the location of supermarkets as a 
+proxy for access to healthy foods. Some smaller stores, however, may also 
+offer healthier items. Further, many community efforts and some Federal and 
+publicly sponsored interventions have focused on improving the retail envi-
+ronment through non-supermarket interventions (like the opening of farmers’ 
+markets or improvements in supply distribution chains for smaller vendors in 
+areas of low access). Consistent data on the availability of healthy foods by 
+smaller vendors were unavailable, so this study excluded smaller stores from 
+analysis. 
+Another limiting factor of our study is that the industry deﬁ nition of a super-
+market as having $2 million or more in annual sales has not been updated to 
+reﬂ ect inﬂ ation over many years. As a result, some retailers categorized as 
+“small grocery stores” in our store directory may meet this deﬁ nition without 
+the typical offerings of a large, full-service grocery store. Future analysis 
+could examine how sensitive our results are to different deﬁ nitions of large 
+grocery stores (e.g., excluding stores with sales between $2 million and $4 
+million annually). 
+Whereas straight-line distance measures are used in our study to measure 
+access to food retailers, existing roadways, natural and manmade barriers, 
+and other factors may extend the distance that consumers actually have to 
+walk or drive. Computing these distances on a national level, however, would 
+require substantial computational resources. This potential problem is likely 
+to be a greater in less densely populated areas where there are likely to be 
+more man-made and natural barriers and less dense street networks. One 
+study showed that differences in distance measurement methods matter more 
+in less dense urban areas than in dense areas, but do not differ greatly for 
+overall food access patterns (Sparks et al., 2011). Performing related sensi-
+tivity analyses using our measurements could provide guidance for future 
+efforts to measure food access.
+The measures of food access in this report are meant to proxy access to 
+supermarkets by measuring distance to supermarkets and the resources avail-
+able to consumers, such as vehicles and income, that may help or hinder their 
+ability to get to those stores. As a complement to these measures, it would be 
+useful to directly ask individuals whether they perceive or experience barriers 
+to access supermarkets and other sources of healthy foods. As noted above, 
+there are some precedents of asking such questions on a nationally represen-
+tative survey. Adding questions of this type to already existing national-level 
+surveys may be worth considering. 
+These limitations and potential extensions notwithstanding, estimates 
+presented in this report show a mixed picture of changes in supermarket 
+access over the past decade. Perhaps the best indicator of supermarket 
+access shows improvement. In 2010, 1.8 percent of all households did not 
+
+===== PAGE 45 =====
+39
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+have a vehicle and were more than 1 mile from a supermarket, down from 
+2.3 percent in 2006. Further, the share of households without a vehicle and 
+between ½ and 1 mile from a supermarket is also down from 2006 (2.4 
+percent compared with 3.2 percent). 
+There has, however, been growth in the number and percentage of people 
+who live in low-income areas who are at least 1 mile from the nearest 
+supermarket (up to 9.7 percent of the population in 2010 from 8.4 percent in 
+2006). The distribution of distance to the nearest supermarket for the overall 
+population has remained essentially unchanged since 2006. And although 
+the number of supermarkets has declined slightly since 2006, this decline 
+occurred in moderate/high-income areas while the number of supermarkets 
+in low-income areas increased. As a result, it is likely that changes in this 
+indicator of access between the USDA (2009) analysis and this report are due 
+more to increases in the number of low-income areas than to changes in store 
+location. 
+While there are many low-income areas with supermarket access limitations, 
+our results show that for some indicators, access limitations may be greater 
+outside of low-income areas. For example, moderate/high-income areas 
+contain a greater number and share of households without vehicles that are 
+far from food stores than do low-income areas. Moderate- and high-income 
+areas also contain a greater number and share of low-income people who 
+are far from stores. Results from this study show that focusing only on low-
+income areas will miss access limitations of those who do not have a vehicle 
+or are poor but do not live in low-income areas. 
+
+===== PAGE 46 =====
+40
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+References
+Apparicio, P., M.S. Cloutier, and R. Shearmur. 2007.  “The case of Montréal’s 
+missing food deserts: Evaluation of accessibility to food supermarkets,” 
+International Journal of Health Geographics 6(4).
+Barnes, Patricia M., P. Adams, and E. Powell-Griner. 2010. “Health 
+Characteristics of the American Indian or Alaska Native Adult Population: 
+United States, 2004–2008,” National Health Statistics Reports, Number 
+20. National Center for Health Statistics, Centers for Disease Control and 
+Prevention, March 9.
+Baum, C.L., and M.F. Owens (2010). “The Effect of Vehicle Asset Rules on 
+Vehicle Assets.” Department of Economics and Finance Working Paper 
+Series, Middle Tennessee State University, Feb.
+Bitler, M., and S.J. Haider (2010). “An Economic View of Food Deserts in the 
+United States.”Journal of Policy Analysis and Management, Vol. 30, No. 
+1, 153–176.
+Block, J.P., N.A. Christakis, J. O’Malley, and S.V. Subramanian. 2011. 
+“Proximity to food establishments and body mass index in the 
+Framingham Heart Study Offspring Cohort over 30 years,”American 
+Journal of Epidemiology 174(10): 1108-1114. 
+Boone-Heinonen, J., P. Gordon-Larsen, C.I. Kiefe, J.M. Shikany, C.E. 
+Lewis, and B.M. Popkin. 2011.  “Fast food restaurants and food stores: 
+Longitudinal associations with diet in young to middle-aged adults,” 
+Archives of Internal Medicine 171(13): 1162-1170. 
+Broda, C., E. Leibtag, and D.E. Weinstein. 2009. “The role of prices in 
+measuring the poor’s living standards,” Journal of Economic Perspectives 
+23(2): 77–97. 
+Centers for Disease Control and Prevention. 2009.  State Indicator Report 
+on Fruit and Vegetables, 2009.  http://www.fruitsandveggiesmatter.gov/
+downloads/StateIndicatorReport2009.pdf
+Chen, S., R.J.G.M. Florax, and S.D. Snyder. 2010. “Does where you live make 
+you fat? Obesity and access to chain grocers,”Economic Geography 86(4): 
+431-452.
+Currie, Janet, S. DellaVigna, E. Moretti, and V. Pathania. 2010. “The Effect 
+of Fast Food Restaurants on Obesity and Weight Gain,” American 
+Economic Journal: Economic Policy 2(3): 32–63.
+Das Gupta, P. 1993. “Standardization and Decomposition of Rates: A User’s 
+Manual,” Current Population Reports, Series P23 186. U.S. Bureau of the 
+Census.
+DeNavas-Walt, C., B.D. Proctor, and J.C. Smith. 2011. Income, Poverty, 
+and Health Insurance Coverage in the United States: 2010, U.S. Census 
+Bureau, Current Population Reports, P60-239.
+
+===== PAGE 47 =====
+41
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Dutko, P., M. Ver Ploeg, and T. Farrigan. 2012. Characteristics and 
+Inﬂ uential Factors of Food Deserts. ERR-140. U.S. Department of 
+Agriculture, Economic Research Service, Aug.
+Food Research and Action Center. 2011.  “A Half-Empty Plate:  Fruit and 
+Vegetable Affordability and Access Challenges in America.” Washington, 
+DC. http://frac.org/pdf/half_empty_plate_dec2011.pdf
+Gittelsohn J., M. Rowan, and P. Gadhoke. 2012. “Interventions in small food 
+stores to change the food environment, improve diet, and reduce risk of 
+chronic disease,” Preventing Chronic Disease, Vol. 9:110015
+Goodman-Bacon, A., and L. McGranahan. 2008.  “How Do EITC Recipients 
+Spend Their Refunds?”  Economic Perspectives 32(2): 17-32.
+Hamrick, K.S., D. Hopkins, and R. Kranz-Kent. 2011. “The Time Cost of 
+Access to Food: Distance to the Grocery Store as Measured in Minutes.” 
+Working Paper, Sept. 7.
+Hurst, Erik, and James P. Ziliak. 2006. “Do Welfare Asset Limits Affect 
+Household Saving? Evidence from Welfare Reform,” Journal of Human 
+Resources 41(1): 46-71.
+Institute of Medicine and National Research Council. 2009.  The Public 
+Health Effects of Food Deserts: Workshop Summary. Washington, DC:  
+The National Academies Press.  
+Larson, N., M. Story, and M. Nelson. 2009. “Neighborhood environments: 
+disparities in access to healthy foods in the U.S.” American Journal of 
+Preventive Medicine 36 (1): 74–81.
+Lee, H. 2012. “The Role of Local Food Availability in Explaining Obesity 
+Risk Among Young School-Aged Children,” Social Science and Medicine 
+74 (2012): 1193-1203. 
+Leibtag, E. 2005. “Where You Shop Matters: Store Formats Drive Variation 
+in Retail Food Prices,” Amber Waves, U.S. Department of Agriculture, 
+Economic Research Service, Nov.
+Leibtag, E. 2006. The Impact of Big-Box Stores on Retail Food Prices and 
+the Consumer Price Index. ERR-33. U.S. Department of Agriculture, 
+Economic Research Service, Dec.
+Mackun, P., and S. Wilson. 2011. Population Distribution and Change: 2000 
+and 2010.  2010 Census Briefs, CB2010BR-01.  U.S. Census Bureau, 
+March. 
+National Research Council. 1989.  Diet and Health: Implications for 
+Reducing Chronic Disease. Committee on Diet and Health, Washington, 
+DC: National Academies Press.
+Richardson, K. 2010.  “Exploring food environments:  Assessing access to 
+nutritious food,” ArcUser, Fall: 50-52.  
+
+===== PAGE 48 =====
+42
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Socioeconomic Data and Applications Center (SEDAC). 2006. www.sedac.
+ciesin.columbia.edu/.
+Sparks, A., N. Bania, and L. Leete. 2009.  “Finding Food Deserts:  
+Methodology and Measurement of Food Access in Portland, Oregon.” 
+National Poverty Center Working Paper, http://www.npc.umich.edu/news/
+events/food-access/index.php.
+Sparks, A., N. Bania, and L. Leete. 2011. “Comparative Approaches to 
+Measuring Food Access in Urban Areas: The Case of Portland Oregon,” 
+Urban Studies 11, 48(8):1715-1737. June.
+Sullivan, James X. 2006. “Welfare Reform, Saving, and Vehicle Ownership: 
+Do Asset Limits and Vehicle Exemptions Matter?” Journal of Human 
+Resources 41: 72-105.
+The Reinvestment Fund. 2011.  “Estimating supermarket access: Summary of 
+TRF’s research and analysis.” http://www.trfund.com/ﬁ nancing/realestate/
+EstimatingSupermarketAccess-1pg.pdf. 
+U.S. Census Bureau. 2009. Design and Methodology: American Community 
+Survey. 
+U.S. Department of Agriculture, Economic Research Service. 2012a. “Food 
+Desert Locator.” http://www.ers.usda.gov/Data/FoodDesert/.
+U.S. Department of Agriculture, Economic Research Service. 2012b. “Food 
+CPI and Expenditures: Table 1.” Food Expenditures, http://www.ers.usda.
+gov/data-products/food-expenditures.aspx
+U.S. Department of Agriculture, Economic Research Service. 2009.  Access 
+to Affordable and Nutritious Food:  Measuring and Understanding Food 
+Deserts and Their Consequences, Report to Congress, June.  http://www.
+ers.usda.gov/Publications/AP/AP036/. 
+U.S. Department of Agriculture, Food and Nutrition Service. 2012.  
+“Redemptions and Authorized Stores by Store Type FY 2010,”  
+Unpublished table.
+U.S. Department of Agriculture, Food and Nutrition Service. 2011. 
+Supplemental Nutrition Assistance Program, Beneﬁ t Redemption 
+Division. 2010 Annual Report, May 3. http://www.fns.usda.gov/snap/
+retailers/pdfs/2010-annual-report.pdf.  
+ 
+
+===== PAGE 49 =====
+43
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Appendix A: Data and Methodological 
+Details
+Methods for Developing and Geo-coding a National 
+List of Stores 
+Methods to develop and assign geographic coordinates—or geo-code—a 
+2010 list of stores (consisting of large grocery stores, supermarkets, and 
+supercenters) are largely consistent with the method used in USDA (2009). 
+We note below where methods for the 2010 analysis diverged from USDA 
+(2009) and explain the methods in more detail. 
+USDA’s Food and Nutrition Service changed the method used to assign store 
+types for SNAP-authorized stores in 2008. Where prior store types were 
+assigned primarily using retailer self-classiﬁ cation, SNAP now uses conﬁ den-
+tial methods and more complete information obtained from a new application 
+form for store authorization. To ensure that SNAP stores were comparable to 
+those included in the TDLinx store directory, ERS requested a special tabula-
+tion of all SNAP stores meeting minimum annual sales (food and nonfood 
+items) and offering four major food groups: milk, meat, fruits and vegetables, 
+and bread, in any form (canned, fresh, frozen). Almost 35,000 of 204,705 
+total stores met these criteria and were included in the 2010 ERS store 
+directory.
+The Trade Dimensions TDLinx® store directory consisted of 39,502 retail 
+food stores with at least $2 million or more in sales (food and nonfood). 
+Additional information included annual sales volume range and store format, 
+allowing for the identiﬁ cation of supercenters, supermarkets, and large 
+grocery stores. 
+In addition to descriptive information, both SNAP and TDLinx provided the 
+store name, address, and geo-coded location coordinates (latitude and longi-
+tude) to allow for measurement of distance from each grid area to the nearest 
+store.
+Matching the TDLinx and SNAP Store Lists
+TDLinx and SNAP stores were merged and stores common to each were 
+counted as the same store to avoid duplication. Both the geographic coordi-
+nates of each store’s location and the use of automated scripting in ArcGIS 
+software to compare store names and addresses among potential matches 
+were employed in combining the two store lists. First, a proximity analysis 
+using a 1/3-mile buffer to identify a subset of potential store matches from 
+the two store lists was performed. Next, the resultant potential matches were 
+analyzed through an automated script to compare the store name and address 
+from each of the store lists and denote exact matches. 
+Both automated and manual review methods were used for the remaining 
+unmatched stores. Any partial matches—such as having the same store 
+name but a different street address, or vice versa—were manually reviewed. 
+The Trade Dimensions Marketing Guidebook (2012) was used to verify 
+
+===== PAGE 50 =====
+44
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+current store names and addresses. Online sources, such as company Web 
+sites and Google maps, were used to verify store name and location data. 
+Any remaining unmatched stores in the same ZIP Code area were manually 
+checked for potential matches using the store name and street address. Once 
+all store matches were identiﬁ ed, the store lists were combined into one data 
+set encompassing the matched stores, TDLinx-only stores, and SNAP-only 
+stores. 
+When a SNAP store matched to a TDLinx store, the TDLinx store classiﬁ ca-
+tion was used. We did this because many SNAP “superstores” were found 
+to include larger traditional supermarkets, mass-merchandise stores selling 
+some food varieties, and supercenters. They were reclassiﬁ ed according to 
+the TDLinx store deﬁ nitions. For SNAP stores that did not match the TDLinx 
+store directory, all large mass-merchandise stores that sell some food varieties 
+but typically do not offer fresh meat and produce—such as Target, Wal-Mart, 
+and Kmart—were eliminated (3,078 SNAP-only mass merchandise stores 
+eliminated). SNAP-only large grocery stores that did not meet the minimum 
+annual sales and food category requirement were also eliminated (1,620 
+SNAP-only stores eliminated). SNAP-only superstores were reclassiﬁ ed as 
+supercenters if stores with the same name (but a different location) had been 
+classiﬁ ed as a supercenter by TDLinx. 
+Assignment of Store Locations for 2006 and 2010
+Because store location is critical to measures of access, it is important to have 
+the greatest possible consistency when comparing change in food access and 
+food deserts between 2006 and 2010. Those stores common to both 2006 and 
+2010 directories had up to four different geographic coordinates assigned, 
+depending on its source. When applying geo-codes to the 2010 stores, a 
+protocol was developed to address potential inconsistencies of store location 
+due to differences in geo-code precision. First, all 2010 stores that were also 
+in the 2006 directory and had an address that was geo-coded to an exact 
+street address in 2006 were assigned the 2006 geo-code to ﬁ x the location of 
+those stores and to eliminate artiﬁ cial change in store location between the 
+two years. Second, the selection of location coordinates for the remaining 
+stores (those 2010 stores not present in 2006) was based on the method used 
+to obtain the geo-code. Stores that had been geo-coded to an exact street 
+address were deemed to have the greatest accuracy, while stores that had 
+been geo-coded to a ZIP Code centroid were deemed to have more potential 
+inaccuracy. For example, if the store was newly opened and was geo-coded to 
+an exact street address, then the 2010 coordinates were selected as the loca-
+tion of the store. Third, any remaining stores were either manually reviewed 
+with geographic coordinates assigned based upon the manual inspection, or 
+taken from stores that had been geo-coded to a census block group centroid 
+or the centroid of a ZIP Code + 4 polygon. Store locations that could not be 
+determined manually were assigned lat/long coordinates from population-
+weighted ZIP Code centroids since store locations are most likely to be 
+located in population centers.
+Taken together, these methods ensure that the best available store location 
+coordinates were applied, and that among stores common to both years, loca-
+tions are consistent when used to compare change in access measures over 
+time. 
+
+===== PAGE 51 =====
+45
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Methods for Developing ½-km Square Grids and 
+Downcasting Population Data
+To link supermarket distance with census population, housing, and urban 
+characteristics, a grid-based approach was used. The grid-based approach 
+provides a common unit for which all data inputs can be linked and efﬁ -
+ciently aggregated and summarized at many levels of geography. It also 
+provides a method for gaining greater spatial detail to population charac-
+teristics that are only available at more aggregate spatial resolutions. A grid 
+composed of 500-meter cells, with a unique value for each grid cell, was 
+developed so that every half-kilometer region in the entire land area of the 
+50 States is represented by its own distinct value. Based on this common grid 
+cell identiﬁ er, we developed supermarket distance and grid population char-
+acteristics (e.g., low income or urban) to the same common grid. 
+To allocate census population data, the unique value grid was overlaid with 
+the census block geographies to get the combined set of block–grid cell 
+pieces. The area of each of these pieces is used to calculate the area-weighted 
+average of block-level people or household counts at the grid-cell level. First, 
+for each of the block–grid cell pieces, we calculated the share of each block’s 
+area. For each of these block–grid cell pieces we multiplied this share by the 
+population of the block and then aggregated the populations to the grid-cell 
+level. 
+While most of our data were population counts from the 2010 census, income 
+and vehicle access data came from the 2006-2010 American Community 
+Survey (ACS) and were only available at the more aggregate block-group 
+level. These were apportioned to grid cells through a population and area 
+weighting technique. First, the share of the block-group population that was 
+low income was calculated. The share was then multiplied by the population 
+for all the blocks that made up that block-group. The area weighting down-
+casting method discussed above was then used to allocate low-income popu-
+lations to the grid-cell level.
+Our downcasting approach is consistent with a simple aerial allocation 
+method, which allocates population counts from census geographies (e.g., 
+the number of people at the block, block-group, or tract level) evenly across 
+that census geography.17 It is important to note that there may be error in the 
+process of allocating populations and their characteristics to ½-kilometer 
+grid cells (e.g., some people who actually live in one grid cell may be allo-
+cated to neighboring grid cells). We are not able to estimate the extent of this 
+error. However, the grid-cell method that we use is likely to result in better 
+estimates of distance to supermarkets by population characteristics than 
+other methods, such as a centroid approach, in which the entire population 
+of that census geography is assigned to the centroid of that geography (either 
+geographic or population weighted). This is because the centroid method 
+assigns distance from the centroid for the entire geography, which will likely 
+result in even greater error. For example, using the centroid approach, the 
+distance to the nearest supermarket at the tract centroid is the distance to 
+the nearest supermarket for everyone in that tract. The grid-cell approach is 
+likely to be most advantageous compared with a centroid approach in rural 
+and less densely populated census geographies, which are larger in land area. 
+17For variables not available at the 
+block level (income, vehicle avail-
+ability, and poverty rates), we use the 
+more detailed block-level population 
+distribution to allocate these larger 
+aggregations to the grid level.   
+
+===== PAGE 52 =====
+46
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Appendix B: Additional Tables With 
+Estimates That Include Alaska and Hawaii
+Table B1
+National individual and area measures of income, including Alaska and Hawaii, 2010
+Overall
+Urban
+Rural
+Million
+Percent
+Million
+Percent
+Million
+Percent
+Total low-income population
+ 98.4 
+31.9
+ 74.2 
+32.7
+ 24.2 
+29.6
+Total moderate/high-income population
+ 210.3 
+68.1
+ 152.8 
+67.3
+ 57.5 
+70.4
+Total population in low-income areas
+ 96.6 
+31.3
+ 76.0 
+33.5
+ 20.5 
+25.1
+Total population in moderate/high-income areas
+ 212.2 
+68.7
+ 151.0 
+66.5
+ 61.1 
+74.9
+Low-income population in low-income areas
+ 51.3 
+16.6
+ 40.9 
+18.0
+ 10.4 
+12.7
+Low-income population in moderate/high- 
+income areas
+ 47.1 
+15.3
+ 33.3 
+14.7
+ 13.8 
+16.9
+Total population
+ 308.7 
+100.0
+ 227.1 
+100.0
+ 81.7 
+100
+Table B2
+Change in total number of stores by type, including Alaska and Hawaii  by area income level, 
+2006 and 2010
+Total U.S. 
+Low-income areas
+Moderate/high-income areas
+2006
+2010
+2010
+2010
+Million
+Percent
+Million
+Percent
+Millions
+Percent
+Million
+Percent
+Store type
+   Supercenter
+3,099
+7.5
+3,432
+8.6
+1,072
+7.3
+2,360
+9.4
+   Supermarket
+31,894
+79.8
+30,762
+77.1
+10,789
+73.7
+19,973
+79.2
+   Large grocery store
+5,094
+12.7
+5,683
+14.3
+2,784
+19.0
+2,899
+11.5
+Total 
+40,087
+100.0
+39,877
+100.0
+14,645
+100.0
+25,232
+100.0
+
+===== PAGE 53 =====
+47
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table B3
+Supermarket access for housing units without vehicles, including Alaska and Hawaii:  Overall and by area 
+income level, 2010
+Area characteristics
+Total number of 
+households
+Households without access to a vehicle (distance to supermarket)
+< ½ mile
+½ mile to 1 mile
+> 1 mile
+All areas
+Low-income area
+ 5.3 
+ 2.9 
+ 55.0 
+ 1.5 
+ 27.9 
+ 0.9 
+ 17.1 
+Moderate/high-income area
+ 4.9 
+ 2.5 
+ 50.8 
+ 1.3 
+ 25.6 
+ 1.2 
+ 23.5 
+Urban areas
+Low-income area
+ 4.8 
+ 2.9 
+ 60.0 
+ 1.4 
+ 29.5 
+ 0.5 
+ 10.5 
+Moderate/high-income area
+ 4.2 
+ 2.4 
+ 57.8 
+ 1.2 
+ 28.1 
+ 0.6 
+ 14.1 
+Rural areas
+Low-income area
+ 0.6 
+ 0.5 
+ 88.8 
+ 0.0 
+ 8.6 
+ 0.0 
+ 2.6 
+Moderate/high-income area
+ 0.7 
+ 0.7 
+ 94.2 
+ 0.0 
+ 5.2 
+ 0.0 
+ 0.7 
+aHigh access = less than 0.5 mile; medium access = between 0.5 to 1.0 miles; low access = more than 1.0 mile.
+bHigh access = less than 10 miles; medium access = between 10 to 20 miles; low access = more than 20 miles.
+
+===== PAGE 54 =====
+48
+Access to Affordable and Nutritious Food:  Updated Estimates of Distance to Supermarkets Using 2010 Data / ERR-143
+Economic Research Service/USDA
+Table B4
+Supermarket access for low-income areas compared with moderate/high-income areas, including 
+Alaska and Hawaii, 2010
+Area characteristics
+20th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+Median 
+dis-
+tance 
+to 
+nearest 
+super-
+market
+80th 
+percen-
+tile dis-
+tance to 
+nearest 
+super-
+market
+< ½ mile 
+to nearest 
+supermarket
+½ mile to 1 
+mile to nearest 
+supermarket
+> 1 mile 
+to nearest 
+supermarket
+Total 
+# of 
+people
+% of 
+total 
+popu-
+lation
+Miles
+Miles
+Miles
+Million
+% 
+(of row)
+Million
+% 
+(of row)
+Million
+%
+(of row)
+Million
+%
+(of row)
+All areasa
+0.33
+2.19
+Low-income area
+0.22
+0.69
+1.56
+36.1
+37.4
+30.7
+31.8
+29.8
+30.8
+96.6
+31.3
+Moderate/high- 
+income area
+0.37
+0.98
+2.43
+51.9
+24.5
+62.9
+29.7
+97.3
+45.9
+212.2
+68.7
+Urban areasa
+308.7
+Low-income area
+0.15
+0.62
+0.96
+34.6
+45.5
+28.5
+37.5
+12.9
+17.0
+76.0
+24.6
+Moderate/high-
+income area
+0.29
+0.69
+1.28
+48.9
+32.4
+57.1
+37.8
+45.1
+29.8
+151.0
+48.9
+Rural areasb
+1.28
+6.36
+Low-income area
+1.14
+3.64
+7.60
+18.4
+89.4
+1.9
+9.0
+0.3
+1.5
+20.5
+6.7
+Moderate/high- 
+income area
+1.30
+3.08
+5.95
+57.9
+94.8
+2.9
+4.7
+0.3
+0.5
+61.1
+19.8
+aHigh access = less than 0.5 mile; medium access = between 0.5 to 1.0 miles; low access = more than 1.0 mile.
+bHigh access = less than 10 miles; medium access = between 10 to 20 miles; low access = more than 20 miles.

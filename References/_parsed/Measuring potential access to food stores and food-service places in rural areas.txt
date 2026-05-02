@@ -1,0 +1,578 @@
+
+===== PAGE 1 =====
+Measuring Potential Access to Food Stores and
+Food-Service Places in Rural Areas in the U.S.
+Joseph R. Sharkey, PhD, MPH, RD
+Abstract:
+Geographic access to healthy food resources remains a major focus of research that
+examines the contribution of the built environment to healthful eating. Methods used to
+deﬁne and measure spatial accessibility can signiﬁcantly affect the results. Considering the
+implications for marketing, policy, and programs, adequate measurement of the food
+environment is important. Little of the published work on food access has focused on rural
+areas, where the burden of nutrition-related disease is greater. This article seeks to expand
+our understanding of the challenges to measurement of potential spatial access to food
+resources in rural areas in the U.S. Key challenges to the accurate measurement of the food
+environment in rural areas include: (1) deﬁning the rural food environment while
+recognizing that market factors may be changing; (2) describing characteristics that may
+differentiate similar types of food stores and food-service places; and (3) determining
+location coordinates for food stores and food-service places.
+In order to enhance measurements in rural areas, “ground-truthed” methodology, which
+includes on-site observation and collection of GPS data, should become the standard for
+rural areas. Measurement must also recognize the emergence of new and changing store
+formats. Efforts should be made to determine accessibility, in terms of both proximity to a
+single location and variety of multiple locations within a speciﬁed buffer, from origins
+other than the home, and consider multipurpose trips and trip chaining. The measure-
+ment of food access will be critical for community-based approaches to meet dietary needs.
+Researchers must be willing to take the steps necessary for rigorous measurement of a
+dynamic food environment.
+(Am J Prev Med 2009;36(4S):S151–S155) © 2009 American Journal of Preventive Medicine
+Introduction
+T
+he consumption of nutritious foods is essential
+to achieve and maintain good health, and to
+prevent and manage nutrition-related health
+conditions, such as obesity, type 2 diabetes, and cardio-
+vascular disease.1 It is generally accepted that per-
+sonal, structural, and neighborhood characteristics
+serve as barriers or enhancements to healthful eat-
+ing.2–5 In particular, recognition is growing that in
+order for individuals to make health-promoting food
+choices, low-calorie, nutrient-dense food resources
+need to be accessible (located near neighborhoods,
+especially low-income or rural areas, or with transpor-
+tation available); available (including a variety of low-fat
+and nutrient-dense options in local stores); and afford-
+able (reasonably priced).6–8 The purpose of this article
+is to expand our understanding of potential spatial
+access to food stores and food-service places within the
+overall food environment in the U.S. to include rural
+areas. In so doing, context of the rural food environ-
+ment and spatial access will be explained, followed by
+challenges to measurement in rural areas. Recommen-
+dations will be presented and conclusions drawn.
+Context of the Rural Food Environment
+The rural food environment includes a wider variety of
+food stores and food-service places than commonly
+reported in studies of urban or metropolitan areas.9–11
+Using modiﬁed versions of the North America Industry
+Classiﬁcation System (NAICS) deﬁnitions for the pri-
+mary business,12 rural food stores may be classiﬁed as
+conventional or traditional food stores, such as super-
+centers (e.g., Super Wal-Mart or Super Kmart), super-
+markets, grocery stores, and specialty food stores (e.g.,
+meat markets, ﬁsh and seafood markets, fruit and
+vegetables markets, and stores selling baked goods not
+for immediate consumption)9,13; convenience food
+stores (e.g., gasoline stations with convenience stores,
+convenience stores with gasoline, or food marts); and
+nontraditional food store formats, such as drug stores
+or pharmacies with food, mass merchandisers (e.g.,
+From the Department of Social and Behavioral Health, School of
+Rural Public Health, Texas A&M Health Science Center, College
+Station, Texas
+Address correspondence and reprint requests to: Joseph R. Shar-
+key, PhD, MPH, RD, School of Rural Public Health, MS 1266, College
+Station TX 77843-1266. E-mail: jrsharkey@srph.tamhsc.edu.
+S151
+Am J Prev Med 2009;36(4S)
+0749-3797/09/$–see front matter
+© 2009 American Journal of Preventive Medicine • Published by Elsevier Inc.
+doi:10.1016/j.amepre.2009.01.004
+
+===== PAGE 2 =====
+Wal-Mart or Target), and dollar stores.14 The latter
+group has perfected “channel blurring” with the rapid
+expansion of food items to their customary nonfood
+format, which over the past 10 years, has increased the
+variety of shopping and food options that are avail-
+able with lower prices to consumers.15,16 Food-service
+places, which prepare meals, snacks, and beverages for
+immediate on-premises and off-premises consumption,
+include full-service restaurants; fast-food restaurants
+(limited-service where patrons order or select items and
+pay before eating); cafeteria/buffet; snack and nonal-
+coholic beverage bars (e.g., those serving ice cream,
+frozen yogurt, pastry, snow cones, coffee, or juices for
+consumption on or near premises); and drinking
+places that provide limited food services.
+A new type of food store or food-service place has
+recently emerged, which is located physically within a
+different classiﬁcation of food store or food-service
+place. This includes fast-food venues that do not have
+their own outside entrance but are located within
+supermarkets, grocery stores, convenience stores, and
+mass merchandisers; grocery departments within con-
+venience and discount stores and pharmacies; and
+coffee bars within supermarkets and mass merchandis-
+ers.13,17 Food businesses within food stores and food-
+service places, which would be ignored if the measure-
+ment focus were exclusively on the primary food venue,
+may contribute to the accessibility of food items. In a
+study of the availability of healthier options when
+purchasing fast-food entrées or side dishes in a large
+rural region, 205 locations were identiﬁed that mar-
+keted fast food. Forty-one percent (n84) of the loca-
+tions
+were
+primarily
+fast-food
+restaurants;
+53.2%
+(n109) were convenience stores with fast-food areas
+within the store; and 5.8% (n12) were grocery stores
+with separate fast-food areas within the store.17
+In many rural areas, food sources are not evenly
+distributed; there are areas of concentration and areas
+where few or no grocery stores exist.9,18 Rural areas are
+increasingly being adversely affected by changes in the
+food environment. The retail food industry is consoli-
+dating, which has led to fewer but larger stores, and in
+many rural areas to increased transportation costs,
+higher food prices, less variety, and lower-quality fresh
+produce and meat compared to suburban and urban
+stores.19–21 Consolidation concentrates retail food stores
+in regional hub towns; small town food stores, with
+limited ﬂoor space, economies of scale, and distance
+from distribution centers, continue to provide limited
+food selection at higher prices and face the persistent
+challenge to remain proﬁtable.18 The loss of small-town
+grocery stores, which increases the distances that rural
+residents must travel to obtain food, is particularly
+critical for low-income families who face continued
+threats to food access and food security.22 They have
+less independent access to a vehicle, face income
+limitations and lack of public transportation, are more
+likely to shop less frequently and at one rather than
+multiple grocery stores, and must expend greater re-
+sources to obtain food through normal sources.18 In
+many rural areas, the convenience store is the main
+source of food items. As a result, rural families with
+only convenience or small stores from which to
+choose experience higher prices and lower selection
+and quality of foods than those shopping in larger
+supermarkets.13,18
+Spatial Access
+Spatial access from the home to the food environment
+(i.e., food stores and food-service places) remains a
+major focus of research that examines the contribution
+of the built environment to healthy eating.5 There are
+several dimensions of accessibility to food resources,
+each with its own measure: proximity (distance to the
+nearest food store or food-service place)9,23–25; variety
+(number of food stores or food-service places within a
+speciﬁed distance, such as ½-mile, 1-mile, or 3-miles)
+(JRS, unpublished ﬁndings, 2008)23,26; food/price va-
+riety (average distance to the three closest different
+chain-name supermarkets)23; and density (proportion
+or ratio of food stores per county, census tract, or
+census block group or population).27,28 Research, con-
+ducted primarily with urban data, has shown that
+populations with limited or difﬁcult access to a super-
+market tend to live in neighborhoods with greater
+disadvantages and/or with a higher proportion of
+minority residents. Residents of these same neighbor-
+hoods tend to consume fewer fruits and vegetables, and
+often have a greater BMI than do residents of afﬂuent
+areas.7,8,27,29–31 Without easy spatial access to supermar-
+kets or full grocery stores, individuals either have to pay
+high travel costs to reach a supermarket or grocery
+store, or are able to shop only at convenience or small
+grocery stores and pay high prices for a limited selec-
+tion of food products.10,32–34
+Conceptually, potential access (availability) can be
+distinguished from realized access (actual use), recog-
+nizing that potential access has spatial (geographic)
+and nonspatial (e.g., social) dimensions.35 A number of
+characteristics of the food environment have been
+identiﬁed that inﬂuence potential access and serve as
+barriers or facilitators for realized access by users.
+These include the number and type of food stores and
+food-service places, organization (chain or independent),
+size, distribution and location, and distance to the neigh-
+borhoods where people reside.30,32,36–38 Methods used to
+deﬁne and measure spatial accessibility can consider-
+ably affect the results.9,39 Considering the implications
+of food-environment access for marketing, policy, and
+programs, adequate measurement of the food environ-
+ment is important.5,9
+It has been recognized that spatial inequality—the
+uneven distribution of resources—persists between
+S152 American Journal of Preventive Medicine, Volume 36, Number 4S
+www.ajpm-online.net
+
+===== PAGE 3 =====
+families in rural communities and families in urban
+areas.40,41 Rural populations, especially low-income and
+minority, face structural and neighborhood disadvan-
+tages and increased vulnerability to poor nutritional
+health, obesity, and high burden of nutrition-related
+disease.9,19,42–45 Little of the published work on spatial
+inequalities and food access has focused on rural
+areas.9,10,46–49
+Challenges
+Key challenges to the accurate measurement of the
+food environment in rural areas include:
+●deﬁning the rural food environment, recognizing
+that market factors (e.g., type of store and offering
+of food items) may be changing;
+●developing methods to identify all food stores and
+food-service places;
+●describing characteristics that may differentiate sim-
+ilar types of food stores and food-service places; and
+●determining locations of food stores and food-
+service places.
+Collecting Access Data
+Determining potential spatial access to the food envi-
+ronment relies on two main activities: (1) identifying
+store types and locations of retail establishments that
+make food available for purchase,5 and (2) geospatially
+measuring or geocoding store locations. The built-
+environment literature has articulated two main ap-
+proaches to carrying out these activities: intermediate
+and direct methods.50 Intermediate methods include
+the use of historical databases that provide secondary
+data from public and commercial sources (e.g., tele-
+phone directories, Internet, U.S. Department of Agri-
+culture inspection registry, and business listings from
+local departments of environmental health, state de-
+partments of agriculture, and commercial businesses).
+Direct methods include in-person audits or enumeration
+completed by trained observers in a systematically
+driven (or walked) area and is often referred to as
+“ground-truthing.”5,9,50,51
+The preponderance of published work on food ac-
+cess, which to date has typically targeted urban/metro-
+politan areas, has relied primarily on intermediate
+methods to identify select types of food stores (e.g.,
+supermarkets and grocery stores) and food-service
+places (e.g., fast-food restaurants).7,10,23,24,28,33,48,52–55
+However, these methods have two major limitations.
+First, they may misrepresent (overstate or understate)
+the true census of food stores and food-service places
+within an area, especially within a rural area. In a recent
+study of potential access to food stores in six rural
+counties, investigators used ground truthing and com-
+pared results with information available from public
+databases.9 Almost 19% of the food stores on public
+lists did not exist and 35.7% of all food stores were
+identiﬁed through ground truthing only. In this case,
+exclusive reliance on secondary data for the identiﬁca-
+tion of food stores would have signiﬁcantly misrepre-
+sented food store access; public lists omitted 26% of
+supermarkets or grocery stores, 36% of convenience
+stores, and 20% of discount stores.9
+In an examination of rural fast-food and full-service
+restaurants, more than 20% of the away-from-home
+venues were identiﬁed through ground-truthing only.17
+In addition to misrepresenting the census of food
+stores, use of public lists compared to ground truthing
+signiﬁcantly overestimated the distance to the nearest
+food store.9 Thus, two measures of access—nearest
+location measure and cumulative-opportunity measures
+(number of opportunities accessible within a certain
+travel distance from a given location)—would be incor-
+rect.49 Furthermore, a reliance on intermediate meth-
+ods precludes the opportunity to observe food store
+and food-service place quality characteristics that may
+inﬂuence access. These include number of parking
+spaces, availability of gasoline, and other services of-
+fered (e.g., money order sales, banking services, and
+bill paying).9 Although it is assumed that ground truth-
+ing, which does provide this opportunity, is more expen-
+sive than using secondary lists, this economic comparison
+does not appear in the published literature.
+A second major limitation of the intermediate ap-
+proach is that it customarily uses a commercial vendor
+or software with a street database to geocode the data.
+This can result in positional errors and address inaccu-
+racies, particularly in rural areas. The quality of geoc-
+oding is generally better in urban areas, with fewer
+errors in block group–level data when compared to
+rural and/or poor areas.56,57 The gold standard is use
+of GPS technology to pinpoint exact locations.57 In a
+previously-mentioned rural study, on-site GPS was used
+to accurately determine geographic coordinates for all
+food stores.9
+Additional Challenges
+Three additional challenges warrant mention. First,
+although the food environment is dynamic (e.g., stores
+and formats are continuously opening and closing),
+food-environment measures are usually made once,
+and may be outdated if they come from secondary data.
+Even ground truthing at a single time may miss impor-
+tant changes, especially if other data are collected at
+multiple times. The presence of three nontraditional
+formats of food stores is increasing: (1) “big-box” stores
+(large, free-standing general merchandise or “category-
+killer” stores like Wal-Mart, Home Depot), especially
+supercenters, which combine mass merchandise and
+full-line grocery; (2) dollar stores; and (3) drug-
+stores.58–60 Dollar stores and drug stores have in-
+April 2009
+Am J Prev Med 2009;36(4S)
+S153
+
+===== PAGE 4 =====
+creased their food offerings, with some introducing
+refrigerated and frozen sections to their stores, all at
+the expense of traditional supermarkets and grocery
+stores.59 Rural areas are most affected by these changes
+in the food environment. In the case of supercenters,
+retail food sales have shifted from counties without
+supercenters to those with supercenters, creating what
+has been referred to as “food deserts” in some ar-
+eas.52,61,62 Especially hard hit are rural populations,
+where distance and transportation are critical factors,
+especially for those who are poor, disabled, or elderly.52
+Unless multiple measures of the food environment are
+made over time, many of these changes go unobserved.
+A second challenge concerns the selection of loca-
+tion point for access. The type of origin and destination
+points may differ and produce dramatically different
+pictures of access.49 Access to the nearest food store or
+food-service place is usually measured from the resi-
+dence, neighborhood, or center of an administrative
+area (e.g., census tract or census block group). How-
+ever, travel to a supermarket may not begin at the
+residence: The supermarket may be one part of a
+planned multipurpose trip, or travel may begin at work
+and involve trip chaining, which could involve stopping
+at the supermarket between work and home.49 Thus,
+restricting the measure of access to home-based acces-
+sibility may incorrectly describe rural food accessibility.
+Third, food-environment measures that are limited
+by the geographic boundaries may misrepresent access.
+For example, in the case of a residence or neighbor-
+hood that is located near the edge of a county, the
+nearest food store may be physically located in an
+adjacent county, which may not be measured. Much the
+same could be said for analyses that restrict access to
+the same census tract or census block group.24
+Recommendations
+Carrying out the following recommendations would
+greatly enhance measurement of the food environment
+in rural areas:
+●Ground-truthed methodology, which includes on-
+site observation and collection of GPS data, should
+become the standard for rural areas.
+●The measurement of the food environment must
+recognize the emergence of new and changing store
+formats.
+●Multiple measures of the food environment over
+time should be encouraged, especially in studies that
+are measuring other variables at multiple times.
+●Efforts should be made to determine accessibility
+(distance from origin to destination) from origins
+other than the home. Home-based measures ex-
+clude multipurpose trips and trip chaining.49
+●Access should be described in more than one dimen-
+sion, such as distance (to the nearest speciﬁc type of
+store) and cumulative opportunities or variety (num-
+ber of stores within a speciﬁc geographic area).23
+●Food-environment researchers need to include data
+on availability and price along with distance infor-
+mation in their measurements in order to provide
+robust meaning to the concept of access.
+●Unless researchers are measuring exactly where peo-
+ple go to acquire food, the measure of access should
+be described as “potential access” and not overall
+access.
+Conclusion
+Rural populations live with the conﬂuence of greater
+burden of nutrition-related disease, economic restric-
+tions, and greater spatial inequality for access to health-
+ful food.40,46 Increased attention must be directed
+toward the availability of affordable, nutritious food in
+rural areas. The measurement of food access will be
+critical for community-based approaches to meet di-
+etary needs. Researchers must be willing to take the
+steps necessary for rigorous measurement of a dynamic,
+food environment. Especially in rural areas, where
+individuals may regularly travel to a larger city or town
+for employment or other services, the measurement of
+access to a food environment (distance between origin
+and destination) must take into consideration origins
+that are not home-based, but reﬂect multipurpose trips
+and trip chaining.
+This paper was supported in part by the National Center on
+Minority Health and Health Disparities grant #5P20MD002295
+and the Centers for Disease Control and Prevention, Prevention
+Research Centers Program, through the Center for Community
+Health Development cooperative agreement #5U48DP000045.
+No ﬁnancial disclosures were reported by the author of this
+paper.
+References
+1. USDHHS, U.S. Department of Agriculture. Dietary guidelines for Ameri-
+cans 2005. 2005. www.health.gov/dietaryguidelines.
+2. Booth SL, Sallis JF, Ritenbaugh C, et al. Environmental and societal factors
+affect food choice and physical activity: rationale, inﬂuences, and leverage
+points. Nutr Rev 2001;59:S21–S39.
+3. Glass TA, McAtee MJ. Behavioral science at the crossroads in public health:
+extending horizons, envisioning the future. Soc Sci Med 2006;62:1650–71.
+4. Morland K, Filomena S. Disparities in the availability of fruits and vegeta-
+bles between racially segregated urban neighborhoods. Public Health Nutr
+2007;10:1481–9.
+5. Story M, Kaphingst KM, Robinson-O’Brien R, Glanz K. Creating healthy
+food and eating environments: policy and environmental approaches.
+Annu Rev Public Health 2008;29:253–72.
+6. USDA. USDA community food security assessment. 2005. www.ers.usda.
+gov/publications/efan02013.
+7. Laraia BA, Siega-Riz AM, Kaufman JS, Jones SJ. Proximity of supermarkets
+is positively associated with diet quality index for pregnancy. Prev Med
+2004;39:869–75.
+8. Rose D, Richards R. Food store access and household fruit and vegetable
+use among participants in the U.S. Food Stamp Program. Public Health
+Nutr 2004;7:1081–8.
+S154 American Journal of Preventive Medicine, Volume 36, Number 4S
+www.ajpm-online.net
+
+===== PAGE 5 =====
+9. Sharkey J, Horel S. Neighborhood socioeconomic deprivation and minority
+composition are associated with better potential spatial access to the food
+environment in a large rural area. J Nutr 2008;138:620–7.
+10. Liese AD, Weis KE, Pluto D. Food store types, availability and cost of foods
+in a rural environment. J Am Diet Assoc 2007;107:1916–23.
+11. Larson NI, Story MT, Nelson MC. Neighborhood environments: disparities
+to access to healthy foods in the U.S. Am J Prev Med 2009;36:74–81.
+12. Bureau USC. North American Industry Classiﬁcation System (NAICS).
+2005. http://www.census.gov/eos/www/naics/.
+13. Bustillos BD, Sharkey JR, Anding J, McIntosh A. Availability of healthier
+food alternatives in traditional, convenience, and nontraditional types of
+food stores in two rural Texas counties. J Am Diet Assoc 2009;109(5). In
+press.
+14. Kaufman PR. Nontraditional retailers are challenging traditional grocery
+stores. Food Marketing 1998;21:31–3.
+15. Tosh M. Retail lines lose deﬁnition—special report: channel blurring—
+drug store industry analysis. 2002. http://ﬁndarticles.com/p/articles/
+mi_m3374/is_6_24/ai_85285889/print.
+16. Leibtag ES. Where you shop matters: store formats drive variation in retail
+food prices. Amber Waves 2005;138.
+17. Creel JS, Sharkey JR, McIntosh A, Anding J, Huber JC. Availability of
+healthier options in traditional and nontraditional rural fast-food outlets.
+BMC Public Health 2008;8:395.
+18. Morton LW, Bitto EA, Oakland MJ, Sand M. Solving problems of Iowa food
+deserts:
+food
+insecurity
+and
+civic
+structure.
+Rural
+Sociol
+2005;70:
+94–112.
+19. Kaufman PR. Rural poor have less access to supermarkets, large grocery
+stores. Rural Development Perspectives 1998;13:19–26.
+20. Kaufman PR. Consolidation in food retailing: prospects for consumers &
+grocery suppliers. 2000. www.ers.usda.gov/publications/agoutlook/aug2000/
+ao273g.pdf.
+21. Zimmerman MN, Ham SS, Frank SM. Is it just food? Geographic differ-
+ences in the cost of living. 2006. Final report: 2005 Food Assistance and
+Nutrition Program. srdc.msstate.edu/focusareas/health/fa/zimmerman05_
+ﬁnalrept.pdf.
+22. Extension ISU. Iowa food security, insecurity, and hunger: rural food access
+patterns. 2004. extension.iastate.edu/hunger.
+23. Apparicio P, Cloutier M-S, Shearmur R. The case of Montreal’s missing
+food deserts: evaluation of accessibility to food supermarkets. Int J Health
+Geogr 2007;6:4.
+24. Zenk SN, Schulz AJ, Israel BA, James SA, Bao S, Wilson ML. Neighborhood
+racial composition, neighborhood poverty, and the spatial accessibility of
+supermarkets in metropolitan Detroit. Am J Public Health 2005;95:660–7.
+25. Larsen K, Gilliland J. Mapping the evolution of ‘food deserts’ in a Canadian
+city: supermarket accessibility in London, Ontario, 1961–2005. Int J Health
+Geogr 2008;7.
+26. Andreyeva T, Blumenthal DM, Schwartz MB, Long MW, Brownell KD.
+Availability and prices of foods across stores and neighborhoods: the case
+of New Haven Connecticut. Health Aff 2008;27:1381–8.
+27. Morland K, Wing S, Roux AVD, Poole C. Neighborhood characteristics
+associated with the location of food stores and food-service places. Am J
+Prev Med 2002;22:23–9.
+28. Moore LV, Roux AVD. Association of neighborhood characteristics with
+the location and type of food stores. Am J Public Health 2006;96:325–31.
+29. Inagami S, Cohen DA, Finch BK, Asch SM. You are where you shop: grocery
+store locations, weight, and neighborhoods. Am J Prev Med 2006;31:
+10–7.
+30. Zenk SN, Schulz AJ, Hollis-Neely T, et al. Fruit and vegetable intake in
+African Americans: income and store characteristics. Am J Prev Med
+2005;29:1–9.
+31. Morland K, Wing S, Roux AVD. The contextual effect of the local food
+environment on residents’ diets: the Atherosclerosis Risk in Communities
+study. Am J Public Health 2002;92:1761–7.
+32. Clifton KJ. Mobility strategies and food shopping for low-income families.
+J Plan Educ Res 2004;23:402–13.
+33. Wang MC, Gonzalez AA, Ritchie LD, Winkleby MA. The neighborhood
+food environment: sources of historical data on retail food stores. Int J
+Behav Nutr Phys Act 2006;3:15.
+34. Smoyer-Tomic KE, Spence JC, Amrhein C. Food deserts in the prairies?
+Supermarket accessibility and neighborhood need in Edmonton, Canada.
+Prof Geogr 2006;58:307–26.
+35. Khan AA, Bhardwaj SM. Access to health care. Eval Health Prof 1994;17:60–76.
+36. Mela DJ. Food choice and intake: the human factor. Proc Nutr Soc
+1999;58:513–21.
+37. Connors M, Bisogni C, Sobal J, Devine C. Managing values in personal food
+systems. Appetite 2001;36:189–200.
+38. Popkin BM, Duffey K, Gordon-Larsen P. Environmental inﬂuences on food
+choice, physical activity and energy balance. Physiol Behav 2005;86:603–13.
+39. Smoyer-Tomic KE, Hewko JN, Hodgson MJ. Spatial accessibility and equity
+of playgrounds in Edmonton, Canada. Can Geogr 2004;48:287–302.
+40. Jensen L, McLaughlin DK, Slack T. Rural poverty: the persisting challenge.
+In: Brown DL, Swanson LE, eds. Challenges for rural America in the
+twenty-ﬁrst century. University Park PA: The Pennsylvania University Press,
+2003:118–31.
+41. Harris RP, Worthen D. African Americans in rural America. In: Brown DL,
+Swanson LE, eds. Challenges for rural America in the twenty-ﬁrst century.
+University Park PA: The Pennsylvania State University Press, 2003:32–42.
+42. Probst JC, Samuels ME, Jespersen KP, Willert K, Swann RS, McDufﬁe JA.
+Minorities in rural America: an overview of population characteristics.
+Columbia SC: South Carolina Rural Health Research Center, 2002.
+43. Koopman RJ, Mainous III AG, Geesey ME. Rural residence and Hispanic
+ethnicity: doubly disadvantaged for diabetes? J Rural Health 2006;22:
+63–8.
+44. Glanz K, Yaroch AL. Strategies for increasing fruit and vegetable intake in
+grocery stores and communities: policy, pricing, and environmental
+change. Prev Med 2004;39:S75–S80.
+45. Auchincloss AH, Hadden W. The health effects of rural–urban residence
+and concentrated poverty. J Rural Health 2002;18:319–36.
+46. Morton LW, Blanchard TC. Starved for access: life in rural America’s food
+deserts. Rural Realities 2007;1:1–10.
+47. Blanchard T, Lyson T. Access to low cost groceries in nonmetropolitan
+counties: large retailers and the creation of food deserts. 2005. http://
+srdc.msstate.edu.
+48. Blanchard T, Lyson T. Food availability & food deserts in the nonmetro-
+politan South. 2006. http://srdc.msstate.edu/focusareas/health/fa/fa_
+12_blanchard.pdf.
+49. Handy S, Niemeier D. Measuring accessibility: an exploration of issues and
+alternatives. Environ Plan A 1997;29:1175–94.
+50. Booth KM, Pinkston MM, Poston WS. Obesity and the built environment.
+J Am Diet Assoc 2005;195:S110–S117.
+51. Galvez MP, Morland K, Raines C, et al. Race and food store availability in
+an inner-city neighborhood. Public Health Nutr 2008;11:624–31.
+52. Blanchard TC, Lyson TA. Retail concentration, food deserts, and food
+disadvantaged communities in rural America. 2005. http://srdc.msstate.
+edu.
+53. Block D, Kouba J. A comparison of the availability and affordability of a
+market basket in two communities in the Chicago area. Public Health Nutr
+2006;9:837–45.
+54. Morland K, Roux AVD, Wing S. Supermarkets, other food stores, and
+obesity. Am J Prev Med 2006;30:333–9.
+55. Powell LM, Chaloupka FJ, Bao Y. The availability of fast-food and full-service
+restaurants in the United States. Am J Prev Med 2007;33(4S):S240–
+S245.
+56. Kravets N, Hadden WC. The accuracy of address coding and the effects of
+coding errors. Health Place 2007;13:293–8.
+57. Ward MH, Nuckols JR, Giglierano J, et al. Positional accuracy of two
+methods of geocoding. Epidemiology 2005;16:542–7.
+58. Leibtag E. The impact of big-box stores on retail food prices and the
+consumer price index. 2006. www.ers.usda.gov/Publications/ERR33/.
+59. Hale T. Dollar store, no frills: the new retail landscape. Consumer Insight
+2004:1113–42.
+60. Berry B. Overview of the retail dollar store market in the United States.
+2007. http://ats-sea.agr.gc.ca/us/4356_e.htm.
+61. Martens BJ. An analysis of the retail grocery industry: the spatial effects of
+supercenters. [dissertation]. West Lafayette IN: Purdue University, 2006.
+62. Artz GM, Stone KE. Analyzing the impact of Wal-Mart supercenters on local
+food store sales. Am J Agricultural Economics 2006;December. DOI:
+10.1111/j.1467-8276.2006.00948.
+April 2009
+Am J Prev Med 2009;36(4S)
+S155

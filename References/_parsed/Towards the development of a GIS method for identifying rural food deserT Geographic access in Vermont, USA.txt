@@ -1,0 +1,566 @@
+
+===== PAGE 1 =====
+Towards the development of a GIS method for identifying rural food
+deserts: Geographic access in Vermont, USA
+Jesse McEntee a,*, Julian Agyeman b,1
+a The ESRC Centre for Business Relationships, Accountability, Sustainability and Society, Cardiff University, 55 Park Place, Cardiff, CF10 3AT United Kingdom
+b Tufts University, 97 Talbot Avenue, Medford, MA 02155, USA
+Keywords:
+Food desert
+Rural food access
+Geographic information systems (GIS)
+Vermont
+Food security
+a b s t r a c t
+The food desert metaphor has been widely used by academics and politicians alike. While
+there is general agreement on what a food desert is in a relatively vague sense, strategies to
+identify food deserts, especially in a rural setting, using a systematic method remain
+undeﬁned. The purpose of this paper is to contribute towards the development of
+a method for rural food desert identiﬁcation strategies using the location of food retailers
+and residential units. We apply a methodologically innovative GIS approach to the
+primarily rural state of Vermont, USA. Areas of inadequate geographic food access are
+identiﬁed and some are found to overlap with high poverty locations. Aims for future work
+are identiﬁed including ﬁeldwork to validate these ﬁndings.
+ 2009 Elsevier Ltd. All rights reserved.
+Introduction
+The ﬁrst application of the phrase ‘food desert’ was claimed to be by a resident of public housing who used it to ‘‘capture
+the experience of what it was like to live in a deprived neighborhood where food was expensive and relatively unavailable’’
+(Cummins & Macintyre 2002: 2115). Since then, its common usage has continued to be primarily qualitative. It has been
+widely employed by politicians to highlight poverty, social exclusion, and areas with non-existent and/or poor food retail
+provision (e.g. Acheson, 1998; Hughes, 2000; Social Exclusion Unit, 1998). Most recently, there has been some effort to
+quantify the concept utilizing a number of discipline-speciﬁc approaches (e.g. Apparicio, Cloutier, & Shearmur, 2007;
+Cummins & Macintyre, 1999; Donkin, Dowler, Stevenson, & Turner, 2000; Guy, Clarke, & Eyre, 2004; Larsen & Gilliland, 2008,
+Smith, Butterfass, & Richards, 2009; Smoyer-Tomic, Spence, & Amrhein, 2006; Wrigley, Guy, & Lowe, 2002). Through these
+studies, the literature has come to relative consensus on a general, conceptual, deﬁnition of a ‘food desert’ (‘‘areas of relative
+exclusion where people experience physical and economic barriers to accessing healthy food’’ [Department of Health, 1996])
+without corresponding accord on how to ﬁnd such areas (other researchers have coined new terms to describe similar
+situations – for instance, see Wrigley’s (2005) use of ‘unsupportive local food environments’). The spatially unjust nature of
+food access issues, combined with the increasing availability of GIS data sets, prompted this paper, in which we aim to
+contribute towards the development of a method for the identiﬁcation of rural food deserts. Central to this objective is our
+primary research question: Can we make a meaningful contribution to rural food desert identiﬁcation strategies using the
+location of supermarkets and residential units? The innovativeness of this effort is emphasized by the fact that no other rural
+food desert studies have executed an analysis to investigate geographic access to food with this level of detail. Most previous
+studies that have measured food deserts quantitatively have been carried out in the United Kingdom and/or in urban areas
+* Corresponding author. Tel.: þ44 802 922 2078.
+E-mail addresses: mcenteej@cardiff.ac.uk (J. McEntee), julian.agyeman@tufts.edu (J. Agyeman).
+1 Tel.: þ1 (617) 627 3394.
+Contents lists available at ScienceDirect
+Applied Geography
+journal homepage: www.elsevier.com/locate/apgeog
+0143-6228/$ – see front matter  2009 Elsevier Ltd. All rights reserved.
+doi:10.1016/j.apgeog.2009.05.004
+Applied Geography 30 (2010) 165–176
+
+===== PAGE 2 =====
+(e.g. Bodor, Rose, Farley, Swalm, & Scott, 2007, Clarke, Eyre, & Guy, 2002; Donkin, Dowler, Stevenson, & Turner, 1999; Donkin
+et al., 2000; Guy & David, 2004; Pearce, Witten, & Bartie, 2006, Pearce, Witten, Hiscock, & Blakely, 2007, Shaw, 2006, Smoyer-
+Tomic et al., 2006; Wrigley, Warm, & Margetts, 2003; Zenk et al., 2005).
+It is well-established that environmental inﬂuences can play a role in food selection and diet. In their call for advanced
+collaborative efforts between government, corporate, community, and non-proﬁt entities to address the nation’s obesity
+epidemic, French, Story, and Jeffery (2001) cite how the current built environment promotes unhealthy food intake and
+inactivity. Papas et al. (2007) stressed a similar concern and articulated the need for additional research examining the impact
+of the built environment and obesity. Food access studies have produced some research that sheds light on the linkages
+between environment and health. For example, Morland, Diez Roux, and Wing (2006) veriﬁed that the local food environ-
+ment can dictate susceptibility to obesity while the same team of researchers found it was also linked to dietary intake
+(Morland, Wing, & Diez Roux, 2002). Food retail development, as a component of the built environment, has also been shown
+to inﬂuence diet (Cummins, Findlay, Petticrew, & Sparks, 2005, Wrigley, Warm, Margetts, & Lowe, 2004).
+GIS and health
+There is a need for a straightforward, easily applicable method for the identiﬁcation of food deserts. GIS is increasingly
+being used to bridge public health research with neighborhood-level information in multiple disciplines. For example, Pearce
+et al. (2006) used GIS to measure the distance from every meshblock (smallest dissemination unit used in New Zealand) to 16
+speciﬁc community resources over a road network. Topically different, but also utilizing GIS, Rodgers, Bergmann, Salak,
+Lackland, and Hinson (2007) epidemiological application of GIS examined the geographic distribution of Parkinson’s disease
+and stroke, while McEntee and Ogneva-Himmelberger (2008) used GIS to explore spatial patterns of diesel particulate matter
+in environmental justice neighborhoods of Boston, MA. When framed as a public health issue (e.g. Lobstein, 1999; Morland
+et al., 2006), the ability to measure food access reliably becomes increasingly important in resource management for planning
+intervention strategies.
+Qualitative measurements
+Previous food desert studies utilized difﬁcult to obtain data, often involving lengthy interviews and/or food index surveys
+that require signiﬁcant time and resources, which make their approaches challenging to recreate. Lang and Caraher (1998)
+discussed food deserts in the context of access to healthy foods and corresponding public health education policies and six
+years later, Guy and David (2004) solidiﬁed the application by identifying potential urban food deserts in Cardiff, providing
+general food desert criteria that emphasized physical and economic disadvantage and poor nutrition. Shaw (2006) continued
+the broadly applied, yet quantitatively unreﬁned, nature of the term, alluding to the fact that food deserts remain undeﬁned
+and applied a unique food desert classiﬁcation scheme involving 234 semi-structured interviews that inquired into the
+obstacles faced by individuals in accessing grocery stores. Hendrickson, Smith, and Eikenberry (2006) identiﬁed food deserts
+in urban areas as those communities ‘‘with ten or fewer stores and no stores with more than 20 employees’’ (no parallel
+criteria provided for rural settings) and carried out focus group discussions, administered consumer surveys, and performed
+an inventory of food stuffs (Hendrickson et al., 2006: 372). Each of these studies describes food deserts as areas of general
+inadequacy in retail provision.
+Qualitative food desert identiﬁcation efforts typically employ a case study approach, which can be both time consuming
+and difﬁcult to measure against other research. This lack of comparability between studies in addition to the methodological
+constraints of a case study method was a stimulus for the techniques employed in this paper.
+A GIS based approach
+GIS in early studies about food deserts and access tended not to utilize GIS technologies for analysis purposes; instead,
+maps presented rudimentary information such as study area (Wrigley et al., 2002), number of shops per geographic unit
+(Cummins & Macintyre 1999), and percentage change in socioeconomic variables per geographic unit (Guy et al., 2004).
+However, Donkin et al. (1999) were the ﬁrst to use GIS analysis techniques to create maps of distance to outlets selling food
+over a road network, incorporating availability of individual food items and population density. These authors plotted the
+results of a food price index on a map to show areas of relative expensiveness. Recent efforts to use GIS to identify food deserts
+continue to vary in their technique and focus.
+Geographic information systems (GIS) have taken on a substantial role in most current accessibility studies. GIS is
+utilized not only to show graphical information, but often it precedes statistical analysis. For instance, Pearce et al. (2006)
+used GIS to measure the distance from every meshblock (an indicator of relative distance traveled) to 16 speciﬁc
+community resources over a road network. Subsequently, indices of community resource accessibility were built for the
+entire country of New Zealand; this consisted of a quintile assignment for each meshblock. Pearce et al.’s (2006) study
+serves as a perfect example of how GIS has made possible analyses that two decades ago would have been impossible
+simply because they would have required prohibitive amounts of time. Measuring distance over a road network with
+accuracy by hand with a ruler and paper map for 38,350 census meshblocks would be a substantial time commitment.
+Building from their previous study, Pearce et al.’s (2007) research goes beyond a presentation of relative geographic
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+166
+
+===== PAGE 3 =====
+distance and performs a non-parametric Spearman’s rank correlation analysis between access quintiles and deprivation
+quintiles to show that access to community resources was actually better in deprived areas. Statistical analysis is not always
+used in GIS applications that assess geographic access, however. Morton and Blanchard (2007) used GIS software to create
+centroids and measure distance to certain retailers. Lovett, Haynes, Sunnenberg, and Gale (2002) utilized the graphical
+beneﬁts of a GIS to illustrate travel times and public transport routes to surgeries in East Anglia, UK. They did not perform
+any complex analysis, but presented a series of maps that show their data elements in a clear and precise manner so as to
+allow the reader to observe spatial overlaps in these data sets. If this data was presented in tabular format, the length of
+time to interpret it would be daunting. From these examples, we can conclude that GIS is not only useful for analysis, but
+also for presentation of information that contains trends that may otherwise go unnoticed if examined in a different layout,
+such as a table.
+GIS has been used in a number of studies examining food access. Studies that examine community resources often include
+food retailers. However, there are a number of authors that have explicitly mapped and/or used GIS to map and/or measure
+food access. We can speak generally about two GIS centric approaches. In the ﬁrst, the authors create original data (possibly
+using GIS) and map it for presentation. An example of this would be Guy and David’s (2004) buffer application around food
+retailers. A more sophisticated example of this is Donkin et al.’s (2000) creation of price and availability indices. This type of
+analysis involves taking existing data and mapping it to identify trends and overlaps with other data elements (some of which
+may be original to the study at hand). The second approach is when statistical analysis is used to correlate one variable, such
+as physical distance, to another, such as socioeconomic status. Another example would be Larsen and Gilliland’s (2008)
+analysis of walking and public transit access to supermarkets in London, Ontario. Most studies that entail the creation of
+original data focus on physical and/or economic access.
+Three types of access
+Food security is the phrase most commonly associated with hunger and food access issues. Maxwell (1996) has discussed
+the evolution of this term’s usage at great length from one of a global/developing world context centered on supply to one of
+access focused on the individual household level (Maxwell & Smith, 1992). For our study, we are concerned with food access,
+which has become a central tenet of contemporary food security deﬁnitions. Take for instance Maxwell and Smith’s (1992)
+summation of existent food security deﬁnitions: ‘‘secure access at all times to sufﬁcient food’’ (p. 8) or the most commonly
+cited deﬁnition of food security, ‘‘Access by all people at all times to enough food for an active and healthy life’’ (World Bank,
+1986: v). While it has been established that there are three main types of barriers that affect accessibility to food (geographic,
+economic, and informational), our primary focus is on geographic access, although it is worth brieﬂy describing the infor-
+mational and economic elements.
+Informational access
+Informational access can encompass a wide range of factors that relate to the educational, cultural, and social constraints
+that inﬂuence how and why people choose to eat certain foods. Wrigley et al. (2002) developed binary logistic/logit
+regression models showing that low fruit and vegetable consumption amongst study respondents was strongly associated
+with low educational attainment. Perhaps the most supportive evidence for this association is Rose’s (1999) ﬁnding that food
+security is associated with households whose head has completed high school and Morton and Blanchard’s (2007) ﬁnding
+that food desert counties typically have a larger proportion of individuals without a high school diploma. Nord and Andrews
+(2002) determined that reductions in hunger and food insecurity would require economic growth strategies aimed at
+households with ‘‘less skilled or less educated workers’’ (Nord & Andrews, 2002: 6). The linkages between item selection and
+nutritional knowledge are evident, but it is the compounding effect of other subjective elements that make associations so
+difﬁcult to draw. Do people with sufﬁcient nutritional knowledge without geographic or economic constraints buy healthy
+food? This type of question is most often investigated qualitatively through participant interviews and surveys with local
+residents (e.g. Coveney & O’Dwyer, 2008; Whelan, Wrigley, Warm, & Cannings, 2002; Wrigley et al., 2002; Wrigley et al.,
+2004). The answer to questions like this, however, will not be straightforward. Some people would change their purchasing
+habits if they were not economically or geographically constrained, but some would not for a plethora of reasons: lack of
+cooking skills, nutritional knowledge, time, and taste (Zandstra, de Graaf, & Van Staveren, 2001). However illogical it may
+seem, the reality is that there will always be those who choose to eat unhealthfully (from a nutritional perspective) despite
+unlimited resources.
+Conversely, there are also those who would change the way they eat if given the opportunity. Educational attainment
+might be an indicator of healthy eating. Lack of cooking skills has also been cited as being linked to socioeconomic status and
+health (Furey, Strugnell, & McIlveen, 2001; Lang & Caraher, 1998; Shaw, 2006; Stead et al., 2004). Cultural constraints are
+equally important. The notion that food is part of popular culture (Piachhaud & Webb, 1996) has generally been accepted
+while concurrently being inﬂuenced by anthropologically-determined cultural inﬂuences and gender roles (Douglas, 1972).
+Social inﬂuences play a critical role in food consumption (Glanz et al., 1993). In their study of social inﬂuences, Brug, Lechner,
+and de Vries (1995) determined that fruit and vegetable consumption was lower amongst those individuals with lower self-
+efﬁcacy expectations and less positive attitudes.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+167
+
+===== PAGE 4 =====
+Economic access
+In general, poverty studies indicate that food security is linked to poverty level (Baker, Schootman, Barnidge, & Kelly,
+2006; Nord, Jemison, & Bickel, 1999). Economic access, however, involves the examination of not only poverty, but other
+ﬁnancial elements that impact one’s ability to acquire food, such as food prices and transportation costs. Economic access
+has been discussed by researchers as being an important factor in identifying inadequate food access. A price index was
+created by Donkin et al. (1999) to compare prices of food in a cluster of shops; z-scores were assigned to every item and
+store to highlight relatively expensive items and store locations. The mean prices of food were compared with the income
+level of the local population to determine how it related to the average cost of a standard weekly shopping list of items.
+Donkin et al. (1999) found that physical access was not as severe a problem as economic access; a healthy diet for a young
+man on income support would cost over 5 percent of his weekly income. A similar type of study was carried out in the US
+by Hendrickson et al. (2006) in which researchers discovered that in areas with the highest poverty, food costs were
+typically higher and the quality of food was inferior. Eikenberry and Smith (2005) identiﬁed study locations based on
+percent of population living at or below the poverty line and Morton, Bitto, Oakland, and Sand (2005) reported that
+‘‘[r]ural areas with high levels of poverty and limited or no food sources place burdens of food availability, access, and
+quality on low-income populations’’ (p. 93). Poverty is repeatedly used in the literature and cited as being an important
+criterion in gauging food access and security (Apparicio et al., 2007; Baker et al., 2006; Bodor et al., 2007; Hendrickson
+et al., 2006; Morton & Blanchard, 2007; Olson, Rauschenbach, Frongillo, & Kendall, 1996; Short, Guthman, & Raskin, 2007).
+Poverty’s focal role in measuring nutrition is not new, as pointed out by Rose and Richards (2004), ‘‘[E]arly studies showed
+that individuals from households in poverty were more likely to exhibit nutritional deﬁciencies or have diets low in
+various nutrients’’ (p. 1081) (US Department of Health, Education, and Welfare 1971, US Department of Health, Education,
+and Welfare 1974).
+Identifying food deserts: calculating geographic access
+Geographic and economic access have been measured in an array of previous studies (e.g. Ball, Timperio, & Crawford,
+2009; Donkin et al., 1999; Donkin et al., 2000; Dubowitz et al., 2007; Guy & David, 2004; Shaw, 2006; Smith et al., 2009,
+Whelan et al., 2002; Wrigley et al., 2002; Wrigley, 2002). Most research has assessed geographic access through attributes of
+locations or individuals, what Kwan, Murray, O’Kelly, and Tiefelsdorf (2003) has termed place and personal accessibility. From
+a mapping perspective, personal accessibility would be using point data that contains individual attribute information, such
+as daily consumption of fruits and vegetables while place accessibility would be placing a 500 meter buffer around a food
+retailer to determine its service area – a ‘‘zone-based aggregate spatial framework’’ (Kwan et al., 2003). Essential to this
+discussion (though not explored in this paper) is how geographers can take a geographically focused and designed set of tools,
+such as a GIS, and employ it to incorporate traditionally non-geographical data, such as opinion or choice. Place and individual
+accessibility are not static, but are temporally dynamic. In regards to individual accessibility, this fact may be even more so
+due to increases in informational accessibility (e.g. increase in internet usage rates).
+Five-hundred meters is commonly cited as an acceptable distance that urban residents can live from a food retailer
+before experiencing inadequate food access (Clarke et al., 2002; Guy & David, 2004; Whelan et al., 2002; Wrigley et al.,
+2002). This distance was ﬁrst cited by a Government Minister (Hughes, 2000) and was estimated to represent a ﬁve to
+seven minute walking travel time (Donkin et al., 1999); beyond which an individual was determined to be living in a food
+desert.
+We have identiﬁed a methodological gap in the literature regarding food desert identiﬁcation strategies. Rurally
+focused food access measurements cannot use the urban distance limit of 500 meters since most people live further
+than 500 meters from a food retailer and rely on an automobile and not on walking. Although the frequency of rural
+food access studies is increasing (e.g. Burns & Inglis, 2007; Furey et al., 2001, Liese, Weis, Pluto, Smith, & Lawson, 2007,
+Morton & Blanchard, 2007, Olson et al., 1996, Skerratt, 1999), efforts to measure geographic access in this context have
+largely been ignored, with the exception of three studies. Kaufman (1999) identiﬁed rural food deserts through a ‘‘net
+accessibility ratio’’ (a ratio of store sales to potential food spending), concluding that over 70 percent of the low-income
+population of the Lower Mississippi Delta had inadequate food access. The drawback of this study was that it relied on
+conﬁdential data. Morton and Blanchard (2007) deﬁned rural food deserts using GIS software as counties in which all
+residents live more than 10 miles to the nearest supermarket chain or supercenter (measured as Euclidean distance).
+Using a Euclidean distance, however, is limiting in that distance is measured not over the road networks people travel,
+but ‘‘as the crow ﬂies’’; the resulting ramiﬁcation being travel distances will seem much shorter than the reality.
+Sharkey and Horel (2008) present the most detailed analysis of a geographic access study. The authors calculated the
+distance between a population-weighted centroid of a census block group to food retailers in Texas. While this analysis
+provides additional detail above and beyond the studies of Morton and Blanchard (2007) and Kaufman (1999), the
+limitation we highlight is the fact that their method of using a population-weighted centroid to food stores lacks the
+detailed measurement we employ (as described below). For instance, the use of a population-weighted centroid can
+potentially skew distances traveled by rural inhabitants since in rural areas even a census block group can be a very
+large area.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+168
+
+===== PAGE 5 =====
+Methods and procedures
+Situated in northern New England, Vermont (see Fig. 1) is a primarily rural state with 608,827 people located throughout
+its 9515 square miles of land (U.S. Census Bureau, 2005, Vermont Center for Geographic Information, 2007).2 Twenty-one
+percent of the state’s land is dedicated to farms, while 15.5 percent of the population is employed in farm and farm-related
+jobs (US Department of Agriculture, 2006; US Department of Agriculture, 2008). The mean per capita income is $20,625 and
+96.9 percent of the population identiﬁes their race as white (U.S. Census Bureau, 2007). A sizeable portion of Vermont’s land
+and economy is dedicated to agriculture and most of this (70.5% of 2006 total farm receipts) is dedicated to the dairy industry
+(US Department of Agriculture, 2008), indicating that for most people, the agriculture they are exposed to on a regular basis is
+not one in which they could obtain edible products. The average percentage of food insecure households between 2003 and
+2005 was 9.5 percent (Food Research and Action Center, 2007).
+As previously mentioned, we categorize the three types of access reviewed in existent literature as geographical, economic,
+and informational access. In our effort to contribute towards the development of a method to identify rural food deserts, we
+focus on geographic access. To accomplish this, we used supermarket and residential locations in conjunction with
+a Geographic Information System (GIS). Distance between supermarkets and residential units were used as a proxy for
+geographic access to food.
+We plotted the location of food retailers (‘‘food retailers’’ referring to the North American Industry Classiﬁcation System
+number 44511 – Supermarket and Other Grocery [except Convenience] Stores larger than 2500 square feet) (n ¼ 142) (Ref-
+erenceUSA, 2007), residential units (n ¼ 231,894) (Vermont Center for Geographic Information), and roads using ArcGIS
+software (ESRI, 2005); a snapshot of these plotted data elements is provided in Fig. 2.3 The red line indicates the shortest route
+to the food retailer from a residential unit (circled). (For interpretation of the references to colour in this sentence, the reader
+is referred to the web version of this article.)
+Fig. 1. Vermont, USA.
+2 In this paper we adhere to the United States Census Bureau’s deﬁnition of rural. The US Census Bureau deﬁnes rural areas as all territory, population,
+and housing units within an Urban Area or Urban Cluster which are deﬁned as core census block groups or blocks that have a population density of at least
+500 people per square mile (US Census Bureau, 2003).
+3 ReferenceUSA is an online reference service which contains information on US businesses. The data obtained from ReferenceUSA used in this analysis
+consisted of the latitude and longitude of every store larger than 2,500 square feet.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+169
+
+===== PAGE 6 =====
+Our justiﬁcation for only including food retailers 2500 square feet or larger in size was to ﬁlter out small convenience
+stores and gas stations, which typically sell low nutritional value food items at higher prices and non-consumables (Donkin
+et al., 2000; Morton & Blanchard 2007; Pothukuchi, 2005). Furthermore, our current qualitative ﬁeld research being con-
+ducted in a separate project in a neighboring New Hampshire county has indicated most residents in this northern New
+England region rely primarily on medium to large food retailers as their home food sources (McEntee 2009).
+To calculate these distances we used a network measurement tool (speciﬁcally, Network Analyst Extension Closest Facility
+feature of ArcMap 9.1), to measure the distance between every residence and the closest food retailer. Resultantly, each
+residence had a corresponding closest distance data value, which indicated the distance to the closest retailer. These data were
+aggregated by census tract and divided by the number of residential units to produce the mean travel distance by census tract:
+Sum of distances between residential units and retailers
+# of residential units
+¼ Mean distance to food retailers within census tract
+This data is displayed in a choropleth map of census tracts, illustrating mean distance values (Fig. 3). Other distance calcu-
+lation approaches were considered, such as the use of population-weighted centroids and interpolated distance values. These
+other methods, though not tremendously complex, begin to broaden the analytical distance between data and results –
+something we aimed not to do in order to maintain a relative ease of reproducibility.
+After reviewing previous attempts to identify food deserts using geography in both urban and rural settings, we applied
+a ten mile threshold to represent geographical access; that is, any census tract which had a greater than 10 mile mean distance
+value between food retailers and residential units was considered a food desert (see Fig. 4 in Results section). We adopted this
+distance from Morton and Blanchard (2007) who adhered to a ten mile threshold to represent food deserts. Their basis for
+using this distance was that the average US resident travels approximately 8 miles to obtain groceries according to the
+National Transportation Survey (MSU 2003) so ten miles would therefore be two miles above average.
+Results
+Based on our geographic food desert criteria twelve census tracts (equivalent to 4.5 percent of the state’s population) are
+considered food deserts due to the fact that, within these tracts, the mean distance between residential units and food
+retailers is 10 miles or greater (see Fig. 4). The mean distance to food retailers within food desert tracts was 13.15 miles
+compared to 4.14 miles at the statewide level.
+Fig. 2. Snapshot of plotted data elements.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+170
+
+===== PAGE 7 =====
+In food desert tracts 81 percent of residents have a high school diploma or greater, while statewide this rate increases to 86
+percent. A discrepancy in poverty rates existed, but only by just over 1 percent (food desert census tracts residents experience
+10.2 percent poverty while the statewide average is 9.8 percent). Of the ﬁfteen poorest census tracts (deﬁned as percent of
+individuals below poverty level), we have identiﬁed one-third as food deserts. Census tract 9501 (see Fig. 4), not only had the
+greatest distance value (24.45 miles), but also the lowest educational achievement (deﬁned as percent of individual with
+a high school diploma or higher) in the state (70.9 percent). Census tract 103 (see Fig. 4), which ranked seventh for distance
+(11.55 miles), had the ﬁfth lowest educational achievement as well as the eleventh highest poverty level (19 percent).
+It should be mentioned that areas with some of the highest poverty rates and lowest educational achievement were
+located in urban areas of the state. We do not assert food deserts do not exist in these regions (simply because the distance
+values of less than 10 miles). However, because our study was focused on rural areas, we did not accommodate for speciﬁc
+urban-based access circumstances (e.g. walking is a more likely means of transportation for urban centers).
+Discussion
+Our results suggest certain areas of the state are at a higher risk of inadequate food access than others. The food desert
+identiﬁcation method presented here informs ongoing uncertainty about how geographic access can be measured. Morton
+Fig. 3. Mean distance by census tract.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+171
+
+===== PAGE 8 =====
+and Blanchard (2007) did not identify any region of VT as a food desert because, according to their study, there are no areas
+where greater than 50 percent of a county’s population is further than 10 miles to a supermarket, supercenter, or wholesale
+club. The primary problem with their food desert deﬁnition is that it assumes an adequate food source can only be found in
+those three types of relatively large stores. In a place like rural Vermont where ‘‘big box’’ stores such as Walmart, Target, and
+Sam’s Club have faced considerable grassroots opposition from the public in addition to the relatively small population base of
+the state, Morton and Blanchard’s (2007) approach lacks robustness. We have included smaller general stores and inde-
+pendently-owned food retailers in addition to these larger options.
+Our method for identifying food deserts contributes towards the development of a method for the identiﬁcation of food
+deserts in three ways:
+1) Detailed data: Our method measures the exact distance between every residential unit and food retailer. We did
+not rely on the creation of population-weighted centroids (e.g. Sharkey and Horel 2008) and we measured distance
+Fig. 4. Food Deserts: Greater than 10 mile mean distance between food retailers and residential units by census tract.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+172
+
+===== PAGE 9 =====
+over the road network; roads are the primary mechanism for which the majority of people in rural areas use to
+travel.
+2) Time-sensitive: Our primary goal was to contribute towards the development of a food desert identiﬁcation strategy that
+was relatively easy to employ and did not require collection of primary data, which usually entails extensive time and
+resources. After examining the locations of census tracts that travel the furthest in conjunction with poverty and educa-
+tional attainment, our approach has highlighted areas of the state that are more likely to experience the symptoms of
+inadequate food access, such as food insecurity and hunger. Total analysis time was approximately twenty hours (not
+including analysis design and review of results). The task of measuring residence to retailer by hand, without the utilization
+of GIS, would have been prohibitively burdensome.
+3) Applicability: Our method is applicable to other rural locations. All states have publicly available GIS data that details road
+networks. Geo-coded store locations are a proprietary item that can be purchased or accessed through a local college’s or
+university’s library. The e911 database provided by the Vermont Center for Geographic Information is unique in that it held
+statewide data already compiled into GIS-ready format. While few other states have a product that is centrally managed
+and as complete, other states often have sub-sectional data available and are moving towards statewide coverage and
+availability. Therefore, the analysis provided here establishes a groundwork for similar applications in other rural areas of
+the United States as the data becomes available enabling a uniform approach across the country.
+Despite these attributes, our methods have two shortcomings. The ﬁrst is that we assume most people living in Vermont
+obtained food only from food retailers (justiﬁcation for including only food retailers larger than 2,500 square feet provided in
+the Methods and Procedures section). This leaves personal and community gardens and livestock rearing, community sup-
+ported agriculture, and farmers markets out of the analysis; all could play an increasingly important role in how people access
+food.4,5 The second limitation of this study is that we restricted the analysis to the political boundaries of the state of Vermont,
+namely the inclusion of only retailers located in Vermont. Residents of food deserts are not restricted by these boundaries and
+may choose to shop across state or national lines, especially if they work in or commute through other areas. While this may
+especially affect the food desert status of border census tracts, interior food desert tracts still exist (see Fig. 4). In a similar vein,
+we also assumed that people select the closest food retailer; in reality myriad of factors impact why a person shops at
+a particular store, such as hours of operation and availability of certain foods.
+The methods designed and employed in this paper present a way to identify food deserts across a range of places. Potential
+for comparability is one of this methods greatest strength, yet this advantage has come at the cost of sacriﬁcing measures of
+economic and informational access. Fundamentally, this highlights a breadth versus depth, systematic versus case study trade-
+off which can partially account for the possibility of why food deserts could, in rare instances, be identiﬁed in areas where
+there are none, or vice versa.
+Conclusion & next steps
+Morton et al. (2005) called for reﬁnement and testing of the food desert concept and we have contributed to this effort by
+creating and implementing a method that can be applied in rural areas of the country. The food desert concept is under
+continual reﬁnement and receiving ampliﬁed attention after inclusion of a ‘‘Study and Report on Food Deserts’’ in the 2008
+Farm Bill (US Congress, 2008). We support the notion that food deserts are comprised of areas where people experience one
+or all of the three types of inadequate access. The interplays between geographic, economic, and informational access dictate
+how people access food and provide a framework for research.
+Our analysis contributes towards the measurement of geographic access, consequently helping us understand what the
+key barriers are in obtaining food. The work presented here is meant to move the food desert discussion and development of
+methods forward in order to assist not only academics, but practitioners who need a relatively straightforward and cost-
+effective technique to identify potential geographic food deserts without the time and resource requirements of case studies
+and interviews. More work is needed, however. Reﬁnement of our method requires triangulation. Fieldwork needs to be
+conducted to compare people’s experiences with our ﬁndings. This could take the form of a price survey, interviews, and/or
+surveys that explore consumer satisfaction with their food choices. For instance, our analysis does not identify a residential
+unit that houses someone who is poor, lacks cooking skills, and is within ten miles of a food retailer as part of a food desert,
+while classifying residential units that house people who are wealthy and have cooking skills who live greater than ten miles
+as living in a food desert. Results from additional research would help strengthen (and validate) central elements of our
+4 We have also assumed that most people will travel by car or other private automobile to food retailers. Vehicle ownership data is unavailable, but
+according to the 2000 census, 87 percent of workers over the age of 16 used a car, truck, or van to get to work, while 5.5 percent walked, and .7 percent took
+public transportation. Disability status is also an important consideration when measuring geographic access, but data is unavailable for most of the state.
+We do know however that 16.7 percent of the state population has a disability compared to the national average of 15.1 percent (Brault, 2008).
+5 Some recent evidence has emerged indicating that substantive contributions to nutritional well-being can be made by smaller-scale food sources
+similar in size to convenience stores (Short et al., 2007). However, we chose not to include these smaller size stores due to overwhelming evidence
+illustrating just the opposite (Horowitz, Colson, Hebert, & Lancaster, 2004; Morland et al., 2006; Powell, Slater, Mirtcheva, Bao, & Chaloupka, 2007).
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+173
+
+===== PAGE 10 =====
+analysis. In addition to qualitative assessments, we are currently undertaking an assessment of food retail density analyses
+which attempts to relate food retail density, population density, and food access in a rural context (a similar type of endeavor
+has recently been conducted by Seliske, Pickett, Boyce, & Janssen, 2009). Empirically demonstrating the utility of the analysis
+presented in this paper compared to other similar studies is made difﬁcult by the fact that there are not many alternatives to
+compare to. The majority of other food desert or food access studies have either been located in an urban setting or qualitative
+investigations. Rural quantitatively focused geographic food access analyses are virtually non-existent with the exception of
+Morton and Blanchard (2007), which we have considered here.
+Our goal in this study was to make a meaningful contribution to rural food desert identiﬁcation strategies and therefore
+contribute towards the development of a method for the classiﬁcation of food deserts in rural areas that could be applied
+across rural areas of the United States. Utilizing the distance between food retailers and residential units as an indicator of
+inadequate geographic access we successfully accomplished this objective and provided a detailed measurement of rural
+geographic access to food. Though some limitations exist as discussed in the previous section, it has also been our intention to
+push the relatively nascent area of rural geographic food access strategies forward by providing a new set of ideas, tools, and
+methods. We hope that this study can inform and be used in collaboration with other food desert studies which examine
+economic and informational access, such as analyses conducted by Donkin et al. (2000), Shaw (2006), and Hendrickson et al.
+(2006). We anticipate that food deserts will continue to be discussed and scrutinized, both theoretically and practically.
+However, we are optimistic that our study, speciﬁcally our methods, will contribute to efforts to hone this discussion and
+prevent the perpetual discussion of food deserts that is conceptually generalizable, yet practically disparate.
+Acknowledgements
+We thank the Economic and Social Research Council’s Centre for Business Relationships, Accountability, Sustainability and
+Society at Cardiff University for providing resources and support during the research, analysis, and writing stages of this paper
+and Barbara Parmenter for advice provided during analysis. We are also grateful to two anonymous reviewers for their
+comments. Errors are the sole responsibility of the authors.
+References
+Acheson, D. (1998). Independent inquiry into inequalities in health report. Available from. http://www.archive.ofﬁcial-documents.co.uk/document/doh/ih/
+part2d.htm#6. Accessed 02.01.08.
+Apparicio, P., Cloutier, M., & Shearmur, R. (2007). The case of Montreal’s missing food deserts: evaluation of accessibility to food supermarkets. International
+Journal of Health Geographics, 6(1), 4.
+Baker, E. A., Schootman, M., Barnidge, E., & Kelly, C. (2006). The role of race and poverty in access to foods that enable individuals to adhere to dietary
+guidelines. Preventing Chronic Disease, 3(3), A76.
+Ball, K., Timperio, A., & Crawford, D. (2009). Neighborhood socioeconomic inequalities in food access and affordability. Health & Place, 15, 578–585.
+Bodor, J. N., Rose, D., Farley, T. A., Swalm, C., & Scott, S. K. (2007). Neighbourhood fruit and vegetable availability and consumption: the role of small food
+stores in an urban environment. Public Health Nutrition 1–8.
+Brault, M. (2008). Disability status and the characteristics of people in group quarters: a brief analysis of disability prevalence among the civilian
+noninstitutionalized and total populations in the American community survey, the United States census bureau report. Available from. http://www.
+census.gov/hhes/www/disability/GQdisability.pdf. Accessed 10.17.08.
+Brug, J., Lechner, L., & de Vries, H. (1995). Psychosocial determinants of fruit and vegetable consumption. Appetite, 25, 285–296.
+Burns, C. M., & Inglis, A. D. (2007). Measuring food access in Melbourne: access to healthy and fast foods by car, bus and foot in an urban municipality in
+Melbourne. Health & place, 13(4), 877–885.
+Clarke, G., Eyre, H., & Guy, C. (2002). Deriving indicators of access to food retail provision in British cities: studies of Cardiff, Leeds and Bradford. Urban
+Studies, 39(11), 2041–2060.
+Coveney, J., & O’Dwyer, L. (2008). Effects of mobility and location on food access. Health & Place. Author’s Accepted Manuscript.
+Cummins, S., Findlay, A., Petticrew, M., & Sparks, L. (2005). Healthy cities: the impact of food retail-led regeneration on food access, choice and retail
+structure. Built Environment, 31(4), 288–301.
+Cummins, S., & Macintyre, S. (1999). The location of food stores in urban areas: a case study in Glasgow. British Food Journal, 101, 54–55, 2.
+Cummins, S., & Macintyre, S. (2002). A systematic study of an urban foodscape: the price and availability of food in greater Glasgow. Urban Studies, 39,
+2115–2130, 16.
+Department of Health. (1996). Low income, food, nutrition and health: Strategies for improvement. A Report from the Low Income Project Team to the
+Nutrition Task Force. London: Department of Health.
+Donkin, A. J., Dowler, E. A., Stevenson, S. J., & Turner, S. A. (1999). Mapping access to food at a local level. British Food Journal, 101(7), 554.
+Donkin, A. J., Dowler, E. A., Stevenson, S. J., & Turner, S. A. (2000). Mapping access to food in a deprived area: the development of price and availability
+indices. Public Health Nutrition, 3(1), 31–38.
+Douglas, M. (1972). Deciphering a meal. Daedalus, 101, 61–82.
+Dubowitz, T., Acevedo-Garcia, D., Salkeld, J., Lindsay, A. C., Subramanian, S. V., & Peterson, K. E. (2007). Lifecourse, immigrant status and acculturation in
+food purchasing and preparation among low-income mothers. Public Health Nutrition, 10(4), 396–404.
+Eikenberry, N., & Smith, C. (2005). Attitudes, beliefs, and prevalence of dumpster diving as a means to obtain food by Midwestern, low-income, urban
+dwellers. Agriculture and Human Values, 22(2), 187–202.
+ESRI. (2005). ArcMap version 9.1: Environment systems. Research Institute Inc.
+Food Research and Action Center. (2007). State of the states: 2007. Washington, DC.
+French, S. A., Story, M., & Jeffery, R. W. (2001). Environmental inﬂuences on eating and physical activity. Annual Review of Public Health, 22, 309–335.
+Furey, S., Strugnell, C., & McIlveen, H. (2001). An investigation of the potential existence of ‘‘food deserts’’ in rural and urban areas of Northern Ireland.
+Agriculture and Human Values, 18(4), 447–457.
+Glanz, K., Kristal, A. R., Sorensen, G., Palombo, R., Heimendinger, J., & Probart, C. (1993). Development and validation of measures of psychosocial factors
+inﬂuencing fat- and ﬁber-related dietary behavior. Preventative Medicine, 22, 373–387.
+Guy, C. M., Clarke, G., & Eyre, H. (2004). Food retail change and the growth of food deserts: a case study of Cardiff. International Journal of Retail &
+Distribution Management, 32, 72–88, 17.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+174
+
+===== PAGE 11 =====
+Guy, C. M., & David, G. (2004). Measuring physical access to ‘healthy foods’ in areas of social deprivation: a case study in Cardiff. International Journal of
+Consumer Studies, 28(3), 222–224.
+Hendrickson, D., Smith, C., & Eikenberry, N. (2006). Fruit and vegetable access in four low-income food deserts communities in Minnesota. Agriculture and
+Human Values, 23(3), 371–383.
+Horowitz, C., Colson, K., Hebert, P., & Lancaster, K. (2004). Barriers to buying healthy foods for people with diabetes: evidence of environmental disparities.
+American Journal of Public Health, 94, 1549–1554.
+Hughes B. (2000). Speech to third annual local food retailing conference, July, 2000.
+Kaufman, P. R. (1999). Rural poor have less access to supermarkets, large grocery stores. Rural Development Perspectives, 13(3).
+Kwan, M. P., Murray, A. T., O’Kelly, M. E., & Tiefelsdorf, M. (2003). Recent advances in accessibility research: representation, methodology and applications.
+Journal of Geographical Systems, 5(1), 129–138.
+Lang, T., & Caraher, M. (1998). Access to healthy foods: part II. Food poverty and shopping deserts: what are the implications for health promotion policy and
+practice? Health Education Journal, 57, 202–211.
+Larsen, K., & Gilliland, J. (2008). Mapping the evolution of ‘food deserts’ in a Canadian city: supermarket accessibility in London, Ontario, 1961–2005.
+International Journal of Health Geographics, 7, 16.
+Liese, A. D., Weis, K. E., Pluto, D., Smith, E., & Lawson, A. (2007). Food store types, availability, and cost of foods in a rural environment. Journal of the
+American Dietetic Association, 107(11), 1916–1923.
+Lobstein, T. (1999). Health, income and diet, tackling inequalities in health and diet related disease. London: Sustain Publication. KKS Printing.
+Lovett, A., Haynes, R., Sunnenberg, G., & Gale, S. (2002). Car travel time and accessibility by bus to general practitioner services: a study using patient
+registers and GIS. Social Science & Medicine (1982), 55(1), 97–111.
+Maxwell, S., & Smith, M. (1992). Household food security: a conceptual review. In S. Maxwell, & T. Frankenberger (Eds.), Household food security: concepts,
+indicators, measurements: A technical review, monograph. UNICEF and IFAD, New York and Rome.
+Maxwell, S. (1996). Food security: a post-modern perspective. Food Policy, 21(3), 155–170.
+McEntee, J. C., & Ogneva-Himmelberger, Y. (2008). Diesel particulate matter, lung cancer, and asthma inceidences along major trafﬁc corridors in MA, USA:
+a GIS analysis. Health & Place, 14(4), 817–828.
+McEntee, J.C. (2009). Re-localization of rural food systems: A key ingredient in the creation of sustainable communities?. Presented at the 2009 Association
+of American Geographers Annual Meeting. Las Vegas, NV. 22–27 March 2009.
+Morland, K., Diez Roux, A. V., & Wing, S. (2006). Supermarkets, other food stores, and obesity: the atherosclerosis risk in communities study. American
+Journal of Preventive Medicine, 30(4), 333–339.
+Morland, K., Wing, S., & Diez Roux, A. (2002). The contextual effect of the local food environment on residents’ diets: the atherosclerosis risk in communities
+study. American Journal of Public Health, 92, 1761–1767.
+Morton, L., Bitto, E., Oakland, M., & Sand, M. (2005). Solving the problems of Iowa food deserts: food insecurity and civic structure. Rural Sociology, 70(1),
+94–112.
+Morton, L. W., & Blanchard, T. C. (2007). Starved for access: life in rural America’s food deserts. Rural Realities, 1(4), 1–10.
+Nord, M., & Andrews, M. (2002). Reducing food insecurity in the United States: assessing progress toward a national objective. Food Assistance and
+Nutrition Research Report, No. 26–2.
+Nord, M., Jemison, K., & Bickel, G. (1999). Measuring food security in the United States: Prevalence of food insecurity and hunger, by State, 1996–1998. Food
+Assistance and Nutrition Research Report. Food and Rural Economics Division, Economic Research Service, U.S. Department of Agriculture. Report No. 2.
+Olson, C., Rauschenbach, B., Frongillo, E., Jr., & Kendall, A. (1996). Factors contributing to household food insecurity in a rural upstate New York county. Institute
+for Research on Poverty Discussion Paper, no. 1107–96. Division of Nutritional Sciences Cornell University.
+Papas, M. A., Alber, A. J., Ewing, R., Heizisouer, K. J., Gary, T. L., & Klassen, A. C. (2007). The built environment and obesity. Epidemiologic Reviews, 29, 129–143.
+Pearce, J., Witten, K., & Bartie, P. (2006). Neighbourhoods and health: a GIS approach to measuring community resource accessibility. Journal of Epidemiology
+and Community Health, 60(5), 389–395.
+Pearce, J., Witten, K., Hiscock, R., & Blakely, T. (2007). Are socially disadvantaged neighbourhoods deprived of health-related community resources?
+International Journal of Epidemiology, 36(2), 348–355.
+Piachhaud, D., & Webb, J. (1996). The price of food: Missing out on mass consumption. London: STICERD London School of Economics.
+Pothukuchi, K. (2005). Attracting supermarkets to inner-city neighborhoods: economic development outside the box. Economic Development Quarterly,
+19(3), 232–244.
+Powell, L., Slater, S., Mirtcheva, D., Bao, Y., & Chaloupka, F. (2007). Food store availability and neighborhood characteristics in the United States. Preventative
+Medicine, 94, 189–195.
+ReferenceUSA, Inc. 2007, Omaha, NE.
+Rodgers, J., Bergmann, K., Salak, V., Lackland, D., & Hinson, V. (2007). Geographic distribution of Parkinson’s disease and stroke in South Carolina. Annals of
+Epidemiology, 9(9), 723.
+Rose, D. (1999). Economic determinants and dietary consequences of food insecurity in the United States. Journal of Nutrition, 129, 517S–520S.
+Rose, D., & Richards, R. (2004). Food store access and household fruit and vegetable use among participants in the US Food Stamp Program. Public Health
+Nutrition, 7(8), 1081–1088.
+Seliske, L. M., Pickett, W., Boyce, W. F., & Janssen, I. (2009). Density and type of food retailers surrounding Canadian schools: variations across socioeconomic
+status. Health & Place, 15(3), 903–907.
+Sharkey, J. R., & Horel, S. (2008). Neighborhood socioeconomic deprivation and minority composition are associated with better potential spatial access to
+the ground-truthed food environment in a large rural area. The Journal of Nutrition, 138, 620–627.
+Shaw, H. J. (2006). Food deserts: towards the development of a classiﬁcation. Geograﬁska Annaler, Series B: Human Geography, 88(2), 231–247.
+Short, A., Guthman, J., & Raskin, S. (2007). Food deserts, oases, or mirages? Small markets and community food security in the San Francisco Bay Area.
+Journal of Planning Education And Research, 26(3), 352–364.
+Skerratt, S. (1999). Food availability and choice in rural Scotland: the impact of ‘‘place’’. British Food Journal, 101(7), 537–544.
+Smith, C., Butterfass, J., & Richards, R. (2009). Environment inﬂuences food access and resulting shopping and dietary behaviors among homeless Min-
+nesotans living in food deserts. Online publication: Feb, 2009. Agriculture & Human Values. 10.1007/s10460-009-9191-z.
+Smoyer-Tomic, K. E., Spence, J. C., & Amrhein, C. (2006). Food deserts in the Prairies? Supermarket accessibility and neighborhood need in Edmonton,
+Canada. The Professional Geographer, 58, 307.
+Social Exclusion Unit. (1998). Bringing Britain together: A national strategy for neighbourhood renewal. London: The Stationery Ofﬁce.
+Stead, M., Caraher, M., Wrieden, W., Longbotton, P., Valentine, K., & Anderson, A. (2004). Conﬁdent, fearful and hopeless cooks: ﬁndings from the devel-
+opment of a food-skills initiative. British Food Journal, 106(4), 274–287.
+US Census Bureau. (2003). Census 2000 basics. Available from. http://www.census.gov/mso/www/c2000basics/chapter4.htm. Accessed 05.18.09.
+US Census Bureau. (2005). Information & research services, population division 2005, census 2000 gateway. Available from. http://www.census.gov/main/
+www/cen2000.html. Accessed 20.11.05.
+US Census Bureau. (2007). U.S. census bureau: state and county quickfacts. [Homepage of U.S. Census Bureau], [Online]. Available from. http://quickfacts.
+census.gov/qfd/states/50000.html. Accessed 28.02.07.
+US Department of Agriculture. (2006). National agricultural statistics service, NASS – 2002 census of agriculture. Available from. http://www.nass.usda.gov/
+Census_of_Agriculture/index.asp. Accessed 01.16.07.
+US Department of Agriculture. (2008). Economic research service, Vermont fact sheet. Available from. http://www.ers.usda.gov/StateFacts/VT.htm. Accessed
+03.12.08.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+175
+
+===== PAGE 12 =====
+US Department of Health, Education, and welfare. (1971). Centers for disease control. Ten-state nutrition survey in the United States, 1968–1970. Preliminary
+report to congress. Atlanta, GA: DHEW.
+US Department of Health, Education, and Welfare. (1974). National Center for Health Statistics. Preliminary Findings of the First Health and Nutrition
+Examination Survey, United States, 1971–72. DHEW Publication No. (HRA) 74-1219-1. Rockville, MD: DHEW.
+US Congress. (2008). Food, conservation, and energy act of 2008, 110th congress. US Government Printing Ofﬁce.
+Vermont Center for Geographic Information. (2007). Vermont Center for Geographic Information Website. Available from. http://www.vcgi.org.
+Whelan, A., Wrigley, N., Warm, D., & Cannings, E. (2002). Life in a ‘Food Desert’. Urban Studies, 39(11, 18), 2083–2100.
+World Bank. (1986). Poverty and hunger: Issues and options for food security in developing countries. Washington, DC: World Bank Policy Study.
+Wrigley, N. (2002). ‘Food Deserts’ in British cities: policy context and research priorities. Urban Studies, 39(11), 2029–2040.
+Wrigley, N. (2005). Food poverty and retail access what recent UK–US research reveals. Cambridge – MIT Institute Workshop.
+Wrigley, N., Guy, C., & Lowe, M. (2002). Urban regeneration, social inclusion and large store development: the seacroft development in context. Urban
+Studies, 39, 2101–2114, 14.
+Wrigley, N., Warm, D., & Margetts, B. (2003). Deprivation, diet, and food-retail access: ﬁndings from the leeds ‘food deserts’ study. Environment and Planning
+A, 35(1), 151–188.
+Wrigley, N., Warm, D., Margetts, B., & Lowe, M. (2004). The leeds ‘food desert’ intervention study: what the focus groups reveal. International Journal of Retail
+Distribution & Management, 32(2), 123–136.
+Zandstra, E. H., de Graaf, C., & Van Staveren, W. A. (2001). Inﬂuence of health and taste attitudes on consumption of low- and high-fat foods. Food Quality
+and Preference, 12, 75–82.
+Zenk, S. N., Schulz, A. J., Hollis-Neely, T., Campbell, R. T., Holmes, N., Watkins, G., et al. (2005). Fruit and vegetable intake in African Americans income and
+store characteristics. American Journal of Preventive Medicine, 29(1), 1–9.
+J. McEntee, J. Agyeman / Applied Geography 30 (2010) 165–176
+176

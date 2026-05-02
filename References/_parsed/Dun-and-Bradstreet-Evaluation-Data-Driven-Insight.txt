@@ -1,0 +1,2089 @@
+
+===== PAGE 1 =====
+Data Driven Insight: 
+Evaluating the Dun 
+and Bradstreet Toolkit 
+ 
+ 
+ 
+ 
+   
+ 
+
+===== PAGE 2 =====
+1   
+ 
+Dun and Bradstreet Evaluation  
+EXECUTIVE SUMMARY 
+Can business insight gleaned from detailed data make a difference in keeping businesses 
+operating and thriving, even during an unprecedented pandemic? This interagency project 
+tested whether third-party business analytics software would improve business engagement, 
+along with performance outcomes, across Washington’s workforce development system. The 
+project was initiated before the COVID-19 pandemic upended the economy. But by pushing 
+back the one-year pilot’s deadline and moving licenses around to maximize staff capacity to use 
+the new tool, workforce and economic development partners were able to test drive this 
+concept at locations across the state. 
+The project stems from a 2019 request from the Workforce Training and Education Coordinating 
+Board (Workforce Board) to the Governor and Legislature to create a dashboard that tracks the 
+impact of public workforce development services on business engagement and business 
+satisfaction. This request aligned with the Workforce Board’s strategic priority to enhance and 
+increase business engagement for the comprehensive workforce development system (including 
+all forms of education, training, and support services). 
+The Workforce Board identified Dun & Bradstreet (D&B) proprietary data and its EconoVue (EV) 
+and Market Insight (MI) tools for their potential to help the system pinpoint business needs at a 
+more granular level than is possible with administrative data. D&B acquires data by analyzing 
+payment experiences, banking information, government registries, and various online tracking 
+systems to create a robust profile of millions of companies from around the world. This public, 
+proprietary, entrusted, and behavioral data is housed in a data cloud to be used in analytics 
+tools. The toolkit can generate scores, ratings and insights including analyzing financial stress, 
+enabling the workforce system to strategically target assistance to businesses likely to lay off 
+employees. 
+The one-year trial of the D&B data, software, and training was acquired at a significantly 
+reduced cost—an almost 40 percent reduction of the standard market rate. This reduced rate 
+was presented by D&B as an affordable way to demonstrate the product’s value. The state could 
+then test drive the tools to see if they made sense to incorporate into the state’s workforce 
+development resources and strategy. Initial costs associated with D&B was $214,500. However, 
+this does not include the additional staffing required to facilitate the product. The total planned 
+staffing costs among the three partners was $324,848, bringing the project total to an estimated 
+$539,348. The initial D&B exploration project was paid for primarily using the Governor’s 
+Workforce Innovation and Opportunity Act (WIOA) discretionary funding alongside $65,000 
+from the Department of Commerce (Commerce) to support a 0.5 FTE. 
+
+===== PAGE 3 =====
+2   
+ 
+ 
+In utilizing complementary third-party data tools such as D&B, the state could determine 
+whether they helped to: 
+ 
+Better deploy economic development resources where they are most needed. 
+ 
+Optimize workforce development and layoff aversion strategies. 
+ 
+Utilize a more robust data collection and analysis system to inform economic and 
+workforce development priorities. 
+By sharing business information and coordinating resources, public sector partners would also 
+be able to reduce duplication and link services toward better outcomes, and potentially reach a 
+greater number of businesses and workers. 
+Commerce, Employment Security Department (ESD), and the Workforce Board launched an 
+interagency agreement for a one-year trial with D&B to evaluate its effectiveness in achieving 
+these goals by leveraging the D&B toolset. This work included the use and analysis of D&B’s 
+proprietary data in conjunction with resources from the three partner agencies. The project, 
+which began in Fall 2019, was delayed as a result of the COVID-19 pandemic. Project partners 
+are grateful to D&B and the Governor’s office for a nine-month extension to June 2021 to be 
+able to more thoroughly test drive the tools, evaluate their effectiveness, and provide an overall 
+analysis of this project. 
+This report evaluates the D&B data toolset in engaging and supporting businesses in variety of 
+ways, working with multiple partners across the state. The project delved into three main areas: 
+1. Identify opportunities to increase business engagement and effectiveness in delivering 
+services across all stakeholders in Washington’s workforce system. 
+2. Assess the value of the D&B products as a tool to enhance business services and/or as a 
+potential data set in the proposed business engagement dashboard, and implications for 
+future funding. 
+3. Increase interagency (and partner) collaboration, data sharing, and support. 
+a.  Short term - D&B assessment  
+b.  Long term - Opportunities for ongoing collaboration, including the creation of a 
+dashboard displaying key business engagement indicators, as well as relevant 
+economic and workforce data. 
+Value Added by Dun and Bradstreet 
+This coordinated approach, in some cases, yielded positive returns. Interagency collaboration 
+resulted in shared data, resources, and knowledge; aided in the distribution of economic 
+
+===== PAGE 4 =====
+3   
+ 
+assistance services; and supported layoff aversion efforts. Though D&B data is imperfect, its 
+large database includes valuable information on a wide range of Washington businesses. This 
+information is not typically available to those without a D&B subscription. This can hinder the 
+type and level of assistance provided to businesses by agencies and partners who lack this type 
+of detailed, data-rich information. Initial investigations show this data has the ability to help 
+workforce and economic development professionals provide assistance to distressed businesses 
+and industries much more quickly, avert business closures and layoffs, place unemployed 
+workers into training or jobs, and connect businesses with qualified workers. By proactively 
+identifying distressed businesses before a WARN notice1 is issued, for instance, the state can 
+engage with businesses and workers when there is still time to make a difference. But the 
+successful and regular use of these D&B tools wasn’t universal. Also, some partners took issue 
+with incomplete data and data that was inconsistent with existing state databases, among other 
+concerns. The following is an overview of D&B’s strengths and weaknesses. 
+Strengths 
+ 
+Identifies previously unknown businesses.2 
+ 
+Accessible contact information for a wide range of businesses. 
+ 
+Predictive analytics (including proprietary Financial Stress and Growth Scores). 
+ 
+Data variables and filters providing insight into a business’s health and the ability to 
+refine searches by various criteria. 
+ 
+Demographic insight on business ownership, including those owned by women and 
+minorities. 
+ 
+Search and analyze region-specific data. 
+ 
+Shared database among partner agencies. 
+ 
+Availability of raw, complete data that can be downloaded and utilized. 
+ 
+Timely, actionable data to provide assistance more quickly. 
+ 
+Business knowledge and client support services. 
+Weaknesses 
+ 
+Training and technical skills needed to effectively use this tool. 
+ 
+Data caveats: 
+o Incomplete data. 
+o Incorrect data (or not updated). 
+ 
+1 The federal WARN (Worker Adjustment and Retraining Notification) Act requires companies with 100 or 
+more employees to notify affected workers 60 days before closures and layoffs. 
+2 State and local agencies do track businesses, although not all businesses are included in these 
+databases. 
+
+===== PAGE 5 =====
+4   
+ 
+o Data that significantly differs from internal state (ESD labor market and 
+Department of Revenue) data sources. 
+o Limited time series data that makes it difficult to do longer-term comparisons. 
+o Lack of transparency of the methodology used in predictive variables. 
+ 
+Data sharing limitations. 
+ 
+Cost of future investment. 
+ 
+Cost of FTEs to support software, toolkit, and partner assistance. 
+Pandemic impacts evaluation 
+The COVID-19 pandemic, which included the mandatory shutdown of businesses and schools 
+starting in March of 2020, had profound repercussions on Washington’s economy and 
+workforce. Because of this unprecedented disruption, projections and assumptions built on 
+previous economic cycles were no longer necessarily valid. This had significant ramifications 
+when evaluating the effectiveness of the D&B tools. These tools mine data from business-to-
+business transactions. Much of this typical business activity stalled during much of 2020 and into 
+early 2021. 
+Under more typical economic conditions, business financial distress is not as rapid or as 
+devastating as the sudden, enforced shutdowns of multiple industries, as was the case during 
+COVID-19. During more normal economic times, it is easier to pick out distressed businesses or 
+industries that can be helped by government services before they close or begin to lay off 
+workers. The city of Los Angeles, for instance, used D&B’s predictive analytics to identify 
+distressed businesses for the city’s layoff aversion program. This helped the city to exceed its 
+goals for identifying at-risk-businesses by 25 percent and boosted its consultation/site visits by 
+more than 50 percent3 
+During the pandemic—when many, if not most, sectors were effectively shuttered at least 
+temporarily—it became much more difficult to single out specific businesses or industries that 
+were underperforming relative to their peers. This relative underperformance can be a key 
+indicator of distress. Because businesses were being shut down across the board, it became 
+difficult to determine which merited outreach efforts. 
+Another hurdle during the COVID-19 pandemic was the limited time workforce and economic 
+partners had to learn to use new tools. These partners were in crisis mode, reacting to the 
+sudden economic freefall caused by a global pandemic. Many were unable to dedicate 
+ 
+3 Layoff Aversion Program FY2014: Economic Impact Analysis, Institute for Applied Economics, Los 
+Angeles County Economic Development Corporation, July 2014. 
+
+===== PAGE 6 =====
+5   
+ 
+significant resources to learning and using D&B tools as they prioritized more immediate relief 
+efforts. 
+However, the pilot showed that while the tools did not provide answers to every question, some 
+participating partners found they were useful. Staff who were able to effectively utilize these 
+tools connected with businesses to avert layoffs, identified potential recipients of economic 
+assistance grants, implemented job fairs, and conducted other outreach efforts. These users 
+recommended purchasing the D&B tools for use on an ongoing basis. While D&B is not, nor 
+should any data set be expected to be, a “silver bullet” that provides answers to all queries, this 
+pilot showed that it does complement other traditional economic and labor market information. 
+These partners found the products to be helpful supports, optimized to complement, rather 
+than replace, traditional data already in use. 
+ 
+ 
+
+===== PAGE 7 =====
+6   
+ 
+INTRODUCTION 
+In the age of information, access to accurate, real-time data is essential to maintaining economic 
+competitiveness. Information is the new commodity of the 21st Century, more valuable than gold 
+or oil. While the gathering and commercialization of vast troves of information is readily 
+apparent in the private sector, this vital resource also helps the public sector carry out its 
+mission in helping businesses survive and thrive. 
+State policy makers and practitioners require vast amounts of information for a myriad of uses, 
+from better understanding the day-to-day economic struggles of local marginalized populations 
+to outlining in-demand skills needed for family-wage jobs, to identifying struggling businesses 
+in need of assistance to tracking and encouraging growth industries. While the primary public 
+sector use case for this data during economic recovery is helping businesses with financial 
+assistance and layoff aversion, accurate, timely information is key during any economic cycle.  
+Washington’s public systems currently do not have access to reliable, up-to-date information 
+that can provide a more complete picture of the economic health of the state’s businesses, 
+including their financial viability, or their short- and long-term prospects for growth or 
+contraction. Without this ground-floor data, it has been difficult to target businesses for either 
+lay-off aversion or to support business growth or technology transformation. To be meaningful, 
+the system needs real-time data from most, if not all employers about their specific job make-up 
+and competitive outlook. This data is needed to build stronger partnerships with industry and to 
+map new career and credential pathways for workers, with an eye toward long-term labor 
+market value for both employees and employers. 
+Data analytics tools provided by third-party vendors such as Dun & Bradstreet (D&B) can help 
+public sector agencies keep on top of economic trends and gain a more nuanced understanding 
+of the needs of their business customers and workforce. This information can help answer 
+broader questions about local and regional labor markets, which jobs and industries are 
+declining or increasing, which emerging skills are needed to fill talent pipelines, and which 
+specific workforce and economic development resources can help business and industry the 
+most. Regional Workforce Development Councils (WDCs) along with county-level Associate 
+Development Organizations (ADOs) and Economic Development Councils (EDCs) are able to 
+deliver targeted services through timely, situational, business-specific data gathered at a local 
+level. This granular information is largely unavailable from other sources. For instance, D&B can 
+identify local business branches along with linked franchises. Other data may only list a 
+company at its headquarters location. 
+Recognizing this, the state’s Department of Commerce (Commerce), Employment Security 
+Department (ESD), and the Workforce Training and Education Coordinating Board (Workforce 
+
+===== PAGE 8 =====
+7   
+ 
+Board), with funding from the Governor’s office, created an interagency team to assess the 
+potential of D&B data to enhance business engagement with economic and workforce support 
+systems. The purpose of the interagency project was to identify public and potential third-party 
+business analytics data sets to improve business engagement and performance outcomes across 
+the workforce development system. This project specifically explored D&B’s proprietary data in 
+conjunction with the administrative data and research strengths of partner agencies. 
+The project also included the development of staff capacity across multiple agency partners to 
+understand and make use of the data to strategically deploy limited public resources to support 
+businesses, workers, and jobseekers. This state-level use of data was in addition to on-the-
+ground deployment by regional workforce and economic development partners, who were 
+better able to tailor their services to meet local business needs. Through shared business 
+information and coordinated resources, partner agencies also had the opportunity to reduce 
+duplication of services. Instead, they could “knock once” on a business door in a coordinated 
+way, rather than reaching out on multiple, often overlapping fronts and potentially frustrating 
+business customers. The D&B toolkit also helped workforce and economic development 
+organizations reach a greater number of businesses and workers, because the toolkit helped 
+surface a larger number of businesses than traditional analytics alone. 
+The D&B toolkit also has the potential to enhance local workforce and economic development 
+outreach by providing a data-driven understanding of the local and regional economic 
+landscape. With this ground-level understanding, staff will be better able to contact and engage 
+with businesses needing support—from those struggling to survive to businesses requiring 
+assistance with expansion efforts. Leveraging the power of D&B’s EconoVue and Market Insight 
+data tools could help staff connect with more of these businesses and result in increased 
+awareness and participation in the state’s business support systems. 
+ENHANCED BUSINESS ENGAGEMENT 
+Exploring new ways to drive business engagement and satisfaction with the state’s economic 
+and workforce systems helped inspire the short-term, multi-agency D&B data project. Data sets 
+such as those provided by D&B have the potential to aid in business engagement in a number 
+of ways. First, EconoVue and Market Insights are fed by a database of millions of companies, 
+along with contact information, that can be used to engage businesses directly. Secondly, 
+predictive variables can help guide specific outreach efforts, such as identifying growing 
+businesses or those in financial distress, to better engage with public economic and workforce 
+development systems that can offer support. This data can then be used to identify and 
+establish direct connections with individual businesses and customize a menu of services at the 
+state and local level based on specific needs. Providing workforce system access to this data 
+
+===== PAGE 9 =====
+8   
+ 
+would support more timely delivery of layoff aversion efforts, upskilling or reskilling current 
+workers, worker retention, and better preparation of new entrants for available jobs. 
+Previous research indicates this enhanced engagement is likely to benefit employers. Many are 
+not aware of the business services available to them. Meanwhile, the relatively small number of 
+businesses who do use these services have reported positive outcomes. According to the 
+Workforce Board’s 2020 Washington Employer Workforce Needs and Practices Survey4 prior to 
+the pandemic, nearly 70 percent of Washington’s more than 200,000 employers with two or 
+more workers experienced workforce challenges in the preceding 12 months, yet more than 
+one-third (36 percent) of Washington employers were unaware of the state workforce system 
+services. 
+Among employers who were aware of the public workforce system, more than one in four stated 
+they did not use the system’s services due to the perception that the services did not fit their 
+needs. However, of those employers who used state workforce system services, such as 
+WorkSource offices, at least 60 percent were more likely to report a helpful outcome when 
+addressing turnover and retention as their biggest workforce challenge, according to the 
+Workforce Board’s report. Given the gap between many Washington employers and their 
+knowledge about available workforce services, there is an opportunity to reach out to 
+businesses, increase awareness about the services offered, and support these businesses based 
+on their needs. 
+Business engagement efforts in other parts of the country have proven successful. One study 
+commissioned by the City of Los Angeles Workforce Investment Board and the City of Los 
+Angeles Community Development Department, showed these types of efforts, and others, led to 
+the retention of over 5,000 jobs for struggling businesses with their Layoff Aversion Program 
+(LAP).5 The layoff aversion program used D&B data to augment outreach efforts to businesses 
+deemed “at-risk,” and subsequently engaged them with communications and services. The study 
+estimated that the retained jobs were expected to create $2.3 billion in economic activity in Los 
+Angeles County and support 11,880-plus jobs generating a combined income of $690.5 million. 
+This analysis shows the potential direct and indirect benefits to the economy, which included 
+those “at-risk” jobs which were retained (direct) as well as those businesses whose revenues 
+ 
+4 Dula, C. (2020). 2020 Washington Employer Workforce Needs and Practices Survey. Olympia, WA: 
+Workforce Training and Education Coordinating Board.  
+5  Institute for Applied Economics, Los Angeles County Economic Development Corporation. (2014). Layoff 
+Aversion Program FY2014: Economic Impact Analysis. Los Angelas, CA: Los Angeles County 
+Economic Development Corporation. 
+
+===== PAGE 10 =====
+9   
+ 
+stem from those “at-risk” jobs (indirect). Averting layoffs, as this example shows, can pay off 
+immensely. 
+Another report by the Lumina Foundation noted that Cerritos College, a community college in 
+southeastern Los Angeles County, found that using real-time labor market data revealed 
+growing demand in niche areas of manufacturing that were hidden within traditional industry 
+data: 
+When these new real-time analytics are combined with traditional labor market analysis 
+and more consistent tracking of post-graduation labor market outcomes such as 
+employment and earning status, community colleges will strengthen their capabilities for 
+market-driven programming and be better-positioned to confront growing demands for 
+accountability and outcomes-based funding.6 
+Washington’s own Workforce Economic Recovery Plan,7 developed in September 2020 by the 
+Workforce Board to map an equitable path out of the pandemic, also recognized the value this 
+data could provide. The plan noted that D&B data could be used to quickly identify the growth 
+or contraction in businesses and industries and use that information to better target economic 
+and workforce recovery efforts. 
+Other examples of public workforce agencies utilizing D&B data to improve business 
+engagement include compiling more targeted mailing lists for job fairs (Madera County, CA), 
+proactively pinpointing financially stressed businesses for outreach (Oklahoma City), identifying 
+businesses with soon-to-expire lease agreements prior to closure or moving (San Joaquin 
+County, CA), identifying at-risk companies in priority sectors for layoff aversion intervention 
+(Morgan Hill, CA). 
+BACKGROUND 
+In 2019, the Workforce Board requested purchasing D&B business analytics, packaged as the 
+“EconoVue” tool, to the Governor and Legislature. This supported the Workforce Board’s 
+strategic priority and top initiative: enhanced and increased business engagement for the 
+comprehensive workforce development system (including all forms of education, training, and 
+support services). The idea behind this request was that the D&B toolset has the potential to 
+ 
+6 Dorrer, J. (2016). Using Real-Time Labor Market Information to Achieve Better Labor Market Outcomes. 
+Indianapolis, IN: Lumina Foundation. 
+7 Workforce Training and Education Coordinating Board. (2020). Washington's Workforce Economic 
+Recovery Plan. Olympia: Workforce Training and Education Coordinating Board. 
+
+===== PAGE 11 =====
+10   
+ 
+further business connections by supporting an employer 
+engagement dashboard and providing more targeted 
+and granular business information to workforce 
+development partners. 
+Commerce, ESD, and the Workforce Board, in 
+compliance with the federal Workforce Innovation & 
+Opportunity Act (WIOA), contracted with D&B to assess 
+the usefulness of the vendor’s data and tools. WIOA 
+statewide activity funds, provided by Gov. Inslee, 
+supported the purchase of a one-year, reduced-cost 
+license of the D&B product, and added staff capacity for 
+the three partner agencies to work with the data. The 
+funds also supported staff development to understand 
+and make use of proprietary D&B data to better and 
+more strategically deploy limited public resources to 
+support businesses, their workers, and jobseekers. This 
+project intentionally supported cross-agency 
+collaboration to understand and make recommendations 
+on the use of D&B data to improve relevant business 
+services provided by the state, its agencies, and partner 
+organizations, and explore its viability in supporting a 
+business engagement dashboard. With shared business 
+information and designated coordination of resources, 
+state agencies would also be able to reduce duplication 
+and link services towards better outcomes, and 
+potentially reach a greater number of businesses and 
+workers than the workforce development system does 
+currently. 
+Project funding included $214,500 (about 60% of market 
+cost) to purchase access to the D&B tools including 10 
+Market Insight (MI) licenses, 25 EconoVue (EV) licenses, 
+access to 25,000 contact leads, and detailed business 
+details (providing highly comprehensive information on 
+specific companies upon request), in addition to the 
+necessary staff training to use the tools effectively. The data derived from these tools was used 
+to augment other available administrative data sets to support and accelerate program and 
+COVID-19 IMPACT 
+The contract to evaluate D&B was 
+signed in 2020 at about the same time 
+as the COVID-19 pandemic shuttered 
+businesses and schools across the 
+state. This had major consequences for 
+both the timeline of the project and its 
+evaluation. 
+ 
+Many of the partner agencies and 
+stakeholders initially tasked to 
+participate in the usage and evaluation 
+of D&B tools were reassigned to focus 
+on the COVID-19 crisis, with staff and 
+economic resources prioritized toward 
+emergency layoff aversion and 
+economic assistance efforts.  
+Many were unable to dedicate 
+resources and staff time to learn and 
+employ the new software packages 
+despite possible benefits they might 
+yield. Nor were they able to test drive 
+the additional tools D&B introduced.  
+ 
+While the project’s timeline was 
+extended to accommodate this shift, 
+the usage of D&B tools was in many 
+cases focused on financial assistance, 
+economic recovery, and layoff aversion, 
+at the expense of identifying growing 
+sectors and aligning them with 
+workforce needs. 
+
+===== PAGE 12 =====
+11   
+ 
+policy decision-making related to business engagement and performance outcomes across the 
+workforce development system. 
+Staff across the three agencies (Commerce, ESD, and Workforce Board) collaborated on cross-
+system planning and implementation of new practices toward a comprehensive, state-wide 
+“upskill-backfill”8 approach to business engagement and services. However, due to the impact of 
+the COVID-19 pandemic, much of these cooperative efforts were refocused on layoff aversion 
+and economic recovery initiatives. Additional workforce system partners were invited to 
+participate but were unable to given the lack of available staff resources during the pandemic. 
+The intention of the original contract was for partner agencies to report to the Governor’s Office 
+on the project’s progress and provide information that could aid the decision-making process 
+for a possible budget request for the 2021 legislative session. However, the COVID-19 pandemic 
+dropped the state’s economy off the deep end. The pandemic posed a substantial projected 
+state budget shortfall, changed worker priorities, and led to a hiring freeze that limited staffing 
+capacity for this project. The pandemic also sunk the economy into a sudden recession, drying 
+up tax revenue and scuttling potential budget requests to the Legislature. 
+CROSS-AGENCY COLLABORATION 
+Washington state government agencies and their partners have embarked on a collaborative 
+effort to more effectively deploy limited public resources to support businesses, workers, and 
+jobseekers. This emphasis on enhanced collaboration and reduced “silo” mentality among 
+stakeholders is part of broader efforts by the Governor and policymakers to reduce duplicative 
+efforts, increase efficiency, and maximize public resources. 
+Continuing to coordinate efforts among the three project agencies—Commerce, ESD, and 
+Workforce Board—will enable effective cross-system planning and implementation of new 
+practices toward a comprehensive, statewide effort to build and retain talent in partnership with 
+the state’s businesses. Given the substantial effects COVID-19 has had on the economy and 
+workforce, interagency cooperation will be more vital than ever to maximize the effectiveness of 
+state resources. The collaborative interagency team that came together during this pilot was 
+invested in supporting each other and their local partners with the overall goal of achieving 
+economic recovery and future growth by: 
+ 
+Coordinating business services across agencies in response to data findings. 
+ 
+8 The Upskill-Backfill Initiative launched by the Workforce Board in previous years focused on providing 
+current workers with additional training to move ahead in their careers, opening up slots they left behind 
+to be backfilled by entry-level workers. 
+
+===== PAGE 13 =====
+12   
+ 
+ 
+Supporting the Workforce Board’s dashboard utilizing D&B and other data to create 
+a prototype data dashboard to track business engagement across the system. 
+ 
+Facilitating the participation of workforce and economic development stakeholders, 
+along with business and labor leadership representatives. 
+ 
+Providing accurate, relevant, timely, and accessible workforce and labor market 
+information. 
+ 
+Supporting efforts and mandates of WIOA funding. 
+ 
+Reducing duplication of work. 
+ 
+Linking services through better outcomes. 
+ 
+Increasing business engagement across the workforce development system. 
+ 
+Leveraging strategic opportunities such as the D&B toolkit. 
+DATA DASHBOARD TO HELP STAFF TRACK TRENDS 
+This project also included the development of a series of prototype data dashboards to track 
+business engagement across the workforce and economic development system. Developed by 
+the Workforce Board and ESD, the dashboards feature D&B tools along with administrative data 
+from partner agencies to track the system’s improvement of business service provision. This 
+includes D&B data showing businesses in growth and decline and women and minority owned 
+businesses. Data from other partner agencies helped develop other dashboards that track the 
+number of businesses using public workforce development services sorted by categories such as 
+location, industry sector, size, and type. Future development of the dashboard might also track 
+the type(s) of services received along with how satisfied businesses are with those services, 
+along with occupational trends among businesses utilizing system services. The dashboard is 
+intended to help frontline staff, managers, and policymakers make informed decisions about 
+how to maximize business and worker services and resources. 
+The dashboards below display the following information: 
+ 
+The Business Engagement Dashboard in tab one displays employer and job seeker usage 
+of WorkSource services, including employer account requests, direct posted jobs, job 
+seeker registrations, and job searches sourced from ESD. Tab two displays women- and 
+minority-owned businesses by country and industry sourced from D&B, along with job 
+postings and unemployment claims sourced from ESD. 
+ 
+ 
+The Growth and Decline Dashboard displays businesses in growth and decline sorted by 
+county sourced from D&B, along with country unemployment rates sourced from ESD. 
+ 
+
+===== PAGE 14 =====
+13   
+ 
+ 
+D&B Growth and Decline (by industry)  
+D&B Growth and Decline (by industry)  
+
+===== PAGE 15 =====
+14   
+ 
+ 
+Over the course of evaluating the D&B products, the project team also engaged partners to 
+discover what indicators and data would be most useful for them and their clients related to 
+business engagement and satisfaction, and how they can be measured. For the purposes of 
+developing the prototype dashboards, data was sourced from ESD, Commerce, and D&B. Data 
+sets to include and/or to be explored for inclusion in future versions9 of a dashboard include: 
+ 
+Dun & Bradstreet Washington Businesses Extract 
+o Business growth and contraction 
+o Financial stress 
+o High Risk Businesses 
+o WARN notice 
+ 
+Monthly unemployment claims count 
+ 
+Monthly Unemployment Insurance (UI) rates by county 
+ 
+Weekly initial unemployment claims by county 
+ 
+Workforce supply & demand data tables 
+ 
+Economic development assistance programs 
+ 
+9 Note: The addition of each new data set and ongoing maintenance of new and existing datasets for the 
+dashboards would require staff time develop and maintain. 
+Business Engagement  
+
+===== PAGE 16 =====
+15   
+ 
+ 
+U.S. Census Small Business Pulse Survey data 
+ 
+Occupational demand 
+ 
+Workforce Development/Workforce System Services Data 
+Depending on the source, data can be refined locally by county, zip code, census tract or 
+Workforce Development Area (WDA) region. This protype was developed by the Workforce 
+Board with assistance from ESD as a proof of concept, with other workforce partner agencies 
+supporting its future development with data sources to expand the scope of offerings. 
+THE D&B TOOLKIT: WHAT’S INSIDE 
+D&B provides commercial data, analytics, and insight for businesses and public-sector 
+customers. The one-year trial purchased from D&B included access to three products: EconoVue 
+(EV), Market Insight (MI), and detailed financial reports on individual businesses. Although EV 
+and MI employ similar data, the platforms vary in terms of their sophistication and necessary 
+data analyst skills. D&B acquires data by analyzing payment experiences, banking information, 
+government registries, and various online tracking systems to create a robust profile of millions 
+of companies from around the world. 
+The service provides access to an employer database (including more than 400,000 Washington 
+employers) and is designed for public sector use. EV is already in use in at least 10 states. These 
+states use this information to make more informed decisions about their workforce investments. 
+EV provides both insight into identifying employers at risk of layoff or even closure, as well as 
+positive information about employers or sectors likely to begin or continue expanding. 
+D&B offers unique proprietary data sourced from a wide variety of global data elements, 
+including: credit scores and ratings, over one billion trade experiences, corporate family trees 
+and beneficial ownership, banking data, firmographics (demographics of business sectors and 
+industries), business registrations, relevant contacts and principals, and buyer intent. The toolkit 
+also can analyze financial stress, enabling the workforce system to strategically target assistance 
+to businesses likely to lay off employees. 
+For example, the D&B Financial Stress Score (categorized as low, medium or high) provides 
+predictive insights of the businesses most likely to fail within the next 12-18 months.10 The D&B 
+Financial Stress Score assigns a probability of a business experiencing the following: 
+ 
+ 
+Ceasing operations following assignment of bankruptcy. 
+ 
+Ceasing operations with loss to creditors. 
+ 
+Voluntarily withdrawing from business operation leaving unpaid obligations. 
+ 
+10 https://econovue.zendesk.com/hc/en-us/articles/360014389254-ProspectVue-Financial-Stress-Score 
+
+===== PAGE 17 =====
+16   
+ 
+ 
+Going into receivership, reorganization, or making arrangements for the benefit of 
+creditors. 
+ 
+According to D&B, companies with low Financial Stress Scores are good candidates for strategic 
+partnerships and expansion incentives. Businesses in the medium category are prime candidates 
+for proactive outreach. Often, employers in the high stress category have already laid off 
+employees or are taking steps to close operations, resulting in a need for Rapid Response or 
+Rapid Re-employment engagement. 
+These tools are powered by D&B’s proprietary business database for economic analysis and 
+detailed company information. This data is supplemented by labor market resources, including 
+Quarterly Census of Employment and Wages (U.S. Bureau of Labor Statistics), National 
+Establishment Time Series (NETS), a private sector source for U.S. business microdata, 
+CareerOneStop.org (the U.S. Department of Labor’s career, training, and job search website), and 
+Indeed.com (a market-leading search engine for jobseekers). 
+Proprietary predictive variables such as the Financial Stress Score and Growth Score provide 
+significant insight not available from other vendors. This data does come with a caveat, however. 
+Users are not privy to the data and methodology that these scores are derived from. As a result, 
+users cannot independently verify the reliability of the data. 
+ECONOVUE 
+This tool allows users to search for and view information about businesses with certain criteria 
+without needing to know basic query knowledge. Users can explore and analyze companies and 
+download detailed information on them in different formats including lists, info boxes, company 
+reports, and company contacts. For example, users can search for businesses with certain NAICS 
+codes, the standard used by federal statistical agencies for classifying businesses for the purpose 
+of collecting, analyzing, and publishing data related to the U.S. economy. They can also search 
+by business names within a city, zip code, or WDA. 
+EV uses numerous data visualization tools and is designed to be drilled down upon, allowing the 
+user to investigate and filter based on location, industry, number of employees, financial 
+attributes, COVID-19-related attributes, and other criteria. For example, a user could begin by 
+analyzing the relative location quotients of industries within a WDA and then drill down to see 
+all the restaurants in a city that have a high level of financial stress. Data including business 
+contact information can be extracted in Excel and then used accordingly. 
+
+===== PAGE 18 =====
+17   
+ 
+ 
+Distinguishing characteristics of EV include:  
+ 
+Provides users with a good understanding of industries, businesses, and employees. 
+ 
+Filters by WDA, county, zip code, city, and radius searches. 
+ 
+Filters by NAICS codes, O*Net codes and sectors, number of employees, Financial Stress 
+Scores, Growth Scores, COVID-19 related attributes, and other filters. 
+ 
+Provides users with fresh data each quarter. 
+MARKET INSIGHT 
+MI is another way to search and extract D&B data. Extracting data requires some basic query 
+knowledge and logic. Using the tool requires some training time and a strong Internet 
+connection, but once learned, is relatively straightforward to use (though can be slow depending 
+on one’s broadband connection). MI includes all the data found in EV (timing and update 
+schedules prevent the data from being identical at every point in time) along with other 
+features. Rather than relying on a heavy visualization approach to the data, MI allows the user to 
+build data sets, and some visualizations through cubes, trees, and Venn diagrams. The defining 
+characteristics of MI include: 
+ 
+Typically used to build data tables based on selected variables. 
+ 
+Additional variables/filters added since COVID-19: PPP Loans > $150,000, pre-COVID-19 
+Financial Stress Score, WARN Notices, areas and businesses impacted by natural 
+disasters. 
+ 
+Can be used to find linkages of businesses and business “family trees.” 
+ 
+Data is refreshed monthly.  
+
+===== PAGE 19 =====
+18   
+ 
+It’s up to users to select each variable when building and analyzing these data sets. For that 
+reason, a solid understanding and knowledge of the variables and objective is imperative. 
+Through MI it is possible to extract the entire Washington state business data universe (based 
+on D&B’s perspective) and use this data with other relevant analytics to build a detailed picture 
+of economic regions. An additional benefit to MI is access to national and global data. This 
+allows detailed linkage analysis as well as import and export work. This also allows users to look 
+at cross-border data with other states, which is useful for border cities like Vancouver, 
+Washington, when looking at local information that would include neighboring Portland, or 
+businesses in Whatcom County interested in exporting to British Columbia. 
+EVALUATION PROCESS 
+Beginning in May 2020, the project team worked to provide access and support to users in 
+various state agencies for both EV and MI. These outreach efforts were initially hindered as 
+WDAs and other organizations prioritized their efforts to respond to the immediate needs of 
+their customers in response to COVID-19 before they allocated resources to this project. As a 
+result, early potential benefits of using this software remained unrealized as potential 
+participants initially focused on pandemic mitigation measures. Only in July 2020 or later were 
+many partners able to begin to focus their efforts on training and learning the D&B tools, and to 
+implement a business engagement strategy within the COVID-19 landscape. Furthermore, the 
+needs of project staff in Commerce and the Workforce Board were similarly focused on the 
+response to COVID-19 coupled with a state hiring freeze. This impacted the ability of the 
+Workforce Board to put a convener in place and delayed the hiring of an additional analyst at 
+Commerce to supplement staff already working on the project. Both the convener and analyst 
+were included in the original proposal.  
+Starting in May 2020, the D&B project team allocated EV and MI licenses. The team was mindful 
+to distribute the licenses equally across agencies, including WDAs and other partners, and to 
+ensure they were being used. EV was offered to each WDA and to the Washington Workforce 
+Association (WWA), which represents the state’s 12 regional WDAs. Commerce also worked to 
+engage Associate Development Organizations (ADOs) and city/county economic development 
+offices, although due to COVID-19 many did not have the desire or capacity to engage in D&B. 
+The initial training was offered by D&B representatives in early June 2020, with many of the 
+WDAs participating. Monthly training sessions exploring different uses for EV and MI were held 
+though the end of the contract in May 2021. 
+As part of the evaluation process, the project team worked to understand the needs and 
+available resources of each D&B user. These efforts included reaching out to each user and 
+leading them through discussions of existing business engagement practices to better 
+understand how their activities and best practices could be augmented through the usage of 
+
+===== PAGE 20 =====
+19   
+ 
+D&B tools. This allowed the project team to determine if the users’ work aligned with the D&B 
+toolkit, and to support them with training and technical assistance through D&B customer 
+service representatives. Over the course of the pilot, D&B representatives assisted in numerous 
+applications of data tools for specific projects, resulting in positive outcomes (see box below, and 
+Appendix A) that would otherwise have been possible. 
+The wide discrepancy in resources available to D&B users also had a significant impact on how 
+effectively participants were able to leverage the D&B tools. This trend was evident across a 
+broad spectrum of users including the WDAs, ADOs, the Department of Social and Health 
+Service’s Division of Vocational Rehabilitation (DVR), Washington State Board for Community 
+and Technical Colleges (SBCTC), Office of Minority & Women's Business Enterprises (OMWBE), 
+and other economic and workforce development partners. In general, the more well-resourced 
+partners were able to dedicate more staff time to learn how to effectively use D&B tools and 
+ultimately, assess their value. Because of differences in capacity, EV and MI licenses were 
+reallocated during the project to maximize usage. 
+Commerce likewise played a significant role in increasing the breadth of those who could 
+benefit from the D&B toolkit. Beginning with their own economic recovery dashboard,11 the 
+project team worked with Commerce’s consultants from the Boston Consulting Group (BCG), to 
+explore the possibility of using D&B data in their dashboard. Although D&B data was ultimately 
+not incorporated in this dashboard because of the uncertainty over how long the agency would 
+have access to the data, the experience did enhance interagency relationships and resulted in 
+the use of ESD data in the dashboard. The dashboard serves as a template of not only pertinent 
+economic data, but how to work collaboratively across agencies. 
+Similar efforts can be seen in the relationships with other stakeholders the project team worked 
+with including the Washington Hospitality Association (WHA), the Washington Arts Commission, 
+various local governments, and others. In each instance, these partners were looking for more 
+timely data to aid in their support of businesses and nonprofits that had been most impacted by 
+COVID-19. The project also offered an opportunity for the project team to see how D&B data 
+compared to external partners’ data resources, much of which they purchased through other 
+private vendors. 
+ 
+As part of the D&B evaluation, ESD explored the usage of the D&B data and products by 
+allocating licenses to regional economists at the agency’s Labor Market and Economic Analysis 
+(LMEA) unit. Given the close relationship between ESD and the WDAs in collecting, analyzing 
+and distributing data, D&B tools were viewed as a potential solution to streamline data sharing. 
+ 
+11 https://www.commerce.wa.gov/datadashboard 
+
+===== PAGE 21 =====
+20   
+ 
+Data sharing constraints and timeliness of data have posed challenges in the past. (see Appendix 
+B). Unfortunately, COVID-19 interfered with these explorations in applying D&B tools to 
+supplement and enhance existing data sets and other information. 
+FINDINGS 
+Over the course of the evaluation process, users (primarily WDAs and Commerce, working with 
+their partners) employed D&B tools for dozens of projects. This included: 
+ 
+Gathering and analyzing data for strategic planning. 
+ 
+Identifying women- and minority-owned businesses. 
+ 
+Identifying and engaging previously unknown businesses. 
+ 
+Identifying inactive or closed small businesses. 
+ 
+Identifying and vetting potentially eligible companies for business development, grants 
+and workforce aid programs and services. 
+ 
+Providing informed rapid response. 
+ 
+Providing proactive targeted outreach. 
+ 
+Helping with layoff aversion. 
+ 
+Identifying workforce trends. 
+ 
+Identifying the size of specific industries and sectors. 
+Because of the pandemic, these tools were often used to identify struggling businesses that 
+could benefit from layoff aversion or economic aid programs. The project team worked with 
+participants to capture their experiences with the D&B toolkit and the value it provided. The 
+following is an example of one such successful project: 
+
+===== PAGE 22 =====
+21   
+ 
+ A more complete list of projects undertaken using D&B tools and evaluated can be found in 
+Appendix A. 
+ 
+Keep businesses operating, employees working through early identification of distress 
+Background: One of the state’s WDCs, Workforce Snohomish used EV to identify the tipping 
+point where business intervention is most beneficial in preventing layoffs or closure. 
+Results: EV’s filter features helped uncover a struggling sole source provider, and its more 
+than 800 workers, who were at significant risk of layoffs. After reaching out to the business, 
+the WDC was able to implement a strategy two months before layoffs were to occur. At this 
+point, the WDC helped the company file a WARN notice with ESD as well as facilitate three 
+on-site Rapid Response units. In combination with local partners at the labor council, a Trade 
+Adjustment Assistance petition was filed and certified, allowing employees access to federal 
+WIOA funds and other opportunities within the Trade Adjustment Assistance Act. More than 
+200 employees were able to find new opportunities due to WDC efforts to align resources 
+and other job openings to these at-risk employees, giving them enough time to transition 
+rather than continuing down the road to layoffs. 
+Impact: The WDC, aided by D&B EV data, was able to identify the distressed company and 
+help more than 200 workers with placement in new jobs and work opportunities, while the 
+company was able to continue to operate. 
+Take-away: According to the WDC, D&B has been a very useful tool and provided 
+significant value in this initiative. The effort to triage the struggling company was 
+complemented by the collaborative efforts of other workforce partner agencies. 
+D&B tools helped yield three definitive positive results from this project: 
+1. Support for the company and its hundreds of employees. 
+2. Leveraging federal programs like the Trade Adjustment Assistance Act and WIOA. 
+3. Creating synergy and connections among partners and other WDCs. 
+ 
+Without EV providing early insight about this company’s economic distress, it’s likely 
+hundreds of employees could have lost their jobs and the business would not have 
+continued to operate. Instead, the company is still in business, many employees avoided 
+layoffs and realized other opportunities, and the WDC was able to provide a template for 
+future outreach efforts utilizing D&B tools. 
+ 
+
+===== PAGE 23 =====
+22   
+ 
+Key Strengths and Weaknesses 
+Upon completion of the evaluation period, the project team identified common themes 
+regarding the usage of the D&B toolsets, including where they provided the greatest value, and 
+where their limitations lie. 
+Strengths 
+1. Identifying previously unknown businesses: D&B data provides users the opportunity to 
+proactively connect with businesses that are not accounted for in existing databases. 
+Businesses can be searched by geographic area, industry, sector, occupation, financial 
+health, and numerous other filters. The D&B methodology of collecting data and 
+measuring businesses also includes locating non-traditional workers (temporary, 
+contracted, or others working in the gig economy), which provides a wider range of sole 
+proprietors and other smaller firms than existing systems can provide. The D&B database 
+provides contact information for these companies including names of high-level 
+employees, addresses, phone numbers, and frequently, email addresses. 
+ 
+Finding unknown businesses was one of the more widely used D&B applications. 
+Numerous WDAs and other users applied various filters to discover businesses that were 
+not a part of their existing list of businesses. Commerce and its partners also used this 
+function to identify and vet businesses to determine eligibility for economic assistance 
+grants. This data can augment existing data bases and make outreach more efficient 
+than blind cold calls. 
+ 
+The D&B data base can also provide more granular details on a business and its health. 
+Business representatives, armed with more detailed knowledge about a company’s 
+financial situation, credit issues, and more, can frame a conversation to best benefit the 
+company. For example, a representative can talk about the state’s Shared Work program 
+with businesses that may benefit from temporarily cutting their employees’ hours, while 
+they receive partial unemployment benefits for lost wages, or the state’s Customized 
+Training Program, which provides interest-free training loan assistance. 
+ 
+2. Predictive Analytics: A significant benefit of the data is the use of D&B’s proprietary 
+predictive indicators that are in the form of Financial Stress and Growth Scores. The 
+Financial Stress Score (FSS) is D&B’s assessment of the likelihood a business will fail. For 
+example, a firm with a “high” FSS score has a much greater probability of failing within 
+the next 12-18 months than a business with a “medium” or “low” score. The Growth 
+Score is D&B’s judgement about the trajectory of a business at that point in time. A 
+
+===== PAGE 24 =====
+23   
+ 
+business in the category of “Increase in Scale” is more likely to grow, and increase 
+spending and borrowing. On the other hand, a business designated as showing “Early 
+Signs of Decay” would suggest that although a business may maintain its size, its 
+borrowing or spending is likely to fall. This kind of insight can prioritize business 
+engagement efforts. 
+ 
+Updated monthly, both variables drive focused analysis of businesses that have a greater 
+likelihood of failure than others. The ability to filter and prioritize businesses allows for a 
+targeted approach at the local WDA level to serve and triage businesses that are at high-
+risk. This data also helps target growing companies that may be looking to add 
+employees. 
+The use of this data enabled Commerce, ESD, the Workforce Board, and their partners to 
+find and communicate with businesses that might otherwise go unnoticed. They were 
+able to speak directly to targeted firms and implement strategies that support both 
+struggling and growing businesses. 
+Predictive variables were another widely utilized piece of the D&B toolkit. These variables 
+helped workforce professionals target a wide range of subsectors (such as Paycheck 
+Protection Program loan recipients who received over $150,000—lower amounts are not 
+publicly available), industrial sectors, and small businesses to more effectively discover 
+and engage businesses most in need of assistance. WDAs were also able to use these 
+predictive variables to successfully identify distressed businesses and provide outreach 
+services to prevent business closures and layoffs. In cases where business did end up 
+closing, employees were able to more quickly find new opportunities due to WDA efforts 
+to align resources and communicate about job openings. 
+D&B’s financial stability and financial stress tools can be helpful in determining where to 
+channel limited resources. It’s important that when a WDA or other government program 
+offers business assistance such as training, that this investment is likely to pay off in 
+keeping the business going, rather than sinking limited resources into a business unlikely 
+to survive, even with assistance. 
+D&B can also track the effectiveness of outreach programs by identifying businesses that 
+have received assistance or aid and then measuring their performance going forward. 
+Dynamic Data Variables and Filters: As previously mentioned, an advantage of D&B tools 
+is the ability to use filters to search for businesses behavior (see above). While these 
+provide accurate and timely information under normal circumstances, the status quo at 
+times is upended by events such as natural disasters, global recessions, and other 
+
+===== PAGE 25 =====
+24   
+ 
+unforeseen circumstances, such as the COVID-19 pandemic. In these cases, traditional 
+metrics and predictions may no longer be valid, and D&B continues to add new filters 
+and adjust variables in an attempt to capture the “new normal.” During the product 
+evaluation, COVID-19 and a series of wildfires dealt devastating blows to the state. D&B 
+responded by adding new filters to account for these factors in their data and predictive 
+variables. 
+3. Diversity, Equity and Inclusion: D&B includes in its database filters that can identify 
+businesses that are veteran-, women-, or minority-owned. This data is sourced from the 
+state’s  OMWBEand Department of Veterans Affairs and merged with D&B’s businesses 
+through their matching process. Using this information, WDAs identified women-and 
+minority-owned businesses to engage in diversity-designated RFQ and RFP 
+opportunities. This data was also used to assess the ratio of diverse business owners and 
+could potentially be used to more effectively track these trends over time. 
+ 
+Although these databases are not comprehensive, due in large part to the fact that it is 
+based on individual businesses volunteering this information, these sources represent 
+another resource of information in an area that has traditionally been difficult to 
+accurately assess. Other variables that were explored and could be added to databases 
+to expand these efforts include identifying businesses that are owned, employ, or are 
+actively seeking to employ, people with disabilities, veterans, or formerly incarcerated. 
+ 
+4. Region-Specific Data: D&B allows users to search within a county, WDA, city, zip code or 
+a defined radius to pinpoint which businesses are in the area. Users reported this feature 
+would be useful both in identifying similar businesses and competitors, as well as 
+potential supply chain partners and customers. Another beneficial use is providing 
+information to companies that have recently relocated to an area, or are looking to do 
+so. 
+ 
+5. Common shared database among partner agencies: Another benefit of the D&B toolkit is 
+the opportunity for Commerce, ESD, Workforce Board, and their partners to work with a 
+common shared data set. This allows these agencies to investigate and communicate 
+directly with specific businesses. Business-specific data does exist within the Labor 
+Market and Economic Analysis (LMEA) division of ESD. However, due to federal and state 
+laws and other agreements, much of the data cannot be shared other than at the 
+aggregate level such as at the county, WDA, or metropolitan statistical area (MSA) level. 
+The same is true with access to more granular, disaggregated data from the Washington 
+Department of Revenue (DOR). This data requires a high level of security to access it and 
+cannot generally be shared between agencies. For that reason, data can be accessed but 
+
+===== PAGE 26 =====
+25   
+ 
+cannot be reported or shared with partners (WDAs, EDCs & ADOs, or WorkSource) that 
+have the ability and capacity to work with these businesses directly. 
+ 
+D&B’s common shared database allows all partner agencies with access to use and share 
+information freely. During the trial, WDAs and Commerce worked with other partners 
+(chambers, municipalities, EDCs, business and trade associations) to perform targeted 
+searches and analyses and were then able to share their data and findings. 
+ 
+7. Availability of Raw Data: One major constraint to using publicly available data is privacy, 
+which compels sources to anonymize data and even omit data for certain companies if 
+their size, scale or operations would essentially reveal their identity. This occurs often 
+down to the establishment level, and can have the effect of suppressing more detailed 
+data around specific companies or entire industries in some cases. D&B’s advantage in 
+this context is that EV and MI provide a lot of granular data related to specific industries 
+that is generally not available for other similar products or publicly available data. 
+Generally, available sources have more data related to job seekers, but much less for 
+employers. 
+ 
+According to some users, the D&B products and databases are particularly useful in 
+analyzing large chunks of raw data, as opposed to repackaged data provided by other 
+tools. The ability to download, analyze, manipulate and interpret data for individual user 
+needs was an important feature for some users. 
+8. Timeliness of Data: An advantage to D&B is that EV and MI are updated quarterly and 
+monthly, respectively. By contrast, traditional publicly available state and federal data 
+sources vary widely in how often they are updated. Some may only be updated quarterly 
+or annually and publishing dates can lag further behind. This delay can mean the 
+difference between providing a lifeline for a struggling business through layoff aversion 
+measures, and a company going out of business and workers filing for unemployment. 
+ 
+9. Business Knowledge and Client Support Services: One more significant benefit of D&B is 
+its client support services. The support includes monthly trainings for EV and MI, one-on-
+one tutorials of how to utilize the D&B toolkit, as well as responses to time series data 
+requests. The responsiveness of the client support team and D&B’s industry experience 
+(including contracts with 10 other states), provides partners and users of the D&B toolkit 
+with needed, timely help, and a better grasp of how to maximize the tools. 
+ 
+ 
+Weaknesses 
+
+===== PAGE 27 =====
+26   
+ 
+Over the course of usage and evaluation of D&B tools, users generally found value in various 
+applications, but agreed that like any data source, D&B is not a “silver bullet” that could answer 
+all economic and workforce questions. These limitations manifested themselves in a number of 
+ways for different reasons. Some of the more commonly voiced shortcomings are as follows: 
+1. Training Requirements: While MI and EV are relatively straight-forward for a user with basic 
+query and data knowledge, the tools do require some time to become proficient. This was 
+one of the most common concerns among users. Numerous WDAs, ADOs, and other 
+organizations were unable to allocate time to learn to use the products when resources were 
+stretched thin during the COVID-19 pandemic. In addition to learning how to use the tools, 
+it is necessary for users to learn about the underlying data. Even with training provided by 
+D&B, these challenges resulted in many of the licenses going unused for periods of time, 
+and occasionally being reallocated. While this was a significant challenge during the 
+pandemic, it is not clear what the capacity for training would be under normal 
+circumstances. 
+ 
+2. Data Caveats: As with any data source, there are many caveats to D&B data including errors 
+in the databases related to companies’ information. During the D&B evaluation period, for 
+example, a company’s revenue, number of employees, contact data, and other information 
+was not always accurate or did not match other data sources, including the state’s 
+Department of Revenue and ESD. Key issues included: 
+ 
+a. Incomplete data: When conducting a search using specific filters, the list of 
+businesses generated would leave out some companies known to exist in other 
+data bases. For example, D&B has a field for minority-owned businesses, or 
+women-owned businesses, and results did not fully capture the number of 
+minority- and woman-owned businesses. Other searches were found to yield 
+similar discrepancies. 
+ 
+Data was also incomplete during a search for small businesses, as evidenced by a 
+project carried out by Commerce that resulted in finding data for only about 75 
+percent of the businesses that applied for a small business grant program. This 
+could be due to unintended adverse effects of quality control measures. D&B 
+eliminates non-corporate domain names as part of its vetting process, so any 
+email addresses that may contain a Google, Outlook, Yahoo or similar domain are 
+weeded out by default. This can result in a significant undercount of email 
+contacts for small businesses, which often use such email addresses. 
+ 
+
+===== PAGE 28 =====
+27   
+ 
+b. Incorrect Data: Errors were discovered in the databases, including information 
+about revenue, number of employees, contact data, and other company details. 
+In other instances, D&B data dropped many small businesses, and nearly all 
+micro-businesses, from its database. These smaller businesses were discovered to 
+be open and operating. These discrepancies were discovered in a number of 
+different projects by WDAs and Commerce. 
+ 
+Because of these discrepancies, some users were wary of using D&B tools as a 
+front-line source for identifying businesses for financial assistance. This meant 
+practitioners sometimes did not use the tool to see if businesses met qualifying 
+criteria such as revenue levels or employee number to qualify for business 
+assistance, grants, loans or other support measures. To ensure equitability across 
+all applications in reviewing such qualifications, and protect itself from legal 
+ramifications, the state does not advise any agency to use D&B in this way. 
+ 
+c. Limited ability to measure business openings and closures: Because the data file 
+D&B maintains is constantly changing due to their “business verification” system, 
+rather than strictly due to businesses actually opening and closing, users cannot 
+compare groups over time (i.e., 400 businesses in NAICS code XXX in June and 
+200 businesses in NAICS code XXX in July does not necessarily indicate an 
+increase in businesses operating in that NAICS code). This presented challenges 
+when users attempted to measure business closures in certain industries or 
+regions during the pandemic. While D&B could show how many businesses were 
+operating at one point in time compared to another, it could not show 
+specifically which businesses had closed or opened. This data also varied greatly 
+from reputable public resources, including Opportunity Insight’s Economic 
+Tracker and the U.S. Census’s Small Business Pulse Survey. Commerce has chosen 
+to rely on these free resources over D&B in tracking small business closures after 
+a thorough comparison of multiple data sources. 
+ 
+d. Methodology of Predictive Variables: There are only two predictive variables for 
+which users have access (Material Change and Financial Stress Scores). While 
+D&B has provided insight into how much of their data is collected, and how their 
+predictive variables are developed, their product is proprietary and users do not 
+fully understand the methodology used to calculate these scores. For economists 
+and other practitioners, it can be difficult to accept the efficacy of the data 
+without knowing what goes into the “black box” calculations. Although D&B 
+reported the development of additional predictive variables such as a COVID-19 
+
+===== PAGE 29 =====
+28   
+ 
+Index and a Lay Off Probability Score, these were not available to the participants 
+during this project. 
+Because of these discrepancies, some users were wary of using D&B tools as a 
+front-line source for identifying businesses based on specific variables. That 
+included a reluctance to use D&B tools to vet whether a business meets 
+qualifying criteria such as a revenue level or employee number to qualify for 
+business assistance, grants, loans or other support measures. 
+3. Sharing Limitations: Although D&B can be shared among agencies more freely than other 
+data sources, the same cannot be said for sharing data on specific companies outside of 
+these partners. Because this data is proprietary, it is only sharable in aggregate (i.e., a user 
+cannot say X business publicly, but we can say X industry). This places limitations on the 
+granularity of data that can be shared with outside stakeholders. For instance, licensed users 
+could share the name and contact information of a financially distressed business with each 
+other, but would not be able to share this information with other unlicensed people, entities, 
+or the public. 
+ 
+4. Cost of Future Investment: Vendors such as D&B generally offer their products and services 
+on a subscription basis, with customers paying a monthly or annual fee that is sometimes 
+negotiable. The one-year trial of the D&B data, software, and training was acquired at a 
+significantly reduced cost—an almost 40 percent reduction of the standard market rate. This 
+reduced rate was presented by D&B as an affordable way to demonstrate the product’s 
+value. The state could then test drive the tools to see if they made sense to incorporate into 
+the state’s workforce development resources and strategy. Initial costs associated with D&B 
+was $214,500. However, this does not include the additional staffing required to facilitate the 
+product. The total planned staffing costs between the three partners was $324,848, bringing 
+the project total to an estimated $539,348. The initial D&B exploration project was paid for 
+primarily using the Governor’s WIOA discretionary funding alongside $65,000 from 
+Commerce to support a 0.5 FTE. 
+When considering whether to invest in the D&B toolkit, the cost of additional staff time should 
+be added to the price tag. It will require at least one FTE to develop, facilitate, and implement a 
+usage strategy with current and future partners to maximize the effectiveness of the toolkit. 
+Additional staff time would also be required to provide the ongoing support of the software 
+users, coordinate training, act as liaison between agencies, and to perform or manage ad hoc 
+data request from partners. This position would engage with D&B tools to learn best practices 
+to enhance and increase usage of the product across the Washington workforce system. For 
+example, there is great opportunity to leverage the product and align it with the needs of the 
+
+===== PAGE 30 =====
+29   
+ 
+State Board for Community and Technical Colleges—which helps oversee the state’s 34 
+community and technical colleges. D&B data can be used to analyze employer demand for 
+certain skills and competencies, along with jobs projected to grow in certain industries. This 
+information could help shape offerings at local community and technical colleges that deliver 
+training. Based on the costs in the initial proposal for the 1.0 FTE for the ESD position, the staff 
+costs would be around $150,000 per year. Assuming similar market costs and the same type of 
+D&B package, the cost would be around $360,000 per year, for a total of $510,000 per year. 
+CONCLUSION 
+The D&B toolkit, including MI and EV products, is able to provide added value to workforce and 
+economic development agencies seeking to help Washington businesses meet economic 
+challenges, keep their employees working, build their revenue, and in the best cases, expand. 
+This complementary data set can be a missing piece, augmenting and enhancing data already 
+collected and used by workforce and economic development organizations. In other cases, the 
+data has proved less reliable and incomplete, as well as unverifiable and less shareable, because 
+of its proprietary content. 
+One theme that emerged during the pilot is the overall inconsistency of state and regional 
+contact databases and the incomplete identification of businesses within customer relationship 
+management platforms. In some cases, D&B tools were able to identify many businesses that 
+were missing in government and other stakeholder databases. In other cases, these databases 
+contained businesses that the D&B tools missed. While none of these data sets should be 
+perceived as all-inclusive, when merged or compared with one another they help build a more 
+complete picture of Washington’s diverse business landscape. 
+In response to the pandemic, D&B users immediately focused on industries and workers in 
+particularly hard-hit sectors, using D&B tools to locate hotels, restaurants, bars, entertainment, 
+retail and similar venues that had suddenly plunged into financial crisis after state-mandated 
+shutdowns. Other efforts focused on identifying healthcare capacity and needs, evaluating 
+diversity and equity impacts, finding personal protective equipment (PPE) manufacturers, and 
+identifying businesses deemed “essential” and focusing on their immediate workforce needs—
+from healthcare operations and childcare facilities to food processors and grocery stores. This 
+information was utilized in different ways. For frontline rapid response and business outreach 
+teams, it was used to analyze specific businesses and tailor messages around which services they 
+were likely to need the most (such as educating businesses whether their employees qualified 
+for a COVID-19 vaccine per the state’s requirements). The D&B data also helped provide a 
+clearer picture of local labor markets, helping shape decisions on where to target resources. 
+D&B’s tools were also able to help identify jobs in demand or decline, identify other occupations 
+with similar skillsets, and find relevant individual job postings in the same area or identify local 
+training options for specific skills. 
+
+===== PAGE 31 =====
+30   
+ 
+This informed outreach resulted in positive outcomes for a number of projects, and hinted at the 
+potential for expanded usage in the future. By identifying distressed businesses, for instance, 
+local workforce and economic development partners were able to reach out proactively to 
+provide assistance, keep businesses afloat, and avert layoffs. In other cases, frontline staff helped 
+unemployed workers connect quickly with public supports within the workforce system to get 
+them back to work sooner, or identify resources to sustain them and their families as the 
+pandemic shuttered businesses and closed in-person learning at local schools. By identifying 
+which employers were hiring and which skills were in demand at the local level, D&B users were 
+better able to match worker skills with available jobs and adjust accordingly. As Washington’s 
+economy continues to recover, these data-driven matches made possible by D&B tools have 
+continued. 
+D&B tools come with a learning curve, and some questions remain around the reliability of data 
+and the methodology used in generating predictive variables. In some cases, reluctance over 
+using D&B tools was so strong that those with licenses returned to previous data sets they 
+considered more familiar and reliable. Whether or not this would change if users became more 
+aware of specific strengths and capabilities of D&B relative to other tools remains to be seen. A 
+possible solution to this challenge is for the state to fund full-time staff to master D&B tools 
+(and other similar technical resources), and then act as advisors or facilitators of these tools to 
+assist partners carry out data analyses. 
+While some WDAs found marginal benefit to using D&B to supplement their ongoing existing 
+efforts, others found the tools to be indispensable, with a few going so far as to indicate they 
+would purchase the products on their own should the state choose not to fund the D&B 
+products following the completion of this pilot project. 
+Another benefit of using the D&B software was the opportunity for a shared experience among 
+WDAs and other organizations across the state. However, because of the proprietary nature of 
+the D&B data, they were only able to share if both they and their partners had licenses. In the 
+current virtual climate, it is imperative that the state continues to look for opportunities to bring 
+systems together. The state’s diversity in geography, demographics, and available resources all 
+place different needs and expectations business and workforce support systems. Employing 
+standardized data tools across the state would provide opportunities to share best practices of 
+business engagement, and increase collaboration and connectivity between all workforce and 
+economic development partners. 
+Finally, although D&B data is imperfect and sometimes incomplete, it provides a lot of valuable 
+information—including information for which some state agencies lack access. Over the course 
+of the evaluation, smaller organizations with fewer resources found greater value in D&B tools, 
+while larger state agencies and workforce partners generally favored their traditional, more 
+
+===== PAGE 32 =====
+31   
+ 
+familiar, tools and data sources. If the state were to continue to invest in D&B tools, the primary 
+beneficiaries and users, at least initially, would likely be smaller workforce and economic 
+development organizations. That said, even large organizations found value in these tools 
+during the evaluation period. When optimally utilized, D&B data supplemented the state’s 
+existing databases, granting economic and workforce development professionals a more 
+nuanced, multidimensional picture of the businesses they serve and clear opportunities to 
+enhance their business engagement practices. 
+ 
+ 
+
+===== PAGE 33 =====
+32   
+ 
+Appendix A 
+The following projects show how D&B tools were used, and the effectiveness of those tools. 
+While representative, this list is by no means a comprehensive list of initiatives undertaken using 
+D&B data, both successfully and unsuccessfully over the past year. 
+Department of Commerce Projects 
+Project One 
+Working Washington Round Three Grant Program: Commerce was tasked with a one-month 
+turnaround time of distributing $100 million in emergency small business recovery grants to 
+those hardest hit (as mandated by gubernatorial proclamations 20-25.8 and 20.25.9) through 
+this program.  
+Background: When tasked with quickly distributing emergency small business recovery funding 
+set to expire in nearly one-months’ time, Commerce vetted applications using multiple 
+resources, including D&B data. The application required applicants to have revenue of less than 
+$5 million in 2019. Because it was too time intensive and demanding of staff resources during a 
+very busy time of year to rely on only the Department of Revenue to vet such requirements, 
+Commerce chose to check applicant’s revenue using D&B sales volume data as a proxy. The 
+process was as follows over the course of three weeks: 
+ 
+Commerce sent D&B applicant information daily (UBI, business name, and location). 
+ 
+D&B matched applicants to their full-access database (not the WA database). 
+ 
+D&B then posted a file with sales volume for all “matched” applicants to the WA 
+database. 
+ 
+Commerce downloaded the file and appended to applicants’ other information. 
+ 
+Of the 15 percent without a match, Commerce sent to the Department of Revenue for 
+review. 
+ 
+Of the matches that showed over $5 million in revenue per the D&B database Commerce 
+sent to DOR to confirm this was correct. 
+Results: Without a DUNS number, it is difficult to query sets of specific businesses in either EV or 
+MI. Thus, to match businesses, D&B used the address field, name, and several other factors. The 
+full-access database had “matches” for approximately 85% of applicants in their full access 
+database, compared to the data Commerce has access to (the D&B Washington database using 
+EV and MI), which matched around 75% of businesses. 
+When Commerce received information noting sales volume over $5 million in MI, Commerce 
+performed a secondary check. Unfortunately, most of the businesses that D&B noted as having 
+a sales volume of over $5 million actually posted revenue under that amount. All of the 
+
+===== PAGE 34 =====
+33   
+ 
+businesses that Commerce identified through different processes as exceeding the $5 million 
+threshold were listed as having less than that threshold in MI. 
+Takeaway: Commerce has low confidence in the accuracy of D&B sales volume data for small 
+businesses, especially those part of a franchise or who are considered a micro-business/sole 
+proprietor. Without a DUNS number, it is difficult to query sets of specific businesses in either 
+EV or MI. The D&B full-access database is more robust than the database that users have access 
+to (the Washington database using MI and EV). Unfortunately, it is difficult to access data on 
+small businesses in nearly any database, even across state agencies. 
+Project Two 
+Analysis of COVID-19 Effects on Business: The Washington Legislature passed a bill which 
+appropriated $2.2 billion in federal funding that has been allocated to states in response to the 
+ongoing COVID emergency. 
+Background: Commerce used D&B data to gain knowledge about what communities and 
+businesses have been hardest hit by the pandemic, and attempted to gauge the overall number 
+and percent of businesses that have closed in Washington since the pandemic began. This was 
+done to prepare to administer a new grant program with strict eligibility criteria distributing 
+funds to businesses that had been temporarily closed since the beginning of the pandemic due 
+to the governor’s public health measures. The two data points Commerce attempted to 
+ascertain were (1) the number of small business closures, and (2) financial impact on small 
+businesses. 
+1. Background—Measuring Closures: Commerce worked with D&B representatives to find 
+data that could potentially identify or indicate small business closures in Washington. 
+The D&B database maintains businesses in the WA database that they consider “active.” 
+(i.e., not closed). A business can become inactive if its address gets marked undeliverable 
+by the post office, if previous financial activity ceases, if their phone line becomes 
+disconnected, or other criteria consistently over a six-month period. Although “inactive 
+businesses” are not accessible on the Washington database through EV and MI, they are 
+accessible from D&B on the back-end. D&B engaged in a similar query12 for the 
+California Economic Development Organization. Commerce asked D&B to provide a list 
+of businesses that had become inactive since the start of the pandemic. 
+Results: In February 2021, D&B had 15,000 businesses that had become inactive since 
+the beginning of the pandemic from the Washington database. Overall, 4-5 percent of 
+businesses from the Washington database had become inactive since the beginning of 
+ 
+12 https://eastbayeda.org/covid-business-impacts/ 
+
+===== PAGE 35 =====
+34   
+ 
+the pandemic. D&B representatives noted that this is roughly the same attrition rate as 
+other years – maybe just a point higher. Almost every county showed between a 4%—
+6% attrition rate. There was also little differentiation in the attrition rate by industry. 
+These two data points lead Commerce to believe that the attrition rate was not actually 
+reflective of businesses that have closed due to COVID-19 public health measures. 
+When comparing the inactive businesses to each other, more information was gained 
+(i.e., 38% of the “inactive businesses” were in King County, the most prevalent inactive 
+NAICS code was the NAICS for “specialty physician”).  
+As a follow-up, Commerce performed a spot-check of the businesses that D&B had 
+marked as “inactive” and had also received a grant from the Working Washington 
+Grants: Round 3 program. Nearly all of these businesses were still operating in some 
+capacity—for example, many businesses became delivery only. Some (10%) of these 
+businesses were “temporarily closed” according to their websites. When spot-checking 
+the full list, a higher percentage of businesses appeared closed. 
+Take Away: Small business closures is a very difficult thing to measure, especially in such 
+turbulent economic times. There have been many studies since COVID-19 began with 
+wide variations in their estimates of “closed business.” This is likely because a business 
+may be temporarily closed, or operating, but has moved operations to an owner’s home 
+or other non-traditional arrangement. A business may have also closed temporarily, re-
+opened, then closed permanently, further convoluting the data picture. In addition to 
+D&B data, Commerce used supplemented information from the Pulse Census Survey13 
+(statewide, and NAICS 2 digit—not available at county level), and from the Opportunity 
+Insights Economic Tracker14 (“closed” = no credit card transaction in two days)—both 
+free and publicly available datasets. 
+Background—Measuring Impact: Since the attempt to measure closures using D&B 
+“inactive” businesses proved unsuccessful, Commerce sought to measure financial 
+impact on small businesses in Washington using D&B’s “material change” predictive 
+variable. 
+Results: D&B does do not recommend aggregate analysis with their data over time. They 
+recommend against this because their database is continuously growing due to 
+ 
+13 https://www.census.gov/data/experimental-data-products/small-business-pulse-survey.html 
+14 https://tracktherecovery.org/ 
+
+===== PAGE 36 =====
+35   
+ 
+increased sophistication of their “business confirmation” tools. Each month, D&B is able 
+to verify more businesses that exist than verify businesses that are inactive. 
+Utilizing a targeted data base search, D&B was able review trends for certain businesses 
+over time. For example, data identified 15,000 businesses that were growing in July 2020, 
+but are in decline stages in January and suggested this group be prioritized for grant 
+funding. 
+Take-away: At the conclusion of this project Commerce felt that the real-time analysis 
+they had hoped D&B could provide on small business impact from COVID-19 (business 
+closures) did not meet their needs. In this instance D&B did not prove useful for overall 
+economic analysis, or for reviewing trends in aggregate over time. However, D&B does 
+provide value by providing financial analysis of certain businesses for which they have 
+valid information over time. (i.e., the businesses that were growing in July but are 
+declining in January). 
+Project 3 
+Identification of Candidates for the Thrive! And ScaleUp Business Development Programs 
+Background: Thrive! and ScaleUp are business development programs administered by 
+Commerce. Historically, Thrive! attracts around 20 participants per year but has capacity to 
+support 25 participants. ScaleUp has about 100 participants per year. Candidates have typically 
+been identified through a series of networks operated by partners including ADO’s, Chambers of 
+Commerce, the Small Business Administration, and others. The manager of these programs was 
+interested in exploring whether they could leverage D&B data to identify candidates for this 
+program. However, due to COVID-19 constraints on staff time, the administrator was unable to 
+dedicate time to learn how to use D&B products, leading to the project team to act as the 
+primary support in providing the data. 
+Thrive! is a program designed to assist second-stage companies (past the startup stage, but not 
+yet mature) get “over the hump” to a position where they are able to expand and grow further. 
+Candidates for Thrive! must meet the following criteria: 
+ 
+Private, for-profit companies that have been operating in a Washington State community 
+for at least two years. 
+ 
+Employ between 6 and 99 employees (pre-COVID). 
+ 
+Generate $1 million to $25 million in annual revenue (pre-COVID). 
+ 
+Have both an appetite and aptitude to grow. 
+ 
+Provide products and services beyond the local area. 
+
+===== PAGE 37 =====
+36   
+ 
+ScaleUp is a partnership between Commerce, US Economic Development Administration (EDA), 
+and Thurston EDC Center for Business Innovation. The goal of the program is to grow smaller 
+“mom and pop” businesses into larger, more successful enterprises. The ideal candidate for 
+ScaleUp is a president/owner of a Washington State business that has been in operation for two 
+years and has annual pre-COVID revenues in excess of $100,000. 
+Results: Given the wide parameters for these programs, the number of “eligible businesses” 
+within the D&B database was initially overwhelming, but these were later narrowed down by 
+introducing the following filters: 
+1. Parse the list by county. 
+2. Reduce the list by identifying a selection of NAIC codes to include. 
+3. Reduce the list using the “low risk” financial stability score. 
+4. Reduce the list using the “growth” material change score. 
+Take-away: Using D&B to identify candidates for these small programs presents a challenge of 
+receiving far more qualified candidates than can be accommodated by program of limited scale. 
+While introducing more filters did produce a smaller, more serviceable list, Commerce had to 
+rely on two proprietary predictive variables (#3 and #4). However, the uncertainty of the source 
+and efficacy of the data due to its proprietary nature raised some concerns. Due to these 
+constraints, it may be more useful to utilize D&B to market these programs, and vet applicants, 
+rather than as a way to individually identify and contact candidates since there are far too many 
+qualified candidates in Washington than the program could accommodate or vet. 
+Additionally, there are significant barriers to tech novices using these tools, particularly when 
+more filters and variables are introduced. While expert users may be able to efficiently perform 
+these queries, new or part-time users may not be able to carry out these tasks. 
+Other Smaller Commerce Projects 
+Identification of clean energy businesses in Washington: The goal for this project was to develop 
+a list of businesses that may be candidates for federal funding programs targeted to clean 
+energy manufacturers. To do this, Commerce performed a simple search to identify businesses 
+in certain NAICS codes in Washington, which yielded an easily searchable list and summary 
+tables. Because these businesses are not generally very small, they are well represented in D&B 
+data. This proved a strong use-case for the data. 
+Identification of essential businesses for vaccine planning and distribution in Clallam and 
+Jefferson counties: Commerce used NAICS codes to identify a list of essential businesses for 
+vaccine planning and distribution (i.e., schools, grocery stores). This seems like a strong case for 
+
+===== PAGE 38 =====
+37   
+ 
+using D&B data, although it was somewhat hampered by the small number of email addresses 
+that were on file for these businesses (approximately 60 of 400). 
+Identifying Minority- and Woman- Owned businesses within a County: A county government 
+wanted data to create a picture of the current state of small business in their county, with a 
+particular focus on firms owned by women, people of color, and small businesses categorized by 
+sector and trend data. Commerce sent them D&B data on small businesses in the categories 
+that they were interested in (under 100 employees, noting whether or not they were minority or 
+woman owned). D&B only has a small percentage of minority- and woman-owned businesses 
+identified on their file. Despite that limitation, the county found the data useful. 
+Regional Distribution of Life Sciences Businesses: A request was made for regional distribution 
+of life science businesses in Washington with certain NAICS codes. 
+WDC Projects 
+WDC Project 1: 
+Identify distressed companies, and employ layoff aversion resources 
+ 
+Background: The WDC used EV for layoff aversion actions by identifying the tipping point of a 
+business where an intervention is most beneficial in terms of preventing layoffs or closure. 
+ 
+Results: In one specific example, the WDC used EV and the filter features to uncover an 
+Arlington, WA-based struggling sole source provider business, Senior AMT, and it’s 800 plus 
+workers that were at significant risk. After reaching out to the business, the WDC was able to 
+connect and implement a strategy two months before layoffs were to occur. At this point, the 
+WDC helped the company file a WARN notice with ESD as well as facilitate three on site Rapid 
+Response units. Additionally, in combination with local partners at the labor council, a Trade Act 
+petition was filed and certified, allowing employees access to WIOA funds and other 
+opportunities within the Trade Act. More than 200 employees were able to find new 
+opportunities due to WDC efforts to align resources and other job openings to these at-risk 
+employees with enough time to transition rather than continuing down the road to layoffs. 
+ 
+Impact: The WDC, aided by D&B EV data, was able to identify the distressed company and help 
+more than 200 workers with placement in new jobs and work opportunities. 
+ 
+Take-away: The WDC indicated that D&B has been a very useful tool and provided a great boost 
+forward identification and intervention of at-risk businesses. The effort to triage the struggling 
+company was complimented by the collaborative efforts of other workforce partner agencies. 
+Given the geographical proximity of the business and the employees, sharing knowledge and 
+services between the partners benefited all involved and strengthened intergovernmental 
+relationships. 
+ 
+
+===== PAGE 39 =====
+38   
+ 
+The usage of D&B tools helped yield three definitive positive results from this project: 
+1. Support for the company and its hundreds of employees. 
+2. Leveraging federal programs like the Trade Act and WIOA. 
+3. Creating synergy and connections with partners and other WDCs. 
+ 
+Without the information provided by EV that identified the struggling company, it is likely that 
+the outcome of the impacted employees would have been devastating. Instead, the company is 
+still in business, many employees avoided layoffs and had other opportunities, and the WDC was 
+able to provide a template for future outreach efforts utilizing D&B tools. 
+WDC Project 2: 
+Matching job seekers to businesses according to their skillsets 
+ 
+Background: A key role of WDCs is to match job seekers to businesses by identifying the skills, 
+competencies and abilities of workers with those required by employers. During COVID-19 and 
+the unprecedented wave of business closures and layoffs, this role became more important than 
+ever. Crucial WDC activities during the pandemic have centered on layoff service and aversion, 
+rapid response, and orientation to WIOA programs. 
+ 
+Results: Prior to gaining access to D&B tools, the WDC used INIS, ESD and other data but never 
+had access to financial stress level information such as that provided by D&B. Instead, the WDC 
+used retroactive information including newspapers and WorkSource intelligence (for instance, 
+multiple former employees from the same company coming in to find new jobs). 
+ 
+Impact: During the pandemic, the WDC was largely unable to place many job seekers in 
+employment through data gleaned from EV, although this is largely due to the economic 
+restrictions in place during this time. 
+ 
+Take away: With EV, the WDC is able to identify suitable and available job seekers that are 
+available to meet business’ needs. This has been very beneficial for both workers and businesses, 
+producing a win-win situation. During the pandemic, the primary focus was on layoff aversion, 
+but as COVID-19 restrictions are lifted, this will become more of a focus. This is a new strategy 
+for the WDC. They expect that with the addition of a new Business Engagement Manager, they 
+will utilize this data to benefit future job seekers in the future. 
+ 
+WDC Project 3: 
+Identifying PPP loan recipients and distressed businesses 
+ 
+Background: COVID-19 and resulting social distancing measures have had a huge impact on the 
+economy, spurring the federal government to provide assistance to businesses through 
+measures including PPP loans. Businesses eligible to receive these loans must meet certain 
+criteria, are often in financial distress, and may be eligible for further relief that they may or may 
+not be aware of. 
+ 
+
+===== PAGE 40 =====
+39   
+ 
+Once identified using the D&B PPP filter, the WDC began outreach and business engagement 
+efforts. Rather than initiating a cold call to businesses in financial distress and risk a negative 
+first contact experience, the WDC sent a non-specific letter or email that appeared to the 
+targeted business to be a general informational message that details the resources available that 
+are tailored to help these specific businesses. The goal was to identify businesses that may have 
+temporarily averted layoffs with PPP loans, and engage businesses regarding layoff aversion 
+services including SharedWork, Incumbent Worker Training, Customized Trainings Programs, 
+and consultations. 
+ 
+Results: The WDC, with assistance from project partners and D&B, utilized MI to generate a list 
+of targeted businesses. Using the criteria of PPP recipients that received at least $150,000 in PPP 
+loans, more than 1,100 businesses were listed. The list included phone numbers for almost all 
+the businesses, but no email addresses. Other tools were used internally to identify email 
+addresses of businesses. 
+ 
+Impact: TBD 
+ 
+Take away: This allowed the WDC to be more proactive in providing services. Overall, there are 
+still mixed results in layoff aversion and business assistance, but that does not take away from 
+the fact that the WDC was able to gain advanced warning of distress, and intervene. The 
+information allowed the WDC to approach businesses even before they issue a WARN notice, 
+enabling the WDC to send a rapid response team. Even in the worst case, this action can 
+connect employees to workforce resources, training, and others assistance even before layoffs 
+occur. The WDC can then provide services, and in some cases find new positions for workers 
+very quickly. 
+ 
+For businesses at low risk of layoffs and/or that are growing, the WDC is planning to use D&B 
+intelligence to help develop pathways to hiring, business development, and otherwise adding 
+value. This WDC recently hired a new business engagement staff member that will primarily be 
+using D&B in their outreach efforts. These efforts include using EV long-term regardless of state 
+decision. 
+ 
+WDC Project 4: 
+Economic development proposals for partners 
+ 
+Not-For-Profit Employers in Puyallup-Sumner. 
+ 
+Identifying Tech Employers in Tacoma. 
+ 
+Identifying FinTech employers in a drive-time range. 
+Background: This project was carried out by the WDC in conjunction with partner agencies 
+including Chambers of Commerce, Economic Development Boards, and municipal governments. 
+The goal of the project was to acquire economic and workforce information related to specific 
+industry clusters. This information would then be used for business outreach efforts and 
+strategic planning. 
+
+===== PAGE 41 =====
+40   
+ 
+Results: The WDC was able to identify 147 not-for-profit employers with approximately 4,457 
+employees. For the FinTech Proposal, the WDC identified 1,749 employers in King and Pierce 
+County. However, the tech employers query produced an output was too broad to be 
+meaningful and was not used. 
+Impact: TBD 
+Take-away: The WDC used the D&B data for business solutions with positive results. They were 
+able to use this information to identify businesses that are growing, have a reduction in revenue, 
+or are experiencing financial stress to target outreach efforts such as layoff aversion and other 
+services. 
+WDC Project 5: 
+Internal regional economic and business analysis, including equity and diversity 
+ 
+Review of priority sectors to see how representative they are of employers in the region. 
+ 
+Review of businesses owned by minorities and women by region and industry. 
+Background: The WDC used the D&B data for business solutions, workforce development and 
+outreach. Specifically, the WDC was trying to discern how many of the region's employers fell 
+within a specific industry sector (advanced manufacturing, ICT and cyber security, construction, 
+military/defense, transportation warehousing & logistics, healthcare). 
+Results: The WDC was able to assess the proportion of workforce represented by sector 
+priorities with Quarterly Census of Employment and Wages (QCEW) data, but without D&B data, 
+they were unable to accurately assess the proportion of employers represented in these industry 
+sectors. The D&B helped frame the need for a sector priority update, and one that includes non-
+industry framed definitions. 
+The WDC found the following information from the D&B search  
+Regional Count
+Proportion of all Employers
+Female
+2188
+5.70%
+Minority
+503
+1.31%
+ 
+Impact: The WDC ultimately did not use the data due to concerns about quality, specifically 
+because the vast majority of records were unclassified.  
+Take away: The takeaway was that the concentration of women- and minority-owned businesses 
+is likely well below representative levels in the population and that there is much more work 
+needed in this space. In Pierce County the concentrations of minority- or female-owned 
+businesses was very low, both regionally and among employers represented by sector (there 
+
+===== PAGE 42 =====
+41   
+ 
+was almost no difference in the rate). This information has helped the WDC to frame their 
+outreach and recruitment efforts for new WDC board members, and has been a focus point as 
+the WDC works to update these sector priorities. 
+WDC Project 6: 
+Email campaign to contact manufacturing companies in the region 
+ 
+Background: The WDC wanted to identify manufacturing companies in its region due to 
+increased hiring needs in the sector. The goal of the project was to identify as many 
+manufacturing companies as possible, and add them to existing databases. This information 
+could then be used for business outreach efforts to engage with businesses to provide needed 
+services, and to increase awareness of the services offered by the Talent Solutions Team. 
+Results: D&B identified manufacturers with email contacts and removed those already in the 
+WDC’s existing customer relationship management (CRM) database. In the WDC’s first email 
+campaign, initiated December 7, 2020, there were 82 successful email deliveries with a 14 
+percent open rate. For the January 11, 2021, second round of email targeting those who did not 
+open the initial email there were 64 successful email deliveries and a 6% open rate. 
+Impact: The WDC was able to contact and engage a number of businesses that did not exist in 
+their own CRM (see results above). A separate pilot of outreach to businesses with no prior 
+interaction was not conducted side by side so the WDC was unable to provide comparative data. 
+Take-away: The WDC did not receive a high level or response using the D&B tools compared to 
+their own CRM and was reticent to use D&B data as a stand-alone tool for three main reasons. 
+First, while the database contained a huge amount of information, not all of it was actionable in 
+terms of utilizing it effectively for real-world outreach and engagement efforts. Second, not all 
+the data was accurate (a company’s’ revenue, number of employees, contact data, for instance). 
+Third, while the inclusion of the highest-ranking member of a business (such as a president, 
+CEO, or owner) is generally included in D&B contact information, this can sometimes present 
+problems with the contact being too far up the leadership ladder. As a result, email or phone 
+contact efforts often went unrequited, with high-level personnel not responding to initial 
+outreach communications where a lower-level employee may take more time and effort to 
+respond to these queries. As a result of these challenges, using D&B data did not significantly 
+improve response rates to outreach efforts. 
+However, the WDC noted that D&B can identify many different businesses and categorize them 
+by financial growth, financial distress, and other filters. The data was more useful than their CRM 
+for more targeted searches, rather than blind cold calls to different companies. The WDC also 
+found, D&B to be quite useful in taking a deep dive into specific companies compared with 
+
+===== PAGE 43 =====
+42   
+ 
+other tools. Specific data and research resulting in a deep dive of a company was one of the 
+most useful components where the data is useful for the WDC. 
+However, WDC staff often employed other more familiar tools first before turning to D&B tools. 
+Whether or not this prioritization would change if users became more aware of specific 
+strengths and capabilities of D&B relative to other tools remains to be seen. 
+WDC Project 7: 
+Supporting businesses affected by COVID-19 social distancing measures 
+ 
+Background: The goal of this initiative was to offer support to businesses most likely to be 
+impacted by statewide restrictions to mitigate the spread of COVID-19. The WDC targeted 
+specific industries by NAICS code with an email campaign to two distinct lists: 
+1. D&B List—Not in the WDC’s Talent Solutions CRM (n=1,876 Targeted Businesses) 
+2. Talent Solutions CRM list 
+The WDC worked with D&B to identify companies operating in these industries, along with 
+financial information on these companies including financial risk (low, medium, or high). 
+Results: The WDC was able to get this campaign launched quickly, and found that both list 
+groups had the same open rate. The results are as follows: 
+ 
+D&B List—Not in Talent Solutions CRM (n=1,876 Targeted Businesses), yielded 42 
+previously unknown email addresses. The email campaign resulted in 12 bounces and 29 
+successful deliveries with a 17 percent open rate. 
+ 
+Talent Solutions CRM List contained 158 email addresses. The email campaign resulted 
+in four bounces and 154 successful deliveries, with an identical 17 percent open rate. 
+Impact: The WDC was able to contact and engage 42 new businesses that did not exist in their 
+own CRM (see results above). 
+Take away: The WDC expanded its CRM to include the new contacts, and open new businesses 
+for outreach efforts, but to a limited effect. 
+WDC Project 8: 
+Quality Job Initiative 
+ 
+The quality jobs initiative endeavors to identify employers that provide “quality job” 
+opportunities. 
+ 
+
+===== PAGE 44 =====
+43   
+ 
+Background: The WDC’s quality jobs initiative seeks to identify specific “high quality” jobs and 
+their employers for the purpose of outreach and to identify best practices. These characteristics 
+include paying family-sustaining wages, operating under diverse ownership and/ or staff, 
+providing benefits, are family friendly, providing internal promotion opportunities, and other 
+characteristics identified in Aspen Institute studies. These scores can then be used to create 
+different categories of businesses (for example gold, silver, and bronze rankings). This initiative 
+is being undertaken in conjunction with the neighboring city of Portland, Oregon. 
+ 
+Results: At the time of the publication of this report, the quality jobs initiative was in its early 
+stages of inviting relevant companies to a listening session. Future analysis of this industry 
+subsector could be used to analyze comparative trends related to business performance, 
+workforce retention, and wages. 
+ 
+Impact: TBD 
+ 
+Take-away: D&B has been a very useful tool to identify and categorize targeted businesses, and 
+provided a great boost forward in the early stages of this initiative. 
+ 
+WDC Project 9: 
+Strategic Financial analysis of regional distressed industries 
+ 
+Background: This WDC used D&B for a wide variety of projects in both data analytics and 
+business identification and outreach capacities. The intention was to use this analysis to help 
+inform broader strategic planning, and to help guide business engagement and outreach efforts. 
+ 
+The project was intended to identify specific professions and business segments that were under 
+duress. This included searching for any businesses in financial distress or in danger of having to 
+lay off workers, and also targeting specific sectors or industries that are known to be particularly 
+hard by the pandemic and social distancing measures. 
+ 
+Results: Using D&B, the WDC was able to track economic trends throughout the pandemic and 
+look for changes. Financial health indicators in particular proved useful in looking for changes in 
+business activity and acted as a proxy warning of possible business closures. Once identified, 
+these businesses could then be approached by business outreach teams to provide available 
+assistance. 
+ 
+Impact: TBD 
+ 
+Take away: This WDC found significant value in the D&B tools, particularly in the MI product. 
+They found two distinct advantages to the D&B products relative to other public and private 
+data sources and tools. The first of these is the unique ability of D&B tools to drill down to get 
+to a wide variety of establishment (individual company)—level data. This was then used to 
+enhance business engagement by providing contact lists for relevant companies, or carry out 
+analyses at lower levels of aggregation for use in higher-level strategic planning and outreach. 
+
+===== PAGE 45 =====
+44   
+ 
+The second key advantage was timeliness. While many public data sources may be updated 
+quarterly, many are much more latent with lag times stretching out to six months, a year, and 
+even longer. This delay can be the difference between providing a lifeline for a struggling 
+business or enacting layoff aversion measures and a company going out of business. D&B 
+products have a much shorter data refresh timeframe, with MI updating monthly, and EV 
+updating quarterly. 
+ 
+One major constraint to using publicly available data is privacy, which compels sources to 
+anonymize data and even omit data for certain companies if their size, scale or operations would 
+essentially reveal their identity. This occurs often down to the establishment level and can have 
+the effect of suppressing more detailed data around specific companies or entire industries in 
+some cases. D&B’s attraction in this context was that EV and MI provided a lot of granular data 
+related to specific industries that is generally not available for other similar products or publicly 
+available data. Generally, other sources have more a lot of data related to job seekers, but much 
+less for employers. 
+ 
+WDC Project 10: 
+Pre- and Post-pandemic comparison of businesses 
+ 
+Background: The WDC used D&B to do a deep dive into businesses in the WDC region to 
+determine if there was a significant drop-off in business, or a spike in closures and/ or layoffs in 
+2020 as a result of the COVID-19 pandemic. In this region, agriculture and food processing/ 
+packaging industries were hit particularly hard. As a result, the demand for state and federal 
+assistance programs likewise increased, and the departments and agencies responsible for 
+outreach and assistance require accurate information to identify eligible businesses and workers 
+in need of assistance. The results were intended to be shared with partner agencies, including 
+county commissioners, to help plan for shifts in social service allocations including TNF, 
+unemployment insurance, and others. 
+ 
+Impact: The WDC worked directly with D&B representatives to build this report. The results of 
+the report indicated that numerous businesses in the area had indeed closed during this time 
+period. Specifically, the report revealed that: 
+ 
+ 
+1,114 businesses were removed (presumed closed) from the database in 2020. 
+ 
+Essential businesses comprised the highest percentage (29 percent). 
+ 
+The majority of closures occurred in Q1, 2020. 
+ 
+Agriculture, forestry, fishing & hunting businesses had the highest number of closures 
+(13 percent of the total). 
+ 
+This business closure data was then broken down by categories including: the quarter in which 
+they were removed from the active database, county, essential business category, 2-digit 
+industry NAICS code, and industry grouping. 
+ 
+
+===== PAGE 46 =====
+45   
+ 
+Take-away: The WDC indicated that the reports provided value in providing a more accurate 
+picture of businesses in the region. The WDC would like to have access to these reports on a 
+quarterly basis tied to specific sectors: construction, agriculture, healthcare, manufacturing, and 
+warehousing and distribution. This information would add value by revealing what businesses 
+are in medium stress or high stress, so the WDC could then conduct Rapid Response services 
+prior to business closures and/or layoffs. However, the WDC did note that they would be unable 
+to compile these reports on their own due to limited staff resources, and would therefore need 
+assistance to fully utilize D&B tools. 
+ 
+WDC Project 11: 
+Economic analysis of regional health care industry 
+ 
+Background: The COVID-19 pandemic and ensuing social distancing measures have had uneven 
+impacts even within industries and sector groups. This includes the health care sector, where 
+demand for health care professionals in primary care roles increased, while other services 
+deemed less essential such as private doctors, dentists, optometrists, etc. suffered through 
+business closures. 
+ 
+This project was intended to identify specific professions and business segments within the 
+health care industry which were under duress. 
+ 
+Impact: TBD 
+ 
+Take-away: The WDC used D&B data to highlight areas of concern such as specific physicians’ 
+offices that were in distress as well as detailed related job losses in these areas. At the time of 
+publication, this project was in the early stages, and will be shared later with the WDC’s business 
+and education partners. 
+ 
+WDC Project 12: 
+Identifying PPE producers in this region 
+ 
+Background: COVID-19 brought unprecedented demand for PPE in Washington and around the 
+world. In order to identify theses manufactures in their region, the WDC used D&B data to 
+acquire contacts for an email blast to PPE producers. 
+ 
+Results: Using D&B data base to identify PPE producers in the area, 95% of the list that was 
+generated was new to the WDC. These 1,200 businesses were narrowed down to 550, which was 
+further refined to approximately 330 emails to these businesses. Although the WDC received a 
+roughly 20 percent bounce back on the email campaign (similar to results from comparable 
+contact lists), the exercise did identify previously unknown companies  
+ 
+Impact: TBD 
+ 
+
+===== PAGE 47 =====
+46   
+ 
+Take-away: The D&B database successfully identified previously unknown businesses in the PPE 
+sector, resulting in increased engagement and expanded database. 
+ 
+WDC Project 13: 
+Virtual Job Fairs 
+ 
+Background: Unprecedented levels of unemployment claims have highlighted the need to get as 
+many workers back into the workforce as fast as possible. The WDC employed D&B data and 
+reports to identify trends in in-demand jobs ahead of its Health Care Industry job fair. The WDC 
+also used EV to match registered participants to a DUNS Number to do additional analysis of 
+these employers. This would enable the WDC to better tailor services and job candidates to 
+businesses’ needs. 
+ 
+Results: TBD—At the time of publication the job fair had not taken place yet. 
+Impact: TBD 
+ 
+Take Away: TBD 
+ 
+Other Projects: 
+ 
+Economic Recovery Plan (ERP) 
+ 
+Background: In response to COVID-19 and with lockdown measures fully in place 
+starting in March 2020, the Workforce Board was tasked by Governor Inslee to develop 
+the workforce development component of Washington’s post-pandemic Economic 
+Recovery Plan (ERP). The ERP included analysis of pre- and post-pandemic economic 
+and workforce trends. In order to fulfill this, the Workforce Board research team used MI 
+to identify firms that were experiencing financial distress. The team pulled data from the 
+most current month, May 2020, and utilized filters to find companies that were under 
+“high financial stress.” The analysis also focused on specific industries that were 
+experiencing higher levels of unemployment as indicated by unemployment data from 
+ESD. These industries included construction, accommodation and food services, retail, 
+healthcare, and manufacturing. 
+Impact: The Workforce Board was able to utilize D&B tools, along with other data 
+sources, to provide a more accurate and timelier picture of the state’s economy. This in 
+turn helped to inform the ERP recommendations to focus resources where they were 
+needed most. 
+
+===== PAGE 48 =====
+47   
+ 
+Take-away: While MI was able to help identify these businesses and occupations, it was 
+limited in comparing these trends to earlier historical trends due to the D&B limitations 
+of data going back for a total of seven quarters. 
+The Workforce Board also sees potential value in the D&B toolkit through access to its 
+database, specifically the contact information. As part of its operations, the Workforce 
+Board regularly engages in surveys such as the Washington Employer Survey and Youth 
+Employment Report to better ascertain the needs, wants and demands of the 
+Washington businesses it serves. In the past, contact lists have been procured at 
+significant costs to the Workforce Board on a one-off basis. This is in part because 
+government agencies are prohibited from using their databases in this manner due to 
+privacy needs. Having ongoing access to the D&B database, which the Workforce Board 
+views as at least comparable if not more effective than previous lists acquired from third 
+parties, would thus reduce the need to purchase this data in the future. Although the 
+Workforce Board did not carry out any of these surveys during the course of the pilot 
+project due to a reallocation of resources during the pandemic, these expenditures will 
+be required as the economy returns to a new normal. 
+ 
+ 
+
+===== PAGE 49 =====
+48   
+ 
+Appendix B 
+Employment Security Department Regional Economics and high-level data observations 
+As part of the D&B project, the Employment Security Department (ESD) explored the usage of 
+the D&B data and products by allocating licenses to Labor Market and Economic Analysis 
+(LMEA) division’s regional economists.15 This was a natural fit as they work closely with WDCs 
+and are often confronted with issues (restrictions on data sharing, and a time lag on data 
+collection from some sources, for instance) surrounding data sharing and working with data 
+collaboratively. The use of the D&B data by both regional economists and the WDCs could serve 
+to streamline data sharing between the two, which has traditionally been restricted due to data 
+sharing constraints. 
+LMEA regional economists appreciate the need for alternative data sources to supplement the 
+existing data they currently use. Due to the nature and complexity of ESD labor market data, the 
+availability of the data often lags months, quarters, or even longer, after the reporting period. 
+This is especially challenging during an unprecedented pandemic as the need for data is 
+imperative for understanding the current economic condition and forward-looking strategic 
+goals. Given the multitude of supplemental alternative data sources available, they must balance 
+working with the using alternative sources they may be less familiar with against trusted ESD 
+LMEA data. Failing to do this potentially negates or devalues the data and analysis produced 
+and reported by reginal economists and ESD. During the evaluation program WDCs and other 
+workforce partners sought alternative data sources to support their COVID-19 triage efforts, 
+including grant writing that required specific data to support these applications. Although the 
+intent may be viewed as means to an end, there is concern that the use of alternative sources 
+(including D&B) are not given equal footing as the LMEA data. This is particularly pertinent when 
+alternative data is incongruent with traditional LMEA data sources. 
+In spite the potential benefits of utilizing D&B tools to complement other available data sources, 
+the impacts of COVID-19 significantly reduced and restricted ESD’s planned engagement and 
+participation in the project. Many of the regional economists prioritized their time serving their 
+customers and constituents through production of additional datasets, analysis, and 
+presentations of ESD labor market data and information, and other communications to help 
+explain and understand the current economic conditions caused by COVID-19. Furthermore, 
+ 
+15 Regional economists participated in both the 90-Day pilot and the year-long project. Doug Tweedy 
+(Ferry, Lincoln, Pend Oreille, Spokane, Stevens, and Whitman counties) contributed during the 90-Day 
+pilot whereas Anneliese Vance-Sherman (Island, King, San Juan, Skagit, Snohomish and Whatcom 
+counties) and Scott Bailey (Clark, Cowlitz, Klickitat, Skamania and Wahkiakum counties) contributed during 
+the year-long project. 
+
+===== PAGE 50 =====
+49   
+ 
+many WDCs were not able to invest time and resources into learning and using the D&B data or 
+software, and as a result there was no demand for the regional economist to use the same D&B 
+data or software as the WDC, as originally planned. 
+Comparison of D&B and existing ESD data sets: 
+Comparing LMEA’s Quarterly Census of Employment and Wages (QCEW) to the D&B tools sheds 
+lights on differences between the two datasets. The QCEW is a cooperative federal and state 
+program that measures employment and wages in industries covered by unemployment 
+insurance. The data is collected by ESD from quarterly unemployment tax forms filed by 
+employers and through surveys of employers who have more than one worksite in the state. 
+Due to the complexity and size of this dataset, data is typically released seven months after the 
+end of each quarter (for example, in April 2020, the most recent QCEW file was the 2020 Q3 
+“preliminary” report). The D&B data, on the other hand, is updated monthly. The tables below 
+show the comparison of the high-level summaries of firms and employees from both the QCEW 
+report and D&B data. The QCEW totals are expressed as a three-month average for the quarter 
+whereas the D&B data is the sum of firms and employees for Washington State within the D&B 
+data cloud as of April 2021. This is not an apples-to-apples comparison between the two 
+datasets, but instead shows differences of the firms, employees, and industries based on the 
+most up-to-date data from each source. 
+ 
+The table on the left compares all the firms and employees in the QCEW data to D&B data, 
+which includes many firms with a single employee. The table on the right compares the firms 
+and employees in the QCEW data to D&B data that have more than one employee. In both 
+cases (all firms and firms > 1 emp), D&B’s data contains higher number of firms (43-88 percent 
+more) and employees (18-22 percent more). 
+ 
+All NAICS
+Firms
+Employees
+All NAICS
+Firms
+Employees
+QCEW
+232,677
+  
+3,252,939
+ 
+QCEW
+232,677
+  
+3,252,939
+  
+D&B (All firms)
+438,438
+  
+3,953,151
+ 
+D&B (firms > 1 emp)
+331,917
+  
+3,848,316
+  
+Difference from QCEW
+205,761
+  
+700,212
+    
+Difference from QCEW
+99,240
+    
+595,377
+     
+% Difference from QCEW
+88%
+22%
+% Difference from QCEW
+43%
+18%
+NAICS 11: Agriculture*
+Firms
+Employees
+NAICS 31-33 Manifacturing
+Firms
+Employees
+QCEW
+6,713
+      
+120,258
+    
+QCEW
+7,590
+      
+264,481
+     
+D&B (firms > 1 emp)
+6,504
+      
+50,081
+      
+D&B (firms > 1 emp)
+13,497
+    
+382,265
+     
+Difference from QCEW
+-209
+-70,177
+Difference from QCEW
+5,907
+      
+117,784
+     
+% Difference from QCEW
+-3%
+-58%
+% Difference from QCEW
+78%
+45%
+
+===== PAGE 51 =====
+50   
+ 
+*NAICS 11 includes agriculture, forestry, fishing, and hunting. 
+The two tables above show the difference between the totals from the QCEW and the D&B data 
+at the two-digit NAICS level. Although the number of firms is comparable between the QCEW 
+and D&B for NAICS 11 (a difference of 209 firms, or 3 percent), the difference between the 
+number of employees is significant (70,177 or 58 percent). Substantial discrepancies likewise 
+exist for NAICS 31-33: manufacturing. In this sector, data showed 5,907 more firms (78 percent) 
+and 117,784 (45 percent) more employees in the D&B data compared to the QCEW data. 
+This comparison of the data is not to suggest the D&B data is inherently inaccurate. However, 
+the significant differences between the number of firms, employees, and distribution throughout 
+industries, must be understood by a user conducting analysis based on these variables, as there 
+will likely be significant differences between D&B and QCEW data. This also highlights the 
+position of regional economists, whom generally prefer and prioritize what they regard as more 
+reliable and consistent, but less timely, QCEW data over other more current alternative data 
+sources, including D&B. 
+Proprietary predictive variables 
+During the initial 90-day pilot, regional economists provided insight regarding the software and 
+specific attributes of the D&B data, specifically using EV. Positive feedback was given to the 
+user-friendly interface and intuitive nature of EV, and the fact that the basics could be picked up 
+rather quickly. However, there were also concerns regarding the predictive variables (such as the 
+Financial Stress Score (FSS) and Growth Scores) and that the model does not account for the 
+specific attributes of Washington State as the modeling is conducted at a national level and 
+does not incorporate regional factors. 
+The predictive variables created by D&B are proprietary, which prevents the disclosure of their 
+methodology and calculations to the user for analysis and understanding. This includes the 
+disclosure of error rates and the frequency of error rates, preventing a clear understanding of 
+the reliability of the data. Furthermore, the FSS is expressed in the data as either “High, Medium, 
+or Low”, which was viewed as too broad to be effective in some analysis. Cumulatively, the 
+proprietary nature of the variable and broad classification of the calculation brings the validity 
+and usage of the variable into question. 
+D&B’s data modelling at a national level was another potential concern. The issue is the national 
+perspective fails to account for Washington State’s high percentage of employers that 
+experience seasonality, such as agriculture and manufacturing, which would give these regions a 
+higher error rate and thus decrease the reliability of the data. Again, without the ability to 
+understand all the inputs into the calculations and the data, it is difficult for regional economists 
+
+===== PAGE 52 =====
+51   
+ 
+to put the data from D&B on an equal footing as other sources of data, especially those with an 
+historic track record and clear understanding of the data and inputs (i.e., QCEW). 
+Dynamic updates 
+Another attribute of the D&B data is the dynamic updates and additions to the data that are 
+implemented as needs change and information becomes available. One example of this was the 
+Paycheck Protection Program (PPP) loan data that became available during the first few months 
+of the pandemic. D&B matched data provided by the U.S. Department of Treasury to their data 
+using a multiple variable comparison (i.e., name, zip code, NAICS code), but only for those 
+receiving loans above $150,000. Matching these firms to existing D&B data provides access to 
+all data associated with that firm in the D&B universe, including FSS and Growth Scores. 
+However, if process is performed by matching data based on key terms, it can result in 
+unmatched firms (both those that are present in the D&B database and those that are not), and 
+incorrectly matched firms. Out of the 15,849 firms that received a PPP loan above $150,000, 
+12,018 were matched in the D&B system. This is a 75.8 percent matching rate and some of these 
+matches included incorrectly matched firms. If a user is unaware of this, they could assume that 
+the 12,018 in the D&B data represented all the businesses that received PPP loans above 
+$150,000, when in reality this only represents just over three quarters of the businesses that 
+received such a loan. 
+ESD Regional Economics outlook for D&B 
+D&B produces data that shows businesses and industries (and other attributes) across different 
+geographical areas. This data includes typical features of businesses as well predictive variables 
+to assist in this filtering and or fine tuning of searches for businesses. However, this data is 
+substantially different than current data produced by ESD within LMEA. The needs of the user 
+and the goal of the work will greatly influence which of the two datasets may be preferred. If 
+looking at time series data and trends of industries and employment across the state, QCEW 
+data would be preferred. If attempting to produce a list of businesses in a particular county with 
+the greatest likelihood of going out of business, D&B data would be preferred. Both ESD and 
+D&B data are tools, and like all tools, the needs and requirements of the project dictates which 
+type of tool to be used. 
+ 
