@@ -3,6 +3,9 @@
 .env.*
 !.env.example
 
+# Local transfer artifacts
+/NETS-AI.zip
+
 # Python
 __pycache__/
 *.py[cod]
@@ -30,6 +33,16 @@ AIAGENTNETS/
 .DS_Store
 Thumbs.db
 desktop.ini
+._*
+**/.__*
+__MACOSX/
+
+# Thesis manuscript & drafts (untracked pending M7 draft milestone; kept locally, not published)
+docs/thesis/
+Thesis/
+
+# Copyrighted publisher PDFs (kept locally for citation-checking, not redistributed)
+References/*.pdf
 
 # Data outputs (large files, generated)
 data/*.csv
